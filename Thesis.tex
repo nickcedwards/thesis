@@ -1,0 +1,43 @@
+\documentclass[a4paper]{report}
+
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{booktabs} %provides \toprule
+\usepackage{epstopdf}
+\usepackage[square,comma,sort&compress,numbers]{natbib}
+\usepackage[section]{placeins}
+\usepackage[bookmarks=true,colorlinks=true,pdftex]{hyperref}
+
+\input{Macros/Macros.tex}
+\input{Results/Results.tex}
+
+\begin{document}
+
+\title{ZZ Studies and other stories}
+\author{Nick Edwards}
+\date{April 2013}
+
+\maketitle
+
+\pagenumbering{roman}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\chapter*{Acknowledgements}
+
+\begin{abstract}
+The one where Nick looks for \ZZ.
+\end{abstract}
+
+\pagenumbering{arabic}
+
+\include{Chapters/Introduction/Introduction}
+
+\include{Chapters/Theory/Theory}
+
+\bibliographystyle{atlasnote}
+\bibliography{Bibliographies/Atlas,Bibliographies/Generators,Bibliographies/Theory}
+
+\end{document}
