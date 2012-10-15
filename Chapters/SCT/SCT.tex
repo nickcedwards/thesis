@@ -154,6 +154,45 @@ Endcap C & 9 & 0.9 \\
 
 As withe the \deltat monitoring variable, five times the average width of the Gaussian fit is used as a threshold for identifying problem modules. The threshold is set separately for each SCT barrel layer and endcap disk. The thresholds are given in Appendix~\ref{appendix:tdiff_thresh}. The endcaps tend to have much wider distributions than the barrels, indicating that the module temperature is less uniform on endcap cooling loops. This is consistent with the findings of the 2008 study. The number and percentage of modules with $|$ \tdiff$|$ greater than threshold at least 5 times during the period 20/1/2010 - 19/6/2010 is shown in Table~\ref{table:tdiff_num}.
 
+\begin{table}[h]
+ \centering
+\begin{tabular}{| l | c | c | c |}
+\hline
+Barrel & $\sqrt{\langle \sigma ^ 2 \rangle }$ & $5\sqrt{\langle \sigma ^ 2 \rangle }$ & $\chi ^2$  / ndf\\
+\hline
+\textbf{All Barrels} & 0.81 & 4.03 & 48.82 \\
+Barrel3 & 0.87 & 4.33 & 12.66 \\
+Barrel4 & 0.71 & 3.56 & 13.88 \\
+Barrel5 & 0.82 & 4.09 & 18.5 \\
+Barrel6 & 0.77 & 3.84 & 35.44 \\
+\hline
+\textbf{EndcapA All Disks} & 1.31 & 6.53 & 28.68 \\
+EndcapA Disk1 & 1.33 & 6.67 & 11.17 \\
+EndcapA Disk2 & 1.38 & 6.89 & 14.93 \\
+EndcapA Disk3 & 1.26 & 6.31 & 15.21 \\
+EndcapA Disk4 & 1.28 & 6.42 & 11.04 \\
+EndcapA Disk5 & 1.49 & 7.43 & 19.32 \\
+EndcapA Disk6 & 1.45 & 7.27 & 15.54 \\
+EndcapA Disk7 & 1.81 & 9.05 & 13.96 \\
+EndcapA Disk8 & 1.39 & 6.95 & 10.05 \\
+EndcapA Disk9 & 1.96 & 9.8 & 9.05 \\
+\hline
+\textbf{EndcapC All Disks} & 1.31 & 6.57 & 44.63 \\
+EndcapC Disk1 & 1.24 & 6.21 & 17.52 \\
+EndcapC Disk2 & 1.41 & 7.03 & 14.18 \\
+EndcapC Disk3 & 1.26 & 6.28 & 19.22 \\
+EndcapC Disk4 & 1.41 & 7.07 & 18.36 \\
+EndcapC Disk5 & 1.19 & 5.96 & 19.22 \\
+EndcapC Disk6 & 1.64 & 8.22 & 11.29 \\
+EndcapC Disk7 & 1.25 & 6.27 & 11.17 \\
+EndcapC Disk8 & 1.29 & 6.47 & 13.39 \\
+EndcapC Disk9 & 1.72 & 8.58 & 9.38 \\
+\hline
+\end{tabular}
+\caption{The rms width of a Gaussian fit to the \tdiff distribution for each stable period between 20/1/2010 and 20/6/2010. The threshold used for identifying high \tdiff modules is set as 5 times this value; this is also shown in the second column. The third column shows the $\chi^2$ goodness of fit parameter.}
+\label{table:tdiff_thresh}
+\end{table}
+
 The majority of the modules above threshold had negative values of \tdiff, indicating that they are cooler than their neighbours. This is generally caused by the modules not being in complete contact with their cooling block. A small number of modules had very large positive values of \tdiff, indicating that they are cooler than their neighbours. This indicates a lower power dissipation through the module which is either due to the module being disabled and thus not receiving the high voltage current, or due to incorrect chip settings.
 
 \section{Time Evolution of monitoring variables}
