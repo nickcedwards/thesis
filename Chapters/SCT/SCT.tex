@@ -134,26 +134,6 @@ Modules with a bad thermal coupling to the cooling pipe can be identified by loo
 
 Figure~\ref{fig:tdiff_dist} shows the distributions of \tdiff for the barrel and for each of the endcaps for 01:20 22/9/2012 to 01:20 23/9/2012. As expected the mean of the distribution is consistent with zero. Endcap C shows a large tail to low \tdiff, indicating there are a large number of modules warmer than other modules on their cooling loop. Examination of the distributions for each disk suggest that this effect is observed on disks 1-5, but not on disks 6-9. 
 
-\begin{table}
- \centering
-\begin{tabular}{ | l | c | c |}
-\hline
-Component & \# Problem Modules & \% Modules Problematic \\
-\hline
-Barrel 3 & 3 & 0.8 \\
-Barrel 4 & 1 & 0.2 \\
-Barrel 5 & 3 & 0.5 \\
-Barrel 6 & 6 & 0.9 \\
-Endcap A & 4 & 0.4 \\
-Endcap C & 9 & 0.9 \\
-\hline
- \end{tabular}
-\caption{Number and percentage of modules with $|$ \tdiff$|$ greater than the threshold for identifying problem modules at least 5 times during the period 20/1/2010 - 19/6/2010 for each barrel and for each of the endcaps.}
-\label{table:tdiff_num}
-\end{table}
-
-As withe the \deltat monitoring variable, five times the average width of the Gaussian fit is used as a threshold for identifying problem modules. The threshold is set separately for each SCT barrel layer and endcap disk. The thresholds are given in Appendix~\ref{appendix:tdiff_thresh}. The endcaps tend to have much wider distributions than the barrels, indicating that the module temperature is less uniform on endcap cooling loops. This is consistent with the findings of the 2008 study. The number and percentage of modules with $|$ \tdiff$|$ greater than threshold at least 5 times during the period 20/1/2010 - 19/6/2010 is shown in Table~\ref{table:tdiff_num}.
-
 \begin{table}[h]
  \centering
 \begin{tabular}{| l | c | c | c |}
@@ -191,6 +171,29 @@ EndcapC Disk9 & 1.72 & 8.58 & 9.38 \\
 \end{tabular}
 \caption{The rms width of a Gaussian fit to the \tdiff distribution for each stable period between 20/1/2010 and 20/6/2010. The threshold used for identifying high \tdiff modules is set as 5 times this value; this is also shown in the second column. The third column shows the $\chi^2$ goodness of fit parameter.}
 \label{table:tdiff_thresh}
+\end{table}
+
+As with the \deltat monitoring variable, five times the average width of the
+Gaussian fit is used as a threshold for identifying problem modules. The
+threshold is set separately for each SCT barrel layer and endcap disk. The
+thresholds are given in Table~\ref{table:tdiff_thresh}. The endcaps tend to have much wider distributions than the barrels, indicating that the module temperature is less uniform on endcap cooling loops. This is consistent with the findings of the 2008 study. The number and percentage of modules with $|$ \tdiff$|$ greater than threshold at least 5 times during the period 20/1/2010 - 19/6/2010 is shown in Table~\ref{table:tdiff_num}.
+
+\begin{table}
+ \centering
+\begin{tabular}{ | l | c | c |}
+\hline
+Component & \# Problem Modules & \% Modules Problematic \\
+\hline
+Barrel 3 & 3 & 0.8 \\
+Barrel 4 & 1 & 0.2 \\
+Barrel 5 & 3 & 0.5 \\
+Barrel 6 & 6 & 0.9 \\
+Endcap A & 4 & 0.4 \\
+Endcap C & 9 & 0.9 \\
+\hline
+ \end{tabular}
+\caption{Number and percentage of modules with $|$ \tdiff$|$ greater than the threshold for identifying problem modules at least 5 times during the period 20/1/2010 - 19/6/2010 for each barrel and for each of the endcaps.}
+\label{table:tdiff_num}
 \end{table}
 
 The majority of the modules above threshold had negative values of \tdiff, indicating that they are cooler than their neighbours. This is generally caused by the modules not being in complete contact with their cooling block. A small number of modules had very large positive values of \tdiff, indicating that they are cooler than their neighbours. This indicates a lower power dissipation through the module which is either due to the module being disabled and thus not receiving the high voltage current, or due to incorrect chip settings.
