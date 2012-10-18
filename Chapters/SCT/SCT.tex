@@ -7,14 +7,19 @@
 \section{Introduction}
 
 An overview of the Semiconductor Tracker (SCT) is given in
-Section~\ref{sec:Detector-SCT}. The SCT was designed to operate for 10 years of
-LHC running. 
+Section~\ref{sec:Detector-SCT}. In order to mitigate the effects of radiation
+damage, it is necessary to keep the SCT modules at a temperature of around $-7
+\circ C$; this is discussed in more detail below. An evaporative cooling system
+has been put in place to achieve this; this is described in Section ?.
+
+The temperature of each module is monitored by a thermistor mounted on the front side of the detector (the side furthest from the interaction point). The barrel modules have an additional thermistor mounted on the back side of the module. Monitoring of the module temperature is important to ensure that the cooling system is functioning as designed and that the modules are still coupled to the cooling structures. The temperature difference between the front and the back of barrel modules can be used to identify modules losing mechanical integrity. To this end I have developed a number of tools to monitor variables associated with the temperatures of SCT modules. These are described in this section, along with results for six months of operation between 20th January and 20th July 2010.
 
 \subsection{Effects of Radiation Damage on Semiconductor detectors}
 Given the LHC design luminosity of $10^{34}$cm$^{-2}$s$^{-1}$, the
 inner parts of the 
 SCT are expected to recieve a radition dose of up to
-$2x10^{14}\rm{n_{eq}/cm}^2$~\cite{Ahmad200798}. 
+$2x10^{14}\rm{n_{eq}/cm}^2$~\cite{Ahmad200798} over the course of it's desugn
+lifetime of 10 years.
 Exposure to radiation causes damage to the silicon detectors. The primary cause
 of damage is interactions with the irradiating particles displacing nuclei from
 their lattice position. This can have the effect of removing donors, or of
@@ -39,7 +44,6 @@ I_{\rm{leakage}} (T) \propto T^{2} \rm{e}^{-\frac{E_{g}}{2k_{B}T}}
 \subsection{The SCT Cooling System}
 Each module currently produces between 5.5 and 6W of heat. This is expected to increase to around 8W as the detector suffers the effects of radiation damage. The silicon detectors must be run at temperatures of around -7$^{\circ}$C in order to slow the rate of radiation damage and prolong their lifetime. To keep the modules at this temperature an active cooling system based upon evaporative cooling has been included in the detector. C$_3$F$_8$ gas is delivered in liquid phase at -25 $^{\circ}$C to capillaries located immediately before the detector structure. The fluid expands through the capillaries and passes along a cooling pipe. The modules are coupled to the pipe by means of cooling blocks and heat is absorbed from the modules by the passing fluid causing it to evaporate. The exhaust gas is then compressed, cooled, and returned to the cooling loop.
 
-The temperature of each module is monitored by a thermistor mounted on the front side of the detector (the side furthest from the interaction point). The barrel modules have an additional thermistor mounted on the back side of the module. Monitoring of the module temperature is important to ensure that the cooling system is functioning as designed and that the modules are still coupled to the cooling structures. The temperature difference between the front and the back of barrel modules can be used to identify modules losing mechanical integrity. To this end I have developed a number of tools to monitor variables associated with the temperatures of SCT modules. These are described in this section, along with results for six months of operation between 20th January and 20th July 2010.
 
 
 \section{Methodology}
