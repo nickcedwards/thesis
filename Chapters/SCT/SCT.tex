@@ -44,12 +44,12 @@ reduce the effects of radiation damage as much as possible.
 
 The effects of exposure to radiation have both
 an immediate and a prolonged effect. Immediate effects include the removal of
-donor nuclei from the latticss, and creation of acceptor like defects. Due to the
+donor nuclei from the lattices, and creation of acceptor like defects. Due to the
 complicated kinetics of these defects after the radiation, an annealing effect
 occurs which initially reduces the number of acceptor-like defects, on a timescale of
 approximately two days, but on a longer term a `reverse annealing' occurs,
 increasing the number of acceptors. The rate of the reverse annealing effect is dependant on the temperate of the
-silicon. It is found that for temperatures of approximately -10 $\deg C$ the
+silicon. It is found that for temperatures of approximately -7 $\circ C$ the
 reverse-annealing effect is effectively frozen out~\cite{Lindstrom2001308}. Since the reverse annealing
 occurs even after radiation, it is important to run the detector cooling at all
 times, not just when particle collisions are occurring.
@@ -67,7 +67,13 @@ I_{\rm{leakage}} (T) \propto T^{2} \rm{e}^{-\frac{E_{g}}{2k_{B}T}}
 
 
 \subsection{The SCT Cooling System}
-Each module currently produces between 5.5 and 6W of heat. This is expected to increase to around 8W as the detector suffers the effects of radiation damage. The silicon detectors must be run at temperatures of around -7$^{\circ}$C in order to slow the rate of radiation damage and prolong their lifetime. To keep the modules at this temperature an active cooling system based upon evaporative cooling has been included in the detector. C$_3$F$_8$ gas is delivered in liquid phase at -25 $^{\circ}$C to capillaries located immediately before the detector structure. The fluid expands through the capillaries and passes along a cooling pipe. The modules are coupled to the pipe by means of cooling blocks and heat is absorbed from the modules by the passing fluid causing it to evaporate. The exhaust gas is then compressed, cooled, and returned to the cooling loop.
+Each SCT module currently produces between 5.5 and 6W of heat. This is expected
+to increase to around 8W as the detector suffers the effects of radiation
+damage. As described in the previous section, the silicon detectors must be run
+at temperatures of around -7$^{\circ}$C in order to slow the rate of radiation
+damage and prolong their lifetime. An active cooling system based upon
+evaporative cooling is used to keep the modules at this temperature. This is
+described in detail in~\cite{1748-0221-3-07-P07003}. C$_3$F$_8$ gas is delivered in liquid phase at -25 $^{\circ}$C to capillaries located immediately before the detector structure. The fluid expands through the capillaries and passes along a cooling pipe. The modules are coupled to the pipe by means of cooling blocks and heat is absorbed from the modules by the passing fluid causing it to evaporate. The exhaust gas is then compressed, cooled, and returned to the cooling loop.
 
 \section{Methodology}
 The temperatures recorded by the module thermistors are read out by the ATLAS \textit{PVSS} SCADA system. Twice a day the temperatures are written to an Oracle database for offline analysis. In addition, whenever a module temperature changes above a deadband of 0.4 $^\circ$C the new value is written to the database.
