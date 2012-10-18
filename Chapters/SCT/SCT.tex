@@ -27,21 +27,36 @@ twenty-two months of operation between January 2010 and October 2012.
 \subsection{Effects of Radiation Damage on Semiconductor detectors}
 Given the LHC design luminosity of $10^{34}$cm$^{-2}$s$^{-1}$, the
 inner parts of the 
-SCT are expected to recieve a radition dose of up to
+SCT are expected to receive a radiation dose of up to
 $2x10^{14}\rm{n_{eq}/cm}^2$~\cite{Ahmad200798} over the course of it's desugn
 lifetime of 10 years.
-Exposure to radiation causes damage to the silicon detectors. The primary cause
-of damage is interactions with the irradiating particles displacing nuclei from
+Exposure to such high radiation doses causes damage to the silicon detectors. 
+
+The primary cause
+of damage is interactions with irradiating particles displacing nuclei from
 their lattice position. This can have the effect of removing donors, or of
-creating acceptor like defects. Exposure to radition will cause an n-type
+creating acceptor like defects. Exposure to radiation will eventually cause an n-type
 semi-conductor to become less heavily doped, and in extreme causes change the
-material from n-type to p-type. 
+material from n-type to p-type. Consequently, the displacement voltage required
+to fully deplete the detector increases, and for sufficiently high radition doses it
+becomes impossible to fully deplete the detector. It is therefor essential to
+reduce the effects of radiation damage as much as possible.
 
-The rate of the reverse annealing effect is dependant on temperate
+The effects of exposure to radiation have both
+an immediate and a prolonged effect. Immediate effects include the removal of
+donor nuclei from the latticss, and creation of acceptor like defects. Due to the
+complicated kinetics of these defects after the radiation, an annealing effect
+occurs which initially reduces the number of acceptor-like defects, on a timescale of
+approximately two days, but on a longer term a `reverse annealing' occurs,
+increasing the number of acceptors. The rate of the reverse annealing effect is dependant on the temperate of the
+silicon. It is found that for temperatures of approximately -10 $\deg C$ the
+reverse-annealing effect is effectively frozen out~\cite{Lindstrom2001308}. Since the reverse annealing
+occurs even after radiation, it is important to run the detector cooling at all
+times, not just when particle collisions are occurring.
 
-Lattice defects introduced as a result of exposure to radition also causes an
+Lattice defects introduced as a result of exposure to radiation also causes an
 increase of the leakage current, and
-a loss of mobility,  both of which increases the noise of the detector. Since
+a loss of mobility,  both of which increases the level of noise in the detector. Since
 the leakage current is induced by thermal creation of electron-hole pairs from
 shallow donors, the size of the leakage current is also dependant on
 temperature: 
