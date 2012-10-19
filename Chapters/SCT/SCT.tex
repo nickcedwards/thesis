@@ -49,7 +49,7 @@ complicated kinetics of these defects after the radiation, an annealing effect
 occurs which initially reduces the number of acceptor-like defects, on a timescale of
 approximately two days, but on a longer term a `reverse annealing' occurs,
 increasing the number of acceptors. The rate of the reverse annealing effect is dependant on the temperate of the
-silicon. It is found that for temperatures of approximately -7 $\circ C$ the
+silicon. It is found that for temperatures of approximately -7$^{\circ}$C the
 reverse-annealing effect is effectively frozen out~\cite{Lindstrom2001308}. Since the reverse annealing
 occurs even after radiation, it is important to run the detector cooling at all
 times, not just when particle collisions are occurring.
@@ -73,10 +73,10 @@ damage. As described in the previous section, the silicon detectors must be run
 at temperatures of around -7$^{\circ}$C in order to slow the rate of radiation
 damage and prolong their lifetime. An active cooling system based upon
 evaporative cooling is used to keep the modules at this temperature. This is
-described in detail in~\cite{1748-0221-3-07-P07003}. C$_3$F$_8$ gas is delivered in liquid phase at -25 $^{\circ}$C to capillaries located immediately before the detector structure. The fluid expands through the capillaries and passes along a cooling pipe. The modules are coupled to the pipe by means of cooling blocks and heat is absorbed from the modules by the passing fluid causing it to evaporate. The exhaust gas is then compressed, cooled, and returned to the cooling loop.
+described in detail in~\cite{1748-0221-3-07-P07003}. C$_3$F$_8$ gas is delivered in liquid phase at -25$^{\circ}$C to capillaries located immediately before the detector structure. The fluid expands through the capillaries and passes along a cooling pipe. The modules are coupled to the pipe by means of cooling blocks and heat is absorbed from the modules by the passing fluid causing it to evaporate. The exhaust gas is then compressed, cooled, and returned to the cooling loop.
 
 \section{Methodology}
-The temperatures recorded by the module thermistors are read out by the ATLAS \textit{PVSS} SCADA system. Twice a day the temperatures are written to an Oracle database for offline analysis. In addition, whenever a module temperature changes above a deadband of 0.4 $^\circ$C the new value is written to the database.
+The temperatures recorded by the module thermistors are read out by the ATLAS \textit{PVSS} SCADA system. Twice a day the temperatures are written to an Oracle database for offline analysis. In addition, whenever a module temperature changes above a deadband of 0.4$^\circ$C the new value is written to the database.
 It is necessary to first find periods of stable running where the cooling system is turned on and the system in a stable state. Stable periods are found by requiring that the number of cooling loops turned on is constant and greater than zero. Stable periods are required to be at least 6 hours long, to veto periods where the detector is being turned on and off. Stable periods longer than 24 hours are broken down into 24 hour blocks.
 
 For each module, a number of monitoring variables are calculated; these are described below. The distributions of these variables are plotted for each of the barrel layers and endcap disks. Modules which fall in the far outlying regions of the distributions are identified as `problem' modules. A list of problem modules is maintained, and these modules are monitored. The plots are produced automatically on a daily basis by scripts running on one of the SCT monitoring computers. The plots are made available as part of the `SCT Calibration Monitoring' website at \url{https://pc-sct-www01.cern.ch/CalibMonitor/} (ATLAS login required).
