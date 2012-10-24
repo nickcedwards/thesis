@@ -38,7 +38,7 @@ their lattice position. This can have the effect of removing donors, or of
 creating acceptor like defects. Exposure to radiation will eventually cause an n-type
 semi-conductor to become less heavily doped, and in extreme causes change the
 material from n-type to p-type. Consequently, the displacement voltage required
-to fully deplete the detector increases, and for sufficiently high radition doses it
+to fully deplete the detector increases, and for sufficiently high radiation doses it
 becomes impossible to fully deplete the detector. It is therefore essential to
 reduce the effects of radiation damage as much as possible.
 
@@ -66,14 +66,31 @@ I_{\rm{leakage}} (T) \propto T^{2} \rm{e}^{-\frac{E_{g}}{2k_{B}T}}
 \end{equation}
 
 
-\subsection{The SCT Cooling System}
-Each SCT module currently produces between 5.5 and 6W of heat. This is expected
+\subsection{The Inner Detector Cooling System}
+Each SCT module currently produces between 5.5W and 6W of heat when the ``High
+Voltage (HV)'' biasing voltage is applied. This is expected
 to increase to around 8W as the detector suffers the effects of radiation
-damage. As described in the previous section, the silicon detectors must be run
+damage and the bias voltage must be increased to compensate. As described in the
+previous section, the silicon detectors must be run
 at temperatures of around -7$^{\circ}$C in order to slow the rate of radiation
-damage and prolong their lifetime. An active cooling system based upon
-evaporative cooling is used to keep the modules at this temperature. This is
-described in detail in~\cite{1748-0221-3-07-P07003}. C$_3$F$_8$ gas is delivered in liquid phase at -25$^{\circ}$C to capillaries located immediately before the detector structure. The fluid expands through the capillaries and passes along a cooling pipe. The modules are coupled to the pipe by means of cooling blocks and heat is absorbed from the modules by the passing fluid causing it to evaporate. The exhaust gas is then compressed, cooled, and returned to the cooling loop.
+damage and prolong their lifetime. 
+
+An active cooling system based upon
+evaporative cooling is used to keep the modules at this temperature~\cite{1748-0221-3-07-P07003}. An
+evaporative cooling system was chosen over a mono-phase system as it has a
+larger cooling capacity per unit volume do to utilisation of the latent heat of
+vaporisation rather than a liquids heat capacity. This allows the resulting
+system to be smaller and with a lower mass, thus contributing less to the
+material budget of the detector. Additionally, an evaporative system has
+smaller temperature gradients along long cooling tubes, allowing for a more
+uniform module temperature.
+
+The system uses C$_3$F$_8$ gas, delivered at room temperatures to capillaries
+located immediately before the detector structure. The fluid expands through the
+capillaries and passes along a cooling pipe at boiling point. The modules are
+coupled to the pipe by means of cooling blocks and heat is absorbed from the
+modules by the passing fluid causing it to evaporate. The exhaust gas is then
+compressed, condensed, and returned to the cooling loop.
 
 \section{Methodology}
 The temperatures recorded by the module thermistors are read out by the ATLAS \textit{PVSS} SCADA system. Twice a day the temperatures are written to an Oracle database for offline analysis. In addition, whenever a module temperature changes above a deadband of 0.4$^\circ$C the new value is written to the database.
