@@ -102,7 +102,9 @@ cool modules on the SCT barrels, 72 cool modules on the SCT endcaps and the
 remaining 88 cool modules on the Pixel detector.
 
 \section{Methodology}
-The temperatures recorded by the module thermistors are read out by the ATLAS \textit{PVSS} SCADA system. Twice a day the temperatures are written to an Oracle database for offline analysis. In addition, whenever a module temperature changes above a deadband of 0.4$^\circ$C the new value is written to the database.
+The temperatures recorded by the module thermistors are read out by the ATLAS
+\textit{PVSS} SCADA system. Twice a day the temperatures are written to an
+Oracle database for offline analysis. In addition, whenever a module temperature changes above a deadband of 0.4$^\circ$C the new value is written to the database.
 It is necessary to first find periods of stable running where the cooling system is turned on and the system in a stable state. Stable periods are found by requiring that the number of cooling loops turned on is constant and greater than zero. Stable periods are required to be at least 6 hours long, to veto periods where the detector is being turned on and off. Stable periods longer than 24 hours are broken down into 24 hour blocks.
 
 For each module, a number of monitoring variables are calculated; these are described below. The distributions of these variables are plotted for each of the barrel layers and endcap disks. Modules which fall in the far outlying regions of the distributions are identified as `problem' modules. A list of problem modules is maintained, and these modules are monitored. The plots are produced automatically on a daily basis by scripts running on one of the SCT monitoring computers. The plots are made available as part of the `SCT Calibration Monitoring' website at \url{https://pc-sct-www01.cern.ch/CalibMonitor/} (ATLAS login required).
@@ -308,7 +310,7 @@ In order to track problematic modules, plots are produced each month showing the
 Of obvious concern is whether the number of problematic modules is increasing.
 Figure~\ref{fig:num_pm} shows the number of problem modules above threshold on a
 given day as a function of time between 20/01/2010 to 16/10/2012 for the \deltat
-and \tdiff monitoring variables. For both monitoring varibles, there is no
+and \tdiff monitoring variables. For both monitoring variables, there is no
 significant increase in the number of problematic variables observed as a
 function of time. Fitting the distributions to a linear function, the average
 number of \tdiff modules above the problem threshold is found to increase at a rate
@@ -367,4 +369,5 @@ Three modules were observed to have a \tdiff becoming more negative with time, i
 
 \section{Conclusions}
 
-I plan to cross check problem modules against detector conditions and coincidences with events like powercuts, shutdowns, cooling failures etc, as well as studying characteristics of the individual modules such as the voltage arriving at the module. I also plan to cross check problematic modules against the `production database' which details tests made of modules at production to identify any correlations. 
+I plan to cross check problem modules against detector conditions and
+coincidences with events like power-cuts, shutdowns, cooling failures etc, as well as studying characteristics of the individual modules such as the voltage arriving at the module. I also plan to cross check problematic modules against the `production database' which details tests made of modules at production to identify any correlations. 
