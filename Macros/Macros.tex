@@ -1,5 +1,32 @@
 
 \newcommand{\fig}[1]{Figure~\ref{fig:#1}}
+\newcommand{\tab}[1]{Table~\ref{table:#1}}
+
+% |eta|> etc
+\newcommand{\modetaeq}[1]{\ensuremath{|\eta|=#1}}
+\newcommand{\modetagt}[1]{\ensuremath{|\eta|>#1}}
+\newcommand{\modetalt}[1]{\ensuremath{|\eta|<#1}}
+\newcommand{\modetabetween}[2]{\ensuremath{#1<|\eta|<#2}}
+
+% pt, et gt (GeV)
+\newcommand{\pteq}[1]{\ensuremath{\pt =#1} \GeV}
+\newcommand{\ptgt}[1]{\ensuremath{\pt >#1} \GeV}
+\newcommand{\ptlt}[1]{\ensuremath{\pt <#1} \GeV}
+\newcommand{\eteq}[1]{\ensuremath{\et =#1} \GeV}
+\newcommand{\etgt}[1]{\ensuremath{\et >#1} \GeV}
+\newcommand{\etlt}[1]{\ensuremath{\et <#1} \GeV}
+
+% delta eta, delta ph
+\newcommand{\deltaetadeltaphi}[2]{\ensuremath{\Delta \eta \times \Delta \phi = #1 \times #2}}
+
+
+% Co-ordinates
+\def\x{\ensuremath{x}}
+\def\y{\ensuremath{y}}
+\def\z{\ensuremath{z}}
+%\let\phi={\ensuremath{\phi}}
+%\let\theta={\ensuremath{\theta}}
+\def\R{\ensuremath{R}}
 
 % Quoting qauntities with errors
 \newcommand{\errSym}[1]{$\pm$ #1}
@@ -448,7 +475,7 @@
 \def\pipm{\ensuremath{\pii^{\pm}}}%
 \def\pimp{\ensuremath{\pii^{\mp}}}%
 \let\etaa=\eta
-\def\eta{\ensuremath{\etaa}}%
+%\def\eta{\ensuremath{\etaa}}%
 \def\etaprime{\ensuremath{\eta^{\sst\prime}}}%
 %
 % +--------------------------------------------------------------------+
@@ -510,6 +537,8 @@
 % |                                                                    |
 % +--------------------------------------------------------------------+
 %
+\def\E{\ensuremath{E}}
+\def\e{\ensuremath{E}}
 \def\pt{\ensuremath{p_{\mathrm{T}}}} % Subscript roman not italic (EE)
 \def\pT{\ensuremath{p_{\mathrm{T}}}} % Subscript roman not italic (EE)
 \def\et{\ensuremath{E_{\mathrm{T}}}} % Subscript roman not italic (EE)
@@ -517,6 +546,10 @@
 \def\ET{\ensuremath{E_{\mathrm{T}}}} % Subscript roman not italic (EE)
 \def\HT{\ensuremath{H_{\mathrm{T}}}} % Subscript roman not italic (EE)
 \def\ptsq{\ensuremath{p^2_{\mathrm{T}}}} % Fixed so it works correctly (EE)
+
+\def\micro{\ensuremath{\rm{\mu}}}
+
+\def\b{\ensuremath{b}}
 
 \def\degr{\ensuremath{^\circ}} % Removed mbox - caused problems and not needed (EE)
 \def\abseta{\ensuremath{|\eta|}}
