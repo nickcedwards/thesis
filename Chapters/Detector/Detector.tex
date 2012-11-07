@@ -10,7 +10,7 @@ Geneva. The LHC is the world's most powerful accelerator, colliding beams of
 protons together at centre of mass energies of up to 8 \TeV, with the aim of
 better understanding the workings of our Universe. It is installed in
 tunnel of circumference 26.7 km, which previously held the Large
-Electron-Positron Collider (LEP), abd is between 45 and 170 m below the ground.
+Electron-Positron Collider (LEP), and is between 45 and 170 m below the ground.
 It is also capable of colliding heavy ions, providing a complimentary heavy-ion
 physics program.
 
@@ -25,11 +25,15 @@ contained within a single sturcture incorporating a twin bore superconducting
 magnet. The magnets must be cooled to 2K to retain their superconducting
 properties; this is achieved with a helium based cooling system. 
 
-Protons are injected into the LHC from the SPS (Super Proton Synchrotron) at a
-centre of mass energy of 450 \GeV. They are then accelerated to the desired
+Protons are injected into the LHC from the SPS (Super Proton Synchrotron) in
+bunches, at a centre of mass energy of 450 \GeV. They are then accelerated to the desired
 collision energy by means of superconducting Radio Frequency (RF) cavities. Once the
 particles are accelerated to full energy, the RF cavities are used to keep the
-particles in their bunches. 
+particles in their bunches. The bunches are brought to collision at four points
+around the ring, at each of which a different experiment is located. ATLAS sits at
+point 1, the ALICE experiment at Point 2, the CMS experiment at Point 5, and the
+LHCb experiment at Point 8 (the remaining `Points' are access locations to the
+ring).
 
 The rate at which collisions occur depends on the instantanious luminosity
 $\mathcal{L}$ and the collision cross-section $\sigma$, ralted by:
@@ -43,7 +47,33 @@ proton-proton collisions at the LHC is ??. The rate at which a particular
 physics process occurs depends on the cross section for the process in question.
 Since many of the physics processes under study at the LHC are very rare and
 have small cross-sections, it is important to maximise the luminosity as much as
-possible
+possible.  The instantaneous luminosity can be maximised by increasing the
+number of particles per bunch, decreasing the bunch spacing (or equivalently
+increasing the number of bunches per beam) or decreasing the size of the bunch
+at the interaction point.
+
+% The instantaneous luminosity is given by:
+
+%\begin{equation}
+%\mathcal{L} = \frac{N_{\rm{b}}^{2}n_{\rm{b}}f_{\rm{rev}}\gamma_{\rm{r}}}{4\pi
+%\epsilon_{n}\Beta^{*}F
+%\end{equation}
+%
+%where $N_{\rm{b}}$ is the number of particles per bunch, $n_{\rm{b}}$ is the
+%number of bunches per beam, $f_{\rm{rev}}$ is the revolution frequency
+
+A measure of how many collisions have occured is the integrated luminosity:
+
+\begin{equation}
+L = \int \mathcal{L} dt
+\end{equation}
+
+The number of events of a particular process with cross-section
+$\sigma_{\rm{process}}$ is then given by
+
+\begin{equation}
+N_{\rm{process}} = L \dot $\sigma_{\rm{process}}$
+\end{equation}
 
 \subsection{Current Status}
 
