@@ -10,6 +10,7 @@ Calorimetry
    - energy of an em shower normally fully detected.
    - energy of hadronic shower not due to escaping particles (muon, neutrino)
    - Calibration of energy response needed.
+   - Need good containment of the showers for energy measurement, also to limit punch through to the muon system
    
 EM
 --
@@ -32,3 +33,54 @@ EM
 - 22 to 33 X_0 traversed by particle in em calo.
 - The first wheel of the LAr endcaps is segmented in three layers with a granularity equal to that of the barrel, while the second wheel (for larger pseudorapidities) has a coarser granularity that varies a function pseudorapidity.
 - presample for |eta|<1.8 to correct for energy lost by indicent particles traversing material before the calorimeters.
+
+Hadronic Calorimeter
+---------------------
+
+Tile
+----
+- The tiles are oriented radially, perpendicular to the beam direction.
+- Plastic scintliaator tiles, and steel for absorber
+- barrel and extended barrel: 0<eta<0.8, 0.8<1.7, behind Lar
+- central barrel is 5.8m long, extended barrel is 2.6m long each. R1=2.28m, R2=4.25m
+-  3mm tiles perpendicular to beams
+- Scintillation light propertional to the deposited energy
+- Granularity 0.1x0.1 in first two layers and 0.1x0.2 in third.
+- Divided azimuthaly into 64 modules.
+- 3 layers, 1.5, 4.1, 1.8 int lengths in barrel
+- 3 layers, 1.5, 2.6, 3.3 in lengths in extended barrel
+- Read-out two sides by wavelength shifting fibres into two sep photomultipliers
+
+-  In η, the readout cells built by grouping fibres into the photomultipliers are pseudo-projective towards the interaction region.??
+
+- The tiles are placed perpendicular to the colliding beams and staggered in depth. The structure is periodic along z.
+
+Forward calos
+-------------
+- Larger particle flux and high energy, so large hadronic showers and need to be radiation hard. Large area so needs to be limited cots.
+
+LAr HEC
+-------
+- two wheels per EC, HEC1 and HEC2 (1 closest to IP), located directly behind EMEC and sharing same cryostat.
+- two layers per wheel
+- HEC extends to eta=3.2 so overlaps with the FCAL a bit and to 1.5 overlappting with tile
+- HEC1 built from 25mm parallel copper plates, HEC2 50mm plates, interleaved with 8.5mm LAr gaps. In both wheels, first plate is half thickness.
+
+-  Each active gap is split in four drift spaces of about 1.8 mm by the presence of three electrodes, avoiding ion build-up and allowing a lower HV configuration with respect to a single electrode configuration. 
+
+- Readout cells are pseudo-projective in η and projective in φ. ?
+
+
+FCAL
+----
+- Integrated with endcap cryostats. 4.7m from IP on each side. Extends coverage to eta=4.9.
+- To reduce neutron flux, FCal is 1.2m away frin EM Calo front face
+- Absorber must be dense to allow for shower containment
+- Narrow gaps to avoid ion build up and have fast readout time.
+- To fulfil this, tungsten and copper chosen as passive material
+- electrodes run parallel to beam pipe. LAr gap is as small as 270um.
+- 10 int length deep. Three modules in each EC - 1 EM (FCal1) and 2 hadronic (FCal2/3)
+- To optimise the resolution and the heat removal copper was chosen as the absorber for FCal1, while mainly tungsten was used in FCal2 and FCal3 to provide containment and minimise the lateral spread of hadronic showers. 
+- Sheilding plug of copper alloy behind FCAl3 to reduce bg to muon EC system.
+- FCal1 made of copper plates stacked behind each other. 12,260 holes carry electrodes - co-ax copper rod and tube separated by a plastic fibre and a small LAr filled gap.
+- FCal2 and FCal3 consist of two copper plates 2.35cm thick, which similar tubes to FCal1. Space between endplates and tubes filled with tungsten slugs.
