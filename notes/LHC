@@ -1,0 +1,91 @@
+LHC
+
+studies towards 25ns
+https://espace.cern.ch/acc-tec-sector/Chamonix/Chamx2012/talks/GR_2_01_talk.pdf
+
+⇒
+After the 25ns MDs, the LHC beam chambers have been cleaned to
+d
+max
+values well below the build up threshold for nominal 50ns beams
+⇒
+If the present
+level of machine conditioning was preserved,
+‘
+ecloud
+-
+less’
+operation of LHC with 50ns beams
+up
+to high intensities
+should be
+possible in 2012
+⇒
+Only 2
+-
+3 days of scrubbing with 25ns beams for 50ns operation could be
+sufficient
+–
+just to clean parts of the LHC open to air and check the
+conditioning of the arcs
+⇒
+Scrubbing
+of the arcs for 25ns operation could take up to
+2 weeks
+machine time
+(including also test ramps)
+
+
+http://ab-abp-rlc.web.cern.ch/ab-abp-rlc-ecloud/
+electron cloud - Synchrotron radiation from proton bunches in the LHC creates photoelectrons at the beam screen wall.
+These photoelectrons are pulled toward the positively charged proton bunch. When they hit the opposite wall, they generate secondary electrons which can in turn be accelerated by the next bunch. Depending on several assumptions about surface reflectivity, photoelectron and secondary electron yield, this mechanism can lead to the fast build-up of an electron cloud with potential implications for beam stability and heat load on the beam screen
+
+=> Heat load and pressure rise
+=> also beam sees electron cloud and loses energy, becomes unstable
+
+http://cdsweb.cern.ch/record/386682/files/tha6.pdf
+scrubbing
+The Synopsis.
+" An adequate dose of photoelectrons, accelerated by lowintensity
+proton bunches and hitting the LHC beam screen
+wall, will substantially reduce secondary emission and
+avoid the fast build-up of an electron cloud for the nominal
+LHC beam. The conditioning period of the liner surface
+can be considerably shortened thanks to secondary electrons,
+provided heat load and beam stability can be kept
+under control; for example this may be possible using a
+special proton beam, including satellite bunches with an
+intensity of 15-20% of the nominal bunch intensity and a
+spacing of one or two RF wavelengths. Based on recent
+measurements of secondary electron emission, on multipacting
+tests and simulation results, we discuss possible
+‘beam scrubbing’ scenarios in the LHC and present an update
+of electron cloud effects."
+
+
+[08/11/2012 11:09:06] Nick Edwards: although I think it's not clear yet whether we will go to 25ns in 2015[08/11/2012 11:09:37] Nick Edwards: at 25ns, get L=7.5e33, <mu>=17, about 22fb-1 in the year[08/11/2012 11:10:03] Nick Edwards: at 50ns get L=10e33, <mu>=50 (!) ~30 fb-1[08/11/2012 11:10:31] Nick Edwards: this is from Steve Myers @ the Montreux atlas week[08/11/2012 11:10:32] Nick Edwards: https://indico.cern.ch/getFile.py/access?contribId=72&sessionId=12&resId=1&materialId=slides&confId=175938
+
+Total cross section
+http://lhc-machine-outreach.web.cern.ch/lhc-machine-outreach/collisions.htm
+The total proton-proton cross section at 7 TeV is approximately 110 mbarns. 
+(98.3±0.2stat±2.8syst) mb - measured by Totem http://iopscience.iop.org/0295-5075/96/2/21002
+
+ATLAS designed for <mu> = 19
+
+2012 conditions
+-----------------
+beta*  0.6m [https://indico.cern.ch/conferenceDisplay.py?confId=155263]
+
+transverse emittance and amplitude function
+---------------------------------------------
+
+transverse emittance
+	- low emittance means particles are close together and with similar momentum
+	- smallest operning you can squeeze the beam through
+	- measure of parralism of beam
+	- units of length, but referred to as length x angle
+	
+amplitude function (beta) 
+	- width of the beam divided by the emittance
+	- measure of how squeezed the beam is
+	- beta high, beam is wide and straight, beta low beta narrow but will expand

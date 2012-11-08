@@ -1,0 +1,51 @@
+Muon Spectrometer
+-----------------
+
+Toroids
+-------
+- Muons deflected by large air core torioids outside the calorimeter system
+- 3 in barrel, two in EC
+- field (mostly) orthogonal to muons direction
+- air core reduces deflections due to multiple scattering
+
+For |eta|<1.4, barrel toroid provides 1.5 to 5.5 Tm of bending power
+For 1.6<|eta|<2.7, EC toroid provides 1 - 7.5 Tm of bending power
+In transition, combination of the two fields provides bending
+
+-  Each of the three toroids consists of eight coils assembled radially and symmetrically around the beam axis.
+
+General
+--------
+Precisions Chambers: MDT, Cathode Strip Chamber (CSC) - tracking in the bending plane (yz)
+
+Triggering: Resistive Plate Chamber, Thin Gap Chamber - also tracking in the non bending plane (xy)
+
+Designed to cover momentum range 3 GeV - 3 TeV
+
+Stringent alignment requirements - met by precision mechanical assembly techniques and optical alignment systems.
+
+Monitored Drift Tubes (MDT)
+----------------------------
+Three layers covering |eta|<2.7
+In innermost layer, replaced by CSC for 2.0<|eta|<2.7 to manage high rates and backgrounds in this region
+Mechanical isolation of each sensor wire from neighbours guarantees robust and reliable.
+
+Cathode Strip Chamber (CSC)
+---------------------------
+Is a multiwire proportional chamber with cathod segmented into strips - higher granularity than MDT.
+Covers 2.0<|eta|<2.7
+
+Resistive Plate Chamber (RPC)
+-----------------------------
+Triggering, second co-ordinate
+|eta|<1.05
+
+Thin Gap Chamber (TGC)
+-----------------------------
+Triggering, second co-ordinate
+1.05<|eta|<2.7 (2.4 for triggering)
+
+Trigger
+-------
+Covers |eta|<2.4, with time resoltuon of 1.5 - 4 ns
+RPCs used in barrel, TGC in EC
