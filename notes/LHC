@@ -3,16 +3,11 @@ LHC
 studies towards 25ns
 https://espace.cern.ch/acc-tec-sector/Chamonix/Chamx2012/talks/GR_2_01_talk.pdf
 
-After the 25ns MDs, the LHC beam chambers have been cleaned to
-d
+After the 25ns MDs, the LHC beam chambers have been cleaned td
 max
 values well below the build up threshold for nominal 50ns beams
 If the present
-level of machine conditioning was preserved,
-‘
-ecloud
--
-less’
+level of machine conditioning was preserved, ecloud-less’
 operation of LHC with 50ns beams
 up
 to high intensities
@@ -30,7 +25,6 @@ of the arcs for 25ns operation could take up to
 2 weeks
 machine time
 (including also test ramps)
-
 
 http://ab-abp-rlc.web.cern.ch/ab-abp-rlc-ecloud/
 electron cloud - Synchrotron radiation from proton bunches in the LHC creates photoelectrons at the beam screen wall.
