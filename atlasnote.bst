@@ -241,8 +241,8 @@ FUNCTION {format.names}
           %	      if$
           %	    }
           %	  if$
-          %	}
-          %	't
+          	}
+         	't
       if$
       nameptr #1 + 'nameptr :=
       namesleft #1 - 'namesleft :=
