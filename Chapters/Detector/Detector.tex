@@ -613,7 +613,29 @@ Filter' or EF) triggers are software based, and are collectively known as the
 `High Level Trigger' (HLT). At each level, the decision of the previous level is
 refined by using more detector information and allowing a longer time for the
 decision to be made and thus more complicated algorithms to be run, as well as
-tightening the selection requirements to further reduce the. 
+tightening the selection requirements to further reduce the rate. At L2 the full
+readaout from the RoIs indentified at L1 is available. L2 uses dedicated
+algorithms to return a desision based on the RoI information within 100 ms. The
+EF has access to the full event readout, though typically only information
+inside or just oustside the RoI is used. The EF algorithms are based on the
+offline object reconstruction algorithms, and may take up to one second to make
+a decision.
+
+The trigger is organised into `chains' with a L1 trigger seeding a chain of
+algorithms in the HLT. Each chain is responsible for selecting a specific
+trigger signature. The `trigger menu' is the collection of chains used to select
+data during a run. It typically consists of about primary 200 chains for selecting data
+for physics analysis and about 300 supporting chains for selecting data for
+background and performance studies. The design of the trigger menu involves
+balancing between the sensitivity for phsyics analysis resulting from the
+trigger, and the need to reduce the rate to a level dictated by the available
+resources for reconstruction and storage. The offline computing processing power
+limits the EF trigger rate to about 400 Hz. The trigger menu had to evolve
+throughout 2011 and 2012 to meet challenges posed by the constant increase in
+instantaneous luminosity, and the increase of pileup to almost double the design
+value. The measurements described in this analysis use single electron and muon
+triggers. These triggers account for the largest slice of the trigger bandwidth,
+with rates of approximately 50 Hz each. They are described in detail in ??.
 
 \begin{figure}[h]
 \centering
