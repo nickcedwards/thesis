@@ -139,7 +139,7 @@ delivered to ATLAS in 2012 of \LumiTotalDeliveredTwentyTwelve.
 	\subfigure[]{
             \includegraphics[width=0.47\textwidth]{sumLumiByDay2012}
         }
-\caption{Cummuative integrated luminosity run as a function of time in (a)
+\caption{Cummuative integrated luminosity per run as a function of time in (a)
 2011 and (b) 2012. The totals for the two years are separate. 
 Figures from~\cite{atlaslumipublic}.}
 \label{fig:lhc-int-lumi}
@@ -669,8 +669,23 @@ detector output. These are then reconstructed in the same was as
 for real data (described in ???). To simulate the effect of pileup, minimum bias events generated with the \pythia
 generator are overlaid with the hard event.
 
-\section{Experiment Performance and Data Samples}
+\section{Data Samples}
+
+The measurements described in this thesis use data collected in 2011 and 2012,
+and correspond to the full datasets collected by ATLAS in each of those two
+years. The dataset is broken down into {\it runs}, a continuos period of data
+taking typically corresponding to one fill of the LHC. Each run is further
+broken down into {\it luminosity blocks} consisting of roughly two or three
+minutes worth of data taking. Runs are grouped together into {\it periods}, with
+the accelerator, detector and trigger conditions being similar in each period.
+In 2011 the periods are labelled A to M, and in 2012 A to ??.
+
+Luminosity blocks where there were problems with the detector (for example a HV
+trip in the LAr) which would affect the reconstruction of electrons, muons, jets
+or other physics objects are removed using a ``Good Runs List'' which records
+which luminosity blocks have such defects. After applying these requirements,
+the integrated luminosity of 2011 dataset is \Lumi
 
 % define lb, run, period
-% Luminosity graphs
+% Luminosity graphs - NO, already have in LHC section
 % Performace of the detector over these periods
