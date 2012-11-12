@@ -229,20 +229,20 @@ FUNCTION {format.names}
             'skip$
           if$
           namesleft #1 >
-          #	{ namesleft #1 >
-          #	    { ", " * t * }
-          #	    { numnames #2 >
-          #		{ "," * }
-          #		'skip$
-          #	      if$
-          #	      t "others" =
-          #		{ " et al." * }
-          #		{ " and " * t * }
-          #	      if$
-          #	    }
-          #	  if$
-          #	}
-          #	't
+          %	{ namesleft #1 >
+          %	    { ", " * t * }
+          %	    { numnames #2 >
+          %		{ "," * }
+          %		'skip$
+          %	      if$
+          %	      t "others" =
+          %		{ " et al." * }
+          %		{ " and " * t * }
+          %	      if$
+          %	    }
+          %	  if$
+          %	}
+          %	't
       if$
       nameptr #1 + 'nameptr :=
       namesleft #1 - 'namesleft :=
