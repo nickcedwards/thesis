@@ -592,10 +592,28 @@ muon trigger has a time resolution of between 1.5 ns and 4 ns.
 \section{Trigger and Data Aquisition}
 
 ATLAS uses a three level triggering system to indentify when to read out the
-detector, and to reduce the event rate to a manageable level by identifying
+detector and to reduce the event rate to a manageable level by identifying
 interesting events. The collision rate of approximately 20 MHz has to be reduced
 to a rate of between 200 and 1000 Hz for offline reconstruction, storage and analysis.
-An overview of the ATLAS trigger system is shown in~\fig{trigger-overview}
+An overview of the ATLAS trigger system is shown in~\fig{trigger_overview}. 
+
+The
+first level, L1, uses fast custom electronics to identify the presence of signals from a hard scattering such as
+hight \pt\ electrons, muons or jets, or a large amount or missing transverse
+energy. The L1 trigger has a maximum latency of 2.5 \micro s, and must reduce
+the rate to approximately 60 kHz (the design L1 rate was 75 kHz, however
+significant detector dead-time has been observed above 75 kHz). To meet this
+tight time constraint, only low-granularity signals from the calorimeters and dedicated muon trigger
+chambers are used. The L1 trigger also identifies `Regions of Interest' (RoI)
+surrounding the signature that caused the trigger to be fired, for use in later
+levels of the trigger.
+
+The second (L2) and third level (the `Event
+Filter' or EF) triggers are software based, and are collectively known as the
+`High Level Trigger' (HLT). At each level, the decision of the previous level is
+refined by using more detector information and allowing a longer time for the
+decision to be made and thus more complicated algorithms to be run, as well as
+tightening the selection requirements to further reduce the. 
 
 \begin{figure}[h]
 \centering
