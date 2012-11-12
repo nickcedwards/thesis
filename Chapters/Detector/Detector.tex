@@ -653,14 +653,16 @@ Simulation of the detector resonse to various physics processes is a vital
 ingredient to physics analysis. It is important for understanding and
 calibrating the detector response to difference signatures, for estimation of
 acceptances and efficiencies, and finally to be able to compare experimental
-results to theoretical models. ATLAS uses a custom detector simulator based on
-\geant~\cite{Agostinelli2003250}. It takes as input the output of a Monte-Carlo generator as described
+results to theoretical models. ATLAS uses a custom detector simulator which uses
+the
+\geant~\cite{Agostinelli2003250} toolkit to simulate interactions between
+particles and matter. It takes as input the output of Monte-Carlo generators as described
 in ?? in HepMC format, with all particles with a lifetime less than $c \tau >
 10$ mm decayed by the generator. The simulator then propogates the particles
-through the ATLAS detector, using GEANT4 to simulate their interaction with the
+through the ATLAS detector, using \geant\ to simulate their interaction with the
 material of the detector. The response of the detector components is also
-simulated, and simulated output signals in the same format as the digitised
-detector output are produced. These are then reconstructed in the same was as
+simulated, and simulated output signals are produced in the same format as the digitised
+detector output. These are then reconstructed in the same was as
 for real data (described in ???). To simulate the effect of pileup, minimum bias events generated with the \pythia
 generator are overlaid with the hard event.
 
