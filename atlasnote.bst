@@ -231,7 +231,7 @@ FUNCTION {format.names}
           	      if$
           	    }
           	  if$
-          	%}
+          	}
          	't
       if$
       nameptr #1 + 'nameptr :=
