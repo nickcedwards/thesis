@@ -3,7 +3,7 @@
 % https://cdsweb.cern.ch/record/841458
 @unpublished{Jean-Luc:841458,
       author       = "Jean-Luc Caron",
-      title        = "ATLAS detector in A4 format with English captions.",
+      title        = "ATLAS detector in A4 format with English captions",
       month        = "Mar",
       year         = "1998",
       note         = "AC Collection. Legacy of AC. Pictures from 1992 to 2002.",
@@ -13,7 +13,7 @@
   	
 % ATLAS Detector paper
 @article{1748-0221-3-08-S08003,
-  author={ATLAS Collaboration },
+  collaboration={ATLAS Collaboration },
   title={The ATLAS Experiment at the CERN Large Hadron Collider},
   journal={Journal of Instrumentation},
   volume={3},
@@ -26,10 +26,11 @@
 	
 
 % CSC
-@book{Aad:1125884,
+@techreport{Aad:1125884,
     collaboration  = "ATLAS Collaboration",
       title        = "Expected performance of the ATLAS experiment: detector,
                       trigger and physics",
+      number       = "ATL-COM-DAQ-2012-206",
       publisher    = "CERN",
       address      = "Geneva",
       year         = "2009",
@@ -86,6 +87,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Luminosity
 @techreport{ATLAS-CONF-2011-116,
+    collaboration  = "ATLAS Collaboration",
       title        = "Luminosity Determination in pp Collisions at sqrt(s) = 7
                       TeV using the ATLAS Detector in 2011",
       institution  = "CERN",
@@ -94,8 +96,8 @@
       month        = "Aug",
       year         = "2011",
 }
+      %author         = "Aad, Georges and others",
 @article{Aad:2011dr,
-      author         = "Aad, Georges and others",
       title          = "{Luminosity Determination in $pp$ Collisions at
                         $\sqrt{s}=7$ TeV Using the ATLAS Detector at the LHC}",
       collaboration  = "ATLAS Collaboration",
@@ -110,4 +112,66 @@
       SLACcitation   = "%%CITATION = ARXIV:1101.2185;%%",
 }
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tracking
+
+% Paper on NEWT
+@article{1742-6596-119-3-032014,
+  author={T Cornelissen and M Elsing and I Gavrilenko and W Liebig and E Moyse and A Salzburger},
+  title={The new ATLAS track reconstruction (NEWT)},
+  journal={Journal of Physics: Conference Series},
+  volume={119},
+  number={3},
+  pages={032014},
+  url={http://stacks.iop.org/1742-6596/119/i=3/a=032014},
+  year={2008},
+  abstract={The track reconstruction of modern high energy physics experiments is a very complex task that puts stringent requirements onto the software realisation. The ATLAS track reconstruction software has been in the past dominated by a collection of individual packages, each of which incorporating a different intrinsic event data model, different data flow sequences and calibration data. Recently, the ATLAS track reconstruction has undergone a major design revolution to ensure maintainability during the long lifetime of the ATLAS experiment and the flexibility needed for the startup phase. The entire software chain has been re-organised in modular components and a common event data model has been deployed. A complete new track reconstruction that concentrates on common tools aimed to be used by both ATLAS tracking devices, the Inner Detector and the Muon System, has been established. It has been already used during many large scale tests with data from Monte Carlo simulation and from detector commissioning projects such as the combined test beam 2004 and cosmic ray events. This document concentrates on the technical and conceptual details of the newly developed track reconstruction.}
+}
+% Detailed note on NEWT
+@techreport{Cornelissen:1020106,
+      author       = "Cornelissen, T and Elsing, M and Fleischmann, S and Liebig,
+                      W and Moyse, E and Salzburger, A",
+      title        = "Concepts, Design and Implementation of the ATLAS New
+                      Tracking (NEWT)",
+      institution  = "CERN",
+      address      = "Geneva",
+      number       = "ATL-SOFT-PUB-2007-007. ATL-COM-SOFT-2007-002",
+      month        = "Mar",
+      year         = "2007",
+}
+
+% Egamma GSF note
+@techreport{ATLAS-CONF-2012-047,
+      title        = "Improved electron reconstruction in ATLAS using the
+                      Gaussian Sum Filter-based model for bremsstrahlung",
+      institution  = "CERN",
+      address      = "Geneva",
+      number       = "ATLAS-CONF-2012-047",
+      month        = "May",
+      year         = "2012",
+}
+
+@techreport{ATLAS-CONF-2010-072,
+      title        = "Performance of the ATLAS Silicon Pattern Recognition
+                      Algorithm in Data and Simulation at $\sqrt{s} = 7$ TeV",
+      institution  = "CERN",
+      address      = "Geneva",
+      number       = "ATLAS-CONF-2010-072",
+      month        = "Jul",
+      year         = "2010",
+}
+
+@article{Fruhwirth:1987fm,
+      author         = "Fruhwirth, R.",
+      title          = "{Application of Kalman filtering to track and vertex
+                        fitting}",
+      journal        = "Nucl.Instrum.Meth.",
+      volume         = "A262",
+      pages          = "444-450",
+      doi            = "10.1016/0168-9002(87)90887-4",
+      year           = "1987",
+      reportNumber   = "HEPHY-PUB-87-503",
+      SLACcitation   = "%%CITATION = NUIMA,A262,444;%%",
+}
 
