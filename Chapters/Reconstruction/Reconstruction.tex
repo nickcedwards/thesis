@@ -128,7 +128,14 @@ once discarded, outlier tracks are not used again. This can be sub-optimal in
 busy environments if the initial seeding does not correctly identify clusters.
 
 An alternative approach, with better handling of outliers, is
-`finding-through-fitting'. This is the default approach in ATLAS.
+`finding-through-fitting'. This is the default approach in ATLAS. Tracks are
+again preselected by consistency with the interaction region, but in this case a
+single seed vertex is formed out of all the preselected tracks. This is fitted, and
+tracks identified as outliers in the fit are used to create a second vertex
+seed. A simultaneous fit is then carried out of the two vertices, and again
+outlier tracks are used to create a new primary vertex. The procedure is
+iterated until none of the remaining outliers fit with any vertex with a
+\chisquared\ probability of more than 1\%.
 
 The fitting uses a
 `Adaptive Vertex Finding'~\cite{0954-3899-34-12-N01}, 
