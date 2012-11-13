@@ -3,7 +3,7 @@
 
 In this chapter the software algorithms used to reconstruct and identify physics
 objects are described. Reconstruction involves reconstructing tracks in the
-Inner Detector and Muon Spectrometer, idenitfying interaction vertices,
+Inner Detector and Muon Spectrometer, identifying interaction vertices,
 and identifying clusters of energy deposits in the calorimeter systems. These are
 then combined to reconstruct physics `objects' such as electrons, muons, jets, photons,
 tau leptons, as well as to measure properties as the event such as missing
@@ -25,8 +25,8 @@ Detector. The tracking algorithm must be able to correctly associate hits with
 tracks, as well as reconstruct the track parameters. As well as interacting with
 the active elements of the detector, particles will also interact with the
 material in the Inner Detector, leading to multiple scatterings, ionisation
-energy loss and, especially for electrons, radiational energy loss from
-bremsstrahlung. A detailed descirption of the ATLAS tracking is given
+energy loss and, especially for electrons, radiation energy loss from
+bremsstrahlung. A detailed description of the ATLAS tracking is given
 in~\cite{1742-6596-119-3-032014}.
 
 A particle's trajectory can be described by five parameters, $\bf{x_{i}}$ . In ATLAS, the
@@ -37,7 +37,7 @@ parameters are chosen to be:
 \end{equation}
 
 where $l_{1}$, $l_{2}$ are two co-ordinates in the frame of the detector surface
-of the measurent and the other three parameters describe the momentum of the track
+of the measurement and the other three parameters describe the momentum of the track
 in the global frame.
 
 \subsection{Inside Out Tracking}
@@ -53,7 +53,7 @@ and the first layer of the SCT.
 
 These seeds are used to build roads through the
 rest of the detector elements. A Kalman fitter-smoother~\cite{Fruhwirth:1987fm} is used to follow the
-trajectory, succesively adding hits to the track fit. From a given layer, the
+trajectory, successively adding hits to the track fit. From a given layer, the
 Kalman filter will predict the track parameters on the next detector layer, then
 update the track parameters and covariances taking into account the measurements
 found on the next layer (filtering), as well as refining the estimates for the
@@ -65,14 +65,14 @@ is, however, highly non-gaussian, and is not modelled well in this approach. Rou
 
 The next step in the procedure is ambiguity resolution; many of the track
 candidates found in the track finding will share hits, or will be as a result of
-fakes, or will erroneaously incoporporate outliers. At this stage the track is
+fakes, or will erroneously incorporate outliers. At this stage the track is
 refitted with a global \chisquared\ fit using a refined reconstruction geometry
 with more detailed material description and omitting outliers. 
 A score is assigned to each track, based upon the fit quality \chisquaredndof,
-the number of hits on the track, the prescence of overlapping hits on a layer,
+the number of hits on the track, the presence of overlapping hits on a layer,
 and with
 penalties for `holes' (missing hits). The scores for different detector elements
-are weighted giving greater weight to more precise detector elements. Ambiguties
+are weighted giving greater weight to more precise detector elements. Ambiguities
 are resolved by choosing the track with the greater score; tracks with a score
 below a certain threshold are discarded.
 
