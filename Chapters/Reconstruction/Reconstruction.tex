@@ -104,8 +104,41 @@ SCT and Pixel detectors.
 \section{Vertex Finding}
 \label{sec:reco-vertexing}
 
+Location of interaction vertices is an important ingredient to precision
+particle-physics measurements. It is important to know which particles were
+associated with the primary interaction vertex, and parameters such as the
+longitudinal and transverse impact parameters can be used to distinguish signal
+leptons from fakes, leptons from conversions or secondary decays in jets.
 
-~\ccite{1742-6596-119-3-032033}
+In the ATLAS reconstruction process, vertex finding occurs after construction of
+Inner Detector tracks, as described in Section~\ref{sec:reco-tracking}. The
+vertex finding algorithm must associate tracks with primary vertices, and obtain
+a best fit for the vertex position (and it's uncertainty). Two approaches are
+used in ATLAS for associating tracks to vertices~\cite{1742-6596-119-3-032033}. 
+In `finding-after-fitting',
+tracks are preselected by requiring that they are consistent with the collision
+region. The tracks are ordered by their longitudinal impact parameter, and a
+sliding window algorithm is used to identify clusters of tracks. A fit is then
+carried out to obtain the vertex position. Outlier tracks are then removed if
+they have a \chisquared\ with a probability of being consistent with the vertex
+of less than 8\%. The vertex is the refitted, and the process iterates until
+there are no outliers left, or the cluster becomes too small. In this procedure
+the number of vertices produced is determined at the clustering stage, and
+once discarded, outlier tracks are not used again. This can be sub-optimal in
+busy environments if the initial seeding does not correctly identify clusters.
+
+An alternative approach, with better handling of outliers, is
+`finding-through-fitting'. This is the default approach in ATLAS.
+
+The fitting uses a
+`Adaptive Vertex Finding', 
+using a Kalman filter to minimise the least squares distances of the tracks from
+the vertex position. After a preliminary fit, tracks are assigned a
+weight depending on their compatibility with the vertex, with outlier tracks
+being down-weighted so as to have less of a pull on the vertex position. The
+process is iterated until convergence.
+
+
 
 \section{Cluster Reconstruction}
 \label{sec:reco-clustering}
