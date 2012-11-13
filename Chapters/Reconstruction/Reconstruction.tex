@@ -137,9 +137,9 @@ outlier tracks are used to create a new primary vertex. The procedure is
 iterated until none of the remaining outliers fit with any vertex with a
 \chisquared\ probability of more than 1\%.
 
-The fitting uses a
-`Adaptive Vertex Finding'~\cite{0954-3899-34-12-N01}, 
-using a Kalman filter to minimise the least squares distances of the tracks from
+An `Adaptive Vertex Finding'~\cite{0954-3899-34-12-N01} algorithm is used in
+both cases for the vertex position fitting. 
+This uses a Kalman filter to minimise the least squares distances of the tracks from
 the vertex position. After a preliminary fit, tracks are assigned a
 weight depending on their compatibility with the vertex, with outlier tracks
 being down-weighted so as to have less of a pull on the vertex position. The
