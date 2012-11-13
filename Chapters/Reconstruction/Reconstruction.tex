@@ -55,7 +55,13 @@ trajectory, succesively adding hits to the track fit. From a given layer, the
 Kalman filter will predict the track parameters on the next detector layer, then
 update the track parameters and covariances taking into account the measurements
 found on the next layer (filtering), as well as refining the estimates for the
-track parameters on the previous layers based on the new measurement.
+track parameters on the previous layers based on the new measurement. Roughly
+10\% of seeds will lead to track candidates.
+
+The next step in the procedure is ambiguity resolution; many of the track
+canidadtes found in the track finding will share hits, will be as a result of
+fakes, or will erroneaously incoporporate outliers. At this stage the track is
+refitted using a global \chisquared\ fit
 
 \label{sec:reco-tracking}
 \section{Vertex Finding}
