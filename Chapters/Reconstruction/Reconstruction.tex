@@ -90,7 +90,9 @@ produce seeds. Additionally, inside out-tracking will sometimes fail due to
 ambiguous hits shadowing the track seed in the densely populated inner layers of
 the silicon detectors. Further, high energy loss at the outer radii of the SCT may cause
 the track to change direction in the bending plane and the extension search to
-go in the wrong direction. A complimentary tracking procedure called outside-in
+go in the wrong direction. 
+
+A complimentary tracking procedure called `outside-in'
 tracking attempts to solve these problems by starting from the TRT and working
 inwards. It begins by searching for track segments in the TRT using hits not
 associated with a silicon track extension, using a Hough transform to identify
