@@ -55,7 +55,10 @@ trajectory, succesively adding hits to the track fit. From a given layer, the
 Kalman filter will predict the track parameters on the next detector layer, then
 update the track parameters and covariances taking into account the measurements
 found on the next layer (filtering), as well as refining the estimates for the
-track parameters on the previous layers based on the new measurement. Roughly
+track parameters on the previous layers based on the new measurement. The Kalman
+filter takes into account linear distortions to the track from multiple
+scattering and from ionisation energy loss. Energy loss through brehmsstrahlung
+is, however, highly non-gaussian, and is not modelled well in this approach. Roughly
 10\% of seeds will lead to track candidates.
 
 The next step in the procedure is ambiguity resolution; many of the track
