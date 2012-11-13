@@ -94,7 +94,8 @@ go in the wrong direction. A complimentary tracking procedure called outside-in
 tracking attempts to solve these problems by starting from the TRT and working
 inwards. It begins by searching for track segments in the TRT using hits not
 associated with a silicon track extension, using a Hough transform to identify
-tracks~\cite{Baines:683897}. These are then extended back into the
+tracks~\cite{Baines:683897}. These track segments are then fitted using a Kalman
+filter to take into account the drift-time measurements. These are then extended back into the
 SCT and Pixel detectors.
 
 \label{sec:reco-tracking}
