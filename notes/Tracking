@@ -1,0 +1,108 @@
+Tracking
+++++++++
+
+- "New Tracking" NEWT
+- common EDM and detector geometry used in ID and MS tracking
+
+Tracking General
+===================
+- trajectory of charged particle in magnetic field represented at any point by 5 parameters
+	- ATLAS choice τi =(l1,l2,φ,θ,q/p), 5x5 covariance C
+	- Different from classical helix represenytatation due to complicated magnetc field
+   - l1, l2 local co-ordinates in the initrinsice frame of the surface of measurement
+- First Step: pattern reco = finding hits associated with track
+- Then track fit = estimation of track parameters and errors {x,C}
+	- Can get fakes
+	- have to deal with noise and secondaries
+
+Hough transform - global pattern rec
+-------------------------------------
+- Define transformation that transforms hits into Hough space (direction, curvature) under different track hypothesis.
+- Basically scan all track curvatures and directions to find maxima in Hough space
+
+Local pattern rec
+-----------------
+- progressive method. Distinction between pattern reco and track fitting vanishes
+- e.g. combinatorial Kalman filter (update test to build trajectory), concorruent track approach
+   
+Kalman Filter
+-------------
+Start on module 1 with track paramaters estimate from seed.
+
+Propogate parameters to module 2 x_2 = F_12 x1, also cov matrix
+Look for hits and estimate parameters on module 2 based on prediction and measurement on module 2 (filtering)
+x_2^filt = x_2^pred + K_2(m_2-H_2x_2^pred)
+where k_2 is the gain matrix - takes into account uncertainties in measurement and process noise.
+smoothing - update previous measurements based on new information.
+- needs seeding
+
+Global chi2 fit
+---------------
+- minimis chi2 function of all measurements at once
+- Residual weighted with measurement error: Chi2 = sum_i([m_i - h_i(f_i(x_0))]^2 / sigma_i^2)
+- involves large matrix inversion so is CPU inversion
+- needs seeding
+
+- can add in term for scattering angle:
+	Chi2 = sum_i([m_i - h_i(f_i(x_0,{theta_j}_{i}))]^2 / sigma_i^2) + sum_j(theta_j^2/sigma_{MS,j}^2)
+	- modify track to have kink with angle theta (first term)
+	- Second term weights by expected contribution (disfavours large scatterings) - is sum over all scatters along the  track
+	- also term for energy loss? sum_eloss( [Delta_E - Delta_E^avg]^2/sigma_eloss^2 )
+
+Multiple scattering
+--------------------
+successive deflections. Central limi thm: gaussian (core), but single large scattering adds non gaussian tails
+=> normally use gaussian approximation
+
+Energy loss
+------------
+- mainly ionalisation for heavy particles (Bethe-Bloch)
+- Electrons: BREM. Highly non gaussian (landau)
+
+Need to know material extremely well for wuality track reco
+
+GSF
+---
+- Electron fitting doesnt work well with least squares estimators
+- can use a gaussian sum filter - model energy loss through several gaussians and fit a multi-variant track
+
+ATLAS ID tracking
+=================
+Three stages (inside out tracking)
+
+1. Pre-processing: form spacepoints from raw data in SCT and PIX. 
+   - Pix: single hit
+   - SCT spacepoints required to have hits both sides (allow z measurement) (single hits still used)
+   
+2. Track finding stage (pattern reco)
+   - Seeds formed from combination of space-points in the three pix layers and first SCT layer
+   - extend through SCT adding hits along (road opened around direction of seed) track to form candidates.
+   - use Kalman filtering and smoothing to decide whether to keep hits
+   - Refit candiates, remove outliers, reject fake tracks
+      - apply quality cuts: Chi2 quality of track, number of associated hits, limit on shared hits, number of holes
+      - resolve ambiguities based on points scored by passing these cuts
+      - points allocated based on number of hits, giving greater weight to its in more precise detectors (PIX)
+   - Extend into TRT:
+   		- associate drift circle info in a 'road' around the extrapolation
+   		- Refit with full info of all 3 detectors andcomparie quality to silicon only.
+3. Post processing
+   - Find vertices
+   
+Outside in tracking
+--------------------
+- Search for unused track segments in TRT (using a Hough transform mechanism)
+- Extend back to SCT and pix 
+- improves tracking efficiency for secondary tracks from conversions or decays of long lived particles.
+- some tracks lost in inside out tracking due to ambiguous hits shadowing the track seed in the silicon - not score enough to go on.
+- high energy loss at outer radii of SCT may cause extension search no go in the rong direction
+
+Alignment
+---------
+- Crucial in reaching required performance as need to accurately determine positions in space of silicon modules or straws
+- 6 deg of freedom for each module if rigid body
+- also need to correct for imperfections e.g. bows
+- Need 10 um resolution in the bending plane to get no more than 20% inflation in track param unc
+- determine alignment constant using dedicated stream of track selected at 10 Hz. 1e6 tracks per 24 hrs, rederived every 24 h
+- minimise residuals in high pt tracks (lower multi scat) to get alignment
+- certain global distortians missed by this simple residucals minimisation - lead to biases in param measurement whilst maintaining trajectory of track
+   - slve by ensuring tracks with different topologies, e.g. cosmics, tracks from Z and J/psi

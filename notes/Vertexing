@@ -1,0 +1,47 @@
+Vertexing
+++++++++++
+
+- needed for precision measurements, and rejecting background
+- happens after tracking
+- parameters stored: position in the global detector frame, quality and parameters of the vertex fit, track-to-vertex asso- ciations
+
+- two stages:
+	- associate tracks to candidates
+	- fit for vertex position and covariance matrix
+- Two vertex reconstruction strategies are implemented in the ATLAS: 
+	- fitting-after-finding and 
+	- finding-through-fitting.
+	
+- interaction region is described by a Gaussian with the standard deviation of 5.6 cm in the direction of the beam and 15 μm in the perpendicular plane
+	
+Finding after fitting
+======================
+- e.g. InDetPriVxFinder
+- preselect tracks originating from interacting region, order according to longitudinal impact parameter
+- identify clusters of tracks using sliding window
+- clusters treated as independent vertices
+- fit, and check Chi2 of each track - consider outlier if prob of Chi2<8%
+- use an iterative procedure that removes outliers and refit
+- continue until no outliers left or cluster becomes too small to continue
+- if track removed, doesn't get used again - n. vtx determined at clustering stage,
+[78]
+
+Finding through fitting
+========================
+- better handling of outliers
+- default in ATLAS
+- e.g. InDetAdaptiveMultiPriVxFinder
+- identify tracks in IR, then create single vertex seed
+- fit it, and tracks that don't fit are used to create a second seed
+- fit two vertices simultaneously, and create new vertex out of removed tracks
+- ....
+- profit
+- tracks that fail to be associated with any vertex with chi2 prob > 1% do not influence fit results
+
+Fitting
+=======
+Adaptive Vertex Finding
+- Kalman Filter used with least squares minimisation of distances from vertex.
+- Outlier tracks down-weighted depending on compatability with vertex
+- Down weighting gets progressively tighter
+- Iterate until converged

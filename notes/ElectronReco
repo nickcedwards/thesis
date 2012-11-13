@@ -1,0 +1,20 @@
+Electron Reconstruction
+++++++++++++++++++++++++
+
+- cluster finding in the EM calo and track finding in ID
+
+Cluster Finding
+---------------
+
+- Form seeds from clusters of towers (tower = 0.025x0.025) using a sliding window algorithm in window of size 3x7
+- If a seed matches an inner-detector track with pT>5 GeV, an electron candidate is formed.
+- A converted photon candidate is created if the associated track is also associated with a secondary vertex. 
+- If no match is found to an inner detector track, an unconverted photon candidate is created. 
+- electron cluster as 3×7, for |η| < 1.5 and 5×5 for 1.5 < |η| < 2.5.
+
+Identification
+---------------
+- calculate ID variables corresponding toproperties of 
+   - the EM showers (longitudinal shower depth, lateral shower width) and the 
+   - track quality and 
+   - track-cluster matching
