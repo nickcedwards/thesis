@@ -49,7 +49,9 @@ the Pixel detector a space-point corresponds simply to a hit in the detector. In
 the SCT space-points are required to have hits in both sides of the module in
 order to give a measurement in $z$ (due to the stereo-angle). Track seeds are
 then formed from combinations of space-points in the three Pixel detector layers
-and the first layer of the SCT. These seeds are used to build roads through the
+and the first layer of the SCT. 
+
+These seeds are used to build roads through the
 rest of the detector elements. A Kalman fitter-smoother~\cite{Fruhwirth:1987fm} is used to follow the
 trajectory, succesively adding hits to the track fit. From a given layer, the
 Kalman filter will predict the track parameters on the next detector layer, then
