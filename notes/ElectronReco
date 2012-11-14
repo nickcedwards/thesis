@@ -5,16 +5,100 @@ Electron Reconstruction
 
 Cluster Finding
 ---------------
+- Form towers of 0.025x0.025, size of second layer of emcal. gives a grid of 200x256 
+	- sum energy of all cells
+	- energy of cells shared between showed according to fractional area of cell intersect by tower in case of cell shared between towers
 
-- Form seeds from clusters of towers (tower = 0.025x0.025) using a sliding window algorithm in window of size 3x7
-- If a seed matches an inner-detector track with pT>5 GeV, an electron candidate is formed.
+Seed cluster finding
+--------------------
+- use window of 0.075x0.125 (3x5) accross each element of grid. If energy is local maximum and Et>2.5 form seed cluster
+- pos of cluster is energy weighted eta/phi barycentre of cells in a window around cell in centre of seed cluster. Window can have smaller size than seed cluster (0.075x0.075 - how is it decided?)
+- If two seeds are closer than 0.050x0.050 only one with highest Et kept.
+
+EM cluster formation
+---------------------
+- Formed by taking all cells inside fixed-size rectangle (sliding window) with size depending on hypothesised particle.
+	- 0.075x0.175 [3x7] (0.125x.125) [5x5] for el in barrel (ec)
+	- 0.075x0.125 (0.125x.125) for ph in barrel (ec)
+	- seed 3x5 was chosen to be subset of final em cluster size
+- Energy is sum of
+	1. Estimated energy deposited before calo
+	2. measured energy in cluster
+	3. estimated lateral leakage
+	4. estimated long leakage
+- Four terms paramat as a fn of meas clus energy in presampler and in the 3 EM calo layers, based on simulation of energy dep in calo and dead material.
+
+- cluster reco expected to be very efficient for true electrons:
+	- In MC simulations, the efficiency is about 95% at ET = 5 GeV and 100% for electrons with ET>15GeVfromWandZdecays.
+- Apply corrections
+- 4 mom is computer using the track direction
+-. In the region between the barrel and end-cap calorimeters, the cluster energy is in addition corrected for energy losses using the energy deposit in the crack scintillators.
+	
+Electron Rec
+-------------
+https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ElectronReconstruction
+
+- Tracks extrapolated from last measurement point to middle layer of calo and very loosely matched to seed clusters. Requires delta_et<0.05. delta_phi window is 0.1 on side where trck bends and 0.05 on other size, to account for brem.
+-For non-TRT-only tracks cluster is matched to tracks in two steps: first the eta and phi at the origin (of the track) are compared to the eta and phi of the cluster position. If there is reasonable agreement (0.2 in eta, 0.1 in phi),
+- If a seed matches at least one inner-detector track (with pT>5 GeV ?), an electron candidate is formed.
+- If several track match, the track with Si hits preffered, and one with smallest dR chosen.
+-  /etmiss
+ 
+- The information related to the track-to-cluster matching is retained for all the tracks assigned to the reconstructed electron object and is used during the particle identification, as described later in this note.
 - A converted photon candidate is created if the associated track is also associated with a secondary vertex. 
 - If no match is found to an inner detector track, an unconverted photon candidate is created. 
 - electron cluster as 3×7, for |η| < 1.5 and 5×5 for 1.5 < |η| < 2.5.
 
-Identification
----------------
-- calculate ID variables corresponding toproperties of 
-   - the EM showers (longitudinal shower depth, lateral shower width) and the 
-   - track quality and 
-   - track-cluster matching
+- In early versions ranked tracks by closeness to E/p==1, and requitred E/p<10 - this caused significant looses due to brem, mostly at large eta.
+
+
+softe
+------
+for low-pt (few GeV) can improve efficiency by using track as a astarting point.
+- extrapolate to em cal and build cluster
+- overlap rem if sahres track with standard el
+
+fwde
+----
+- no tracking!
+- reco only from energy deposits in calo
+- group neighbouring cells in 3D, based on sign of energy deposit wrt noise.
+- variable number of cells:
+	- start with seeds with sig/noise above high threshold t_seed
+	- add surrounfing cells above a lower thresh t_cell
+	- neighbours can become seeds it thresh t_neighbour int
+	- The low threshold at the perimeter ensures that tails of showers are not discarded, while the higher thresholds for seeds and neighbors effectively suppress both electronics and pile-up noise.
+
+-In the standard ATLAS reconstruction, two types of topological clusters are built: 
+	- the electromagnetic “633” clusters and the combined “420” clusters. 
+	- The “633” cluster can be used to reconstruct EM clusters significantly higher than the noise with minimum fake rate. 
+	- The “420 ” is optimized to find efficiently low energy clusters without being overwhelmed by noise. The cut on absolute energy ensures the noise constribution is symmetric. 
+
+- Split if above threshold and have multiple local maxima
+
+- The direction of forward electrons is defined by the barycentre of the cells belonging to the cluster. 
+- The energy of the electron is determined simply by summing the energies in the clus- ter cells and is then corrected for energy loss in the passive material before the calorimeter. 
+- An electron candidate in the forward region is reconstructed only if it has a small hadronic energy component and a transverse energy of ET > 5 GeV
+   
+author
+-------
+Definition of the author
+The different egamma algorithms are run independently during reconstruction. For each object reconstructed the algorithm author is kept in variable :
+
+    AuthorUnknown 0x=0 set 1st bit at 0 (means 0 in terms of integer)
+    AuthorElectron 0x1 set 1st bit at 1 (means 1 in terms of integer)
+    AuthorSofte 0x2 set 2nd bit at 1 (means 2 in terms of integer)
+    AuthorPhoton 0x4 set 3rd bit at 1 (means 4 in terms of integer)
+    AuthorFrwd 0x8 set 4th bit at 1 (means 8 in terms of integer)
+    AuthorRConv 0x10 set 5th bit to 1 (means 16 in terms of integer) 
+    
+GSF etc
+========
+https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/BremmPlanning2011
+https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/GsfElectronUsage
+https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/EgammaTracking172
+
+- by deafult track fitted with pion hypo - does not account for brem, a common occ given material.
+- GSF is non-linear generalisation of the Kalman filter were it estimates process noise and energy loss by a sum of Gaussian's instead of just one Gaussian.
+
+-The use of brem fitter can potentially benefit all physics analyses using electrons, in particular the ones sensitive to low Et electrons and in need of very high efficiency. But the benefit of a superior electron track parameter estimation obtained with brem fitters (when compared to the default, "general purpose" globalchi2 fitter) is not limited to those cases. Improved E/p, lower charge misID, better d0 estimate, etc.. can be eploited by physics analyses to maximize their physics output. 

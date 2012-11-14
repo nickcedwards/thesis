@@ -74,10 +74,7 @@ L1 vh?
 - Had to be tightened suring 2011 running to control rates whilst keeping good acceptance
 - Mid 2011, tighten both L1 and HLT. 2012, reoptimise ID to remove pu dependance and add ID
 
-- L1 granularity detaxdpho 0.1x0.1 (trigger towers) to identify pos of RoI and compute ET of clusters precision 1 GeV
-- for each tower, sum cells of EM or had cal, except for foruth layer of had endcap and barrel endcap gap scintallators
-- EM clusters formed by identifying local maximas using sliding window algorithm on 4x4 trigger towers. 
-- Trigger satisfied if the window's core region, (2x2) contains a pair of neighbouring towers witrh combined energy over threshold.
+
 
 - Calorimeter cells responses are electric current pulses
 - Recieved and chaped in FE electronics of teh detectors
@@ -86,7 +83,13 @@ L1 vh?
 Since there are almost 200e3 calo cells, need an array of parallel units - 700 Digital Signal Processors (DSPs). Rate is upt o 100 kHz.
 - Constants used in DSP cannot be changed during run, but conditions (eg Lar HV) can chane, which varies signal by up to 10 or 15%. Offline reprocessing of L2/EF may then give different result.
 
+- L1: Require Et in two adjacent tower of 0.1x0.1 above threshold
+	- for each tower, sum cells of EM or had cal, except for foruth layer of had endcap and barrel endcap gap scintallators
+	- EM clusters formed by identifying local maximas using sliding window algorithm on 4x4 trigger towers. 
+	- Trigger satisfied if the window's core region, (2x2) contains a pair of neighbouring towers witrh combined energy over threshold.
+
 - L2: Build clustsers sithin 0.4x0.4 RoI identified at L1.
+   - Fast tracking
    - Use only second layer of EM cal to find the cell with the largest Et in the RoI - pre-seed.
    - Find position by taking energy weighted average of 3x7 cells surrounding pre-seed.
    - Find energy in 3x7 (0.075x0.175) grid in barrel (<1.4) or 5x5 (.125x.125) in EC (1.4<2.47)
@@ -105,3 +108,7 @@ Since there are almost 200e3 calo cells, need an array of parallel units - 700 D
    - EF threshold raised 20 to 22 when luminosity exceeded 2e33.
    - ID requirements tighetened in Sept for ze33 (medium->medium1).
    - medium1 designed to correspond to medium++
+   
+- Changes in 2012
+   - Add track based isolation at EF: EF (PTcone20/PT < 0.1) 
+   - raise threshold to 24 GeV 

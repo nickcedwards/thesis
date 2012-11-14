@@ -1,0 +1,10 @@
+Electron Identification
+++++++++++++++++++++++++
+
+
+Identification
+---------------
+- calculate ID variables corresponding toproperties of 
+   - the EM showers (longitudinal shower depth, lateral shower width) and the 
+   - track quality and 
+   - track-cluster matching
