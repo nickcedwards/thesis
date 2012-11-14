@@ -1,4 +1,14 @@
-
+Electrons are reconstructed in the central region (\modetalt{2.5}) by a
+combination of a calorimeter cluster and an inner detector track; this is
+referred to below as the `standard' electron algorithm. Reconstruction begins
+with the construction of seed clusters in the calorimeter. These are formed from
+calorimeter towers of size \deltaetadeltaphi{0.025}{0.025}, corresonding to the
+size of cells in the second layer of the electromagnetic calorimeter. This
+results in a grid of $200 \times 256$ towers The energy
+of the tower is the sum of all the EM calorimeter cells in all three layers
+falling within the tower. Where cells are shared between more than one tower the
+energy is shared according teh the fractional overlap of the cell with each
+tower. The seed cells are formed by identifying local energy maxima in a sliding window of
 
 \subsection{Electron triggers}
 \label{sec:reco-el-triggers}
