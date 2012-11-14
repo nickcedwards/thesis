@@ -7,7 +7,7 @@ Electrons are reconstructed in the central region (\modetalt{2.5}) by searching
 for EM calorimeter clusters and matching them to Inner Detector tracks; this is
 referred to below as the `standard' electron algorithm and is described below.
 In the forward regions (\modetabetween{2.5}{4.9}) there is no Inner Detector
-tracking, and electrons are reconstructed soley from calorimeter clusters - this
+tracking, and electrons are reconstructed solely from calorimeter clusters - this
 is also described below. The `standard' algorithm drops in effeciency at low \pt
 (a few \gev), but an alternative `soft-e' algorithm can be used to recover
 efficiency. It uses Inner Detector tracks as seeds, which it extrapolates into
@@ -18,12 +18,12 @@ this thesis so is not described in detail here.
 
 Reconstruction begins
 with the construction of seed clusters in the EM calorimeter. These are formed from
-calorimeter towers of size \deltaetadeltaphi{0.025}{0.025}, corresonding to the
+calorimeter towers of size \deltaetadeltaphi{0.025}{0.025}, corresponding to the
 size of cells in the second layer of the EM calorimeter. This
 results in a grid of $200 \times 256$ towers. The energy
 of the tower is the sum of the cells in all three layers
 falling within the tower. Where cells are shared between more than one tower, the
-energy is shared according the the fractional overlap of the cell with each
+energy is shared according the fractional overlap of the cell with each
 tower. The seed cells are formed by sliding a
 window of size \deltaetadeltaphi{0.075}{0.125} ($3 \times 5$ towers) over the
 grid of towers and identifying local maxima with \etgt{2.5}. The position
@@ -31,7 +31,7 @@ of the cluster is taken to be the energy weighted $\eta$, $\phi$ barycentre of
 cells in a window around the centre of the cluster. If two seeds are closer than
 \deltaetadeltaphi{0.050}{0.050} only the one with higher \et\ is kept.
 
-Electron canidadtes are then formed by matching Inner Detector tracks to the
+Electron candidates are then formed by matching Inner Detector tracks to the
 seed clusters. If there is a reasonable agreement ($\Delta \eta <0.2$ and
 $\Delta \phi <0.1$) between a track's co-ordinates (measured at the origin of the
 track) and a cluster seed, the track is extrapolated from its last measurement point to
@@ -39,28 +39,28 @@ the middle layer of the EM calorimeter (TRT-only tracks are automatically
 extrapolated). In $\eta$, the cluster is required to be within 
 of$\Delta \eta <0.05$ of the track. In $\phi$, the cluster must be within $\Delta \phi < 0.1$ of
 the track if it falls on the side towards which the track bends, or $\Delta
-\phi < 0.05$ if it is on the opposite side. This assymetry in the $\phi$
+\phi < 0.05$ if it is on the opposite side. This asymmetry in the $\phi$
 requirement is to
 account for the fact that the electrons undergo heavy energy losses from
-bremmstrahlung, due to the large amount of material in the Inner Detector, which
+bremsstrahlung, due to the large amount of material in the Inner Detector, which
 will tend to increase their bending,
 particularly at high $\eta$. If a seed cluster matches to at least one track,
 and electron candidate is formed. Seed clusters with no track matches are
 considered as photon candidates. If several tracks match, tracks with hits with
-silicon hits are preferred, and the one clostest to teh cluster in \deltaR\ 
+silicon hits are preferred, and the one closest to the cluster in \deltaR\ 
 is chosen. In the case of TRT-only tracks, only a matching in $\phi$ is required, 
 due to the limited $\eta$ resolution in the TRT.
 
-The clusters for electron canidates are then rebuilt, using a fixed rectangle of size 
+The clusters for electron candidates are then rebuilt, using a fixed rectangle of size 
 \deltaetadeltaphi{0.075}{0.175} ($0.125 \times 0.125$) in the barrel (endcap),
 again using a sliding window to find the local maximum. The cluster energy is
-the sum of four components: the estimated energy desposits before the
+the sum of four components: the estimated energy deposits before the
 calorimeter, the measured energy in the cluster, the estimated leakage laterally
 into other calorimeter cells and the estimated longitudinal leakage behind the
-EM calorimeter. The four terms are paramaterised as a function of the measured
-cluster energy in the presampler (where it exists) and the measured energy in each of the three
+EM calorimeter. The four terms are parameterised as a function of the measured
+cluster energy in the pre-sampler (where it exists) and the measured energy in each of the three
 calorimeter layers, based on detailed simulations of energy depositions in the
-calorimeters and the dead material. At this stage additional callibrations are
+calorimeters and the dead material. At this stage additional calibrations are
 applied to the electron energy based on measurements of \Zee\ and
 \JPsiee~\cite{Aad:2011mk}. The energy of the electron is taken as the cluster
 energy, and the direction as the track $\eta$ and $\phi$, providing the track
@@ -70,4 +70,4 @@ has sufficient silicon hits.
 
 \subsection{Identification}
 
-%The cluster reconstruction efficiency is very efficent for electrons:
+%The cluster reconstruction efficiency is very efficient for electrons:
