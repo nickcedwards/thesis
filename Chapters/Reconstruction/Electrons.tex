@@ -7,7 +7,12 @@ requiring two adjacent towers of calorimeter cells of size
 \deltaetadeltaphi{0.1}{0.1} have an energy above a certain threshold. The towers
 are used to identify a RoI for use at L2. At L2 fast calorimeter and tracking
 algorithms are used. The calorimeter clustering uses a similar algorithm to in
-the offline reconstruction as describe in~\sec{
+the offline reconstruction as described in~\sec{reco-el-reco}, except that the
+highest \et\ cell in the middle calorimeter layer in the RoI is used as a seed
+rather than using a sliding window algorithm. Basic shower shape cuts on
+the width in $\eta$ and the ratio of energy deposits in the different layers are
+used to reject backgrounds. The EF uses the offline reconstruction and
+identification algorithms as described in~\sec{reco-el-reco} and~\sec{reco-el-id}
 
 \subsection{Reconstruction}
 \label{sec:reco-el-reco}
