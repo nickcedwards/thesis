@@ -517,7 +517,7 @@
 % |                                                                    |
 % +--------------------------------------------------------------------+
 %
-\renewcommand{\ups}#1{\ensuremath{\mit{\Upsilon}(\mathrm{#1S})}} % Italic, fixed and simplified (EE)
+\newcommand{\ups}[1]{\ensuremath{\mit{\Upsilon}(\mathrm{#1S})}} % Italic, fixed and simplified (EE)
 %
 % +--------------------------------------------------------------------+
 % |                                                                    |
@@ -525,9 +525,9 @@
 % |                                                                    |
 % +--------------------------------------------------------------------+
 %
-\newcommand{\nsPj}#1#2#3{\ensuremath{#1\,^{#2}\!P_{#3}}}%
+\newcommand{\nsPj}[3]{\ensuremath{#1\,^{#2}\!P_{#3}}}%
 \let\nspj=\nsPj
-\newcommand{\nsSj}#1#2#3{\ensuremath{#1\,^{#2}\!S_{#3}}}%
+\newcommand{\nsSj}[3]{\ensuremath{#1\,^{#2}\!S_{#3}}}%
 \let\nssj=\nsSj
 %
 % +--------------------------------------------------------------------+
@@ -654,8 +654,8 @@
 \newcommand{\ipb}{\mbox{pb$^{-1}$}}%  Inverse picobarns.
 \newcommand{\inb}{\mbox{nb$^{-1}$}}%  Inverse nanobarns.
 %
-\newcommand{\mass}#1{\ensuremath{m_{#1#1}}}%  "\mass{\mu}" produces "msub{mumu}".
-\newcommand{\twomass}#1#2{\ensuremath{m_{#1#2}}}% 
+\newcommand{\mass}[1]{\ensuremath{m_{#1#1}}}%  "\mass{\mu}" produces "msub{mumu}".
+\newcommand{\twomass}[2]{\ensuremath{m_{#1#2}}}% 
 %
 \newcommand{\Ecm}{\ensuremath{E_{\mathrm{cm}}}} % Subscript roman not italic (EE)
 %
@@ -682,8 +682,8 @@
 % |                                                                    |
 % +--------------------------------------------------------------------+
 %
-\newcommand{\spinor}#1{\ensuremath{\left(\matrix{#1_1\cr#1_2\cr#1_3\cr#1_4\cr}\right)}} % Math mode (EE)
-\newcommand{\pmb}#1{\setbox0=\hbox{$#1$}%  This is "poor man's boldface".
+\newcommand{\spinor}[1]{\ensuremath{\left(\matrix{#1_1\cr#1_2\cr#1_3\cr#1_4\cr}\right)}} % Math mode (EE)
+\newcommand{\pmb}[1]{\setbox0=\hbox{$#1$}%  This is "poor man's boldface".
   \kern-.025em\copy0\kern-1.0\wd0%
   \kern.05em\copy0\kern-1.0\wd0%
   \kern-.025em\raise.0433em\box0}%
@@ -730,7 +730,7 @@
 % +--------------------------------------------------------------------+
 %
 %\unlock
-\newcommand{\eqalign}#1{%
+\newcommand{\eqalign}[1]{%
    \,
    \vcenter{%
       \openup\jot\m@th
