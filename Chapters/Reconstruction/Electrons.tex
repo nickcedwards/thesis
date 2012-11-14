@@ -2,9 +2,15 @@
 \label{sec:reco-el-triggers}
 
 Events containing electrons are triggered on using ATLAS's three level trigger
-system as described in~\sec{detector-trigger}
+system as described in~\sec{detector-trigger}. They are triggered on at L1 by
+requiring two adjacent towers of calorimeter cells of size
+\deltaetadeltaphi{0.1}{0.1} have an energy above a certain threshold. The towers
+are used to identify a RoI for use at L2. At L2 fast calorimeter and tracking
+algorithms are used. The calorimeter clustering uses a similar algorithm to in
+the offline reconstruction as describe in~\sec{
 
 \subsection{Reconstruction}
+\label{sec:reco-el-reco}
 
 Electrons are reconstructed in the central region (\modetalt{2.5}) by searching
 for EM calorimeter clusters and matching them to Inner Detector
