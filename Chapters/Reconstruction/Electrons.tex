@@ -125,6 +125,74 @@ corrected for energy loss before the calorimeter and lateral and for longitudina
 leakages. The direction of the forward electron is taken as the barycentre of the cells
 belonging to the cluster.
 
+\subsection{Improvements to electron reconstruction in 2011 and 2012}
+
+By default the ATLAS track fitting assumes a pion hypothesis for the modelling
+of material effects. This does not account well for energy losses via
+bremsstrahlung. Thes losses are most substantial for electrons to their small
+mass, and can have significant effects on their trajectories in the magnetic
+field. The amount of material in the Inner Detector in terms of radiation lengths
+$X_{0}$ is shown in~\fig{id-material}. The material budget in the Inner detector
+is highly non uniform with high centration at high $\eta$ and at certain radii.
+This leads to large variations of the reconstruction efficiency as a function of
+$\eta$, and degradations in estamates of the track filters. To this end the
+deault ATLAS reconstruction was progressively improved in 2011 and 2012 to
+better account for \brem\ in electron reconstruction.
+
+The radiative loss of energy via \brem\ is highly non-Gaussian, and so is not
+modelled well in the standard Kalman Filter. A non-linear extension of the
+Kalman filter, the {\it Gaussian Sum Filter (GSF)}, has been developed. It
+approximates the pdf for energy loss from \brem\ as a weighted sum of Gaussian
+components, and uses a separate Kalman Filter to process each one. For example,
+one can consider the extrapolation a measurement from a surface $k-1$ with state
+described by $n_{k-1}$ components to surface $k$, where $\espilon_{k}$ guassians
+are used to describe the energy losses due to \brem\ between surfaces $k-1$ and
+$k$. A separate Kalman Filter is applied to each component to each of the $n_{k-1}$
+components for each of the $\epsilon_{k}$ noise terms, resulting in the state at
+surface $k$ being described by $n_{k} = n_{k-1} \times \epsilon_{k}$ components.
+At each layer the number of components is artificially reduced to a fixed number
+in order to make the computationally managable by merging similar components.
+Using the GSF filter allows for better pattern recognition by picking up hits
+occuring after kinks in tracks caused by \brem, as well as improving the
+resolution of the track parameters.
+
+\subsubsection{2011 Improvements}
+
+For 2011 data taking, \brem\ `brem-refitting' was applied to
+reconstructed electron candidates. For technical reasons, it was not possible to
+include the \brem\ recovery from the beginning of electron reconstruction.
+Instead, electrons were reconstrcuted using the standard pion hypothesis
+tracking as described above. The tracks of these canidates were then refitted
+using the GSF. All tracks with \ptgtMeV{400} and \modetalt{2.5} assigned to
+electron candidates were refitted, the cluster-track refitting re-run
+using the collection of refitted tracks, and the rest of the electron reconstruction
+chain re-run using these refitted candidates. This led to the best matches between
+cluster and track changing in approximatey 5\% of cases at high $\eta$ (0.8 \%
+overall). However, since it was only possible to run this refitting on tracks
+already associated to electron clusters using the standard tracking, the full
+benefit of using GSF was not gained as many tracks with significant energy loss
+from \brem\ would not be reconstracuted succesfully by the standard tracking and
+thus could not be re-fitted. For this reason the brem-refitting did not
+significantly improve the reconstruction effieciency, but did significantly
+improve track parameters in the bending plane such as \dzero, \dzerosig,
+$\phi$ and \qoverp. For example, \fig{d0sig-brem} shows the impact parameter
+significance, \dzerosig, distribution with and without the GSF refit. 
+
+\subsubsection{2012 Improvements}
+
+In 2012 improvements were made to all stages of the electron reconstruction
+chain, from the initial tracking pattern recognition through to the track
+cluster matching. Since the GSF filter takes approximately 10 times more time to
+run than the Standard Kalman filter, it is not fesable to fit all tracks using
+the GSF. Additionally, the use of such a filter with electron hypothesis would
+negatively affect non-electron tracks. Instead, the effects of \brem\ for
+electrons are crudely modelled at the initial pattern recognition (as described
+in ~\sec{tracking-std}) by allowing for 30\% energy loss at each surface for tracks with
+momentum above 1 \gev. This allowance is only made in regions of interest in a
+cone of \deltaRlt{0.3} around EM calorimeter cluster
+seeds
+
+
 \subsection{Identification}
 \label{sec:reco-el-id}
 
