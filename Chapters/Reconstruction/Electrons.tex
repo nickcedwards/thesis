@@ -161,8 +161,8 @@ components, and uses a separate Kalman Filter to process each one. For example,
 one can consider the extrapolation of a measurement from a surface $k-1$ with state
 described by $n_{k-1}$ components to surface $k$, where $\epsilon_{k}$ Gaussians
 are used to describe the energy losses due to \brem\ between surfaces $k-1$ and
-$k$. A separate Kalman Filter is applied to each component to each of the $n_{k-1}$
-components for each of the $\epsilon_{k}$ noise terms, resulting in the state at
+$k$. A separate Kalman Filter is applied to each of the $n_{k-1}$
+components, for each of the $\epsilon_{k}$ noise terms, resulting in the state at
 surface $k$ being described by $n_{k} = n_{k-1} \times \epsilon_{k}$ components.
 At each layer the number of components is artificially reduced to a fixed number
 in order to make the computationally managable by merging similar components.
