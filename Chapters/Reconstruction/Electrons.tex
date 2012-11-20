@@ -183,12 +183,12 @@ electron candidates were refitted, the cluster-track matching re-run
 using the collection of refitted tracks, and the rest of the electron reconstruction
 chain re-run using these refitted candidates. This led to the best matches between
 cluster and track changing in approximately 5\% of cases at high pseudo-rapidity (0.8 \%
-overall). However, since it was only possible to run this refitting on tracks
+overall). However, since it was only possible to run the refitting on tracks
 already associated to electron clusters using the standard tracking, the full
 benefit of using GSF was not gained as many tracks with significant energy loss
-from \brem\ would not be reconstracuted succesfully by the standard tracking and
+from \brem\ would not be reconstructed successfully by the standard tracking and
 thus could not be re-fitted. For this reason the brem-refitting did not
-significantly improve the reconstruction effieciency, but did significantly
+significantly improve the reconstruction efficiency, but did significantly
 improve track parameters in the bending plane such as \dzero, \dzerosig,
 $\phi$ and \qoverp. For example, \fig{d0Sig-gsf} shows the impact parameter
 significance, \dzerosig, distribution with and without the GSF refit. 
@@ -212,7 +212,7 @@ chain, from the initial tracking pattern recognition through to the track
 cluster matching~\cite{HSG2:1456228}. 
 
 Since the GSF filter takes approximately 10 times more time to
-run than the standard Kalman filter, it is not fesable to fit all tracks using
+run than the standard Kalman filter, it is not feasible to fit all tracks using
 the GSF. Additionally, the use of such a filter with electron hypothesis would
 negatively affect non-electron tracks. Instead, the effects of \brem\ for
 electrons are crudely modelled at the initial pattern recognition (as described
@@ -226,7 +226,7 @@ rejected due to low \chisquared\ at the ambiguity resolving stage in a RoI were
 refitted using a modified `electron hypothesis' global \chisquared\ fitter. This
 attempts to find the layer with the most significant \brem\ energy loss, then
 reruns the fit with only an energy loss term for the most significant \brem\
-los. The advantage of this, over the standard \chisquared\ fit which allows
+loss. The advantage of this, over the standard \chisquared\ fit which allows
 includes an energy loss term for each layer, is that in the latter approach the
 electron momentum tends to be overestimated as all of the energy loss terms tend
 to take the average energy loss value, rather than giving one layer with large
@@ -237,24 +237,24 @@ significant GSF algorithm, but runs in approximately one tenth of the time.
 At this stage, there will still be a number of tracks which had large energy
 losses from \brem\ and were consequentially badly fitted. A refit using the GSF
 described above is thus carried out for all tracks loosely matched to an
-EM calorimter cluster. Two forms are matching are carried out: a first between the
-track paramaters extrapolated to the second layer of the calorimter and the
-barycentre of the calorimeeter cluster, the second where the track momentum is
+EM calorimeter cluster. Two forms are matching are carried out: a first between the
+track parameters extrapolated to the second layer of the calorimeter and the
+barycentre of the calorimeter cluster, the second where the track momentum is
 scaled to the cluster energy before extrapolating the track to the calorimeter.
 Loose cuts are made on \deltaR (\deltaR$^{\rm{rescaled}}$) in the former
 (latter) case, with the cuts on \deltaR$^{\rm{rescaled}}$ slightly tighter.
-Tracks which match under either of the two secanerios are refitted; the latter
+Tracks which match under either of the two scenarios are refitted; the latter
 category aims to select tracks with low momentum that have suffered large
 \brem\ and would otherwise be missed. The final matching of the refitted tracks
 to the clusters and selection of the best match is also improved; again both the
-the orginal \deltaR and the \deltaR$^{\rm{rescaled}}$ after scaling the track to the cluster
-energy are computed. Tracks with Pixel detector hits are prefered. If there are
+original \deltaR and the \deltaR$^{\rm{rescaled}}$ after scaling the track to the cluster
+energy are computed. Tracks with Pixel detector hits are preferred. If there are
 more than two tracks with Pixel hits the one with the smaller
-\deltaR$^{\rm{rescaled}}$ is preffered, providing they are well enough
+\deltaR$^{\rm{rescaled}}$ is preferred, providing they are well enough
 separated in \deltaR$^{\rm{rescaled}}$, otherwise the one with closest \deltaR.
 
 Overall these improvements increase the electron reconstruction efficiency by
-$\sim 1\%$ in the calorimeter barell and $\sim 5\%$ in the calorimeter endcaps.
+$\sim 1\%$ in the calorimeter barrel and $\sim 5\%$ in the calorimeter endcaps.
 For low \et\ electrons (\etlt{20}) the improvement is up to 8\%.
 
 \subsection{Identification}
