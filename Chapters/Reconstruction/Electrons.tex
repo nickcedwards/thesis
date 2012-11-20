@@ -237,12 +237,13 @@ sophisticated GSF algorithm, but running in approximately one tenth of the time.
 At this stage, there will still be a number of tracks which had large energy
 losses from \brem\ and were consequentially badly fitted. A refit using the GSF
 fitter described above is thus carried out for all tracks loosely matched to an
-EM calorimeter cluster. Two forms are matching are carried out: the first between the
+EM calorimeter cluster. Two forms are matching are carried out: the first
+(\deltaR) between the
 track parameters extrapolated to the second layer of the calorimeter and the
-barycentre of the calorimeter cluster, and the second where the track momentum is
+barycentre of the calorimeter cluster, and the second (\deltaR$^{\rm{rescaled}}$) where the track momentum is
 scaled to the cluster energy before extrapolating the track to the calorimeter.
-Loose cuts are made on \deltaR (\deltaR$^{\rm{rescaled}}$) in the former
-(latter) case, with the cuts on \deltaR$^{\rm{rescaled}}$ slightly tighter.
+Loose cuts are made on \deltaR\ and \deltaR$^{\rm{rescaled}}$, with the cuts on
+\deltaR$^{\rm{rescaled}}$ being slightly tighter.
 Tracks which match under either of the two scenarios are refitted; the latter
 category aims to select tracks with low momentum that have suffered large
 \brem\ and would otherwise be missed. The final matching of the refitted tracks
