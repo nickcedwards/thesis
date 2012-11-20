@@ -98,7 +98,93 @@ https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/BremmPlanning2011
 https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/GsfElectronUsage
 https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/EgammaTracking172
 
-- by deafult track fitted with pion hypo - does not account for brem, a common occ given material.
+- by deafult track fitted with pion hypo for material effects - does not account for brem, a common occ given material.
+- material in tracker non uniform with high concentration at certain R and at high eta
+- active sensors contribute little to material, but electronics, cabline, cooling, mech support do.
+- since electron has small mass, raidative losses substantial, alter curvature of trajectory in Bf ield
+- leads to inefficiencies, and degradation in est of track parametrs prop to amount of material.
 - GSF is non-linear generalisation of the Kalman filter were it estimates process noise and energy loss by a sum of Gaussian's instead of just one Gaussian.
 
--The use of brem fitter can potentially benefit all physics analyses using electrons, in particular the ones sensitive to low Et electrons and in need of very high efficiency. But the benefit of a superior electron track parameter estimation obtained with brem fitters (when compared to the default, "general purpose" globalchi2 fitter) is not limited to those cases. Improved E/p, lower charge misID, better d0 estimate, etc.. can be eploited by physics analyses to maximize their physics output. 
+- The use of brem fitter can potentially benefit all physics analyses using electrons, in particular the ones sensitive to low Et electrons and in need of very high efficiency. 
+- (when compared to the default, "general purpose" globalchi2 fitter) is not limited to those cases. Improved E/p, lower charge misID, better d0 estimate, etc.. can be eploited by physics analyses to maximize their physics output. 
+
+- In 2011: REFITTING. In 2012, Brem rec from scratch
+
+GSF in (vague) detail
+---------------------
+- model of brem follows Bethe-Heitler distrbution 
+	- z = E_f / E_i
+	- f(z) = [-ln z]^{a-1} / Gamma(a), a = t/ln 2 (t = material width in X0)
+	- strongly non-gaussian
+- approximate as sum of gaussian functons
+- splits noise into individual componenets and uses KF to process each one.
+- At each surface get n_k terms = n_{k-1} * e_k where e_k is the number of terms to describe the noise (brem) between layers k-1 and k
+- Quaickly blows up so apply component reduction
+- In TRT, GSF does not give great improvement since material more homo and lower prec meas anyway
+
+2011 Brem refitting
+--------------------
+- Tracks fitted with pi hypothesis as normal.
+- For tracks associated with electron candidates, refit using GSF
+- All tracks with pT > 400 MeV, |eta|<2.5 assigned to electron candidates refitted.
+	- Improves bending plane quantites (d0, d0sig, phi, q/p)and removes dependence on amount of material traversed.
+	- Extrapolation and track-cluster matching uses refitted track. Sometime best match will change (up to 5% at high eta, 0.8% overall). Also improves varaibles used in "Tight" ID (E/P, d0 etc) (up to 5% at high eta)
+	- Electron four-mom also improved, particularly at low pT as impact of track params bigger here but brem has largest impact. Also helps with invrairent masses of reconstructed resonance.
+	
+2012 Brem rec
+-------------
+- Pattern recognition updated to allow brem in track model
+- Ambiguity resolution and TRT extension improved
+- Track fitting updated
+
+Pattern Recognition 2012
+------------------------
+- In RoI of 0.3 around em clusters use Kalman filter allowing for 30% energy loss for electrons with > 1 GeV at each material surface to enable finding more hits.
+- This would negatively affect non electron tracks:
+	- hadrons undergoing hadronic interactions and producing showers of secondaries.
+	- Old tracking would stop at decay point, allowing for energy loss can join hits from secondary particle degrading and biasing iniital track.
+- Apply very loose hadronic leakage and R_eta cuts on clusters to stabalise no. RoI wrt pu
+
+Ambiguity Resolution
+---------------------
+- Brem tracks will generally have higher Chi2 due to energy loss. Don't want to throw them away in favour of fake tracks with less energy loss
+- Tracks which fail at ambig resolution and in RoI are refitted using a different Global Chi2 fit with electron hypothesis. Also use this in TRT extension.
+
+Better Chi2 Fit
+--------------------
+- In pion hypothesis can neglect energy loss term as particles are m-i-p to reduce complexity of the fit
+- In electron not the case!
+- Locate most significant brem by fitting without MS term, sigma_{delta E} fixed to 50 MeV and inspecting energy loss fit pulls
+- Then refit with only energy loss term for most significant brem, with sigma_{delta E} set according to amount of material and momentum of track, and with all MS terms.
+- Significantly improves track param resolution, and gives almost as good tresults as GSF, but 10 times faster.
+- Using normal Chi2 fit, electron momentum would be overestimated as all energy loss terms take average energy loss value in fixed manner.
+
+- Advantage of running electron track recovery with standard reco:
+	- do not need to re-do many of combinatorial aspects of pattern rec
+	- no need to merge track collections - CPU intensive
+	- all tracks reconstruction used in subsequent steps so no inconsistencies.
+- Advantages of better track reco:
+	- tracks on avg have more pix and SCT hits, and less have failed TRT extensions
+	- track param res slightly imporved
+	- track reco efficiency improved, especially for electrons that brem in PIX and between PIX and SCT
+
+Electron Reco improvement 2012
+------------------------------
+- Preselect electron tracks to refit with GSF (cannot refit everything as takes factor 10 longer)
+- Need to recover tracks that potentially have large brem lost and were badly fitted.
+- Preselect two categories of track:
+	- "norma" tracks delta_eta < 0.05, delta_phi < 0.05 (0.2) on side affected (not) but brem
+	- tracks with p scaled to cl_E before extrapolation with delta_eta < 0.05, delta_phi < 0.05 (0.1) on side affected (not) but brem
+	- second matching aims to select tracks with low p tha have suffered large brem
+- Refit tracks with silicon hits using GSF
+- Refitted tracks then used for cluster matching
+
+- Improve final matching...
+	- again check deltaR and deltaR_rescaled
+	- tow favour primary electron track and prevent random matches in cascades/trident from brem,
+	- prefer tracks with pix hits
+	- If more than 2 track  with pix hits, and difference in delta_R_rescaled is large enough, take one with smallest delta_R_rescaled. Otherwise take one with smallest delta_R as long as they are different enough.
+	- If they have similar delta_R and delta_R_rescaled, assume do not have enough info to be fully resoved and take one with most pix hits, giving most weight to first layer.
+	
+- overall reco efficiency increases by ~1% in the calo barrel and ~5% in endcaps for et 30-50, and up to 8% for low Et
+
