@@ -337,11 +337,14 @@ All \looseePP\ cuts are required to be passed, and in addition:
     first layer of the calorimeter. This cut is only applied for \etlt{80}, as
     the depth of the EM shower and hence leakage into the third layer increases
     with energy.
+
+    \item {\bf TRT High Threshold Hits} A loose requirement is made of the
+    threshold of high-threshold (HT) hits in the TRT detector.
+
 \end{itemize}
 
 \subsubsection{\tightPP}
 
-\subsubsection{Forward Electron Identification}
 
 All \mediumPP\ cuts are required to be passed, and in addition:
 
@@ -356,21 +359,19 @@ All \mediumPP\ cuts are required to be passed, and in addition:
     requiring \deltaphilt{0.02}, and cuts are made on the ratio of the cluster
     energy to the track momenta, \Eoverp.
 
-    \item {\bf Impact Parameter} Require that the electron's track has a
-    transverse impact parameter \dzero $<$ 5 mm.
+    \item {\bf Impact Parameter} The
+    transverse impact parameter cut is tightened to \dzero $<$ 1 mm.
 
     \item {\bf Silicon Hits} Stricter requirements are made on hits in the
-    silicon detectors. Require that there is at least one hit in the b-layer for
-    \modetalt{2.01} (\modetalt{2.37}) in 2011 (2012). In 2011, at least 1
-    silicon hit is required for \modetalt{2.01} and at least two for
-    \modetagt{2.01}. For 2012, two Pixel hits are required in all bins.
+    silicon detectors, requiring that there is at least one hit in the b-layer for
+    all $\eta$, and, in 2012, at least 2 hits in the Pixel detector for all
+    $\eta$.
 
-    \item {\bf Fraction in third calorimeter layer \fthree} For 2012 a cut on the
-    fraction of the shower energy deposited in the third layer of the EM
-    calorimeter was added to compensate for the loosening of the cuts in the
-    first layer of the calorimeter. This cut is only applied for \etlt{80}, as
-    the depth of the EM shower and hence leakage into the third layer increases
-    with energy.
+    \item {\bf Conversion Rejection} Candidates matched to reconstructed photon
+    conversions are rejected.
+
 \end{itemize}
+
+\subsubsection{Forward Electron Identification}
 
 %The cluster reconstruction efficiency is very efficient for electrons:
