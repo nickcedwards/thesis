@@ -290,11 +290,25 @@ matching. The variables cut on are as follows:
 \subsubsection{\loosePP\ Requirements}
 
 \begin{itemize}
-    \item \Reta, 
-    \item \Rhad, 
-    \item \wetatwo, 
-    \item \Eratio, 
-    \item \wstot, 
+
+    \item {\bf Shower Shapes} Cuts are made on the following shower shape
+    variables:
+
+    \begin{itemize}
+        \item Hadronic leakage, \Rhad, the ratio of \et in the first layer of
+        the hadronic calorimeter to the \et of the EM cluster. In the range
+        \modetabetween{0.8}{1.37} the \et of the full hadronic calorimeter is
+        used, to compensate for the crack between the barrel and extended barrel
+        of the tile calorimeter.
+        \item Lateral width of the shower in the second layer of the EM
+        calorimeter, \wetatwo.
+        \item Ratio of the energy difference between with the largest and second
+        largest energy deposit in the first layer of the EM calorimeter over the
+        sum of their energies, \Eratio.
+        \item Total width of the shower in the first layer of the EM
+        calorimeter, \wstot.
+    \end{itemize}
+
     \item {\bf Silicon Hits} At least 7 hits in the silicon detectors, of which at
     least one must be in the pixel detector. This ensures good track quality and
     rejects backgrounds from conversions or dalitz-decays.
