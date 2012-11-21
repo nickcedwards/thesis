@@ -288,20 +288,57 @@ second layers of the EM calorimeter, leakage into the hadronic
 calorimeter, track quality in the silicon detectors and loose track cluster
 matching. The variables cut on are as follows:
 
+\subsubsection{\loosePP}
+
 \begin{itemize}
     \item \Reta, 
     \item \Rhad, 
     \item \wetatwo, 
     \item \Eratio, 
     \item \wstot, 
-    \item Silicon Hits: At least 7 hits in the silicon detectors, of which at
+    \item {\bf Silicon Hits} At least 7 hits in the silicon detectors, of which at
     least one must be in the pixel detector. This ensures good track quality and
     rejects backgrounds from conversions or dalitz-decays.
-    \item Track-Cluster matching: a loose matching in $\eta$ is applied,
+    \item {\bf Track-Cluster matching} a loose matching in $\eta$ is applied,
     requiring \deltaetalt{0.015}
 \end{itemize}
 
-%\subsection{\loosePP}
-%\subsection{\mediumPP}
+The shower shape variables \Reta\ and \Rhad\ are particularly susceptible to
+pileup since they sample a large area of the calorimeter. They were therefore
+loosened in 2011 with respect to 2012, reducind the rejection power of \loosePP\
+by about 20\%.
+
+\subsubsection{\mediumPP}
+
+All \looseePP\ cuts are required to be passed, and in addition:
+
+\begin{itemize}
+    \item {\bf Shower Shapes} Cuts on shower shape variables as in \loosePP
+    (\Reta, \Rhad, \wetatwo, \Eratio, \wstot) are made at tighter values. For
+    2012, the cuts on \Reta\ and \Rhad\ were loosened with respect to 2011, and
+    made the  same as for \loosePP, whilst the cuts on  \wetatwo, \Eratio\ and
+    \wstot\ were tightened with respect to 2011.
+
+    \item {\bf Track-Cluster matching} A tighter matching in $\eta$ is applied,
+    requiring \deltaetalt{0.005}.
+
+    \item {\bf Impact Parameter} Require that the electron's track has a
+    transverse impact parameter \dzero $<$ 5 mm.
+
+    \item {\bf Silicon Hits} Stricter requirements are made on hits in the
+    silicon detectors. Require that there is at least one hit in the b-layer for
+    \modetalt{2.01} (\modetalt{2.37}) in 2011 (2012). In 2011, at least 1
+    silicon hit is required for \modetalt{2.01} and at least two for
+    \modetagt{2.01}. For 2012, two Pixel hits are required in all bins.
+
+    \item {\bf Fraction in third calorimeter layer \fthree} For 2012 a cut on the
+    fraction of the shower energy deposited in the third layer of the EM
+    calorimeter was added to compensate for the loosening of the cuts in the
+    first layer of the calorimeter. This cut is only applied for \etlt{80}, as
+    the depth of the EM shower and hence leakage into the third layer increases
+    with energy.
+
+\end{itemize}
+
 %\subsection{\tightPP}
 %The cluster reconstruction efficiency is very efficient for electrons:
