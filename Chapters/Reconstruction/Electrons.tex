@@ -263,4 +263,27 @@ For low \et\ electrons (\etlt{20}) the improvement is up to 8\%.
 \subsection{Identification}
 \label{sec:reco-el-id}
 
+The electron candidates reconstructed as described in the previous section will
+contain a high contamination from jets faking electrons, non-isolated electrons
+in jets and photon conversions. In order to identify prompt isolated photons a
+cut based identification is used. Cuts are made on variables relating to the
+shower shapes in the calorimeters, the quality of the Inner Detector track, the
+track-calorimeter matching and on particle identification information from the
+TRT. The cuts were optimised using a multivariate analysis program (TMVA), in 10 bins
+of cluster $\eta$ and 11 bins of cluster \et\ from 5 \gev\ to $\gt 80$ \gev.
+Three reference sets of cuts are used, denoted \loose, \medium\ and \tight,
+designed to give progressively greater background rejection, at the cost of
+signal efficiency. The expected jet rejection (from simulation) of the three points are 500, 5000
+and 50000 respecitvely.
+
+In order to deal with increased instantaneous luminosity, the original \loose,
+\medium\ and \tight\ were re-optimised in order to increase background rejection
+to keep trigger rates under control. The new
+working points are denoted \loosePP, \mediumPP\ and \tightPP. In 2012, the
+identification was further re-optimised to prevent drops in efficiency in events
+with high pileup of up to 20\%. 
+
+\subsection{\loosePP}
+\subsection{\mediumPP}
+\subsection{\tightPP}
 %The cluster reconstruction efficiency is very efficient for electrons:
