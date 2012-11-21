@@ -274,7 +274,7 @@ of cluster $\eta$ and 11 bins of cluster \et\ from 5 \gev\ to $\gt 80$ \gev.
 Three reference sets of cuts are used, denoted \loose, \medium\ and \tight,
 designed to give progressively greater background rejection, at the cost of
 signal efficiency. The expected jet rejection (from simulation) of the three points are 500, 5000
-and 50000 respecitvely~\cite{ATL-PHYS-PUB-2011-006}.
+and 50000 respectively~\cite{ATL-PHYS-PUB-2011-006}.
 
 In order to deal with increased instantaneous luminosity, the original \loose,
 \medium\ and \tight\ were re-optimised in order to increase background rejection
@@ -283,7 +283,25 @@ working points are denoted \loosePP, \mediumPP\ and \tightPP. In 2012, the
 identification was further re-optimised to prevent drops in efficiency in events
 with high pileup of up to 20\%. 
 
-\subsection{\loosePP}
-\subsection{\mediumPP}
-\subsection{\tightPP}
+In both 2011 and 2012 \loosePP\ cuts on shower shape variables in the first and
+second layers of the EM calorimeter, leakage into the hadronic
+calorimeter, track quality in the silicon detectors and loose track cluster
+matching. The variables cut on are as follows:
+
+\begin{itemize}
+    \item \Reta, 
+    \item \Rhad, 
+    \item \wetatwo, 
+    \item \Eratio, 
+    \item \wstot, 
+    \item Silicon Hits: At least 7 hits in the silicon detectors, of which at
+    least one must be in the pixel detector. This ensures good track quality and
+    rejects backgrounds from conversions or dalitz-decays.
+    \item Track-Cluster matching: a loose matching in $\eta$ is applied,
+    requiring \deltaetalt{0.015}
+\end{itemize}
+
+%\subsection{\loosePP}
+%\subsection{\mediumPP}
+%\subsection{\tightPP}
 %The cluster reconstruction efficiency is very efficient for electrons:
