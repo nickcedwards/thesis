@@ -1,0 +1,55 @@
+Partons produced in particle interactions are not physically observable since
+they hadronize and produce a collimated shower of particles known as a jet. In
+order to reconstruct the jet in a physically meaningful way, it is necessary to
+specify an algorithm to associate multiple energy deposits in the calorimeters
+to a single jet (\intro{clustering}) and a recombination scheme for how to combine their
+four-momentum. The ATLAS hadronic calorimeters are non-compensating, and do not
+compensate from energy lost from the hadronic shower due to production of
+secondary particles such as neutrinos and muons that escape from the calorimeter
+and due to leakage of the shower out of the calorimeter. It is thus necessary to
+calibrate the response of the calorimeter to a hadronic shower.
+
+Jet algorithms need to be theoretically well behaved with respect to QCD
+divergences. In particular, it is important that the jets produced are not
+effected by soft emissions (the algorithm must be \intro{collinear safe}) and
+are not affected if a parton splits into two collinear partons (the algorithm
+must be \intro{collinear safe}). Additionally, the algorithm must give the same
+physics results regardless of whether the input is partons, particles (from
+Monte-Carlo simulation) or calorimeter objects. There are two main classes of
+jet clustering algorithm: cone algorithms and successive combination algorithms.
+Cone algorithms start from seed clusters and add in all other clusters within a
+cone of a specified size in $\delta R$, where $\delta R = \sqrt{(\Delta \eta)^{2} + (\Delta
+\phi)^{2}} $. Cone algorithms are generally theoretically unsafe as soft or
+collinear emissions can affect the choice of seeds. Successive combination
+iteratively merge pairs of objects according to a definition of distance that
+generally involves the distance between the objects in and their transverse
+momentum.
+
+In ATLAS, the default jet clustering algorithm is a successive combination
+algorithm called \antikt~\cite{1126-6708-2008-04-063}. This combines objects
+according to the distance parameters $d_{i,j} =
+\rm{min}(p_{T,i}^{-2},p_{T,j}^{-2}) \frac{ \Delta R }{R}$ and $d_{i,\rm{beam}} =
+p_{T,i}^{-2}$ where $p_{T,i}$ is the transverse momentum of object $i$ and
+$\delta R$ is the distance between the objects in $\eta, \phi$ as defined above.
+The parameter $R$ is a parameter controlling the size of the jet, and is
+analageous to the cone size in a cone based jet algorithm. The algorithm starts
+with a list of all objects, and calculates $d_{i,j}$ for all pairs of objects and
+$d_{i,{\rm beam}}$ for all objects. If the minimum of all $\{ d_{i,j}, d_{i,{\rm
+beam}} \}$ is a  $d_{i,j}$ the objects will be merged; if it is a $ d_{i,{\rm
+beam}}$ the object will be considered a jet and removed from the list. This
+process is repeated until there are no object remaining. This algorithm is
+collinear and infrared safe as soft radiation is clustered to harder objects
+first. It results in regular conical jets which is experimentally desirable
+since it gives a well defined jet area that can be used to pileup supression.
+Where jets are used in this thesis, the $R$ parameter is set to be 0.4.
+
+ATLAS uses anti-kt:
+	- This jet algorithm is based on the comparison for all possible pairs of objects between
+the distances di,j = min(p−2,p−2)∆R and di,Beam = p−2, where pT is the transverse momentum T,i T,j R T,i
+of the particle considered, ∆R is the spatial distance of the two objects in η − φ space and R is a parameter of the algorithm which can be considered as a weight to the spatial distance of the two objects - the larger R, the wider the jets. In the following, R will be referred to as the jet algorithm distance parameter. If the minimum between all di,j and di,Beam is a di,j, objects i and j will be recombined, otherwise object i is considered a jet and not considered in the next iteration. With this algorithm, soft radiation is effectively clustered around the harder core of the process. Anti-kt jets have a regular, conical shape, experimentally desirable since it allows for a well defined jet area that can be used for e.g. pile-up subtraction.
+	- theoretically safe
+	- better performance before and after calibration (e.g. trigger matchin)
+	- ATLAS uses 0.4 and 0.6
+	-  final four-momentum of the jet is obtained from summing the four-momenta of its constituents in the four-vector recombination scheme. This scheme conserves energy and momentum, and allows a meaningful definition for the jet mass.
+
+
