@@ -18,7 +18,7 @@ physics results regardless of whether the input is partons, particles (from
 Monte-Carlo simulation) or calorimeter objects. There are two main classes of
 jet clustering algorithm: cone algorithms and successive combination algorithms.
 Cone algorithms start from seed clusters and add in all other clusters within a
-cone of a specified size in $\delta R$, where $\delta R = \sqrt{(\Delta \eta)^{2} + (\Delta
+cone of a specified size in $\Delta R$, where $\Delta R = \sqrt{(\Delta \eta)^{2} + (\Delta
 \phi)^{2}} $. Cone algorithms are generally theoretically unsafe as soft or
 collinear emissions can affect the choice of seeds. Successive combination
 iteratively merge pairs of objects according to a definition of distance that
@@ -30,7 +30,7 @@ algorithm called \antikt~\cite{1126-6708-2008-04-063}. This combines objects
 according to the distance parameters $d_{i,j} =
 \rm{min}(p_{T,i}^{-2},p_{T,j}^{-2}) \frac{ \Delta R }{R}$ and $d_{i,\rm{beam}} =
 p_{T,i}^{-2}$ where $p_{T,i}$ is the transverse momentum of object $i$ and
-$\delta R$ is the distance between the objects in $\eta, \phi$ as defined above.
+$\Delta R$ is the distance between the objects in $\eta, \phi$ as defined above.
 The parameter $R$ is a parameter controlling the size of the jet, and is
 analageous to the cone size in a cone based jet algorithm. The algorithm starts
 with a list of all objects, and calculates $d_{i,j}$ for all pairs of objects and
