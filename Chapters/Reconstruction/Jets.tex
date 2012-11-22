@@ -43,13 +43,7 @@ first. It results in regular conical jets which is experimentally desirable
 since it gives a well defined jet area that can be used to pileup supression.
 Where jets are used in this thesis, the $R$ parameter is set to be 0.4.
 
-ATLAS uses anti-kt:
-	- This jet algorithm is based on the comparison for all possible pairs of objects between
-the distances di,j = min(p−2,p−2)∆R and di,Beam = p−2, where pT is the transverse momentum T,i T,j R T,i
-of the particle considered, ∆R is the spatial distance of the two objects in η − φ space and R is a parameter of the algorithm which can be considered as a weight to the spatial distance of the two objects - the larger R, the wider the jets. In the following, R will be referred to as the jet algorithm distance parameter. If the minimum between all di,j and di,Beam is a di,j, objects i and j will be recombined, otherwise object i is considered a jet and not considered in the next iteration. With this algorithm, soft radiation is effectively clustered around the harder core of the process. Anti-kt jets have a regular, conical shape, experimentally desirable since it allows for a well defined jet area that can be used for e.g. pile-up subtraction.
-	- theoretically safe
-	- better performance before and after calibration (e.g. trigger matchin)
-	- ATLAS uses 0.4 and 0.6
-	-  final four-momentum of the jet is obtained from summing the four-momenta of its constituents in the four-vector recombination scheme. This scheme conserves energy and momentum, and allows a meaningful definition for the jet mass.
-
+The four momentume of the jet is obtained simply by summing the four-momentum of
+the constituant objects. This scheme conserves energy and momentum, and allows a
+meaningful definition for the jet mass.
 
