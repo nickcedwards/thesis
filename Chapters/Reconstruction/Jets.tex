@@ -1,27 +1,27 @@
 Partons produced in particle interactions are not physically observable since
 they hadronize and produce a collimated shower of particles known as a jet. In
 order to reconstruct the jet in a physically meaningful way, it is necessary to
-specify an algorithm to associate multiple energy deposits in the calorimeters
+specify an algorithm to associate the multiple energy deposits in the calorimeters
 to a single jet (\intro{clustering}) and a recombination scheme for how to combine their
-four-momentum. The ATLAS hadronic calorimeters are non-compensating, and do not
+four-momentum. The ATLAS hadronic calorimeters are non-compensating, so do not
 compensate from energy lost from the hadronic shower due to production of
 secondary particles such as neutrinos and muons that escape from the calorimeter
-and due to leakage of the shower out of the calorimeter. It is thus necessary to
+or due to leakage of the shower out of the calorimeter. It is thus necessary to
 calibrate the response of the calorimeter to a hadronic shower.
 
 Jet algorithms need to be theoretically well behaved with respect to QCD
 divergences. In particular, it is important that the jets produced are not
-effected by soft emissions (the algorithm must be \intro{collinear safe}) and
+affected by soft emissions (the algorithm must be \intro{collinear safe}) and
 are not affected if a parton splits into two collinear partons (the algorithm
 must be \intro{collinear safe}). Additionally, the algorithm must give the same
 physics results regardless of whether the input is partons, particles (from
 Monte-Carlo simulation) or calorimeter objects. There are two main classes of
 jet clustering algorithm: cone algorithms and successive combination algorithms.
-Cone algorithms start from seed clusters and add in all other clusters within a
+Cone algorithms start from seed objects and add in all other objects within a
 cone of a specified size in $\Delta R$, where $\Delta R = \sqrt{(\Delta \eta)^{2} + (\Delta
 \phi)^{2}} $. Cone algorithms are generally theoretically unsafe as soft or
 collinear emissions can affect the choice of seeds. Successive combination
-iteratively merge pairs of objects according to a definition of distance that
+algorithms iteratively merge pairs of objects according to a definition of distance that
 generally involves the distance between the objects in and their transverse
 momentum.
 
