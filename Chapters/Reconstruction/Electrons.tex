@@ -467,15 +467,16 @@ on the following variables:
 
 \subsubsection{Electron Identification Efficiencies}
 
-~\fig{el-reco-eff} shows the electron reconstruction efficiency in 2011 and 2012
-as a function of the pseudo-rapidity and the transverse energy of the electron cluster.
-The reconstruction efficiency in 2011 drops by approximately 4\% between central
-and forward pseudo-rapidity. In 2012 the overall reconstruction efficiency
-improves by approximately 2\% at central pseudo-rapidity, and the drop-off in
-efficiency at high pseudo-rapidity is reduced to roughly 1\%. Similarly, the
-reconstruction efficiency at low \et\ improves by roughly 6\% in 2012 with
-respect to 2011. Good agreement is observed between the reconstruction
-efficiency observed in data and the efficiency predicted by simulation.
+~\fig{el-id-eff-npv} shows the electron identification efficiency in 2011 and 2012
+as a function of the number of reconstructed primary vertices in the event.
+Using the 2011 identification requirements, the efficiency can drop by over 5\%
+in events with 18 reconstructed primary vertices with respect to the efficiency
+in events with a single primary vertex.
+~\fig{el-id-eff-et} shows the \loosePP\ identification efficiency as a function
+of \et, using the 2011 requirements. Efficiency differences at the level of a
+few percent are observed between the efficiency measured in data and the
+efficiency measured in Monte-Carlo simulation. This is mainly attributed to mis-modelling
+of the shower shape variables in the Monte-Carlo.
 Scale-Factors, parameterised as a function of $\eta$ and \et, are applied to
 the Monte-Carlo to correct the reconstruction efficiency to that observed in
 data.
@@ -483,33 +484,40 @@ data.
 \begin{figure}[h]
 \centering
 	%\subfigure[]{
-        %    \includegraphics[width=0.47\textwidth]{ElIdEff_NPV_2012}
+            \includegraphics[width=0.7\textwidth]{data_effPP_vs_pvx_2011_2012}
         %}
 	%\subfigure[]{
-        %    \includegraphics[width=0.47\textwidth]{Eff_PP_pileup2011}
+            %\includegraphics[width=0.7\textwidth]{ElLoosePPEfficiencyPt2011}
         %}
-	\subfigure[]{
-            \includegraphics[width=0.7\textwidth]{data_effPP_vs_pvx_2011_2012}
-        }
-	\subfigure[]{
-            \includegraphics[width=0.7\textwidth]{ElLoosePPEfficiencyPt2011}
-        }
-\caption{(a) Electron identification efficiency in 2011 (open markers) and 2012
+\caption{Electron identification efficiency in 2011 (open markers) and 2012
 (solid markers) as a function of the number of reconstructed primary vertices in
 the event. The blue circles show the efficiency for the \loosePP\ selection, the
-red triangles for the \mediumPP\ and the green squares for the \tightPP. (b) Efficiency of
+red triangles for the \mediumPP\ and the green squares for the \tightPP. 
+Figure
+from
+~\cite{EfficiencyPileup}.
+%~\cite{ElectronEfficiency2012,EfficiencyPileup,ElectronEfficiency2011,ElectronEffPV2011}.
+}
+\label{fig:el-id-eff-npv}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+            \includegraphics[width=0.7\textwidth]{ElLoosePPEfficiencyPt2011}
+\caption{
+Efficiency of
 the \loosePP\ identification requirements as a function of the cluster transverse
 energy. The solid points indicate data based measurements whilst the open points
 indicate predictions from Monte-Carlo. The different markers indicate the method used to
 measure the efficiency: results from \Zee\ tag and probe are shown as black
 circles, results from $\jpsi \ra ee$ as blue squares and results from $W \ra e
 \nu$ as red triangles.
-Figures
+Figure
 from
-~\cite{EfficiencyPileup,ElectronEfficiency2011}.
+~\cite{ElectronEfficiency2011}.
 %~\cite{ElectronEfficiency2012,EfficiencyPileup,ElectronEfficiency2011,ElectronEffPV2011}.
 }
-\label{fig:el-id-eff}
+\label{fig:el-id-eff-et}
 \end{figure}
 
 
