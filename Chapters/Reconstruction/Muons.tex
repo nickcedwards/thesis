@@ -23,37 +23,6 @@ corresponding to muons of either charge with momentum above a given \pt\
 threshold. In 2011 the L1 \pt\ threshold for the primary single muon trigger was
 15 \GeV; in 2012 it was 20 \GeV.
 
-The muon HLT uses similar algorithms to the online muon reconstruction described
-below. Each L1 muon candidate is refined by including the precision
-data from the MDTs and CSCs in the RoI defined by the L1 candidate. MS tracks
-are then built by opnening narrow roads around the L1 trigger chamber hits and
-associating hits from other chambers to the track. A rough \pt\ measurement is
-obtained using a lookup table. The MS tracks are then combined with ID tracks,
-reconstructed using the same fast L2 ID tracking as the electron L2 trigger
-(see~\sec{reco-el-triggers}).
-	- L2 MS-Only - build MS tracks using L1 trigger chamber hits as seeds and opening a narrow road. Track fit using hits and pT addignment from lookup.
-	- L2 Combined: combine with ID tracks
-	- L2 Isolated: check track and calo iso.At L2 a dedicated fast tracking
-algorithm is used. 
-
-- EF:
-	- Start from RoI from L2, and run offline algos
-	- Outside in: start from L1/L2 RoI and reco MS tracks. then extrapolate to IP and determine para,m there. Then combine with ID track.
-	- Inside out - start with ID track and extrapolate to MS
-	- 2011, ran both inside out and outside in to maximise efficiency.
-	- 2012 - apply isolation at EF ptcone20<0.12  (tracks with pt > 1 and with z_track - z_mu < 6mm
-	
-2011 to 2012
--------------
-Not affected too much by PU, but need to deal with rate
-- tighten pt 18 to 24
-- add iso
-- merge two algo - run outside in first then inside out if it fails.
-
-
-
-
-
 \begin{figure}[h]
 \centering
             \includegraphics[width=0.8\textwidth]{mu-trigger-diag}
@@ -64,6 +33,31 @@ includes passive material arising from electronics, cabling, cooling and
 mechanical support. Figure from~\cite{2012EPJC...72.1849A}.}
 \label{fig:mu-trigger-diag}
 \end{figure}
+
+The muon HLT uses similar algorithms to the online muon reconstruction described
+below. Each L1 muon candidate is refined by including the precision
+data from the MDTs and CSCs in the RoI defined by the L1 candidate. MS tracks
+are then built by opening narrow roads around the L1 trigger chamber hits and
+associating hits from other chambers to the track. A rough \pt\ measurement is
+obtained using a lookup table. The MS tracks are then combined with ID tracks,
+reconstructed using the same fast L2 ID tracking as the electron L2 trigger
+(see~\sec{reco-el-triggers}). The muon EF uses the full offline algorithms,
+running in RoIs determined by the L2 trigger. There are two reconstruction
+strategies used at EF level:
+\intrp{outside-in} (starting from the reconstructed MS tracks, extrapolating to
+the IP and attempting to combine with an ID track) and \intro{inside-out}
+(starting from ID tracks and attempting to extrapolate to the MS). In 2011, both
+strategies were ran in parallel to maximise efficiency. In 2012, to reduce
+processing time, the outside-in algorithm is run first, and only in events failing
+the trigger at this stage is the inside-out algorithm run. In 2011 the offline
+threshold used for the primary single muon trigger was 18 \GeV; in 2012 it was 24 \GeV. The muon trigger is
+not very sensitive to pile-up, but modifications were required in 2012 in order
+to keep the rate at an acceptable level in the higher luminosity conditions. To
+achieve this a track based isolation cut was applied to EF level, requiring that
+the sum of the \pt\ of tracks in a cone of \deltaRlt{0.2} around the muon track
+be less than 12\% of the muon's \pt. Only tracks with \ptgt{1} enter the
+calculation, and must have  $|\Delta z_{0}| <$ 6mm where $\Delta z_{0}$ is the
+difference in transverse impact parameter between the track and the muon track.
 
 - Not affected significantly by pileup, but increased lumi requires tightening of pT selection in 2012.
    - 2011: 18 GeV threshold
