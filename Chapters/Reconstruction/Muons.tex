@@ -60,7 +60,7 @@ parameter between the track and the muon track.
 \label{sec:reco-el-reco}
 
 Muon reconstruction is in general based on combinations of accurate measurements
-in the Muon Spectrometer and the Inner Detector. There are three categories of
+in the Muon Spectrometer and the Inner Detector. There are four categories of
 muons based on MS and ID measurements:
 
 \begin{itemize}
@@ -79,6 +79,10 @@ muons based on MS and ID measurements:
     \item {\bf Stand Alone:} muon track reconstruction based solely on 
     MS measurements. Possible over the full acceptance of the MS,
     \modetalt{2.7}.
+
+    \item {\bf Calorimeter Tagged:} ID tracks are tagged as originating from
+    muons by looking for calorimeter deposits consistent with a minimum ionising
+    particle. No MS tracking is used.
 
 
 \end{itemize}
@@ -100,7 +104,7 @@ refit of hits in the MS and the ID, whereas \staco\ attempts a statistical
 combination of the two track measurements, weighting the relative contributions
 according to their covariance matrices. The two chains are found to give similar
 performance (see ??). The measurements in this thesis all use muons
-reconstructed with the \staco chain, so this chain is described in detail here.
+reconstructed with the \staco\ chain, so this chain is described in detail here.
 
 
 
