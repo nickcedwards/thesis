@@ -4,24 +4,23 @@
 Muons are triggered on at L1 using the RPC in the barrel (\modetalt{1.05}) and
 the TGC in the endcaps (\modetalt{2.4}). As shown in~\fig{mu-trigger-diag}, the
 muon trigger chambers are arranged in three planes of two to four layers; the L1
-triggers on coincidences between planes
-The coverage is $\sim$99\% in the endcaps but only $\sim$80\% in the barrel due to
-gaps for services and the detector feet.
-The RPC planes consist of
-doublets of independent layers. For low \pt\ triggers a coincidence in 3 of 4
-the four layers of the 2 inner planes is required. The high \pt\ triggers start
-from the low \pt\ triggers and look for hits in one of the two layers of the
-third plane (referred to as the high \pt\ confirmation plane). Similarly, the two outermost
-planes of the TGC consist of doublets of independent detectors and low \pt\
-triggers require the coincidence of 3 out of 4 layers of the outer 2 planes. The
-inner plane has 3 layers; high \pt\ triggers require coincidences in at least 2
-out of 3 layers from innermost plane in a low \pt\ trigger. Coincidences are generated separately for
-$\eta$ and $\phi$; a coincidence is required in both co-ordinates for the
-trigger to be fired. To apply a \pt\ threshold to the trigger the coincidences
-are required to fall inside \intro{roads}, parameterised geometrical regions
-corresponding to muons of either charge with momentum above a given \pt\
-threshold. In 2011 the L1 \pt\ threshold for the primary single muon trigger was
-15 \GeV; in 2012 it was 20 \GeV.
+triggers on coincidences between planes The coverage is $\sim$99\% in the
+endcaps but only $\sim$80\% in the barrel due to gaps for services and the
+detector feet.  The RPC planes consist of doublets of independent layers. For
+low \pt\ triggers a coincidence in 3 of 4 the four layers of the 2 inner planes
+is required. The high \pt\ triggers start from the low \pt\ triggers and look
+for hits in one of the two layers of the third plane (referred to as the high
+\pt\ confirmation plane). Similarly, the two outermost planes of the TGC consist
+of doublets of independent detectors and low \pt\ triggers require the
+coincidence of 3 out of 4 layers of the outer 2 planes. The inner plane has 3
+layers; high \pt\ triggers require coincidences in at least 2 out of 3 layers
+from innermost plane in a low \pt\ trigger. Coincidences are generated
+separately for $\eta$ and $\phi$; a coincidence is required in both co-ordinates
+for the trigger to be fired. To apply a \pt\ threshold to the trigger the
+coincidences are required to fall inside \intro{roads}, parameterised
+geometrical regions corresponding to muons of either charge with momentum above
+a given \pt\ threshold. In 2011 the L1 \pt\ threshold for the primary single
+muon trigger was 15 \GeV; in 2012 it was 20 \GeV.
 
 \begin{figure}[h]
 \centering
@@ -32,30 +31,78 @@ Cross sectional view of the muon trigger chambers. Figure from~\cite{Aad:2012xs}
 \end{figure}
 
 The muon HLT uses similar algorithms to the online muon reconstruction described
-below. At L2, each L1 muon candidate is refined by including the precision
-data from the MDTs and CSCs in the RoI defined by the L1 candidate. MS tracks
-are built by opening narrow roads around the L1 trigger chamber hits and
-associating hits from other chambers to the track. A rough \pt\ measurement is
-obtained using a lookup table. The MS tracks are then combined with ID tracks,
+below. At L2, each L1 muon candidate is refined by including the precision data
+from the MDTs and CSCs in the RoI defined by the L1 candidate. MS tracks are
+built by opening narrow roads around the L1 trigger chamber hits and associating
+hits from other chambers to the track. A rough \pt\ measurement is obtained
+using a lookup table. The MS tracks are then combined with ID tracks,
 reconstructed using the same fast L2 ID tracking as the electron L2 trigger
 (see~\sec{reco-el-triggers}). The muon EF uses the full offline algorithms,
 running in RoIs determined by the L2 trigger. There are two reconstruction
-strategies used at EF level:
-\intro{outside-in} (starting from the reconstructed MS tracks, extrapolating to
-the beamline and attempting to combine with an ID track) and \intro{inside-out}
-(starting from ID tracks and attempting to extrapolate to the MS). In 2011, both
-strategies were ran in parallel to maximise efficiency. In 2012, to reduce
-processing time, the outside-in algorithm is run first, and only in events failing
-the trigger at this stage is the inside-out algorithm run. In 2011 the offline
-threshold used for the primary single muon trigger was 18 \GeV; in 2012 it was
-raised to 24 \GeV. The muon trigger is
-not sensitive to pile-up, but modifications were required in 2012 in order
-to keep the rate at an acceptable level in the higher luminosity conditions. To
-achieve this a track based isolation cut was applied to EF level, requiring that
-the sum of the \pt\ of tracks in a cone of \deltaRlt{0.2} around the muon track
-be less than 12\% of the muon's \pt. Only tracks with \ptgt{1} enter the
-calculation, and to reduce pileup dependency, must have $|\Delta z_{0}| <$ 6mm, where $\Delta z_{0}$ is the
-difference in transverse impact parameter between the track and the muon track.
+strategies used at EF level: \intro{outside-in} (starting from the reconstructed
+MS tracks, extrapolating to the beamline and attempting to combine with an ID
+track) and \intro{inside-out} (starting from ID tracks and attempting to
+extrapolate to the MS). In 2011, both strategies were ran in parallel to
+maximise efficiency. In 2012, to reduce processing time, the outside-in
+algorithm is run first, and only in events failing the trigger at this stage is
+the inside-out algorithm run. In 2011 the offline threshold used for the primary
+single muon trigger was 18 \GeV; in 2012 it was raised to 24 \GeV. The muon
+trigger is not sensitive to pile-up, but modifications were required in 2012 in
+order to keep the rate at an acceptable level in the higher luminosity
+conditions. To achieve this a track based isolation cut was applied to EF level,
+requiring that the sum of the \pt\ of tracks in a cone of \deltaRlt{0.2} around
+the muon track be less than 12\% of the muon's \pt. Only tracks with \ptgt{1}
+enter the calculation, and to reduce pileup dependency, must have $|\Delta
+z_{0}| <$ 6mm, where $\Delta z_{0}$ is the difference in transverse impact
+parameter between the track and the muon track.
 
 \subsection{Reconstruction and Identification}
 \label{sec:reco-el-reco}
+
+Muon reconstruction is in general based on combinations of accurate measurements
+in the Muon Spectrometer and the Inner Detector. There are three categories of
+muons based on MS and ID measurements:
+
+\begin{itemize}
+
+    \item {\bf Combined:} combination of an MS track with an ID track. In
+    general limited by the acceptance of the ID, \modetalt{2.5} but due to the complicated
+    nature of the magnetic field it is possible to get combined muons beyond
+    this.
+
+    \item {\bf Segment Tag:} combination of an ID track with an MS track
+    segment. An MS track segment is a straight line track segment reconstructed
+    in a single MS station where the segment did not form a full MS track. The
+    track parameters of the reconstructed muon are taken solely from the ID
+    track.
+
+    \item {\bf Stand Alone:} muon track reconstruction based solely on 
+    MS measurements. Possible over the full acceptance of the MS,
+    \modetalt{2.7}.
+
+
+\end{itemize}
+
+Since combined muons have a fully reconstructed track in both the ID and the MS
+they are the preferred muon type and will have the best track parameter
+resolution. The ID provides the best momentum measurement at low to intermediate
+momenta, whereas the MS provides the better measurement at higher \pt (roughly
+for \ptgt{100}). Combination with an ID track improves the momentum resolution
+over the range $4 < p_{T} < 100$ \GeV. Segment tag muons are useful to recover
+efficiency at low \pt\ where muons may only reach the inner layer of the muon
+chamber and in regions of limited detector acceptance. Stand alone muons are
+useful to extend coverage beyond the coverage of the ID.
+
+There are two parallel muon reconstruction chains in use in ATLAS, \staco\ and
+\muid. Each use slightly different track finding algorithms, and approach the
+combination of ID and MS tracks in different ways. \muid\ performs a global
+refit of hits in the MS and the ID, whereas \staco\ attempts a statistical
+combination of the two track measurements, weighting the relative contributions
+according to their covariance matrices. The two chains are found to give similar
+performance (see ??). The measurements in this thesis all use muons
+reconstructed with the \staco chain, so this chain is described in detail here.
+
+
+
+
+
