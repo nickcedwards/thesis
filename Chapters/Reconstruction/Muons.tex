@@ -149,7 +149,11 @@ based on the \chisqaured\ quality of this final fit.
 Selected muon tracks are then extrapolated back to the interaction point,
 correcting for energy loss and multiple scattering in the calorimeters and the
 material of the ID~\footnote{The typical energy loss in the calorimeter is $\sim
-3$ \GeV.
+3$ \GeV. MS tracks are then combined with ID tracks by selecting tracks to be
+paired on the basis of a match \chisqaured, defined from the difference between
+the two sets of track parameters weighted by their combined covariance matrix.
+The track parameters are combined, weighting the relative contributions
+according to their covariance matrix.
 
 % each station consists of two layers of MDT sandwiched between RPC chambers
 
