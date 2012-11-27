@@ -63,6 +63,38 @@ Muon Triggers
    - 2011: 18 GeV threshold
    - 2012: 24 GeV, plus isolation: ptcone20/pt<12%. Tracks have to have z0<6mm
    
+- L1: Use RPC in barrel (eta<1.05) and TGC in EC (up to 2.4)
+	- Provide rough measurements of pt/eta/phi
+	- chambers arranged in 3 planes of 2 to 4 layers.
+	- trigger on coincidences between planes.
+	- coverage 99% in EC, 80% in barrel due to gaps for services and feet.
+	- planes of RPC consist of doublet of indep layers. For low pt trigger require coincidence in 3 of 4 leayers of the 2 inner planes. For high pT trigger, start from low pT trigger and look for hits in one of the two layers of the 3rd layer (high pT confirmation plane)
+	- TGC - two outermost planes consist of foublets of independant detectors read out by strips to measure pgi and wires for eta. Low pT trigger is coinc of 3 out of 4 layers of outer 2 planes. Inner plane has 3 layers, wires in all but strips in only 2. High pT trigger requires at least one of two phi stip layers and 2 out of 3 layers from innermost plane
+	- coincidences are gener- ated separately for η and φ and can then be combined with programmable logic to form the final trigger result.
+	- Require coincidense in roads - paramaterised geometrical regions corresponding to muons of either charge with momentum above a given pT threshold. 2011 and 2012 triggers use 20 GeV threshold
+	
+- HLT:
+	- in addition to the L1 trigger chambers (RPC and TGC), the HLT makes use of informa- tion from the MDT chambers (and CSC in 2011), which provide precision hits in the η coordinate
+	- Fast tracking at L2, offline tracking at EF
+	- At L2, each L1 muon candidate is refined by including the precision data from the MDTs in the RoI defined by the L1 candidate. Three seq algo:
+	- L2 MS-Only - build MS tracks using L1 trigger chamber hits as seeds and opening a narrow road. Track fit using hits and pT addignment from lookup.
+	- L2 Combined: combine with ID tracks
+	- L2 Isolated: check track and calo iso.
+
+- EF:
+	- Start from RoI from L2, and run offline algos
+	- Outside in: start from L1/L2 RoI and reco MS tracks. then extrapolate to IP and determine para,m there. Then combine with ID track.
+	- Inside out - start with ID track and extrapolate to MS
+	- 2011, ran both inside out and outside in to maximise efficiency.
+	- 2012 - apply isolation at EF ptcone20<0.12  (tracks with pt > 1 and with z_track - z_mu < 6mm
+	
+2011 to 2012
+-------------
+Not affected too much by PU, but need to deal with rate
+- tighten pt 18 to 24
+- add iso
+- merge two algo - run outside in first then inside out if it fails.
+	
 Electron triggers
 ==================
 

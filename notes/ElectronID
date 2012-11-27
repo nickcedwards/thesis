@@ -8,3 +8,151 @@ Identification
    - the EM showers (longitudinal shower depth, lateral shower width) and the 
    - track quality and 
    - track-cluster matching
+   
+- cut-based selection using calorime- ter, tracking and combined variables that provide good separation between isolated or non-isolated signal elec- trons, background electrons (primarily from photon con- versions and Dalitz decays) and jets faking electrons
+
+- Three reference sets of cuts have with increasing background rejection power: 
+	- loose, medium and tight with an expected jet rejection of about 500, 5000 and 50000 (based on MC)
+	- cuts are optimised in 10 bins of cluster η (defined by calorimeter geometry, detector acceptances and regions of increasing material in the inner detector) and 11 bins of cluster ET from 5 GeV to above 80 GeV
+	
+2010 / Early 2011 ID
+====================
+
+Optimised using TMVA
+This allows for a proper handling of correlations between variables assuring the highest possible electron efficiency for a given jet rejection
+
+Observed in data that EM showers tend to be broader than in MC, which translates as a shift in R_eta and w_eta_2. Consistently observed in hadronic background and on isolated electrons in W/Z - probably due to GEANT4 description of calo. To retain robustnuss of ID, cuts on R_eta and w_eta_2 loosedn. cut is placed on tails of the releevant distributions from data, reducing systematics due to mismodelling.
+
+Due to mis-modeeling of calo-ID allignment, remove delta_phi cut from tight, and only use teh looser delta_eta cut
+
+
+Loose 
+-----
+	- Shower shape variables of the EM calorimeter middle layer and hadronic leakage vari- ables are used in the loose selection
+	
+	- HADRONIC LEAKAGE: Rhad(Rhad_1): ratio of E_T in (1st layer of ) had cal to cluster E. Full calo usid in 0.8 - 1.37 to compensate for the crack between the barrel and extended barrel of the tiles. Clearly hadrons and non isolated / bg e have much hgher values.
+		- Very energy dependant: for el very tightly peaked at 0 for high energies, broader at low Et. For had gets harder with E_T
+	- 2nd layer: LATERAL WIDTH: w_eta2 - lateral width of shower - wider for hadrons
+	- 2nd layer: R_eta - : ratio in eta of cell energies in 3x7 vs 7x7 cells - >0.8 for electrons, <0.9 for hadrons
+	
+	
+Medium
+--------
+	- Add EM calo strips, track quality and track-cluster matching
+	
+	- TOTAL WIDTH IN 1sT LAYER w_stot - wider for hadrons - shower width in strips
+	- E_ratio: Ratio of energy  difference between 1st and 2nd largest energy deposits over their sum (1st layer) - peaked near 1 for electrons, falling dist for hadrons
+	- ID HITS: pix>0, SCT>6 -  high efficiency with good rejection while being at the same time quite robust - largely rejects conversions
+	- IP: d_0 < 5 mm (wrt beam spot)
+	- TRACK MATCH: delta_eta<0.01
+	
+Tight
+	- Add E/P, TRT PID, b-layer hit req (reject conversions), info about conversion vertices 
+	
+	- BLAYER HITS >0
+	- TRACK MATCH: delta_eta<0.005, delta_phi<0.02
+	- E/p
+	- IP: d0<1mm (wrt beam spot)
+	- TRT: Total no. hits - within 15 of expected. Ratio of high-threshold to total number of hits in TRT - peaks at 0.2 for electrons, 0 for hadrons..
+	- Reject canidates matching conversions
+	
+
+2011
+=====
+
+MC11 describes the electron shower shapes observed in the data better than MC10. As a consequence :- The scale factors are generally closer to unity.- The raw efficiency (before application of scale factors) of the MC11 is 1-2 % per electron worsethan MC10. This number depends on Et , η , and pile-up conditions.Furthermore, a slight decrease of the track quality cuts efficiency (< 1% per electron) is observed in MC11. It should be also noted that the Eratio cut is not applied for ET< 10 GeV at the loose++ selection, resulting in a bit worse rejection than the medium selection used in the past.
+	
+IsEM++
+-------
+Re-optimised for >10^33
+
+Loose++ (2011 and 2012)
+
+For both 2011 and 2012, Loose++ cuts on shower shape variables in both the strips and the second compartment as well as the hadronic leakage. Loose++ also requires track quality hits in the pixel and silicon layers as well as loose track cluster-matching: Loose++ has efficiencies around 95% for ZT&P. Loose++ cuts on:
+
+    Shower Shapes: rEta, rHad, wEta2, Eratio, wstot
+    nPix+nPixOutliers >=1 and nSi+nSiOutliers >= 7
+    loose trk-cluster matching in eta ( |deltaeta| < 0.015) 
+
+For 2012, the shower shape cuts rEta and rHad were loosened to recover efficiency at high pile-up. However, they are cut on at the same value as tight and medium, whereas this was not the case for 2011. This reduced the rejection of the loose++ operating point by ~20%.
+
+Actual cuts can be found in the python configuration files in the Athena egammaPIDTools package here
+
+Medium++ (2011 and 2012)
+
+The medium++ menu was created to provide a low energy, high efficiency electron sample which met the trigger bandwith restrictions for high luminosity. The medium++ operating point offers efficiencies a around ~85% for Z electrons with a small dependence on the number of interactionsr. Medium++ cuts on:
+
+For 2011:
+
+    all loose++ shower shape cuts but at tighter values
+    tighter delta-eta track-cluster matching ( |deltaeta|<0.005) and d0 &lt 5mm
+    stricter bLayer and Pixel hit requirements, ( bL + bLOutlier > 0 for |eta| < 2.01 and nPix+nPixOutliers > 0; nPix + nPixOutliers > 1 for |eta| > 2.01),
+    loose TRT HT Fraction cuts
+    tighter shower shapes for |eta| > 2.01 
+
+For 2012:
+
+    looser rEta and rHad cuts w.r.t to 2011
+    tigher Eratio, wEta2 and wstot wr.t. to 2011
+    bL+bLOutliers > 0 for (eta < 2.37) and nPix+ nPixOultiers > 1 for all eta bins
+    cuts on f3 (fraction back compartment) for et < 80 GeV 
+
+The 2012 menu loosens cuts on rEta and rHad, tightens other shower shape cuts and adds an f3 cut. The bLayer and Pixel cuts are changed as well. Overall the rejection is the same w.r.t. 2011 but is different for individual eta bins.
+
+Actual cuts can be found in the python configuration files in the Athena egammaPIDTools package here
+
+Tight++ (2011 and 2012)
+
+The tight++ operating point provides efficiences ~78% for Z Electrons with a small dependence on the number of interactions/crossing.
+
+For 2011:
+
+    cuts on shower shapes from medium++ at the same or tighter values
+    added e/p and deltaphi track cluster matching cuts and and d0 &lt 1mm
+    added conversion bit
+    bL+bLOutliers &gt 0 for all eta 
+
+For 2012:
+
+    changes in medium++ for 2012 propagated to tight++: incl rEta, rHad, Eration, wEta2, f3
+    changes in E/p and DeltaPhi cuts to account for GSF reconstruction
+    bL+bLOutliers > 0 for all eta, nPix+nPixOutliers > 1 for all eta 
+
+Because of the loosening of the cuts, the rejection for tight++ is 10-15% worse for 2012 w.r.t to 2011.
+
+Actual cuts can be found in the python configuration files in the Athena egammaPIDTools package here 
+
+2012
+=====
+2012 - reoptimised for 7x10^33 to prevent ~20% drop in efficiency
+
+The 2012 menu in general redistributes away from the pile-up sensitive variables rHad and rEta and redistributes them to pile-up robust variables. For loose++, medium++, and tight++, rEta and rHad are loosened. For medium++ and tight++, wstot, eratio and weta2 are tightened and a cut on f3 (fraction of energy in back EM compartment) is added to recover the efficiency. The blayer cut and pixel cuts are changed for medium++ and tight++ for the high eta bins (eta > 2.01). A summary of the changed and motivation was presented at an e-gamma performance group meeting in Februrary and is available
+
+with high pu rHad broadens and rEta shifts to lower values
+
+f3 (fraction in 3rd compartment) and wstot sample musch smaller volume so less sensitive to PU
+f3 has slightly higher peak for bg and MUCH longer tail.
+looses efficience at High Et due to leakage - online use e45vh_medium1 trigger which has no f3, and offline f3 cut stops at 80 GeV and gets looser wirt et
+
+As states above, the 2012 loose++ and tight++ operating points are highly efficienct, even for large pile-up (mu=40) but have 10-20% less rejection than 2011. Medium++ makes these efficiency improvements without losing rejection. Bin-by-bin performance plots for the 2012 ++ menu compared to 2011 ++menu are available
+
+Forward el ID
+=============
+- Relies on calo shower shapers and cluster moments: <x^n> = Sum(E_i x^n_i) / Sum(E_i)
+- Good disc between el and hadrons due to tansverse and longitudinal segmentation
+- not possible to distinguish el and photon
+- just loose and tight
+
+Loose
+-----
+Shower depth (lambda_centre) - distance of shower barycentre from calo from face along axis
+Longitudinal second moment <lambda^2> - second moment of distance of each cell to shower centre in long direction (basically gives variance of cell position in long distance)
+transverse second moment <r^2> - as above, but in transverse direction
+
+Tight
+-----
+f_max: Fraction of cluster energy in the most energetic cell
+Normalized lateral moment: w_2 / w_2 + w_max
+	- w2 is the second moment of ri setting ri = 0 for the two most energetic cells, while wmax is the second moment of ri setting ri = 4 cm for the two most energetic cells and ri = 0 for the others
+Normalized long moment: w_2 / w_2 + w_max
+	- l2 is the second moment of λi setting λi = 0 for the two most energetic cells, while lmax is the second moment of λi setting λi = 10 cm for the two most energetic cells and λi = 0 for the others

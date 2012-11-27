@@ -1,0 +1,95 @@
+Jets
+
+- need to specify definition for jet to be meaningfull, since partons not physically oobservable
+- need to specify algorithm to associate energy deposits to a single jet (jet algo) and recombination scheme for how to combine their four momentum.
+- need to calibrate calorimeter response signals to energy of the particles in the jet
+
+theory requirements
+--------------------
+- jet algo needs to be well behaved wrt QCD divergences:
+	- infrared (soft emission)
+	- collinear (parton splits into two collinear partons)
+- both these lead to additional soft particles - need same jet to be reconstructed whether they are created or not.
+- also need to be robust against particles radiated at very small angles to parton
+- should produce same physics regardless of inpit: partons, particles, calo objects
+
+In ATLAS
+--------
+- implemented by FastJET
+- two types of algorithm: 
+	- cone: start from seed and add particles in fixed cone
+	- successive combination: iteratively merge pairs of objects according to a definitionof distance that typically involves the physical distance between the objects and their transversemomentum
+
+- cone algorithms generally theoretically unsafe as emission can affect choice of seeds.
+
+- ATLAS uses anti-kt:
+	- This jet algorithm is based on the comparison for all possible pairs of objects betweenthe distances di,j = min(p−2,p−2)∆R and di,Beam = p−2, where pT is the transverse momentum T,i T,j R T,iof the particle considered, ∆R is the spatial distance of the two objects in η − φ space and R is a parameter of the algorithm which can be considered as a weight to the spatial distance of the two objects - the larger R, the wider the jets. In the following, R will be referred to as the jet algorithm distance parameter. If the minimum between all di,j and di,Beam is a di,j, objects i and j will be recombined, otherwise object i is considered a jet and not considered in the next iteration. With this algorithm, soft radiation is effectively clustered around the harder core of the process. Anti-kt jets have a regular, conical shape, experimentally desirable since it allows for a well defined jet area that can be used for e.g. pile-up subtraction.
+	- theoretically safe
+	- better performance before and after calibration (e.g. trigger matchin)
+	- ATLAS uses 0.4 and 0.6
+	-  final four-momentum of the jet is obtained from summing the four-momenta of its constituents in the four-vector recombination scheme. This scheme conserves energy and momentum, and allows a meaningful definition for the jet mass.
+
+Topoclusters
+-------------
+Think I described these already for fwd E
+	- Build jets from topoclusters
+	- groups of calo cells clustered into 3d energy deposits expoliting long and transverse calo sep
+	- include cells following noise supression
+	- can also use towers: geometrically deliminated groups of cells.
+	- topoclusters and towers reconstructed as massless pseudo particles, with energy equal to sum of cells and direction as vector from origin to energy weigthed cluster barycentre.
+
+Corrections
+------------
+Need to calibrate response. Our calos are non-compensating - no adjustment made for energy lost from shower.
+Correct using pT and eta dependant correction factors based on simulation and in-situ measurements.
+- First correct to EM-scale (correct response to EM interacting particles) (test-beam, MC simulation, Zee)
+- Then need to correct for non-compensation to restore the final hadronic energy scale (jet energy scale).
+- Also need corrections for dead material, leakage, energy from particles outside of jet that should be in it (eg deflectected by B), signal losses in calo due to clustering.
+
+- scale on average using calibrations from simulation comparing truth level and reco level.
+- additional energy from pileup is corrected for before applying enery scale using data derived factors.
+- calibration scheme validated using in-situ measuremeants: Z+g, Z+j
+
+MC calib
+--------
+- inclusive QCD jets generated with Pythia tuned to first LHC data.
+
+In-Situ measurements
+----------------------
+Z+jet balances, photon+jet balance
+
+EM+JES
+------
+- First offset correction to EM-scale for pileup. Derived from MB data as a function of N_PV (at least 5 tracks) and takes into account average additional energy deposited in a fixed grid of 0.1x0.1.
+	- Avg additional energy is multiplied by average number of towers in the cluster, as a function of pseudo rapidity
+
+- Then origin correction: correct each topocluster to point back to PV with highest sum-pt. 
+	-kinematics of each jet constituent is recalculated using the vector from the primary vertex to the topocluster or tower centroid as its direction
+	- redefine jet four momentum as vector sum of constituant four momemnta. Origin correction improves angular resolution but does not change energy.
+	
+- Finally apply JES correction. Primarily from MC simulation.
+	- Only use isolated jets: no other calorimeter (truth) jet with EM-scale (truth) pT > 7 GeV within ∆R = 2.5R
+	- Only calorimeter jets that are geometrically matched to truth jets within a cone of ∆R = 􏰙(∆φ)2 + (∆η)2 = 0.3 around the jet axis are used for the calibration.
+	- For each pair, energy response R = E_calo_em / E_truth
+	- get <R> as a function of E_calo_em in bins of eta_det
+	- fit with a function F(E_calo_em) = Sum(a_i (ln E_calo_em)^n) where sum goes up to 6
+	- then E_calo_emjes = E_calo_em / F(E_calo_em, eta_det)
+	- average correction is largest at low eta and lows jet pt
+
+- Finally eta dependant correction to remove biases in eta due to poorly instrumented calo regions. Corrects the eta of the cluster. When clustered with a jet algorithm, the energy of each topocluster is used as a weight in the calculation of the jet direction: the jet direction will therefore be biased towards the better instrumented calorimeter regions. 
+	- Correct as delta_eta = eta_truth - eta_origin paramterised as a function os E_calo_emjes and eta_det
+	
+Local Cluster Weigting
+----------------------
+Energy of topoclusters is corrected first
+- different characteristics of electromagnetic and hadronic showers are exploited as cluster-by-cluster and/or jet-by-jet information.
+- reduces fluctuations in the JE response and improves resolution.
+- Hadronic cascades are longer and less dense than EM ones/ Use cell energy densities  to paramaterise correction factors
+
+only topological clusters that are classified as hadronic from their characteristics are corrected with a weight that depends on the position and the energy density of the constituent cells
+- weights have been derived from simulation of single pions and verified in test beam measurements
+- run jet finding on these corrected clusters, and apply final jet level EM corections to account for unclustered energy and dead material.
+- advantage is that corrections are based on single particle simulations and do not depend on physics process or event topo or jet algo.
+- then apply JES on top of this, derived as EM+JEs, but starting from LC scale not EM.
+	
+The EM scale is the energy obtained from the assumptionthat the shower is an EM shower only: EM showers have been calibrated by a combination of electron and muon test-beams and {\it in-situ} measurements of muons from cosmic rays, and calibrated by measurements of $Z$ bosons decaying to $e^+e^-$ pairs.
