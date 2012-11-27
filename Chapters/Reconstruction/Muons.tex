@@ -81,8 +81,8 @@ muons based on MS and ID measurements:
     \modetalt{2.7}.
 
     \item {\bf Calorimeter Tagged:} ID tracks are tagged as originating from
-    muons by looking for calorimeter deposits consistent with a minimum ionising
-    particle. No MS tracking is used.
+    muons by matching them to calorimeter deposits consistent with a minimum ionising
+    muon. No MS tracking is used.
 
 
 \end{itemize}
@@ -95,7 +95,10 @@ for \ptgt{100}). Combination with an ID track improves the momentum resolution
 over the range $4 < p_{T} < 100$ \GeV. Segment tag muons are useful to recover
 efficiency at low \pt\ where muons may only reach the inner layer of the muon
 chamber and in regions of limited detector acceptance. Stand alone muons are
-useful to extend coverage beyond the coverage of the ID.
+useful to extend coverage beyond the coverage of the ID. Calorimeter tagged
+muons suffer large fake rates from jets and electrons, but can be used to recover
+acceptance at \modetalt{0.1} where there are gaps in the muon chambers to
+provide space for services to the ID, the solenoid magnet and the calorimeters.
 
 There are two parallel muon reconstruction chains in use in ATLAS, \staco\ and
 \muid. Each use slightly different track finding algorithms, and approach the
@@ -105,6 +108,45 @@ combination of the two track measurements, weighting the relative contributions
 according to their covariance matrices. The two chains are found to give similar
 performance (see ??). The measurements in this thesis all use muons
 reconstructed with the \staco\ chain, so this chain is described in detail here.
+
+The \staco\ chain begins with the reconstruction of MS tracks using the \muonboy\
+algorithm. First, the muon trigger chambers are used to identify Regions of
+Activity (RoA). The RoA are areas of size \deltaetadeltaphi{0.4}{0.4} where
+there is at least one RPC or TGC hit in both co-ordinates. Local straight track
+segments are then reconstructed within the RoA by attempting to combine each MDT
+hit in a multilayer with each MDT hit in the other multilayer of the same or
+adjacent station. This gives four possible track segments. Each of these segments
+is extrapolated to the rest of the MDT tubes and matched with hits. The segment candidates are required to point loosely towards the
+interaction point, and cuts are applied on the \chisquared\ of the track
+segment, with penalties for missing hits. 
+
+Track candidates are then formed by combining at least
+two segments from different stations to form track candidates. The tracks are
+seeded from track segments that have at least one second-coordinate hit. A first
+rough estimate of the momentum is deduced from the position and direction of the
+segment. Each of these segments is then extrapolated to the other stations, and
+matches in position and direction is found. Since the track momentum is not well
+known at this point, a `momentum-scan' of several possible momentum values is
+performed. The best match (if any) is chosen, and the track segments are
+combined and refitted to obtain a more accurate momentum measurement. A second,
+finer momentum scan is performed around the improved momentum estimate,
+extrapolating to all other stations, including ones which match to the track.
+The track is then refit (still using the track segments as inputs) to more accurately determine the momentum, position and
+direction. 
+
+Then, a global fit is performed on the candidate tracks, starting from the
+best results of the previous fit, but using the raw hit information. This gives
+a better estimate of the likelihood of the track and gives a better
+discrimination of outlier hits from `good' hits. Finally, a last fit including
+a detailed description of the material traversed by the tracks is performed.
+this fit properly takes into account multiple scattering effects, and the
+scattering angles at a set of discretised scattering centres are included in the
+fit. The energy loss due to interactions is also taken into account  by
+parametrising the most probable energy loss as as a function of the track momentum and
+the amount of material crossed. The selection of reconstructed muons is made
+based on the \chisqaured\ quality of this final fit.
+
+% each station consists of two layers of MDT sandwiched between RPC chambers
 
 
 
