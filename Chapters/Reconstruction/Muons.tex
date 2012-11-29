@@ -70,7 +70,7 @@ muons based on MS and ID measurements:
     nature of the magnetic field it is possible to get combined muons beyond
     this.
 
-    \item {\bf Segment Tag:} combination of an ID track with an MS track
+    \item {\bf Segment Tagged:} combination of an ID track with an MS track
     segment. An MS track segment is a straight line track segment reconstructed
     in a single MS station where the segment did not form a full MS track. The
     track parameters of the reconstructed muon are taken solely from the ID
@@ -185,6 +185,23 @@ ratio based quality selection are used, and muon candidates passing either are
 accepted. Calorimeter tagged muons are used to recover efficiency at
 \modetalt{0.1} where there is a gap in the muon-spectrometer.
 
+\subsubsection{Reconstruction efficiencies}
+
+~\fig{el-reco-eff} shows the observed reconstruction efficiency for Combined and Segment
+Tagged muons in the 2011 data, as well as the efficiency observed in the
+Monte-Carlo simulation.
+
+\begin{figure}[h]
+\centering
+	\subfigure[]{
+            \includegraphics[width=0.47\textwidth]{STACO_loose_id_vs_eta}
+        }
+	\subfigure[]{
+            \includegraphics[width=0.47\textwidth]{STACO_loose_id_vs_pt}
+        }
+\caption{. Figures from~\cite{ElectronEfficiency2012}.}
+\label{fig:mu-reco-eff}
+\end{figure}
 
 
 % each station consists of two layers of MDT sandwiched between RPC chambers
