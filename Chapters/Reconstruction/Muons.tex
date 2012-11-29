@@ -115,9 +115,11 @@ algorithm. First, the muon trigger chambers are used to identify Regions of
 Activity (RoA). The RoA are areas of size \deltaetadeltaphi{0.4}{0.4} where
 there is at least one RPC or TGC hit in both co-ordinates. Local straight track
 segments are then reconstructed within the RoA by attempting to combine each MDT
-hit in a multilayer with each MDT hit in the other multilayer of the same or
+hit in a multilayer (each station consists of two layers of MDT sandwiched
+between RPC chambers) with each MDT hit in the other multilayer of the same or
 adjacent station. This gives four possible track segments. Each of these segments
-is extrapolated to the rest of the MDT tubes and matched with hits. The segment candidates are required to point loosely towards the
+is extrapolated to the rest of the MDT tubes in the station and matched with hits. 
+The segment candidates are required to point loosely towards the
 interaction point, and cuts are applied on the \chisquared\ of the track
 segment, with penalties for missing hits. 
 
@@ -219,7 +221,6 @@ for data and open green triangles for Monte-Carlo). Figures from~\cite{MuonEffic
 \end{figure}
 
 
-% each station consists of two layers of MDT sandwiched between RPC chambers
 
 
 
