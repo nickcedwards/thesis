@@ -139,12 +139,14 @@ The track is then refit (still using the track segments as inputs) to more accur
 direction. 
 
 Next a global fit is performed on the candidate tracks, starting from the
-best results of the previous fit, but using the raw hit information. This gives
+best results of the previous fit, but using the full raw hit information rather
+than the track segments. This gives
 a better estimate of the likelihood of the track and gives a better
 discrimination of outlier hits from `good' hits. Finally, a last fit including
 a detailed description of the material traversed by the tracks is performed.
-this fit properly takes into account multiple scattering effects, and the
-scattering angles at a set of discretised scattering centres are included in the
+This fit properly takes into account multiple scattering effects, by including
+the
+scattering angles at a set of discretised scattering centres in the
 fit. The energy loss due to interactions is also taken into account  by
 parametrising the most probable energy loss as as a function of the track momentum and
 the amount of material crossed. The selection of reconstructed muons is made
