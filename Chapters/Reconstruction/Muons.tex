@@ -155,6 +155,36 @@ the two sets of track parameters weighted by their combined covariance matrix.
 The track parameters are combined, weighting the relative contributions
 according to their covariance matrix.
 
+The efficiency of the muon reconstruction in the MS decreases very rapidly with
+decreasing \pt\ because accurate tracking of low \pt\ muons in the highly
+inhomogeneous magnetic field is very complicated.
+Furthermore as \pt\ decreases, the energy lost by the muons inside the
+calorimeters becomes comparable to their energy, especially in the barrel
+region. The \mutag\ algorithm is used to recover efficiency at low \pt\ by
+starting from ID tracks, extrapolating them to the inner station of the MS and
+attempting to match them with MS track segments not yet associated to combined
+tracks.
+
+\subsubsection{Calorimeter Tagged Muons}
+
+It is also possible to reconstruct muons independently of the MS. The 
+\CaloTrkMuID algorithm uses the calorimeter to tag inner-detector tracks as originating from muons.
+ A muon
+with sufficient momentum will traverse all the layers of the calorimeter,
+leaving a small energy deposit in each layer. It is possible to distinguish this
+pattern of energy depositions from that of other particles. A low
+momentum hadron will deposit most of its energy in the first layers of the
+calorimeter, leaving no signal in the last layers. High momentum hadrons will
+deposit much energy in the core cells. Electrons will deposit most of their energy
+in the EM calorimeter. The \CaloTrkMuID\ algorithm requires a signal consistent
+with a minimum-ionising-particle in each layer of the
+calorimeter to reject hadron and electron backgrounds. Both a cut based quality selection and a likelihood
+ratio based quality selection are used, and muon candidates passing either are
+accepted. Calorimeter tagged muons are used to recover efficiency at
+\modetalt{0.1} where there is a gap in the muon-spectrometer.
+
+
+
 % each station consists of two layers of MDT sandwiched between RPC chambers
 
 
