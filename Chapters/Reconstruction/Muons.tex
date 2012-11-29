@@ -167,18 +167,20 @@ tracks.
 
 \subsubsection{Calorimeter Tagged Muons}
 
-It is also possible to reconstruct muons independently of the MS. The 
-\CaloTrkMuID\ algorithm uses the calorimeter to tag inner-detector tracks as originating from muons.
+It is also possible to reconstruct muons independently of the MS by using the calorimeter to tag inner-detector tracks originating from muons.
  A muon
-with sufficient momentum will traverse all the layers of the calorimeter,
+with sufficient momentum will traverse all layers of the calorimeter,
 leaving a small energy deposit in each layer. It is possible to distinguish this
-pattern of energy depositions from that of other particles. A low
+pattern of energy deposition from that of other particles. A low
 momentum hadron will deposit most of its energy in the first layers of the
 calorimeter, leaving no signal in the last layers. High momentum hadrons will
-deposit much energy in the core cells. Electrons will deposit most of their energy
-in the EM calorimeter. The \CaloTrkMuID\ algorithm requires a signal consistent
+deposit most of their energy in the core cells, and electrons will deposit most of their energy
+in the EM calorimeter. The \CaloTrkMuID\ algorithm identifies muon candidates by
+requiring an ID track matched to a signal consistent
 with a minimum-ionising-particle in each layer of the
-calorimeter to reject hadron and electron backgrounds. Both a cut based quality selection and a likelihood
+calorimeter. 
+ %to reject hadron and electron backgrounds
+Both a cut based quality selection and a likelihood
 ratio based quality selection are used, and muon candidates passing either are
 accepted. Calorimeter tagged muons are used to recover efficiency at
 \modetalt{0.1} where there is a gap in the muon-spectrometer.
