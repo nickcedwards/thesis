@@ -311,7 +311,14 @@ E^{\rm meas} = E^{\rm true}(1 + \alpha_{i})
 where $E^{\rm true}$ is the true electron energy, $E^{\rm meas}$ is the measured
 energy after applying the \mc\ based energy-scale correction and $\alpha_{i}$
 measures the residual mis-calibration. The $\alpha$ parameters are obtained by
-fitting the observed dilepton invariant mass distribution in a sample of
+performing an unbinned fit minimising the log-likelihood function:
+
+\begin{equation}
+-\rm{ln} L = \Sum_{i,j} \Sum^{N^{\rm events}_{ij}}_{k} -\rm{ln}
+L_{i,j}(\frac{m_{k}}{1+\frac{\alpha_{i} + \alpha_{j}}{2}})
+\end{equation}
+
+minimising the  the observed dilepton invariant mass distribution in a sample of
 opposite-signed high \pt\ electrons with invariant mass near the \Z\ boson mass,
 and requiring the observed \Z\ mass to be consistent with the world average measured
 value~\cite{PDG}. The procedure is carried out in bins of pseudo-rapdity.
