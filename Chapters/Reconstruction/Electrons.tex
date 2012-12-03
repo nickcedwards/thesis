@@ -292,6 +292,38 @@ Monte-Carlo. Figures from~\cite{ElectronEfficiency2012}.}
 
 \subsubsection{Electron Energy Calibrations}
 
+The baseline EM calorimeter energy scale is derived from test beam
+measurements. This introduces large uncertainties originating from the transfer
+of the measurement from the test-beam to the actual ATLAS environment. Further,
+the calorimeter energy response needs to be calibrated to account for the
+varying amount of dead material before the calorimeters as a function of
+pseudo-rapidity. As previously mentioned, \mc\ derived calibrations are applied
+to the clusters to correct for dead material and leakage outside of the
+calorimeter. The energy response is further corrected in-situ using \Zee\
+decays. This also allows the inter-calibration of different regions of the
+calorimeters in $\eta$. The measured energy of an electron in region $i$ candidate can be
+related to its true energy by:
+
+\begin{equation}
+E^{\rm meas} = E^{\rm true}(1 + \alpha_{i}
+\end{equation}
+
+where $E^{\rm true}$ is the true electron energy, $E^{\rm meas}$ is the measured
+energy after applying the \mc\ based energy-scale correction and $\alpha_{i}$
+measures the residual mis-calibration. The $\alpha$ parameters are obtained by
+fitting the observed dilepton invariant mass distribution in a sample of
+opposite-signed high \pt\ electrons with invariant mass near the \Z\ boson mass,
+and requiring the observed \Z\ mass to be consistent with the world average measured
+value~\cite{PDG}. The procedure is carried out in bins of pseudo-rapdity.
+~\fig{el-energy-calib-2011} shows the 
+
+\begin{figure}[h]
+\centering
+            \includegraphics[width=0.47\textwidth]{zee_mass_calibration_2011}
+\caption{. Figures from~\cite{2}.}
+\label{fig:el-energy-calib-2011}
+\end{figure}
+
 \subsection{Identification}
 \label{sec:reco-el-id}
 
