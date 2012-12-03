@@ -54,27 +54,29 @@ to the sum of the energy of the constituant cells and with a direction defined
 by a vector pointing from the origin of the ATLAS co-ordinate system to the energy weighted cluster barycentre.
 
 An important aspect of jet mesurements is the calibration of the hadronic
-calorimeter response. ?? Say something about being non compensating ??. First
-the topological clusters are corrected to the \intro{EM scale}, corrections
-applied so that the response to purely electromagnetically interacting particles
+calorimeter response. The ATLAS calorimeters are non-compernsating, and do not
+correct for the fact that EM and hadronic showers will have different energy
+responses. First, the topological clusters are corrected to the \intro{EM
+scale}, correcting their energy such that the response to purely electromagnetically interacting particles
 would be correct. To achieve this, a \pt\ and $\eta$ dependant correction is
 applied, derived from a combination of \mcsim, test-beam measurements and
 measurements of \Zee\ decays in data. Corrections are applied to the
-clusters to correct for the effects of \pu. These are derived from minimum-bias
-data as a function of the number of primary vertices in the event, and subtract
-the average additional energy deposited by \pu\ events in a fixed grid of
-\deltaetadeltaphi{0.1}{0.1}. The clutser four momentum is modified so that each
+clusters to correct for the effects of \pu, are derived from minimum-bias
+data as a function of the number of primary vertices in the event. 
+%and subtract
+%the average additional energy deposited by \pu\ events in a fixed grid of
+%\deltaetadeltaphi{0.1}{0.1}. 
+The clutser four momentum is is also modified so that each
 topological cluster points to the primary vertex with the highest sum of track
-transverse momentum. Finally  the \intro{Jet Energy Scale (JES)} correction is
-applied to correct for the non compensating nature of the calorimeters, and also
-to correct for the effects of dead material, leakage outside of the
+transverse momentum. The \intro{Jet Energy Scale (JES)} correction is
+applied to jets constructed from the EM scale clusters in order to correct for the non compensating nature of the calorimeters, and also
+corrects for the effects of dead material, leakage outside of the
 calorimeters and energy lost due to particles being defelected out of the jet by
-the magnetics fields. This correction is applied at jet level, paramaterised by
-the jet \pt\ and $\eta$. It is primarily derived from \mcsim\ by comparing the
+the magnetic fields. The corection is paramaterised by
+the jet \pt\ and $\eta$ and is primarily derived from \mcsim\ by comparing the
 energy of reconstructed jets with the energy of a `truth' jet constructed from
 the final state particles that make up the jet. In-situ measurements such as
-$Z\plus$jet balance~\cite{ATLAS-CONF-2012-053} and $Z \plus \gamma$ balance~\cite{ATLAS-CONF-2012-063} are used to validate the \mc\
-based corrections.
+$Z\plus$jet balance~\cite{ATLAS-CONF-2012-053} and $Z \plus \gamma$ balance~\cite{ATLAS-CONF-2012-063} are used to validate the \mc\ based corrections.
 
 
 
