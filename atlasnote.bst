@@ -37,7 +37,6 @@ ENTRY
     eprint
     report
     collaboration
-    SLACcitation
     archivePrefix
     primaryClass
     url
@@ -444,12 +443,12 @@ FUNCTION {format.collaboration}
   if$
 }
 
-FUNCTION {format.SLACcitation}
-{ SLACcitation empty$
-  {""}
-   { newline$ SLACcitation output "" newline$ }
-  if$
-}
+%FUNCTION {format.SLACcitation}
+%{ SLACcitation empty$
+%  {""}
+%   { newline$ SLACcitation output "" newline$ }
+%  if$
+%}
 
 FUNCTION {format.btitle}
 { title emphasize
@@ -759,7 +758,7 @@ FUNCTION {article}
   new.sentence
   note output
   new.sentence
-  format.SLACcitation output
+  %format.SLACcitation output
   fin.entry
 }
 
@@ -797,7 +796,7 @@ FUNCTION {book}
   new.block
   note output
   new.sentence
-  format.SLACcitation output
+  %format.SLACcitation output
   fin.entry
 }
 
@@ -828,7 +827,7 @@ FUNCTION {booklet}
   new.block
   note output
   new.sentence
-  format.SLACcitation output
+  %format.SLACcitation output
   fin.entry
 }
 
@@ -868,7 +867,7 @@ FUNCTION {inbook}
   new.block
   note output
   new.sentence
-  format.SLACcitation output
+  %format.SLACcitation output
   fin.entry
 }
 
@@ -900,7 +899,7 @@ FUNCTION {incollection}
   new.block
   note output
   new.sentence
-  format.SLACcitation output
+  %format.SLACcitation output
   fin.entry
 }
 
@@ -932,7 +931,7 @@ FUNCTION {inproceedings}
   new.block
   note output
   new.sentence
-  format.SLACcitation output
+  %format.SLACcitation output
   fin.entry
 }
 
@@ -1049,7 +1048,7 @@ FUNCTION {phdthesis}
   new.block
   note output
   new.sentence
-  format.SLACcitation output
+  %format.SLACcitation output
   fin.entry
 }
 
@@ -1077,7 +1076,7 @@ FUNCTION {proceedings}
   new.block
   note output
   new.sentence
-  format.SLACcitation output
+  %format.SLACcitation output
   fin.entry
 }
 
@@ -1109,7 +1108,7 @@ FUNCTION {unpublished}
   note "note" output.check
   format.date output
   new.sentence
-  format.SLACcitation output
+  %format.SLACcitation output
   fin.entry
 }
 
