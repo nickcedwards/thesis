@@ -8,6 +8,8 @@
 %		2008-10-22 (MC) adapted collaboration entry from
 %              utphysics.bst by Jacques Distler
 %
+ --------------------------------
+
 
 ENTRY
   { address
@@ -41,6 +43,7 @@ ENTRY
     primaryClass
     url
     doi
+    SLACcitation
   }
   {}
   { label }
@@ -126,6 +129,12 @@ FUNCTION {fin.entry}
     'add.period$
   if$
   write$
+ % modified to add SLACcitation field if present
+ SLACcitation empty$
+   'skip$
+   { newline$ SLACcitation write$ }
+   if$
+ % end of modification
   newline$
 }
 
