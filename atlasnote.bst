@@ -8,7 +8,6 @@
 %		2008-10-22 (MC) adapted collaboration entry from
 %              utphysics.bst by Jacques Distler
 %
- --------------------------------
 
 
 ENTRY
