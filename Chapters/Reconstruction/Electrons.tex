@@ -310,7 +310,9 @@ E^{\rm meas} = E^{\rm true}(1 + \alpha_{i})
 
 where $E^{\rm true}$ is the true electron energy, $E^{\rm meas}$ is the measured
 energy after applying the \mc\ based energy-scale correction and $\alpha_{i}$
-measures the residual mis-calibration. The $\alpha$ parameters are obtained by
+measures the residual mis-calibration. The residual calibrations are determined
+by selecting pairs of opposite-sign high \pt electrons with a di-electron
+invariant mass near to the \Z\ peak. The $\alpha$ parameters are obtained by
 performing an unbinned fit minimising the log-likelihood function:
 
 \begin{equation}
@@ -318,11 +320,19 @@ performing an unbinned fit minimising the log-likelihood function:
 L_{ij} \left( \frac{m_{k}}{1+\frac{\alpha_{i} + \alpha_{j}}{2}} \right)
 \end{equation}
 
-minimising the  the observed dilepton invariant mass distribution in a sample of
-opposite-signed high \pt\ electrons with invariant mass near the \Z\ boson mass,
-and requiring the observed \Z\ mass to be consistent with the world average measured
-value~\cite{PDG}. The procedure is carried out in bins of pseudo-rapdity.
-~\fig{el-energy-calib-2011} shows the 
+where $i,j$ label the $\eta$ regions of the two electrons from the \Zee\ decay,
+$m_{k}$ is the measured di-electron mass (after applying the test-beam and \mc\
+calibrations) in event $k$ and $L_{ij}(m)$ is a probability density function
+describing the likelihood of observing a \Zee\ decay with mass $m$. The pdf is
+taken from \mcsim. The resulting calibration parameters $\alpha_{i}$ are applied
+to all reconstructed electrons in the data. ~\fig{el-energy-calib-2011} shows the observed di-electron 
+mass distribution for all $\eta$ bins for data taken in 2011. The linearity of the response
+versus electron energy is checked by applying a similar procedure to electrons
+from \JPsiee\ decays (for which the sample is much more statistucally limited).
+The results are found to be in good agreement with the results from \Zee\
+decays, and the resulting difference is assigned as an energy scale systematic
+at low \et.
+
 
 \begin{figure}[h]
 \centering
@@ -333,6 +343,9 @@ value~\cite{PDG}. The procedure is carried out in bins of pseudo-rapdity.
 
 \begin{figure}[h]
 \centering
+	\subfigure[]{
+            \includegraphics[width=0.47\textwidth]{el_energy_response_eta_2010}
+        }
 	\subfigure[]{
             \includegraphics[width=0.47\textwidth]{el_energy_response_time_2011}
         }
