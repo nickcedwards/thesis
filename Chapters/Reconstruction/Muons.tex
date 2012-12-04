@@ -255,9 +255,31 @@ of the reconstructed di-muon invariant mass peak at \Z\ pole is fitted to a
 convolution of a Breit-Wigner modelling the natural width of the \Z\ boson, and
 a Gaussian modelling the muon momentum measurement resolution. The
 distributions measured in the ID and the MS are fitted independently to obtain
-separate measurements of the resolution in the two sub-detectors; the combined
-muon momentum resolution is then determined from these measurements. The
-resolution is taken to be the width of the Gaussian.
+separate measurements of the di-muon mass resolution in the two sub-detectors.
+An iterative fitting procedure is then carried out to obtain the single muon
+resolution parameters: a series of di-muon mass distributions are produced for
+various momentum resolution values and then matched to the one observed in data. 
+A smearing is applied to the simulated muon momentum in order to reproduce the
+resolution obtained in data. The smeared MS resolution is defined as
+
+\begin{equation}
+p'_{T}(MS) = p_{T}(MS)(1+\Delta(MS))
+\end{equation}
+
+ where 
+
+\begin{equation}
+\Delta(MS) = f(0,1) \Delta p_{1}^{MS} +  f(0,1) \Delta p_{2}^{MS} p_{T}
+\end{equation}
+
+and the $ \Delta p_{i}^{MS} $ are the difference in the resolution parameters $
+p_{i}^{MS} $ between data and \mcsim.  The ID resolution in simulation is
+smeared in a similar way, and the changes to the ID and MS momentum propagated
+to the combined momentum.
+
+
+%The combined muon momentum resolution is then a linear combinations of the MS
+%and ID components, weighted by the MS and ID determined from these measurements. 
 
 ~\fig{mu-resolution-dimu} shows the observed di-muon mass resolution. For
 combined muons, the resolution is of order 2-3 \gev\ across the full
