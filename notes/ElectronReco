@@ -188,3 +188,33 @@ Electron Reco improvement 2012
 	
 - overall reco efficiency increases by ~1% in the calo barrel and ~5% in endcaps for et 30-50, and up to 8% for low Et
 
+Energy Calibration
+==================
+Select two central OS electrons with E_T > 25 GeV. In 2011, over 1 million candidates
+Constrasin the observed mass to follow Z lineshape obtained from MC witrh the resolution constant term set to zero.
+Bin in 26 eta bins
+Correct peak to measured Z-mass - <1% in EC, <0.5% in barrels
+Determine resolution by fitting wit BWxCB. Find resolution slightly wider in data
+
+ Electron energy response stability with time in 2012 data with 13 fb-1 https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/EGAMMA/PublicPlots/20121106/ATL-COM-PHYS-2012-1593/index.html
+ 
+  Electron energy response stability with pile-up in 2012 data 
+  https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/EGAMMA/PublicPlots/20120611/StabilityPlots/ATL-COM-PHYS-2012-782/index.html
+  
+  
+   Electron energy response stability with time and pile-up 
+  https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/EGAMMA/PublicPlots/20121403/StabilityPlots/ATL-COM-PHYS-2012-259/index.html
+  
+  Calibrated Z->e+e- mass with 2011 data
+  https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/EGAMMA/PublicPlots/20110512/CalibratedZee/ATL-COM-PHYS-2011-1637/index.html
+  
+Original EM calo energy scale derived from test beam. Uncertainty  4% in central, 5% fwd, dominated by transfer from test beam to ATLAS env from LAr temp normalisation.
+Use Z->ee and J/Psi to improve el energy scale and establish linearity of EM calo respone
+
+Energy calibration
+- Raw signal from calo converted into energy using test-beam calibrated scale.
+- Apply MC derived calibration constants tat cluster level to correct for energy loss in passive material and leakage outside detector
+- Apply in-situ calibrations from Z->ee to correct senergy scale and intercalibrate.
+- Cross check linearity of response vs energy in J/psi and W->ev decays
+
+Parametrise as E_meas = E_true(a+alpha). alpha is residual miscalibrations
