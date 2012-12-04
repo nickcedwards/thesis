@@ -227,6 +227,26 @@ for data and open green triangles for Monte-Carlo). Figures from~\cite{MuonEffic
 
 \subsubsection{Muon Momentum Resolution}
 
+The muon momentum resolution in the MS can be parameterised as:
+
+\begin{equation}
+\frac{ \sigma (p) }{ p } = \frac{ p_{0}^{MS} }{ p_{T} } \bigoplus  p_{1}^{MS}
+\bigoplus  p_{2}^{MS} \cdot p_{T}
+\end{equation}
+
+where  $p_{0}^{MS}$, $p_{1}^{MS}$ and $p_{2}^{MS}$ are coefficients related to
+the energy loss in the calorimeters, multiple scattering and intrinsic
+resolution, respectively. For the ID, the resolution depends on the track length
+measured in the active elements of the ID, which is reduced at the edges of the
+detector. The ID muone momentum resolution can this be paramaterised as:
+
+\begin{equation}
+\frac{ \sigma (p) }{ p } = p_{1}^{ID} \bigoplus  p_{2}^{ID} \cdot p_{T} {\rm
+for} \modetalt{1.9}
+\frac{ \sigma (p) }{ p } = p_{1}^{ID} \bigoplus  p_{2}^{ID} \cdot p_{T} \cdot
+frac{1}{\tan ^{2} (\theta} {\rm for} \modetagt{1.9}
+\end{equation}
+
 The muon momentum resolution is measured in data using \Zmm\ decays. The width
 of the reconstructed di-muon invariant mass peak at \Z\ pole is fit to a
 convolution of a Breight-Wigner modelling the natural width of the \Z\ boson and
