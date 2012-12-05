@@ -107,7 +107,7 @@ combination of ID and MS tracks in different ways. \muid\ performs a global
 refit of hits in the MS and the ID, whereas \staco\ attempts a statistical
 combination of the two track measurements, weighting the relative contributions
 according to their covariance matrices. The two chains are found to give similar
-performance (see ??). The measurements in this thesis all use muons
+performance. The measurements in this thesis all use muons
 reconstructed with the \staco\ chain, so this chain is described in detail here.
 
 The \staco\ chain begins with the reconstruction of MS tracks using the \muonboy\
@@ -128,7 +128,7 @@ two segments from different stations to form track candidates. The tracks are
 seeded from track segments that have at least one second-coordinate hit. A first
 rough estimate of the momentum is deduced from the position and direction of the
 segment. Each of these segments is then extrapolated to the other stations, and
-matches in position and direction is found. Since the track momentum is not well
+matches in position and direction are found. Since the track momentum is not well
 known at this point, a `momentum-scan' of several possible momentum values is
 performed. The best match (if any) is chosen, and the track segments are
 combined and refitted to obtain a more accurate momentum measurement. A second,
