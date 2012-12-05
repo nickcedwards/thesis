@@ -217,13 +217,13 @@ run than the standard Kalman filter, it is not feasible to fit all tracks using
 the GSF when doing the initial pattern recognition and track finding (see~\sec{tracking-std}). 
 Additionally, the use of such a filter with electron hypothesis would
 negatively affect non-electron tracks. Instead, the effects of \brem\ on
-tracks are crudely modelled at the initial pattern recognition by allowing for 30\% energy loss at each surface for tracks with
+electron tracks are crudely modelled at the initial pattern recognition by allowing for 30\% energy loss at each surface for tracks with
 momentum above 1 \gev. In order to avoid degrading non-electron tracks, this allowance is only made in regions of interest in a
 cone of \deltaRlt{0.3} around EM calorimeter clusters. 
 
 The global \chisquared\
 fitter was also improved to allow for electron hypothesis tracks. Tracks
-rejected due to low \chisquared\ at the ambiguity resolution stage in a RoI were
+rejected due to low \chisquared\ at the ambiguity resolution stage in a RoI are
 refitted using a modified `electron hypothesis' global \chisquared\ fitter. This
 attempts to find the layer with the most significant \brem\ energy loss, then
 reruns the fit with only an energy loss term for the most significant \brem\
