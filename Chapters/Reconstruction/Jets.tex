@@ -5,15 +5,6 @@ specify an algorithm to associate the multiple energy deposits in the calorimete
 to a single jet (\intro{clustering}) and a recombination scheme for how to combine their
 four-momentum. 
 
-%The ATLAS hadronic calorimeters are non-compensating, so do not
-%compensate for the different energy response of electromagnetically interacting
-%particles and hadronically interacting particles, and do not account for energy 
-%lost from the hadronic shower due to production of
-%secondary particles such as neutrons, neutrinos and muons that escape from the calorimeter
-%or due to leakage of the shower out of the calorimeter. It is thus necessary to
-%calibrate the response of the calorimeter to a hadronic shower by callibrating
-%the \intro{jet energy scale} (JES).
-
 Jet algorithms need to be theoretically well behaved with respect to QCD
 divergences. In particular, it is important that the jets produced are not
 affected by soft emissions (the algorithm must be \intro{infrared safe}) and
@@ -58,10 +49,21 @@ topoclusters are considered as massless pseudo-particles, with an energy equal
 to the sum of the energy of the constituant cells and with a direction defined
 by a vector pointing from the origin of the ATLAS co-ordinate system to the energy weighted cluster barycentre.
 
- The ATLAS calorimeters are non-compensating, meaning that
-they do not
-correct for the fact that EM and hadronic showers will have different energy
-responses. An important aspect of jet mesurements therefore is the calibration of the hadronic
+ %The ATLAS calorimeters are non-compensating, meaning that
+%they do not
+%correct for the fact that EM and hadronic showers will have different energy
+%responses. 
+
+The ATLAS hadronic calorimeters are non-compensating, so do not
+compensate for the different energy response of electromagnetically interacting
+particles and hadronically interacting particles, and do not account for energy 
+lost from the hadronic shower due to production of
+secondary particles such as neutrons, neutrinos and muons that escape from the calorimeter
+or due to leakage of the shower out of the calorimeter. 
+%It is thus necessary to
+%calibrate the response of the calorimeter to a hadronic shower by callibrating
+%the \intro{jet energy scale} (JES).
+An important aspect of jet mesurements therefore is the calibration of the hadronic
 calorimeter response~\cite{cat_thesis}. First, the topological clusters are corrected to the \intro{EM
 scale}, correcting their energy such that the response to purely electromagnetic
 showers
@@ -75,7 +77,9 @@ data as a function of the number of primary vertices in the event.
 %\deltaetadeltaphi{0.1}{0.1}. 
 The clutser four momentum is is also modified so that the
 cluster points to the primary vertex with the highest sum of track
-transverse momentum. The \intro{Jet Energy Scale (JES)} correction is
+transverse momentum. 
+
+The \intro{Jet Energy Scale (JES)} correction is
 applied to jets constructed from the EM scale clusters in order to correct for the non compensating nature of the calorimeters, and also
 corrects for the effects of dead material, leakage outside of the
 calorimeters and energy lost due to particles being defelected out of the jet by
