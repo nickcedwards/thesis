@@ -60,21 +60,30 @@ The rate at which a particular
 physics process occurs depends on the cross section for the process in question.
 Since many of the physics processes under study at the LHC are very rare and
 have small cross-sections, it is important to maximise the luminosity as much as
-possible. The instantaneous luminosity is approximately given by (neglecting relativistic
-effects for clarity):
+possible. The instantaneous luminosity is approximately given by:
+%(neglecting relativistic effects for clarity):
 
 \begin{equation}
 \mathcal{L} = \frac{N_{\rm{b}}^{2}n_{\rm{b}}f_{\rm{rev}}\gamma_{\rm{r}}}{4\pi
 \epsilon_{n}\beta^{*} F}
 \end{equation}
 
-where $N_{\rm{b}}$ is the number of particles per bunch, $n_{\rm{b}}$ is the
-number of bunches per beam, $f_{\rm{rev}}$ is the revolution frequency, $F$ is a
-geometric function to account for the crossing angle between the beams (since
-they are generally not collided head on), $\epsilon_{n}$ is the beam emittance,
+where:
+
+\begin{itemize}
+    \item $N_{\rm{b}}$ is the number of particles per bunch,
+    \item $n_{\rm{b}}$ is the number of bunches per beam, 
+    \item $f_{\rm{rev}}$ is the revolution frequency, 
+    \item $F$ is a geometric function to account for the crossing angle between the beams (since
+they are generally not collided head on), 
+    \item $\epsilon_{n}$ is the beam emittance,
 a measure of how uniform the momentum of particles in the beam is and how small
-the beam can be squeezed, and finally $\beta^{*}$ is a measure of how narrow the
-beam is at the interaction point (how squeezed it is). The cross-section of the beam at
+the beam can be squeezed,
+    \item $\beta^{*}$ is a measure of how narrow the beam is at the interaction point (how squeezed it is). 
+    \item $\gamma_{r}$ is the relativistic Lorentz factor $(1 - v^2/c^2)-{1/2}$.
+\end{itemize}
+    
+The cross-section of the beam at
 the interaction point is proportional to $\epsilon_{n} \cdot \beta^{*}$.
 
 %\begin{equation}
