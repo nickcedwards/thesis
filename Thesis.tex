@@ -1,7 +1,8 @@
 \documentclass[a4paper,12pt]{report}
 
 \usepackage{import}
-\usepackage{graphicx}
+\usepackage[[dftex]{graphicx}
+ \DeclareGraphicsRule{*}{mps}{*}{} 
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{subfigure}
@@ -37,7 +38,6 @@
 % \pagestyle{headings}
 
 \includeonly{Chapters/TheoryZZProduction/TheoryZZProduction}
-
 
 \input{Macros/Macros.tex}
 \input{Macros/SCT.tex}
