@@ -1,7 +1,7 @@
 NAME=Thesis
 all : 
 	pdflatex ${NAME}.tex
-	for mpfile in *.mp; do mpost $mpfile; done
+	for mpfile in *.mp; do mpost ${mpfile}; done
 	pdflatex ${NAME}.tex
 	bibtex ${NAME}
 	pdflatex ${NAME}.tex
