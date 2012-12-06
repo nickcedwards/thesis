@@ -125,6 +125,31 @@
 \caption{A diagram!}
 \end{figure}
 
+%% TGC diagram
+\begin{figure}
+\centering
+        \begin{fmffile}{tchan}
+        \begin{fmfgraph*}(40,30)
+            \fmfleft{i1,i2}
+        \fmfright{o1,o2}
+        \fmflabel{$u,d$}{i2}
+        \fmflabel{$\bar{u},\bar{d}$}{i1}
+        \fmfright{o1,o2}
+        \fmflabel{$Z/\gamma^{*}$}{o1}
+        \fmflabel{$Z/\gamma^{*}$}{o2}
+        \fmf{fermion}{i2,v1,i1}
+        %\fmf{fermion}{v2,i2}
+        %\fmf{fermion}{v1,i1}
+        \fmf{photon}{v1,v2}
+        \fmf{photon}{v2,o1}
+        \fmf{photon}{v2,o2}
+        % uncommment this line if you want dots at the vertices
+            %\fmfdotn{v}{4}
+        \end{fmfgraph*}
+        \end{fmffile}
+    \caption{A diagram!}
+\end{figure}
+
 %Production of pairs of \Z\ bosons, so called `diboson \ZZ\ production' is an
 %extremely rare process at particle colliders, but has a very striking signature
 %and low backgrounds. The study of diboson \ZZ\ production is of great interest
