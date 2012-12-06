@@ -1,7 +1,7 @@
 NAME=Thesis
 all : 
 	pdflatex ${NAME}.tex
-	makeFeynDiagrams.sh
+	./makeFeynDiagrams.sh
 	pdflatex ${NAME}.tex
 	bibtex ${NAME}
 	pdflatex ${NAME}.tex
