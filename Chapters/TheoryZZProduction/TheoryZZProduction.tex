@@ -110,16 +110,19 @@
         \fmfright{o1,o2}
         \fmflabel{$Z$}{o1}
         \fmflabel{$Z$}{o2}
-        \fmf{gluon}{i1,v1} %incoming gluon
-            \fmf{fermion}{v1,v3}% + bottom of box --> correct
-            \fmf{photon}{v3,o2}
-        \fmf{photon}{v4,o1}
-            \fmf{phantom}{v3,o1}
-        \fmf{phantom}{v4,o2}
+        % Incoming gluons
+        \fmf{gluon}{i1,v1} 
+        \fmf{gluon}{v2,i2}
+        % Box
+        \fmf{fermion}{v1,v3}% + bottom of box --> correct
         \fmf{fermion}{v4,v2}% + top of box --> correct
-            \fmf{gluon}{v2,i2}
         \fmf{fermion,tension=0}{v2,v1}% + left hand side of box correct
-            \fmf{fermion,tension=0}{v3,v4} % + right hand side of box
+        \fmf{fermion,tension=0}{v3,v4} % + right hand side of box
+        %Outging Z
+        \fmf{photon}{v3,o2}
+        \fmf{photon}{v4,o1}
+        %\fmf{phantom}{v3,o1}
+        %\fmf{phantom}{v4,o2}
             % uncommment this line if you want dots at the vertices
             %\fmfdotn{v}{4}
         \end{fmfgraph*}
