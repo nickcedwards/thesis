@@ -83,6 +83,12 @@
     \subfigure[]{
         \begin{fmffile}{gluonbox2}
         \begin{fmfgraph*}(36,20)
+          % A homage to T. Barber????
+          \fmfcmd{%
+    style_def tomion expr p =
+    cdraw p;
+    cfill (harrow (p, .5))
+    enddef;}
             \fmfleft{i1,i2}
         \fmflabel{$g$}{i1}
         \fmflabel{$g$}{i2}
@@ -95,8 +101,8 @@
         \fmf{photon}{v4,o2}
         \fmf{fermion}{v4,v2}% + top of box --> correct
             \fmf{gluon}{v2,i2}
-        \fmf{fermion,tension=0}{v2,v3}% Diagonal Top L to bottom R
-            \fmf{fermion,tension=0}{v1,v4} %Diaganol Bottom L to top R 
+        \fmf{tomion,tension=0}{v2,v3}% Diagonal Top L to bottom R
+            \fmf{tomion,tension=0}{v1,v4} %Diaganol Bottom L to top R 
             % uncommment this line if you want dots at the vertices
             %\fmfdotn{v}{4}
         \end{fmfgraph*}
@@ -106,11 +112,6 @@
     \subfigure[]{
         \begin{fmffile}{gluonbox3}
         \begin{fmfgraph*}(36,20)
-          \fmfcmd{%
-    style_def tomion expr p =
-    cdraw p;
-    cfill (harrow (p, .5))
-    enddef;}
             \fmfleft{i1,i2}
         \fmflabel{$g$}{i1}
         \fmflabel{$g$}{i2}
@@ -123,8 +124,8 @@
         % Box
         \fmf{fermion}{v1,v3}% + bottom of box --> correct
         \fmf{fermion}{v4,v2}% + top of box --> correct
-        \fmf{tomion,tension=0}{v2,v1}% + left hand side of box correct
-        \fmf{tomion,tension=0}{v3,v4} % + right hand side of box
+        \fmf{fermion,tension=0}{v2,v1}% + left hand side of box correct
+        \fmf{fermion,tension=0}{v3,v4} % + right hand side of box
         %Outging Z
         \fmf{photon,tension=0}{v3,o2}
         \fmf{photon,tension=0}{v4,o1}
