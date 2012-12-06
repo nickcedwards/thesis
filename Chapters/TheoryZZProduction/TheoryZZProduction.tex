@@ -27,6 +27,24 @@
 %\fmfdotn{v}{4}
 \end{fmfgraph*}
 \end{fmffile}
+
+\begin{fmffile}{tchan}
+\begin{fmfgraph*}(50,30)
+\fmfleft{i1,i2}
+\fmright{o1,o2}
+\fmflabel{$u,d$}{i1}
+\fmflabel{$\bar{u},\bar{d}$}{i2}
+\fmfright{o1,o2}
+\fmflabel{$Z/gamma^{*}$}{o1}
+\fmflabel{$Z/gamma^{*}$}{o2}
+\fmf{fermion}{i1,v1,v2,o2}
+\fmf{photon}{v1,o1}
+\fmf{photon}{v2,o2}
+% uncommment this line if you want dots at the vertices
+%\fmfdotn{v}{4}
+\end{fmfgraph*}
+\end{fmffile}
+
 \vspace{5mm}
 
 \caption{A diagram!}
