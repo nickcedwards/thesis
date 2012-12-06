@@ -57,7 +57,7 @@
 \centering
     \subfigure[]{
         \begin{fmffile}{gluonbox}
-        \begin{fmfgraph*}(38,20)
+        \begin{fmfgraph*}(36,20)
             \fmftop{i2,d2,o2}
             \fmfbottom{i1,d1,o1}
             \fmfleft{i1,i2}
@@ -82,7 +82,7 @@
     %\hspace{2mm}
     \subfigure[]{
         \begin{fmffile}{gluonbox2}
-        \begin{fmfgraph*}(38,20)
+        \begin{fmfgraph*}(36,20)
             \fmfleft{i1,i2}
         \fmflabel{$g$}{i1}
         \fmflabel{$g$}{i2}
@@ -105,7 +105,12 @@
     %\hspace{2mm}
     \subfigure[]{
         \begin{fmffile}{gluonbox3}
-        \begin{fmfgraph*}(38,20)
+        \begin{fmfgraph*}(36,20)
+          \fmfcmd{%
+    style_def tomion expr p =
+    cdraw p;
+    cfill (harrow (p, .5))
+    enddef;}
             \fmfleft{i1,i2}
         \fmflabel{$g$}{i1}
         \fmflabel{$g$}{i2}
@@ -118,8 +123,8 @@
         % Box
         \fmf{fermion}{v1,v3}% + bottom of box --> correct
         \fmf{fermion}{v4,v2}% + top of box --> correct
-        \fmf{fermion,tension=0}{v2,v1}% + left hand side of box correct
-        \fmf{fermion,tension=0}{v3,v4} % + right hand side of box
+        \fmf{tomion,tension=0}{v2,v1}% + left hand side of box correct
+        \fmf{tomion,tension=0}{v3,v4} % + right hand side of box
         %Outging Z
         \fmf{photon,tension=0}{v3,o2}
         \fmf{photon,tension=0}{v4,o1}
