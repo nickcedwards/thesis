@@ -7,32 +7,36 @@
 \begin{figure}
 \centering
 
-\mbox{
-\begin{fmffile}{gluonbox}
-\begin{fmfgraph*}(50,40)
-\fmfleft{i1,i2}
-\fmflabel{$g$}{i1}
-\fmflabel{$g$}{i2}
-\fmfright{o1,o2}
-\fmflabel{$Z$}{o1}
-\fmflabel{$Z$}{o2}
-\fmf{gluon}{i1,v1} %incoming gluon
-\fmf{fermion}{v1,v3}% + bottom of box --> correct
-\fmf{photon}{v3,o1}
-\fmf{photon}{v4,o2}
-\fmf{fermion}{v4,v2}% + top of box --> correct
-\fmf{gluon}{v2,i2}
-\fmf{fermion}{v2,v1}% + left hand side of box correct
-\fmf{fermion}{v3,v4} % + right hand side of box
-% uncommment this line if you want dots at the vertices
-%\fmfdotn{v}{4}
-\end{fmfgraph*}
-\end{fmffile}
-}
 
+	\subfigure[]{
+                \mbox{
+                \begin{fmffile}{gluonbox}
+                \begin{fmfgraph*}(\0.4\textwidth,40)
+                \fmfleft{i1,i2}
+                \fmflabel{$g$}{i1}
+                \fmflabel{$g$}{i2}
+                \fmfright{o1,o2}
+                \fmflabel{$Z$}{o1}
+                \fmflabel{$Z$}{o2}
+                \fmf{gluon}{i1,v1} %incoming gluon
+                \fmf{fermion}{v1,v3}% + bottom of box --> correct
+                \fmf{photon}{v3,o1}
+                \fmf{photon}{v4,o2}
+                \fmf{fermion}{v4,v2}% + top of box --> correct
+                \fmf{gluon}{v2,i2}
+                \fmf{fermion}{v2,v1}% + left hand side of box correct
+                \fmf{fermion}{v3,v4} % + right hand side of box
+                % uncommment this line if you want dots at the vertices
+                %\fmfdotn{v}{4}
+                \end{fmfgraph*}
+                \end{fmffile}
+                }
+        }
+
+	\subfigure[]{
 \mbox{
 \begin{fmffile}{tchan}
-\begin{fmfgraph*}(50,40)
+\begin{fmfgraph*}(0.4\textwidth,40)
 \fmfleft{i1,i2}
 \fmfright{o1,o2}
 \fmflabel{$u,d$}{i2}
@@ -50,6 +54,7 @@
 \end{fmfgraph*}
 \end{fmffile}
 }
+        }
 
 \vspace{5mm}
 
