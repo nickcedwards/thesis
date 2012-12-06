@@ -2,13 +2,20 @@ Thesis ToDo
 ------------
 
 - Reco: Finish Chapter first pass
-	- Muons
 	- Jets - talk briefly about calibration
-	- Introduction?
-- Reco: Add in lepton momentum/energy scale corrections
-- Reco: Add in lepton reco/ID efficiency measurements and correction
+	- Reference for MUID?
 
 - ZZ Pheno: Write!
 
 - Theory: Write!
 
+- General:
+	- wheredef towers? el-reco, but already mention in el-trigger
+	- wheredef TRT only track?
+	- wheredef hadronic tower - define em tower in forward el reco
+	- wheredef PDF (prob density function) - first used in el-reco-improvements?
+	- conv PDF / pdf
+	- conv Inner Detector / ID / Inner detector
+	- conv Muon Spectrometer / MS / Muon spectrometer
+	- conv EM calorimeter / LAr / electromagnetic calorimeter
+	- wheredef MS station? first mentioned mu-reco ST
