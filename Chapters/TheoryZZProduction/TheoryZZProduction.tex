@@ -58,6 +58,8 @@
     \subfigure[]{
         \begin{fmffile}{gluonbox}
         \begin{fmfgraph*}(40,30)
+            \fmftop{i2,d2,o2}
+            \fmfbottom{i1,d1,o1}
             \fmfleft{i1,i2}
         \fmflabel{$g$}{i1}
         \fmflabel{$g$}{i2}
@@ -70,8 +72,8 @@
         \fmf{photon}{v4,o2}
         \fmf{fermion}{v4,v2}% + top of box --> correct
             \fmf{gluon}{v2,i2}
-        \fmf{fermion}{v2,v1}% + left hand side of box correct
-            \fmf{fermion}{v3,v4} % + right hand side of box
+        \fmf{fermion}{v2,v1,tension=0}% + left hand side of box correct
+            \fmf{fermion}{v3,v4,tension=0} % + right hand side of box
             % uncommment this line if you want dots at the vertices
             %\fmfdotn{v}{4}
         \end{fmfgraph*}
