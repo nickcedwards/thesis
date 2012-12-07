@@ -4,6 +4,7 @@
 
 \section{Introduction}
 
+%% s- and u-channel feynman diagrams for qqZZ
 \begin{figure}
 \centering
     \subfigure{
@@ -50,7 +51,11 @@
         \end{fmffile}
     }
         \vspace{5mm}
-\caption{A diagram!}
+\caption{Leading order Feynman diagrams for \ZZ\ production in proton-proton
+collisions. The left hand diagram shows $t$-channel \qqZZ, the right hand
+diagram the equivalent $u$-channel process. The $s$-channel process is forbidden
+in the \sm.}
+\label{fig:theoryzz-fd-qqZZ}
 \end{figure}
 
 %% gg diagrams
@@ -138,39 +143,42 @@
         \end{fmffile}
     }
         \vspace{5mm}
-\caption{A diagram!}
+\caption{Feynman diagrams for \ggZZ. Although these are NNLO processes and thus
+supressed by a factor of $\alpha_s^{4}$ they still make a significant
+contribution at LHC energies due to the high gluon content of the proton}
+\label{fig:theoryzz-fd-ggZZ}
 \end{figure}
 
 %% TGC diagram
-\begin{figure}
-\centering
-        \vspace{10mm}
-    \mbox{
-    \subfigure{
-        \begin{fmffile}{schan}
-        \begin{fmfgraph*}(36,20)
-            \fmfleft{i1,i2}
-        \fmfright{o1,o2}
-        \fmflabel{$u,d$}{i2}
-        \fmflabel{$\bar{u},\bar{d}$}{i1}
-        \fmfright{o1,o2}
-        \fmflabel{$Z/\gamma^{*}$}{o1}
-        \fmflabel{$Z/\gamma^{*}$}{o2}
-        \fmf{fermion}{i2,v1,i1}
-        %\fmf{fermion}{v2,i2}
-        %\fmf{fermion}{v1,i1}
-        \fmf{photon,label=$Z/\gamma^{*}$}{v1,v2}
-        \fmf{photon}{v2,o1}
-        \fmf{photon}{v2,o2}
-        % uncommment this line if you want dots at the vertices
-            %\fmfdotn{v}{4}
-        \end{fmfgraph*}
-        \end{fmffile}
-    }
-    }
-        \vspace{5mm}
-    \caption{A diagram!}
-\end{figure}
+%\begin{figure}
+%\centering
+%        \vspace{10mm}
+%    \mbox{
+%    \subfigure{
+%        \begin{fmffile}{schan}
+%        \begin{fmfgraph*}(36,20)
+%            \fmfleft{i1,i2}
+%        \fmfright{o1,o2}
+%        \fmflabel{$u,d$}{i2}
+%        \fmflabel{$\bar{u},\bar{d}$}{i1}
+%        \fmfright{o1,o2}
+%        \fmflabel{$Z/\gamma^{*}$}{o1}
+%        \fmflabel{$Z/\gamma^{*}$}{o2}
+%        \fmf{fermion}{i2,v1,i1}
+%        %\fmf{fermion}{v2,i2}
+%        %\fmf{fermion}{v1,i1}
+%        \fmf{photon,label=$Z/\gamma^{*}$}{v1,v2}
+%        \fmf{photon}{v2,o1}
+%        \fmf{photon}{v2,o2}
+%        % uncommment this line if you want dots at the vertices
+%            %\fmfdotn{v}{4}
+%        \end{fmfgraph*}
+%        \end{fmffile}
+%    }
+%    }
+%        \vspace{5mm}
+%    \caption{A diagram!}
+%\end{figure}
 
 %Production of pairs of \Z\ bosons, so called `diboson \ZZ\ production' is an
 %extremely rare process at particle colliders, but has a very striking signature
