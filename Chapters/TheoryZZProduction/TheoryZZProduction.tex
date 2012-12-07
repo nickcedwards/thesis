@@ -270,6 +270,48 @@ boson mass.
 tbc
 
 \subsection{Cross Section}
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{lcccc} \hline
+          &\multicolumn{2}{c}{$\sigma(ee\mu\mu)$~(fb)} &\multicolumn{2}{c}{Value shift (\%)} \\
+          &MSTW2008           &CTEQ6.6       &CTEQ6.6 error set &Scale \\
+\hline
+On-shell  &14.626$\pm$0.010 &14.146$\pm$0.012 &$^{+3.5}_{-3.2}$ &$^{+4.6}_{-3.3}$ \\
+\hline
+$66<m_{12}<116$~GeV   &13.924$\pm$0.011 &13.462$\pm$0.011 &&$^{+4.6}_{-3.3}$ \\
+$66<m_{34}<116$~GeV   &&&& \\
+\hline
+$66<m_{12}<116$~GeV   &9.484$\pm$0.013 &9.113$\pm$0.011 &$^{+3.5}_{-4.0}$ &$^{+4.8}_{-3.4}$ \\
+$66<m_{34}<116$~GeV   &&&& \\
+$\pT(\ell)>7$~GeV, $|\eta(\ell)|<2.7$ &&&& \\
+\hline        
+$66<m_{12}<116$~GeV   &17.382$\pm$0.021 &16.812$\pm$0.023 &$^{+4.0}_{-2.69}$ &$^{+4.38}_{-3.4}$ \\
+$m_{2}>20$~GeV       &&&& \\
+\hline
+$66<m_{12}<116$~GeV   &11.176$\pm$0.016 &10.715$\pm$0.016 &$^{+5.1}_{-3.7}$ &$^{+5.2}_{-3.25}$ \\
+$m_{34}>20$~GeV       &&&& \\
+$\pT(\ell)>7$~GeV, $|\eta(\ell)|<2.7$ &&&& \\
+\hline
+          &\multicolumn{2}{c}{$A_{ZZ}$} &\multicolumn{2}{c}{Fractional error (\%)} \\
+          &MSTW2008           &CTEQ6.6       &CTEQ6.6 error set &Scale \\
+\hline
+          &0.6484$\pm$0.0010  &0.6442$\pm$0.0009 &$^{+0.65}_{-1.41}$ &$^{+0.18}_{-0.10}$ \\ 
+\hline
+\end{tabular}
+\end{center}
+\caption{Cross sections and acceptance calculated at NLO in QCD with MCFM version 6.1. The 
+         central values are calculated using both the MSTW2008 and CTEQ6.6 PDF set; the errors 
+         shown are from Monte Carlo statistics. The cross sections shown are for the $ee\mu\mu$ final 
+         state, and should be multiplied by two to give the value corresponding to the $4\ell$ final state. The column labeled 
+	 ``CTEQ6.6 error set" gives the error derived from the 44 CTEQ6.6 error sets, while 
+         the one labeled `Scale' gives the error from changing the factorisation and renormalisation 
+         scales up and down by a factor of two from the default value of \mZ. The acceptance,
+         $A_{ZZ}$, is the ratio of the cross section in $66<m_{12}<116$~GeV, $66<m_{34}<116$~GeV,
+         $\pT(\ell)>7$~GeV, $\eta(\ell)|<2.7$ to the on-shell cross section.}
+\label{tab:MCFM}
+\end{table} 
+
 \subsection{Kinematic distributions}
 
 %% TGC diagram
@@ -303,34 +345,7 @@ tbc
 %    \caption{A diagram!}
 %\end{figure}
 
-%\begin{itemize}
-%\item $(\Z/\gamma^*)(\Z/\gamma^*)\rightarrow\ll\ll$, $\ell = e,\mu$;
-%\item $66 < m_{12}(\Z/\gamma^*) <  116\GeV$;
-%\item $66 < m_{34}(\Z/\gamma^*) <  116\GeV$;
-%\item $\pT^{\ell} > 7\GeV$;
-%\item $|\eta^{\ell}| < 2.7$.
-%%\item $|\eta^{\ell}| < 3.16$.
-%%\item $\mathrm{min}(|\Delta R(\ell,\ell)|) < 0.2$.
-%\end{itemize}
 %
-%%The background from $\ZZ\ra\ll\tautau$ where
-%%the tau leptons decay to electrons or muons is less than 2.5\% and is taken into account in the correction factor translating the reconstructed event count to the number of true   $\ZZ\rightarrow\ll\ll$ decays within the fiducial phase space. 
-%
-%The fiducial \cx\ is obtained from the reconstructed number of events
-%using a correction factor estimated using Monte-Carlo to extrapolate from the
-%number of events to the true number of events in the fiducial volume. The
-%correction factors are different for each of the three decay channels reflecting
-%not only the different efficiencies, but also the slightly different event
-%selection amongst the three channels.
-%
-%The total \ZZ\ \cx\
-%is obtained then from the \ZZ\ fiducial \cx\ 
-%using the $\Z\rightarrow\ll$ branching ratio~\cite{PDG} and a correction factor 
-%for the kinematic and geometrical acceptance, 
-%calculated using the MCFM program~\cite{Campbell:2011}.
-%In calculating the invariant masses of the lepton pairs at generator level, photons within 
-%$\Delta R \equiv \sqrt{\Delta \phi^2 + \Delta \eta^2} = 0.1$ of the lepton are included in the lepton four-momentum.    
-
 \section{Previous experimental results}
 
 Diboson ZZ production was first observed in $e^+e^-$ collisions at LEP in 1997.
