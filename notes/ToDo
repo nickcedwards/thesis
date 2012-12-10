@@ -5,7 +5,25 @@ Thesis ToDo
 	- Jets - talk briefly about calibration
 	- Reference for MUID?
 
-- ZZ Pheno: Write!
+- ZZ Pheno: 
+	- Generator level plots
+		- PowhegBox+ggZZ 7TeV vs 8 TeV (run at Glasgow) - ZZ_2011_1Oct, ZZ_2012_10Oct
+		- WARNING ZZ_2012_10Oct has tight lepFid
+			- m_ZZ, pt_ZZ, pt_Z1
+			- pT / eta l1/l2/l3/l4
+			- apply mass  ZZ / ZZ* but NOT lepFid
+		- minDR(l,l) after lepFid, ZZ cuts (need to add ZZ*)
+		- m_Z1, m_Z2
+			- nm1 lepFid, sorted by pT
+			- lepFid, m_Z1 (no mass cuts), m_Z2 (Z1 mass cut), ordered by closeness to pole
+			- NoLepFid, m_Z1 (no mass cuts), m_Z2 (Z1 mass cut), ordered by closeness to pole
+		- Comparison plots - 7 TeV only
+			- m_ZZ, pt_ZZ, pt_Z1, apply mass  ZZ / ZZ* and lepFid
+			- pT / eta l1/l2/l3/l4, minDR apply mass  ZZ / ZZ* but NOT lepFid
+			- mZ1/mZ2 nm-1
+	- Run MCFM for cx
+	- lit review
+	- TGC limitsnap
 
 - Theory: Write!
 
