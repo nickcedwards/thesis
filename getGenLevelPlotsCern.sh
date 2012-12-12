@@ -1,1 +1,1 @@
-scp -r lxplus405.cern.ch:~/plots/GenLevelThesis/* Chapters/TheoryZZProduction/Figures/GenLevelComparison
+scp -r lxplus405.cern.ch:~/plots/GenLevelThesis/* Chapters/TheoryZZProduction/Figures/GeneratorComparison
