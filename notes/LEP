@@ -1,0 +1,97 @@
+Lit Review
+
+ZZ Studies at LEP
+
+L3 Paper - http://arxiv.org/pdf/hep-ex/9909043v1.pdf
+---------------------------------------------------
+Since 1997 LEP been at com high enough to produce ZZ.
+First discovery at sqrt(s) = 183 GeV [2]
+This paper - measurements at 189 GeV, 176 pb-1 collected in 1998.
+Backgrounds: ee->ll(gamma), charged current 4-fermion process enuqq, lnulnu, multiperipheral processes (ee->eell, ee->eeqq)
+Phase space: 70<m_ll<105 GeV, for vvll, uudd, ccss require the pairs that could come from W have <75 GeV or > 85 GeV (exclude W peak). reject electrons is |cos(theta_e)|>0.95 (reject if too collinear with beam?)
+
+qqee, qquu - cut based. require 5 charged tracks, e_vis>0.4sqrts
+qqtt - as above but also use a jet based selection - tag two jets as rom tau by forcing event into 4 jets and looking for two jets with less than 4 tracks.
+require opening angle between leptons >120(130) for ee,mm(tt).
+Apply kinematic fit requring energy and momentum conservation, the require mll and mjj 70-120 GeV. Require good jet resolution. in tau channel reject events with high et photon.
+61% efficiency, 15 events, predict 10.9 signal, good data MC agreement.
+
+qqvv - at least 15 calo cells and three tacks, event invarient mass > 50 GeV - reduces bg from purely leptonic two fermion final states and two photon interactions. but keeps qq(gamma) and WW. Require m_vis < 130 GeV and mass recoiling against hadronic system to be > 50 GeV. Require transverse momentum > 5 GeV and long momentum less than 40% of visible energy. <10 GeV in FCAL and EMiss > 16 deg from beam axis. Lepton veto and require Emiss isolated. At this point have 299 events - pred 23 signal, 266 bg. Use NN to distinguish - trained on event shapes, sum of invarient and missing masses, jet masses, emiss, emiss isonation. Increases S/B to 0.6 for cut of 0.5. Use full spectrum for cross section fit.
+
+llvv - require dilepton pair with 85-95 GeV. require visible energy 75-98 GeV for electrons, 65-140 for muons. cuts on opening angle. backgrounds - radiative bhabha scattering and leptonic WW. require recoil mass to electron pair < 95 GeV. Reduce bg by imposing Z mass to lepton pair and recalculating their four mom. see 3 events - expect 0.7 signal, 0.6 bg
+
+4l - reuiring four leptons (e,m,t) with pt > 3 GeV. require less than 15 calo clusters - low multiplicity events. If > 4 leptons, take four most consistent with energy momentum conserv. require at least one OSF SF pair. require the pair to have 75-105 gev, and apply same requirement to recoil mass. also use MIP muons to increase acceptance. see 2 events - expect 0.7, bg 0.6
+
+qqqq - see 163, expect 24.2, bg 153. large QCD and WW bg. Select high multiplicity events by requiring e_vis 0.6-14 x sqrt s - veto events with e/m/g > 65 gev. Force event to 4 jets. fit event to rescale jet to momentum balance - reduces dependsance on energy scale. use NN to distinguish between 4 quark jets and 2 quark jets and 2 gluon jets (bg) - apply cut to reduce Z+jets bg. use second NN to distinguish ZZ and W by dijet mass differences after choosing pairings to minimise mass difference, also max and min jet energy, no tracks / jet. ZZ decays contain large bb fragment - distinguish from WW - add b-tag to NN. also carry out cut bases analysis using different boost of Z and W, so use opening angles, dijet mass differences, and dijet mean mass.
+
+cx measurement - binned max likelihood fit on final variables (m_ZZ or NN outputs). Good agreement with SM. Combined cx 0.74±0.15 (stat) ±0.04 (syst) vs SM 0.662 pb.
+
+systematics: correlated: bg cross sections, LEP enery, detector energy scale. uncorrelated: jet resolution, jet charged track multiplicity, b-tagging, bhabhbha background, MC stats and leptopn ID
+
+also measured ZZ->bbX cross section using qqqq, and qqll and qqvv, adding b-tagging information to create a new discriminant and again doing binned likelihood fit. ZZ->bbX enhanced in SM/SUSY Higgs models
+
+use binned likelihood fit for TGCs on discriminant distributions in each of the channels. Limits 1.2 - 5
+
+L3 First Observation paper
+--------------------------
+L3 Collab., M. Acciarri et al.,
+Phys. Lett. B 450 (1999) 281-293 (Published in PLB).
+CERN-EP/98-206, 17 December, 1998. L3 preprint 169.
+Study of Neutral-Current Four-Fermion and ZZ Production in e+e- Collisions at sqrt(s)= 183 GeV. 
+http://l3.web.cern.ch/l3/paper/paper169.ps
+
+183 GeV, 55.3pb-1
+At 183 GeV can just produce on shell ZZ. Dominant diagram for on shell ZZ is "Conversion" - like qq diagram with ee.
+
+Measure cross section for four fermion production in llqq and llll (mainly not on shell ZZ). Find good agreement with SM, statistically dominated.
+
+Search for evidence of on shell ZZ in llll, llqq, qqvv, qqq and llvv and use to measure cx.
+systematics - vary cuts within experimental resolution.
+
+for eeee get enhancement of cs wrt mmmm (almost factor 2) due to "multiperipheral" diagram, where electrons "scatter" by radiating Zs coupled with a ff 3 sided box. 
+
+On shell measurement: 70-105 GeV. Masses of fermion pairs that could be from W must not be 75-85 GeV. Measurement in good agreement with SM.
+
+TGC limits set 
+
+LEP Combination - 2006
+----------------------
+Measure NC02 Contribution to four-fermion cross-section (ie equivalent t and u qq graphs)
+CoM energues 183 - 207 GeV.
+At each energy combine measurements from the four experiments, taking into account correlations in the systematic uncertainties.
+Good agreement with theoretical predictions from YFSZZ and ZZTO
+
+TGCs:
+	- Obtained from entire dataset above ZZ threshold. Experiments pre-combine different channels for their TGC measurements.
+	- combination is based on the individual likelihood functions from the four LEP experiments. Each experiment provides the negative log likelihood, log L, as a function of the coupling parameters to be combined.
+	- Do 1 and 2 parameter fits
+	- LogL contains stat and uncorrelated syst uncertainty (detector effects, bg, fitting method, MC stats). For simplicity, treat LEP beam energy and other small correlated uncertainties as uncorrelated.
+	- Theoretical cx uncertainty negligable so ignore.
+	- Check ref 120,134 for combination method
+	- refs for individual channels: 137,138, 141, 142]
+	- The correlated systematic uncertainties are applied by scaling the likelihood functions by the squared ratio of the statistical and uncorrelated systematic uncertainty over the total un- certainty including all correlated uncertainties.
+	
+Delphi TGC
+----------
+http://cds.cern.ch/record/1002930/files/cer-002664322.pdf
+- use all visible channels apart from ttqq, ttvv, llll
+- also use channels with bosons of shell, ee->uuqq
+- ZZ cx very sensitive to TGC and increaseses with sqrts
+- large interference between SM and anom amplit for CP conservice couplings, esp in differential cx wrt theta_Z, the Z production relative to beam axis. use fit to this to set limits
+- limits set at energies up to 208 GEv, in total 638 pb-1
+- use extended max likilhood fit on Z production angle in cuts based channels (qqll, llvv). In qqqq and qqvv, large background so simultaneous fit of cos theta_Z and ZZ probability.
+- theta_Z free from ambiguity except in qqqq where can get wrong pairings
+- rweight SM events to different TGC points
+
+ALEPH TGC
+--------
+http://cds.cern.ch/record/1166743?ln=en
+- use cross section and cos theta_Z
+
+L3 TGC
+--------
+- kinematic variables depending on channel
+
+OPAL
+------
+total cross section and cos theta_Z
