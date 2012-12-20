@@ -752,6 +752,13 @@ lineshape in \sherpa\ samples generated using the $(\ell\ell)(\ell'\ell')$ appro
 theoretically~\cite{Siegert}, so additional systematics are assigned to account
 for differences resulting from the two approaches.
 
+\section{Anomalous Triple Gauge Couplings}
+Non-zero nTGCs would manifest as an increased \ZZ\
+production \cx, especially at high \ZZ\ invariant mass and transverse
+momentum~\cite{Baur:2000ae}.
+
+\section{ZZ Resonances}
+
 %
 \section{Previous experimental results}
 
@@ -871,12 +878,60 @@ processes). Combining all final states the measured \cx, requiring both \Z\
 bosons to be in the range 60 $< m_{Z} < 120$ \gev, was found to be \crossSec{p
 p\ra
 ZZ}{\measStatSystLumi{6.24}{\errAsym{0.86}{0.80}}{\errAsym{0.41}{0.32}}{\errSym{0.14}}\,pb},
-in excellent agreement with the \sm\ prediction of 6.3 \errSym{0.4}~pb.
+in excellent agreement with the \sm\ prediction of 6.3 \errSym{0.4}~pb. Limits
+are set on aTGCs using the observed four-lepton mass distribution for the
+$4e$,$4\mu$ and $2e2\mu$ channels combined. The observed 95 \% confidence limits
+on aTGCs from LEP, D0 and CMS are given in~\tab{prev-tgc-limits}.
 
+\begin{table}[htbp]
+\small
+\begin{center}
+\begin{tabular}{lcccccc} \hline\hline
+          & \multicolumn{3}{c}{$\sqrt{s} = 7$ \tev} &
+          \multicolumn{3}{c}{$\sqrt{s} = 8$ \tev} \\
+          & \multicolumn{1}{c}{$\sigma(ee\mu\mu)$~(fb)} &\multicolumn{2}{c}{Value shift (\%)}  & \multicolumn{1}{c}{$\sigma(ee\mu\mu)$~(fb)} &\multicolumn{2}{c}{Value shift (\%)}\\
+          &            & \partDF       & Scale  &            & \partDF       & Scale  \\
+\hline
+Zero-width  & \TheoryCxSevenZeroWidth & \TheoryCxSevenZeroWidthCTerrPerc &
+\TheoryCxSevenZeroWidthScaleErrPerc &\TheoryCxEightZeroWidth &
+\TheoryCxEightZeroWidthCTerrPerc & \TheoryCxEightZeroWidthScaleErrPerc \\
+\hline
+$66<m_{12}<116$~GeV   & \TheoryCxSevenOnShell & \TheoryCxSevenOnShellCTerrPerc &
+\TheoryCxSevenOnShellScaleErrPerc &\TheoryCxEightOnShell &
+\TheoryCxEightOnShellCTerrPerc & \TheoryCxEightOnShellScaleErrPerc \\
 
-\section{Anomalous Triple Gauge Couplings}
-Non-zero nTGCs would manifest as an increased \ZZ\
-production \cx, especially at high \ZZ\ invariant mass and transverse
-momentum~\cite{Baur:2000ae}.
+$66<m_{34}<116$~GeV  &&&& \\
 
-\section{ZZ Resonances}
+\hline
+$66<m_{12}<116$~GeV   & \TheoryCxSevenOnShellFid & \TheoryCxSevenOnShellFidCTerrPerc &
+\TheoryCxSevenOnShellFidScaleErrPerc &\TheoryCxEightOnShellFid &
+\TheoryCxEightOnShellFidCTerrPerc & \TheoryCxEightOnShellFidScaleErrPerc \\
+$66<m_{34}<116$~GeV   &&&& \\
+$\pT(\ell)>7$~GeV,  &&&& \\
+$|\eta(\ell)|<3.16$, $\dR<0.2$ &&&& \\
+\hline        
+$66<m_{12}<116$~GeV   & \TheoryCxSevenOffShell & \TheoryCxSevenOffShellCTerrPerc &
+\TheoryCxSevenOffShellScaleErrPerc &\TheoryCxEightOffShell &
+\TheoryCxEightOffShellCTerrPerc & \TheoryCxEightOffShellScaleErrPerc \\
+$m_{34}>20$~GeV       &&&& \\
+\hline
+$66<m_{12}<116$~GeV   &  \TheoryCxSevenOffShellFid & \TheoryCxSevenOffShellFidCTerrPerc &
+\TheoryCxSevenOffShellFidScaleErrPerc &\TheoryCxEightOffShellFid &
+\TheoryCxEightOffShellFidCTerrPerc & \TheoryCxEightOffShellFidScaleErrPerc \\
+$m_{34}>20$~GeV       &&&& \\
+$\pT(\ell)>7$~GeV, &&&& \\
+$|\eta(\ell)|<3.16$, $\dR<0.2$  &&&& \\
+\hline\hline
+\end{tabular}
+\end{center}
+\caption{Cross sections and acceptance calculated at NLO in QCD with MCFM version 6.1. The 
+         central values are calculated using both the MSTW2008 and CTEQ6.6 PDF set; the errors 
+         shown are from Monte Carlo statistics. The \cx s shown are for the $ee\mu\mu$ final 
+         state, and should be multiplied by two to give the value corresponding to the $4\ell$ final state. The column labeled 
+	 ``CTEQ6.6 error set" gives the error derived from the 44 CTEQ6.6 error sets, while 
+         the one labeled `Scale' gives the error from changing the factorisation and renormalisation 
+         scales up and down by a factor of two from the default value of \mZ. The acceptance,
+         $A_{ZZ}$, is the ratio of the \cx\  in $66<m_{12}<116$~GeV, $66<m_{34}<116$~GeV,
+         $\pT(\ell)>7$~GeV, $\eta(\ell)|<2.7$ to the on-shell \cx.}
+\label{table:cx-eemm-mcfm}
+\end{table} 
