@@ -59,9 +59,9 @@
 % Quoting qauntities with errors
 \newcommand{\errSym}[1]{\ensuremath{\pm} #1}
 \newcommand{\errAsym}[2]{\ensuremath{^{+#1}_{-#2}}}
-\newcommand{\measStatSyst}[3]{\ensuremath{#1\, #2\, \rm{(stat)} #3\, \rm{(syst)}}}
+\newcommand{\measStatSyst}[3]{\ensuremath{#1\, #2\, \rm{(stat)\,} #3\, \rm{(syst)}}}
 \newcommand{\measStatSystSym}[3]{\measStatSyst{#1}{\errSym{#2}}{\errSym{#3}}}
-\newcommand{\measStatSystLumi}[4]{#1 #2 (stat) #3 (syst) #4 (lumi) }
+\newcommand{\measStatSystLumi}[4]{\ensuremath{#1\, #2\, \rm{(stat)}\, #3\, \rm{(syst)}\, #4\, \rm{(lumi)}}}
 \newcommand{\measStatSystLumiSym}[4]{\measStatSystLumi{#1}{\errSym{#2}}{\errSym{#3}}{\errSym{#4}}}
 \newcommand{\predErr}[2]{#1 #2}
 \newcommand{\crossSec}[2]{\ensuremath{\sigma (#1) = #2}}
