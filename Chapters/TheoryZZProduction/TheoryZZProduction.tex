@@ -428,13 +428,22 @@ how it is used and its general properties is given.
     associated uncertainties due to \partonDF\ and scale uncertainties.
 
     \item \powhegbox~\cite{Alioli:2010xd}, a general framework for implementing
-    NLO calculations It uses the \powheg\ method to match the NLO matrix
+    NLO calculations. It uses the \powheg\ method to match the NLO matrix
     elements to the parton shower. \powhegbox\ must be interfaced to an external
     program for the implementation of the parton shower - in this thesis
     \powhegbox\ is interfaced to \pythia for showering. Specific details of the
-    implementation of the \ZZ\ process in \powhegbox\ is given in~\cite{Melia:2011tj}.
+    implementation of the \ZZ\ process in \powhegbox\ is given
+    in~\cite{Melia:2011tj}; the \ggZZ\ process is not included. 
+    Samples generated using \powhegbox\ are used as the main signal samples for
+    the \qqZZ\ process, used to optimise the selection, estimate selection
+    acceptances and systematics and compare observed distributions with theory.
 
-    \item \ggtwoZZ~\cite{gg2ZZ}
+    \item \ggtwoZZ~\cite{gg2ZZ} is a specialist generator used to simulate the
+    \ggZZ\ process. Events generated with \ggZZ\ are used in conjunction with
+    the \powhegbox\ events as the main signal sample. It is interfaced to the
+    \herwig\ to provide the parton shower and \jimmy~\cite{bib:jimmy} to model the underlying
+    event.
+
     \item \sherpa~\cite{Gleisberg:2008ta}
     \item \pythia Version 6~\cite{pythia} at 7 tev, version 8~\cite{Sjostrand:2007gs} at 8 tev
     \item \herwig~\cite{Herwig}
