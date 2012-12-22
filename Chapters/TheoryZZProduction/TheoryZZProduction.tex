@@ -419,9 +419,21 @@ following generators are used in this thesis. For each generator, an outline of
 how it is used and its general properties is given.
 
 \begin{itemize}
-    \item { \bf \mcfm ~\cite{MCFM} }
-    \item \powhegbox~\cite{Alioli:2010xd}. Specific details of the
-    implementation of the \ZZ\ process is given in~\cite{Alioli:2010xd}.
+    \item \mcfm ~\cite{Campbell:2011}, is designed to calculate \cx s for
+    femtobarn-level processes at hadron colliders. Matrix elements are
+    calculated at NLO, incorporating full spin correlations. \mcfm\ is a \cx\
+    calculator only and cannot produce unweighted events suitable for use in a
+    physics analysis. Nevertheless it provides a useful toolkit for calculating
+    \cx s, estimating the acceptance of the fiducial volume and studying the
+    associated uncertainties due to \partonDF\ and scale uncertainties.
+
+    \item \powhegbox~\cite{Alioli:2010xd}, a general framework for implementing
+    NLO calculations It uses the \powheg\ method to match the NLO matrix
+    elements to the parton shower. \powhegbox\ must be interfaced to an external
+    program for the implementation of the parton shower - in this thesis
+    \powhegbox\ is interfaced to \pythia for showering. Specific details of the
+    implementation of the \ZZ\ process in \powhegbox\ is given in~\cite{Melia:2011tj}.
+
     \item \ggtwoZZ~\cite{gg2ZZ}
     \item \sherpa~\cite{Gleisberg:2008ta}
     \item \pythia Version 6~\cite{pythia} at 7 tev, version 8~\cite{Sjostrand:2007gs} at 8 tev
