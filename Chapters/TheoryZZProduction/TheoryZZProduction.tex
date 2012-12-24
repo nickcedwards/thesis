@@ -762,7 +762,7 @@ and have slightly higher \pt\ on average than in \qqZZ\ decays.
     unit area, for \qqZZ $\ra\eemm$ as produced by different generators. Both 
     \Z\ bosons
     are required to have \sstooos. Figure (a)
-    shows the invariant mass distribution for the dilepton pair whilst Figure 
+    shows the invariant mass distribution for the dielectron pair whilst Figure 
     (b) shows the invariant distribution for the dimuon pair.
     } 
     
@@ -779,16 +779,17 @@ and have slightly higher \pt\ on average than in \qqZZ\ decays.
         \includegraphics[width=0.7\textwidth]{SherpaQED/lepFid_Zee_m_nm1_2e2mu_wRatio_log}
     }
         \vspace{-2mm}
-    \caption{\small Comparison of generator level distributions, normalised to
-    unit area, for \ZZ $\ra\eemm$ proceeding via $qq$ and $gg$ interactions. One 
-    \Z\ is required to have \sstooos\ and the other
-    $m_{Z}>20$ \gev. Figures (a)
-    and (b) show the mass and \pt\ of the \ZZ\ system,
-    respectively. Figures (c) and (d) show the \pt\ of the
-    leading and subleading \Z, respectively. Figure (e) shows the \pt\ of the highest \pt\ lepton in the event, and figure (f) shows its
-   $\eta$. Similarly figures (g) and (h) show the \pt\ and $\eta$ of the lowest
-   \pt\ lepton in the event.}
-    \label{fig:gen-comp-SherpaQED-ZZs}
+    \caption{\small \small Generator level \mZ\ distributions,
+    comparing the distributions obtained from \sherpa\ by applying the QED
+    radiation from the full \llll\ multipole (labelled $(llll)$), and assuming two
+    separate dipoles, $\Z[\ell\ell]$ and $\Z[\ell'\ell']$ and radiating from
+    them (labelled $(ll)(ll)$). The distribution from \powhegbox, which uses the
+    former approach, is also shown for comparison. All distributions are
+    normalised to unit area, and both \Z\ bosons are required to have \sstooos. Figure (a)
+    shows the invariant mass distribution for the dielectron pair whilst Figure 
+    (b) shows the invariant distribution for the dimuon pair.
+}
+    \label{fig:gen-comp-SherpaQED}
 \end{figure}
 
 
@@ -825,7 +826,7 @@ and have slightly higher \pt\ on average than in \qqZZ\ decays.
 
 The difference in the \Z\ line-shape observed between \sherpa\ and the other
 generators is attributed to the fact that \sherpa\ applies QED FSR in a
-different way. For all of the other generators compared in~\fig{gen-comp-ZZs}, 
+different way. For all of the other generators compared in~\fig{gen-comp-mZ}, 
 \photos\cite{Golonka:2005pn} is used
 to model QED radiation, whereas \sherpa\ has it's own internal treatment. There are two
 ways of applying QED radiation to a \ZZllll\ final state. The radiation can
@@ -836,7 +837,7 @@ of which undergoes QED radiation independently from each other. The latter
 treatment leaves the mass of each dilepton pair invariant, whereas the former
 treatment leaves the mass of the four-lepton system invariant. \photos\ uses the
 $(\ell\ell)(\ell'\ell')$ approach, whilst the \sherpa\ samples used in Figure ??
-use the $(\llll)$ approach. ~\fig{gen-comp-SherpaQED-ZZs} shows the difference 
+use the $(\llll)$ approach. ~\fig{gen-comp-SherpaQED} shows the difference 
 between the \Z\
 lineshape in \sherpa\ samples generated using the two approaches; the \Z\
 lineshape in \sherpa\ samples generated using the $(\ell\ell)(\ell'\ell')$ approach agree with the productions from the generators using \photos. It is not  clear which is the correct approach
