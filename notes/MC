@@ -1,0 +1,34 @@
+Shower matching:
+
+- Traditional approach: reweight QCD emissions produced by the shower with respective exact ME. Limited to cases ehere parton shower expression exceeds matrix element
+
+- MC@NLO - consistently match NLO calculations for specific processes with the parton shower.
+ - organise the counter-terms necessary to technically cancel real and virtual infrared divergences in such a way that the first e mission of the parton shower is recovered. This allows the generation of hard kinematics configurations, wh ich can eventually be fed into a parton-shower Monte Carlo
+ - basically subtract off the parton shower contribution for m->m+1 from the m+1 bit of the matrix element before doing phase space integral and add to the m bit, so that we're allowing the PS to calculate this bit.
+ 
+ - POWHEG - uses the ratio of the actual real radiation matrix element and the original leading-order one to generate the hardest emission. In its current formulation, this approach can be understood as a hybrid of the traditional parton-shower reweighting and the MC@NLO
+ generate hardest emission first then run shower with a pT veto, and also truncated shower from first emission.
+http://xxx.lanl.gov/pdf/hep-ph/0409146v1.pdf
+
+
+CKKW - aimed at improved description of multi-leg topologies.
+- separate the phase space for parton emission into two domains, a hard region of jet production and a softer region for intra-jet evolution. 
+Use k_T type measure.
+PS constrained so does not produce any extra jets.
+Leading higher-order effects are added to the various matrix elements by reweighting them with appropriate Sudakov form factors and with ratios of the strong coupling  taken at the kT of the indiviual jet scales
+
+MLM - similar to CKKW, but instead of running vetoed shower, run shower and check that all jets match - veto if not.
+https://twiki.cern.ch/twiki/bin/view/Main/AlpgenFAQ
+
+Sherpa: 
+
+
+ISR - evolve PDF to hard scatter - takes care of "inclusive" ISR. To get exclusive shower, need to trace back from incoming hard partons to shower initiator
+
+
+HAdronisation models
+--------------------
+
+Cluster - The hadronization is simulated in Herwig [39] using the cluster model [41] where gluons split in q ̄q pairs that are subsequently regrouped into colorless clusters to produce hadrons.
+
+string model
