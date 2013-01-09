@@ -231,19 +231,40 @@ follows:
 \begin{gather}
 Y(\lL) = \frac{1}{2},\, Y(\eR) = 1,\, Y(\nuR) =0,\, Y(\qL) = \frac{1}{6},\, Y(u_{R}) = \frac{2}{3},\, Y(d_{R}) = - \frac{1}{3} \\
 I_{3}(\lL) = I_{3}(\qL) = 1, \  I_{3}(\eR) = I_{3}(\nuR) =  I_{3}(u_{R}) = I_{3}(d_{R}) = 0 
+\label{eqn:hypercharges}
 \end{gather}
 
 This ensures the desired properties that the hypercharge field couples to all
 left and right handed fields except for the neutrino, and that the \sutwo\ field
 couples only to the left handed multiplets. The $\mathbf{T^{a}}$ in
 ~\eqn{ew-covariant-derivative} are the generators of the \sutwo\ group. These
-can be expressed in terms of the as the Pauli matrices $\mathbf{\tau^{a}}$:
+can be expressed in terms of the Pauli matrices as $\frac{1}{2}
+\mathbf{\tau^{a}}$, where:
 
 \begin{equation}
 \tau^{1} = \left( \begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array} \right), \  
 \tau^{2} = \left( \begin{array}{cc} 0 & -i \\ i & 0 \end{array} \right), \  
 \tau^{3} = \left( \begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array} \right)
+\label{eqn:pauli-matrices}
 \end{equation}
+
+Substituting Equations~\ref{eqn:ew-covariant-derivative}, \ref{eqn:hypercharges}
+and~\ref{eqn:pauli-matrices} into~\eqn{ew-lagrangrian} gives the following
+interaction terms between the leptons and the gauge bosons:
+
+% 5.34 from book
+\begin{equation}
+- \frac{g}{2}\left( \overline{\nu_{L}} \  \overline{\eL} \right) \gammamu \left(
+\left( \begin{array}{cc} \Wthreemu & \sqrt{2} \Wpmu \\ \sqrt{2} \Wmmu & -
+\Wthreemu \end{array} \right)
+- \tan{\thetaW} \right
+\left( \begin{array}{c} \nu_{L} \\  \eL \right)
+- i g \tan{\thetaW} \overline{\eR}\gammamu \Bmu \eR
+\label{eqn:ew-lepton-interaction}
+\end{equation}
+
+where the $W^{1}, W^{2}$ have been rewritten as $W^{\pm} = (W^{1} \mp
+iW^{2})/\sqrt{2}$.
 
 \subsection{Electroweak Symmetry breaking}
 
