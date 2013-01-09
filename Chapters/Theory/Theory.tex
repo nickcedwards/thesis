@@ -151,6 +151,37 @@ and weak forces into a single theory which later became known as the
 The EW theory is a gauge theory, guided by requiring that the theory be
 invariant under \intro{local gauge transformations}.
 
+It is not possible to write down a locally gauge invariant theory with massive
+gauge bosons, and it is not possible to include explicit mass terms for the
+fermions as this mixes the left- and right-handed fermions, which have been
+assigned to different multiplets of \sutwo. The unified \ew\ theory is thus
+formulated as a theory with massless gauge bosons and fermions. In order to give
+mass to the gauge bosons, the symmetry must be broken somehow. The simplest way
+to do so would be to simply add mass terms for the gauge bosons by hand, however
+this would lead to a non-renormalisable theory, which would contain an infinite
+number of divergences. Instead, gauge bosons are given masses by `spontaneous
+symmetry breaking' in the Higgs mechanism\footnote{more properly the Brout-Englert-Higgs
+mechanism} by introducing a doublet of complex scalar fields (the \intro{Higgs
+Field}) which has a non-zero vacuum expectation value. The gauge bosons acquire
+mass by interactions with this field. Conveniently, terms can also be
+introduced describing interactions of the fermions with this field, giving
+masses to the fermions without mixing the left- and right-handed components. The
+introduction of the Higgs field predicts the existence of one further
+fundamental particle, a massive scalar boson known as the \intro{Higgs Boson}. There has
+been much experimental activity in the search for this elusive boson. Recently,
+the CMS and ATLAS collaborations reported evidence for a new boson with
+properties consistent with the Higgs.
+
+The unified \ew\ theory has gauge group
+
+\begin{align}
+\uone_{Y} \times \sutwo 
+\end{align}
+
+The associated gauge bosons are a massless singlet \Bmu\ and a massless triplet
+$\Wmu = \{\Wonemu, \Wtwomu, \Wthreemu\}$. The $\uone_{Y}$ gauge group is analogous to the
+electromagnetic field, but is instead associated with hypercharge Y.
+
 It is observed that weak interactions violate parity conservation; this leads to
 different interactions for the \intro{left-handed} and the \intro{right-handed}
 components of a particle. A Dirac field, $\psi$, can be expressed as the sum of 
@@ -188,36 +219,25 @@ neutrino mass it is included here for completeness}, \,
  u_{R}, \, d_{R}
 \end{equation}
 
-It is not possible to write down a locally gauge invariant theory with massive
-gauge bosons, and it is not possible to include explicit mass terms for the
-fermions as this mixes the left- and right-handed fermions, which have been
-assigned to different multiplets of \sutwo. The unified \ew\ theory is thus
-formulated as a theory with massless gauge bosons and fermions. In order to give
-mass to the gauge bosons, the symmetry must be broken somehow. The simplest way
-to do so would be to simply add mass terms for the gauge bosons by hand, however
-this would lead to a non-renormalisable theory, which would contain an infinite
-number of divergences. Instead, gauge bosons are given masses by `spontaneous
-symmetry breaking' in the Higgs mechanism\footnote{more properly the Brout-Englert-Higgs
-mechanism} by introducing a doublet of complex scalar fields (the \intro{Higgs
-Field}) which has a non-zero vacuum expectation value. The gauge bosons acquire
-mass by interactions with this field. Conveniently, terms can also be
-introduced describing interactions of the fermions with this field, giving
-masses to the fermions without mixing the left- and right-handed components. The
-introduction of the Higgs field predicts the existence of one further
-fundamental particle, a massive scalar boson known as the \intro{Higgs Boson}. There has
-been much experimental activity in the search for this elusive boson. Recently,
-the CMS and ATLAS collaborations reported evidence for a new boson with
-properties consistent with the Higgs.
+The \sutwo\ singlets \eR, \nuR, $u_{R}$ are invariant under \sutwo\
+transformations and thus do not couple to the \Wmu\ gauge bosons, whilst the
+doublets transform as
 
-The unified \ew\ theory has gauge group
+\begin{equation}
+\lL \ra \lL' = e^{-iw^{a}\mathbf{T^{a}}}\lL
+\end{equation}
 
-\begin{align}
-\uone_{Y} \times \sutwo 
-\end{align}
+where the $\mathbf{T^{a}}$ are the three generators of the \sutwo\ group. These
+can be expressed in terms of the Pauli matrices as $\frac{1}{2}
+\mathbf{\tau^{a}}$, where
 
-The associated gauge bosons are a massless singlet \Bmu\ and a massless triplet
-$\Wmu = \{\Wonemu, \Wtwomu, \Wthreemu\}$. The $\uone_{Y}$ gauge group is analogous to the
-electromagnetic field, but is instead associated with hypercharge Y.
+\begin{equation}
+\tau^{1} = \left( \begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array} \right), \  
+\tau^{2} = \left( \begin{array}{cc} 0 & -i \\ i & 0 \end{array} \right), \  
+\tau^{3} = \left( \begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array} \right)
+\label{eqn:pauli-matrices}
+\end{equation}
+
 The Lagrangian for the massless \ew\ theory is
 
 \begin{align}
@@ -272,17 +292,7 @@ I_{W}(\lL) = I_{W}(\qL) = \frac{1}{2}, \  I_{W}(\eR) = I_{W}(\nuR) =  I_{W}(u_{R
 
 This ensures the desired properties that the hypercharge field couples to all
 left and right handed fields except for the neutrino, and that the \sutwo\ field
-couples only to the left handed multiplets. The $\mathbf{T^{a}}$ in
-~\eqn{ew-covariant-derivative} are the generators of the \sutwo\ group. These
-can be expressed in terms of the Pauli matrices as $\frac{1}{2}
-\mathbf{\tau^{a}}$, where
-
-\begin{equation}
-\tau^{1} = \left( \begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array} \right), \  
-\tau^{2} = \left( \begin{array}{cc} 0 & -i \\ i & 0 \end{array} \right), \  
-\tau^{3} = \left( \begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array} \right)
-\label{eqn:pauli-matrices}
-\end{equation}
+couples only to the left handed multiplets. 
 
 Substituting Equations~\ref{eqn:ew-covariant-derivative}-\ref{eqn:pauli-matrices}
 %, \ref{eqn:hypercharges} and~\ref{eqn:pauli-matrices}
