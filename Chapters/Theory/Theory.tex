@@ -337,7 +337,7 @@ g \sin{\thetaW} \left( \overline{\eL} \gammamu \eL
 \end{equation}
 
 The quantity $g \sin{\thetaW}$ can thus be associated with the electromagnetic
-charge $Q$. The \Z\ boson couples to left- and right-handed electrons and to
+charge $e$. The \Z\ boson couples to left- and right-handed electrons and to
 neutrinos, with slightly different couplings to the left- and right-handed
 electrons
 
@@ -388,9 +388,26 @@ to do so would be to simply add mass terms for the gauge bosons by hand, however
 this would lead to a non-renormalisable theory which would contain an infinite
 number of divergences. Instead, gauge bosons are given masses by `spontaneous
 symmetry breaking' in the Higgs mechanism\footnote{more properly the Brout-Englert-Higgs
-mechanism} by introducing a doublet of complex scalar fields (the \intro{Higgs
-Field}) which has a non-zero vacuum expectation value. The gauge bosons acquire
-mass by interactions with this field. Conveniently, terms can also be
+mechanism} by introducing an \sutwo\ doublet of complex scalar fields (the \intro{Higgs
+Field}), with a potential of the form:
+
+\begin{equation}
+%\Lagr_{H} = (\partial_{\mu} \Phi)(\partial^{\mu} \Phi) - {\mu}
+V(\Phi) =  \mu^{2}\Phi^{\dagger}\Phi + \lambda(\Phi^{\dagger}\Phi)^{2}
+\end{equation}
+
+If $\mu^{2} < 0$ then the field has a minimum at $\Phi^{\dagger}\Phi = -
+\frac{1}{2} \mu^{2}/\lambda$, and thus has a non-zero vacuum expectation value. 
+Gauge invariance of the lagrangian is preserved, however the vacuum state is no
+longer invariant under gauge transformations.
+The gauge bosons acquire mass by interactions with the field, and it is found
+that
+
+\begin{equation}
+M_{W} = \frac{1}{2}gv, \ M_{Z} = \frac{gv}{\cos{\thetaW}}
+\end{equation}
+
+Conveniently, terms can also be
 introduced describing interactions of the fermions with this field, giving
 masses to the fermions without mixing the left- and right-handed components. The
 introduction of the Higgs field predicts the existence of one further
@@ -398,6 +415,8 @@ fundamental particle, a massive scalar boson known as the \intro{Higgs Boson}. T
 been much experimental activity in the search for this elusive boson. Recently,
 the CMS and ATLAS collaborations reported evidence for a new boson with
 properties consistent with the Higgs.
+
+The Higgs field $\Phi$ has potential:
 
 \section{Monte-Carlo Simulation}
 \label{sec:Theory-MC}
