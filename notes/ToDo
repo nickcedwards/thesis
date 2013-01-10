@@ -1,52 +1,14 @@
 Thesis ToDo
 ------------
 
-- Reco: Finish Chapter first pass
-	- Jets - talk briefly about calibration
-	- Reference for MUID?
-
 - ZZ Pheno: 
 	- Generator level plots
-		- PowhegBox+ggZZ 7TeV vs 8 TeV (run at Glasgow) - ZZ_2011_1Oct, ZZ_2012_10Oct	[ OK ]
-			- WARNING ZZ_2012_10Oct has tight lepFid
-			- m_ZZ, pt_ZZ, pt_Z1
-			- pT / eta l1/l2/l3/l4
-			- apply mass  ZZ / ZZ* but NOT lepFid
 			
 		- minDR(l,l) after lepFid, ZZ cuts (need to add ZZ*)							[ have at 7 TeV, ZZ]
 		
-		- m_Z1, m_Z2 - sep for 7 TeV and 8 TeV
-			- nm1 lepFid, sorted by pT (show what we're selecting)								[ have ]							
-			- lepFid, m_Z1 (no mass cuts), m_Z2 (Z1 mass cut), ordered by closeness to pole 	[ running ]
-				(show what we're cutting on)
-				
- 			- NoLepFid, m_Z1 (no mass cuts), m_Z2 (Z1 mass cut), ordered by closeness to pole  	[ not doing ]
- 				?? not sure what it's showing, maybe not bother
- 				
-		- Comparison plots - 7 TeV only											[ OK ]
-			- m_ZZ, pt_ZZ, pt_Z1, nJets, apply mass  ZZ / ZZ* and lepFid
-			- pT / eta l1/l2/l3/l4,  apply mass  ZZ / ZZ* but NOT lepFid
-			- mZ1/mZ2 nm-1
-			
-		- (llll) and (ll)(ll) comparison - have in plotsSherpaQED on glasgvr		[ OK ]
-		
-		- Comparison of ggZZ and ppZZ (7 TeV)												[ DONE ]
-			- m_ZZ, pt_ZZ, pt_Z1
-			- pT / eta l1/l2/l3/l4
-			- apply mass  ZZ / ZZ* but NOT lepFid
-			
-		
-			
-	- MCFM Cross section
-	- MC Simulation:
-		- say a few words about which generators used for different processes
-		- Powheg, ggZZ, Sherpa
-		- Alpgen Z+jets
-		- ttbar?
-		- single top?
-		- WW/WZ?
-	- Gen level plots - some more words needed
-	- TGC - write some bollocks
+		- m_Z1, m_Z2 - 7 TeV only
+			- nm1 lepFid, sorted by pT (show what we're selecting)								not in		
+					
 	- Exotics review - leave for now :s
 
 - Theory: Write!
