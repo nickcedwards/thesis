@@ -425,8 +425,53 @@ years it proved elusive. Recently,
 the CMS~\cite{CMS_Higgs:2012gu,} and ATLAS~\cite{ATLAS_Higgs:2012gk} collaborations reported evidence for a new boson with
 properties consistent with the Higgs.
 
-\section{Particle interactions at the LHC}
-\label{sec:Theory-MC}
+\section{Interactions in proton-proton collisions}
+\label{sec:Theory-ppInteractions}
+
+In proton-proton collisions at particle colliders such as the LHC, it is not the
+protons themselves that interact but the quark and gluon constituents of the
+proton. In a basic picture, the proton consist of three \intro{valence quarks};
+two up-quarks and one down-quark, bound together by the strong force. These
+quarks will spontaneously emit exchange gluons, which can in turn split into
+additional quark pairs, known as \intro{sea quarks}. The higher the energy of a
+probe used to probe the proton, the more sea quarks and gluons `seen', as one
+is able to resolve the structure of the proton on a finer level. The content of
+the proton thus depends on the momentum transfer of the interaction $Q^{2}$.
+Perturbative QCD breaks down at these small scales, and the structure of the
+proton must thus be described by fits to experimental data.
+\intro{Parton Density Functions
+(\partDF s)} are used to describe the probability of finding a parton of flavour $i$ carrying a
+fraction $x_i$ of the incoming proton momentum at a momentum scale $Q^{2}$.
+
+The interaction between two \intro{incoming} partons (quarks and gluons) from the two initial
+protons is known as the \intro{hard scatter}, which will lead to two or more
+hard outgoing particles. The incoming and any coloured outgoing particles will
+emit further further QCD radiation (known as \intro{final state radiation (FSR)}
+and \intro{initial state radiation (ISR)}) in the form of gluons, which in turn can
+split into further particles. Once the outgoing quarks and gluons become far enough from
+each other, the coupling becomes strong and they form into colour neutral
+hadrons in a process known as hadronisation. Charged incoming and outgoing
+particles will also emit QED radiation. The interaction between the incoming
+particles leaves behind other partons from the breakup of the original proton.
+There may also be other secondary collisions between partons (\intro{multiple
+interactions}). Particles from ISR and FSR, the breakup of the proton and
+multiple collisions are collectively referred to as the \intro{Underlying Event
+(UE)}.~\fig{pp-event} shows a sketch of a proton-proton collision.
+
+\begin{figure}
+\centering
+        \vspace{-5mm}
+    \subfigure[]{
+        \includegraphics[width=0.47\textwidth]{pp_event}
+    }
+    \caption{\small
+(a) \mZZ\ and (b) \pt\ of the leading \Z\ boson in \sm\ \ZZllll\ decays, as
+well as \ZZllll\ decays in four samples generated with anomalous
+nTGCs included in the simulation. The nTGC samples are generated with
+$\Lambda=3\tev$ and $n=3$.
+}
+    \label{fig:pp-event}
+\end{figure}
 
 \section{Monte-Carlo Simulation}
 \label{sec:Theory-MC}
@@ -459,9 +504,7 @@ successively radiates the partons until they reach an energy of $\sim 1$ \gev, a
 which point the predictions of perturbative QCD become invalid and the partons
 are formed into hadrons in a process called hadronisation. For the incoming partons, the
 shower is run in-reverse back to the \intro{factorisation scale, \uF}, at which
-point the calculation is connected to a \intro{Parton Density Function
-(\partDF)} which describe the probability to find a parton $i$ carrying a
-fraction $x_i$ of the incoming proton momentum at energy scale \uF. The
+point the calculation is connected to a  energy scale \uF. The
 factorisation scale thus sets the boundary between hard, perturbative QCD and
 soft, non-perturbative QCD. The \partDF s are determined from fits to
 experimental data. It is necessary to `match' the
