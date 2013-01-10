@@ -490,7 +490,7 @@ final state radiation using a parton shower,
 hadronisation and finally embedding in the underlying event. These steps are described
 in more details below. 
 
-The calculation of the matrix element is
+The calculation of the matrix element (ME) is
 made at a fixed order in perturbative QFT, where the expansion is in terms of
 the strong coupling constant \alphaS. The event generators used in this thesis
 are either \intro{Leading Order (LO)}, where only the simplest diagrams
@@ -502,14 +502,26 @@ Both the incoming and any outgoing quarks and gluons
 modelled by the parton shower (PS), which in the case of outgoing partons
 successively radiates the partons until they reach an energy of $\sim 1$ \gev, at
 which point the predictions of perturbative QCD become invalid and the partons
- hadronise. For the incoming partons, the
+hadronise. The process of hadronisation is not well described theoretically,
+but relies on a number of phenomenological models. In \intro{string models} the
+force between two coloured charges is modelled as an elastic string with
+rising tension as the particles separate. If the string is stretched too much
+it will snap, creating a new pair of colour charges. If a pair of opposite
+colour charges are found close to each other they are combined into a hadron.
+
+For the incoming partons, the
 shower is run in-reverse back to the \intro{factorisation scale, \uF}, at which
 point the calculation is connected to the \partDF. The
 factorisation scale thus sets the boundary between hard, perturbative QCD and
-soft, non-perturbative QCD. The \partDF s are determined from fits to
-experimental data. It is necessary to `match' the
-ME calculation to the PS, to ensure no double counting in events with hard
-outgoing partons. Different generators use different models for the parton
+soft, non-perturbative QCD.  
+
+Modern \mc\ integrators can calculate exact matrix elements with additional
+partons from FSR in the matrix element. Whilst this increases the accuracy of
+the \cx\ and kinematic distributions, it becomes necessary to `match' the
+ME calculation to the PS, to ensure no double counting (since otherwise a
+$2\ra3$ event could either come from a $2\ra3$ matrix-element event or a $2\ra2$
+matrix element event with an additional parton coming from a splitting in the
+parton shower. Different generators use different models for the parton
 shower, hadronisation, and the ME-PS matching.
 
 A second scale involved in the generation of events is the
@@ -519,7 +531,7 @@ this is clearly unphysical, a renormalisation procedure is used to cancel the
 divergences, for example by introducing a gluon mass or setting a UV cutoff
 scale to regularise the divergence. The divergences are then absorbed by a
 redefinition of the `bare' parameters of the theory to the physically observable
-parameters. Renormalised parameters such as \alphaS are thus dependant on \uR.
+parameters. Renormalised parameters such as \alphaS\ are thus dependant on \uR.
 When performing calculations to all orders of perturbation theory,  the results
 should not depend on the choice of \uR\ - however since in LO and NLO only the
 first few terms of the expansion are kept, the results will heavily depend on
