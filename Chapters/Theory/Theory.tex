@@ -508,19 +508,20 @@ Both the incoming and any outgoing partons will emit soft collinear radiation in
 modelled by the parton shower (PS), which in the case of outgoing partons
 successively radiates the partons until they reach an energy of $\sim 1$ \gev, at
 which point the predictions of perturbative QCD become invalid and the partons
-hadronise. The process of hadronisation is not well described theoretically,
+hadronise. For the incoming partons, the
+shower is run in-reverse back to the \intro{factorisation scale, \uF}, at which
+point the calculation is connected to the \partDF. The
+factorisation scale thus sets the boundary between hard, perturbative QCD and
+soft, non-perturbative QCD. The choice of factorisation scale is somewhat
+arbitrary.
+
+The process of hadronisation is not well described theoretically,
 but relies on a number of phenomenological models. A common set of models are
 the \intro{string models}, in which the
 force between two coloured charges is modelled as an elastic string with
 rising tension as the particles separate. If the string is stretched too far
 it will snap, creating a new pair of colour charges. If a pair of opposite
 colour charges are found close to each other, they are combined into a hadron.
-
-For the incoming partons, the
-shower is run in-reverse back to the \intro{factorisation scale, \uF}, at which
-point the calculation is connected to the \partDF. The
-factorisation scale thus sets the boundary between hard, perturbative QCD and
-soft, non-perturbative QCD.  
 
 Modern \mc\ integrators can calculate exact matrix elements with additional
 partons from FSR in the matrix element. Whilst this increases the accuracy of
