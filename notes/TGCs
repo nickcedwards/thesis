@@ -12,14 +12,15 @@ http://arxiv.org/pdf/hep-ph/9910395v5.pdf
 -> Most gen allowed form involved 2 indep couplings for each ZZV vertices, one CP even, one CP odd. apriori no relation between these couplings.
 
 -> Simplest model for nTGCS would be heavy fermion loops (heavy scalar particles cannot generate netural self-couplings - why?) at one loop level. Can only generate CP-conserving coupings f_5^V, would be prop m_Z^2 / M_F^{2}
--> Get one loop alpha/4pi factor. Would need some sort of 
+
 
 -> If family were exactly degenrate couplings would vanish as combination of heavy fermion contributions would be the same as the cancellation in the triangle anomaly (unbroken SU(2)xU(1) )
 -> If allow splitting of EW size (m_Z^2) among multplets then get couplings prop m_Z^4 / M_F^{4}. Spontaneously broken SU(2)xU(1)
 -> If get SU(2)xU(1) strongly broken, ie one particle much lighter get prop m_Z^2 / M_F^{2} coupling
 -> For M_F in 100 GeV range get couplings of O(10-3)
 -> For SM fermion loops get 10-4
- 
+-> Get one loop alpha/4pi factor. Would need some sort of strong cpupling to enhance couplings
+
 -> CP conserving couplings lead to real amplitudes interfering with SM ones, so observables linearly sensitive to NP terms. CP viol param lead to purely imag amplitudes that do not interfere with SM, so observables depend only quadratically on NP terms and sensitivity limits decreased.
 
 -> Form factors. At a given value of coupling departure from SM pred grows rapidly with s-hat and may rreach a unitarity violating size. Form factors applied to basic couplings with cutoff scale.
@@ -30,4 +31,5 @@ sions. The additional s-hat dependence brought in by the form factor, would corr
 each s-hat domain.
 
 ->MSSM: Charginos and Neutralinos run in loops. Two chargnios contribute to f_5_Z,g, four neutralinos contribute only to f_5_Z
--> charginos couple to the gauge bosons through both their gaugino and higgsino components, whereas neutralinos only contribute through their higgsino components. T
+-> charginos couple to the gauge bosons through both their gaugino and higgsino components, whereas neutralinos only contribute through their higgsino components. 
+-> Typically one of the charginos is considerably lighter than the other
