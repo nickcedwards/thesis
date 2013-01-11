@@ -469,13 +469,39 @@ hadrons is the \intro{factorisation theorem}, which allows the hard
 short-distance component of a scattering process which can be calculated
 exactly with perturbative QCD to be `factorised' from the soft long distance component which can
 not and must be modelled with phenomenological models and parametrised functions
-fit to experimental data.
+fit to experimental data. Thus in the above model of proton-proton collisions
+the hard scattering cross section can be calculated exactly whilst the
+\partDF\ is used to describe the behaviour of the parton within the proton. The
+\cx\ for a scattering initiated by two protons with momenta $P_{1}$, $P_{2}$ can
+be written as~\cite{qcd-collider-physics}
+\begin{equation}
+\sigma(P_{1}, P_{2}) = \Sigma_{i,j} \int dx_{1} dx_{2} $f_{i}(x_{1}, \muF)$
+$f_{j}(x_{2}, \muF)$ \hat{\sigma}_{i,j\ra X} (x_{1}.P_{1}, x_{2}.P_{2},
+\frac{Q^{2}}{\uF}, \frac{Q^{2}}{\uR}
+\end{equation}
 
-\intro{factorisation scale, \uF}, at which
-point the calculation is connected to the \partDF. The
-factorisation scale thus sets the boundary between hard, perturbative QCD and
-soft, non-perturbative QCD.
-(UE)}.
+where $\hat{\sigma}_{i,j\ra X}$ is the partonic cross section for partons $i,j$
+scattering to give $X$ and  $f_{i}(x_{1}, \muF)$ are the \partDF s. \muF is the
+factorisation scale, the scale at which the \partDF is evaluated, setting the boundary between hard, perturbative QCD and
+soft, non-perturbative QCD. \uR is a second necessary scale, the
+\intro{renormalisation scale}. Since gluons are massless, QCD contains UV
+divergences which lead to infinite results in \cx\ calculations. Since 
+this is clearly unphysical, a renormalisation procedure is used to cancel the
+divergences, for example by introducing a gluon mass or setting a UV cutoff
+scale to regularise the divergence. The divergences are then absorbed by a
+redefinition of the `bare' parameters of the theory to the physically observable
+parameters. Renormalised parameters such as \alphaS\ are thus dependant on \uR.
+When performing calculations to all orders of perturbation theory,  the results
+should not depend on the choice of \uR\ or of \uF\ - however since in LO and NLO
+calculations the expansion is truncated after the
+first few terms,  the results will heavily depend on
+the choice of \uR\ and \uF. Calculations performed at NLO are expected to
+be less dependant on the choice of scale than LO calculations, however
+theoretical uncertainties must be assigned to account for the dependence on the
+(somewhat arbitrary) choice of scale. Typically this is done by setting the
+scales to an energy similar to the momentum transfer in the interaction, then
+varying up and down by a factor of two to estimate systematics.
+
 
 \begin{figure}
 \centering
@@ -542,26 +568,6 @@ $2\ra3$ event could either come from a $2\ra3$ matrix-element event or a $2\ra2$
 matrix element event with an additional parton coming from a splitting in the
 parton shower. Different generators use different models for the parton
 shower, hadronisation, and the ME-PS matching.
-
-A second scale involved in the generation of events, in addition to the factorisation scale \muF\ described
-in~\sec{Theory-ppInteractions}, is the
-\intro{renormalisation scale, \uR}. Since gluons are massless, QCD contains UV
-divergences which lead to infinite results in cross-section calculations. Since 
-this is clearly unphysical, a renormalisation procedure is used to cancel the
-divergences, for example by introducing a gluon mass or setting a UV cutoff
-scale to regularise the divergence. The divergences are then absorbed by a
-redefinition of the `bare' parameters of the theory to the physically observable
-parameters. Renormalised parameters such as \alphaS\ are thus dependant on \uR.
-When performing calculations to all orders of perturbation theory,  the results
-should not depend on the choice of \uR\ or of \uF\ - however since in LO and NLO
-calculations the expansion is truncated after the
-first few terms,  the results will heavily depend on
-the choice of \uR\ and \uF. Calculations performed at NLO are expected to
-be less dependant on the choice of scale than LO calculations, however
-theoretical uncertainties must be assigned to account for the dependence on the
-(somewhat arbitrary) choice of scale. Typically this is done by setting the
-scales to an energy similar to the momentum transfer in the interaction, then
-varying up and down by a factor of two to estimate systematics.
 
 \subsection{\mc\ generators}
 \label{sec:Theory-MC-gen}
