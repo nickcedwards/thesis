@@ -506,8 +506,8 @@ The interaction between the incoming
 particles leaves behind other partons from the breakup of the original proton.
 There may also be other secondary collisions between these residual partons,
 referred to as \intro{multiple interactions}. Particles from ISR and FSR, the breakup of the proton and
-multiple interactions are collectively referred to as the \intro{Underlying
-Event}.
+multiple interactions are collectively referred to as the \intro{underlying
+event (UE)}.
 
 In a basic picture, the proton consists of three \intro{valence quarks}:
 two up-quarks and one down-quark, bound together by the strong force. These
@@ -543,7 +543,8 @@ f_{j}(x_{2}, \uF) \\
 \end{split}
 \end{equation}
 
-where $\hat{\sigma}_{i,j\ra X}$ is the partonic cross section for partons $i,j$
+where the sum $i,j$ is over parton flavour, 
+$\hat{\sigma}_{i,j\ra X}$ is the partonic cross section for partons of
 scattering to give $X$ and  $f_{i}(x_{1}, \uF)$ are the \partDF s. \uF\ is the
 factorisation scale, the scale at which the \partDF\ is evaluated, setting the boundary between hard, perturbative QCD and
 soft, non-perturbative QCD. \uR\ is a second necessary scale, the
@@ -553,10 +554,11 @@ this is clearly unphysical, a renormalisation procedure is used to cancel the
 divergences, for example by introducing a gluon mass or setting a UV cutoff
 scale to regularise the divergence. The divergences are then absorbed by a
 redefinition of the `bare' parameters of the theory to the physically observable
-parameters. Renormalised parameters such as \alphaS\ are thus dependant on \uR.
+parameters. Renormalised parameters such as \alphaS\ are dependant on \uR, the
+scale at which this subtraction is done.
 
 When performing calculations to all orders of perturbation theory, the results
-should not depend on the choice of the scales \uR\ and \uF; however since in LO and NLO
+do not depend on the choice of the scales \uR\ and \uF; however since in LO and NLO
 calculations the expansion is truncated after the
 first few terms,  the results will heavily depend on
 the choice of scale. Calculations performed at NLO are expected to
