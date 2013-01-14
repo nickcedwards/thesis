@@ -994,6 +994,7 @@ comparison between the results of different experiments
 
 \subsection{Origin of aTGCs}
 
+
 The simplest model for generating anomalous neutral TGCs is from heavy fermion
 loops arising from a new generation of fermions. New heavy fermions arise
 in many models beyond the SM, such as SUSY, GUTs and Technicolor.
@@ -1019,6 +1020,36 @@ This is still suppressed by the loop $\alpha / 4\pi$ factor, and yields
 anomalous couplings of order $10^{-3}$ for $M_F$ in the 100 \gev\ range.
 Contributions from loops
 of SM particles generate loops at the level of $\mathcal{O}(10^{-4})$. 
+
+% TGC vertex diagram
+\begin{figure}
+\centering
+        \vspace{10mm}
+    \mbox{
+    \subfigure{
+        \begin{fmffile}{tgc-heavyFloop}
+        \begin{fmfgraph*}(36,20)
+        \fmfleft{i1}
+        \fmfright{o1,o2}
+        \fmflabel{{$Z/\gamma^{*}$}{i1}
+        \fmflabel{$Z/\gamma^{*}$}{o1}
+        \fmflabel{$Z/\gamma^{*}$}{o2}
+        \fmf{photon}{i1,v1}
+        \fmf{photon}{v2,o1}
+        \fmf{photon}{v3,o2}
+        \fmf{fermion,label=$F$}{v1,v2}
+        \fmf{fermion,label=$F$}{v2,v3}
+        \fmf{fermion,label=$F$}{v3,v1}
+        \fmf{photon,label=$Z/\gamma^{*}$}{v1,v2}
+        % uncommment this line if you want dots at the vertices
+            %\fmfdotn{v}{4}
+        \end{fmfgraph*}
+        \end{fmffile}
+    }
+    }
+        \vspace{5mm}
+    \caption{A diagram!}
+\end{figure}
 
 One concrete example of a NP model giving rise to anomalous TGCs in
 Supersymmetry in the MSSM~\cite{Gounaris:2000tb}. In the MSSM the
