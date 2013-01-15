@@ -429,6 +429,28 @@ second layers of the EM calorimeter, leakage into the hadronic
 calorimeter, track quality in the silicon detectors and loose track cluster
 matching. The variables cut on are as follows:
 
+\begin{figure}[h]
+\centering
+	%\subfigure[]{
+            \includegraphics[width=0.8\textwidth]{data_effPP_vs_pvx_2011_2012}
+        %}
+	%\subfigure[]{
+            %\includegraphics[width=0.7\textwidth]{ElLoosePPEfficiencyPt2011}
+        %}
+\caption[Electron identification efficiency in 2011 and 2012
+ as a function of the number of reconstructed primary vertices in
+the event.]{Electron identification efficiency in 2011 (open markers) and 2012
+(solid markers) as a function of the number of reconstructed primary vertices in
+the event. The blue circles show the efficiency for the \loosePP\ selection, the
+red triangles for the \mediumPP\ and the green squares for the \tightPP. 
+Figure
+from
+~\cite{EfficiencyPileup}.
+%~\cite{ElectronEfficiency2012,EfficiencyPileup,ElectronEfficiency2011,ElectronEffPV2011}.
+}
+\label{fig:el-id-showershapes-central}
+\end{figure}
+
 \begin{itemize}
 
     \item {\bf Shower Shapes:} cuts are made on the following shower shape
@@ -451,6 +473,9 @@ matching. The variables cut on are as follows:
         \item Total width of the shower in the first layer of the EM
         calorimeter, \wstot.
     \end{itemize}
+
+    Simulated distributions of these variables for real electrons from \Z\ boson
+    decays and from hadrons reconstructed as electrons are shown in~\fig{el-id-showershapes-central}
 
     \item {\bf Silicon Hits:} at least 7 hits in the silicon detectors, of which at
     least one must be in the pixel detector. This ensures good track quality and
