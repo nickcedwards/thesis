@@ -77,7 +77,8 @@ are summarised in~\tab{objsel-el} are described in more detail below.
 data, the algorithm used was slightly different to the `standard' ATLAS electron
 econstruction as tracks were refitted using a Gaussian-sum filter (GSF) to
 account to account for the effect of bremsstrahlung in the inner detector. In
-2012 data this became the default reconstruction algorithm.
+2012 data this became the default reconstruction algorithm. Central electrons
+are required to pass the \loosePP\ identification algorithm.
 %Electrons in the calorimeter ``crack" region $1.37 < |\eta_{cluster}| < 1.52$
 %are included, although the efficiency and energy resolution is expected
 
@@ -140,18 +141,22 @@ occur near the edge of the tracker, the central electron would take precedence.
 
 \section{Forward Electron Selection}
 
-In the \llll\ final state, `forward' electrons (author 8) are used
-to extend the pesudo-rapidity coverage to $2.47<|\eta|<3.16$. Beyond $|\eta|=2.5$
-there is no tracking, so these electrons are reconstructed from calorimeter
-information alone. Since the lack of tracking makes it harder to reject hadronic
-and photonic fakes, these electrons are required to pass tighter
-identification requirements: ``Tight''. Since these electrons lack a track
-measurement, it is impossible to determine their charge, and of course
-impossible to apply track isolation and track parameter cuts. 
-%For this reason a
-%tighter calorimeter isolation requirement is applied: the sum of the calorimeter transverse energy in
-%a cone of $\Delta R = 0.3$ around the electron, removing the electron energy,
-%must be less than 10\% of the electron energy.
+Electrons reconstructed using the forward electron reconstruction algorithm are
+used to to extend the pesudo-rapidity coverage beyond the limit of the tracker,
+\modetaeq{2.5}. Only elecrons falling in the EMEC region are used, with
+pseudo-rapidity \modetabetween{2.5}{3.16}.  Since the lack of tracking makes it
+harder to reject hadronic and photonic fakes, these electrons are required to
+pass tighter identification requirements: ``Forward Tight''. Since these
+electrons lack a track measurement, it is impossible to determine their charge,
+and of course impossible to apply track isolation and track parameter cuts.
+Forward electrons are required to have \etgt{20}; this higher energy requirement
+is motivated by the difficulty of measuring reconstruction and identification
+efficiencies in data below this energy and by the higher hadronic and photonic
+backgrounds at low energy.
+%For this reason a tighter calorimeter isolation requirement is applied: the sum
+%of the calorimeter transverse energy in a cone of $\Delta R = 0.3$ around the
+%electron, removing the electron energy, must be less than 10\% of the electron
+%energy.
 
 \section{Muon Selection}
 \section{Jet Selection}
