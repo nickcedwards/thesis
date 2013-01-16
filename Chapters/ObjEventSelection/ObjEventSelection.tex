@@ -3,6 +3,7 @@
 \label{chap:ObjEventSelection}
 
 \section{Electron Selection}
+\label{sec:objsel-el}
 
 Electron reconstruction and identification was described in~\sec{reco-el}. Both
 central electrons with \modetalt{2.47} and forward electrons are used. In
@@ -80,15 +81,15 @@ account to account for the effect of bremsstrahlung in the inner detector. In
 %Electrons in the calorimeter ``crack" region $1.37 < |\eta_{cluster}| < 1.52$
 %are included, although the efficiency and energy resolution is expected
 
-For electron candidates with 4 or more silicon (SCT and Pixel) hits, the energy of
-the electron is taken from the cluster measurement, and the eta and phi
-are taken from the track (this requirement is automatically satisfied if the
-electrons pass the \loosePP\ identification requirements). For electron candidates with fewer than 4
-silicon hits, all electron parameters are taken directly from the
-cluster. In both cases, the cluster eta and phi are used for the $\eta$
-requirement and for overlap removal. Using the energy and direction defined in this way, the electron
-candidates are required to have \etgt{7}, where \et\ is defined as
-$E\sin{\theta}=E/\cosh{\eta}$. 
+For electron candidates with 4 or more silicon (SCT and Pixel) hits, the energy
+of the electron is taken from the cluster measurement, and the eta and phi are
+taken from the track (this requirement is automatically satisfied if the
+electrons pass the \loosePP\ identification requirements). For electron
+candidates with fewer than 4 silicon hits, all electron parameters are taken
+directly from the cluster. In both cases, the cluster eta and phi are used for
+the $\eta$ requirement and for overlap removal. Using the energy and direction
+defined in this way, the electron candidates are required to have \etgt{7},
+where \et\ is defined as $E\sin{\theta}=E/\cosh{\eta}$. 
 
 A small number of the front-end boards of the liquid argon calorimeter were
 inactive in 2011 and 2012; the exact number varied with time as some were
@@ -131,19 +132,11 @@ the electron itself, and is corrected for the
 effects of pileup using the official prescription of the 
 egamma performance group\footnote{We use $el\_Etcone20\_corrected = CaloIsoCorrection::GetPtNPVCorrectedIsolation(\ldots)$ from the egammaAnalysisUtils-00-03-24 package.}.
 
-Electrons closer than $\Delta R=0.1$ to a muon which passes the analysis selection 
-are rejected. If two selected electrons overlap within $\Delta R < 0.1$, the
-lower-\pt\ electron is removed, although in the case of a central electron
-overlapping with a forward electron, which could occur near the boundary, the
-central electron would take precedence.
-
-In order to match the resolution observed for electrons in $W$ and $Z$
-events in 2011 data, the energy $E$ of electrons in
-%the transverse momentum $E_{T}$ of electrons in
-Monte Carlo simulation is smeared with the eGamma Rescaler
-Tool (\texttt{egammaAnalysisUtils-00-02-76}), keeping the electron direction 
-constant. Scale corrections to
-the electron energy in data events have been applied during the reconstruction.
+Electrons closer than \deltaRlt{0.1} to a muon which passes the object selection
+requirements (see~\sec{objsel-mu}) are rejected. If two selected electrons
+overlap within \deltaRlt{0.1}, the lower-\et\ electron is removed, although in
+the case of a central electron overlapping with a forward electron, which could
+occur near the edge of the tracker, the central electron would take precedence.
 
 \section{Forward Electron Selection}
 
