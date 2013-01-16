@@ -15,7 +15,7 @@ reflecting the different experimental conditions (such as higher pile-up in
 2012) as well as optimisations made in 2012. The electron selection requirements
 are summarised in~\tab{objsel-el} are described in more detail below. 
 
-\begin{table}[!htbp]
+\begin{table}[h]
   \centering
 %   \vspace*{-1cm}
 %\small
@@ -135,8 +135,10 @@ grid of cells in the centre of the cone (which are assumed to be due to the
 electron). Cells from both the EM and hadronic calorimeters are included. The
 requirement is that the sum of such energies be less than 30\% of electron \et,
 i.e. \etconetwentylt{0.3}.
-The energy in the cone is corrected for contributions from pile-up events using
-the number of vertices reconstructed in the event
+This variable is particularly sensetive to pileup, as pileup events tend to
+deposit additional energy isotropically through the detector, thus increasing
+the energy in the isolation cone. A correction paramaterised by the number of vertices reconstructed in the event.
+Additional corrections
 
 Electrons closer than \deltaRlt{0.1} to a muon which passes the object selection
 requirements (see~\sec{objsel-mu}) are rejected. If two selected electrons
