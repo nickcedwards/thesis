@@ -71,7 +71,86 @@ are summarised in~\tab{objsel-el} are described in more detail below.
 
 \section{Central Electron Selection}
 
+In the pseudo-rapidity region $|\eta|<2.47$, `central' electrons are
+reconstructed with  the ``standard'' electron algorithm (author 1 or 3).
+In order to account for the effect of bremsstrahlung in the inner
+detector, tracks are refitted using a Gaussian-sum filter (GSF). 
+
+To avoid problems with the front-end boards of the
+liquid argon calorimeter or other data quality issues, all electron
+candidates are required to pass the object quality cut
+($OQ \text{ AND } 1446==0$). The bitmask, 1446, defines
+a bad electron and indicates that its cluster is affected by 
+at least one of the following three conditions: the 
+presence of a dead front-end board in the first or second sampling 
+layer, the presence of a dead region affecting the three
+samplings, or the
+presence of a masked cell in the core. 
+
+To ensure that the candidates come from
+the primary vertex, the absolute $z_0$ of the electron track with respect to the primary
+vertex must be less than 2 mm and the $d_0$ significance is required to be
+less than 6.
+Electrons in the ``crack" region $1.37 < |\eta_{cluster}| < 1.52$ are retained; 
+their energy (both for electrons in data and in simulated events) is scaled 
+appropriately using the tools provided by the e/gamma 
+performance group\footnote{We use the EnergyRescaler in the egammaAnalysisUtils-00-03-24 package.}.
+
+For electron candidates with 4 or more silicon (SCT and Pixel) hits, the energy of
+the electron is taken from the cluster measurement, and the eta and phi
+are taken from the track. For electron candidates with fewer than 4
+silicon hits, all electron parameters are taken directly from the
+cluster. In both cases, the cluster eta and phi are used for the $\eta$
+requirement and for overlap removal. Using the momentum defined in this way, the electron
+candidates are required to have $E_T > 20$ GeV in the \llvv\ final state and
+$E_T > 7$ GeV in the \llll\ final state. 
+%, see Sec.~\ref{sec:EventSelection}.
+%the electron which is trigger matched
+%to an e20\_medium trigger 
+
+Similarly to our requirements on muons, electrons are required to be isolated both in the tracker and in the calorimeter.
+Electron tracks must satisfy $ptCone30/E_{T}<0.15$ for the \llvv\ final state
+and $ptCone20/E_{T}<0.15$ for the \llll\ final statet. 
+
+In addition, calorimeter isolation cuts are applied. In the \llll\ final state, the ratio of the sum of the transverse energy in calorimeter cells 
+within a cone of $\Delta R < 0.2$ around the electron 
+ must be less than 30\% of the electron $E_T$ .
+In the \llvv\ final state, the requirement is that the sum of the calorimeter transverse energy in
+a cone of $\Delta R = 0.3$ around the electron candidate must be less than
+15\% of the electron $E_{T}$.
+In both cases, the energy in the isolation cone does not include the energy of
+the electron itself, and is corrected for the
+effects of pileup using the official prescription of the 
+egamma performance group\footnote{We use $el\_Etcone20\_corrected = CaloIsoCorrection::GetPtNPVCorrectedIsolation(\ldots)$ from the egammaAnalysisUtils-00-03-24 package.}.
+
+Electrons closer than $\Delta R=0.1$ to a muon which passes the analysis selection 
+are rejected. If two selected electrons overlap within $\Delta R < 0.1$, the
+lower-\pt\ electron is removed, although in the case of a central electron
+overlapping with a forward electron, which could occur near the boundary, the
+central electron would take precedence.
+
+In order to match the resolution observed for electrons in $W$ and $Z$
+events in 2011 data, the energy $E$ of electrons in
+%the transverse momentum $E_{T}$ of electrons in
+Monte Carlo simulation is smeared with the eGamma Rescaler
+Tool (\texttt{egammaAnalysisUtils-00-02-76}), keeping the electron direction 
+constant. Scale corrections to
+the electron energy in data events have been applied during the reconstruction.
+
 \section{Forward Electron Selection}
+
+In the \llll\ final state, `forward' electrons (author 8) are used
+to extend the pesudo-rapidity coverage to $2.47<|\eta|<3.16$. Beyond $|\eta|=2.5$
+there is no tracking, so these electrons are reconstructed from calorimeter
+information alone. Since the lack of tracking makes it harder to reject hadronic
+and photonic fakes, these electrons are required to pass tighter
+identification requirements: ``Tight''. Since these electrons lack a track
+measurement, it is impossible to determine their charge, and of course
+impossible to apply track isolation and track parameter cuts. 
+%For this reason a
+%tighter calorimeter isolation requirement is applied: the sum of the calorimeter transverse energy in
+%a cone of $\Delta R = 0.3$ around the electron, removing the electron energy,
+%must be less than 10\% of the electron energy.
 
 \section{Muon Selection}
 \section{Jet Selection}
