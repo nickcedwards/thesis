@@ -71,12 +71,23 @@ are summarised in~\tab{objsel-el} are described in more detail below.
 
 \section{Central Electron Selection}
 
-`Central' electrons, with $|\eta|<2.47$, the ``standard'' electron algorithm as
+`Central' electrons, with \etaclusterlt{2.47}, the ``standard'' electron algorithm as
 described in~\sec{reco-el-reco}.  For 2011 data, the algorithm used was slightly
 different to the `standard' ATLAS electron econstruction as tracks were refitted
 using a Gaussian-sum filter (GSF) to account to account for the effect of
 bremsstrahlung in the inner detector. In 2012 data this became the default
 reconstruction algorithm.
+%Electrons in the calorimeter ``crack" region $1.37 < |\eta_{cluster}| < 1.52$
+%are included, although the efficiency and energy resolution is expected
+
+For electron candidates with 4 or more silicon (SCT and Pixel) hits, the energy of
+the electron is taken from the cluster measurement, and the eta and phi
+are taken from the track. For electron candidates with fewer than 4
+silicon hits, all electron parameters are taken directly from the
+cluster. In both cases, the cluster eta and phi are used for the $\eta$
+requirement and for overlap removal. Using the momentum defined in this way, the electron
+candidates are required to have $E_T > 20$ GeV in the \llvv\ final state and
+$E_T > 7$ GeV in the \llll\ final state. 
 
 A small number of the front-end boards of the liquid argon calorimeter were
 inactive in 2011 and 2012; the exact number varied with time as some were
@@ -89,30 +100,17 @@ $\eta, \phi$ space consistent with the presence of a dead front-end board in
 the first or second sampling layer, the presence of a dead HV region affecting the
 three samplings, or the presence of a masked cell in the core of the cluster.
 
-To ensure that the candidates come from
-the primary vertex (defined as the
+To ensure that the candidates come from the primary vertex (defined as the
 vertex that has the highest $\sum{\pt^2}$ of associated tracks), the
-longitudinal impact parameter \zzero\ of the electron track with respect to the primary
-vertex must be less than 2 mm. The \intro{unbiased} impact paramter is used;
-the unbiased impact parameter for a particular track is obtained by refitting
-the vertex without the track in question, then calculating the impact parameter
-with respect to this refitted vertex, thus removing the pull of the track from
-the vertex fit.
-The transverse impact parameter \dzero\ must have a significance (\dzero\
-divided by the error on its measurement, \dzerosig) less than 6.
-Electrons in the ``crack" region $1.37 < |\eta_{cluster}| < 1.52$ are retained; 
-their energy (both for electrons in data and in simulated events) is scaled 
-appropriately using the tools provided by the e/gamma 
-performance group\footnote{We use the EnergyRescaler in the egammaAnalysisUtils-00-03-24 package.}.
+longitudinal impact parameter \zzero\ of the electron track with respect to the
+primary vertex must be less than 2 mm. The \intro{unbiased} impact paramter is
+used; the unbiased impact parameter for a particular track is obtained by
+refitting the vertex without the track in question, then calculating the impact
+parameter with respect to this refitted vertex, thus removing the pull of the
+track from the vertex fit.  The transverse impact parameter \dzero\ must have a
+significance (\dzero\ divided by the error on its measurement, \dzerosig) less
+than 6.
 
-For electron candidates with 4 or more silicon (SCT and Pixel) hits, the energy of
-the electron is taken from the cluster measurement, and the eta and phi
-are taken from the track. For electron candidates with fewer than 4
-silicon hits, all electron parameters are taken directly from the
-cluster. In both cases, the cluster eta and phi are used for the $\eta$
-requirement and for overlap removal. Using the momentum defined in this way, the electron
-candidates are required to have $E_T > 20$ GeV in the \llvv\ final state and
-$E_T > 7$ GeV in the \llll\ final state. 
 %, see Sec.~\ref{sec:EventSelection}.
 %the electron which is trigger matched
 %to an e20\_medium trigger 
