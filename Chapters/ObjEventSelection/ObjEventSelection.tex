@@ -87,10 +87,10 @@ of the electron is taken from the cluster measurement, and the eta and phi are
 taken from the track (this requirement is automatically satisfied if the
 electrons pass the \loosePP\ identification requirements). For electron
 candidates with fewer than 4 silicon hits, all electron parameters are taken
-directly from the cluster. In both cases, the cluster eta and phi are used for
+directly from the cluster. In both cases, the cluster $\eta$ and $\phi$ are used for
 the $\eta$ requirement and for overlap removal. Using the energy and direction
 defined in this way, the electron candidates are required to have \etgt{7},
-where \et\ is defined as $E\sin{\theta}=E/\cosh{\eta}$. 
+where \et\ is defined as $E\sin(\theta)=E/\cosh(\eta)$. 
 
 A small number of the front-end boards of the liquid argon calorimeter were
 inactive in 2011 and 2012; the exact number varied with time as some were
@@ -113,6 +113,13 @@ parameter with respect to this refitted vertex, thus removing the pull of the
 track from the vertex fit.  The transverse impact parameter \dzero\ must have a
 significance (\dzero\ divided by the error on its measurement, \dzerosig) less
 than 6.
+
+The muons must be isolated from energy deposits in the calorimeter. In the \llvv\
+final-state, the
+requirement is $etcone30/\pt < 0.15$. In the \llll\ final state the
+requirement is $etcone20/\pt < 0.30$ for $|\eta|<2.5$ (all muon types) and
+$etcone20/\pt < 0.15$ for $2.5<|\eta|<2.7$.
+The energy in the cone is corrected for contributions from pile-up events using the number of vertices reconstructed in the event (\texttt{MuonIsolationCorrections-01-01}).
 
 %, see Sec.~\ref{sec:EventSelection}.
 %the electron which is trigger matched
