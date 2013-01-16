@@ -90,9 +90,16 @@ the first or second sampling layer, the presence of a dead HV region affecting t
 three samplings, or the presence of a masked cell in the core of the cluster.
 
 To ensure that the candidates come from
-the primary vertex, the absolute $z_0$ of the electron track with respect to the primary
-vertex must be less than 2 mm and the $d_0$ significance is required to be
-less than 6.
+the primary vertex (defined as the
+vertex that has the highest $\sum{\pt^2}$ of associated tracks), the
+longitudinal impact parameter \zzero\ of the electron track with respect to the primary
+vertex must be less than 2 mm. The \intro{unbiased} impact paramter is used;
+the unbiased impact parameter for a particular track is obtained by refitting
+the vertex without the track in question, then calculating the impact parameter
+with respect to this refitted vertex, thus removing the pull of the track from
+the vertex fit.
+The transverse impact parameter \dzero\ must have a significance (\dzero\
+divided by the error on its measurement, \dzerosig) less than 6.
 Electrons in the ``crack" region $1.37 < |\eta_{cluster}| < 1.52$ are retained; 
 their energy (both for electrons in data and in simulated events) is scaled 
 appropriately using the tools provided by the e/gamma 
