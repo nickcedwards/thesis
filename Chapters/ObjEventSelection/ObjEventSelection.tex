@@ -71,23 +71,24 @@ are summarised in~\tab{objsel-el} are described in more detail below.
 
 \section{Central Electron Selection}
 
-`Central' electrons, with \etaclusterlt{2.47}, the ``standard'' electron algorithm as
-described in~\sec{reco-el-reco}.  For 2011 data, the algorithm used was slightly
-different to the `standard' ATLAS electron econstruction as tracks were refitted
-using a Gaussian-sum filter (GSF) to account to account for the effect of
-bremsstrahlung in the inner detector. In 2012 data this became the default
-reconstruction algorithm.
+`Central' electrons, with \modetaclusterlt{2.47}, are reconstructed using the
+``standard'' electron algorithm as described in~\sec{reco-el-reco}.  For 2011
+data, the algorithm used was slightly different to the `standard' ATLAS electron
+econstruction as tracks were refitted using a Gaussian-sum filter (GSF) to
+account to account for the effect of bremsstrahlung in the inner detector. In
+2012 data this became the default reconstruction algorithm.
 %Electrons in the calorimeter ``crack" region $1.37 < |\eta_{cluster}| < 1.52$
 %are included, although the efficiency and energy resolution is expected
 
 For electron candidates with 4 or more silicon (SCT and Pixel) hits, the energy of
 the electron is taken from the cluster measurement, and the eta and phi
-are taken from the track. For electron candidates with fewer than 4
+are taken from the track (this requirement is automatically satisfied if the
+electrons pass the \loosePP\ identification requirements). For electron candidates with fewer than 4
 silicon hits, all electron parameters are taken directly from the
 cluster. In both cases, the cluster eta and phi are used for the $\eta$
-requirement and for overlap removal. Using the momentum defined in this way, the electron
-candidates are required to have $E_T > 20$ GeV in the \llvv\ final state and
-$E_T > 7$ GeV in the \llll\ final state. 
+requirement and for overlap removal. Using the energy and direction defined in this way, the electron
+candidates are required to have \etgt{7}, where \et\ is defined as
+$E\sin{\theta}=E/\cosh{\eta}$. 
 
 A small number of the front-end boards of the liquid argon calorimeter were
 inactive in 2011 and 2012; the exact number varied with time as some were
