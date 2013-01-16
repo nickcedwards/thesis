@@ -112,8 +112,13 @@ refitting the vertex without the track in question, then calculating the impact
 parameter with respect to this refitted vertex, thus removing the pull of the
 track from the vertex fit.  The transverse impact parameter \dzero\ must have a
 significance (\dzero\ divided by the error on its measurement, \dzerosig) less
-than 6.
+than 6. This helps reduce backgrounds, particularly from decays of pions and
+kaons in jets to electrons, since these decays will occur further from the
+interaction point giving larger impact parameters.
 
+Isolation requirements are imposed to reduce the backgrounds from jets being
+misidentified as electrons, or from electrons from decays in jets, collectively referred to
+as \intro{background electrons}. Such background electrons 
 The muons must be isolated from energy deposits in the calorimeter. In the \llvv\
 final-state, the
 requirement is $etcone30/\pt < 0.15$. In the \llll\ final state the
