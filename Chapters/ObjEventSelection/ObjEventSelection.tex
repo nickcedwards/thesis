@@ -118,32 +118,25 @@ interaction point giving larger impact parameters.
 
 Isolation requirements are imposed to reduce the backgrounds from jets being
 misidentified as electrons, or from electrons from decays in jets, collectively referred to
-as \intro{background electrons}. Such background electrons 
-The muons must be isolated from energy deposits in the calorimeter. In the \llvv\
-final-state, the
-requirement is $etcone30/\pt < 0.15$. In the \llll\ final state the
-requirement is $etcone20/\pt < 0.30$ for $|\eta|<2.5$ (all muon types) and
-$etcone20/\pt < 0.15$ for $2.5<|\eta|<2.7$.
-The energy in the cone is corrected for contributions from pile-up events using the number of vertices reconstructed in the event (\texttt{MuonIsolationCorrections-01-01}).
-
-%, see Sec.~\ref{sec:EventSelection}.
-%the electron which is trigger matched
-%to an e20\_medium trigger 
-
-Similarly to our requirements on muons, electrons are required to be isolated both in the tracker and in the calorimeter.
-Electron tracks must satisfy $ptCone30/E_{T}<0.15$ for the \llvv\ final state
-and $ptCone20/E_{T}<0.15$ for the \llll\ final statet. 
-
-In addition, calorimeter isolation cuts are applied. In the \llll\ final state, the ratio of the sum of the transverse energy in calorimeter cells 
-within a cone of $\Delta R < 0.2$ around the electron 
- must be less than 30\% of the electron $E_T$ .
-In the \llvv\ final state, the requirement is that the sum of the calorimeter transverse energy in
-a cone of $\Delta R = 0.3$ around the electron candidate must be less than
-15\% of the electron $E_{T}$.
-In both cases, the energy in the isolation cone does not include the energy of
-the electron itself, and is corrected for the
-effects of pileup using the official prescription of the 
-egamma performance group\footnote{We use $el\_Etcone20\_corrected = CaloIsoCorrection::GetPtNPVCorrectedIsolation(\ldots)$ from the egammaAnalysisUtils-00-03-24 package.}.
+as \intro{background electrons}. Such background electrons will typically have
+many tracks surrounding their track in the tracker, and be surrounded by large
+energy deposits in the calorimeter from other particles in the jet. \intro{Track
+Isolation} requirements are imposed, requiring that the sum of the \pt\ of
+tracks surrounding the electron's track in a cone of \deltaRlt{0.2} be less than 15\% of the electron's \pt,
+i.e. \ptconetwentylt{0.15}. Tracks included in the calculation are required to
+have \ptgt{0.4}, have impact parameters consistent with the same vertex as the
+electron and have at least 9 silicon hits, thus ensuring good track quality and
+purity. The impact parameter requirement means that this variable is insensitive
+to pileup as most tracks from other (pileup) vertices are excluded.
+Additionally, for the 2011 data, a calorimeter isolation requirement is imposed.
+This is defined as the sum of calorimeter cell energies in a cone of
+deltaRlt{0.2} around the barycentre of the electron cluster, excluding a 5x7
+grid of cells in the centre of the cone (which are assumed to be due to the
+electron). Cells from both the EM and hadronic calorimeters are included. The
+requirement is that the sum of such energies be less than 30\% of electron \et,
+i.e. \etconetwentylt{0.3}.
+The energy in the cone is corrected for contributions from pile-up events using
+the number of vertices reconstructed in the event
 
 Electrons closer than \deltaRlt{0.1} to a muon which passes the object selection
 requirements (see~\sec{objsel-mu}) are rejected. If two selected electrons
