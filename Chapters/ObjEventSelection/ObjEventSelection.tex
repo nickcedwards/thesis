@@ -3,9 +3,63 @@
 \label{chap:ObjEventSelection}
 
 \section{Electron Selection}
+
+Electron reconstruction and identification was described in~\sec{reco-el}. Both
+central electrons with \modetalt{2.47} and forward electrons are used. In
+addition to the indentification requirements described in~\sec{reco-el}
+additional selection requirements are imposed to select electrons likely to have
+originated from \Z\ boson decays and to reject backgrounds. The requirements are
+slightly different for the 8 \tev\ analysis compared to the 7 \tev\ analysis,
+reflecting the different experimental conditions (such as higher pile-up in
+2012) as well as optimisations made in 2012. The electron selection requirements
+are summarised in~\tab{objsel-el} are described in more detail below. 
+
+\begin{table}[!htbp]
+  \centering
+%   \vspace*{-1cm}
+  \begin{tabular}{ l  l l }
+    \hline\hline 
+      Requirement        & 7 \tev\ & 8 \tev\ \\ 
+      \hline
+      \bf{Central Electron Selection} & \\
+      1. Algorthim & Standard (with GSF refit) & Standard \\
+      2. Quality &  \multicolumn{2}{c}{\texttt{(OQ  AND 1446 == 0})} \\
+      3. ID cut & \multicolumn{2}{c}{\loosepp}       \\
+      4. $\eta$  & \multicolumn{2}{c}{$|\eta|<2.47$} \\
+      5. $e$: $E_T$  &  \multicolumn{2}{c}{$E_T > 7$ GeV} \\
+      6. $e$: $z_0$ & \multicolumn{2}{c}{$z_0 < 2$ mm} \\
+      7. $e$: $d_0$ & \multicolumn{2}{c}{$|d_0|/\sigma(d_0) < 6 $} \\
+      8. $e$: Track isolation & \multicolumn{2}{c}{ptconetwnetylt{0.15}} &   \\
+      9.  $e$: Calorimeter isolation  &  \etconetwentylt{0.3} &
+      calo $\Sigma E_T (\Delta R < 0.3) / E_T < 15\%$ \\
+      10. $e$: Overlap removal & \multicolumn{2}{c}{a) Remove $e$ if $\Delta R <
+      0.1$ from $\mu$} \\
+                            &   \multicolumn{2}{c}{ b) Remove lowest $E_T$ $e$
+                            in $\Delta R < 0.1$ from another $e$} \\ 
+      \hline
+      \underline{Forward Electron Selection:} & \\
+      1. $e$: Type & \texttt{author==8} & \it{Not used}  \\
+      2. $e$: Quality &  \texttt{(OQ  AND 1446 == 0)} & \\
+      3. $e$: ID cut & \texttt{Tight}         &       \\
+      4. $e$: $\eta$  & $2.50<|\eta|<3.16$ & \\
+      5. $e$: $E_T$  & $E_T > 20$ GeV &   \\
+%      6. $e$: Calorimeter isolation  &  calo $\Sigma E_T (\Delta R < 0.3) / E_T < 10\%$ &  \\
+      6. $e$: Overlap removal &  Remove if overlaps with central &  \\
+                            &    electron or any muon in $\Delta R < 0.1$               \\
+    \hline \hline
+  \end{tabular}
+   \caption{Electron selection requirements.}
+   \label{table:objsel-el}
+\end{table}
+
+\section{Central Electron Selection}
+
+\section{Forward Electron Selection}
+
 \section{Muon Selection}
 \section{Jet Selection}
 \section{\ZZ\ Event Selection}
+\subsection{Triggers}
 \section{Selection Efficiencies}
 \subsection{\CZZ}
 \subsection{Mispairing rates}
