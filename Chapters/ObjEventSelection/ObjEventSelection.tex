@@ -22,26 +22,25 @@ are summarised in~\tab{objsel-el} are described in more detail below.
       Requirement        & 7 \tev\ & 8 \tev\ \\ 
       \hline
       \bf{Central Electron Selection} & \\
-      Algorthim                       & Standard (with GSF refit) & Standard \\
-      Quality &  \multicolumn{2}{c}{\texttt{(OQ  AND 1446 == 0})} \\
-      ID cut & \multicolumn{2}{c}{\loosePP}       \\
-      $\eta$  & \multicolumn{2}{c}{$|\eta|<2.47$} \\
-      $E_T$  &  \multicolumn{2}{c}{$E_T > 7$ GeV} \\
-      $z_0$ & \multicolumn{2}{c}{$z_0 < 2$ mm} \\
-      $d_0$ & \multicolumn{2}{c}{$|d_0|/\sigma(d_0) < 6 $} \\
-      Track isolation & \multicolumn{2}{c}{\ptconetwentylt{0.15}}   \\
-      Calorimeter isolation  &  \etconetwentylt{0.3} & - \\
-      Overlap removal & \multicolumn{2}{c}{a) Remove $e$ if $\Delta R < 0.1$ from $\mu$} \\
-                            &   \multicolumn{2}{c}{ b) Remove lowest $E_T$ $e$
-                            in $\Delta R < 0.1$ from another $e$} \\ 
+      Algorthim             & Standard (with GSF refit)     & Standard \\
+      Quality               & \multicolumn{2}{c}{\texttt{(OQ  AND 1446 == 0})} \\
+      ID cut                & \multicolumn{2}{c}{\loosePP}       \\
+      $\eta$                & \multicolumn{2}{c}{$|\eta|<2.47$} \\
+      $E_T$                 & \multicolumn{2}{c}{$E_T > 7$ GeV} \\
+      $z_0$                 & \multicolumn{2}{c}{$z_0 < 2$ mm} \\
+      $d_0$                 & \multicolumn{2}{c}{$|d_0|/\sigma(d_0) < 6 $} \\
+      Track isolation       & \multicolumn{2}{c}{\ptconetwentylt{0.15}}   \\
+      Calorimeter isolation & \etconetwentylt{0.3}          & - \\
+      Overlap removal       & \multicolumn{2}{c}{a) Remove $e$ if $\Delta R < 0.1$ from $\mu$} \\
+                            & \multicolumn{2}{c}{b) Remove lowest $E_T$ $e$ in \deltaRlt{0.1} from another $e$} \\ 
       \hline
       \underline{Forward Electron Selection:} & \\
-      Alogirthm & \multicolumn{2}{c}{Forward} \\
-      Quality &  \multicolumn{2}{c}{\texttt{(OQ  AND 1446 == 0)}}  \\
-      ID cut & \multicolumn{2}{c}{Tight} \\
-      $\eta$  & \multicolumn{2}{c}{$2.50<|\eta|<3.16$} \\
-      $E_T$  & \multicolumn{2}{c}{$E_T > 20$ GeV} \\
-      Overlap removal &  \multicolumn{2}{c}{Remove if overlaps with central electron or any muon in \deltaRlt{0.1} \\
+      Alogirthm             & \multicolumn{2}{c}{Forward} \\
+      Quality               & \multicolumn{2}{c}{\texttt{(OQ  AND 1446 == 0)}}  \\
+      ID cut                & \multicolumn{2}{c}{Tight} \\
+      $\eta$                & \multicolumn{2}{c}{$2.50<|\eta|<3.16$} \\
+      $E_T$                 & \multicolumn{2}{c}{$E_T > 20$ GeV} \\
+      Overlap removal       & \multicolumn{2}{c}{Remove if overlaps with central electron or any muon in \deltaRlt{0.1}} \\
     \hline \hline
   \end{tabular}
    \caption{Electron selection requirements.}
