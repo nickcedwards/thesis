@@ -71,21 +71,22 @@ are summarised in~\tab{objsel-el} are described in more detail below.
 
 \section{Central Electron Selection}
 
-In the pseudo-rapidity region $|\eta|<2.47$, `central' electrons are
-reconstructed with  the ``standard'' electron algorithm (author 1 or 3).
-In order to account for the effect of bremsstrahlung in the inner
-detector, tracks are refitted using a Gaussian-sum filter (GSF). 
+`Central' electrons, with $|\eta|<2.47$, the ``standard'' electron algorithm as
+described in~\sec{reco-el-reco}.  For 2011 data, the algorithm used was slightly
+different to the `standard' ATLAS electron econstruction as tracks were refitted
+using a Gaussian-sum filter (GSF) to account to account for the effect of
+bremsstrahlung in the inner detector. In 2012 data this became the default
+reconstruction algorithm.
 
-To avoid problems with the front-end boards of the
-liquid argon calorimeter or other data quality issues, all electron
-candidates are required to pass the object quality cut
-($OQ \text{ AND } 1446==0$). The bitmask, 1446, defines
-a bad electron and indicates that its cluster is affected by 
-at least one of the following three conditions: the 
-presence of a dead front-end board in the first or second sampling 
-layer, the presence of a dead region affecting the three
-samplings, or the
-presence of a masked cell in the core. 
+A small number of the front-end boards of the liquid argon calorimeter were
+inactive in 2011 and 2012; the exact number varied with time as some were
+repaired whilst other developed faults. Additional, a number of individual cells
+are masked in the readout (i.e. have their energy set to zero) due to
+consistently producing high noise or failing to give a readout. There are also
+regions where the High-Voltage supply to the LAr is faulty. Electrons falling into a region of
+$\eta, \phi$ space consistent with the presence of a dead front-end board in
+the first or second sampling layer, the presence of a dead HV region affecting the
+three samplings, or the presence of a masked cell in the core are rejected.
 
 To ensure that the candidates come from
 the primary vertex, the absolute $z_0$ of the electron track with respect to the primary
