@@ -253,11 +253,13 @@ backgrounds at low energy.
       % This is a cut that is automatically satisfied by combined
       %MS Track Quality      & Hits in all 3 stations       & \same \\
       ID Track Quality      & As Central Muons              &  \\
-      Calorimeter isolation & \etconetwentylt{0.15}         & \same \\
+      Calorimeter isolation & \etconetwentylt{0.3}         & \same \\
       Track isolation       & \ptconetwentylt{0.15}         & \same   \\
       Overlap removal       & \multicolumn{1}{p{5cm}}{Remove 
                               if overlaps with a central 
                               muon in \deltaRlt{0.1}} 
+      $z_0$                 & $|z_0| < 2$ mm                & $|z_0\sin(\theta)| < 0.5$ mm \\
+      $d_0$                 & $|d_0|/\sigma(d_0) < 3.5 $    & \same \\
                                                             & \it{Same}\\
 
 %
@@ -368,20 +370,14 @@ Additionally forward muons with an ID track are required to satisfy the same
 
 \subsection{Calorimeter Tagged Muon Selection}
 
-\verb|CaloTrkMuID| muons use the calorimeter to tag inner-detector tracks as
-originating from muons. This helps to recover efficiency at $|\eta|<0.1$ where
-there is a gap in the muon-spectrometer. A muon with sufficient momentum
-will traverse all the layers of the calorimeter, leaving a small signal. 
-A low momentum hadron deposits
-most of its energy in the first layers and leaves no signal in the last layers;
-high momentum hadrons will deposit much energy in the core cells. 
-Electrons will deposit much energy in the EM calorimeter. The \verb|CaloTrkMuID|
-algorithm thus requires a MIP signal in each layer of the calorimeter to reject
-hadron and electron backgrounds. A cut based quality selection and a likelihood
-ratio based quality selection are both used, and we accept muons passing either.
-\verb|CaloTrkMuID| muons are only used in the \llll\ final state for
-$|\eta|<0.1$, and are not selected if they overlap with a selected \verb|STACO|
-muon within $\Delta R<0.1$.
+Calorimeter tagged muons are used to recover efficiency at \modetalt{0.1} where
+there is a gap in the muon-spectrometer. They mist have \ptgt{20}; the reason
+for this higher \pt\ requirement is the higher level of fakes from jets and
+electrons at low \pt, and the difficulty of measuring the identification
+efficiency for $\pt<20\gev$. They are required to pass either the cut or
+likelihood based identification requirements described in~\sec{reco-mu-reco},
+and are not selected if they overlap with a selected selected standard central
+muon within \deltaRlt{0.1}.
 
 \begin{figure}[h]
 \centering
