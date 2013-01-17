@@ -60,7 +60,7 @@ parameter between the track and the muon track.
 \label{sec:reco-mu-reco}
 
 Muon reconstruction is in general based on combinations of accurate measurements
-in the Muon Spectrometer and the Inner Detector~\cite{ATLAS-CONF-2010-064,ATLAS-CONF-2011-063}. There are four categories of
+in the muon spectrometer and the Inner Detector~\cite{ATLAS-CONF-2010-064,ATLAS-CONF-2011-063}. There are four categories of
 muons:
 
 \begin{itemize}
@@ -123,34 +123,31 @@ The segment candidates are required to point loosely towards the
 interaction point, and cuts are applied on the \chisquared\ of the track
 segment, with penalties for missing hits. 
 
-Track candidates are then formed by combining at least
-two segments from different stations to form track candidates. The tracks are
-seeded from track segments that have at least one second-coordinate hit. A first
-rough estimate of the momentum is deduced from the position and direction of the
-segment. Each of these segments is then extrapolated to the other stations, and
-matches in position and direction are found. Since the track momentum is not well
-known at this point, a `momentum-scan' of several possible momentum values is
-performed. The best match (if any) is chosen, and the track segments are
-combined and refitted to obtain a more accurate momentum measurement. A second,
-finer momentum scan is performed around the improved momentum estimate,
-extrapolating to all other stations, and segments which match to the track are added to
-it.
-The track is then refitted (still using the track segments as inputs) to more accurately determine the momentum, position and
-direction. 
+Track candidates are then formed by combining at least two segments from
+different stations to form track candidates. The tracks are seeded from track
+segments that have at least one second-coordinate hit. A first rough estimate of
+the momentum is deduced from the position and direction of the segment. Each of
+these segments is then extrapolated to the other stations, and matches in
+position and direction are found. Since the track momentum is not well known at
+this point, a `momentum-scan' of several possible momentum values is performed.
+The best match (if any) is chosen, and the track segments are combined and
+refitted to obtain a more accurate momentum measurement. A second, finer
+momentum scan is performed around the improved momentum estimate, extrapolating
+to all other stations, and segments which match to the track are added to it.
+The track is then refitted (still using the track segments as inputs) to more
+accurately determine the momentum, position and direction. 
 
-Next a global fit is performed on the candidate tracks, starting from the
-best results of the previous fit, but using the full raw hit information rather
-than the track segments. This gives
-a better estimate of the likelihood of the track and gives a better
-discrimination of outlier hits from `good' hits. Finally, a last fit including
-a detailed description of the material traversed by the tracks is performed.
-This fit properly takes into account multiple scattering effects, by including
-the
-scattering angles at a set of discretised scattering centres in the
-fit. The energy loss due to interactions is also taken into account  by
-parametrising the most probable energy loss as as a function of the track momentum and
-the amount of material crossed. The selection of reconstructed muons is made
-based on the \chisquared\ quality of this final fit.
+Next a global fit is performed on the candidate tracks, starting from the best
+results of the previous fit, but using the full raw hit information rather than
+the track segments. This gives a better estimate of the likelihood of the track
+and gives a better discrimination of outlier hits from `good' hits. Finally, a
+last fit including a detailed description of the material traversed by the
+tracks is performed.  This fit properly takes into account multiple scattering
+effects, by including the scattering angles at a set of discretised scattering
+centres in the fit. The energy loss due to interactions is also taken into
+account  by parametrising the most probable energy loss as as a function of the
+track momentum and the amount of material crossed. The selection of
+reconstructed muons is made based on the \chisquared\ quality of this final fit.
 
 Selected muon tracks are then extrapolated back to the interaction point,
 correcting for energy loss and multiple scattering in the calorimeters and the
@@ -173,38 +170,36 @@ tracks.
 
 \subsubsection{Calorimeter Tagged Muons}
 
-It is also possible to reconstruct muons independently of the MS by using the calorimeter to tag inner-detector tracks originating from muons.
- A muon
-with sufficient momentum will traverse all layers of the calorimeter,
-leaving a small energy deposit in each layer. It is possible to distinguish this
-pattern of energy deposition from that of other particles. A low
-momentum hadron will deposit most of its energy in the first layers of the
-calorimeter, leaving no signal in the last layers. High momentum hadrons will
-deposit most of their energy in the core cells, and electrons will deposit most of their energy
-in the EM calorimeter. The \CaloTrkMuID\ algorithm identifies muon candidates by
-requiring an ID track matched to a signal consistent
-with a minimum-ionising-particle in each layer of the
-calorimeter. 
+It is also possible to reconstruct muons independently of the MS by using the
+calorimeter to tag inner-detector tracks originating from muons.  A muon with
+sufficient momentum will traverse all layers of the calorimeter, leaving a small
+energy deposit in each layer. It is possible to distinguish this pattern of
+energy deposition from that of other particles. A low momentum hadron will
+deposit most of its energy in the first layers of the calorimeter, leaving no
+signal in the last layers. High momentum hadrons will deposit most of their
+energy in the core cells, and electrons will deposit most of their energy in the
+EM calorimeter. The \CaloTrkMuID\ algorithm identifies muon candidates by
+requiring an ID track matched to a signal consistent with a
+minimum-ionising-particle in each layer of the calorimeter. 
  %to reject hadron and electron backgrounds
-Both a cut based quality selection and a likelihood
-ratio based quality selection are used, and muon candidates passing either are
-accepted. Calorimeter tagged muons are used to recover efficiency at
-\modetalt{0.1} where there is a gap in the muon-spectrometer.
+Both a cut based quality selection and a likelihood ratio based quality
+selection are used, and muon candidates passing either are accepted. Calorimeter
+tagged muons are used to recover efficiency at \modetalt{0.1} where there is a
+gap in the muon-spectrometer.
 
 \subsubsection{Reconstruction efficiencies}
 
 ~\fig{mu-reco-eff} shows the observed reconstruction efficiency for muons
-reconstructed as either Combined or Segment
-Tagged in the 2011 data, measured using
-a tag and probe technique on \Z\ boson decays~\cite{ATLAS-CONF-2011-063}, as well as the efficiency predicted by the
-Monte-Carlo simulation. The efficiency is
-seen to drop significantly for \modetalt{0.1} for reasons explained above. The
-efficiency for calorimeter tagged muons is also shown, and it is seen that this
-effectively recovers the loss in efficiency at \modetalt{0.1}. The muon
-reconstruction efficiency is seen to be almost constant as a function of \pt. In
-both \pt\ and $\eta$ good agreement is seen between the \mcsim\ and the data,
-but as with the electrons, scale-factors are applied to the Monte-Carlo to
-reproduce the efficiency observed in data.
+reconstructed as either Combined or Segment Tagged in the 2011 data, measured
+using a tag and probe technique on \Z\ boson decays~\cite{ATLAS-CONF-2011-063},
+as well as the efficiency predicted by the Monte-Carlo simulation. The
+efficiency is seen to drop significantly for \modetalt{0.1} for reasons
+explained above. The efficiency for calorimeter tagged muons is also shown, and
+it is seen that this effectively recovers the loss in efficiency at
+\modetalt{0.1}. The muon reconstruction efficiency is seen to be almost constant
+as a function of \pt. In both \pt\ and $\eta$ good agreement is seen between the
+\mcsim\ and the data, but as with the electrons, scale-factors are applied to
+the Monte-Carlo to reproduce the efficiency observed in data.
 
 \begin{figure}[h]
 \centering
@@ -214,16 +209,18 @@ reproduce the efficiency observed in data.
 	\subfigure[]{
             \includegraphics[width=0.475\textwidth]{STACO_loose_id_vs_pt}
         }
-\caption[Muon reconstruction efficiency in 2011 as a function of the pseudorapidity
-and the transverse momentum of the muon for muons reconstructed as either Combined or Segment
-Tagged using the \staco\ algorithm. ]{Muon reconstruction efficiency in 2011 as a function of (a) the pseudorapidity
-and (b) the transverse momentum of the muon for muons reconstructed as either Combined or Segment
-Tagged using the \staco\ algorithm. The solid black points
-show the efficiency observed in data, and the open red circles show the
-efficiency predicted by Monte-Carlo simulation. In figure (a) the efficiencies for
-calorimeter tagged muons are also shown for \modetalt{0.1} (solid blue triangles
-for data and open green triangles for Monte-Carlo). Figures from~\cite{MuonEfficiency2011}.}
-\label{fig:mu-reco-eff}
+    \caption[Muon reconstruction efficiency in 2011 as a function of the
+    pseudorapidity and the transverse momentum of the muon for muons reconstructed
+    as either Combined or Segment Tagged using the \staco\ algorithm. ]{Muon
+    reconstruction efficiency in 2011 as a function of (a) the pseudorapidity and
+    (b) the transverse momentum of the muon for muons reconstructed as either
+    Combined or Segment Tagged using the \staco\ algorithm. The solid black points
+    show the efficiency observed in data, and the open red circles show the
+    efficiency predicted by Monte-Carlo simulation. In figure (a) the efficiencies
+    for calorimeter tagged muons are also shown for \modetalt{0.1} (solid blue
+    triangles for data and open green triangles for Monte-Carlo). Figures
+    from~\cite{MuonEfficiency2011}.} 
+    \label{fig:mu-reco-eff} 
 \end{figure}
 
 
@@ -236,11 +233,12 @@ The muon momentum resolution in the MS can be parameterised as:
 \oplus  p_{2}^{MS} \cdot p_{T}
 \end{equation}
 
-where  $p_{0}^{MS}$, $p_{1}^{MS}$ and $p_{2}^{MS}$ are coefficients related to
+where $p_{0}^{MS}$, $p_{1}^{MS}$ and $p_{2}^{MS}$ are coefficients related to
 the energy loss in the calorimeters, multiple scattering and intrinsic
-resolution, respectively. For the ID, the momentum resolution depends on the track length
-measured in the active elements, which is reduced at the edges of the
-detector where particles will not traverse all layers of the TRT. The ID muon momentum resolution can thus be parameterised as:
+resolution, respectively. For the ID, the momentum resolution depends on the
+track length measured in the active elements, which is reduced at the edges of
+the detector where particles will not traverse all layers of the TRT. The ID
+muon momentum resolution can thus be parameterised as:
 
 \begin{equation}
 \frac{ \sigma (p) }{ p } = \left\{
@@ -255,14 +253,15 @@ for}\, \modetalt{1.9} \\
 The muon momentum resolution is measured in data using \Zmm\ decays. The width
 of the reconstructed di-muon invariant mass peak at \Z\ pole is fitted to a
 convolution of a Breit-Wigner modelling the natural width of the \Z\ boson, and
-a Gaussian modelling the muon momentum measurement resolution. The
-distributions measured in the ID and the MS are fitted independently to obtain
-separate measurements of the di-muon mass resolution in the two sub-detectors.
-An iterative fitting procedure is then carried out to obtain the single muon
-resolution parameters: a series of simulated di-muon mass distributions are produced for
-various momentum resolution values and then matched to the one observed in data. 
-A smearing is applied to the simulated muon momentum in order to reproduce the
-resolution obtained in data. The smeared MS resolution is defined as
+a Gaussian modelling the muon momentum measurement resolution. The distributions
+measured in the ID and the MS are fitted independently to obtain separate
+measurements of the di-muon mass resolution in the two sub-detectors.  An
+iterative fitting procedure is then carried out to obtain the single muon
+resolution parameters: a series of simulated di-muon mass distributions are
+produced for various momentum resolution values and then matched to the one
+observed in data.  A smearing is applied to the simulated muon momentum in order
+to reproduce the resolution obtained in data. The smeared MS resolution is
+defined as
 
 \begin{equation}
 p'_{T}(MS) = p_{T}(MS) (1+\Delta(MS))
@@ -301,13 +300,15 @@ in the data as described in the last paragraph.
 	\subfigure[]{
             \includegraphics[width=0.475\textwidth]{mu_resolution_dimu_2012}
         }
-\caption[Di-muon mass resolutions for muon tracks measured in the Muon
-Spectrometer, muon tracks measured in the Inner Detector, and combined muon
-tracks. ]{Di-muon mass resolutions for (a) muon tracks measured in the Muon
-Spectrometer, (b) muon tracks measured in the Inner Detector, and (c) combined muon
-tracks. The solid points show the measured values in selected \Zmm\ events in data collected in 2012. The
-blue points show the resolution in simulated \Zmm\ decays, and the red diamonds
-show the simulated resolution after applying muon momentum resolution corrections to the simulation. Figures from~\cite{MuonPerfPlots2012}.}
+    \caption[Di-muon mass resolutions for muon tracks measured in the Muon
+    Spectrometer, muon tracks measured in the Inner Detector, and combined muon
+    tracks. ]{Di-muon mass resolutions for (a) muon tracks measured in the Muon
+    Spectrometer, (b) muon tracks measured in the Inner Detector, and (c) combined
+    muon tracks. The solid points show the measured values in selected \Zmm\ events
+    in data collected in 2012. The blue points show the resolution in simulated
+    \Zmm\ decays, and the red diamonds show the simulated resolution after applying
+    muon momentum resolution corrections to the simulation. Figures
+    from~\cite{MuonPerfPlots2012}.}
 \label{fig:mu-resolution-dimu}
 \end{figure}
 
