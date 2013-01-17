@@ -199,9 +199,9 @@ backgrounds at low energy.
       $\eta$                & $|\eta|<2.5$                  & \same \\
       $p_T$                 & $p_T > 7$ GeV                 & \same \\
       ID Track Quality      & & \\
-       - B Layer Hits       & $\geq 1$                         & \same \\
-       - Pixel Hits         & $\geq 2$                         &  $\geq 1$\\
-       - SCT Hits           & $\geq 6$                         &  $\geq 5$\\
+       - B Layer Hits       & $\geq 1$                      & \same \\
+       - Pixel Hits         & $\geq 2$                      &  $\geq 1$\\
+       - SCT Hits           & $\geq 6$                      &  $\geq 5$\\
        - Silicon `Holes'    & $<3$                          & \same \\
        - TRT                & \multicolumn{1}{p{5cm}}{\raggedright
                                 {\bf If \modetalt{1.9}:} 
@@ -220,8 +220,8 @@ backgrounds at low energy.
                                                                 If $n_{hits}+n_{outliers}>5$ 
                                                                 require $n_{outliers}/(n_{hits}+n_{outliers})<0.9$} \\
       $z_0$                 & $|z_0| < 2$ mm & $|z_0\sin(\theta)| < 0.5$ mm \\
-      $d_0$                 & $|d_0|/\sigma(d_0) < 3.5 $ & \same \\
-      Track isolation       & \ptconetwentylt{0.15} & \same   \\
+      $d_0$                 & $|d_0|/\sigma(d_0) < 3.5 $    & \same \\
+      Track isolation       & \ptconetwentylt{0.15}         & \same   \\
       Calorimeter isolation & \etconetwentylt{0.3}          & \it{Not Applied} \\
       \hline
       \bf{Forward Muons} & \\
@@ -230,16 +230,27 @@ backgrounds at low energy.
       $\eta$                & \modetabetween{2.5}{2.7}      & \same \\
       $p_T$                 & $p_T > 10$ GeV                & \same \\
       % This is a cut that is automatically satisfied by combined
-      %MS Track Quality      & Hits in all 3 stations        & \same \\
+      %MS Track Quality      & Hits in all 3 stations       & \same \\
        \multicolumn{3}{c}{\it \underline{Additional requirements for Combined Muons}} \\
-      Calorimeter isolation & \etconetwentylt{0.15}          & \same \\
+      Calorimeter isolation & \etconetwentylt{0.15}         & \same \\
       ID Track Quality      &                               &  \\
-       - B Layer Hits       & $\geq 1$                         & \same \\
-       - Pixel Hits         & $\geq 2$                         &  $\geq 1$\\
-       - SCT Hits           & $\geq 4$                         &  $\geq 3$\\
+       - B Layer Hits       & $\geq 1$                      & \same \\
+       - Pixel Hits         & $\geq 2$                      & $\geq 1$\\
+       - SCT Hits           & $\geq 4$                      & $\geq 3$\\
        - Silicon `Holes'    & $<3$                          & \same \\
-      $z_0$                 & $|z_0| < 2$ mm & $|z_0\sin(\theta)| < 0.5$ mm \\
-      $d_0$                 & $|d_0|/\sigma(d_0) < 3.5 $ & \same \\
+      $z_0$                 & $|z_0| < 2$ mm                & $|z_0\sin(\theta)| < 0.5$ mm \\
+      $d_0$                 & $|d_0|/\sigma(d_0) < 3.5 $    & \same \\
+      \hline
+      \multicolumn{2}{l}{\bf Calorimeter Tagged Muons} & \\
+      Type                  & Calorimeter Tagged            & \same \\
+      $\eta$                & \modeta{0.1}                  & \same \\
+      $p_T$                 & $p_T > 20$ GeV                & \same \\
+      Quality               & Calorimeter Muon ID Cuts      & \same \\
+      % This is a cut that is automatically satisfied by combined
+      %MS Track Quality      & Hits in all 3 stations       & \same \\
+      ID Track Quality      & As Central Muons              &  \\
+      Calorimeter isolation & \etconetwentylt{0.15}         & \same \\
+      Track isolation       & \ptconetwentylt{0.15}         & \same   \\
 
 %
       %\bf{Central Electron Selection} & \\
