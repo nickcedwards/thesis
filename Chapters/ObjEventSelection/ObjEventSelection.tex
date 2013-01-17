@@ -352,14 +352,19 @@ combined with an ID track, forming `Combined' muons; those that do not have an
 ID track are termed Stand Alone.  In data reconstructed in 2012 muons without a
 full ID track may be combined with pixel detector `tracklets' up to
 \modetalt{2.65}. Such `Silicon Associated' muons benefit from improved vertex
-parameter estimation, but are treated as Stand Alone.
+parameter estimation, but are treated as Stand Alone. Since not all forward muons
+have tracks, a track isolation requirement is not applied; instead a tighter calorimeter isolation
+requirement is applied to forward muons: \etconetwentylt{0.15}. This is applied
+to both 2011 and 2012 data.
 
-For forward muons with an ID track, a slightly looser set of ID track quality cuts is
-applied to the number of hits in the silicon detectors. For data taken in 2011
+For forward muons with an ID track, a slightly looser set of ID track quality
+cuts are applied to the number of hits in the silicon detectors. For data taken in 2011
 the requirements are: at least 1 hit in the B-layer, $2$ in all Pixel layers,
 $4$ in the SCT, and less than 3 holes (no hit in a layer crossed by the track)
 in all silicon layers. No cut is applied to the number of TRT hits. As for
 central muons, the requirements were relaxed slightly for 2012 data.
+Additionally forward muons with an ID track are required to satisfy the same
+\zzero\ and \dzerosig\ requirements as central muons.
 
 \subsection{Calorimeter Tagged Muon Selection}
 
