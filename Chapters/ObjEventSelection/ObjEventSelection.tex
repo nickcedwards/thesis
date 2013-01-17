@@ -117,14 +117,15 @@ kaons in jets to electrons, since these decays will occur further from the
 interaction point giving larger impact parameters.
 
 Isolation requirements are imposed to reduce the backgrounds from jets being
-misidentified as electrons, or from electrons from decays in jets, collectively referred to
-as \intro{background electrons}. Such background electrons will typically have
-many tracks surrounding their track in the tracker, and be surrounded by large
-energy deposits in the calorimeter from other particles in the jet. \intro{Track
-Isolation} requirements are imposed, requiring that the sum of the \pt\ of
-tracks surrounding the electron's track in a cone of \deltaRlt{0.2} be less than 15\% of the electron's \pt,
-i.e. \ptconetwentylt{0.15}. Tracks included in the calculation are required to
-have \ptgt{0.4}, have impact parameters consistent with the same vertex as the
+misidentified as electrons, or from electrons from decays in jets, collectively
+referred to as \intro{background electrons}. Such background electrons will
+typically have many tracks surrounding their track in the tracker, and be
+surrounded by large energy deposits in the calorimeter from other particles in
+the jet. \intro{Track Isolation} requirements are imposed, requiring that the
+sum of the \pt\ of tracks surrounding the electron's track in a cone of
+\deltaRlt{0.2} be less than 15\% of the electron's \pt, i.e.
+\ptconetwentylt{0.15}. Tracks included in the calculation are required to have
+\ptgt{0.4}, have impact parameters consistent with the same vertex as the
 electron and have at least 9 silicon hits, thus ensuring good track quality and
 purity. The impact parameter requirement means that this variable is insensitive
 to pileup as most tracks from other (pileup) vertices are excluded.
@@ -134,11 +135,13 @@ deltaRlt{0.2} around the barycentre of the electron cluster, excluding a 5x7
 grid of cells in the centre of the cone (which are assumed to be due to the
 electron). Cells from both the EM and hadronic calorimeters are included. The
 requirement is that the sum of such energies be less than 30\% of electron \et,
-i.e. \etconetwentylt{0.3}.
-This variable is particularly sensetive to pileup, as pileup events tend to
-deposit additional energy isotropically through the detector, thus increasing
-the energy in the isolation cone. A correction paramaterised by the number of vertices reconstructed in the event.
-Additional corrections
+i.e. \etconetwentylt{0.3}.  This variable is particularly sensetive to pileup,
+as pileup events tend to deposit additional energy isotropically throughout the
+detector, thus increasing the energy in the isolation cone. A correction
+paramaterised by the number of vertices reconstructed in the event is applied to
+reduce the effects of pileup.  Additional corrections are applied to correct for
+leakage of the electron's energy out of the core cells of the cone, which tends
+to increase with \pt.
 
 Electrons closer than \deltaRlt{0.1} to a muon which passes the object selection
 requirements (see~\sec{objsel-mu}) are rejected. If two selected electrons
