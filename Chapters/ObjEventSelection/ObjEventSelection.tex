@@ -317,8 +317,12 @@ layer of the EM calorimeter). The calorimeter isolation requirement is
 To ensure that the candidates come from the primary vertex, the magnitude
 of the longitudinal impact parameter with respect to the primary vertex,
 $|z_0|$ must be less than 2 mm for data taken in 2011. For data taken in 2012,
-the requirement is $|z_0\sin(\theta)|<0.5 mm$  . and the transverse impact paramete significance
-(\dzerosig) must be less than 3.5. 
+the requirement is $|z_0\sin(\theta)|<0.5 mm$. The transverse impact parameter
+significance (\dzerosig) is required to be less than 3.5. The selection for
+muons is tighter than for electrons since because muons do
+not emit \brem\ to the same extent as electrons the track fit is improved and
+the resolution of the impact paramater and \dzerosig\ are improved, so tighter
+requirements are can be made whilst maintaining signal efficiency.
 
 The inner detector tracks must have a minimum number of hits in each silicon
 sub-detector to ensure good track quality.  at least 1 hit in the B-layer, $2$ in all Pixel layers, $6$ in the SCT, and less than 3 holes (no hit in a layer crossed by the track) in all silicon layers. For all those hit conditions, dead sensors count as hits observed, not as holes. Finally, a pseudo-rapidity dependent condition on TRT hits and outliers is applied, so that the TRT extension of the track is successful within the $\eta$ acceptance of the TRT (TRT hits can be associated as outliers when the extension is not successful)  : for $|\eta| < 1.9$, require 
