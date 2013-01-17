@@ -188,7 +188,7 @@ backgrounds at low energy.
 \begin{table}[]
   \centering
 %   \vspace*{-1cm}
-%\small
+\small
   \begin{tabular}{ l  l l }
     \hline\hline 
       Requirement        & 7 \tev\ & 8 \tev\ \\ 
@@ -203,7 +203,11 @@ backgrounds at low energy.
        - Pixel Hits         & $>=2$                         & \\
        - SCT Hits           & $>=6$                         & \\
        - Silicon `Holes'    & $<3$                          & \\
-       - TRT                & if \modetalt{1.9}: $n_{hits}+n_{outliers}>6$ and $n_{outliers}/n_{hits}+n_{outliers}<0.9$ & \\
+       - TRT                & \multicolumn{1}{p[5cm]}{
+                                If \modetalt{1.9}: \\
+                                Require $n_{hits}+n_{outliers}>6$ \\
+                                and require $n_{outliers}/n_{hits}+n_{outliers}<0.9$}
+                                                            & \\
                             & if \modetagt{1.9}: If $n_{hits}+n_{outliers}>6$ require $n_{outliers}/n_{hits}+n_{outliers}<0.9$ & \\
       $z_0$                 & $|z_0| < 2$ mm & $|z_0\sin(\theta)| < 0.5$ mm \\
       $d_0$                 & $|d_0|/\sigma(d_0) < 3.5 $ & \same \\
