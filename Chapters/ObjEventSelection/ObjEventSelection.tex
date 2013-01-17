@@ -141,7 +141,7 @@ requirement is that the sum of such energies be less than 30\% of electron \et,
 i.e. \etconetwentylt{0.3}.  This variable is particularly sensetive to pileup,
 as pileup events tend to deposit additional energy isotropically throughout the
 detector, thus increasing the energy in the isolation cone. A correction
-paramaterised by the number of vertices reconstructed in the event is applied to
+parameterised by the number of vertices reconstructed in the event is applied to
 reduce the effects of pileup.  Additional corrections are applied to correct for
 leakage of the electron's energy out of the core cells of the cone, which tends
 to increase with \pt. This requirement was not applied in 2012.
@@ -155,8 +155,8 @@ occur near the edge of the tracker, the central electron would take precedence.
 \subsection{Forward Electron Selection}
 
 Electrons reconstructed using the forward electron reconstruction algorithm are
-used to to extend the pesudo-rapidity coverage beyond the limit of the tracker,
-\modetaeq{2.5}. Only elecrons falling in the EMEC region are used, with
+used to to extend the pseudo-rapidity coverage beyond the limit of the tracker,
+\modetaeq{2.5}. Only electrons falling in the EMEC region are used, with
 pseudo-rapidity \modetaclusterbetween{2.5}{3.16}.  Since the lack of tracking makes it
 harder to reject hadronic and photonic fakes, these electrons are required to
 pass tighter identification requirements: ``Forward Tight''. Since these
@@ -233,10 +233,10 @@ backgrounds at low energy.
       Type                  & Combined or Stand-Alone       & \same \\
       $\eta$                & \modetabetween{2.5}{2.7}      & \same \\
       $p_T$                 & $p_T > 10$ GeV                & \same \\
+      Calorimeter isolation & \etconetwentylt{0.15}         & \same \\
       % This is a cut that is automatically satisfied by combined
       %MS Track Quality      & Hits in all 3 stations       & \same \\
        \multicolumn{3}{c}{\it \underline{Additional requirements for Combined Muons}} \\
-      Calorimeter isolation & \etconetwentylt{0.15}         & \same \\
       ID Track Quality      &                               &  \\
        - B Layer Hits       & $\geq 1$                      & \same \\
        - Pixel Hits         & $\geq 2$                      & $\geq 1$\\
@@ -244,8 +244,8 @@ backgrounds at low energy.
        - Silicon `Holes'    & $<3$                          & \same \\
       $z_0$                 & $|z_0| < 2$ mm                & $|z_0\sin(\theta)| < 0.5$ mm \\
       $d_0$                 & $|d_0|/\sigma(d_0) < 3.5 $    & \same \\
-      \hline
       \multicolumn{2}{l}{\bf Calorimeter Tagged Muons} & \\
+      \hline
       Type                  & Calorimeter Tagged            & \same \\
       $\eta$                & \modetalt{0.1}                  & \same \\
       $p_T$                 & $p_T > 20$ GeV                & \same \\
@@ -325,21 +325,41 @@ the resolution of the impact paramater and \dzerosig\ are improved, so tighter
 requirements are can be made whilst maintaining signal efficiency.
 
 The inner detector tracks must have a minimum number of hits in each silicon
-sub-detector to ensure good track quality.  at least 1 hit in the B-layer, $2$ in all Pixel layers, $6$ in the SCT, and less than 3 holes (no hit in a layer crossed by the track) in all silicon layers. For all those hit conditions, dead sensors count as hits observed, not as holes. Finally, a pseudo-rapidity dependent condition on TRT hits and outliers is applied, so that the TRT extension of the track is successful within the $\eta$ acceptance of the TRT (TRT hits can be associated as outliers when the extension is not successful)  : for $|\eta| < 1.9$, require 
-$\mathrm{hits}+\mathrm{outliers} > 6$ and 
-$\mathrm{outliers} < 0.9 \times (\mathrm{outliers}+\mathrm{hits})$; for $|\eta| > 1.9$, if $\mathrm{hits}+\mathrm{outliers} > 6$, require 
-$\mathrm{outliers} < 0.9 \times (\mathrm{outliers}+\mathrm{hits})$~\cite{MCP}. 
-  Forward muons must have hits on all three stations of the muon spectrometer
-  track (inner, middle and outer). For forward tracks, a slightly looser set of quality cuts is applied to the number of hits in the silicon detectors: at least 1 hit in the B-layer, $2$ in all Pixel layers, $4$ in the SCT, and less than 3 holes (no hit in a layer crossed by the track) in all silicon layers. No cut is applied to the number of TRT hits.
+sub-detector to ensure good track quality. For 2011 data the requirements are:
+at least 1 hit in the B-layer, $2$ in all Pixel layers, $6$ in the SCT, and less
+than 3 holes (no hit in a layer crossed by the track) in all silicon layers. For
+all silicon hit conditions, dead sensors count as hits observed, not as holes.
+Finally, a pseudo-rapidity dependent condition on TRT hits and outliers is
+applied to ensure that the TRT extension of the track is successful within the $\eta$
+acceptance of the TRT (TRT hits can be associated as outliers when the extension
+is not successful): for $|\eta| < 1.9$, require
+$\mathrm{hits}+\mathrm{outliers} > 6$ and $\mathrm{outliers} < 0.9 \times
+(\mathrm{outliers}+\mathrm{hits})$; for $|\eta| > 1.9$, if
+$\mathrm{hits}+\mathrm{outliers} > 6$, require $\mathrm{outliers} < 0.9 \times
+(\mathrm{outliers}+\mathrm{hits})$~\cite{MCP}. For data taken in 2012, the
+requirements are slightly loosened in order to recover efficiency losses in 2012
+data; this was not found to increase the misidnetification rate significantly;
+see~\tab{objsel-mu} for details of the changes.
 
 \subsection{Forward Muon Selection}
-Muons in the region $2.5 < |\eta| < 2.7$ are required to have a full muon spectrometer track,
-which is combined with an inner-detector track if possible.
-Only muons up to $|\eta|<2.6$ have such a chance, with decreasing probability 
-as the $|\eta|$ increases; these Combined muons amount to $\sim 40\%$ of 
-all muons with $2.5<|\eta|<2.6$ originating from \Z\ decays (see Figure 10 in reference \cite{ATL-COM-MUON-2011-026}). 
-These requirements are not applied
-to {\it Stand Alone muons} which have no inner-detector track.
+
+Muons in the region \modetabetween{2.5}{2.7} are required to have a full muon
+spectrometer track with hits in each station of the spectrometer and have
+\ptgt{10}. Although the
+inner detector only extends to \modetaeq{2.5}, the complicated nature of the
+magnetic field makes it possible for some muons up to \modetalt{2.6} to be
+combined with an ID track, forming `Combined' muons; those that do not have an
+ID track are termed Stand Alone.  In data reconstructed in 2012 muons without a
+full ID track may be combined with pixel detector `tracklets' up to
+\modetalt{2.65}. Such `Silicon Associated' muons benefit from improved vertex
+parameter estimation, but are treated as Stand Alone.
+
+For forward muons with an ID track, a slightly looser set of ID track quality cuts is
+applied to the number of hits in the silicon detectors. For data taken in 2011
+the requirements are: at least 1 hit in the B-layer, $2$ in all Pixel layers,
+$4$ in the SCT, and less than 3 holes (no hit in a layer crossed by the track)
+in all silicon layers. No cut is applied to the number of TRT hits. As for
+central muons, the requirements were relaxed slightly for 2012 data.
 
 \subsection{Calorimeter Tagged Muon Selection}
 
