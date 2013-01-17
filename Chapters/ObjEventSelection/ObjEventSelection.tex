@@ -30,8 +30,8 @@ are summarised in~\tab{objsel-el} are described in more detail below.
       ID cut                & \loosePP & \it{Same}       \\
       $\eta$                & $|\eta|<2.47$ & \it{Same} \\
       $E_T$                 & $E_T > 7$ GeV & \it{Same} \\
-      $z_0$                 & $z_0 < 2$ mm & \it{Same} \\
-      $d_0$                 & $|d_0|/\sigma(d_0) < 6 $ & \it{Same} \\
+      \zzero                & $z_0 < 2$ mm & \it{Same} \\
+      \dzerosig             & $|d_0|/\sigma(d_0) < 6 $ & \it{Same} \\
       Track isolation       & \ptconetwentylt{0.15} & \it{Same}   \\
       Calorimeter isolation & \etconetwentylt{0.3}          & \it{Not Applied} \\
       Overlap removal       & \multicolumn{1}{p{6cm}}{a) Remove $e$ if $\Delta R < 0.1$ from $\mu$} & \it{Same} \\
@@ -223,8 +223,8 @@ backgrounds at low energy.
                                                                 {\bf If \modetagt{1.9} or \modetalt{0.1}:} 
                                                                 If $n_{hits}+n_{outliers}>5$ 
                                                                 require $n_{outliers}/(n_{hits}+n_{outliers})<0.9$} \\
-      $z_0$                 & $|z_0| < 2$ mm & $|z_0\sin(\theta)| < 0.5$ mm \\
-      $d_0$                 & $|d_0|/\sigma(d_0) < 3.5 $    & \same \\
+      \zzero                & $|z_0| < 2$ mm & $|z_0\sin(\theta)| < 0.5$ mm \\
+      \dzerosig             & $|d_0|/\sigma(d_0) < 3.5 $    & \same \\
       Track isolation       & \ptconetwentylt{0.15}         & \same   \\
       Calorimeter isolation & \etconetwentylt{0.3}          & \it{Not Applied} \\
       \hline
@@ -242,8 +242,8 @@ backgrounds at low energy.
        - Pixel Hits         & $\geq 2$                      & $\geq 1$\\
        - SCT Hits           & $\geq 4$                      & $\geq 3$\\
        - Silicon `Holes'    & $<3$                          & \same \\
-      $z_0$                 & $|z_0| < 2$ mm                & $|z_0\sin(\theta)| < 0.5$ mm \\
-      $d_0$                 & $|d_0|/\sigma(d_0) < 3.5 $    & \same \\
+      \zzero                & $|z_0| < 2$ mm                & $|z_0\sin(\theta)| < 0.5$ mm \\
+      \dzerosig             & $|d_0|/\sigma(d_0) < 3.5 $    & \same \\
       \hline
       \multicolumn{2}{l}{\bf Calorimeter Tagged Muons} & \\
       Type                  & Calorimeter Tagged            & \same \\
@@ -256,7 +256,7 @@ backgrounds at low energy.
                               if overlaps with a central 
                               muon in \deltaRlt{0.1}}  & \it{Same}\\
       \multicolumn{3}{c}{\it ID Track Quality, Track Isolation, Calorimeter
-                                Isolation, \zzero, \dzero\ as central muons} \\
+                                Isolation, \zzero, \dzerosig\ as central muons} \\
       %ID Track Quality      & As Central Muons              &  \\
       %Calorimeter isolation & \etconetwentylt{0.3}         & \same \\
       %Track isolation       & \ptconetwentylt{0.15}         & \same   \\
