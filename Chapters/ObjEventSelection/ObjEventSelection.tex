@@ -183,6 +183,118 @@ backgrounds at low energy.
 \label{fig:objsel-el}
 \end{figure}
 
+\section{Muon Selection}
+
+\begin{table}[]
+  \centering
+%   \vspace*{-1cm}
+%\small
+  \begin{tabular}{ l  l l }
+    \hline\hline 
+      Requirement        & 7 \tev\ & 8 \tev\ \\ 
+      \hline
+      \bf{Central Muon Selection} & \\
+      Algorithm             & \staco                        & \same \\
+      Type                  & Combined or Segment Tagged    & \same \\
+      $\eta$                & $|\eta|<2.5$                  & \same \\
+      $E_T$                 & $p_T > 7$ GeV                 & \same \\
+      Track Quality         & & \\
+       - B Layer Hits       & $>=1$                         & \\
+       - Pixel Hits         & $>=2$                         & \\
+       - SCT Hits           & $>=6$                         & \\
+       - Silicon `Holes'    & $<3$                          & \\
+       - TRT                & if \modetalt{1.9}: $n_{hits}+n_{outliers}>6$ and $n_{outliers}/n_{hits}+n_{outliers}<0.9$ & \\
+                            & if \modetagt{1.9}: If $n_{hits}+n_{outliers}>6$ require $n_{outliers}/n_{hits}+n_{outliers}<0.9$ & \\
+      $z_0$                 & $|z_0| < 2$ mm & $|z_0\sin(\theta)| < 0.5$ mm \\
+      $d_0$                 & $|d_0|/\sigma(d_0) < 3.5 $ & \same \\
+      Track isolation       & \ptconetwentylt{0.15} & \same   \\
+      Calorimeter isolation & \etconetwentylt{0.3}          & \it{Not Applied} \\
+      \hline
+      \bf{Forward Muon Selection:} & \\
+
+%
+      %\bf{Central Electron Selection} & \\
+      %Algorthim             & Standard (with GSF refit)     & Standard \\
+      %Quality               & \multicolumn{2}{c}{\texttt{(OQ  AND 1446 == 0})} \\
+      %ID cut                & \multicolumn{2}{c}{\loosePP}       \\
+      %$\eta$                & \multicolumn{2}{c}{$|\eta|<2.47$} \\
+      %$E_T$                 & \multicolumn{2}{c}{$E_T > 7$ GeV} \\
+      %$z_0$                 & \multicolumn{2}{c}{$z_0 < 2$ mm} \\
+      %$d_0$                 & \multicolumn{2}{c}{$|d_0|/\sigma(d_0) < 6 $} \\
+      %Track isolation       & \multicolumn{2}{c}{\ptconetwentylt{0.15}}   \\
+      %Calorimeter isolation & \etconetwentylt{0.3}          & \it{Not Applied} \\
+      %Overlap removal       & \multicolumn{2}{c}{a) Remove $e$ if $\Delta R < 0.1$ from $\mu$} \\
+      %                      & \multicolumn{2}{c}{b) Remove lowest $E_T$ $e$ in \deltaRlt{0.1} from another $e$} \\ 
+      %\hline
+      %\bf{Forward Electron Selection:} & \\
+      %Alogirthm             & \multicolumn{2}{c}{Forward} \\
+      %Quality               & \multicolumn{2}{c}{\texttt{(OQ  AND 1446 == 0)}}  \\
+      %ID cut                & \multicolumn{2}{c}{Tight} \\
+      %$\eta$                & \multicolumn{2}{c}{$2.50<|\eta|<3.16$} \\
+      %$E_T$                 & \multicolumn{2}{c}{$E_T > 20$ GeV} \\
+      %Overlap removal       & \multicolumn{2}{p{8cm}}{\centering Remove if overlaps with central electron or any muon in \deltaRlt{0.1}} \\
+    \hline \hline
+  \end{tabular}
+   \caption{Electron selection requirements.}
+   \label{table:objsel-el}
+\end{table}
+
+The reconstructed muons used in this analysis are reconstructed either using the
+\verb|STACO| algorithm or the \verb|CaloTrkMuID| algoritm. 
+
+In the \llll\ final state {\it Combined muons} (CM) and {\it Segment Tag muons}
+(ST) are used in the pseudo-rapidity region $|\eta| < 2.5$, with $\pt>7$ GeV. 
+Muons in the region $2.5 < |\eta| < 2.7$ are required to have a full muon spectrometer track,
+which is combined with an inner-detector track if possible.
+Only muons up to $|\eta|<2.6$ have such a chance, with decreasing probability 
+as the $|\eta|$ increases; these Combined muons amount to $\sim 40\%$ of 
+all muons with $2.5<|\eta|<2.6$ originating from \Z\ decays (see Figure 10 in reference \cite{ATL-COM-MUON-2011-026}). The rest of the muons in the $2.5<|\eta|<2.7$ region are Stand Alone muons, reconstructed using only the information from the muon system and are the only kind of muons reconstructed with $|\eta|>2.6$.
+Muons with $|\eta| < 2.5$ are referred to as ``central muons'' and muons with
+$2.5 < |\eta| < 2.7$ as ``forward muons''. 
+
+\verb|CaloTrkMuID| muons use the calorimeter to tag inner-detector tracks as
+originating from muons. This helps to recover efficieny at $|\eta|<0.1$ where
+there is a gap in the muon-spectrometer. A muon with sufficient momentum
+will traverse all the layers of the calorimeter, leaving a small signal. 
+A low momentum hadron deposits
+most of its energy in the first layers and leaves no signal in the last layers;
+high momentum hadrons will deposit much energy in the core cells. 
+Electrons will deposit much energy in the EM calorimeter. The \verb|CaloTrkMuID|
+algorithm thus requires a MIP signal in each layer of the calorimeter to reject
+hadron and electron backgrounds. A cut based quality selection and a likelihood
+ratio based quality selection are both used, and we accept muons passing either.
+\verb|CaloTrkMuID| muons are only used in the \llll\ final state for
+$|\eta|<0.1$, and are not selected if they overlap with a selected \verb|STACO|
+muon within $\Delta R<0.1$.
+
+The muons must be isolated from energy deposits in the calorimeter. In the \llvv\
+final-state, the
+requirement is $etcone30/\pt < 0.15$. In the \llll\ final state the
+requirement is $etcone20/\pt < 0.30$ for $|\eta|<2.5$ (all muon types) and
+$etcone20/\pt < 0.15$ for $2.5<|\eta|<2.7$.
+The energy in the cone is corrected for contributions from pile-up events using the number of vertices reconstructed in the event (\texttt{MuonIsolationCorrections-01-01}).
+
+The inner detector track must be isolated from other tracks to reject secondary
+muons from hadronic jets. In order to reject muons from the decay of heavy
+quarks, in the \llvv\ final state we require the scalar sum of the transverse
+momenta $(\Sigma \pt)$ of other tracks inside a cone of $\Delta R=0.3$ around
+the muon to be no more than 15\% of the muon $\pt$. In other words, the
+isolation requirement is $ptCone30/\pt < 0.15$. 
+
+In both final states, inner detector tracks must have a minimum number of hits in each silicon sub-detector : at least 1 hit in the B-layer, $2$ in all Pixel layers, $6$ in the SCT, and less than 3 holes (no hit in a layer crossed by the track) in all silicon layers. For all those hit conditions, dead sensors count as hits observed, not as holes. Finally, a pseudo-rapidity dependent condition on TRT hits and outliers is applied, so that the TRT extension of the track is successful within the $\eta$ acceptance of the TRT (TRT hits can be associated as outliers when the extension is not successful)  : for $|\eta| < 1.9$, require 
+$\mathrm{hits}+\mathrm{outliers} > 6$ and 
+$\mathrm{outliers} < 0.9 \times (\mathrm{outliers}+\mathrm{hits})$; for $|\eta| > 1.9$, if $\mathrm{hits}+\mathrm{outliers} > 6$, require 
+$\mathrm{outliers} < 0.9 \times (\mathrm{outliers}+\mathrm{hits})$~\cite{MCP}. 
+  Forward muons must have hits on all three stations of the muon spectrometer
+  track (inner, middle and outer). For forward tracks, a slightly looser set of quality cuts is applied to the number of hits in the silicon detectors: at least 1 hit in the B-layer, $2$ in all Pixel layers, $4$ in the SCT, and less than 3 holes (no hit in a layer crossed by the track) in all silicon layers. No cut is applied to the number of TRT hits.
+
+To ensure that the candidates come from the primary vertex (identified as the
+vertex that has the highest $\sum{\pt^2}$ of associated tracks), the magnitude
+of the longitudinal impact parameter with respect to the primary vertex,
+$|z_0|$, must be less than 2 mm and the transverse impact parameter, $d_0$, must
+have significance ($|d_0|/\sigma_{d_0}$) less than 3.5. These requirements are not applied
+to {\it Stand Alone muons} which have no inner-detector track.
+
 \begin{figure}[h]
 \centering
 	\subfigure[]{
@@ -198,9 +310,10 @@ backgrounds at low energy.
 \label{fig:objsel-mu}
 \end{figure}
 
-\section{Muon Selection}
 \section{Jet Selection}
 \section{\ZZ\ Event Selection}
+
+Trigger MAtching and kin
 \subsection{Triggers}
 \section{Selection Efficiencies}
 \subsection{\CZZ}
