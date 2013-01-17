@@ -406,14 +406,19 @@ requirements as central muons.
 \end{figure}
 
 \section{Jet Selection}
+
+\section{Triggers}
+\label{sec:triggers}
+
 \section{\ZZ\ Event Selection}
+\label{sec:eventsel}
 
 The event selection requirements are as follows:
 
 \begin{enumerate}
 
     \item \bf{Trigger} The event must pass a hight \pt\ single electron or single
-    muon trigger.
+    muon trigger as discussed in~\sec{triggers}.
 
     \item \bf{Four leptons} The event must have exactly four electrons or muons
     passing the selection requirements described in Sections~\ref{sec:objsel-el}
@@ -421,8 +426,13 @@ The event selection requirements are as follows:
     estimate. MC predictions show 1.3\% of signal events would fail this cut. In
     data, no events with more than four fully selected leptons were observed.
 
-    \item \bf{Trigger match} At least one lepton with $\pT>20$~(25)~GeV for muons (electrons), must match to a trigger object, see
-      Sec~\ref{sec:LeptonTrigger}, 8.1, 8.2.
+    \item \bf{Trigger match} At least one selected lepton must match to the
+    object that caused the trigger to fire. Such leptons are referred to as the
+    \intro{trigger matched} lepton. To reduce uncertainties associated with the
+    trigger efficiency measurement, at least to be considered trigger matched
+    the lepton must have a \pt\ such that it is on the efficiency plateau of the
+    trigger, and must also satisfy the same identification requirements as
+    required in the trigger.
 
     \item \emph{\bfseries Quadruplet Formation} There must be two same flavour,
     oppositely charged lepton pairs. In $eeee$ and $\mu\mu\mu\mu$ events there are
@@ -450,9 +460,6 @@ The event selection requirements are as follows:
 
 \end{enumerate}
 
-\subsection{Triggers}
-\subsection{Triggers}
-Trigger MAtching and kin
 \section{Selection Efficiencies}
 \subsection{\CZZ}
 \subsection{Mispairing rates}
