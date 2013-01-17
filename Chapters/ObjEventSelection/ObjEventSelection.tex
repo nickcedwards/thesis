@@ -332,19 +332,19 @@ the same extent as electrons the track fit is improved, and so the resolution of
 the impact parameter is improved, so tighter requirements 
 can be made whilst maintaining high signal efficiency.
 
-The inner detector tracks must have a minimum number of hits in each silicon
-sub-detector to ensure good track quality. For 2011 data the requirements are:
-at least 1 hit in the B-layer, $2$ in all Pixel layers, $6$ in the SCT, and less
-than 3 holes (no hit in a layer crossed by the track) in all silicon layers. For
-all silicon hit conditions, dead sensors count as hits observed, not as holes.
-Finally, a pseudo-rapidity dependent condition on TRT hits and outliers is
-applied to ensure that the TRT extension of the track is successful within the $\eta$
-acceptance of the TRT (TRT hits can be associated as outliers when the extension
-is not successful): for $|\eta| < 1.9$, require
-$\mathrm{hits}+\mathrm{outliers} > 6$ and $\mathrm{outliers} < 0.9 \times
-(\mathrm{outliers}+\mathrm{hits})$; for $|\eta| > 1.9$, if
+The inner detector tracks associated with central muons must have a minimum
+number of hits in each silicon sub-detector to ensure good track quality. For
+2011 data the requirements are: at least 1 hit in the B-layer, $2$ in all Pixel
+layers, $6$ in the SCT, and less than 3 holes (no hit in a layer crossed by the
+track) in all silicon layers. For all silicon hit conditions, dead sensors count
+as hits observed, not as holes.  Finally, a pseudo-rapidity dependent condition
+on TRT hits and outliers is applied to ensure that the TRT extension of the
+track is successful within the $\eta$ acceptance of the TRT (TRT hits can be
+associated as outliers when the extension is not successful): for $|\eta| <
+1.9$, require $\mathrm{hits}+\mathrm{outliers} > 6$ and $\mathrm{outliers} < 0.9
+\times (\mathrm{outliers}+\mathrm{hits})$; for $|\eta| > 1.9$, if
 $\mathrm{hits}+\mathrm{outliers} > 6$, require $\mathrm{outliers} < 0.9 \times
-(\mathrm{outliers}+\mathrm{hits})$~\cite{MCP}. For data taken in 2012, the
+(\mathrm{outliers}+\mathrm{hits})$. For data taken in 2012, the
 requirements are slightly loosened in order to recover efficiency losses in 2012
 data; this was not found to increase the misidentification rate significantly;
 see~\tab{objsel-mu} for details of the changes.
@@ -360,7 +360,7 @@ combined with an ID track, forming `Combined' muons; those that do not have an
 ID track are termed Stand Alone.  In data reconstructed in 2012 muons without a
 full ID track may be combined with pixel detector `tracklets' up to
 \modetalt{2.65}. Such `Silicon Associated' muons benefit from improved vertex
-parameter estimation, but are treated as Stand Alone. Since not all forward muons
+parameter estimation, but are otherwise treated as Stand Alone. Since not all forward muons
 have tracks, a track isolation requirement is not applied; instead a tighter calorimeter isolation
 requirement is applied to forward muons: \etconetwentylt{0.15}. This is applied
 to both 2011 and 2012 data.
