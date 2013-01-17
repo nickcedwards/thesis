@@ -304,37 +304,29 @@ Tagged (with a full ID track but only an MS track segment), and have $\pt>7$ GeV
 
 As for electrons, track and calorimeter isolation requirements are imposed to
 reject backgrounds. In the case of muons this is mainly from heavy flavour
-decays in jets and `punch-through' of hadrons into the Muon Spectrometer.
-The track isolation is defined in the same way as for electrons, and the
-requirement is \ptconetwentylt{0.15}.
+decays in jets and `punch-through' of hadrons into the Muon Spectrometer.  The
+track isolation is defined in the same way as for electrons, and the requirement
+is \ptconetwentylt{0.15}.  The calorimeter isolation variable is defined in a
+similar way as for electrons, however the size of the `core' deposit of energy
+attributed to the muon is smaller than in the case of electron isolation, and
+varies by calorimeter component depending on the expected muon energy deposition
+pattern (e.g. a single cell in the EM presampler to a 3x3 grid in the second
+layer of the EM calorimeter). The calorimeter isolation requirement is
+\etconetwentylt{0.3}, and as for electrons is only applied to the 2011 data.
 
-The muons must be isolated from energy deposits in the calorimeter. In the \llvv\
-final-state, the
-requirement is $etcone30/\pt < 0.15$. In the \llll\ final state the
-requirement is $etcone20/\pt < 0.30$ for $|\eta|<2.5$ (all muon types) and
-$etcone20/\pt < 0.15$ for $2.5<|\eta|<2.7$.
-The energy in the cone is corrected for contributions from pile-up events using the number of vertices reconstructed in the event (\texttt{MuonIsolationCorrections-01-01}).
+To ensure that the candidates come from the primary vertex, the magnitude
+of the longitudinal impact parameter with respect to the primary vertex,
+$|z_0|$ must be less than 2 mm for data taken in 2011. For data taken in 2012,
+the requirement is $|z_0\sin(\theta)|<0.5 mm$  . and the transverse impact paramete significance
+(\dzerosig) must be less than 3.5. 
 
-The inner detector track must be isolated from other tracks to reject secondary
-muons from hadronic jets. In order to reject muons from the decay of heavy
-quarks, in the \llvv\ final state we require the scalar sum of the transverse
-momenta $(\Sigma \pt)$ of other tracks inside a cone of $\Delta R=0.3$ around
-the muon to be no more than 15\% of the muon $\pt$. In other words, the
-isolation requirement is $ptCone30/\pt < 0.15$. 
-
-In both final states, inner detector tracks must have a minimum number of hits in each silicon sub-detector : at least 1 hit in the B-layer, $2$ in all Pixel layers, $6$ in the SCT, and less than 3 holes (no hit in a layer crossed by the track) in all silicon layers. For all those hit conditions, dead sensors count as hits observed, not as holes. Finally, a pseudo-rapidity dependent condition on TRT hits and outliers is applied, so that the TRT extension of the track is successful within the $\eta$ acceptance of the TRT (TRT hits can be associated as outliers when the extension is not successful)  : for $|\eta| < 1.9$, require 
+The inner detector tracks must have a minimum number of hits in each silicon
+sub-detector to ensure good track quality.  at least 1 hit in the B-layer, $2$ in all Pixel layers, $6$ in the SCT, and less than 3 holes (no hit in a layer crossed by the track) in all silicon layers. For all those hit conditions, dead sensors count as hits observed, not as holes. Finally, a pseudo-rapidity dependent condition on TRT hits and outliers is applied, so that the TRT extension of the track is successful within the $\eta$ acceptance of the TRT (TRT hits can be associated as outliers when the extension is not successful)  : for $|\eta| < 1.9$, require 
 $\mathrm{hits}+\mathrm{outliers} > 6$ and 
 $\mathrm{outliers} < 0.9 \times (\mathrm{outliers}+\mathrm{hits})$; for $|\eta| > 1.9$, if $\mathrm{hits}+\mathrm{outliers} > 6$, require 
 $\mathrm{outliers} < 0.9 \times (\mathrm{outliers}+\mathrm{hits})$~\cite{MCP}. 
   Forward muons must have hits on all three stations of the muon spectrometer
   track (inner, middle and outer). For forward tracks, a slightly looser set of quality cuts is applied to the number of hits in the silicon detectors: at least 1 hit in the B-layer, $2$ in all Pixel layers, $4$ in the SCT, and less than 3 holes (no hit in a layer crossed by the track) in all silicon layers. No cut is applied to the number of TRT hits.
-
-To ensure that the candidates come from the primary vertex (identified as the
-vertex that has the highest $\sum{\pt^2}$ of associated tracks), the magnitude
-of the longitudinal impact parameter with respect to the primary vertex,
-$|z_0|$, must be less than 2 mm and the transverse impact parameter, $d_0$, must
-have significance ($|d_0|/\sigma_{d_0}$) less than 3.5. These requirements are not applied
-to {\it Stand Alone muons} which have no inner-detector track.
 
 \subsection{Forward Muon Selection}
 Muons in the region $2.5 < |\eta| < 2.7$ are required to have a full muon spectrometer track,
@@ -342,6 +334,8 @@ which is combined with an inner-detector track if possible.
 Only muons up to $|\eta|<2.6$ have such a chance, with decreasing probability 
 as the $|\eta|$ increases; these Combined muons amount to $\sim 40\%$ of 
 all muons with $2.5<|\eta|<2.6$ originating from \Z\ decays (see Figure 10 in reference \cite{ATL-COM-MUON-2011-026}). 
+These requirements are not applied
+to {\it Stand Alone muons} which have no inner-detector track.
 
 \subsection{Calorimeter Tagged Muon Selection}
 
