@@ -408,8 +408,51 @@ requirements as central muons.
 \section{Jet Selection}
 \section{\ZZ\ Event Selection}
 
-Trigger MAtching and kin
+The event selection requirements are as follows:
+
+\begin{enumerate}
+
+    \item \bf{Trigger} The event must pass a hight \pt\ single electron or single
+    muon trigger.
+
+    \item \bf{Four leptons} The event must have exactly four electrons or muons
+    passing the selection requirements described in Sections~\ref{sec:objsel-el}
+    and~\ref{sec:objsel-mu}. This cut simplifies the equations for the background
+    estimate. MC predictions show 1.3\% of signal events would fail this cut. In
+    data, no events with more than four fully selected leptons were observed.
+
+    \item \bf{Trigger match} At least one lepton with $\pT>20$~(25)~GeV for muons (electrons), must match to a trigger object, see
+      Sec~\ref{sec:LeptonTrigger}, 8.1, 8.2.
+
+    \item \emph{\bfseries Quadruplet Formation} There must be two same flavour,
+    oppositely charged lepton pairs. In $eeee$ and $\mu\mu\mu\mu$ events there are
+    two possible ways of pairing the four leptons into OS pairs. The pairing which
+    minimises the quantity $|m_{12}-m_{Z}|+|m_{34}-m_{Z}|$ is chosen, where
+    $m_{12}$, $m_{34}$ are the invariant masses of the two lepton pairs of a certain
+    pairing of the lepton quad consisting of leptons '1','2','3','4' and $m_Z$ is
+    the $Z$-pole.
+
+    \item \emph{\bfseries ``Primary" $Z$ candidate} The Z candidate closest to the Z
+    pole must satisfy the mass cut $66<m_{12}<116$~GeV.
+
+    \item \emph{\bfseries ``Secondary" $Z$ candidate} The other $Z$ candidate is
+    called the secondary $Z$ candidate. Two non-exclusive mass cuts are applied, one
+    to select the event as a $ZZ$ event, one to select the event as a
+    $ZZ/\gamma^{*}$ event  :
+      \begin{enumerate}
+     \item To be classified as a $ZZ$ event the secondary $Z$ candidate must satisfy
+     the mass cut $66<m_{34}<116$~GeV.
+     \item To be classified as a $ZZ/\gamma^{*}$ event the secondary $Z$ candidate
+     must satisfy the mass cut $m_{34}>20$~GeV.
+     \item The leptons are requried to be separated according to the following
+     criteria: $\Delta{R}(\ell,\ell)>0.2$.
+    \end{enumerate}
+
+\end{enumerate}
+
 \subsection{Triggers}
+\subsection{Triggers}
+Trigger MAtching and kin
 \section{Selection Efficiencies}
 \subsection{\CZZ}
 \subsection{Mispairing rates}
