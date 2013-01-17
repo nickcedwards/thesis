@@ -131,6 +131,7 @@ sum of the \pt\ of tracks surrounding the electron's track in a cone of
 electron and have at least 9 silicon hits, thus ensuring good track quality and
 purity. The impact parameter requirement means that this variable is insensitive
 to pileup as most tracks from other (pileup) vertices are excluded.
+
 Additionally, for the 2011 data, a calorimeter isolation requirement is imposed.
 This is defined as the sum of calorimeter cell energies in a cone of
 deltaRlt{0.2} around the barycentre of the electron cluster, excluding a 5x7
@@ -143,7 +144,7 @@ detector, thus increasing the energy in the isolation cone. A correction
 paramaterised by the number of vertices reconstructed in the event is applied to
 reduce the effects of pileup.  Additional corrections are applied to correct for
 leakage of the electron's energy out of the core cells of the cone, which tends
-to increase with \pt.
+to increase with \pt. This requirement was not applied in 2012.
 
 Electrons closer than \deltaRlt{0.1} to a muon which passes the object selection
 requirements (see~\sec{objsel-mu}) are rejected. If two selected electrons
@@ -283,37 +284,29 @@ backgrounds at low energy.
     \hline \hline
   \end{tabular}
    \caption{Muon selection requirements.}
-   \label{table:objsel-el}
+   \label{table:objsel-mu}
    \renewcommand\arraystretch{1}
 \end{table}
 
-The reconstructed muons used in this analysis are reconstructed either using the
-\verb|STACO| algorithm or the \verb|CaloTrkMuID| algoritm. 
+Muon reconstruction was described in~\sec{reco-mu}. Three distinct categories of
+muons are used in this analysis: `Central' muons with \modetalt{2.5} and
+`forward' muons with \modetabetween{2.5}{2.7}, both
+reconstructed with the \staco, and calorimeter tagged muons with \modetalt{0.1}
+reconstructed without using the Muon Spectrometer. As for electrons,
+additional selection requirements are imposed to select muon likely to have
+originated from \Z\ boson decays and to reject backgrounds. The muon selection requirements
+are summarised in~\tab{objsel-mu} are described in more detail below. 
 
-In the \llll\ final state {\it Combined muons} (CM) and {\it Segment Tag muons}
-(ST) are used in the pseudo-rapidity region $|\eta| < 2.5$, with $\pt>7$ GeV. 
-Muons in the region $2.5 < |\eta| < 2.7$ are required to have a full muon spectrometer track,
-which is combined with an inner-detector track if possible.
-Only muons up to $|\eta|<2.6$ have such a chance, with decreasing probability 
-as the $|\eta|$ increases; these Combined muons amount to $\sim 40\%$ of 
-all muons with $2.5<|\eta|<2.6$ originating from \Z\ decays (see Figure 10 in reference \cite{ATL-COM-MUON-2011-026}). The rest of the muons in the $2.5<|\eta|<2.7$ region are Stand Alone muons, reconstructed using only the information from the muon system and are the only kind of muons reconstructed with $|\eta|>2.6$.
-Muons with $|\eta| < 2.5$ are referred to as ``central muons'' and muons with
-$2.5 < |\eta| < 2.7$ as ``forward muons''. 
+\subsection{Central Muon Selection}
 
-\verb|CaloTrkMuID| muons use the calorimeter to tag inner-detector tracks as
-originating from muons. This helps to recover efficieny at $|\eta|<0.1$ where
-there is a gap in the muon-spectrometer. A muon with sufficient momentum
-will traverse all the layers of the calorimeter, leaving a small signal. 
-A low momentum hadron deposits
-most of its energy in the first layers and leaves no signal in the last layers;
-high momentum hadrons will deposit much energy in the core cells. 
-Electrons will deposit much energy in the EM calorimeter. The \verb|CaloTrkMuID|
-algorithm thus requires a MIP signal in each layer of the calorimeter to reject
-hadron and electron backgrounds. A cut based quality selection and a likelihood
-ratio based quality selection are both used, and we accept muons passing either.
-\verb|CaloTrkMuID| muons are only used in the \llll\ final state for
-$|\eta|<0.1$, and are not selected if they overlap with a selected \verb|STACO|
-muon within $\Delta R<0.1$.
+Central muons must be either Combined (with a full MS and ID track) or Segment
+Tagged (with a full ID track but only an MS track segment), and have $\pt>7$ GeV. 
+
+As for electrons, track and calorimeter isolation requirements are imposed to
+reject backgrounds. In the case of muons this is mainly from heavy flavour
+decays in jets and `punch-through' of hadrons into the Muon Spectrometer.
+The track isolation is defined in the same way as for electrons, and the
+requirement is \ptconetwentylt{0.15}.
 
 The muons must be isolated from energy deposits in the calorimeter. In the \llvv\
 final-state, the
@@ -342,6 +335,30 @@ of the longitudinal impact parameter with respect to the primary vertex,
 $|z_0|$, must be less than 2 mm and the transverse impact parameter, $d_0$, must
 have significance ($|d_0|/\sigma_{d_0}$) less than 3.5. These requirements are not applied
 to {\it Stand Alone muons} which have no inner-detector track.
+
+\subsection{Forward Muon Selection}
+Muons in the region $2.5 < |\eta| < 2.7$ are required to have a full muon spectrometer track,
+which is combined with an inner-detector track if possible.
+Only muons up to $|\eta|<2.6$ have such a chance, with decreasing probability 
+as the $|\eta|$ increases; these Combined muons amount to $\sim 40\%$ of 
+all muons with $2.5<|\eta|<2.6$ originating from \Z\ decays (see Figure 10 in reference \cite{ATL-COM-MUON-2011-026}). 
+
+\subsection{Calorimeter Tagged Muon Selection}
+
+\verb|CaloTrkMuID| muons use the calorimeter to tag inner-detector tracks as
+originating from muons. This helps to recover efficieny at $|\eta|<0.1$ where
+there is a gap in the muon-spectrometer. A muon with sufficient momentum
+will traverse all the layers of the calorimeter, leaving a small signal. 
+A low momentum hadron deposits
+most of its energy in the first layers and leaves no signal in the last layers;
+high momentum hadrons will deposit much energy in the core cells. 
+Electrons will deposit much energy in the EM calorimeter. The \verb|CaloTrkMuID|
+algorithm thus requires a MIP signal in each layer of the calorimeter to reject
+hadron and electron backgrounds. A cut based quality selection and a likelihood
+ratio based quality selection are both used, and we accept muons passing either.
+\verb|CaloTrkMuID| muons are only used in the \llll\ final state for
+$|\eta|<0.1$, and are not selected if they overlap with a selected \verb|STACO|
+muon within $\Delta R<0.1$.
 
 \begin{figure}[h]
 \centering
