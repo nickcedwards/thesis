@@ -7,7 +7,7 @@
 
 Electron reconstruction and identification was described in~\sec{reco-el}. Both
 central electrons with \modetalt{2.47} and forward electrons are used. In
-addition to the indentification requirements described in~\sec{reco-el}
+addition to the identification requirements described in~\sec{reco-el}
 additional selection requirements are imposed to select electrons likely to have
 originated from \Z\ boson decays and to reject backgrounds. The requirements are
 slightly different for the 8 \tev\ analysis compared to the 7 \tev\ analysis,
@@ -25,7 +25,7 @@ are summarised in~\tab{objsel-el} are described in more detail below.
       Requirement        & 7 \tev\ & 8 \tev\ \\ 
       \hline
       \bf{Central Electron Selection} & \\
-      Algorthim             & Standard (with GSF refit)     & Standard \\
+      Algorithm             & Standard (with GSF refit)     & Standard \\
       Quality               & Good Data Quality & \it{Same} \\
       ID cut                & \loosePP & \it{Same}       \\
       $\eta$                & $|\eta|<2.47$ & \it{Same} \\
@@ -38,7 +38,7 @@ are summarised in~\tab{objsel-el} are described in more detail below.
                             & \multicolumn{1}{p{6cm}}{b) Remove lowest $E_T$ $e$ in \deltaRlt{0.1} from another $e$} & \it{Same} \\ 
       \hline
       \bf{Forward Electron Selection:} & \\
-      Alogirthm             & Forward & \it{Same} \\
+      Algorithm             & Forward & \it{Same} \\
       Quality               & Good Data Quality & \it{Same}  \\
       ID cut                & Tight & \it{Same} \\
       $\eta$                & $2.50<|\eta|<3.16$ & \it{Same} \\
@@ -46,7 +46,7 @@ are summarised in~\tab{objsel-el} are described in more detail below.
       Overlap removal       & \multicolumn{1}{p{6cm}}{Remove if overlaps with central electron or any muon in \deltaRlt{0.1}} & \it{Same}\\
 %
       %\bf{Central Electron Selection} & \\
-      %Algorthim             & Standard (with GSF refit)     & Standard \\
+      %Algorithm             & Standard (with GSF refit)     & Standard \\
       %Quality               & \multicolumn{2}{c}{\texttt{(OQ  AND 1446 == 0})} \\
       %ID cut                & \multicolumn{2}{c}{\loosePP}       \\
       %$\eta$                & \multicolumn{2}{c}{$|\eta|<2.47$} \\
@@ -59,7 +59,7 @@ are summarised in~\tab{objsel-el} are described in more detail below.
       %                      & \multicolumn{2}{c}{b) Remove lowest $E_T$ $e$ in \deltaRlt{0.1} from another $e$} \\ 
       %\hline
       %\bf{Forward Electron Selection:} & \\
-      %Alogirthm             & \multicolumn{2}{c}{Forward} \\
+      %Algorithm             & \multicolumn{2}{c}{Forward} \\
       %Quality               & \multicolumn{2}{c}{\texttt{(OQ  AND 1446 == 0)}}  \\
       %ID cut                & \multicolumn{2}{c}{Tight} \\
       %$\eta$                & \multicolumn{2}{c}{$2.50<|\eta|<3.16$} \\
@@ -77,7 +77,7 @@ are summarised in~\tab{objsel-el} are described in more detail below.
 `Central' electrons, with \modetaclusterlt{2.47}, are reconstructed using the
 ``standard'' electron algorithm as described in~\sec{reco-el-reco}.  For 2011
 data, the algorithm used was slightly different to the `standard' ATLAS electron
-econstruction as tracks were refitted using a Gaussian-sum filter (GSF) to
+reconstruction as tracks were refitted using a Gaussian-sum filter (GSF) to
 account to account for the effect of bremsstrahlung in the inner detector. In
 2012 data this became the default reconstruction algorithm. Central electrons
 are required to pass the \loosePP\ identification algorithm.
@@ -108,7 +108,7 @@ three samplings, or the presence of a masked cell in the core of the cluster.
 To ensure that the candidates come from the primary vertex (defined as the
 vertex that has the highest $\sum{\pt^2}$ of associated tracks), the
 longitudinal impact parameter \zzero\ of the electron track with respect to the
-primary vertex must be less than 2 mm. The \intro{unbiased} impact paramter is
+primary vertex must be less than 2 mm. The \intro{unbiased} impact parameter is
 used; the unbiased impact parameter for a particular track is obtained by
 refitting the vertex without the track in question, then calculating the impact
 parameter with respect to this refitted vertex, thus removing the pull of the
@@ -134,11 +134,11 @@ to pileup as most tracks from other (pileup) vertices are excluded.
 
 Additionally, for the 2011 data, a calorimeter isolation requirement is imposed.
 This is defined as the sum of calorimeter cell energies in a cone of
-deltaRlt{0.2} around the barycentre of the electron cluster, excluding a 5x7
+\deltaRlt{0.2} around the barycentre of the electron cluster, excluding a 5x7
 grid of cells in the centre of the cone (which are assumed to be due to the
 electron). Cells from both the EM and hadronic calorimeters are included. The
 requirement is that the sum of such energies be less than 30\% of electron \et,
-i.e. \etconetwentylt{0.3}.  This variable is particularly sensetive to pileup,
+i.e. \etconetwentylt{0.3}.  This variable is particularly sensitive to pileup,
 as pileup events tend to deposit additional energy isotropically throughout the
 detector, thus increasing the energy in the isolation cone. A correction
 parameterised by the number of vertices reconstructed in the event is applied to
@@ -310,7 +310,7 @@ is \ptconetwentylt{0.15}.  The calorimeter isolation variable is defined in a
 similar way as for electrons, however the size of the `core' deposit of energy
 attributed to the muon is smaller than in the case of electron isolation, and
 varies by calorimeter component depending on the expected muon energy deposition
-pattern (e.g. a single cell in the EM presampler to a 3x3 grid in the second
+pattern (e.g. a single cell in the EM pre-sampler to a 3x3 grid in the second
 layer of the EM calorimeter). The calorimeter isolation requirement is
 \etconetwentylt{0.3}, and as for electrons is only applied to the 2011 data.
 
@@ -321,7 +321,7 @@ the requirement is $|z_0\sin(\theta)|<0.5 mm$. The transverse impact parameter
 significance (\dzerosig) is required to be less than 3.5. The selection for
 muons is tighter than for electrons since because muons do
 not emit \brem\ to the same extent as electrons the track fit is improved and
-the resolution of the impact paramater and \dzerosig\ are improved, so tighter
+the resolution of the impact parameter and \dzerosig\ are improved, so tighter
 requirements are can be made whilst maintaining signal efficiency.
 
 The inner detector tracks must have a minimum number of hits in each silicon
@@ -338,7 +338,7 @@ $\mathrm{hits}+\mathrm{outliers} > 6$ and $\mathrm{outliers} < 0.9 \times
 $\mathrm{hits}+\mathrm{outliers} > 6$, require $\mathrm{outliers} < 0.9 \times
 (\mathrm{outliers}+\mathrm{hits})$~\cite{MCP}. For data taken in 2012, the
 requirements are slightly loosened in order to recover efficiency losses in 2012
-data; this was not found to increase the misidnetification rate significantly;
+data; this was not found to increase the misidentification rate significantly;
 see~\tab{objsel-mu} for details of the changes.
 
 \subsection{Forward Muon Selection}
@@ -369,7 +369,7 @@ Additionally forward muons with an ID track are required to satisfy the same
 \subsection{Calorimeter Tagged Muon Selection}
 
 \verb|CaloTrkMuID| muons use the calorimeter to tag inner-detector tracks as
-originating from muons. This helps to recover efficieny at $|\eta|<0.1$ where
+originating from muons. This helps to recover efficiency at $|\eta|<0.1$ where
 there is a gap in the muon-spectrometer. A muon with sufficient momentum
 will traverse all the layers of the calorimeter, leaving a small signal. 
 A low momentum hadron deposits
