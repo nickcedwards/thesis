@@ -695,67 +695,63 @@ such that the numerator is a subset of the denominator.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[htbp]
 \small
-	 \centering
-	 \begin{tabular}{p{3cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}}
-	 \hline\hline
-%	 	 Cutflow & \multicolumn{4}{|c|}{Number of Events} \\ \cline{2-5}
-	   & \multicolumn{2}{|c|}{$eeee$} & \multicolumn{2}{|c|}{$\mu\mu\mu\mu$} & \multicolumn{2}{|c|}{$ee \mu \mu$} & \multicolumn{2}{|c}{$llll$} \\
-\hline
-                                                                                       & $ZZ$ & $ZZ^{*}$ & $ZZ$ & $ZZ^{*}$ & $ZZ$ & $ZZ^{*}$ & $ZZ$ & $ZZ^{*}$ \\
-\hline
+    \centering
+    \begin{tabular}{p{3cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}}
+	\hline\hline
+        \ZZ, 7~\tev & \eeee & \mmmm & \eemm & \llll \\
+        \hline
 
-  Tau contamination (\%)  & 
-\ZZTauContaminationPercentageEEEE $\pm$  \ZZTauContaminationPercentageStatEEEE &
-\ZZTauContaminationPercentageMMMM $\pm$  \ZZTauContaminationPercentageStatMMMM &
-\ZZTauContaminationPercentageEEMM $\pm$  \ZZTauContaminationPercentageStatEEMM &
-\ZZTauContaminationPercentageLLLL $\pm$  \ZZTauContaminationPercentageStatLLLL \\
- from $\ZZ \rightarrow \tau+X$   & & & & \\
-%%
-% % Contaminations from outside fid
-% Contamination (\%)   & 
-%\ZZOutsideFidContaminationPercentageEEEE $\pm$  \ZZOutsideFidContaminationPercentageStatEEEE &
-%\ZZOutsideFidContaminationPercentageMMMM $\pm$  \ZZOutsideFidContaminationPercentageStatMMMM &
-%\ZZOutsideFidContaminationPercentageEEMM $\pm$  \ZZOutsideFidContaminationPercentageStatEEMM &
-%\ZZOutsideFidContaminationPercentageLLLL $\pm$  \ZZOutsideFidContaminationPercentageStatLLLL \\
-%from events outside fiducial region  & & & & \\
+        % C_ZZ
+        Reconstruction factor $C_{ZZ}$  & 
+        \ZZCzzZZEEEE $\pm$  \ZZCzzStatZZEEEE &
+        \ZZCzzZZMMMM $\pm$  \ZZCzzStatZZMMMM &
+        \ZZCzzZZEEMM $\pm$  \ZZCzzStatZZEEMM &
+        \ZZCzzZZLLLL $\pm$  \ZZCzzStatZZLLLL \\
 
-% C_ZZ
-Reconstruction factor $C_{ZZ}$  & 
-\ZZCzzEEEE $\pm$  \ZZCzzStatEEEE &
-\ZZCzzMMMM $\pm$  \ZZCzzStatMMMM &
-\ZZCzzEEMM $\pm$  \ZZCzzStatEEMM &
-\ZZCzzLLLL $\pm$  \ZZCzzStatLLLL \\
+          Tau contamination (\%)  & 
+        \ZZTauContaminationPercentageZZEEEE $\pm$  \ZZTauContaminationPercentageStatZZEEEE &
+        \ZZTauContaminationPercentageZZMMMM $\pm$  \ZZTauContaminationPercentageStatZZMMMM &
+        \ZZTauContaminationPercentageZZEEMM $\pm$  \ZZTauContaminationPercentageStatZZEEMM &
+        \ZZTauContaminationPercentageZZLLLL $\pm$  \ZZTauContaminationPercentageStatZZLLLL \\
+         from $\ZZ \rightarrow \tau+X$   & & & & \\
+        %%
+         % Contaminations from outside fid
+         Contamination (\%)   & 
+        \ZZOutsideFidContaminationPercentageZZEEEE $\pm$  \ZZOutsideFidContaminationPercentageStatZZEEEE &
+        \ZZOutsideFidContaminationPercentageZZMMMM $\pm$  \ZZOutsideFidContaminationPercentageStatZZMMMM &
+        \ZZOutsideFidContaminationPercentageZZEEMM $\pm$  \ZZOutsideFidContaminationPercentageStatZZEEMM &
+        \ZZOutsideFidContaminationPercentageZZLLLL $\pm$  \ZZOutsideFidContaminationPercentageStatZZLLLL \\
+        from events outside fiducial region  & & & & \\
 
-%% "True" C_ZZ
-%True reconstruction factor      & 
-%\ZZTrueCzzEEEE $\pm$  \ZZTrueCzzStatEEEE &
-%\ZZTrueCzzMMMM $\pm$  \ZZTrueCzzStatMMMM &
-%\ZZTrueCzzEEMM $\pm$  \ZZTrueCzzStatEEMM &
-%\ZZTrueCzzLLLL $\pm$  \ZZTrueCzzStatLLLL \\
+        % "True" C_ZZ
+        True reconstruction factor      & 
+        \ZZTrueCzzZZEEEE $\pm$  \ZZTrueCzzStatZZEEEE &
+        \ZZTrueCzzZZMMMM $\pm$  \ZZTrueCzzStatZZMMMM &
+        \ZZTrueCzzZZEEMM $\pm$  \ZZTrueCzzStatZZEEMM &
+        \ZZTrueCzzZZLLLL $\pm$  \ZZTrueCzzStatZZLLLL \\
 
-	 \hline\hline
-	 \end{tabular}
-           \caption{Details of the \ZZllll\ acceptance and selection
-           efficiencies and contaminations, estimated from \mc. The first row shows the 
-           the reconstruction
-           factor \CZZ\, defined as the ratio of the number of events passing
-           the selection requirements (including contributions from $\ZZ \rightarrow \tau+X$
-           and events outside the fiducial region) to the number of generated
-           events in the fiducial region.  
-           The second row shows the percentage contamination from $\rightarrow \tau+X$ events, 
-           and the third the 
-           percentage
-           contamination 
-           from events falling outside of the fiducial region at generator
-           level, but passing the selection due to the energy, momentum or track
-           direction being mis-reconstructed. 
-           The final row shows the ``true''
-           reconstruction efficiency, with the contribution from $\ZZ
-           \rightarrow \tau+X$ and events outside the fiducial region removed
-           from the numerator.
-           All errors shown are statistical only.
-}
-          \label{table:objSel-czz}
+	\hline\hline
+    \end{tabular}
+    \caption{Details of the \ZZllll\ acceptance and selection
+    efficiencies and contaminations, estimated from \mc. The first row shows the 
+    the reconstruction
+    factor \CZZ\, defined as the ratio of the number of events passing
+    the selection requirements (including contributions from $\ZZ \rightarrow \tau+X$
+    and events outside the fiducial region) to the number of generated
+    events in the fiducial region.  
+    The second row shows the percentage contamination from $\rightarrow \tau+X$ events, 
+    and the third the 
+    percentage
+    contamination 
+    from events falling outside of the fiducial region at generator
+    level, but passing the selection due to the energy, momentum or track
+    direction being mis-reconstructed. 
+    The final row shows the ``true''
+    reconstruction efficiency, with the contribution from $\ZZ
+    \rightarrow \tau+X$ and events outside the fiducial region removed
+    from the numerator.
+    All errors shown are statistical only.}
+    \label{table:objSel-czz}
 \end{table}
 
 \subsection{Mispairing rates}
