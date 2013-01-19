@@ -410,7 +410,7 @@ requirements as central muons.
 \section{Triggers}
 \label{sec:triggers}
 
-\ZZ\ candidate events in are pre-selected using the lowest threshold unprescaled single-electron or
+\ZZ\ candidate events in are triggered using the lowest threshold unprescaled single-electron or
 single-muon triggers, as descried in Section~\ref{sec:reco-el-trigger}
 and~\ref{sec:reco-mu-trigger}. The trigger thresholds were progressively
 increased with time as the instantaneous luminosity delivered by the LHC
@@ -461,6 +461,14 @@ A - M & \multicolumn{1}{p{4cm}}{\centering \texttt{mu24i\_tight} $||$ \texttt{mu
 \caption{Muon triggers used in the different data taking periods.}
 \label{table:objSel-trigger-mu}
 \end{table}
+
+At least one selected lepton in triggered events must match to the
+object that caused the trigger to fire, as described above. Such leptons are referred to as the
+\intro{trigger matched} lepton. To reduce uncertainties associated with the
+trigger efficiency measurement, at least to be considered trigger matched
+the lepton must have a \pt\ such that it is on the efficiency plateau of the
+trigger, and must also satisfy the same identification requirements as
+required in the trigger.
 
 %The events passing the pre-selection are required to possess a 
 %%leading
@@ -571,12 +579,7 @@ Candidate \ZZ\ events are selected using the following requirements.
     criteria: $\Delta{R}(\ell,\ell)>0.2$.
 
     \item {\bf Trigger match} At least one selected lepton must match to the
-    object that caused the trigger to fire. Such leptons are referred to as the
-    \intro{trigger matched} lepton. To reduce uncertainties associated with the
-    trigger efficiency measurement, at least to be considered trigger matched
-    the lepton must have a \pt\ such that it is on the efficiency plateau of the
-    trigger, and must also satisfy the same identification requirements as
-    required in the trigger.
+    object that caused the trigger to fire, as described above. 
 
     \item {\bf Quadruplet Formation} There must be two same flavour,
     oppositely charged lepton pairs. In $eeee$ and $\mu\mu\mu\mu$ events there are
