@@ -410,6 +410,121 @@ requirements as central muons.
 \section{Triggers}
 \label{sec:triggers}
 
+\ZZ\ candidate events in are pre-selected using the lowest threshold unprescaled single-electron or
+single-muon triggers, as descried in Section~\ref{sec:reco-el-trigger}
+and~\ref{sec:reco-mu-trigger}. The trigger thresholds were progressively
+increased with time as the instantaneous luminosity delivered by the LHC
+increases. For the \eemm\ final state, the event may be selected using either
+the electron trigger or the single muon trigger. The triggers used and the
+associated luminosity are shown in~\tab{objSel-trigger-el} for the electron
+trigger and~\tab{objSel-trigger-mu} for the muon trigger.
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{lcccc}
+\hline \hline
+Period & Trigger & \pt\ threshold (GeV) & Int. Luminosity (\ifb) & Notes \\
+\hline
+{ \bf 2011 } & & & & \\
+B - I & \texttt{e20\_medium} & 20 & & \\
+J - K & \texttt{e22\_medium} & 22 & & \\
+L - M & \texttt{e22vh\_medium1} & 22 & & Variable L1 thresholds; hadronic
+\hline
+{ \bf 2012 } & & & & \\
+A - I & \texttt{e20\_medium} & 20 & & \\
+J - K & \texttt{e22\_medium} & 22 & & \\
+L - M & \texttt{e22vh\_medium1} & 22 & & Variable L1 thresholds; hadronic
+leakage cut; Reoptimised ID cuts.\\
+leakage cut; Reoptimised ID cuts.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Single electron triggers used in the different data taking periods}
+\label{table:objSel-trigger-el}
+\end{table}
+
+The events passing the pre-selection are required to possess a 
+%leading
+``trigger-matched lepton'', i.e., a lepton that is within $\dR<0.1$ of the
+triggered object.  At least one trigger-matched lepton must have 
+$\pt>25$ GeV and $|\eta|<2.47$ (if it is an electron) or $\pt>20$ GeV
+and $|\eta|<2.4$ (if it is a muon). 
+
+%	Due to the presence of three leptons with large transverse momentum
+%	the trigger efficiencies for $ZZ$ events is higher than the single
+%	lepton trigger efficiency. 
+
+The scale factors to account for the mis-modeling of the single-lepton
+trigger efficiency in the MC with respect to the data have been
+derived using the tag-and-probe method (T\&P) on $Z\rightarrow \ll$
+events. The statistical uncertainty on the trigger efficiency is obtained
+from MC.
+
+The scale factors are applied to leptons forming the $\Z$ candidate which
+match to a trigger object as described above.
+The scale factor depends on the lepton flavor and $\pt$ of the individual leptons. It is calculated 
+according to equation~(\ref{eq:triggerEffSF}) where $N_l$ is the number of leptons
+matching to a trigger object,
+$\epsilon_{Data,l_n}$ is the trigger efficiency determined with T\&P from 
+data for a single lepton flavor of lepton $l_n$, and $\epsilon_{MC,l_n}$ is
+the trigger efficiency determined with T\&P from MC. 
+
+\begin{equation}\label{eq:triggerEffSF}
+  SF =  { \frac{ {1 - \prod_{n=1}^{N_l} (1 - \epsilon_{Data,l_n})}} {1 - \prod_{n=1}^{N_l} (1 - \epsilon_{MC,l_n})} }
+\end{equation}
+
+The systematic uncertainty associated with the scale factors for
+muon triggers is $0.2\%$~\cite{muonPG_EPS}.
+The
+uncertainty associated with the electron trigger is $1\%$, which is given
+by the e-gamma performance group~\cite{egammaPG_EPS}. 
+
+%The efficiency corrected with the scale factor 
+%will be calculated, and
+%is 
+%compared with the scale factor uncertainty. If the correction is much smaller
+%than the scale factor uncertainty, a correction will not be used. The maximum
+%systematic uncertainty in the trigger efficiency is expected to be no
+%larger than 1\%, see Section~\ref{sec:Systematics}. 
+
+%For simplicity the total trigger scale factor uncertainty is taken as the larger of the two
+%contributions, i.e. 1\%. 
+
+The trigger efficiencies determined with the \ZZ\ MC samples after the
+selection cuts except for the trigger object-lepton matching and the
+triggered-object requirement are listed in
+Table~\ref{tbl:triggerMCeff}.  ~\footnote{https://twiki.cern.ch/twiki/bin/viewauth/Atlas/TrigMuonEfficiency}
+The values are all greater than
+$98\%$.
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{c|c|c}
+\hline \hline
+Channel & \multicolumn{2}{c}{Trigger Efficiency [\%]} \\
+\hline
+      & \ZZ Selection     & \ZZs Selection      \\
+%Channel & Trigger Efficiency [\%] & Shift when applying SF [\%]\\
+%
+\hline
+                   $eeee$ & 100.0$^{+0.0}_{-0.4}$   & 99.6$^{+0.2}_{-0.5}$ \\
+           $\mu\mu\mu\mu$ & 98.7$^{+0.4}_{-0.6}$    & 98.2$^{+0.4}_{-0.5}$ \\
+               $ee\mu\mu$ & 99.6$^{+0.2}_{-0.3}$    & 98.8$^{+0.3}_{-0.4}$ \\
+                   $llll$ & 99.4$^{+0.2}_{-0.2}$    & 98.8$^{+0.2}_{-0.2}$ \\
+                \hline
+        $ee\nu\nu$        & $100.0$                 & -                    \\
+        $\mu\mu\nu\nu$    & $99.4$                  & -                    \\
+        $\ell\ell\nu\nu$  & $99.6$                  & -                     \\
+    \hline \hline
+\end{tabular}
+\end{center}
+\caption{Trigger efficiencies for \ZZ\ events after all selection cuts excluding the trigger match and trigger requirement.
+Scale-factors are applied on a per-object basis to reproduce the trigger efficiency measured in data in the Monte-Carlo.
+%Most probable values with 68.3\% confidence intervals are reported.
+}
+\label{tbl:triggerMCeff}
+\end{table}
+
 \section{Dilepton Control Plots}
 
 \section{\ZZ\ Event Selection}
