@@ -634,7 +634,10 @@ fiducial phase space correction which corrects for small differences between the
 regions of phase space covered by detector acceptance and the definition of the
 fiducial phase space; it also accounts for effects of detector resolution. 
 
-In practice, \CZZ\ is estimated from \mc as
+In practice, \CZZ\ is estimated from \mc\ by dividing the number of events in a
+\ZZllll\ sample passing the selection requirements by the number of those events
+which were generated inside the fiducial phase space. This is shown in the
+following equation:
 
 \begin{equation}
 C_{ZZ}= \frac{ N^{\rm MC\ Pass\ All\ Cuts}_{{\rm Reconstructed}\ ZZ} \times
@@ -643,18 +646,24 @@ C_{ZZ}= \frac{ N^{\rm MC\ Pass\ All\ Cuts}_{{\rm Reconstructed}\ ZZ} \times
 
 where {\it SF} is the event level scale factor applied to the \mc\ to correct
 lepton selection efficiencies and trigger efficiencies to those observed in
-data. \CZZ\ is calculated separately for each of the three final states (\eeee,
-\mmmm\ and \eemm).
+data. The number in the denominator includes contributions from
+$\ZZ\ra\tau\tau\ell\ell$ decays, and from events generated outwith the fiducial
+volume (e.g. with a lepton with a \pt\ lower than the lepton \pt\ threshold) but
+which are reconstructed as within; \CZZ\ is therefore not a true efficiency. 
+
+\CZZ\ is calculated separately for each of the three final states (\eeee,
+\mmmm\ and \eemm), and separately for the \ZZ\ and \ZZs\ selection and for the 7
+\tev\ and 8 \tev\ analysis. Values for \CZZ\ are given in~\tab{objSel-czz}, as
+well as the estimated contribution from tau decays and events generated outside
+the fiducial volume. Also given is the true selection efficiency, that is \CZZ\
+with only events generated in the fiducial phase space included in the numerator
+such that the numerator is a subset of the denominator.
 
 \subsection{Mispairing rates}
 
 \subsection{Effect of \deltaR\ requirement}
 
 Include studies of other algorithms
-
-\subsection{Tau Contribution}
-
-\subsection{Outside Fid Contamination}
 
 \section{Systematic Uncertainties}
 
