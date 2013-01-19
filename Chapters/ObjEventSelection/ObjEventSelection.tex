@@ -463,66 +463,39 @@ A - M & \multicolumn{1}{p{4cm}}{\centering \texttt{mu24i\_tight} $||$ \texttt{mu
 \end{table}
 
 At least one selected lepton in triggered events must match to the
-object that caused the trigger to fire, as described above. Such leptons are referred to as the
-\intro{trigger matched} lepton. To reduce uncertainties associated with the
-trigger efficiency measurement, at least to be considered trigger matched
-the lepton must have a \pt\ such that it is on the efficiency plateau of the
+object that caused the trigger to fire, as described above. Such leptons are referred to as 
+\intro{trigger matched} leptons. To reduce uncertainties associated with the
+trigger efficiency measurement, to be considered trigger matched
+a lepton must have a \pt\ such that it is on the efficiency plateau of the
 trigger, and must also satisfy the same identification requirements as
-required in the trigger.
+required in the trigger. Trigger matched leptons (in both 2011 and 2012 data)
+are required to have \ptgt{25}, cluster \modetalt{2.47} and pass the \mediumPP\
+requirements. Trigger matched muons are required to be combined muons, have
+\modetalt{2.4} and have $\pt > 20 (25)$ \gev\ in 2011 (2012) data.
 
-%The events passing the pre-selection are required to possess a 
-%%leading
-%``trigger-matched lepton'', i.e., a lepton that is within $\dR<0.1$ of the
-%triggered object.  At least one trigger-matched lepton must have 
-%$\pt>25$ GeV and $|\eta|<2.47$ (if it is an electron) or $\pt>20$ GeV
-%and $|\eta|<2.4$ (if it is a muon). 
-%
-%%	Due to the presence of three leptons with large transverse momentum
-%%	the trigger efficiencies for $ZZ$ events is higher than the single
-%%	lepton trigger efficiency. 
-%
-%The scale factors to account for the mis-modeling of the single-lepton
-%trigger efficiency in the MC with respect to the data have been
-%derived using the tag-and-probe method (T\&P) on $Z\rightarrow \ll$
-%events. The statistical uncertainty on the trigger efficiency is obtained
-%from MC.
-%
-%The scale factors are applied to leptons forming the $\Z$ candidate which
-%match to a trigger object as described above.
-%The scale factor depends on the lepton flavor and $\pt$ of the individual leptons. It is calculated 
-%according to equation~(\ref{eq:triggerEffSF}) where $N_l$ is the number of leptons
-%matching to a trigger object,
-%$\epsilon_{Data,l_n}$ is the trigger efficiency determined with T\&P from 
-%data for a single lepton flavor of lepton $l_n$, and $\epsilon_{MC,l_n}$ is
-%the trigger efficiency determined with T\&P from MC. 
-%
-%\begin{equation}\label{eq:triggerEffSF}
-%  SF =  { \frac{ {1 - \prod_{n=1}^{N_l} (1 - \epsilon_{Data,l_n})}} {1 - \prod_{n=1}^{N_l} (1 - \epsilon_{MC,l_n})} }
-%\end{equation}
-%
-%The systematic uncertainty associated with the scale factors for
-%muon triggers is $0.2\%$~\cite{muonPG_EPS}.
-%The
-%uncertainty associated with the electron trigger is $1\%$, which is given
-%by the e-gamma performance group~\cite{egammaPG_EPS}. 
-%
-%%The efficiency corrected with the scale factor 
-%%will be calculated, and
-%%is 
-%%compared with the scale factor uncertainty. If the correction is much smaller
-%%than the scale factor uncertainty, a correction will not be used. The maximum
-%%systematic uncertainty in the trigger efficiency is expected to be no
-%%larger than 1\%, see Section~\ref{sec:Systematics}. 
-%
-%%For simplicity the total trigger scale factor uncertainty is taken as the larger of the two
-%%contributions, i.e. 1\%. 
-%
-%The trigger efficiencies determined with the \ZZ\ MC samples after the
-%selection cuts except for the trigger object-lepton matching and the
-%triggered-object requirement are listed in
-%Table~\ref{tbl:triggerMCeff}.  ~\footnote{https://twiki.cern.ch/twiki/bin/viewauth/Atlas/TrigMuonEfficiency}
-%The values are all greater than
-%$98\%$.
+The efficiency for a single lepton to fire the trigger is measured in data using
+\Zll\ events. Events are triggered on using a `tag' lepton, then the
+efficiency for the second `probe' lepton to fire the trigger is measured. Scale
+factors are thus derived to correct the single lepton trigger efficiencies in
+the \mc\ simulation to that observed in data. This is translated to an event
+level trigger efficiency scale-factor using the following formula:
+
+\begin{equation}
+\label{eq:triggerEffSF}
+  SF =  { \frac{ {1 - \prod_{n=1}^{N_l} (1 - \epsilon_{Data,l_n})}} {1 - \prod_{n=1}^{N_l} (1 - \epsilon_{MC,l_n})} }
+\end{equation}
+
+ where $N_l$ is the number of leptons matching to a trigger object,
+$\epsilon_{Data,l_n}$ is the trigger efficiency determined with T\&P from 
+data for a single lepton flavor of lepton $l_n$, and $\epsilon_{MC,l_n}$ is
+the trigger efficiency determined with T\&P from MC. 
+The systematic uncertainty associated with the scale factors for
+muon triggers is $0.2\%$~\cite{muonPG_EPS} and for electron triggers is $\sim1\%$~\cite{egammaPG_EPS}. 
+
+The trigger efficiencies for \ZZ\ events passing the full event selection
+described below, derived from simulation after applying the scale-factors
+described above, are listed in
+Table~\ref{tbl:triggerMCeff}.
 
 \begin{table}[htbp]
 \begin{center}
@@ -539,15 +512,11 @@ Channel & \multicolumn{2}{c}{Trigger Efficiency [\%]} \\
                $ee\mu\mu$ & 99.6$^{+0.2}_{-0.3}$    & 98.8$^{+0.3}_{-0.4}$ \\
                    $llll$ & 99.4$^{+0.2}_{-0.2}$    & 98.8$^{+0.2}_{-0.2}$ \\
                 \hline
-        $ee\nu\nu$        & $100.0$                 & -                    \\
-        $\mu\mu\nu\nu$    & $99.4$                  & -                    \\
-        $\ell\ell\nu\nu$  & $99.6$                  & -                     \\
     \hline \hline
 \end{tabular}
 \end{center}
 \caption{Trigger efficiencies for \ZZ\ events after all selection cuts excluding the trigger match and trigger requirement.
 Scale-factors are applied on a per-object basis to reproduce the trigger efficiency measured in data in the Monte-Carlo.
-%Most probable values with 68.3\% confidence intervals are reported.
 }
 \label{tbl:triggerMCeff}
 \end{table}
