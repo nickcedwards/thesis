@@ -613,8 +613,41 @@ are observed in the 2011 data for the \ZZ\ (\ZZs) selection. In the 2012 data,
 observed for the \ZZ\ (\ZZs) selection.
 
 \section{Selection Efficiencies}
-\subsection{\CZZ}
+
+\subsection{Reconstruction Acceptance \CZZ}
+
+In order to extrapolate from the number of observed events to a \cx\ or similar
+measurement, it is necessary to know the acceptance of the selection
+requirements. This is described by the \intro{reconstruction acceptance factor,
+\CZZ}. Formally, this is defined as:
+
+\begin{equation}
+C_{ZZ}= \epsilon_{trig} \times \epsilon_{event} \times \epsilon_{lep} \times \alpha_{reco}
+\end{equation}
+
+where $\epsilon_{trig}$ is the trigger efficiency, $\epsilon_{event}$ is 
+the efficiency of the event level cuts, and
+$\epsilon_{lep} =\epsilon_{lep1}\epsilon_{lep2}\epsilon_{lep3}\epsilon_{lep4}$ is the product of the 
+individual efficiencies for the four leptons to pass the lepton selection
+requirements. $\alpha_{reco}$ is the reconstruction to 
+fiducial phase space correction which corrects for small differences between the
+regions of phase space covered by detector acceptance and the definition of the
+fiducial phase space; it also accounts for effects of detector resolution. 
+
+In practice, \CZZ\ is estimated from \mc as
+
+\begin{equation}
+C_{ZZ}= \frac{ N^{\rm MC\ Pass\ All\ Cuts}_{{\rm Reconstructed}\ ZZ} \times
+{\rm SF} }{ N^{{\rm MC\ Fiducial\ Volume}}_{{\rm Generated}\ ZZ} }
+\end{equation}
+
+where \it{SF} is the event level scale factor applied to the \mc\ to correct
+lepton selection efficiencies and trigger efficiencies to those observed in
+data. \CZZ\ is calculated separately for each of the three final states (\eeee,
+\mmmm\ and \eemm).
+
 \subsection{Mispairing rates}
+
 \subsection{Effect of \deltaR\ requirement}
 
 Include studies of other algorithms
