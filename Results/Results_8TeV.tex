@@ -1,0 +1,521 @@
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Convenience functions
+\newcommand{\ZZEightTeVSigExpectation}{\ZZEightTeVNSigEventsExpectedCentralLLLL\ensuremath{\pm}\ZZEightTeVNSigEventsExpectedStatLLLL(stat.)\ensuremath{\pm}\ZZEightTeVNSigEventsExpectedSystLLLL(syst.)}
+\newcommand{\ZZEightTeVSigExpectationEEEE}{\ZZEightTeVNSigEventsExpectedCentralEEEE\ensuremath{\pm}\ZZEightTeVNSigEventsExpectedStatEEEE\ensuremath{\pm}\ZZEightTeVNSigEventsExpectedSystEEEE}
+\newcommand{\ZZEightTeVSigExpectationMMMM}{\ZZEightTeVNSigEventsExpectedCentralMMMM\ensuremath{\pm}\ZZEightTeVNSigEventsExpectedStatMMMM\ensuremath{\pm}\ZZEightTeVNSigEventsExpectedSystMMMM}
+\newcommand{\ZZEightTeVSigExpectationEEMM}{\ZZEightTeVNSigEventsExpectedCentralEEMM\ensuremath{\pm}\ZZEightTeVNSigEventsExpectedStatEEMM\ensuremath{\pm}\ZZEightTeVNSigEventsExpectedSystEEMM}
+
+\newcommand{\ZZEightTeVSigExpectationOneDp}{\ZZEightTeVNSigEventsExpectedCentralLLLLOneDp\ensuremath{\pm}\ZZEightTeVNSigEventsExpectedTotalUncLLLLOneDp}
+\newcommand{\ZZEightTeVSigExpectationEEEEOneDp}{\ZZEightTeVNSigEventsExpectedCentralEEEEOneDp\ensuremath{\pm}\ZZEightTeVNSigEventsExpectedTotalUncEEEEOneDp}
+\newcommand{\ZZEightTeVSigExpectationMMMMOneDp}{\ZZEightTeVNSigEventsExpectedCentralMMMMOneDp\ensuremath{\pm}\ZZEightTeVNSigEventsExpectedTotalUncMMMMOneDp}
+\newcommand{\ZZEightTeVSigExpectationEEMMOneDp}{\ZZEightTeVNSigEventsExpectedCentralEEMMOneDp\ensuremath{\pm}\ZZEightTeVNSigEventsExpectedTotalUncEEMMOneDp}
+
+%\newcommand{\ZZEightTeVDDBgEst}{\ZZEightTeVDDBgEstCentralLLLL\ZZEightTeVDDBgEstStatLLLL(stat.)\ZZEightTeVDDBgEstSystLLLL(syst.)}
+\newcommand{\ZZEightTeVDDBgEst}{\ZZEightTeVDDBgEstCentralLLLL\ZZEightTeVDDBgEstStatLLLL\ZZEightTeVDDBgEstSystLLLL}
+\newcommand{\ZZEightTeVDDBgEstEEEE}{\ZZEightTeVDDBgEstCentralEEEE\ZZEightTeVDDBgEstStatEEEE\ZZEightTeVDDBgEstSystEEEE}
+\newcommand{\ZZEightTeVDDBgEstEEMM}{\ZZEightTeVDDBgEstCentralEEMM\ZZEightTeVDDBgEstStatEEMM\ZZEightTeVDDBgEstSystEEMM}
+\newcommand{\ZZEightTeVDDBgEstMMMM}{\ZZEightTeVDDBgEstCentralMMMM\ZZEightTeVDDBgEstStatMMMM\ZZEightTeVDDBgEstSystMMMM}
+
+\newcommand{\ZZEightTeVDDBgEstOneDpErrType}{\ZZEightTeVDDBgEstCentralLLLLOneDp\ensuremath{ }\ZZEightTeVDDBgEstStatLLLLOneDp\ensuremath{ }(stat.)\ZZEightTeVDDBgEstSystLLLLOneDp\ensuremath{ }(syst.)}
+\newcommand{\ZZEightTeVDDBgEstOneDp}{\ZZEightTeVDDBgEstCentralLLLLOneDp\ZZEightTeVDDBgEstStatLLLLOneDp\ZZEightTeVDDBgEstSystLLLLOneDp}
+\newcommand{\ZZEightTeVDDBgEstEEEEOneDp}{\ZZEightTeVDDBgEstCentralEEEEOneDp\ZZEightTeVDDBgEstStatEEEEOneDp\ZZEightTeVDDBgEstSystEEEEOneDp}
+\newcommand{\ZZEightTeVDDBgEstEEMMOneDp}{\ZZEightTeVDDBgEstCentralEEMMOneDp\ZZEightTeVDDBgEstStatEEMMOneDp\ZZEightTeVDDBgEstSystEEMMOneDp}
+\newcommand{\ZZEightTeVDDBgEstMMMMOneDp}{\ZZEightTeVDDBgEstCentralMMMMOneDp\ZZEightTeVDDBgEstStatMMMMOneDp\ZZEightTeVDDBgEstSystMMMMOneDp}
+
+
+\newcommand{\ZZEightTeVTotalCrossSection}{\ZZEightTeVTotalCrossSectionGamma}
+
+\newcommand{\ZZEightTeVTotalCrossSectionGamma}{\ensuremath{\ZZEightTeVTotalCrossSectionGammaCentral^{+\ZZEightTeVTotalCrossSectionGammaStatUp}_{-\ZZEightTeVTotalCrossSectionGammaStatDown}\textrm{(stat.)}^{+\ZZEightTeVTotalCrossSectionGammaSystUp}_{-\ZZEightTeVTotalCrossSectionGammaSystDown}\textrm{(syst.)}\pm\ZZEightTeVTotalCrossSectionGammaLumiUnc\textrm{(lumi.) pb}}}
+
+\newcommand{\ZZEightTeVTotalCrossSectionGaussian}{\ensuremath{\ZZEightTeVTotalCrossSectionGaussianCentral^{+\ZZEightTeVTotalCrossSectionGaussianStatUp}_{-\ZZEightTeVTotalCrossSectionGaussianStatDown}\textrm{(stat.)}^{+\ZZEightTeVTotalCrossSectionGaussianSystUp}_{-\ZZEightTeVTotalCrossSectionGaussianSystDown}\textrm{(syst.)}\pm\ZZEightTeVTotalCrossSectionGaussianLumiUnc\textrm{(lumi.) pb}}}
+
+\newcommand{\ZZEightTeVFiducialCrossSection}{\ZZEightTeVFiducialCrossSectionGamma}
+
+\newcommand{\ZZEightTeVFiducialCrossSectionGamma}{\ensuremath{\ZZEightTeVFiducialCrossSectionGammaCentral^{+\ZZEightTeVFiducialCrossSectionGammaStatUp}_{-\ZZEightTeVFiducialCrossSectionGammaStatDown}\textrm{(stat.)}^{+\ZZEightTeVFiducialCrossSectionGammaSystUp}_{-\ZZEightTeVFiducialCrossSectionGammaSystDown}\textrm{(syst.)}\pm\ZZEightTeVFiducialCrossSectionGammaLumiUnc\textrm{(lumi.) fb}}}
+
+\newcommand{\ZZEightTeVFiducialCrossSectionGaussian}{\ensuremath{\ZZEightTeVFiducialCrossSectionGaussianCentral^{+\ZZEightTeVFiducialCrossSectionGaussianStatUp}_{-\ZZEightTeVFiducialCrossSectionGaussianStatDown}\textrm{(stat.)}^{+\ZZEightTeVFiducialCrossSectionGaussianSystUp}_{-\ZZEightTeVFiducialCrossSectionGaussianSystDown}\textrm{(syst.)}\pm\ZZEightTeVFiducialCrossSectionGaussianLumiUnc\textrm{(lumi.) fb}}}
+
+\newcommand{\ZZEightTeVTheoryTotalCrossSection}{\ensuremath{\ZZEightTeVTheoryTotalCrossSectionCentral^{+\ZZEightTeVTheoryTotalCrossSectionSystUp}_{-\ZZEightTeVTheoryTotalCrossSectionSystDown}\textrm{ pb}}}
+
+\newcommand{\ZZEightTeVTheoryFiducialCrossSection}{\ensuremath{\ZZEightTeVTheoryFiducialCrossSectionCentral^{+\ZZEightTeVTheoryFiducialCrossSectionSystUp}_{-\ZZEightTeVTheoryFiducialCrossSectionSystDown}\textrm{ fb}}}
+
+% By channel
+\newcommand{\ZZEightTeVTheoryFiducialCrossSectionOneDpEEEE}{\ensuremath{\ZZEightTeVTheoryFiducialCrossSectionCentralOneDpEEEE^{+\ZZEightTeVTheoryFiducialCrossSectionSystUpOneDpEEEE}_{-\ZZEightTeVTheoryFiducialCrossSectionSystDownOneDpEEEE}\textrm{ fb}}}
+\newcommand{\ZZEightTeVTheoryFiducialCrossSectionOneDpMMMM}{\ensuremath{\ZZEightTeVTheoryFiducialCrossSectionCentralOneDpMMMM^{+\ZZEightTeVTheoryFiducialCrossSectionSystUpOneDpMMMM}_{-\ZZEightTeVTheoryFiducialCrossSectionSystDownOneDpMMMM}\textrm{ fb}}}
+\newcommand{\ZZEightTeVTheoryFiducialCrossSectionOneDpEEMM}{\ensuremath{\ZZEightTeVTheoryFiducialCrossSectionCentralOneDpEEMM^{+\ZZEightTeVTheoryFiducialCrossSectionSystUpOneDpEEMM}_{-\ZZEightTeVTheoryFiducialCrossSectionSystDownOneDpEEMM}\textrm{ fb}}}
+
+%~~~~ Rounded to 1dp
+\newcommand{\ZZEightTeVTotalCrossSectionOneDp}{\ZZEightTeVTotalCrossSectionGammaOneDp}
+
+\newcommand{\ZZEightTeVTotalCrossSectionGammaOneDp}{\ensuremath{\ZZEightTeVTotalCrossSectionGammaCentralOneDp^{+\ZZEightTeVTotalCrossSectionGammaStatUpOneDp}_{-\ZZEightTeVTotalCrossSectionGammaStatDownOneDp}\textrm{(stat.)}^{+\ZZEightTeVTotalCrossSectionGammaSystUpOneDp}_{-\ZZEightTeVTotalCrossSectionGammaSystDownOneDp}\textrm{(syst.)}\pm\ZZEightTeVTotalCrossSectionGammaLumiUncOneDp\textrm{(lumi.) pb}}}
+
+\newcommand{\ZZEightTeVTotalCrossSectionGaussianOneDp}{\ensuremath{\ZZEightTeVTotalCrossSectionGaussianCentralOneDp^{+\ZZEightTeVTotalCrossSectionGaussianStatUpOneDp}_{-\ZZEightTeVTotalCrossSectionGaussianStatDownOneDp}\textrm{(stat.)}^{+\ZZEightTeVTotalCrossSectionGaussianSystUpOneDp}_{-\ZZEightTeVTotalCrossSectionGaussianSystDownOneDp}\textrm{(syst.)}\pm\ZZEightTeVTotalCrossSectionGaussianLumiUncOneDp\textrm{(lumi.) pb}}}
+
+\newcommand{\ZZEightTeVFiducialCrossSectionOneDp}{\ZZEightTeVFiducialCrossSectionGammaOneDp}
+
+\newcommand{\ZZEightTeVFiducialCrossSectionGammaOneDp}{\ensuremath{\ZZEightTeVFiducialCrossSectionGammaCentralOneDp^{+\ZZEightTeVFiducialCrossSectionGammaStatUpOneDp}_{-\ZZEightTeVFiducialCrossSectionGammaStatDownOneDp}\textrm{(stat.)}^{+\ZZEightTeVFiducialCrossSectionGammaSystUpOneDp}_{-\ZZEightTeVFiducialCrossSectionGammaSystDownOneDp}\textrm{(syst.)}\pm\ZZEightTeVFiducialCrossSectionGammaLumiUncOneDp\textrm{(lumi.) fb}}}
+
+\newcommand{\ZZEightTeVFiducialCrossSectionGaussianOneDp}{\ensuremath{\ZZEightTeVFiducialCrossSectionGaussianCentralOneDp^{+\ZZEightTeVFiducialCrossSectionGaussianStatUpOneDp}_{-\ZZEightTeVFiducialCrossSectionGaussianStatDownOneDp}\textrm{(stat.)}^{+\ZZEightTeVFiducialCrossSectionGaussianSystUpOneDp}_{-\ZZEightTeVFiducialCrossSectionGaussianSystDownOneDp}\textrm{(syst.)}\pm\ZZEightTeVFiducialCrossSectionGaussianLumiUncOneDp\textrm{(lumi.) fb}}}
+
+%\newcommand{\ZZEightTeVTheoryTotalCrossSectionOneDp}{\ensuremath{\ZZEightTeVTheoryTotalCrossSectionCentralOneDp^{+\ZZEightTeVTheoryTotalCrossSectionSystUpOneDp}_{-\ZZEightTeVTheoryTotalCrossSectionSystDownOneDp}\textrm{ pb}}}
+\newcommand{\ZZEightTeVTheoryTotalCrossSectionOneDp}{\ensuremath{\ZZEightTeVTheoryTotalCrossSectionCentralOneDp\pm\ZZEightTeVTheoryTotalCrossSectionSystOneDp\textrm{ pb}}}
+
+%\newcommand{\ZZEightTeVTheoryFiducialCrossSectionOneDp}{\ensuremath{\ZZEightTeVTheoryFiducialCrossSectionCentralOneDp^{+\ZZEightTeVTheoryFiducialCrossSectionSystUpOneDp}_{-\ZZEightTeVTheoryFiducialCrossSectionSystDownOneDp}\textrm{ fb}}}
+\newcommand{\ZZEightTeVTheoryFiducialCrossSectionOneDp}{\ensuremath{\ZZEightTeVTheoryFiducialCrossSectionCentralOneDp\pm\ZZEightTeVTheoryFiducialCrossSectionSystOneDp\textrm{ fb}}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Number of observed events
+% Added 19/1/2013 from 7TeVSup
+% ZZ
+\def\ZZEightTeVNSigEventsObsZZEEEE{16}
+\def\ZZEightTeVNSigEventsObsZZMMMM{23}
+\def\ZZEightTeVNSigEventsObsZZEEMM{27}
+\def\ZZEightTeVNSigEventsObsZZLLLL{66}
+
+% ZZ*
+\def\ZZEightTeVNSigEventsObsZZsEEEE{21}
+\def\ZZEightTeVNSigEventsObsZZsMMMM{30}
+\def\ZZEightTeVNSigEventsObsZZsEEMM{33}
+\def\ZZEightTeVNSigEventsObsZZsLLLL{84}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Total Cross Section (pb)
+% Updated: 
+\def\ZZEightTeVTotalCrossSectionGammaCentral{9.26}
+\def\ZZEightTeVTotalCrossSectionGammaStatUp{1.06}
+\def\ZZEightTeVTotalCrossSectionGammaStatDown{0.98}
+\def\ZZEightTeVTotalCrossSectionGammaSystUp{0.36}
+\def\ZZEightTeVTotalCrossSectionGammaSystDown{0.30}
+\def\ZZEightTeVTotalCrossSectionGammaLumiUnc{0.33}
+
+% ~ To 1dp
+\def\ZZEightTeVTotalCrossSectionGammaCentralOneDp{9.3}
+\def\ZZEightTeVTotalCrossSectionGammaStatUpOneDp{1.1}
+\def\ZZEightTeVTotalCrossSectionGammaStatDownOneDp{1.0}
+\def\ZZEightTeVTotalCrossSectionGammaSystUpOneDp{0.4}
+\def\ZZEightTeVTotalCrossSectionGammaSystDownOneDp{0.3}
+\def\ZZEightTeVTotalCrossSectionGammaLumiUncOneDp{0.3}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Total Cross Section (pb)
+% Updated: 
+\def\ZZEightTeVTotalCrossSectionGaussianCentral{9.26}
+\def\ZZEightTeVTotalCrossSectionGaussianStatUp{1.06}
+\def\ZZEightTeVTotalCrossSectionGaussianStatDown{0.98}
+\def\ZZEightTeVTotalCrossSectionGaussianSystUp{0.37}
+\def\ZZEightTeVTotalCrossSectionGaussianSystDown{0.32}
+\def\ZZEightTeVTotalCrossSectionGaussianLumiUnc{0.33}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Fiducial Cross Section (fb)
+% Updated: 
+\def\ZZEightTeVFiducialCrossSectionGammaCentral{21.01}
+\def\ZZEightTeVFiducialCrossSectionGammaStatUp{2.40}
+\def\ZZEightTeVFiducialCrossSectionGammaStatDown{2.23}
+\def\ZZEightTeVFiducialCrossSectionGammaSystUp{0.59}
+\def\ZZEightTeVFiducialCrossSectionGammaSystDown{0.49}
+\def\ZZEightTeVFiducialCrossSectionGammaLumiUnc{0.76}
+
+% To 1dp
+\def\ZZEightTeVFiducialCrossSectionGammaCentralOneDp{21.0}
+\def\ZZEightTeVFiducialCrossSectionGammaStatUpOneDp{2.4}
+\def\ZZEightTeVFiducialCrossSectionGammaStatDownOneDp{2.2}
+\def\ZZEightTeVFiducialCrossSectionGammaSystUpOneDp{0.6}
+\def\ZZEightTeVFiducialCrossSectionGammaSystDownOneDp{0.5}
+\def\ZZEightTeVFiducialCrossSectionGammaLumiUncOneDp{0.8}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Fiducial Cross Section (fb)
+% Updated: 
+\def\ZZEightTeVFiducialCrossSectionGaussianCentral{21.03}
+\def\ZZEightTeVFiducialCrossSectionGaussianStatUp{2.40}
+\def\ZZEightTeVFiducialCrossSectionGaussianStatDown{2.23}
+\def\ZZEightTeVFiducialCrossSectionGaussianSystUp{0.57}
+\def\ZZEightTeVFiducialCrossSectionGaussianSystDown{0.60}
+\def\ZZEightTeVFiducialCrossSectionGaussianLumiUnc{0.76}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Signal Expectation
+\def\ZZEightTeVNSigEventsExpectedCentralEEEE{16.48}
+\def\ZZEightTeVNSigEventsExpectedCentralEEMM{33.15}
+\def\ZZEightTeVNSigEventsExpectedCentralMMMM{20.87}
+\def\ZZEightTeVNSigEventsExpectedCentralLLLL{70.50}
+
+\def\ZZEightTeVNSigEventsExpectedStatEEEE{0.13}
+\def\ZZEightTeVNSigEventsExpectedStatEEMM{0.36}
+\def\ZZEightTeVNSigEventsExpectedStatMMMM{0.20}
+\def\ZZEightTeVNSigEventsExpectedStatLLLL{0.43}
+
+\def\ZZEightTeVNSigEventsExpectedSystEEEE{0.82}
+\def\ZZEightTeVNSigEventsExpectedSystEEMM{0.85}
+\def\ZZEightTeVNSigEventsExpectedSystMMMM{0.33}
+\def\ZZEightTeVNSigEventsExpectedSystLLLL{1.70}
+
+% One dp
+\def\ZZEightTeVNSigEventsExpectedCentralEEEEOneDp{16.5}
+\def\ZZEightTeVNSigEventsExpectedCentralEEMMOneDp{33.2}
+\def\ZZEightTeVNSigEventsExpectedCentralMMMMOneDp{20.9}
+\def\ZZEightTeVNSigEventsExpectedCentralLLLLOneDp{70.5}
+
+\def\ZZEightTeVNSigEventsExpectedStatEEEEOneDp{0.1}
+\def\ZZEightTeVNSigEventsExpectedStatEEMMOneDp{0.4}
+\def\ZZEightTeVNSigEventsExpectedStatMMMMOneDp{0.2}
+\def\ZZEightTeVNSigEventsExpectedStatLLLLOneDp{0.4}
+
+\def\ZZEightTeVNSigEventsExpectedSystEEEEOneDp{0.8}
+\def\ZZEightTeVNSigEventsExpectedSystEEMMOneDp{0.9}
+\def\ZZEightTeVNSigEventsExpectedSystMMMMOneDp{0.3}
+\def\ZZEightTeVNSigEventsExpectedSystLLLLOneDp{1.7}
+
+\def\ZZEightTeVNSigEventsExpectedTotalUncEEEEOneDp{0.8}
+\def\ZZEightTeVNSigEventsExpectedTotalUncEEMMOneDp{0.9}
+\def\ZZEightTeVNSigEventsExpectedTotalUncMMMMOneDp{0.4}
+\def\ZZEightTeVNSigEventsExpectedTotalUncLLLLOneDp{1.7}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% A_ZZEightTeV and uncertainties
+% Updated: Nick, 1/6/2012
+\def\ZZEightTeVAZZCentral{0.500}
+\def\ZZEightTeVAZZStatUnc{0.001}
+\def\ZZEightTeVAZZSystUnc{0.012}
+\def\ZZEightTeVAZZScaleUncPercentage{0.4}
+\def\ZZEightTeVAZZPDFUncPercentage{2.1}
+\def\ZZEightTeVAZZPDFScaleUncPercentage{2.1}
+\def\ZZEightTeVAZZISRUncPercentage{1.0}
+\def\ZZEightTeVAZZTotalUncPercentage{2.3}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Tau contamination to C_ZZEightTeV (%)
+% Updates:
+\def\ZZEightTeVTauContaminationPercentageEEEE{0.06}
+\def\ZZEightTeVTauContaminationPercentageStatEEEE{0.04}
+\def\ZZEightTeVTauContaminationPercentageMMMM{0.00017}
+\def\ZZEightTeVTauContaminationPercentageStatMMMM{0.00017}
+\def\ZZEightTeVTauContaminationPercentageEEMM{0.15}
+\def\ZZEightTeVTauContaminationPercentageStatEEMM{0.06}
+\def\ZZEightTeVTauContaminationPercentageLLLL{0.09}
+\def\ZZEightTeVTauContaminationPercentageStatLLLL{0.03}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Contamination to C_ZZEightTeV from outside
+% fiducial volume
+% Updates:
+\def\ZZEightTeVOutsideFidContaminationPercentageEEEE{x.xx}
+\def\ZZEightTeVOutsideFidContaminationPercentageStatEEEE{x.xx}
+\def\ZZEightTeVOutsideFidContaminationPercentageMMMM{x.xx}
+\def\ZZEightTeVOutsideFidContaminationPercentageStatMMMM{x.xx}
+\def\ZZEightTeVOutsideFidContaminationPercentageEEMM{x.xx}
+\def\ZZEightTeVOutsideFidContaminationPercentageStatEEMM{x.xx}
+\def\ZZEightTeVOutsideFidContaminationPercentageLLLL{x.xx}
+\def\ZZEightTeVOutsideFidContaminationPercentageStatLLLL{x.xx}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% C_ZZEightTeV
+% Updated: Nick, 16/6/2012
+% Is now PowhegBox + gg2ZZEightTeV (from Lailin's spreadsheet)
+% Nick, update to 5.7 fb-1
+% 3.5 fb-1
+\def\ZZEightTeVCzzEEEE{0.610}
+\def\ZZEightTeVCzzEEMM{0.683}
+\def\ZZEightTeVCzzMMMM{0.766}
+\def\ZZEightTeVCzzLLLL{0.687}
+\def\ZZEightTeVCzzStatEEEE{0.004}
+\def\ZZEightTeVCzzStatEEMM{0.004}
+\def\ZZEightTeVCzzStatMMMM{0.003}
+\def\ZZEightTeVCzzStatLLLL{0.002}
+\def\ZZEightTeVCzzSystEEEE{0.030}
+\def\ZZEightTeVCzzSystEEMM{0.016}
+\def\ZZEightTeVCzzSystMMMM{0.015}
+\def\ZZEightTeVCzzSystLLLL{0.016}
+
+% and C_ZZEightTeV with 2 digits for the CONF note:
+% Nick, update to 5.7 fb-1
+\def\ZZEightTeVCZZTeVEEEE{0.61}
+\def\ZZEightTeVCZZTeVEEMM{0.68}
+\def\ZZEightTeVCZZTeVMMMM{0.77}
+\def\ZZEightTeVCZZTeVLLLL{0.69}
+\def\ZZEightTeVCZZTeVStatEEEE{0.01}
+\def\ZZEightTeVCZZTeVStatEEMM{0.01}
+\def\ZZEightTeVCZZTeVStatMMMM{0.01}
+\def\ZZEightTeVCZZTeVStatLLLL{0.01}
+\def\ZZEightTeVCZZTeVSystEEEE{0.03}
+\def\ZZEightTeVCZZTeVSystEEMM{0.02}
+\def\ZZEightTeVCZZTeVSystMMMM{0.02}
+\def\ZZEightTeVCZZTeVSystLLLL{0.02}
+
+% C_ZZEightTeV PowhegBox Only
+% Updated 16/6/2012, Nick
+\def\ZZEightTeVCzzPowhegBoxEEEE{0.609}
+\def\ZZEightTeVCzzPowhegBoxEEMM{0.683}
+\def\ZZEightTeVCzzPowhegBoxMMMM{0.768}
+\def\ZZEightTeVCzzPowhegBoxLLLL{0.687}
+\def\ZZEightTeVCzzPowhegBoxStatEEEE{0.004}
+\def\ZZEightTeVCzzPowhegBoxStatEEMM{0.004}
+\def\ZZEightTeVCzzPowhegBoxStatMMMM{0.003}
+\def\ZZEightTeVCzzPowhegBoxStatLLLL{0.002}
+
+% C_ZZEightTeV GG Only
+% Updated 16/6/2012, Nick
+\def\ZZEightTeVCzzGGEEEE{0.626}
+\def\ZZEightTeVCzzGGEEMM{0.686}
+\def\ZZEightTeVCzzGGMMMM{0.738}
+\def\ZZEightTeVCzzGGLLLL{0.683}
+\def\ZZEightTeVCzzGGStatEEEE{0.002}
+\def\ZZEightTeVCzzGGStatEEMM{0.002}
+\def\ZZEightTeVCzzGGStatMMMM{0.002}
+\def\ZZEightTeVCzzGGStatLLLL{0.001}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% "True" C_ZZEightTeV
+% Ie only select events in numerator that
+% are actually in fid vol at truth level
+% Updates:
+\def\ZZEightTeVTrueCzzEEEE{x.xx}
+\def\ZZEightTeVTrueCzzStatEEEE{x.xx}
+\def\ZZEightTeVTrueCzzMMMM{x.xx}
+\def\ZZEightTeVTrueCzzStatMMMM{x.xx}
+\def\ZZEightTeVTrueCzzEEMM{x.xx}
+\def\ZZEightTeVTrueCzzStatEEMM{x.xx}
+\def\ZZEightTeVTrueCzzLLLL{x.xx}
+\def\ZZEightTeVTrueCzzStatLLLL{x.xx}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Misparing esitmate
+\def\ZZEightTeVMispairingPercentageEEEE{2.71}
+\def\ZZEightTeVMispairingPercentageStatEEEE{0.26}
+\def\ZZEightTeVMispairingPercentageMMMM{3.34}
+\def\ZZEightTeVMispairingPercentageStatMMMM{0.25}
+\def\ZZEightTeVMispairingPercentageEEMM{0}
+\def\ZZEightTeVMispairingPercentageStatEEMM{x.xx}
+\def\ZZEightTeVMispairingPercentageLLLL{1.56}
+\def\ZZEightTeVMispairingPercentageStatLLLL{0.01}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Background Estimate
+% Updated: Advait, 28/6/2012
+%
+% As with the totals, the uncertainties will sometimes be
+% assymetric, sometimes symmetric, so format here
+% NLLLJ * FF
+% Since these are sometimes symmetric and sometimes assymetric, format here
+% (including math env)
+\def\ZZEightTeVDDBgEstNLLLJEEEE{8}
+\def\ZZEightTeVDDBgEstNLLLJxFFEEEE{1.02}
+\def\ZZEightTeVDDBgEstNLLLJxFFEEEEStat{\ensuremath{\pm 0.39}}
+\def\ZZEightTeVDDBgEstNLLLJxFFEEEESyst{\ensuremath{\pm 0.28}}
+
+\def\ZZEightTeVDDBgEstNLLLJEEMM{7}
+\def\ZZEightTeVDDBgEstNLLLJxFFEEMM{1.79}
+\def\ZZEightTeVDDBgEstNLLLJxFFEEMMStat{\ensuremath{\pm 0.90}}
+\def\ZZEightTeVDDBgEstNLLLJxFFEEMMSyst{\ensuremath{\pm 0.96}}
+
+\def\ZZEightTeVDDBgEstNLLLJMMMM{1}
+\def\ZZEightTeVDDBgEstNLLLJxFFMMMM{0.62}
+\def\ZZEightTeVDDBgEstNLLLJxFFMMMMStat{\ensuremath{\pm 0.62}}
+\def\ZZEightTeVDDBgEstNLLLJxFFMMMMSyst{\ensuremath{\pm 0.44}}
+
+\def\ZZEightTeVDDBgEstNLLLJLLLL{16}
+\def\ZZEightTeVDDBgEstNLLLJxFFLLLL{3.43}
+\def\ZZEightTeVDDBgEstNLLLJxFFLLLLStat{\ensuremath{\pm 1.16}}
+\def\ZZEightTeVDDBgEstNLLLJxFFLLLLSyst{\ensuremath{\pm 1.68}}
+
+% NLLJJ * FF
+% Since these are sometimes symmetric and sometimes assymetric, format here
+% (including math env)
+\def\ZZEightTeVDDBgEstNLLJJEEEE{12}
+\def\ZZEightTeVDDBgEstNLLJJxFFEEEE{0.14}
+\def\ZZEightTeVDDBgEstNLLJJxFFEEEEStat{\ensuremath{\pm 0.04}}
+\def\ZZEightTeVDDBgEstNLLJJxFFEEEESyst{\ensuremath{\pm 0.06}}
+
+\def\ZZEightTeVDDBgEstNLLJJEEMM{8}
+\def\ZZEightTeVDDBgEstNLLJJxFFEEMM{0.15}
+\def\ZZEightTeVDDBgEstNLLJJxFFEEMMStat{\ensuremath{\pm 0.07}}
+\def\ZZEightTeVDDBgEstNLLJJxFFEEMMSyst{\ensuremath{\pm 0.10}}
+
+\def\ZZEightTeVDDBgEstNLLJJMMMM{0}
+\def\ZZEightTeVDDBgEstNLLJJxFFMMMM{0}
+\def\ZZEightTeVDDBgEstNLLJJxFFMMMMStat{}
+\def\ZZEightTeVDDBgEstNLLJJxFFMMMMSyst{}
+
+\def\ZZEightTeVDDBgEstNLLJJLLLL{20}
+\def\ZZEightTeVDDBgEstNLLJJxFFLLLL{0.29}
+\def\ZZEightTeVDDBgEstNLLJJxFFLLLLStat{\ensuremath{\pm 0.08}}
+\def\ZZEightTeVDDBgEstNLLJJxFFLLLLSyst{\ensuremath{\pm 0.16}}
+
+% ZZEightTeV correction
+% Since these are sometimes symmetric and sometimes assymetric, format here
+% (including math env)
+\def\ZZEightTeVDDBgEstZZEightTeVCorrectionEEEE{0.32}
+\def\ZZEightTeVDDBgEstZZEightTeVCorrectionStatEEEE{\ensuremath{\pm 0.02}}
+\def\ZZEightTeVDDBgEstZZEightTeVCorrectionSystEEEE{\ensuremath{\pm 0.07}}
+
+\def\ZZEightTeVDDBgEstZZEightTeVCorrectionEEMM{1.01}
+\def\ZZEightTeVDDBgEstZZEightTeVCorrectionStatEEMM{\ensuremath{\pm 0.07}}
+\def\ZZEightTeVDDBgEstZZEightTeVCorrectionSystEEMM{\ensuremath{\pm 0.57}}
+
+\def\ZZEightTeVDDBgEstZZEightTeVCorrectionMMMM{0.53}
+\def\ZZEightTeVDDBgEstZZEightTeVCorrectionStatMMMM{\ensuremath{\pm 0.07}}
+\def\ZZEightTeVDDBgEstZZEightTeVCorrectionSystMMMM{\ensuremath{\pm 0.40}}
+
+\def\ZZEightTeVDDBgEstZZEightTeVCorrectionLLLL{1.86}
+\def\ZZEightTeVDDBgEstZZEightTeVCorrectionStatLLLL{\ensuremath{\pm 0.10}}
+\def\ZZEightTeVDDBgEstZZEightTeVCorrectionSystLLLL{\ensuremath{\pm 1.05}}
+
+% Final Estimate 
+% Since these are sometimes symmetric and sometimes assymetric, format here
+% (including math env)
+\def\ZZEightTeVDDBgEstCentralEEEE{0.56}
+\def\ZZEightTeVDDBgEstStatEEEE{\ensuremath{\pm 0.39}}
+\def\ZZEightTeVDDBgEstSystEEEE{\ensuremath{\pm 0.15}}
+
+\def\ZZEightTeVDDBgEstCentralEEMM{0.62}
+\def\ZZEightTeVDDBgEstStatEEMM{\ensuremath{^{+0.91}_{-0.62}}}
+\def\ZZEightTeVDDBgEstSystEEMM{\ensuremath{\pm 0.30}}
+
+\def\ZZEightTeVDDBgEstCentralMMMM{0.08}
+\def\ZZEightTeVDDBgEstStatMMMM{\ensuremath{^{+0.63}_{-0.08}}}
+\def\ZZEightTeVDDBgEstSystMMMM{\ensuremath{\pm 0.06}}
+
+\def\ZZEightTeVDDBgEstCentralLLLL{1.27}
+\def\ZZEightTeVDDBgEstStatLLLL{\ensuremath{\pm 1.17}}
+\def\ZZEightTeVDDBgEstSystLLLL{\ensuremath{\pm 0.51}}
+
+% One Dp
+\def\ZZEightTeVDDBgEstCentralEEEEOneDp{0.6}
+\def\ZZEightTeVDDBgEstStatEEEEOneDp{\ensuremath{\pm 0.4}}
+\def\ZZEightTeVDDBgEstSystEEEEOneDp{\ensuremath{\pm 0.2}}
+
+\def\ZZEightTeVDDBgEstCentralEEMMOneDp{0.6}
+\def\ZZEightTeVDDBgEstStatEEMMOneDp{\ensuremath{^{+0.9}_{-0.6}}}
+\def\ZZEightTeVDDBgEstSystEEMMOneDp{\ensuremath{\pm 0.3}}
+
+\def\ZZEightTeVDDBgEstCentralMMMMOneDp{0.1}
+\def\ZZEightTeVDDBgEstStatMMMMOneDp{\ensuremath{^{+0.6}_{-0.1}}}
+\def\ZZEightTeVDDBgEstSystMMMMOneDp{\ensuremath{\pm 0.1}}
+
+\def\ZZEightTeVDDBgEstCentralLLLLOneDp{1.3}
+\def\ZZEightTeVDDBgEstStatLLLLOneDp{\ensuremath{\pm 1.2}}
+\def\ZZEightTeVDDBgEstSystLLLLOneDp{\ensuremath{\pm 0.5}}
+
+% MC Crosscheck
+\def\ZZEightTeVMCBgEstCentralEEEE{x.xx}
+\def\ZZEightTeVMCBgEstStatEEEE{\ensuremath{\pm x.xx}}
+\def\ZZEightTeVMCBgEstSystEEEE{\ensuremath{^{+x.x}_{-x.x}}}
+
+\def\ZZEightTeVMCBgEstCentralMMMM{x.xx}
+\def\ZZEightTeVMCBgEstStatMMMM{\ensuremath{^{+x.xx}_{-x.xx}}}
+\def\ZZEightTeVMCBgEstSystMMMM{\ensuremath{^{+x.x}_{-x.x}}}
+
+\def\ZZEightTeVMCBgEstCentralEEMM{x.xx}
+\def\ZZEightTeVMCBgEstStatEEMM{\ensuremath{\pm x.xx}}
+\def\ZZEightTeVMCBgEstSystEEMM{\ensuremath{^{+x.x}_{-x.x}}}
+
+\def\ZZEightTeVMCBgEstCentralLLLL{x.xx}
+\def\ZZEightTeVMCBgEstStatLLLL{\ensuremath{\pm x.xx}}
+\def\ZZEightTeVMCBgEstSystLLLL{\ensuremath{^{+x.x}_{-x.x}}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Systematics
+\def\ZZEightTeVSystematicEScaleEEEE{0.11}
+\def\ZZEightTeVSystematicEScaleMMMM{-}
+\def\ZZEightTeVSystematicEScaleEEMM{0.01}
+\def\ZZEightTeVSystematicEScaleLLLL{0.03}
+\def\ZZEightTeVSystematicESmearEEEE{0.54}
+\def\ZZEightTeVSystematicESmearMMMM{-}
+\def\ZZEightTeVSystematicESmearEEMM{0.23}
+\def\ZZEightTeVSystematicESmearLLLL{0.23}
+\def\ZZEightTeVSystematicERecoEEEE{2.68}
+\def\ZZEightTeVSystematicERecoMMMM{-}
+\def\ZZEightTeVSystematicERecoEEMM{1.34}
+\def\ZZEightTeVSystematicERecoLLLL{1.23}
+\def\ZZEightTeVSystematicEIdEEEE{3.81}
+\def\ZZEightTeVSystematicEIdMMMM{-}
+\def\ZZEightTeVSystematicEIdEEMM{1.89}
+\def\ZZEightTeVSystematicEIdLLLL{1.75}
+\def\ZZEightTeVSystematicEIsoEEEE{1.63}
+\def\ZZEightTeVSystematicEIsoMMMM{-}
+\def\ZZEightTeVSystematicEIsoEEMM{0.79}
+\def\ZZEightTeVSystematicEIsoLLLL{0.74}
+
+\def\ZZEightTeVSystematicMuScaleEEEE{-}
+\def\ZZEightTeVSystematicMuScaleEEMM{\ensuremath{<}0.01}
+\def\ZZEightTeVSystematicMuScaleMMMM{\ensuremath{<}0.01}
+\def\ZZEightTeVSystematicMuScaleLLLL{\ensuremath{<}0.01}
+
+\def\ZZEightTeVSystematicMuIDSmearEEEE{-}
+\def\ZZEightTeVSystematicMuIDSmearEEMM{0.06}
+\def\ZZEightTeVSystematicMuIDSmearMMMM{0.27}
+\def\ZZEightTeVSystematicMuIDSmearLLLL{0.12}
+
+\def\ZZEightTeVSystematicMuMSSmearEEEE{-}
+\def\ZZEightTeVSystematicMuMSSmearMMMM{0.02}
+\def\ZZEightTeVSystematicMuMSSmearEEMM{0.02}
+\def\ZZEightTeVSystematicMuMSSmearLLLL{0.01}
+
+\def\ZZEightTeVSystematicMuRecoEEEE{-}
+\def\ZZEightTeVSystematicMuRecoMMMM{1.04}
+\def\ZZEightTeVSystematicMuRecoEEMM{0.52}
+\def\ZZEightTeVSystematicMuRecoLLLL{0.56}
+
+\def\ZZEightTeVSystematicMuIsoEEEE{-}
+\def\ZZEightTeVSystematicMuIsoMMMM{0.90}
+\def\ZZEightTeVSystematicMuIsoEEMM{0.46}
+\def\ZZEightTeVSystematicMuIsoLLLL{0.49}
+\def\ZZEightTeVSystematicETriggerEEEE{0.03}
+\def\ZZEightTeVSystematicETriggerMMMM{-}
+\def\ZZEightTeVSystematicETriggerEEMM{0.05}
+\def\ZZEightTeVSystematicETriggerLLLL{0.03}
+\def\ZZEightTeVSystematicMuTriggerEEEE{-}
+\def\ZZEightTeVSystematicMuTriggerMMMM{0.17}
+\def\ZZEightTeVSystematicMuTriggerEEMM{0.03}
+\def\ZZEightTeVSystematicMuTriggerLLLL{0.07}
+
+% Overall trigger systematics - ie e + mu
+\def\ZZEightTeVSystematicOverallTriggerEEEE{0.03}
+\def\ZZEightTeVSystematicOverallTriggerMMMM{0.17}
+\def\ZZEightTeVSystematicOverallTriggerEEMM{0.06}
+\def\ZZEightTeVSystematicOverallTriggerLLLL{0.18}
+
+% Total Reco Syst
+\def\ZZEightTeVSystematicRecoTotalEEEE{5.0} % 4.96
+\def\ZZEightTeVSystematicRecoTotalMMMM{1.4} % 1.41
+\def\ZZEightTeVSystematicRecoTotalEEMM{2.6} % 2.60
+\def\ZZEightTeVSystematicRecoTotalLLLL{2.4} % 2.40
+
+% Not applied anymore
+% We take the GG component from gg2ZZEightTeV
+% We have no other NLO generator to compare to
+%\def\ZZEightTeVSystematicGGToZZEightTeVLLLL{*1.0*}
+%\def\ZZEightTeVSystematicGenComparisonLLLL{*1.0*}
+
+% Total Czz Syst, are now just total reco syst
+\def\ZZEightTeVSystematicCzzTotalEEEE{\ZZEightTeVSystematicRecoTotalEEEE}
+\def\ZZEightTeVSystematicCzzTotalMMMM{\ZZEightTeVSystematicRecoTotalMMMM}
+\def\ZZEightTeVSystematicCzzTotalEEMM{\ZZEightTeVSystematicRecoTotalEEMM}
+\def\ZZEightTeVSystematicCzzTotalLLLL{\ZZEightTeVSystematicRecoTotalLLLL}
+
+%overall Scale factors per channel
+% Updated: Advait 27/6/2012
+\def\ZZEightTeVOverallScaleFactorEEEE{0.940}
+\def\ZZEightTeVOverallScaleFactorEEMM{0.953}
+\def\ZZEightTeVOverallScaleFactorMMMM{0.966}
+\def\ZZEightTeVOverallScaleFactorLLLL{0.953}
+
+\def\ZZEightTeVOverallScaleFactorErrEEEE{\ensuremath{\pm}0.046}
+\def\ZZEightTeVOverallScaleFactorErrEEMM{\ensuremath{\pm}0.025}
+\def\ZZEightTeVOverallScaleFactorErrMMMM{\ensuremath{\pm}0.013}
+\def\ZZEightTeVOverallScaleFactorErrLLLL{\ensuremath{\pm}0.023}
