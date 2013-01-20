@@ -939,7 +939,61 @@ $\sim1\%$.
     \label{table:objSel-czz-eight}
 \end{table}
 
-\subsection{Mispairing rates}
+\subsection{Mis-pairing rates}
+
+As described above, in \eeee\ and \mmmm\ final states there are two possible
+ways of pairing the four leptons to give two oppositely signed pairs. There are
+a number of different ways of resolving this ambiguity, using different pairing
+algorithms. All pairing algorithms will have some rate of failure, so it is
+important to find the algorithm with the lowest mis-pairing rate.
+
+Four algorithms considered were:
+
+\begin{enumerate}
+    \item {\bf Sum Of Distances:} Choose the pairing minimising the quantity
+    $|m_{12}-m_{Z}|+|m_{34}-m_{Z}|$.
+    \item {\bf Sum Of Distances Squared:} Choose the pairing minimising the quantity
+    $(m_{12}-m_{Z})^{2}+(m_{34}-m_{Z})^{2}$.
+    \item {\bf Closest to the pole:} Choose the pairing which has the closest
+    di-lepton pair to the \Z\ mass.
+    \item {\bf Breit Wigner Probability:} For each pairing calculate the product
+    of the values of two Breit Wigner probability distributions centred at the \Z\ mass with
+    width equal to the \Z\ width evaluated at the masses of the two dilepton
+    pairs and choose the pairing with the highest probability.
+\end{enumerate}
+
+The mis-pairing rates of each algorithm are estimated using \ZZeemm\ events, by
+applying each algorithm, ignoring lepton flavour, and checking whether the
+pairing chosen by the algorithm is the correct one by checking whether the
+chosen pairing has same-flavour pairs.
+
+The mis-pairing rates estimated in this way are given in~\tab{mis-pairing}. For
+\ZZ\ events, the `Sum Of Distances' algorithm has the lowest mis-pairing rate.
+For \ZZs\ events that are not \ZZ\ events (i.e. one of the dilepton pairs is
+outside \sstoos), the mis-pairing rates are significantly higher, and for these
+events the  `Sum Of Distances' algorithm has a mis-pairing rate of 22.5\%. In
+this case the `Closest to the pole' algorithm gives the lowest mis-pairing rate.
+Considering the full \ZZs\ selection, the `Breit-Wigner' algorithm gives the
+lowest mis-pairing rate, with the `Sum Of Distances' coming second.
+
+\begin{table}[htbp]
+\small
+    \centering
+    \begin{tabular}{p{3.5cm}llll}
+    %\begin{tabular}{p{3cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}}
+	\hline\hline
+        \ZZ, 7~\tev & \eeee & \mmmm & \eemm & \llll \\
+        \hline
+    \end{tabular}
+    \caption{}
+    \label{table:mis-pairing}
+\end{table}
+
+In practice, it is not possible to apply different algorithms to the \ZZ\ and
+\ZZs\ selections, since until one has chosen a pairing it is not possible to
+apply mass cuts and thus not possible to decide whether the event is \ZZ\ or
+\ZZs. The `Sum of Distances' algorithm is thus applied to all events, since it
+gives the lowest mis-pairing for \ZZ\ events.
 
 \subsection{Effect of \deltaR\ requirement}
 
