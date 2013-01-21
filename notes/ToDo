@@ -7,11 +7,23 @@ Thesis ToDo
 		- minDR(l,l) after lepFid, ZZ cuts (need to add ZZ*)							[ have at 7 TeV, ZZ]
 		
 		- m_Z1, m_Z2 - 7 TeV only
-			- nm1 lepFid, sorted by pT (show what we're selecting)								not in		
+			- nm1 lepFid, sorted by pT (show what we're selecting)								not in	
+			
+		- 7 TeV vs 8 TeV - normalise to cx?!?!?	
 					
 	- Exotics review - leave for now :s
 
-- Theory: Write!
+- ObjSel:
+	- Dilepton plots
+	- Z+X plots
+	- Trigger efficiencies: check if 2011 number have systematic, get 2012 numbers with systematic.
+	- ==4 in 2012? do we see any events with >4?
+	- Finish systematics bit
+	- 8 TeV systematics
+
+detector:
+	- correct pixel sizes, check sqrt(12) resolution issue
+
 
 - General:
 	- wheredef towers? el-reco, but already mention in el-trigger
