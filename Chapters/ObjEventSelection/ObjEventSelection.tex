@@ -995,19 +995,6 @@ lowest mis-pairing rate, with the `Sum Of Distances' coming second.
     \label{table:mis-pairing}
 \end{table}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 In practice, it is not possible to apply different algorithms to the \ZZ\ and
 \ZZs\ selections, since until one has chosen a pairing it is not possible to
 apply mass cuts and thus not possible to decide whether the event is \ZZ\ or
@@ -1016,7 +1003,29 @@ gives the lowest mis-pairing for \ZZ\ events.
 
 \subsection{Effect of \deltaR\ requirement}
 
-Include studies of other algorithms
+As discussed above, the isolation requirements imposed on the electrons and the
+muons prevent any event with muons overlapping with \deltaRlt{0.2} from passing
+the selection, since in such a case the lower \pt\ lepton would be vetoed by the
+energy of the higher \pt\ lepton in its isolation cone, and the event would fail
+the selection as it would not have four selected leptons. In events with low
+\pt\ \Z\ bosons this does not affect the efficiency significantly since in the
+\Z\ bosons rest frames the leptons are produced `back-to-back'. In events with
+highly boosted \Z\ bosons the leptons are produced with small opening angle in
+the detector frame, and so the \deltaR\ requirement can have a significant
+effect, and actually imposes an upper energy threshold on the sensitivity of the
+analysis to highly boosted objects.
+
+\begin{figure}[h]
+\centering
+	\subfigure[]{
+            \includegraphics[width=0.7\textwidth]{deltaRcutoff/truth_fidZZ_mzz_minDR_TGC_F4G0p4.n0}
+        }
+	\subfigure[]{
+            \includegraphics[width=0.7\textwidth]{deltaRcutoff/truth_fidZZ_ptz1_minDR_TGC_F4G0p4.n0}
+        }
+\caption[ ]{}
+\label{fig:objsel-deltaRcutoff}
+\end{figure}
 
 \section{Systematic Uncertainties}
 
