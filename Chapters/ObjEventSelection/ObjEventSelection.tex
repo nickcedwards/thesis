@@ -1059,7 +1059,39 @@ theoretical uncertainties associated with the \mc\ simulation used to estimate
 \CZZ. Each of these is discussed in more detail below.
 
 \subsubsection{Electron Systematic Uncertainties}
-\subsubsection{Electron Systematic Uncertainties}
+
+\begin{itemize}
+     \item {\bf Reconstruction Efficiency:}
+    The differences observed in the reconstruction and identification efficiencies 
+    between the data and MC are taken into account by weighting the simulation with scale factors 
+    provided by the egamma group. The systematic uncertainties are then determined by varying the scale factors 
+    within their uncertainties. 
+    The electron identification efficiency scale factors and
+    their uncertainties are determined from $W$ and $Z$ T\&P measurements and are given as a 
+    function of $\eta$, E$_{T}$, and electron algorithm (loose, medium, etc.). The uncertainties of the $\eta$ and E$_{T}$ dependent scale
+    factors are added in quadrature to obtain the combined electron identification
+    uncertainty (see Table~\ref{tab:syst_el_llnn} and Table ~\ref{table:accSys_llll}  ).
+
+     \item {\bf Identification Efficiency:}
+
+     \item {\bf Energy Scale:}
+    The systematic uncertainties on the energy scale derived from the 2011 dataset and implemented in the 
+    EnergyRescaler tool provided by the egamma group are used on the MC11c Monte Carlo to obtain the 
+    associated uncertainty on the signal acceptance (see Table~\ref{tab:syst_el_llnn} and Table~\ref{table:accSys_llll} ).
+
+    \item {\bf Energy Resolution:}
+    Since the MC does not reproduce the observed energy resolution in data, a smearing
+    is applied to it. The systematic uncertainties associated with the smearing procedure are
+    obtained from the EnergyRescaler tool. 
+
+    \item {\bf Isolation Efficiency:}
+     \item Isolation and IP: For the \llvv\ channel the isolation uncertainty was calculated using the \texttt{IsoIPSF-00-01-01} package. For the \llll\ channel the uncertainties are assigned by the Higgs to ZZ analysis~\cite{HZZ4l_5fb:ATL-COM-PHYS-2011-1715}. For electrons with $p_T$ less than 15 GeV they are found to be 5\%, for 15-20 GeV 2\%, for 20-35 GeV 1\%  and  for $p_T$ above 35 GeV, 
+     the uncertainty is less than 1\%.
+
+    \item {\bf Impact Parameter Resolution:}
+
+\end{itemize}
+
 \subsubsection{Muon Systematic Uncertainties}
 \subsubsection{Trigger Systematic Uncertainty}
 \subsubsection{Theoretical Systematic Uncertainty}
