@@ -1234,11 +1234,108 @@ theoretical uncertainties associated with the \mc\ simulation used to estimate
 
         \hline\hline
     \end{tabular}
-    \caption{Correction factor, $C_{ZZ}$, comparisons between PowhegBox,
-    which simulates only $qq \ra ZZ$, and \ggZZ\ which simulates $gg
-    \ra ZZ$. The $C_{ZZ}$ used in the cross-section extraction is the
-    weighted average of the $C_{ZZ}$ from these two generators, weighting
+    \caption[Reconstruction Acceptance \CZZ, compared between different MC
+    generators.]{Reconstruction Acceptance \CZZ, compared between different MC
+    generators. The \CZZ\ used in the \cx\ extraction is the
+    weighted average of the \CZZ\ from \powhegbox\ and \ggtwoZZ\ generators, weighting
     by the relative contribution to the fiducial cross-section, as show in~\tab{theory-gg-frac}.
+    The difference between \powhegbox\ and \sherpa\ is taken as an additional
+    systematic uncertainty.
+    Only the statistical uncertainty is shown. 
+    }
+    \label{table:objSel-syst-genComp-seven}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \small
+    \begin{tabular}{l c c c c}
+
+        \hline\hline
+
+        \ZZ, 7~\tev & \eeee & \mmmm & \eemm & \llll \\
+
+        \hline
+        \multicolumn{5}{l}{\bf $qq$ Processes} \\
+
+        PowhegBox   & \ZZEightTeVCzzPowhegBoxZZEEEE\ $\pm$ \ZZEightTeVCzzPowhegBoxStatZZEEEE 
+                    & \ZZEightTeVCzzPowhegBoxZZMMMM\ $\pm$ \ZZEightTeVCzzPowhegBoxStatZZMMMM
+                    & \ZZEightTeVCzzPowhegBoxZZEEMM\ $\pm$ \ZZEightTeVCzzPowhegBoxStatZZEEMM 
+                    & \ZZEightTeVCzzPowhegBoxZZLLLL\ $\pm$ \ZZEightTeVCzzPowhegBoxStatZZLLLL \\
+
+        \sherpa\    & \ZZEightTeVCzzSherpaZZEEEE\ $\pm$ \ZZEightTeVCzzSherpaStatZZEEEE 
+                    & \ZZEightTeVCzzSherpaZZMMMM\ $\pm$ \ZZEightTeVCzzSherpaStatZZMMMM
+                    & \ZZEightTeVCzzSherpaZZEEMM\ $\pm$ \ZZEightTeVCzzSherpaStatZZEEMM 
+                    & \ZZEightTeVCzzSherpaZZLLLL\ $\pm$ \ZZEightTeVCzzSherpaStatZZLLLL \\
+
+        \pythia     & \ZZEightTeVCzzPythiaZZEEEE\ $\pm$ \ZZEightTeVCzzPythiaStatZZEEEE 
+                    & \ZZEightTeVCzzPythiaZZMMMM\ $\pm$ \ZZEightTeVCzzPythiaStatZZMMMM
+                    & \ZZEightTeVCzzPythiaZZEEMM\ $\pm$ \ZZEightTeVCzzPythiaStatZZEEMM 
+                    & \ZZEightTeVCzzPythiaZZLLLL\ $\pm$ \ZZEightTeVCzzPythiaStatZZLLLL \\
+
+        \hline
+        \multicolumn{5}{l}{\bf $gg$ Processes} \\
+        \ggtwoZZ    & \ZZEightTeVCzzGGZZEEEE\ $\pm$ \ZZEightTeVCzzGGStatZZEEEE 
+                    & \ZZEightTeVCzzGGZZMMMM\ $\pm$ \ZZEightTeVCzzGGStatZZMMMM
+                    & \ZZEightTeVCzzGGZZEEMM\ $\pm$ \ZZEightTeVCzzGGStatZZEEMM 
+                    & \ZZEightTeVCzzGGZZLLLL\ $\pm$ \ZZEightTeVCzzGGStatZZLLLL \\
+
+        \hline
+        \multicolumn{5}{l}{\bf Combined} \\
+        PowhegBox+\ggtwoZZ\   
+                    & \ZZEightTeVCzzZZEEEE\ $\pm$ \ZZEightTeVCzzStatZZEEEE 
+                    & \ZZEightTeVCzzZZMMMM\ $\pm$ \ZZEightTeVCzzStatZZMMMM
+                    & \ZZEightTeVCzzZZEEMM\ $\pm$ \ZZEightTeVCzzStatZZEEMM 
+                    & \ZZEightTeVCzzZZLLLL\ $\pm$ \ZZEightTeVCzzStatZZLLLL \\
+
+        \hline\hline
+        \\
+        \hline\hline
+
+        \ZZs, 7~\tev & \eeee & \mmmm & \eemm & \llll \\
+
+        \hline
+        \multicolumn{5}{l}{\bf $qq$ Processes} \\
+
+        PowhegBox   & \ZZEightTeVCzzPowhegBoxZZsEEEE\ $\pm$ \ZZEightTeVCzzPowhegBoxStatZZsEEEE 
+                    & \ZZEightTeVCzzPowhegBoxZZsMMMM\ $\pm$ \ZZEightTeVCzzPowhegBoxStatZZsMMMM
+                    & \ZZEightTeVCzzPowhegBoxZZsEEMM\ $\pm$ \ZZEightTeVCzzPowhegBoxStatZZsEEMM 
+                    & \ZZEightTeVCzzPowhegBoxZZsLLLL\ $\pm$ \ZZEightTeVCzzPowhegBoxStatZZsLLLL \\
+
+        \sherpa\    & \ZZEightTeVCzzSherpaZZsEEEE\ $\pm$ \ZZEightTeVCzzSherpaStatZZsEEEE 
+                    & \ZZEightTeVCzzSherpaZZsMMMM\ $\pm$ \ZZEightTeVCzzSherpaStatZZsMMMM
+                    & \ZZEightTeVCzzSherpaZZsEEMM\ $\pm$ \ZZEightTeVCzzSherpaStatZZsEEMM 
+                    & \ZZEightTeVCzzSherpaZZsLLLL\ $\pm$ \ZZEightTeVCzzSherpaStatZZsLLLL \\
+
+        \pythia     & \ZZEightTeVCzzPythiaZZsEEEE\ $\pm$ \ZZEightTeVCzzPythiaStatZZsEEEE 
+                    & \ZZEightTeVCzzPythiaZZsMMMM\ $\pm$ \ZZEightTeVCzzPythiaStatZZsMMMM
+                    & \ZZEightTeVCzzPythiaZZsEEMM\ $\pm$ \ZZEightTeVCzzPythiaStatZZsEEMM 
+                    & \ZZEightTeVCzzPythiaZZsLLLL\ $\pm$ \ZZEightTeVCzzPythiaStatZZsLLLL \\
+
+        \hline
+        \multicolumn{5}{l}{\bf $gg$ Processes} \\
+        \ggtwoZZ    & \ZZEightTeVCzzGGZZsEEEE\ $\pm$ \ZZEightTeVCzzGGStatZZsEEEE 
+                    & \ZZEightTeVCzzGGZZsMMMM\ $\pm$ \ZZEightTeVCzzGGStatZZsMMMM
+                    & \ZZEightTeVCzzGGZZsEEMM\ $\pm$ \ZZEightTeVCzzGGStatZZsEEMM 
+                    & \ZZEightTeVCzzGGZZsLLLL\ $\pm$ \ZZEightTeVCzzGGStatZZsLLLL \\
+
+        \hline
+        \multicolumn{5}{l}{\bf Combined} \\
+        PowhegBox+\ggtwoZZ\   
+                    & \ZZEightTeVCzzZZsEEEE\ $\pm$ \ZZEightTeVCzzStatZZsEEEE 
+                    & \ZZEightTeVCzzZZsMMMM\ $\pm$ \ZZEightTeVCzzStatZZsMMMM
+                    & \ZZEightTeVCzzZZsEEMM\ $\pm$ \ZZEightTeVCzzStatZZsEEMM 
+                    & \ZZEightTeVCzzZZsLLLL\ $\pm$ \ZZEightTeVCzzStatZZsLLLL \\
+
+        \hline\hline
+    \end{tabular}
+    \caption[Reconstruction Acceptance \CZZ, compared between different MC
+    generators.]{Reconstruction Acceptance \CZZ, compared between different MC
+    generators. The \CZZ\ used in the \cx\ extraction is the
+    weighted average of the \CZZ\ from \powhegbox\ and \ggtwoZZ\ generators, weighting
+    by the relative contribution to the fiducial cross-section, as show in~\tab{theory-gg-frac}.
+    The difference between \powhegbox\ and \sherpa\ is taken as an additional
+    systematic uncertainty.
     Only the statistical uncertainty is shown. 
     }
     \label{table:objSel-syst-genComp-seven}
