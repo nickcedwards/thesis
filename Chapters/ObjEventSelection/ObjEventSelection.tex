@@ -1151,6 +1151,62 @@ theoretical uncertainties associated with the \mc\ simulation used to estimate
 \subsubsection{Trigger Systematic Uncertainty}
 \subsubsection{Theoretical Systematic Uncertainty}
 
+\begin{table}[htbp]
+    \centering
+    \small
+    \begin{tabular}{l c c c c}
+
+        \hline\hline
+
+        Generator & \eeee & \mmmmm & \eemm & \llll \\
+
+        \hline
+        \multicolumn{5}{l}{\bf \qqZZ\ Processes} \\
+
+        PowhegBox   & \ZZSevenTeVCzzPowhegBoxZZEEEE$\pm$\ZZSevenTeVCzzPowhegBoxStatZZEEEE\ 
+                    & \ZZSevenTeVCzzPowhegBoxZZMMMM$\pm$\ZZSevenTeVCzzPowhegBoxStatZZMMMM\
+                    & \ZZSevenTeVCzzPowhegBoxZZEEMM$\pm$\ZZSevenTeVCzzPowhegBoxStatZZEEMM\ 
+                    & \ZZSevenTeVCzzPowhegBoxZZLLLL$\pm$\ZZSevenTeVCzzPowhegBoxStatZZLLLL\ \\
+
+        \sherpa\    & \ZZSevenTeVCzzPowhegBoxZZEEEE$\pm$\ZZSevenTeVCzzPowhegBoxStatZZEEEE\ 
+                    & \ZZSevenTeVCzzPowhegBoxZZMMMM$\pm$\ZZSevenTeVCzzPowhegBoxStatZZMMMM\
+                    & \ZZSevenTeVCzzPowhegBoxZZEEMM$\pm$\ZZSevenTeVCzzPowhegBoxStatZZEEMM\ 
+                    & \ZZSevenTeVCzzPowhegBoxZZLLLL$\pm$\ZZSevenTeVCzzPowhegBoxStatZZLLLL\ \\
+
+        \pythia     & \ZZSevenTeVCzzPowhegBoxZZEEEE$\pm$\ZZSevenTeVCzzPowhegBoxStatZZEEEE\ 
+                    & \ZZSevenTeVCzzPowhegBoxZZMMMM$\pm$\ZZSevenTeVCzzPowhegBoxStatZZMMMM\
+                    & \ZZSevenTeVCzzPowhegBoxZZEEMM$\pm$\ZZSevenTeVCzzPowhegBoxStatZZEEMM\ 
+                    & \ZZSevenTeVCzzPowhegBoxZZLLLL$\pm$\ZZSevenTeVCzzPowhegBoxStatZZLLLL\ \\
+
+        \hline
+        \multicolumn{5}{l}{\bf \ggZZ\ Processes} \\
+        \ggZZ       & \ZZSevenTeVCzzGGZZEEEE$\pm$\ZZSevenTeVCzzGGStatZZEEEE\ 
+                    & \ZZSevenTeVCzzGGZZMMMM$\pm$\ZZSevenTeVCzzGGStatZZMMMM\
+                    & \ZZSevenTeVCzzGGZZEEMM$\pm$\ZZSevenTeVCzzGGStatZZEEMM\ 
+                    & \ZZSevenTeVCzzGGZZLLLL$\pm$\ZZSevenTeVCzzGGStatZZLLLL\ \\
+
+        \hline
+        \multicolumn{5}{l}{\bf Combined} \\
+        PowhegBox+\ggZZ\   
+                    & \ZZSevenTeVCzzZZEEEE$\pm$\ZZSevenTeVCzzStatZZEEEE\ 
+                    & \ZZSevenTeVCzzZZMMMM$\pm$\ZZSevenTeVCzzStatZZMMMM\
+                    & \ZZSevenTeVCzzZZEEMM$\pm$\ZZSevenTeVCzzStatZZEEMM\ 
+                    & \ZZSevenTeVCzzZZLLLL$\pm$\ZZSevenTeVCzzStatZZLLLL\ \\
+
+        \hline\hline
+    \end{tabular}
+    \caption{Correction factor, $C_{ZZ}$, comparisons between PowhegBox,
+    which simulates only $qq \ra ZZ$, and \ggZZ\ which simulates $gg
+    \ra ZZ$. The $C_{ZZ}$ used in the cross-section extraction is the
+    weighted average of the $C_{ZZ}$ from these two generators, weighting
+    by the relative contrubution to the fiducial cross-section which is
+    \ZZTheoryFiducialQQPercentage\% for $qq \ra ZZ$ and
+    \ZZTheoryFiducialGGPercentage\% for $gg \ra ZZ$.
+    Only the statistical uncertainty is shown. 
+    }
+    \label{table:objSel-syst-genComp-seven}
+\end{table}
+
 \subsection{Systematic Uncertainty Estimates}
 
 The effect of each of the systematic uncertainties on \CZZ\ is estimated using
