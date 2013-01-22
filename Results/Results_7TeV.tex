@@ -195,6 +195,7 @@
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % Tau contamination to C_ZZSevenTeV (%)
 % Updates:
+% Corrected to 7 TeV, 20/1/2013, src=ZZ 7TeV Paper Suport
 \def\ZZSevenTeVTauContaminationPercentageZZEEEE                 {0.37}
 \def\ZZSevenTeVTauContaminationPercentageStatZZEEEE             {0.04}
 \def\ZZSevenTeVTauContaminationPercentageZZsEEEE                {2.16}
@@ -219,6 +220,7 @@
 % fiducial volume
 % Updates:
 % ZZ
+% Corrected to 7 TeV, 20/1/2013, src=ZZ 7TeV Paper Suport
 \def\ZZSevenTeVOutsideFidContaminationPercentageZZEEEE                  {1.04}
 \def\ZZSevenTeVOutsideFidContaminationPercentageStatZZEEEE              {0.14}
 \def\ZZSevenTeVOutsideFidContaminationPercentageZZsEEEE                 {1.08}
@@ -242,6 +244,7 @@
 % Ie only select events in numerator that
 % are actually in fid vol at truth level
 % Updates:
+% Corrected to 7 TeV, 20/1/2013, src=ZZ 7TeV Paper Suport
 \def\ZZSevenTeVTrueCzzZZEEEE                    {0.422}
 \def\ZZSevenTeVTrueCzzStatZZEEEE                {0.005}
 \def\ZZSevenTeVTrueCzzZZsEEEE                   {0.398}
@@ -268,6 +271,7 @@
 % Is now PowhegBox + gg2ZZSevenTeV (from Lailin's spreadsheet)
 % Nick, update to 5.7 fb-1
 % 3.5 fb-1
+% Corrected to 7 TeV, 20/1/2013, src=ZZ 7TeV Paper Suport
 \def\ZZSevenTeVCzzZZEEEE                    {0.428}
 \def\ZZSevenTeVCzzStatZZEEEE                {0.005}
 \def\ZZSevenTeVCzzZZsEEEE                   {0.410}
@@ -286,47 +290,54 @@
 \def\ZZSevenTeVCzzStatZZsLLLL               {0.002}
 
 
-\def\ZZSevenTeVCzzSystEEEE{0.030}
-\def\ZZSevenTeVCzzSystEEMM{0.016}
-\def\ZZSevenTeVCzzSystMMMM{0.015}
-\def\ZZSevenTeVCzzSystLLLL{0.016}
+\def\ZZSevenTeVCzzSystEEEE{}
+\def\ZZSevenTeVCzzSystEEMM{}
+\def\ZZSevenTeVCzzSystMMMM{}
+\def\ZZSevenTeVCzzSystLLLL{}
 
-% and C_ZZSevenTeV with 2 digits for the CONF note:
-% Nick, update to 5.7 fb-1
-\def\ZZSevenTeVCZZTeVEEEE{0.61}
-\def\ZZSevenTeVCZZTeVEEMM{0.68}
-\def\ZZSevenTeVCZZTeVMMMM{0.77}
-\def\ZZSevenTeVCZZTeVLLLL{0.69}
-\def\ZZSevenTeVCZZTeVStatEEEE{0.01}
-\def\ZZSevenTeVCZZTeVStatEEMM{0.01}
-\def\ZZSevenTeVCZZTeVStatMMMM{0.01}
-\def\ZZSevenTeVCZZTeVStatLLLL{0.01}
-\def\ZZSevenTeVCZZTeVSystEEEE{0.03}
-\def\ZZSevenTeVCZZTeVSystEEMM{0.02}
-\def\ZZSevenTeVCZZTeVSystMMMM{0.02}
-\def\ZZSevenTeVCZZTeVSystLLLL{0.02}
+% CZZ PowhegBox Only
+\def\ZZSevenTeVCzzPowhegBoxZZEEEE{}
+\def\ZZSevenTeVCzzPowhegBoxZZEEMM{}
+\def\ZZSevenTeVCzzPowhegBoxZZMMMM{}
+\def\ZZSevenTeVCzzPowhegBoxZZLLLL{}
 
-% C_ZZSevenTeV PowhegBox Only
-% Updated 16/6/2012, Nick
-\def\ZZSevenTeVCzzPowhegBoxEEEE{0.609}
-\def\ZZSevenTeVCzzPowhegBoxEEMM{0.683}
-\def\ZZSevenTeVCzzPowhegBoxMMMM{0.768}
-\def\ZZSevenTeVCzzPowhegBoxLLLL{0.687}
-\def\ZZSevenTeVCzzPowhegBoxStatEEEE{0.004}
-\def\ZZSevenTeVCzzPowhegBoxStatEEMM{0.004}
-\def\ZZSevenTeVCzzPowhegBoxStatMMMM{0.003}
-\def\ZZSevenTeVCzzPowhegBoxStatLLLL{0.002}
+\def\ZZSevenTeVCzzPowhegBoxStatZZEEEE{}
+\def\ZZSevenTeVCzzPowhegBoxStatZZEEMM{}
+\def\ZZSevenTeVCzzPowhegBoxStatZZMMMM{}
+\def\ZZSevenTeVCzzPowhegBoxStatZZLLLL{}
 
-% C_ZZSevenTeV GG Only
-% Updated 16/6/2012, Nick
-\def\ZZSevenTeVCzzGGEEEE{0.626}
-\def\ZZSevenTeVCzzGGEEMM{0.686}
-\def\ZZSevenTeVCzzGGMMMM{0.738}
-\def\ZZSevenTeVCzzGGLLLL{0.683}
-\def\ZZSevenTeVCzzGGStatEEEE{0.002}
-\def\ZZSevenTeVCzzGGStatEEMM{0.002}
-\def\ZZSevenTeVCzzGGStatMMMM{0.002}
-\def\ZZSevenTeVCzzGGStatLLLL{0.001}
+% CZZ for gg2ZZ
+\def\ZZSevenTeVCzzGGZZEEEE{}
+\def\ZZSevenTeVCzzGGZZEEMM{}
+\def\ZZSevenTeVCzzGGZZMMMM{}
+\def\ZZSevenTeVCzzGGZZLLLL{}
+
+\def\ZZSevenTeVCzzGGStatZZEEEE{}
+\def\ZZSevenTeVCzzGGStatZZEEMM{}
+\def\ZZSevenTeVCzzGGStatZZMMMM{}
+\def\ZZSevenTeVCzzGGStatZZLLLL{}
+
+% CZZ for Sherpa
+\def\ZZSevenTeVCzzSherpaZZEEEE{}
+\def\ZZSevenTeVCzzSherpaZZEEMM{}
+\def\ZZSevenTeVCzzSherpaZZMMMM{}
+\def\ZZSevenTeVCzzSherpaZZLLLL{}
+
+\def\ZZSevenTeVCzzSherpaStatZZEEEE{}
+\def\ZZSevenTeVCzzSherpaStatZZEEMM{}
+\def\ZZSevenTeVCzzSherpaStatZZMMMM{}
+\def\ZZSevenTeVCzzSherpaStatZZLLLL{}
+
+% CZZ for Pythia
+\def\ZZSevenTeVCzzPythiaZZEEEE{}
+\def\ZZSevenTeVCzzPythiaZZEEMM{}
+\def\ZZSevenTeVCzzPythiaZZMMMM{}
+\def\ZZSevenTeVCzzPythiaZZLLLL{}
+
+\def\ZZSevenTeVCzzPythiaStatZZEEEE{}
+\def\ZZSevenTeVCzzPythiaStatZZEEMM{}
+\def\ZZSevenTeVCzzPythiaStatZZMMMM{}
+\def\ZZSevenTeVCzzPythiaStatZZLLLL{}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
