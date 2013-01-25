@@ -16,7 +16,7 @@ region. The tracks are ordered by their longitudinal impact parameter, and a
 sliding window algorithm is used to identify clusters of tracks. A fit is 
 carried out to obtain the vertex position. Outlier tracks are then removed if
 they have a \chisquared\ with a probability of being consistent with the vertex
-of less than 8\%. The vertex is the refitted, and the process iterates until
+of less than 8\%. The vertex is then refitted, and the process iterates until
 there are no outliers left, or the cluster becomes too small. In this procedure
 the maximum number of vertices produced is determined at the clustering stage, and
 once discarded, outlier tracks are not used again. This can be sub-optimal in
@@ -29,7 +29,7 @@ single seed vertex is formed out of all the preselected tracks. This is fitted, 
 tracks identified as outliers in the fit are used to create a second vertex
 seed. A simultaneous fit is then carried out of the two vertices, and again
 outlier tracks are used to create a new primary vertex. The procedure is
-iterated until none of the remaining outliers fit with any vertex with a
+iterated until none of the remaining outliers fits with any vertex with a
 \chisquared\ probability of more than 1\%.
 
 An `Adaptive Vertex Finding'~\cite{0954-3899-34-12-N01} algorithm is used in
