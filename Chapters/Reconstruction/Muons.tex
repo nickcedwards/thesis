@@ -17,7 +17,7 @@ layers; high \pt\ triggers require coincidences in at least two out of the three
 of this plane, in addition to the coincidences of a low \pt\ trigger. Coincidences are generated
 separately for $\eta$ and $\phi$; a coincidence is required in both co-ordinates
 for the trigger to be fired. To apply a \pt\ threshold to the trigger the
-coincidences are required to fall inside \intro{roads}, parameterised
+coincidences are required to fall inside \intro{roads}: parameterised
 geometrical regions corresponding to muons of either charge with momentum above
 a given \pt\ threshold. In 2011 the L1 \pt\ threshold for the primary single
 muon trigger was 15 \GeV; in 2012 it was 20 \GeV.
@@ -25,16 +25,17 @@ muon trigger was 15 \GeV; in 2012 it was 20 \GeV.
 \begin{figure}[h]
 \centering
             \includegraphics[width=0.8\textwidth]{mu-trigger-diag}
-\caption[Cross sectional view of the muon trigger chambers. ][Cross sectional view of the muon trigger chambers. ]{
-Cross sectional view of the muon trigger chambers. Figure from~\cite{Aad:2012xs}.}
-\label{fig:mu-trigger-diag}
+    \caption[Cross sectional view of the muon trigger chambers. ][Cross
+    sectional view of the muon trigger chambers.] {Cross sectional view of the
+    muon trigger chambers. Figure from~\cite{Aad:2012xs}.}
+    \label{fig:mu-trigger-diag}
 \end{figure}
 
 The muon HLT uses similar algorithms to the online muon reconstruction described
 below. At L2, each L1 muon candidate is refined by including precision hit data
 from the MDTs and CSCs in a RoI defined by the L1 candidate. MS tracks are
 built by opening narrow roads around the L1 trigger chamber hits and associating
-hits from other chambers to the track. A rough \pt\ measurement is obtained
+hits from other chambers with the track. A rough \pt\ measurement is obtained
 using a lookup table. The MS tracks are then combined with ID tracks,
 reconstructed using the same fast L2 ID tracking as the electron L2 trigger
 (see~\sec{reco-el-triggers}). The muon EF uses the full offline algorithms,
@@ -42,7 +43,7 @@ running in RoIs determined by the L2 trigger. There are two reconstruction
 strategies used at EF level: \intro{outside-in} (starting from the reconstructed
 MS tracks, extrapolating to the beamline and attempting to combine with an ID
 track) and \intro{inside-out} (starting from ID tracks and attempting to
-extrapolate to the MS). In 2011, both strategies were ran in parallel to
+extrapolate to the MS). In 2011, both strategies were run in parallel to
 maximise efficiency. In 2012, to reduce processing time, the outside-in
 algorithm is run first, and only in events failing the trigger at this stage is
 the inside-out algorithm run. In 2011 the HLT threshold used for the primary
@@ -145,7 +146,7 @@ last fit including a detailed description of the material traversed by the
 tracks is performed.  This fit properly takes into account multiple scattering
 effects, by including the scattering angles at a set of discretised scattering
 centres in the fit. The energy loss due to interactions is also taken into
-account  by parametrising the most probable energy loss as as a function of the
+account  by parametrising the most probable energy loss as a function of the
 track momentum and the amount of material crossed. The selection of
 reconstructed muons is made based on the \chisquared\ quality of this final fit.
 
@@ -174,15 +175,15 @@ It is also possible to reconstruct muons independently of the MS by using the
 calorimeter to tag inner-detector tracks originating from muons.  A muon with
 sufficient momentum will traverse all layers of the calorimeter, leaving a small
 energy deposit in each layer. It is possible to distinguish this pattern of
-energy deposition from that of other particles. A low momentum hadron will
+energy deposition from that of other particles. A low-momentum hadron will
 deposit most of its energy in the first layers of the calorimeter, leaving no
-signal in the last layers. High momentum hadrons will deposit most of their
+signal in the last layers. High-momentum hadrons will deposit most of their
 energy in the core cells, and electrons will deposit most of their energy in the
 EM calorimeter. The \CaloTrkMuID\ algorithm identifies muon candidates by
 requiring an ID track matched to a signal consistent with a
-minimum-ionising-particle in each layer of the calorimeter. 
+minimum-ionising particle in each layer of the calorimeter. 
  %to reject hadron and electron backgrounds
-Both a cut based quality selection and a likelihood ratio based quality
+Both a cut-based quality selection and a likelihood ratio based quality
 selection are used, and muon candidates passing either are accepted. Calorimeter
 tagged muons are used to recover efficiency at \modetalt{0.1} where there is a
 gap in the muon-spectrometer.
@@ -211,7 +212,7 @@ the Monte-Carlo to reproduce the efficiency observed in data.
         }
     \caption[Muon reconstruction efficiency in 2011 as a function of the
     pseudorapidity and the transverse momentum of the muon for muons reconstructed
-    as either Combined or Segment Tagged using the \staco\ algorithm. ]{Muon
+    as either Combined or Segment Tagged using the \staco\ algorithm.]{Muon
     reconstruction efficiency in 2011 as a function of (a) the pseudorapidity and
     (b) the transverse momentum of the muon for muons reconstructed as either
     Combined or Segment Tagged using the \staco\ algorithm. The solid black points
@@ -302,7 +303,7 @@ in the data as described in the last paragraph.
         }
     \caption[Di-muon mass resolutions for muon tracks measured in the muon
     spectrometer, muon tracks measured in the Inner Detector, and combined muon
-    tracks. ]{Di-muon mass resolutions for (a) muon tracks measured in the muon
+    tracks.]{Di-muon mass resolutions for (a) muon tracks measured in the muon
     spectrometer, (b) muon tracks measured in the Inner Detector, and (c) combined
     muon tracks. The solid points show the measured values in selected \Zmm\ events
     in data collected in 2012. The blue points show the resolution in simulated
