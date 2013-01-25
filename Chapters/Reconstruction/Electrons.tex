@@ -274,7 +274,7 @@ efficiency at high pseudo-rapidity is reduced to roughly 1\%. Similarly, the
 reconstruction efficiency at low \et\ improves by roughly 6\% in 2012 with
 respect to 2011. Good agreement is observed between the reconstruction
 efficiency observed in data and the efficiency predicted by simulation.
-Scale-Factors, parameterised as a function of $\eta$ and \et, are applied to
+Scale-factors, parameterised as a function of $\eta$ and \et, are applied to
 the \mc\ to correct the reconstruction efficiency to that observed in
 data.
 
@@ -516,7 +516,7 @@ cluster matching. The variables cut on are as follows:
     jets:
 
     \begin{itemize}
-        \item Hadronic leakage, \Rhad, the ratio of \et\ in the first layer of
+        \item Hadronic leakage, \Rhad: the ratio of \et\ in the first layer of
         the hadronic calorimeter to the \et\ of the EM cluster. In the range
         \modetabetween{0.8}{1.37} the \et\ of the full hadronic calorimeter is
         used, to compensate for the crack between the barrel and extended barrel
@@ -536,8 +536,11 @@ cluster matching. The variables cut on are as follows:
     \item {\bf Silicon Hits:} at least 7 hits in the silicon detectors, of which at
     least one must be in the pixel detector. This ensures good track quality and
     rejects backgrounds from conversions or Dalitz-decays.
+
     \item {\bf Track-Cluster matching:} a loose matching in $\eta$ is applied,
-    requiring \deltaetalt{0.015}
+    requiring \deltaetalt{0.015}; this ensures that the track and the
+    cluster originate from the same physical particle and rejects backgrounds
+    from combinatoric fakes. 
 \end{itemize}
 
 The shower-shape variables \Reta\ and \Rhad\ are particularly susceptible to
@@ -552,7 +555,7 @@ All \loosePP\ cuts are required to be passed, and in addition:
 
 \begin{itemize}
     \item {\bf Shower Shapes:} the shower-shape cuts made in \loosePP\ 
-    (\Reta, \Rhad, \wetatwo, \Eratio, \wstot) are made at tighter values. For
+    (\Reta, \Rhad, \wetatwo, \Eratio, \wstot) are made tighter. For
     2012, the cuts on \Reta\ and \Rhad\ were loosened with respect to 2011, and
     made at the same value as for \loosePP, whilst the cuts on  \wetatwo, \Eratio\ and
     \wstot\ were tightened with respect to 2011.
@@ -561,10 +564,11 @@ All \loosePP\ cuts are required to be passed, and in addition:
     requiring \deltaetalt{0.005}.
 
     \item {\bf Impact Parameter:} require that the electron's track has a
-    transverse impact parameter \dzero $<$ 5 mm.
+    transverse impact parameter \dzero $<$ 5 mm; this rejects backgrounds from
+    electrons originating from decays of hadrons in jets.
 
     \item {\bf Silicon Hits:} stricter requirements are made on hits in the
-    silicon detectors. It is requireq that there is at least one hit in the b-layer for
+    silicon detectors. It is required that there is at least one hit in the b-layer for
     \modetalt{2.01} (\modetalt{2.37} in 2012). In 2011, at least 1
     Pixel hit is required for \modetalt{2.01} and at least two for
     \modetagt{2.01}. For 2012, two Pixel hits are required in all bins.
@@ -618,16 +622,16 @@ identification in the forward region must rely on calorimeter shower-shape
 variables alone. A good discrimination between electrons and hadrons may be made
 due to the fine transverse and longitudinal segmentation of the calorimeter, but
 it is not possible to distinguish electrons and photons in the forward regions.
-Two reference sets of cuts are defined for forward electrons, \loose\ and
-\tight. The cuts are optimised in two bins of $\eta$ for 2011 running (one for the EMEC
-and one for the FCAL) and in two bins of $\eta$ and four bins of number of primary vertices in the event (\nPV) for 2012.
+Two selections are defined for forward electrons: \loose\ and \tight. The cuts
+are optimised in two bins of $\eta$ for 2011 running (one for the EMEC and one
+for the FCAL) and in two bins of $\eta$ and four bins of number of primary
+vertices in the event (\nPV) for 2012.
 
-The variables cut on at the two working points are described below.
-Expected distributions from simulation for these variables in the 2012 reconstruction for real electrons from \Z\ boson
-decays and from hadrons reconstructed as electrons are shown in
-Figure~\ref{fig:el-id-showershapes-forward}
-. Typical values of the cuts in 2012 for the
-lowest \nPV\ EMEC bin are also indicated on the plots.
+The variables cut on at the two working points are described below. Expected
+distributions from simulation for these variables in 2012 data for
+prompt electrons from \Z\ boson decays and from hadrons reconstructed as electrons
+are shown in~\fig{el-id-showershapes-forward}. Typical values of the
+cuts in 2012 for the lowest \nPV\ EMEC bin are also indicated on the plots.
 
 \begin{figure}[h]
 \centering
@@ -652,9 +656,10 @@ lowest \nPV\ EMEC bin are also indicated on the plots.
 	\subfigure[][Normalised lateral moment]{
             \includegraphics[width=0.47\textwidth]{ShowerShapePlots_lin/fwd_lat_mom}
         }
-    \caption[Distributions of forward electron identification variables for electrons:
-    $\lambda_{\rm centre}$,  $\langle \lambda^2 \rangle$, $\langle r^2 \rangle$,
-    $f_{\rm max}$, Normalised longitudinal moment, Normalised lateral moment]
+    \caption[Distributions of forward electron identification variables for
+    electrons and hadrons: $\lambda_{\rm centre}$,  $\langle \lambda^2 \rangle$,
+    $\langle r^2 \rangle$, $f_{\rm max}$, Normalised longitudinal moment,
+    Normalised lateral moment]
     {Simulated distributions of variables used in forward electron
     identification. The black histogram shows the distributions for prompt
     electrons from decays of \Z\ bosons, whilst the red histogram shows the
@@ -669,7 +674,7 @@ lowest \nPV\ EMEC bin are also indicated on the plots.
 Cuts are made on the following variables:
 
 \begin{itemize}
-    \item {\bf Shower depth, $\lambda_{\rm centre}$} the distance of the shower
+    \item {\bf Shower depth, $\lambda_{\rm centre}$:} the distance of the shower
     barycentre from the front face of the calorimeter along its axis.  
     \item {\bf Longitudinal Second Moment, $\langle \lambda^2 \rangle$} the second
     moment\footnote{The $n^{\rm th}$ moment is defined as $\langle x^n \rangle =
@@ -682,7 +687,7 @@ Cuts are made on the following variables:
 
 \subsubsection{Forward \tight\ Requirements}
 
-All of the \loose\ cuts are required to be passed, an in addition cuts are made
+All of the \loose\ cuts are required to be passed, and in addition cuts are made
 on the following variables:
 
 \begin{itemize}
