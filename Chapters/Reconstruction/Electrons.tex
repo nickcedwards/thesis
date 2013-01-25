@@ -240,7 +240,7 @@ sophisticated GSF algorithm, but running in approximately one tenth of the time.
 At this stage, there will still be a number of tracks which had large energy
 losses from \brem\ and were consequentially badly fitted. A refit using the GSF
 fitter described above is thus carried out for all tracks loosely matched to an
-EM calorimeter cluster. Two forms are matching are carried out: the first
+EM calorimeter cluster. Two forms of are matching are carried out: the first
 (\deltaR) between the
 track parameters extrapolated to the second layer of the calorimeter and the
 barycentre of the calorimeter cluster, and the second (\deltaR$^{\rm{rescaled}}$) where the track momentum is
@@ -254,12 +254,12 @@ to the clusters and selection of the best match is also improved; again both the
 original \deltaR\ and the \deltaR$^{\rm{rescaled}}$ after scaling the track
 momentum to the cluster
 energy are computed. Tracks with Pixel detector hits are preferred. If there are
-more than two tracks with Pixel hits matching to a cluster then the one with the smaller
+more than two tracks with Pixel hits matching a cluster then the one with the smaller
 \deltaR$^{\rm{rescaled}}$ is preferred, providing they are well enough
-separated in \deltaR$^{\rm{rescaled}}$, otherwise the one with smaller \deltaR\
+separated in \deltaR$^{\rm{rescaled}}$; otherwise the one with smaller \deltaR\
 is chosen.
 
-Overall these improvements increase the electron reconstruction efficiency by
+Overall, these improvements increase the electron reconstruction efficiency by
 $\sim2\%$ in the calorimeter barrel and $\sim5\%$ in the calorimeter endcaps.
 For low \et\ electrons (\etlt{20}) the improvement is up to 6\%.
 
@@ -268,14 +268,14 @@ For low \et\ electrons (\etlt{20}) the improvement is up to 6\%.
 ~\fig{el-reco-eff} shows the electron reconstruction efficiency in 2011 and 2012
 as a function of the pseudo-rapidity and the transverse energy of the electron cluster.
 The reconstruction efficiency in 2011 drops by approximately 4\% between central
-and forward pseudo-rapidity. In 2012 the overall reconstruction efficiency
+and forward pseudo-rapidities. In 2012 the overall reconstruction efficiency
 improves by approximately 2\% at central pseudo-rapidity, and the drop-off in
 efficiency at high pseudo-rapidity is reduced to roughly 1\%. Similarly, the
 reconstruction efficiency at low \et\ improves by roughly 6\% in 2012 with
 respect to 2011. Good agreement is observed between the reconstruction
 efficiency observed in data and the efficiency predicted by simulation.
 Scale-Factors, parameterised as a function of $\eta$ and \et, are applied to
-the Monte-Carlo to correct the reconstruction efficiency to that observed in
+the \mc\ to correct the reconstruction efficiency to that observed in
 data.
 
 \begin{figure}[h]
@@ -290,7 +290,7 @@ data.
 $\eta$ and the cluster \et. ]{Electron reconstruction efficiency in 2011 and 2012 as a function of (a) the cluster
 $\eta$ and (b) the cluster \et. The solid coloured points show the efficiency
 observed in data whilst the open points show the simulated efficiency in
-Monte-Carlo. Figures from~\cite{ElectronEfficiency2012}.}
+\mc. Figures from~\cite{ElectronEfficiency2012}.}
 \label{fig:el-reco-eff}
 \end{figure}
 
@@ -301,7 +301,7 @@ measurements, however there are large uncertainties in the transfer
 of the measurement from the test-beam to the actual ATLAS environment. Further,
 the calorimeter energy response needs to be calibrated to account for the
 varying amount of dead material before the calorimeters as a function of
-pseudo-rapidity. \mc\ derived calibrations are applied
+pseudo-rapidity. \mc-derived calibrations are applied
 to the clusters to correct for dead material and leakage outside of the
 calorimeter. The energy response is further calibrated in-situ using \Zee\
 decays. This also allows the inter-calibration of different regions of the
@@ -731,10 +731,10 @@ in events with a single primary vertex.
 ~\fig{el-id-eff-et} shows the \loosePP\ identification efficiency as a function
 of \et, using the 2011 requirements. Differences at the level of a
 few percent are observed between the efficiency measured in data and the
-efficiency measured in Monte-Carlo simulation. This is mainly attributed to mis-modelling
-of the shower-shape variables in the Monte-Carlo.
-Scale-Factors, parameterised as a function of $\eta$ and \et, are applied to
-the Monte-Carlo to correct the reconstruction efficiency to that observed in
+efficiency measured in \mc\ simulation. This is mainly attributed to mis-modelling
+of the shower-shape variables in the \mc.
+Scale-factors, parameterised as a function of $\eta$ and \et, are applied to
+the \mc\ to correct the reconstruction efficiency to that observed in
 data.
 
 
@@ -747,7 +747,7 @@ energy.]{
 Efficiency of
 the \loosePP\ identification requirements as a function of the cluster transverse
 energy. The solid points indicate data based measurements whilst the open points
-indicate predictions from Monte-Carlo. The different markers indicate the method used to
+indicate predictions from \mc. The different markers indicate the method used to
 measure the efficiency: results from \Zee\ tag and probe are shown as black
 circles, results from $\jpsi \ra ee$ as blue squares and results from $W \ra e
 \nu$ as red triangles.
