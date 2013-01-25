@@ -572,19 +572,17 @@ The efficiency for a single lepton to fire the trigger is measured in data using
 \Zll\ events. Events are triggered on by a `tag' lepton, then the efficiency for
 the second `probe' lepton to fire the trigger is measured. By comparing the
 efficiencies in data and in \mc\ simulation, scale-factors are derived to
-correct the single lepton trigger efficiencies in the simulation to that
-observed in data. 
-This is translated to an event level trigger efficiency
+correct the single lepton trigger efficiencies in the simulation to those
+observed in data.  This is translated to an event-level trigger efficiency
 scale-factor using the following formula:
 
 \begin{equation}
 \label{eq:triggerEffSF}
   SF =  { \frac{ {1 - \prod_{n=1}^{N_l} (1 - \epsilon_{Data,l_n})}} {1 - \prod_{n=1}^{N_l} (1 - \epsilon_{MC,l_n})} }
 \end{equation}
-
-where $N_l$ is the number of leptons passing the trigger matching kinematic and
+where $N_l$ is the number of leptons passing the trigger-matching kinematic and
 identification requirements
-given above (but not necessarily trigger matched),
+given above (but not necessarily the number of trigger matched leptons),
 $\epsilon_{Data,l_n}$ is the trigger efficiency in data, determined as above,
 for a lepton of flavour flavor $l_n$, and $\epsilon_{MC,l_n}$ is
 the corresponding efficiency determined in the MC. 
