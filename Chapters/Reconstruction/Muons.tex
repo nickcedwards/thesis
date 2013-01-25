@@ -25,8 +25,8 @@ muon trigger was 15 \GeV; in 2012 it was 20 \GeV.
 \begin{figure}[h]
 \centering
             \includegraphics[width=0.8\textwidth]{mu-trigger-diag}
-    \caption[Cross sectional view of the muon trigger chambers. ][Cross
-    sectional view of the muon trigger chambers.] {Cross sectional view of the
+    \caption[Cross sectional view of the muon trigger chambers.]
+    {Cross sectional view of the
     muon trigger chambers. Figure from~\cite{Aad:2012xs}.}
     \label{fig:mu-trigger-diag}
 \end{figure}
@@ -193,14 +193,14 @@ gap in the muon-spectrometer.
 ~\fig{mu-reco-eff} shows the observed reconstruction efficiency for muons
 reconstructed as either Combined or Segment Tagged in the 2011 data, measured
 using a tag and probe technique on \Z\ boson decays~\cite{ATLAS-CONF-2011-063},
-as well as the efficiency predicted by the Monte-Carlo simulation. The
+as well as the efficiency predicted by the \mcsim. The
 efficiency is seen to drop significantly for \modetalt{0.1} for reasons
 explained above. The efficiency for calorimeter tagged muons is also shown, and
 it is seen that this effectively recovers the loss in efficiency at
 \modetalt{0.1}. The muon reconstruction efficiency is seen to be almost constant
 as a function of \pt. In both \pt\ and $\eta$ good agreement is seen between the
 \mcsim\ and the data, but as with the electrons, scale-factors are applied to
-the Monte-Carlo to reproduce the efficiency observed in data.
+the \mc\ to reproduce the efficiency observed in data.
 
 \begin{figure}[h]
 \centering
@@ -217,9 +217,9 @@ the Monte-Carlo to reproduce the efficiency observed in data.
     (b) the transverse momentum of the muon for muons reconstructed as either
     Combined or Segment Tagged using the \staco\ algorithm. The solid black points
     show the efficiency observed in data, and the open red circles show the
-    efficiency predicted by Monte-Carlo simulation. In figure (a) the efficiencies
+    efficiency predicted by \mcsim. In figure (a) the efficiencies
     for calorimeter tagged muons are also shown for \modetalt{0.1} (solid blue
-    triangles for data and open green triangles for Monte-Carlo). Figures
+    triangles for data and open green triangles for \mc). Figures
     from~\cite{MuonEfficiency2011}.} 
     \label{fig:mu-reco-eff} 
 \end{figure}
@@ -233,7 +233,6 @@ The muon momentum resolution in the MS can be parameterised as:
 \frac{ \sigma (p) }{ p } = \frac{ p_{0}^{MS} }{ p_{T} } \oplus  p_{1}^{MS}
 \oplus  p_{2}^{MS} \cdot p_{T}
 \end{equation}
-
 where $p_{0}^{MS}$, $p_{1}^{MS}$ and $p_{2}^{MS}$ are coefficients related to
 the energy loss in the calorimeters, multiple scattering and intrinsic
 resolution, respectively. For the ID, the momentum resolution depends on the
@@ -252,7 +251,7 @@ for}\, \modetalt{1.9} \\
 \end{equation}
 
 The muon momentum resolution is measured in data using \Zmm\ decays. The width
-of the reconstructed di-muon invariant mass peak at \Z\ pole is fitted to a
+of the reconstructed di-muon invariant mass peak at the \Z\ pole is fitted to a
 convolution of a Breit-Wigner modelling the natural width of the \Z\ boson, and
 a Gaussian modelling the muon momentum measurement resolution. The distributions
 measured in the ID and the MS are fitted independently to obtain separate
@@ -268,12 +267,11 @@ defined as
 p'_{T}(MS) = p_{T}(MS) (1+\Delta(MS))
 \end{equation}
 
- where 
+where 
 
 \begin{equation}
 \Delta(MS) = f(0,1) \cdot \Delta p_{1}^{MS} +  f(0,1) \cdot \Delta p_{2}^{MS} p_{T}
 \end{equation}
-
 and the $ \Delta p_{i}^{MS} $ are the difference in the resolution parameters $
 p_{i}^{MS} $ between data and \mcsim\ and $f(0,1)$ is a normally distributed
 random number with mean 0 and width 1. The ID resolution in simulation is
