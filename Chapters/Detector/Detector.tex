@@ -696,36 +696,37 @@ acceptances and efficiencies, and also to be able to compare experimental
 results with theoretical models. A custom detector simulator, which uses the
 \geant~\cite{Agostinelli2003250} toolkit, is used to simulate interactions
 between particles and matter in the ATLAS detector. It takes as input the output
-of Monte-Carlo generators as described in~\sec{} in HepMC format, with all
+of Monte-Carlo generators as described in~\sec{Theory-MC} in HepMC format, with all
 particles with a lifetime less than $c \tau > 10$ mm decayed by the generator.
 The simulator then propagates the particles through the ATLAS detector, using
 \geant\ to simulate their interaction with the material of the detector. 
 
 The response of the detector components to the particles produced is also
 simulated, and simulated output signals are produced in the same format as the
-real
-detector output. These are then reconstructed in the same way as
-for real data (described in~\chap{Reconstruction}). To simulate the effect of pileup, minimum bias events generated with the \pythia
-generator are overlaid with the hard event.
+real detector output. These are then reconstructed in the same way as for real
+data (described in~\chap{Reconstruction}). To simulate the effect of pileup,
+minimum bias events generated with the \pythia generator are overlaid with the
+hard event.
 
 \section{Data Samples}
 
 The measurements described in this thesis use data collected in 2011 and 2012,
 and correspond to the full datasets collected by ATLAS in each of those two
-years. The dataset is broken down into {\it runs}, a continuous period of data
-taking typically corresponding to one fill of the LHC. Each run is further
+years. The dataset is broken down into {\it runs}, continuous periods of
+data-taking typically corresponding to one fill of the LHC. Each run is further
 broken down into {\it luminosity blocks} consisting of roughly two or three
-minutes worth of data taking. Runs are grouped together into {\it periods}, with
+minutes-worth of data-taking. Runs are grouped together into {\it periods}, with
 the accelerator, detector and trigger conditions being similar in each period.
 The periods within each year are labelled A to M.
 
 Luminosity blocks where there were problems with the detector (for example a HV
 trip in the LAr) which would affect the reconstruction of electrons, muons, jets
 or other physics objects are removed using a ``Good Runs List'' which records
-which luminosity blocks have such defects. After removing these luminosity blocks
-the integrated luminosity of 2011 dataset is \LumiPassGRLTwentyEleven\ and the integrated luminosity
-of the 2012 dataset is \LumiPassGRLTwentyTwelve\ifb. The uncertainty on the
-luminosity measurement is \LumiUncTwentyEleven\ifb~\cite{ATLAS-CONF-2011-116,Aad:2011dr} for 2011 data and
+which luminosity blocks have such defects. After removing these luminosity
+blocks the integrated luminosity of 2011 dataset is \LumiPassGRLTwentyEleven\
+and the integrated luminosity of the 2012 dataset is
+\LumiPassGRLTwentyTwelve\ifb. The uncertainty on the luminosity measurement is
+\LumiUncTwentyEleven\ifb~\cite{ATLAS-CONF-2011-116,Aad:2011dr} for 2011 data and
 \LumiUncTwentyTwelve for 2012 data.
 
 % Performace of the detector over these periods ?
