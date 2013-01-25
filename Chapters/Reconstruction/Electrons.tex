@@ -31,7 +31,7 @@ brought closer to the EF threshold, and varying L1 thresholds with $\eta$ were
 introduced to account for varying material before the calorimeter. A hadronic
 leakage cut was also introduced to further reduce the L1 rate. In 2012 the EF
 threshold was further raised to 24 \gev, and a track isolation cut introduced at
-EF, requiring that the total \pt\ of tracks surrounding the
+EF, requiring the total \pt\ of tracks surrounding the
 electron's track in a cone of \deltaRlt{0.2} to have less than 10\% of the \pt\ of
 the electron.
 
@@ -60,19 +60,19 @@ size of cells in the second layer of the EM calorimeter. This
 results in a grid of $200 \times 256$ towers. The energy
 of the tower is the sum of the cells in all three calorimeter layers
 falling within the tower. Where cells are shared between more than one tower, the
-energy is shared according the fractional overlap of the cell with each
+energy is shared according to the fractional overlap of the cell with each
 tower. The seed cells are formed by sliding a
 window of size \deltaetadeltaphi{0.075}{0.125} ($3 \times 5$ towers) over the
 grid of towers and identifying local maxima with \etgt{2.5}. The position
 of the cluster is taken to be the energy weighted $\eta$, $\phi$ barycentre of
 cells in a window around the centre of the cluster. If two seeds are closer than
-\deltaetadeltaphi{0.050}{0.050} only the one with higher \et\ is kept.
+\deltaetadeltaphi{0.050}{0.050}, then only the one with higher \et\ is kept.
 
 Electron candidates are then formed by matching Inner Detector tracks to the
 seed clusters. If there is a reasonable agreement ($\Delta \eta <0.2$ and
 $\Delta \phi <0.1$) between a track's co-ordinates (measured at the origin of the
 track) and a cluster seed, the track is extrapolated from its last measurement point to
-the middle layer of the EM calorimeter (TRT-only tracks are automatically
+the middle layer of the EM calorimeter (TRT-only tracks are all
 extrapolated). In $\eta$, the cluster is required to be within 
 $\Delta \eta <0.05$ of the track. In $\phi$, the cluster must be within $\Delta \phi < 0.1$ of
 the track if it falls on the side towards which the track bends, or $\Delta
@@ -97,7 +97,7 @@ into other calorimeter cells and the estimated longitudinal leakage behind the
 EM calorimeter. The four terms are parameterised as a function of the measured
 cluster energy in the pre-sampler (where it exists) and the measured energy in each of the three
 calorimeter layers, based on detailed simulations of energy depositions in the
-calorimeters and the dead material. At this stage additional calibrations are
+calorimeters and the dead material. At this stage, additional calibrations are
 applied to the electron energy based on measurements of \Zee\ and
 \JPsiee~\cite{Aad:2011mk}. The energy of the electron is taken as the cluster
 energy, and the direction as the track $\eta$ and $\phi$, providing the track
@@ -105,8 +105,8 @@ has sufficient silicon hits.
 
 \subsubsection{Forward Electron Reconstruction}
 
-Forward electrons are reconstructed from energy deposits in the calorimeter
-only. \intro{Topological clusters}~\cite{Lampl:1099735} are formed by grouping neighbouring cells in three
+Forward electrons are reconstructed solely from energy deposits in the calorimeter. 
+\intro{Topological clusters}~\cite{Lampl:1099735} are formed by grouping neighbouring cells in three
 dimensions. The topological clusters have variable size, depending
 on the energy deposit and the clustering criteria used. Cells with a
 signal versus noise significance above a high threshold $t_{\rm{seed}}$ are used as seeds.
@@ -116,7 +116,7 @@ secondary seeds if they have signal significance above an intermediate threshold
 $t_{\rm{neighbour}}$. For electron topological clusters $t_{\rm{seed}}$ is set
 equal to $t_{\rm{neighbour}}$. The lower threshold at the cell perimeter ensures that
 tails of showers are not discarded, while the higher thresholds for seeds and
-neighbors suppress electronics and pile-up noise. The cells are split if they
+neighbours suppress electronics and pile-up noise. The cells are split if they
 contain more than one local maxima above a certain energy threshold. 
 
 An electron candidate is constructed if the cluster has \etgt{5} and only a
@@ -212,14 +212,16 @@ In 2012, improvements were made to all stages of the electron reconstruction
 chain, from the initial tracking pattern recognition through to the track
 cluster matching~\cite{HSG2:1456228}. 
 
-Since the GSF tracking takes approximately 10 times more time to
-run than the standard Kalman filter, it is not feasible to fit all tracks using
-the GSF when doing the initial pattern recognition and track finding (see~\sec{tracking-std}). 
-Additionally, the use of such a filter with electron hypothesis would
-negatively affect non-electron tracks. Instead, the effects of \brem\ on
-electron tracks are crudely modelled at the initial pattern recognition by allowing for 30\% energy loss at each surface for tracks with
-momentum above 1 \gev. In order to avoid degrading non-electron tracks, this allowance is only made in regions of interest in a
-cone of \deltaRlt{0.3} around EM calorimeter clusters. 
+Since the GSF tracking takes approximately 10 times more time to run than the
+standard Kalman filter, it is not feasible to fit all tracks using the GSF when
+doing the initial pattern recognition and track finding
+(see~\sec{tracking-std}).  Additionally, the use of such a filter with electron
+hypothesis would adversely affect non-electron tracks. Instead, the effects of
+\brem\ on electron tracks are crudely modelled at the initial pattern
+recognition by allowing for 30\% energy loss at each surface for tracks with
+momentum above 1 \gev. In order to avoid degrading non-electron tracks, this
+allowance is made only in regions of interest in a cone of \deltaRlt{0.3} around
+EM calorimeter clusters. 
 
 The global \chisquared\
 fitter was also improved to allow for electron hypothesis tracks. Tracks
