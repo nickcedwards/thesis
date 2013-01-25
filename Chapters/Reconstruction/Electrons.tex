@@ -3,14 +3,14 @@
 
 Events containing electrons are triggered on using ATLAS's three level trigger
 system as described in~\sec{detector-trigger}. They are triggered on at L1 by
-requiring two adjacent towers of calorimeter cells of size
+requiring that two adjacent towers of calorimeter cells of size
 \deltaetadeltaphi{0.1}{0.1} have an energy above a certain threshold. The towers
 are used to identify a RoI for use at L2. At L2 fast calorimeter clustering and
 ID tracking
-algorithms are used. The calorimeter clustering at L2 uses a similar algorithm to in
+algorithms are used. The calorimeter clustering at L2 uses a similar algorithm to 
 the offline reconstruction as described in~\sec{reco-el-reco}, except that the
-highest \et\ cell in the middle calorimeter layer of the RoI is used as a seed
-rather than using a sliding window algorithm. Basic shower shape cuts on
+highest \et\ cell in the middle calorimeter layer of the RoI is used as a seed,
+rather than using a sliding window algorithm. Basic shower-shape cuts on
 the width of the shower in $\eta$ and the ratio of energy deposits in the
 different calorimeter layers are
 used to reject backgrounds. The EF uses the offline reconstruction and
@@ -434,7 +434,7 @@ value for the loosest working point at which the variable is cut on is shown.
 
 \subsubsection{\loosePP\ Requirements}
 
-In both 2011 and 2012 \loosePP\ cuts on shower shape variables in the first and
+In both 2011 and 2012 \loosePP\ cuts on shower-shape variables in the first and
 second layers of the EM calorimeter, leakage into the hadronic
 calorimeter, track quality in the silicon detectors and loose track cluster
 matching. The variables cut on are as follows:
@@ -507,7 +507,7 @@ the variables.}
 
 \begin{itemize}
 
-    \item {\bf Shower Shapes:} cuts are made on the following shower shape
+    \item {\bf Shower Shapes:} cuts are made on the following shower-shape
     variables:
 
     \begin{itemize}
@@ -535,7 +535,7 @@ the variables.}
     requiring \deltaetalt{0.015}
 \end{itemize}
 
-The shower shape variables \Reta\ and \Rhad\ are particularly susceptible to
+The shower-shape variables \Reta\ and \Rhad\ are particularly susceptible to
 pileup since they sample a large area of the calorimeter. Cuts on these
 variables were therefore
 loosened in 2011 with respect to 2012, reducing the rejection power of \loosePP\
@@ -546,7 +546,7 @@ by about 20\%.
 All \loosePP\ cuts are required to be passed, and in addition:
 
 \begin{itemize}
-    \item {\bf Shower Shapes:} the shower shape cuts made in \loosePP\ 
+    \item {\bf Shower Shapes:} the shower-shape cuts made in \loosePP\ 
     (\Reta, \Rhad, \wetatwo, \Eratio, \wstot) are made at tighter values. For
     2012, the cuts on \Reta\ and \Rhad\ were loosened with respect to 2011, and
     made at the same value as for \loosePP, whilst the cuts on  \wetatwo, \Eratio\ and
@@ -583,7 +583,7 @@ All \loosePP\ cuts are required to be passed, and in addition:
 All \mediumPP\ cuts are required to be passed, and in addition:
 
 \begin{itemize}
-    \item {\bf Shower Shapes:} cuts on shower shape variables are made at equal
+    \item {\bf Shower Shapes:} cuts on shower-shape variables are made at equal
     or tighter values to those for \mediumPP. As for \mediumPP,
     the cuts on \Reta\ and \Rhad\ were loosened in 2012 with respect to 2011, 
     whilst the cuts on  \wetatwo, \Eratio\ and
@@ -609,7 +609,7 @@ All \mediumPP\ cuts are required to be passed, and in addition:
 \subsubsection{Forward Electron Identification}
 
 Since in the forward region there is no tracking from the Inner Detector,
-identification in the forward region must rely on calorimeter shower shape
+identification in the forward region must rely on calorimeter shower-shape
 variables alone. A good discrimination between electrons and hadrons may be made
 due to the fine transverse and longitudinal segmentation of the calorimeter, but
 it is not possible to distinguish electrons and photons in the forward regions.
@@ -730,7 +730,7 @@ in events with a single primary vertex.
 of \et, using the 2011 requirements. Differences at the level of a
 few percent are observed between the efficiency measured in data and the
 efficiency measured in Monte-Carlo simulation. This is mainly attributed to mis-modelling
-of the shower shape variables in the Monte-Carlo.
+of the shower-shape variables in the Monte-Carlo.
 Scale-Factors, parameterised as a function of $\eta$ and \et, are applied to
 the Monte-Carlo to correct the reconstruction efficiency to that observed in
 data.
