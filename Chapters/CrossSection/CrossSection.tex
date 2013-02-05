@@ -294,6 +294,161 @@ data are consistent with these predictions.
 \end{figure}
 
 \section{Cross Section Measurement}
-\subsection{Cross Section Definition}
-\subsection{Fiducial Acceptance}
-\subsection{Cross Section Extraction}
+
+As discussed in~\sec{}, the \cx\ is first measured in a fiducial phase-space
+corresponding to the experimental selections (the \intro{fiducial \cx}), in
+order to reduce systematic uncertainties associated with the extrapolation. The
+fiducial \cx\ is then extrapolated to the total \ZZ\ \cx. The definition of the
+fiducial phase-space is given in~\sec{}, and is slightly different for the
+7~\tev\ and 8~\tev\ analyses due to the differing experimental selections.
+
+For a given \zzllll final state the fiducial cross section is defined as
+
+\begin{equation}\label{eq:xsecfid_fourl}
+\sigma_{\zzllll}^{fid} = \frac{
+N^{obs}_{\llll} - N^{bkg}_{\llll}}{\mathcal{L} \times C_{\zzllll}}
+\end{equation}
+where $N^{obs}_{\llll}$ and $N^{bkg}_{\llll}$ are the number of observed and
+background events respectively, $\mathcal{L}$ is the integrated luminosity and
+\CZZ\ is the reconstruction acceptance factor defined in~\sec{objSel:CZZ}.  
+
+% S.K. 22 May 2012 - Changed label names in equations below; was eq:xsectot
+%                    (multiply defined)
+In addition to the fiducial cross section, we also calculate a cross 
+section in the total phase space volume in each channel.  The total 
+cross section for \llvv\ sub-channels is calculated as:
+\begin{equation}\label{eq:xsectot_llnunu}
+\sigma_{ZZ}^{tot} = \frac{ N^{obs}_{\llvv} - N^{bkg}_{\llvv}}{\mathcal{L} \times BR\{\zzllvv\} \times A_{\zzllvv} \times C_{\zzllvv}}
+\end{equation}
+where $A_{\zzllvv}$ is the correction factor defined in section~\ref{subsec:totAcc},
+$BR\{\zzllvv\}$ is the branching ratio for a $Z$ to decay to
+$\ll$ and a $Z$ to decay to $\nu\bar{\nu}$, and
+$BR\{\zzllll\}$ is the branching ratio for a $Z$ to decay to
+$\ll$ and a $Z$ to decay to $\ell'\ell'$.
+
+In \llll\ sub-channels the total cross-section is calculated as:
+\begin{equation}\label{eq:xsectot_fourl}
+\sigma_{ZZ}^{tot} = \frac{ N^{obs}_{\llll} - N^{bkg}_{\llll}}{\mathcal{L} \times
+BR\{\zzllll\} \times A_{\zzllll} \times C_{\zzllll}}
+\end{equation}
+where $A_{\zzllll}$ is the correction factor defined in section~\ref{subsec:totAcc}.
+
+%The $ZZ\rightarrow\tau\tau\nu\nu$ with subsequent $\tau\tau\rightarrow
+%\ell\ell$ contamination to the direct decay of $\zzllvv$
+%is negligible.  This is due to the tight $Z$ mass
+%requirement of $76<M_{ll}<106\,\mathrm{GeV}$ in the fiducial volume.  
+%Less than $0.1$\% of $\zzllvv$ are found in the 
+%signal region. The contribution of  $ZZ\rightarrow\tau\tau\ell\ell$ decays to
+%selected events in the \zzllll\ decay channel is 0.2\% for the \ZZ\ selection, and
+%1.8\% for the \ZZs\ selection; the higher value being a result of the looser mass
+%cut (see Table~\ref{table:CZZcontaminations}).
+
+The combination of these cross sections could use a basic approach
+where one uses the total sum over channels of observed events, total
+sum over channels of expected background events, and weighted sum over
+channels of acceptances.  This method would give highest weight in the
+combination to the highest statistics channel and would not
+necessarily take into account better signal-to-background ratios in
+other channels.  One could also use a minimum $\chi^{2}$ approach,
+which amounts to a covariance weighted average.  Unfortunately this
+combination needs higher statistics than we currently have.
+
+We use a maximum log-likelihood approach to calculate the combined
+cross section.  This approach takes into account the Poisson
+statistics of our samples as well as the systematic uncertainties.
+This is described in the next section~\ref{sec:CrossSecCalc}.
+
+\subsection{Cross-Section Combination}\label{sec:CrossSecCalc}
+We estimate the cross section by maximizing the profile likelihood function
+$L$ with respect to the cross section $\sigma$.  We
+merge the two channels before maximizing $L$.
+
+The profile likelihood function for the fiducial cross section is the product of a Poisson probability
+distribution ($P$) and Gaussian distribution function ($G$) for the  nuisance parameters. The likelihood 
+function includes parameters from the two decay channels: channel 1 (\zzlmlplmlp) and channel 2 (\zzllvv). 
+$C_{1}$ and $C_{2}$ represent $C_{ZZ}$ for each channel; the $C_{1,2}'$ terms are allowed to float with a 
+Gaussian constraint, and the $C_{1,2}$ terms are the mean values calculated from Monte Carlo. The uncertainties in $C_{1,2}$ are split into 
+two groups: those uncertainties which are uncorrelated between channels and those which are correlated.  
+The variables $\overrightarrow{\beta}=(\beta_{1},...,\beta_{k})$ represent the variations in the correlated uncertainties 
+($\overrightarrow{\Delta{C_{1}}}^{\rm corr}=(\Delta{C_{1;i=1}}^{\rm corr},...,\Delta{C_{1;i=k}}^{\rm corr}$ and 
+$\overrightarrow{\Delta{C_{2}}}^{\rm corr}=(\Delta{C_{2;i=1}}^{\rm corr},...,\Delta{C_{2;i=k}}^{\rm corr}$)
+and are distributed according to a single Gaussian distribution 
+function with $\sigma=1$ and $\mu=0$ ($\alpha$ for $A_{ZZ}$ uncertainties). The electron uncertainties, muon  
+uncertainties, trigger uncertainties, and PDF uncertainties are treated as 100\% correlated between the \zzllvv\ and \zzlmlplmlp\ channels.
+We also calculated the total cross section assuming that the uncertainties are uncorrelated between the two channels, and found that our 
+correlation assumption is more conservative.
+The background uncertainties are treated as totally uncorrelated across the two channels. 
+For $k$ correlated uncertainties, the likelihood is written as follows:
+\begin{eqnarray} \nonumber
+&L( (\sigma^{\rm total}\ {\rm or}\ \sigma^{\rm fid}_{1}, \sigma^{\rm fid}_{2}), \overrightarrow{\beta}, b_{1}', b_{2}';
+ C_{1}, C_{2}, \Delta{b}_{1}, \Delta{b}_{2}, \Delta{C_{1}^{\rm uncorr}}, \Delta{C_{2}^{\rm uncorr}}, 
+\overrightarrow{\Delta{C_{1}}}^{\rm corr}, \overrightarrow{\Delta{C_{2}}}^{\rm corr}, N) =& \\ \nonumber
+%
+& P((\sigma^{\rm total}\ {\rm or}\ \sigma^{\rm fid}_{1}), \overrightarrow{\beta}, b_{1}'; C_{1}, \Delta{C_{1}}^{\rm uncorr}, \overrightarrow{\Delta{C_{1}}}^{\rm corr}, N) \cdot 
+P((\sigma^{\rm total}\ {\rm or}\ \sigma^{\rm fid}_{2}), \overrightarrow{\beta}, b_{2}'; C_{2}, \Delta{C_{2}}^{\rm uncorr}, \overrightarrow{\Delta{C_{2}}}^{\rm corr}, N) \cdot& \\ 
+%
+&\Gamma(\overrightarrow{\beta},b_{1}',b_{2}';b_{1},b_{2},\Delta{b_{1}},\Delta{b_{2}}).& \nonumber
+\end{eqnarray}
+
+Where the $\Gamma$ function contains all of the Gaussian constraints:
+
+\begin{equation}
+\prod_{i=1}^{i\leq{k}} G(\beta_{i}; 0, 1) \cdot G(\beta_{1}^{\rm uncorr}; 0, 1) \cdot
+G(\beta_{2}^{\rm uncorr}; 0, 1) \cdot 
+G(b_{1}'; b_{1}, \Delta{b_{1}}) \cdot G(b_{1}'; b_{1}, \Delta{b_{1}}).
+\end{equation}
+
+For the total cross section, we append $G(A_{ZZ}^\prime; A_{ZZ}, \Delta_{A_{ZZ}})$ to the likelihood to account for the uncertainty on
+the fiducial acceptance $A_{ZZ}$.
+
+The Poisson function for the number
+of observed events $N$ is
+\begin{equation}
+P(\sigma, C_{ZZ}, b; N) =
+\frac{e^{-(s(\sigma, C_{ZZ})+b)}\cdot
+     \left(s(\sigma, C_{ZZ})+b\right)^{N}}
+     {N!},
+\end{equation}
+where the number of signal events is a function of the cross section
+and other quantities such as the integrated luminosity and correction
+factors. We note
+aside that $-\ln(L)$ is minimized for computational convenience rather
+than maximizing $L$.
+
+For the fiducial and the total cross sections, the number of signal events is
+%($\sigma = \sigma_\mathrm{fid} \textrm{ and } \sigma_\mathrm{tot}$,%respectively) 
+\begin{eqnarray}
+& s(\sigma_\mathrm{fiducial}, C_{1}) = \sigma_\mathrm{fiducial}\cdot\mathcal{L}\cdot(C_{1}+\beta^{\rm uncorr}\Delta{C_{1}^{\rm uncorr}}+\overrightarrow{\beta}\cdot\overrightarrow{\Delta{C_{1}^{\rm corr}}}) & \\
+& s(\sigma_\mathrm{total}, C_{1}) = \mathrm{BR_1} \cdot \sigma_\mathrm{total}\cdot\mathcal{L}\cdot & \\ \nonumber
+&(C_{1}+\beta^{\rm uncorr}\Delta{C_{1}^{\rm uncorr}}+\overrightarrow{\beta}\cdot\overrightarrow{\Delta{C_{1}^{\rm corr}}})
+\cdot(A_{1}+\alpha^{\rm uncorr}\Delta{A_{1}^{\rm uncorr}}+\overrightarrow{\alpha}\cdot\overrightarrow{\Delta{A_{1}^{\rm corr}}})& ,
+\end{eqnarray}
+%where the factor of 4 accounts for the lepton combinatorics of $\zzllvv$. 
+The $A_{ZZ}$ in the latter formula accounts for the fiducial volume of the measurement. 
+
+Two types of uncertainties, statistical and systematic, are associated
+with the cross section measurement.  
+Table~\ref{ta:CrossSection} summarizes the fiducial and total cross section results. 
+
+\renewcommand{\arraystretch}{1.7}
+\begin{table}[htbp]
+ \centering
+ \begin{tabular}{|cc|c|}
+   \hline
+\multirow{3}{*}{\zzllll\ Fiducial} & $\zzllll$ & $\zzllllfid$ \\
+                          & $\zzeeee$ & $\zzeeeefid$ \\
+                          & $\zzeemm$ & $\zzeemmfid$ \\
+                          & $\zzmmmm$ & $\zzmmmmfid$ \\ 
+                          & $\ZZs\ra\ell\ell\ell'\ell'$ & $\zzsllllfid$ \\
+\hline
+\multirow{3}{*}{\zzllvv\ Fiducial} & $\zzllvv$ & $\zzllvvfid$ \\
+                          & $\zzeevv$ & $\zzeevvfid$ \\ 
+                          & $\zzmmvv$ & $\zzmmvvfid$ \\ 
+\hline
+ \multirow{3}{*}{Total}   & $ZZ$ (combined) & $\zztot$ \\
+                          & $\zzllll$ & $\zzlllltot$ \\
+                          & $\zzllvv$ & $\zzllvvtot$ \\
+\hline
+\end{tabular}
+\caption{\label{ta:CrossSection}Results}
+\end{table}
