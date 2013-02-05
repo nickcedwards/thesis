@@ -306,32 +306,25 @@ For a given \zzllll final state the fiducial cross section is defined as
 
 \begin{equation}\label{eq:xsecfid_fourl}
 \sigma_{\zzllll}^{fid} = \frac{
-N^{obs}_{\llll} - N^{bkg}_{\llll}}{\mathcal{L} \times C_{\zzllll}}
+N^{obs}_{\llll} - N^{bkg}_{\llll}}{\mathcal{L} \times \CZZ}
 \end{equation}
 where $N^{obs}_{\llll}$ and $N^{bkg}_{\llll}$ are the number of observed and
 background events respectively, $\mathcal{L}$ is the integrated luminosity and
 \CZZ\ is the reconstruction acceptance factor defined in~\sec{objSel:CZZ}.  
 
-% S.K. 22 May 2012 - Changed label names in equations below; was eq:xsectot
-%                    (multiply defined)
-In addition to the fiducial cross section, we also calculate a cross 
-section in the total phase space volume in each channel.  The total 
-cross section for \llvv\ sub-channels is calculated as:
-\begin{equation}\label{eq:xsectot_llnunu}
-\sigma_{ZZ}^{tot} = \frac{ N^{obs}_{\llvv} - N^{bkg}_{\llvv}}{\mathcal{L} \times BR\{\zzllvv\} \times A_{\zzllvv} \times C_{\zzllvv}}
-\end{equation}
-where $A_{\zzllvv}$ is the correction factor defined in section~\ref{subsec:totAcc},
-$BR\{\zzllvv\}$ is the branching ratio for a $Z$ to decay to
-$\ll$ and a $Z$ to decay to $\nu\bar{\nu}$, and
-$BR\{\zzllll\}$ is the branching ratio for a $Z$ to decay to
-$\ll$ and a $Z$ to decay to $\ell'\ell'$.
+The total cross-section is defined as:
 
-In \llll\ sub-channels the total cross-section is calculated as:
 \begin{equation}\label{eq:xsectot_fourl}
 \sigma_{ZZ}^{tot} = \frac{ N^{obs}_{\llll} - N^{bkg}_{\llll}}{\mathcal{L} \times
-BR\{\zzllll\} \times A_{\zzllll} \times C_{\zzllll}}
+BR\{\zzllll\} \times \AZZ \times \CZZ}
 \end{equation}
-where $A_{\zzllll}$ is the correction factor defined in section~\ref{subsec:totAcc}.
+where \AZZ\ is the \intro{fiducial acceptance factor}, which is equal to the
+fraction of \ZZ\ events which fall into the fiducial phase-space:
+
+\begin{equation}
+\AZZ\= \frac{ N^{\rm MC\ Fiducial Volume}_{{\rm Truth}\ ZZ} \times
+SF }{ N^{{\rm MC\ All}}_{{\rm Truth}\ ZZ} }
+\end{equation}
 
 %The $ZZ\rightarrow\tau\tau\nu\nu$ with subsequent $\tau\tau\rightarrow
 %\ell\ell$ contamination to the direct decay of $\zzllvv$
