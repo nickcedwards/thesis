@@ -315,8 +315,17 @@ $\CZZ^{\lllplp}$ is the reconstruction acceptance factor for the \lllplp\
 final-state, as defined in~\sec{objSel-CZZ}.
 
 The \cx\ is estimated using a maximum profile likelihood technique, by
-maximising the \intro{profile likelihood function, $\L$} with respect to the \cx\
+maximising the \intro{profile likelihood function, \L} with respect to the \cx.
+\L is defined as:
 
+\begin{equation}
+   \L(\sigma, \CZZ', b; \Delta_{b}, \Delta_{C_{ZZ}}, N) = P(\sigma, \CZZ^\prime,
+   b^\prime; N)\times G(\CZZ^\prime; C_{ZZ}, \Delta_{C_{ZZ}}) \times G(b^\prime; b, \Delta_{b}).
+\end{equation}
+where the $\Gamma(x; b, \Delta_{b})$ distribution used is the Gamma p.d.f
+\begin{equation}
+   \mathrm{Gamma}(x; k,\theta) = \frac{1}{{\theta}^k} \frac{1}{\Gamma(k)} x^{k-1} e^{-x/\theta} \, \, \mathrm{for} \,  \, x \ge 0, \, \, \mathrm{and} \, \, k, \theta > 0.
+\end{equation}
 
 \subsection{Total Cross Section}
 The total cross-section is defined as:
