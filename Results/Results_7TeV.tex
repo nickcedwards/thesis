@@ -1,5 +1,12 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Observed Events
 % Convenience functions
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Signal Expectation
 \newcommand{\ZZSevenTeVSigExpectation}{\ZZSevenTeVNSigEventsExpectedCentralLLLL\ensuremath{\pm}\ZZSevenTeVNSigEventsExpectedStatLLLL(stat.)\ensuremath{\pm}\ZZSevenTeVNSigEventsExpectedSystLLLL(syst.)}
 \newcommand{\ZZSevenTeVSigExpectationEEEE}{\ZZSevenTeVNSigEventsExpectedCentralEEEE\ensuremath{\pm}\ZZSevenTeVNSigEventsExpectedStatEEEE\ensuremath{\pm}\ZZSevenTeVNSigEventsExpectedSystEEEE}
 \newcommand{\ZZSevenTeVSigExpectationMMMM}{\ZZSevenTeVNSigEventsExpectedCentralMMMM\ensuremath{\pm}\ZZSevenTeVNSigEventsExpectedStatMMMM\ensuremath{\pm}\ZZSevenTeVNSigEventsExpectedSystMMMM}
@@ -10,6 +17,8 @@
 \newcommand{\ZZSevenTeVSigExpectationMMMMOneDp}{\ZZSevenTeVNSigEventsExpectedCentralMMMMOneDp\ensuremath{\pm}\ZZSevenTeVNSigEventsExpectedTotalUncMMMMOneDp}
 \newcommand{\ZZSevenTeVSigExpectationEEMMOneDp}{\ZZSevenTeVNSigEventsExpectedCentralEEMMOneDp\ensuremath{\pm}\ZZSevenTeVNSigEventsExpectedTotalUncEEMMOneDp}
 
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Background Estimate
 %\newcommand{\ZZSevenTeVDDBgEst}{\ZZSevenTeVDDBgEstCentralLLLL\ZZSevenTeVDDBgEstStatLLLL(stat.)\ZZSevenTeVDDBgEstSystLLLL(syst.)}
 \newcommand{\ZZSevenTeVDDBgEst}{\ZZSevenTeVDDBgEstCentralLLLL\ZZSevenTeVDDBgEstStatLLLL\ZZSevenTeVDDBgEstSystLLLL}
 \newcommand{\ZZSevenTeVDDBgEstEEEE}{\ZZSevenTeVDDBgEstCentralEEEE\ZZSevenTeVDDBgEstStatEEEE\ZZSevenTeVDDBgEstSystEEEE}
@@ -23,12 +32,16 @@
 \newcommand{\ZZSevenTeVDDBgEstMMMMOneDp}{\ZZSevenTeVDDBgEstCentralMMMMOneDp\ZZSevenTeVDDBgEstStatMMMMOneDp\ZZSevenTeVDDBgEstSystMMMMOneDp}
 
 
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Total Cross Section
 \newcommand{\ZZSevenTeVTotalCrossSection}{\ZZSevenTeVTotalCrossSectionGamma}
 
 \newcommand{\ZZSevenTeVTotalCrossSectionGamma}{\ensuremath{\ZZSevenTeVTotalCrossSectionGammaCentral^{+\ZZSevenTeVTotalCrossSectionGammaStatUp}_{-\ZZSevenTeVTotalCrossSectionGammaStatDown}\textrm{(stat.)}^{+\ZZSevenTeVTotalCrossSectionGammaSystUp}_{-\ZZSevenTeVTotalCrossSectionGammaSystDown}\textrm{(syst.)}\pm\ZZSevenTeVTotalCrossSectionGammaLumiUnc\textrm{(lumi.) pb}}}
 
 \newcommand{\ZZSevenTeVTotalCrossSectionGaussian}{\ensuremath{\ZZSevenTeVTotalCrossSectionGaussianCentral^{+\ZZSevenTeVTotalCrossSectionGaussianStatUp}_{-\ZZSevenTeVTotalCrossSectionGaussianStatDown}\textrm{(stat.)}^{+\ZZSevenTeVTotalCrossSectionGaussianSystUp}_{-\ZZSevenTeVTotalCrossSectionGaussianSystDown}\textrm{(syst.)}\pm\ZZSevenTeVTotalCrossSectionGaussianLumiUnc\textrm{(lumi.) pb}}}
 
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Fiducial cross section
 \newcommand{\ZZSevenTeVFiducialCrossSection}{\ZZSevenTeVFiducialCrossSectionGamma}
 
 \newcommand{\ZZSevenTeVFiducialCrossSectionGamma}{\ensuremath{\ZZSevenTeVFiducialCrossSectionGammaCentral^{+\ZZSevenTeVFiducialCrossSectionGammaStatUp}_{-\ZZSevenTeVFiducialCrossSectionGammaStatDown}\textrm{(stat.)}^{+\ZZSevenTeVFiducialCrossSectionGammaSystUp}_{-\ZZSevenTeVFiducialCrossSectionGammaSystDown}\textrm{(syst.)}\pm\ZZSevenTeVFiducialCrossSectionGammaLumiUnc\textrm{(lumi.) fb}}}
@@ -39,7 +52,8 @@
 
 \newcommand{\ZZSevenTeVTheoryFiducialCrossSection}{\ensuremath{\ZZSevenTeVTheoryFiducialCrossSectionCentral^{+\ZZSevenTeVTheoryFiducialCrossSectionSystUp}_{-\ZZSevenTeVTheoryFiducialCrossSectionSystDown}\textrm{ fb}}}
 
-%~~~~ Rounded to 1dp
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Fiducial cross section 1dp
 \newcommand{\ZZSevenTeVTotalCrossSectionOneDp}{\ZZSevenTeVTotalCrossSectionGammaOneDp}
 
 \newcommand{\ZZSevenTeVTotalCrossSectionGammaOneDp}{\ensuremath{\ZZSevenTeVTotalCrossSectionGammaCentralOneDp^{+\ZZSevenTeVTotalCrossSectionGammaStatUpOneDp}_{-\ZZSevenTeVTotalCrossSectionGammaStatDownOneDp}\textrm{(stat.)}^{+\ZZSevenTeVTotalCrossSectionGammaSystUpOneDp}_{-\ZZSevenTeVTotalCrossSectionGammaSystDownOneDp}\textrm{(syst.)}\pm\ZZSevenTeVTotalCrossSectionGammaLumiUncOneDp\textrm{(lumi.) pb}}}
