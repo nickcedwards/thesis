@@ -1,6 +1,21 @@
 Electron Identification
 ++++++++++++++++++++++++
 
+Definitions:
+
+https://svnweb.cern.ch/trac/atlasoff/browser/Reconstruction/egamma/egammaPIDTools/trunk/python/egammaTightElectronCutIDToolBase.py
+
+ditto loose, tight, medium etc
+
+https://svnweb.cern.ch/trac/atlasoff/browser/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils/tags/egammaAnalysisUtils-00-04-06/egammaAnalysisUtils/fwdISEMDefs.h
+for fwd El in 2011
+
+Optimised 2011 cuts - not what we used
+https://svnweb.cern.ch/trac/atlasoff/browser/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils/tags/egammaAnalysisUtils-00-04-06/Root/IsEMForwardDefs.cxx
+
+Has all of the ++ cuts for 2011 and 2012
+https://svnweb.cern.ch/trac/atlasoff/browser/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils/tags/egammaAnalysisUtils-00-04-06/Root/IsEMPlusPlusDefs.cxx
+
 
 Identification
 ---------------

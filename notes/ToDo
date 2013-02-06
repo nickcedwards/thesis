@@ -4,7 +4,7 @@ Thesis ToDo
 - ZZ Pheno: 
 	- Generator level plots
 			
-		- minDR(l,l) after lepFid, ZZ cuts (need to add ZZ*)							[ have at 7 TeV, ZZ]
+		- minDR(l,l) after lepFid, ZZ cuts (need to add ZZ*)						[ have at 7 TeV, ZZ]
 		
 		- m_Z1, m_Z2 - 7 TeV only
 			- nm1 lepFid, sorted by pT (show what we're selecting)								not in	
@@ -13,16 +13,56 @@ Thesis ToDo
 					
 	- Exotics review - leave for now :s
 
-- ObjSel:
-	- Dilepton plots
-	- Z+X plots
+- ObjSel:	{5 days}
+	- Dilepton plots: Remake with hfor
+	- Z+X plots: Remove W, set x-axis-min to -0.1 for ptcone20rel so 1st bin not obscured by ticks
 	- Trigger efficiencies: check if 2011 number have systematic, get 2012 numbers with systematic.
 	- ==4 in 2012? do we see any events with >4?
+	- Make Z mass vs Z mass plot
 	- Finish systematics bit
 	- 8 TeV systematics
+	- 8 TeV C_ZZ comparisons, C_ZZ info
+	- 8 TeV dilepton plots
+	- 8 TeV Z+X plots
 
-detector:
-	- correct pixel sizes, check sqrt(12) resolution issue
+- Background estimation: 
+	- Do					{4 days}
+	- Write 				{2 days}
+	
+- Cross Section and linematic plots: 
+	- Write					{1 day}
+	- 8 TeV bits			{2 days}
+
+- TGC limits and unfolding:
+	- Skelaton write		{3 days}
+	- Run TGC limits code	{2 days}
+	- Play with unfolding code {1 day}
+	- Grid paramt stuff		{1 day}
+
+- Detector REDRAFT:			{1 day}
+	- sqrt(12) resolution issue - is from definition of std-deviation:
+	- = sqrt(E((x-mu)^2)) = sqrt [ Int_{-L/2}^{L/2}x^{2}P(x)dx ]
+	   with P(x) = 1/L
+	   = sqrt[ x^{3}/3 |_{-L/2}^{L/2} ]
+	   = sqrt[ L^{3} (1/24 - - 1/24)] = L/sqrt(12)
+	- Describe Luminosity measurent
+
+- Reconstruction REDRAFT: {1 day}
+	- Plot of d0Sig in GSF/STD in data?
+	- Find out properly about HT hits in TRT and add to description
+	- Own ID eff plots?
+	
+- Exotics (?!)			{7 days}
+
+- Theory redraft {1 day}
+- Pheno redraft {1 day}
+
+- Soak time				{5 days}
+- Global redraft		{5 days}
+
+- TOTAL: 37 days
+- Available: 39.5 weekdays, 10 weekend days (MAX, ideally 5)
+	
 
 
 - General:
