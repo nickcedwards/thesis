@@ -33,43 +33,68 @@
 
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% Total Cross Section
-\newcommand{\ZZSevenTeVTotalCrossSection}{\ZZSevenTeVTotalCrossSectionGamma}
-
-\newcommand{\ZZSevenTeVTotalCrossSectionGamma}{\ensuremath{\ZZSevenTeVTotalCrossSectionGammaCentral^{+\ZZSevenTeVTotalCrossSectionGammaStatUp}_{-\ZZSevenTeVTotalCrossSectionGammaStatDown}\textrm{(stat.)}^{+\ZZSevenTeVTotalCrossSectionGammaSystUp}_{-\ZZSevenTeVTotalCrossSectionGammaSystDown}\textrm{(syst.)}\pm\ZZSevenTeVTotalCrossSectionGammaLumiUnc\textrm{(lumi.) pb}}}
-
-\newcommand{\ZZSevenTeVTotalCrossSectionGaussian}{\ensuremath{\ZZSevenTeVTotalCrossSectionGaussianCentral^{+\ZZSevenTeVTotalCrossSectionGaussianStatUp}_{-\ZZSevenTeVTotalCrossSectionGaussianStatDown}\textrm{(stat.)}^{+\ZZSevenTeVTotalCrossSectionGaussianSystUp}_{-\ZZSevenTeVTotalCrossSectionGaussianSystDown}\textrm{(syst.)}\pm\ZZSevenTeVTotalCrossSectionGaussianLumiUnc\textrm{(lumi.) pb}}}
+% Total Cross Section 
+\newcommand{\ZZSevenTeVTotalCrossSection}{\ZZSevenTeVTotalCrossSectionGaussian}
+\newcommand{\ZZSevenTeVTotalCrossSectionOneDp}{\ZZSevenTeVTotalCrossSectionGaussianOneDp}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% Fiducial cross section
-\newcommand{\ZZSevenTeVFiducialCrossSection}{\ZZSevenTeVFiducialCrossSectionGamma}
+% Total Cross Gamma 
+\newcommand{\ZZSevenTeVTotalCrossSectionGamma}{\ensuremath{\ZZSevenTeVTotalCrossSectionGammaCentral^{+\ZZSevenTeVTotalCrossSectionGammaStatUp}_{-\ZZSevenTeVTotalCrossSectionGammaStatDown}\textrm{(stat.)}^{+\ZZSevenTeVTotalCrossSectionGammaSystUp}_{-\ZZSevenTeVTotalCrossSectionGammaSystDown}\textrm{(syst.)}\pm\ZZSevenTeVTotalCrossSectionGammaLumiUnc\textrm{(lumi.) pb}}}
+\newcommand{\ZZSevenTeVTotalCrossSectionGammaOneDp}{\ensuremath{\ZZSevenTeVTotalCrossSectionGammaCentralOneDp^{+\ZZSevenTeVTotalCrossSectionGammaStatUpOneDp}_{-\ZZSevenTeVTotalCrossSectionGammaStatDownOneDp}\textrm{(stat.)}^{+\ZZSevenTeVTotalCrossSectionGammaSystUpOneDp}_{-\ZZSevenTeVTotalCrossSectionGammaSystDownOneDp}\textrm{(syst.)}\pm\ZZSevenTeVTotalCrossSectionGammaLumiUncOneDp\textrm{(lumi.) pb}}}
 
-\newcommand{\ZZSevenTeVFiducialCrossSectionGamma}{\ensuremath{\ZZSevenTeVFiducialCrossSectionGammaCentral^{+\ZZSevenTeVFiducialCrossSectionGammaStatUp}_{-\ZZSevenTeVFiducialCrossSectionGammaStatDown}\textrm{(stat.)}^{+\ZZSevenTeVFiducialCrossSectionGammaSystUp}_{-\ZZSevenTeVFiducialCrossSectionGammaSystDown}\textrm{(syst.)}\pm\ZZSevenTeVFiducialCrossSectionGammaLumiUnc\textrm{(lumi.) fb}}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Total Cross Gaussian 
+\newcommand{\ZZSevenTeVTotalCrossSectionGaussian}{\ensuremath{\ZZSevenTeVTotalCrossSectionGaussianCentral^{+\ZZSevenTeVTotalCrossSectionGaussianStatUp}_{-\ZZSevenTeVTotalCrossSectionGaussianStatDown}\textrm{(stat.)}^{+\ZZSevenTeVTotalCrossSectionGaussianSystUp}_{-\ZZSevenTeVTotalCrossSectionGaussianSystDown}\textrm{(syst.)}\pm\ZZSevenTeVTotalCrossSectionGaussianLumiUnc\textrm{(lumi.) pb}}}
 
-\newcommand{\ZZSevenTeVFiducialCrossSectionGaussian}{\ensuremath{\ZZSevenTeVFiducialCrossSectionGaussianCentral^{+\ZZSevenTeVFiducialCrossSectionGaussianStatUp}_{-\ZZSevenTeVFiducialCrossSectionGaussianStatDown}\textrm{(stat.)}^{+\ZZSevenTeVFiducialCrossSectionGaussianSystUp}_{-\ZZSevenTeVFiducialCrossSectionGaussianSystDown}\textrm{(syst.)}\pm\ZZSevenTeVFiducialCrossSectionGaussianLumiUnc\textrm{(lumi.) fb}}}
 
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Fiducial cross section ZZ
+\newcommand{\ZZSevenTeVFiducialCrossSectionZZLLLL}{\ZZSevenTeVFiducialCrossSectionLLLLGaussian}
+\newcommand{\ZZSevenTeVFiducialCrossSectionZZEEEE}{\ZZSevenTeVFiducialCrossSectionEEEEGaussian}
+\newcommand{\ZZSevenTeVFiducialCrossSectionZZMMMM}{\ZZSevenTeVFiducialCrossSectionMMMMGaussian}
+\newcommand{\ZZSevenTeVFiducialCrossSectionZZMMMM}{\ZZSevenTeVFiducialCrossSectionMMMMGaussian}
+
+\newcommand {\ZZSevenTeVFiducialCrossSectionZZLLLLGaussian}{\measStatSystLumi
+            {\ZZSevenTeVFiducialCrossSectionZZLLLLGaussianCentral}{\errAsym
+            {\ZZSevenTeVFiducialCrossSectionZZLLLLGaussianStatUp}
+            {\ZZSevenTeVFiducialCrossSectionZZLLLLGaussianStatDown}}{\errAsym
+            {\ZZSevenTeVFiducialCrossSectionZZLLLLGaussianSystUp}
+            {\ZZSevenTeVFiducialCrossSectionZZLLLLGaussianSystDown}}{\errSym
+            {\ZZSevenTeVFiducialCrossSectionZZLLLLGaussianLumiUnc}}fb}
+
+\newcommand {\ZZSevenTeVFiducialCrossSectionZZEEEEGaussian}{\measStatSystLumi
+            {\ZZSevenTeVFiducialCrossSectionZZEEEEGaussianCentral}{\errAsym
+            {\ZZSevenTeVFiducialCrossSectionZZEEEEGaussianStatUp}
+            {\ZZSevenTeVFiducialCrossSectionZZEEEEGaussianStatDown}}{\errAsym
+            {\ZZSevenTeVFiducialCrossSectionZZEEEEGaussianSystUp}
+            {\ZZSevenTeVFiducialCrossSectionZZEEEEGaussianSystDown}}{\errSym
+            {\ZZSevenTeVFiducialCrossSectionZZEEEEGaussianLumiUnc}}fb}
+
+\newcommand {\ZZSevenTeVFiducialCrossSectionZZMMMMGaussian}{\measStatSystLumi
+            {\ZZSevenTeVFiducialCrossSectionZZMMMMGaussianCentral}{\errAsym
+            {\ZZSevenTeVFiducialCrossSectionZZMMMMGaussianStatUp}
+            {\ZZSevenTeVFiducialCrossSectionZZMMMMGaussianStatDown}}{\errAsym
+            {\ZZSevenTeVFiducialCrossSectionZZMMMMGaussianSystUp}
+            {\ZZSevenTeVFiducialCrossSectionZZMMMMGaussianSystDown}}{\errSym
+            {\ZZSevenTeVFiducialCrossSectionZZMMMMGaussianLumiUnc}}fb}
+
+\newcommand {\ZZSevenTeVFiducialCrossSectionZZEEMMGaussian}{\measStatSystLumi
+            {\ZZSevenTeVFiducialCrossSectionZZEEMMGaussianCentral}{\errAsym
+            {\ZZSevenTeVFiducialCrossSectionZZEEMMGaussianStatUp}
+            {\ZZSevenTeVFiducialCrossSectionZZEEMMGaussianStatDown}}{\errAsym
+            {\ZZSevenTeVFiducialCrossSectionZZEEMMGaussianSystUp}
+            {\ZZSevenTeVFiducialCrossSectionZZEEMMGaussianSystDown}}{\errSym
+            {\ZZSevenTeVFiducialCrossSectionZZEEMMGaussianLumiUnc}}fb}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Theory cross section ZZ
 \newcommand{\ZZSevenTeVTheoryTotalCrossSection}{\ensuremath{\ZZSevenTeVTheoryTotalCrossSectionCentral^{+\ZZSevenTeVTheoryTotalCrossSectionSystUp}_{-\ZZSevenTeVTheoryTotalCrossSectionSystDown}\textrm{ pb}}}
 
 \newcommand{\ZZSevenTeVTheoryFiducialCrossSection}{\ensuremath{\ZZSevenTeVTheoryFiducialCrossSectionCentral^{+\ZZSevenTeVTheoryFiducialCrossSectionSystUp}_{-\ZZSevenTeVTheoryFiducialCrossSectionSystDown}\textrm{ fb}}}
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% Fiducial cross section 1dp
-\newcommand{\ZZSevenTeVTotalCrossSectionOneDp}{\ZZSevenTeVTotalCrossSectionGammaOneDp}
 
-\newcommand{\ZZSevenTeVTotalCrossSectionGammaOneDp}{\ensuremath{\ZZSevenTeVTotalCrossSectionGammaCentralOneDp^{+\ZZSevenTeVTotalCrossSectionGammaStatUpOneDp}_{-\ZZSevenTeVTotalCrossSectionGammaStatDownOneDp}\textrm{(stat.)}^{+\ZZSevenTeVTotalCrossSectionGammaSystUpOneDp}_{-\ZZSevenTeVTotalCrossSectionGammaSystDownOneDp}\textrm{(syst.)}\pm\ZZSevenTeVTotalCrossSectionGammaLumiUncOneDp\textrm{(lumi.) pb}}}
-
-\newcommand{\ZZSevenTeVTotalCrossSectionGaussianOneDp}{\ensuremath{\ZZSevenTeVTotalCrossSectionGaussianCentralOneDp^{+\ZZSevenTeVTotalCrossSectionGaussianStatUpOneDp}_{-\ZZSevenTeVTotalCrossSectionGaussianStatDownOneDp}\textrm{(stat.)}^{+\ZZSevenTeVTotalCrossSectionGaussianSystUpOneDp}_{-\ZZSevenTeVTotalCrossSectionGaussianSystDownOneDp}\textrm{(syst.)}\pm\ZZSevenTeVTotalCrossSectionGaussianLumiUncOneDp\textrm{(lumi.) pb}}}
-
-\newcommand{\ZZSevenTeVFiducialCrossSectionOneDp}{\ZZSevenTeVFiducialCrossSectionGammaOneDp}
-
-\newcommand{\ZZSevenTeVFiducialCrossSectionGammaOneDp}{\ensuremath{\ZZSevenTeVFiducialCrossSectionGammaCentralOneDp^{+\ZZSevenTeVFiducialCrossSectionGammaStatUpOneDp}_{-\ZZSevenTeVFiducialCrossSectionGammaStatDownOneDp}\textrm{(stat.)}^{+\ZZSevenTeVFiducialCrossSectionGammaSystUpOneDp}_{-\ZZSevenTeVFiducialCrossSectionGammaSystDownOneDp}\textrm{(syst.)}\pm\ZZSevenTeVFiducialCrossSectionGammaLumiUncOneDp\textrm{(lumi.) fb}}}
-
-\newcommand{\ZZSevenTeVFiducialCrossSectionGaussianOneDp}{\ensuremath{\ZZSevenTeVFiducialCrossSectionGaussianCentralOneDp^{+\ZZSevenTeVFiducialCrossSectionGaussianStatUpOneDp}_{-\ZZSevenTeVFiducialCrossSectionGaussianStatDownOneDp}\textrm{(stat.)}^{+\ZZSevenTeVFiducialCrossSectionGaussianSystUpOneDp}_{-\ZZSevenTeVFiducialCrossSectionGaussianSystDownOneDp}\textrm{(syst.)}\pm\ZZSevenTeVFiducialCrossSectionGaussianLumiUncOneDp\textrm{(lumi.) fb}}}
-
-%\newcommand{\ZZSevenTeVTheoryTotalCrossSectionOneDp}{\ensuremath{\ZZSevenTeVTheoryTotalCrossSectionCentralOneDp^{+\ZZSevenTeVTheoryTotalCrossSectionSystUpOneDp}_{-\ZZSevenTeVTheoryTotalCrossSectionSystDownOneDp}\textrm{ pb}}}
 \newcommand{\ZZSevenTeVTheoryTotalCrossSectionOneDp}{\ensuremath{\ZZSevenTeVTheoryTotalCrossSectionCentralOneDp\pm\ZZSevenTeVTheoryTotalCrossSectionSystOneDp\textrm{ pb}}}
 
-%\newcommand{\ZZSevenTeVTheoryFiducialCrossSectionOneDp}{\ensuremath{\ZZSevenTeVTheoryFiducialCrossSectionCentralOneDp^{+\ZZSevenTeVTheoryFiducialCrossSectionSystUpOneDp}_{-\ZZSevenTeVTheoryFiducialCrossSectionSystDownOneDp}\textrm{ fb}}}
 \newcommand{\ZZSevenTeVTheoryFiducialCrossSectionOneDp}{\ensuremath{\ZZSevenTeVTheoryFiducialCrossSectionCentralOneDp\pm\ZZSevenTeVTheoryFiducialCrossSectionSystOneDp\textrm{ fb}}}
 
 % By channel
@@ -127,7 +152,7 @@
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% Total Cross Section (pb) GAUSSIAN
+% Total Cross Section (pb) GAMMA
 % Updated: 
 \def\ZZSevenTeVTotalCrossSectionGaussianCentral{x.xx}
 \def\ZZSevenTeVTotalCrossSectionGaussianStatUp{x.xx}
@@ -138,14 +163,35 @@
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% Fiducial Cross Section (fb) GAMMA
+% Fiducial Cross Section (fb) GAUSSIAN
 % Updated: 
-\def\ZZSevenTeVFiducialCrossSectionGammaCentral{x.xx}
-\def\ZZSevenTeVFiducialCrossSectionGammaStatUp{x.xx}
-\def\ZZSevenTeVFiducialCrossSectionGammaStatDown{x.xx}
-\def\ZZSevenTeVFiducialCrossSectionGammaSystUp{x.xx}
-\def\ZZSevenTeVFiducialCrossSectionGammaSystDown{x.xx}
-\def\ZZSevenTeVFiducialCrossSectionGammaLumiUnc{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZLLLLGaussianCentral{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZLLLLGaussianStatUp{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZLLLLGaussianStatDown{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZLLLLGaussianSystUp{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZLLLLGaussianSystDown{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZLLLLGaussianLumiUnc{x.xx}
+
+\def\ZZSevenTeVFiducialCrossSectionZZEEEEGaussianCentral{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZEEEEGaussianStatUp{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZEEEEGaussianStatDown{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZEEEEGaussianSystUp{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZEEEEGaussianSystDown{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZEEEEGaussianLumiUnc{x.xx}
+
+\def\ZZSevenTeVFiducialCrossSectionZZMMMMGaussianCentral{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZMMMMGaussianStatUp{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZMMMMGaussianStatDown{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZMMMMGaussianSystUp{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZMMMMGaussianSystDown{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZMMMMGaussianLumiUnc{x.xx}
+
+\def\ZZSevenTeVFiducialCrossSectionZZEEMMGaussianCentral{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZEEMMGaussianStatUp{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZEEMMGaussianStatDown{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZEEMMGaussianSystUp{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZEEMMGaussianSystDown{x.xx}
+\def\ZZSevenTeVFiducialCrossSectionZZEEMMGaussianLumiUnc{x.xx}
 
 % To 1dp
 \def\ZZSevenTeVFiducialCrossSectionGammaCentralOneDp{x.x}
