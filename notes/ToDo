@@ -14,24 +14,33 @@ Thesis ToDo
 	- Exotics review - leave for now :s
 
 - ObjSel:	{5 days}
-	- Dilepton plots: Remake with hfor
-	- Z+X plots: Remove W, set x-axis-min to -0.1 for ptcone20rel so 1st bin not obscured by ticks
-	- Trigger efficiencies: check if 2011 number have systematic, get 2012 numbers with systematic.
-	- ==4 in 2012? do we see any events with >4?
-	- Make Z mass vs Z mass plot
+	- Dilepton plots: Remake with hfor		WAIT TO RUN
+	
+	- Trigger efficiencies: 
+		- Check 2011 numbers (stat seems far too high). Add assymetric systematics
+		- Get 2012 numbers (running)
+		
 	- Finish systematics bit
-	- 8 TeV systematics
-	- 8 TeV C_ZZ comparisons, C_ZZ info
-	- 8 TeV dilepton plots
-	- 8 TeV Z+X plots
 
+	- Make Z mass vs Z mass plot - 			GET PLOT FROM SOFIA
+	- 8 TeV systematics - 					JUST NEED ISOLATION
+	- 8 TeV C_ZZ details, 				C_ZZ info - RERUN
+		- mention comparisons with 2012
+	- 8 TeV dilepton plots - 				WAIT TILL BATCH TIME AND MC
+	- 8 TeV Z+X plots - 					WAIT TILL BATCH TIME AND MC
+
+	- Add VVV and Vt samples				JOBS RUNNING
+	- Check Higgs contamination (in background?)
+	
 - Background estimation: 
 	- Do					{4 days}
 	- Write 				{2 days}
 	
-- Cross Section and linematic plots: 
-	- Write					{1 day}
-	- 8 TeV bits			{2 days}
+- Cross Section and kinematic plots: 
+	- 8 TeV bits			{1 days}
+		- ZZ* plots
+		- Z mass plots with mZ>7
+		- dR vs ptZ plot? 
 
 - TGC limits and unfolding:
 	- Skelaton write		{3 days}
