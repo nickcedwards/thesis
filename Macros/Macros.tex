@@ -80,14 +80,14 @@
 \newcommand{\CZZ}{\ensuremath{C_{\ZZ}}}
 \newcommand{\AZZ}{\ensuremath{A_{\ZZ}}}
 
-\def\NObs{\ensuremath{N^{\rm obs}_{\ell\ell\ell'\ell'}}}
-\def\NBg{\ensuremath{N^{\rm bkg}_{\ell\ell\ell'\ell'}}}
-\def\lllplp{\ensuremath{\ell\ell\ell'\ell'}}
+\def\NObs{\ensuremath{N^{\rm obs}_{\lllplp}}}
+\def\NBg{\ensuremath{N^{\rm bkg}_{\lllplp}}}
 
 \def\sigmaTot{\ensuremath{\sigma^{\rm tot}}}
 \def\sigmaFid{\ensuremath{\sigma^{\rm fid}}}
 \def\sigmaTotZZ{\ensuremath{\sigma_{\ZZ}^{\rm tot}}}
-\def\sigmaFidZZllll{\ensuremath{\sigma_{\ZZlplmlplm}^{\rm fid}}}
+\def\sigmaFidZZlllplp{\ensuremath{\sigma_{\ZZlllplp}^{\rm fid}}}
+\def\sigmaFidZZllll{\ensuremath{\sigma_{\ZZllll}^{\rm fid}}}
 
 \renewcommand{\L}{\ensuremath{L}}
 
@@ -121,15 +121,23 @@
 \newcommand{\ZZllvv}{\ensuremath{\ZZ\to\ell^{-}\ell^{+}\nu\bar{\nu}}} 
 \newcommand{\ZZeevv}{\ensuremath{\ZZ\to e^{-} e^{+}\nu\bar{\nu}}} 
 \newcommand{\ZZmmvv}{\ensuremath{\ZZ\to \mu^{-} \mu^{+}\nu\bar{\nu}}} 
-\newcommand{\ZZllll}{\ensuremath{\ZZ\to\ell\ell\ell'\ell'}}
-\newcommand{\ZZsllll}{\ensuremath{\ZZs\to\ell\ell\ell'\ell'}}
-\newcommand{\ZZlplmlplm}{\ensuremath{\ZZ\to\ell^{+}\ell^{-}\ell^{+}\ell^{-}}}
-\newcommand{\ZZeeee}{\ensuremath{\ZZ\to e^{+}e^{-}e^{+}e^{-}}}
-\newcommand{\ZZeemm}{\ensuremath{\ZZ\to e^{+}e^{-}\mu^{+}\mu^{-}}}
-\newcommand{\ZZmmmm}{\ensuremath{\ZZ\to\mu^{+}\mu^{-}\mu^{+}\mu^{-}}}
+
+% lll'l'
+\def\lllplp{\ensuremath{\ell\ell\ell'\ell'}}
+\newcommand{\ZZlllplp}{\ensuremath{\ZZ\to\lllplp}}
+\newcommand{\ZZslllplp}{\ensuremath{\ZZs\to\lllplp}}
+
+% l+l-l+l-
+\newcommand{\llll}{\ensuremath{\ell^{-}\ell^{+}\ell^{-}\ell^{+}}}
 \newcommand{\eeee}{\ensuremath{e^{+}e^{-}e^{+}e^{-}}}
 \newcommand{\eemm}{\ensuremath{e^{+}e^{-}\mu^{+}\mu^{-}}}
 \newcommand{\mmmm}{\ensuremath{\mu^{+}\mu^{-}\mu^{+}\mu^{-}}}
+\newcommand{\llvv}{\ensuremath{\ell^{-}\ell^{+}\nu\bar{\nu}}}
+\newcommand{\ZZllll}{\ensuremath{\ZZ\to\llll}
+\newcommand{\ZZsllll}{\ensuremath{\ZZ\to\llll}
+\newcommand{\ZZeeee}{\ensuremath{\ZZ\to\eeee}}
+\newcommand{\ZZeemm}{\ensuremath{\ZZ\to\eemm}}
+\newcommand{\ZZmmmm}{\ensuremath{\ZZ\to\mmmm}}
 
 \newcommand{\ZorgZorgllll}{\ensuremath{(\Zorgv)(\Zorgv)\to\ell\ell\ell'\ell'}}
 \newcommand{\ZorgZorglplmlplm}{\ensuremath{(\Zorgv)(\Zorgv)\to\ell^{+}\ell^{-}\ell'^{+}\ell'^{-}}}
@@ -149,19 +157,10 @@
 \newcommand{\mZZp}{\ensuremath{m^{\ZZ}}}
 \newcommand{\ptZZp}{\ensuremath{\pt^{\ZZ}}}
 
-%Compataibilty
-\newcommand{\zzllll}{\ZZllll}
-
 % Higgs
 \newcommand{\HZZ}{\ensuremath{H\to\ZZ}}
 \newcommand{\Hgg}{\ensuremath{H\to\gamma\gamma}}
 \newcommand{\HWW}{\ensuremath{H\to WW}}
-
-
-% llll and llvv
-\newcommand{\llvv}{\ensuremath{\ell^{-}\ell^{+}\nu\bar{\nu}}}
-\newcommand{\llll}{\ensuremath{\ell^{-}\ell^{+}\ell^{-}\ell^{+}}}
-%\newcommand{\ZZ}{\ensuremath{ZZ}}
 
 %TGC stuff
 \newcommand{\ZZV}{\ensuremath{ZZV}}
