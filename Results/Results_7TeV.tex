@@ -188,7 +188,10 @@
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % Theory Total cross section ZZ
-\newcommand{\ZZSevenTeVTheoryTotalCrossSection}{\ensuremath{\ZZSevenTeVTheoryTotalCrossSectionCentral^{+\ZZSevenTeVTheoryTotalCrossSectionSystUp}_{-\ZZSevenTeVTheoryTotalCrossSectionSystDown}\textrm{ pb}}}
+\newcommand{\ZZSevenTeVTheoryTotalCrossSection}{
+    \TheoryCxSevenTotalOnShellPb
+    \errAsym{\TheoryCxSevenTotalOnShellTheoryErrAbsPbUp}
+            {\TheoryCxSevenTotalOnShellTheoryErrAbsPbDown}~pb}
 
 
 \newcommand{\ZZSevenTeVTheoryTotalCrossSectionOneDp}{\ensuremath{\ZZSevenTeVTheoryTotalCrossSectionCentralOneDp\pm\ZZSevenTeVTheoryTotalCrossSectionSystOneDp\textrm{ pb}}}
