@@ -35,33 +35,67 @@
 
 \newcommand{\ZZEightTeVFiducialCrossSectionGaussian}{\ensuremath{\ZZEightTeVFiducialCrossSectionGaussianCentral^{+\ZZEightTeVFiducialCrossSectionGaussianStatUp}_{-\ZZEightTeVFiducialCrossSectionGaussianStatDown}\textrm{(stat.)}^{+\ZZEightTeVFiducialCrossSectionGaussianSystUp}_{-\ZZEightTeVFiducialCrossSectionGaussianSystDown}\textrm{(syst.)}\pm\ZZEightTeVFiducialCrossSectionGaussianLumiUnc\textrm{(lumi.) fb}}}
 
-\newcommand{\ZZEightTeVTheoryTotalCrossSection}{\ensuremath{\ZZEightTeVTheoryTotalCrossSectionCentral^{+\ZZEightTeVTheoryTotalCrossSectionSystUp}_{-\ZZEightTeVTheoryTotalCrossSectionSystDown}\textrm{ pb}}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Theory Fiducial cross section ZZ
+\newcommand{\ZZEightTeVTheoryFiducialCrossSectionZZLLLL}{
+           {\nmult{\TheoryCxEightOnShellFidSevenTeV}{2} 
+           \errAsym
+           {\nmult{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsUp}{2}}
+           {\nmult{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsDown}{2}}~fb}}
 
-\newcommand{\ZZEightTeVTheoryFiducialCrossSection}{\ensuremath{\ZZEightTeVTheoryFiducialCrossSectionCentral^{+\ZZEightTeVTheoryFiducialCrossSectionSystUp}_{-\ZZEightTeVTheoryFiducialCrossSectionSystDown}\textrm{ fb}}}
+\newcommand{\ZZEightTeVTheoryFiducialCrossSectionZZEEEE}{
+           {\ndiv{\TheoryCxEightOnShellFidSevenTeV}{2} 
+           \errAsym
+           {\ndiv{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsUp}{2}}
+           {\ndiv{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsDown}{2}}~fb}}
 
-% By channel
-\newcommand{\ZZEightTeVTheoryFiducialCrossSectionOneDpEEEE}{\ensuremath{\ZZEightTeVTheoryFiducialCrossSectionCentralOneDpEEEE^{+\ZZEightTeVTheoryFiducialCrossSectionSystUpOneDpEEEE}_{-\ZZEightTeVTheoryFiducialCrossSectionSystDownOneDpEEEE}\textrm{ fb}}}
-\newcommand{\ZZEightTeVTheoryFiducialCrossSectionOneDpMMMM}{\ensuremath{\ZZEightTeVTheoryFiducialCrossSectionCentralOneDpMMMM^{+\ZZEightTeVTheoryFiducialCrossSectionSystUpOneDpMMMM}_{-\ZZEightTeVTheoryFiducialCrossSectionSystDownOneDpMMMM}\textrm{ fb}}}
-\newcommand{\ZZEightTeVTheoryFiducialCrossSectionOneDpEEMM}{\ensuremath{\ZZEightTeVTheoryFiducialCrossSectionCentralOneDpEEMM^{+\ZZEightTeVTheoryFiducialCrossSectionSystUpOneDpEEMM}_{-\ZZEightTeVTheoryFiducialCrossSectionSystDownOneDpEEMM}\textrm{ fb}}}
+%\newcommand{\ZZEightTeVTheoryFiducialCrossSectionZZMMMM}{
+           %{\ZZEightTeVTheoryFiducialCrossSectionZZMMMMCentral\errAsym
+           %{\ZZEightTeVTheoryFiducialCrossSectionZZMMMMErrUp}
+           %{\ZZEightTeVTheoryFiducialCrossSectionZZMMMMErrDown}~fb}}
 
-%~~~~ Rounded to 1dp
-\newcommand{\ZZEightTeVTotalCrossSectionOneDp}{\ZZEightTeVTotalCrossSectionGammaOneDp}
+\newcommand{\ZZEightTeVTheoryFiducialCrossSectionZZMMMM}{
+           {\ndiv{\TheoryCxEightOnShellFidSevenTeV}{2} 
+           \errAsym
+           {\ndiv{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsUp}{2}}
+           {\ndiv{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsDown}{2}}~fb}}
 
-\newcommand{\ZZEightTeVTotalCrossSectionGammaOneDp}{\ensuremath{\ZZEightTeVTotalCrossSectionGammaCentralOneDp^{+\ZZEightTeVTotalCrossSectionGammaStatUpOneDp}_{-\ZZEightTeVTotalCrossSectionGammaStatDownOneDp}\textrm{(stat.)}^{+\ZZEightTeVTotalCrossSectionGammaSystUpOneDp}_{-\ZZEightTeVTotalCrossSectionGammaSystDownOneDp}\textrm{(syst.)}\pm\ZZEightTeVTotalCrossSectionGammaLumiUncOneDp\textrm{(lumi.) pb}}}
+\newcommand{\ZZEightTeVTheoryFiducialCrossSectionZZEEMM}{
+           {\TheoryCxEightOnShellFidSevenTeV
+           \errAsym
+           {\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsUp}
+           {\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsDown}}~fb}
 
-\newcommand{\ZZEightTeVTotalCrossSectionGaussianOneDp}{\ensuremath{\ZZEightTeVTotalCrossSectionGaussianCentralOneDp^{+\ZZEightTeVTotalCrossSectionGaussianStatUpOneDp}_{-\ZZEightTeVTotalCrossSectionGaussianStatDownOneDp}\textrm{(stat.)}^{+\ZZEightTeVTotalCrossSectionGaussianSystUpOneDp}_{-\ZZEightTeVTotalCrossSectionGaussianSystDownOneDp}\textrm{(syst.)}\pm\ZZEightTeVTotalCrossSectionGaussianLumiUncOneDp\textrm{(lumi.) pb}}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Theory Fiducial cross section ZZ*
+\newcommand{\ZZEightTeVTheoryFiducialCrossSectionZZsLLLL}{
+           {\nmult{\TheoryCxEightOffShellFidSevenTeV}{2} 
+           \errAsym
+           {\nmult{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsUp}{2}}
+           {\nmult{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsDown}{2}}~fb}}
 
-\newcommand{\ZZEightTeVFiducialCrossSectionOneDp}{\ZZEightTeVFiducialCrossSectionGammaOneDp}
+\newcommand{\ZZEightTeVTheoryFiducialCrossSectionZZsEEEE}{
+           {\ndiv{\TheoryCxEightOffShellFidSevenTeV}{2} 
+           \errAsym
+           {\ndiv{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsUp}{2}}
+           {\ndiv{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsDown}{2}}~fb}}
 
-\newcommand{\ZZEightTeVFiducialCrossSectionGammaOneDp}{\ensuremath{\ZZEightTeVFiducialCrossSectionGammaCentralOneDp^{+\ZZEightTeVFiducialCrossSectionGammaStatUpOneDp}_{-\ZZEightTeVFiducialCrossSectionGammaStatDownOneDp}\textrm{(stat.)}^{+\ZZEightTeVFiducialCrossSectionGammaSystUpOneDp}_{-\ZZEightTeVFiducialCrossSectionGammaSystDownOneDp}\textrm{(syst.)}\pm\ZZEightTeVFiducialCrossSectionGammaLumiUncOneDp\textrm{(lumi.) fb}}}
+%\newcommand{\ZZEightTeVTheoryFiducialCrossSectionZZMMMM}{
+           %{\ZZEightTeVTheoryFiducialCrossSectionZZMMMMCentral\errAsym
+           %{\ZZEightTeVTheoryFiducialCrossSectionZZMMMMErrUp}
+           %{\ZZEightTeVTheoryFiducialCrossSectionZZMMMMErrDown}~fb}}
 
-\newcommand{\ZZEightTeVFiducialCrossSectionGaussianOneDp}{\ensuremath{\ZZEightTeVFiducialCrossSectionGaussianCentralOneDp^{+\ZZEightTeVFiducialCrossSectionGaussianStatUpOneDp}_{-\ZZEightTeVFiducialCrossSectionGaussianStatDownOneDp}\textrm{(stat.)}^{+\ZZEightTeVFiducialCrossSectionGaussianSystUpOneDp}_{-\ZZEightTeVFiducialCrossSectionGaussianSystDownOneDp}\textrm{(syst.)}\pm\ZZEightTeVFiducialCrossSectionGaussianLumiUncOneDp\textrm{(lumi.) fb}}}
+\newcommand{\ZZEightTeVTheoryFiducialCrossSectionZZsMMMM}{
+           {\ndiv{\TheoryCxEightOffShellFidSevenTeV}{2} 
+           \errAsym
+           {\ndiv{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsUp}{2}}
+           {\ndiv{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsDown}{2}}~fb}}
 
-%\newcommand{\ZZEightTeVTheoryTotalCrossSectionOneDp}{\ensuremath{\ZZEightTeVTheoryTotalCrossSectionCentralOneDp^{+\ZZEightTeVTheoryTotalCrossSectionSystUpOneDp}_{-\ZZEightTeVTheoryTotalCrossSectionSystDownOneDp}\textrm{ pb}}}
-\newcommand{\ZZEightTeVTheoryTotalCrossSectionOneDp}{\ensuremath{\ZZEightTeVTheoryTotalCrossSectionCentralOneDp\pm\ZZEightTeVTheoryTotalCrossSectionSystOneDp\textrm{ pb}}}
-
-%\newcommand{\ZZEightTeVTheoryFiducialCrossSectionOneDp}{\ensuremath{\ZZEightTeVTheoryFiducialCrossSectionCentralOneDp^{+\ZZEightTeVTheoryFiducialCrossSectionSystUpOneDp}_{-\ZZEightTeVTheoryFiducialCrossSectionSystDownOneDp}\textrm{ fb}}}
-\newcommand{\ZZEightTeVTheoryFiducialCrossSectionOneDp}{\ensuremath{\ZZEightTeVTheoryFiducialCrossSectionCentralOneDp\pm\ZZEightTeVTheoryFiducialCrossSectionSystOneDp\textrm{ fb}}}
+\newcommand{\ZZEightTeVTheoryFiducialCrossSectionZZsEEMM}{
+           {\TheoryCxEightOffShellFidSevenTeV
+           \errAsym
+           {\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsUp}
+           {\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsDown}}~fb}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -319,7 +353,7 @@
 \def\ZZEightTeVCzzZZsStatLLLL               {x.xxx}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% CZZ SevenTeV
+% CZZ EightTeV
 % Corrected to 7 TeV, 20/1/2013, src=ZZ 7TeV Paper Suport
 %% ZZ
 \def\ZZEightTeVCzzZZEEEE                    {}
