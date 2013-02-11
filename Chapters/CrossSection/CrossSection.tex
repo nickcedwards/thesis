@@ -522,10 +522,45 @@ The total \cx\ is then defined as:
 \sigmaTotZZ = \frac{ \NObs - \NBg}{\mathcal{L} \times
 BR\{\ZZllll\} \times \AZZ \times \CZZ}
 \end{equation}
-
 Uncertainties on \AZZ\ arise due to uncertainties on the \partDF, the choice of
 the factorisation and renormalisation scales and modelling of the parton shower
-and ISR.
+and ISR. \AZZ\ is determined using the \powhegbox\ and \ggtwoZZ\ generators. The
+PDF errors are estimated using the 52 CT10 error sets and by taking the
+difference with MSTW2008, and the scale errors are estimated by varying the scales
+up and down by a factor of two. The systematic due to modelling of parton shower
+and ISR is estimated by comparing the value for \AZZ\ obtained from a
+\powhegbox\ sample showered with \herwig\ compared to to t he nominal sample
+which is showered with \pythia. Additionally, the difference with the \AZZ\
+obtained from MCFM, which does not model the parton shower, is taken as an
+additional systematic. The contributions of these different sources of
+systematic uncertainty are shown in~\tab{azz-syst}, and the values of \AZZ\ are
+shown in~\tab{azz}.
+
+\begin{table}
+\renewcommand\arraystretch{1.0}
+\centering
+\small
+  \begin{tabular}{lll}
+    \hline\hline
+     Channel & 7~\tev & 8~\tev\
+    \hline
+     \ZZeeee\       &
+     \measSyst{\ZZSevenTeVAZZCentral}{\errSym{\ZZSevenTeVAZZSystUnc}}   & 
+     \measSyst{\ZZEightTeVAZZCentral}{\errSym{\ZZEightTeVAZZSystUnc}}   \\
+     \ZZmmmm\       & \ZZSevenTeVFiducialCrossSectionZZMMMM   & \ZZSevenTeVTheoryFiducialCrossSectionZZMMMM \\
+     \ZZeemm\       & \ZZSevenTeVFiducialCrossSectionZZEEMM   & \ZZSevenTeVTheoryFiducialCrossSectionZZEEMM \\
+     \ZZllll\       & \ZZSevenTeVFiducialCrossSectionZZLLLL   & \ZZSevenTeVTheoryFiducialCrossSectionZZLLLL \\
+    \hline\hline
+  \end{tabular}
+
+      \caption[Fiducial \CX\ measurements at 7~\tev\ and at 8~\tev.]
+      { Fiducial \CX\ measurements at 7~\tev\ and at 8~\tev. The second column
+      gives the measured \cx, and the third the prediction from theory,
+      calculated using MCFM with PDF set CT10 and scale set to
+      $\frac{1}{2}m(\ZZ)$. } 
+    \label{table:meas-fid-cx}
+\renewcommand\arraystretch{1}
+\end{table}
 
 % 1.1 % quoted in note seems to be difference between having showering and not
 
