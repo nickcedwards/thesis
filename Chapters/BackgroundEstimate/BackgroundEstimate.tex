@@ -3,35 +3,44 @@
 \label{chap:BackgroundEstimate}
 
 The four-lepton final state is expected to be very clean with little
-background, since few other interactions produce four high-\pt\ isolated leptons
+background, since few other \sm\ interactions produce four high-\pt\ isolated leptons
 in the final state. Almost all of the sources of background include one or more
 \intro{background leptons}, where a background
-leptons is defined as either a fake-lepton reconstructed due to jets or
+lepton is defined as either a fake-lepton reconstructed due to jets or
 photons mis-identified as a lepton, or a real lepton from decays within jets or
 from photon conversions.
 The dominant background contribution is expected to arise from the production of a \Z\ in
 association with jets and or photons (termed \Zjets\ and \Zgamma\ below). Other
 contributions arise from top-quark production (\ttbar and \singletop) and from
-other diboson processes \WW\ and \WZ.
+other diboson processes \WW+jets and \WZ+jets.
 %\ttbar$\ra\W\W bb$, $\Wt\ra\W\W b$, $\Zt\ra\W\Z b$, \WW\ and \WZ.
 
-A very small but irreducible background arises from $ZZZ$ and $WZZ$ production
-and from \ttbar+$V$ where $V=\W,\Z$.
-All of these processes produce large numbers of high-\pt\ isolated leptons,
-however their \cx\ are very small so contribute a negigable amount to the
-overall selection.
-
+A very small but background arises from $ZZZ$ and $WZZ$ production
+and from \ttbar+$V$ where $V=\W,\Z$. In these backgrounds there are four leptons
+from \W\ or \Z\ boson decays, so they will tend to be isolated and have small
+impact parameters, making these irreducible sources of background.
+The \cx\ for these processes are, however, very small, so they contribute only a
+small fraction of the overall background. 
 %\CX s for the background sources described above are given in~\tab{}.
 
 \mcsim\ can be used to estimate the size of the background, however this relies
-on accurate modelling of particle production within jets, so that the rate of
-lepton production from hadronic decays within jets is modelled correctly, 
-that the shower shapes of jets in the calorimeters are well modelled so that the
-background due to jets faking leptons is well modelled, and that the isolation
-variables for leptons in jets are well modelled. The \mc\ is not expected to
+on accurate modelling of particle production within jets. Accurate modelling is
+required so that the rate of
+lepton production from hadronic decays within jets is modelled correctly, and
+the shower shapes of jets in the calorimeters are well modelled so that the
+background due to jets faking the electron identificaton is well modelled. In
+order for leptons or fakes to pass the selection requirements they must pass the
+isolation requirement. This means background leptons will tend to be in the
+tails
+of the jet distribution. The \mc\ is not expected to
 perform well in this area, as it relies heavily on the model used for
 hadronisation and on details of the parton shower. A data-driven technique is
-therefore used to estimate the background. \mc\ based background estimates are
+therefore used to estimate the background from events with one or two background
+leptons. This estimate estimates the expected combined background from \Zjets,
+\Zgamma\, \WW, \WZ, \ttbar\ and \singletop. \mc\ is used to estimate the
+irreducible background, and as a cross check to the data-driven estimate.
+
+\mc\ based background estimates are
 described in~\sec{mcbg}, and the data-driven estimate is described in~\sec{ddbg}.
 
 \section{\mc\ Background Estimates}
@@ -198,7 +207,35 @@ systematic uncertainties on these background estimates are not evaluated.
 \section{Data Driven Background Estimates}
 \label{sec:ddbg}
 
+As described above, the reducible background sources fail into two categories:
+
 \subsection{Methodology}
+
+\begin{itemize}
+\item Backgrounds with two prompt isolated leptons and two `background' leptons. Such
+background include \Zjets, \Zgamma, \WW+jets, \ttbar\ and \singletop\ (in the
+$s$ and $t$ channels).
+\item Backgrounds with three prompt isolated leptons and one `background'
+lepton. Such backgrounds include \WZ+jets and \singletop production in the \Wt\
+channel.
+\item{itemize}
+
+Denomiting true leptons as $T$ and background leptons as $B$, the total background due
+to fake (background) leptons can be experessed as:
+
+\begin{equation}
+N_{4l}^{\rm fake} = N_{TTTB} \time f + N_{TTBB} \time f^{2}
+\end{equation}
+
+where $f$ is the fraction of background leptons that pass the lepton selection
+requirements. Of course, given a selected lepton in the data it is impossible to
+know whether it is a true lepton or a background lepton (if it were, background
+rejection would be trivial). Instead, in order to measure the background 
+two new definitions are introduced: selected leptons, denoted $L$, that
+pass all of the lepton selection requirements; and lepton-like-jets $J$, which
+pass most of the selection requirements, but fail a few selected requirements.
+
+
 \subsection{Fake-Factor Measurement}
 \subsection{Control Plots}
 \subsection{Results}
