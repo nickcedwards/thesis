@@ -225,6 +225,7 @@ to fake (background) leptons can be experessed as:
 
 \begin{equation}
 N_{4l}^{\rm fake} = N_{TTTB} \times f + N_{TTBB} \times f^{2}
+\label{eqn:bg-4l-true}
 \end{equation}
 
 where $f$ is the \frate, the fraction of background leptons that pass the lepton selection
@@ -248,7 +249,31 @@ respectively. \FF\ and \f\ are thus related by:
 
 \begin{equation}
 \f = \frac{\FF}{1 + \FF},\ \FF = \frac{\f}{1-\f}
+\label{eqn:bg-f-FF-relations}
 \end{equation}
+The number of events with two \lljet s and two \sellep\ can be related to the
+number of events with two true leptons and two \bglep s by:
+
+\begin{equation}
+N_{LLJJ} = N_{TTBB} \times (1-f)^{2}
+\end{equation}
+Similary, the number of events with three \sellep s and one \lljet\ can be related to the
+number of events with two or three true leptons and two or three \bglep s by:
+
+\begin{equation}
+N_{LLLJ} = N_{TTTB} \times (1-f) + N_{TTBB} \times 2f(1-f)
+\end{equation}
+The background to the four-lepton selection given in~\eqn{bg-4l-true} can thus
+be rewritten in terms of the number of events in the $LLLJ$ and $LLJJ$ control
+regions:
+\begin{align}
+N_{4l}^{\rm fake} &= N_{LLLJ} \times \FF - N_{LLJJ} \times \FF^{2} \\
+&= N_{LLLJ} \times \frac{\f}{(1-\f)} - N_{LLJJ} \times \frac{\f^{2}}{(1-\f)^{2}}
+&=  N_{TTTB} \times \frac{\f^{2}}{(1-\f)} + N_{TTBB}
+\times 2 f^{3} / (1-f) - N_{TTBB} \times \frac{\f} -
+N_{TTTB} \times f + N_{TTBB} \times f^{2} \\
+&= N_{
+\end{align}
 
 
 \subsection{Fake-Factor Measurement}
