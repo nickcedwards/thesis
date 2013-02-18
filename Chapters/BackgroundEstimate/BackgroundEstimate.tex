@@ -270,15 +270,11 @@ respectively. \FF\ and \f\ are thus related by:
 %\end{equation}
 
 The number of events observed with three $L$ and one $J$ ($N_{LLLJ}$) is related to
-the number of events with different true and background lepton composition as:
+the number of events with true composition as
 \begin{align}
 N_{LLLJ} &= N_{TTTB} \times (1-f)\, +\, N_{TTBB} \times 2f(1-f) \\
          &+ N_{TBBB} \times 3f^{2}(1-f)\, +\,  N_{TBBB} \times 4f^{3}(1-f) 
 \end{align}
-\begin{equation}
-\f = \frac{\FF}{1 + \FF},\ \FF = \frac{\f}{1-\f}
-\label{eqn:bg-f-FF-relations}
-\end{equation}
 where the numerical factors arise due to combinatorics. Similary, the number of events with two $L$ and two $J$ ($N_{LLJJ}$) is related to the
 true compostion by:
 \begin{equation}
@@ -287,16 +283,16 @@ N_{LLJJ} = N_{TTBB} \times (1-f)^{2} + N_{TBBB} \times 3 f(1-f)^{2}  + N_{BBBB}
 \end{equation}
 %Similary, the number of events with three \sellep s and one \lljet\ can be related to the
 %number of events with two or three true leptons and two or three \bglep s by:
-
 Since $f$ is small,
 terms of order $f^{3}$ or higher are neglected.
-The background to the four-lepton selection given in~\eqn{bg-4l-true} can thus
+
+The background to the four-lepton selection given in~\eqn{bg-4l-true} can 
 be rewritten in terms of the number of events in the $LLLJ$ and $LLJJ$ control
-regions:
+regions as:
 \begin{align}
 N_{4l}^{\rm fake} &= N_{LLLJ} \times \FF - N_{LLJJ} \times \FF^{2} \\
 &= N_{LLLJ} \times \frac{\f}{(1-\f)} - N_{LLJJ} \times \frac{\f^{2}}{(1-\f)^{2}}
-&=  N_{TTTB} \times \frac{\f^{2}}{(1-\f)} + N_{TTBB}
+&=  N_{TTTB} \times \frac{\f^{2}}{(1-\f)} + N_{TTBB} \\
 \times 2 f^{3} / (1-f) - N_{TTBB} \times \frac{\f} -
 N_{TTTB} \times f + N_{TTBB} \times f^{2} \\
 &= N_{}
