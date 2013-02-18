@@ -220,7 +220,7 @@ lepton. Such backgrounds include \WZ+jets and \singletop production in the \Wt\
 channel.
 \end{itemize}
 
-Denoting true leptons as $T$ and background leptons as $B$, the total background due
+Denoting true leptons passing all of the selection requirements as $T$ and background leptons as $B$, the total background due
 to fake (background) leptons can be experessed as:
 
 \begin{equation}
@@ -247,13 +247,43 @@ f = \frac{N_{L}}{N_{L} + N_{J}},\ \FF = \frac{N_{L}}{N_{J}}
 where $N_{L}$ and $N_{J}$ are the number of \sellep s and \lljet s in the sample,
 respectively. \FF\ and \f\ are thus related by:
 
+%Events observed as having three $L$ and one $J$ ($LLLJ$) arise from events with two $T$ and
+%two $B$ where one $B$ is classified as a $J$ and one is classified as an $L$ and
+%from events with three $T$ and one $B$ where the $B$ is classified as a $J$. The
+%number of $LLLJ$ events is thus related to the number of $TTBB$ and $TTTB$
+%events by:
+%\begin{equation}
+%N_{LLLJ} = N_{TTTB} \times (1-f) + N_{TTBB} \times 2f(1-f)
+%\end{equation}
+%\begin{equation}
+%\f = \frac{\FF}{1 + \FF},\ \FF = \frac{\f}{1-\f}
+%\label{eqn:bg-f-FF-relations}
+%\end{equation}
+%%The number of events with two \lljet s and two \sellep\ s is related to the
+%%number of events with two true leptons and two \bglep s by:
+%Events with two $L$ and two $J$ ($LLJJ$) only arise from events with two $T$ and
+%two $B$, where both $B$ are classified as $J$
+%Similary, the number of events with two $L$ and two $J$ ($LLJJ$) is related to the
+%number of events with two $T$ and two $B$ by:
+%\begin{equation}
+%N_{LLJJ} = N_{TTBB} \times (1-f)^{2}
+%\end{equation}
+
+The number of events observed with three $L$ and one $J$ ($LLLJ$) is related to
+the events with different true composition as:
+\begin{equation}
+N_{LLLJ} = N_{TTTB} \times (1-f) + N_{TTBB} \times 2f(1-f) + N_{TBBB} \times
+3f^{2}(1-f) +  N_{TBBB} \times 4f^{3}(1-f) 
+\end{equation}
 \begin{equation}
 \f = \frac{\FF}{1 + \FF},\ \FF = \frac{\f}{1-\f}
 \label{eqn:bg-f-FF-relations}
 \end{equation}
 %The number of events with two \lljet s and two \sellep\ s is related to the
 %number of events with two true leptons and two \bglep s by:
-The number of events with two $L$ and two $J$ is related to the
+Events with two $L$ and two $J$ ($LLJJ$) only arise from events with two $T$ and
+two $B$, where both $B$ are classified as $J$
+Similary, the number of events with two $L$ and two $J$ ($LLis related to the
 number of events with two $T$ and two $B$ by:
 
 \begin{equation}
@@ -261,11 +291,6 @@ N_{LLJJ} = N_{TTBB} \times (1-f)^{2}
 \end{equation}
 %Similary, the number of events with three \sellep s and one \lljet\ can be related to the
 %number of events with two or three true leptons and two or three \bglep s by:
-Similary, the number of events with three $L$ and one $J$ can be related to the
-number of events with two or three $T$ and one or two $B$ by:
-\begin{equation}
-N_{LLLJ} = N_{TTTB} \times (1-f) + N_{TTBB} \times 2f(1-f)
-\end{equation}
 The background to the four-lepton selection given in~\eqn{bg-4l-true} can thus
 be rewritten in terms of the number of events in the $LLLJ$ and $LLJJ$ control
 regions:
