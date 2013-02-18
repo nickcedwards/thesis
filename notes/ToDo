@@ -18,19 +18,19 @@ Thesis ToDo
 	
 	- Trigger efficiencies: 
 		- Check 2011 numbers (stat seems far too high). Add assymetric systematics
-		- Get 2012 numbers (running)
+		- Get 2012 numbers (running)					Take Josh's numbers :)
 		
 	- Finish systematics bit
 
-	- Make Z mass vs Z mass plot - 			GET PLOT FROM SOFIA
-	- 8 TeV systematics - 					JUST NEED ISOLATION
-	- 8 TeV C_ZZ details, 				C_ZZ info - RERUN
+	- Make Z mass vs Z mass plot - 			DONE -> Add to thesis
+	- 8 TeV systematics - 					DONE -> Add to thesis
+	- 8 TeV C_ZZ details, 					DONE -> Add to thesis
 		- mention comparisons with 2012
-	- 8 TeV dilepton plots - 				WAIT TILL BATCH TIME AND MC
-	- 8 TeV Z+X plots - 					WAIT TILL BATCH TIME AND MC
+	- 8 TeV dilepton plots - 				RERUN MC GRID JOBS WITH E SCALES
+	- 8 TeV Z+X plots - 					RERUN MC GRID JOBS WITH E SCALES
 
-	- Add VVV and Vt samples				JOBS RUNNING
-	- Check Higgs contamination (in background?)
+	- Add VVV and Vt samples						JOBS RUNNING
+	- Check Higgs contamination (in background?)	SAMPLE DOWNLOADING
 	
 - Background estimation: 
 	- Do					{4 days}
