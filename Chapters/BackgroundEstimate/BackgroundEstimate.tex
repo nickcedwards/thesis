@@ -300,7 +300,16 @@ N_{4l}^{\rm fake} &= N_{LLLJ} \times \FF - N_{LLJJ} \times \FF^{2} \\
  &=  N_{TTTB} \times \f + N_{TTBB} \times 2 f^{2} - N_{TTBB} \times \f^{2} \\
  &= N_{TTTB} \times \f + N_{TTBB} \times f^{2} 
 \end{align}
-where use has been made of~\eqn{bg-f-FF-relations}.
+where use has been made of~\eqn{bg-f-FF-relations}. In reality, observed
+$LLJJ$ and $LLLJ$ events will include some contribution from \ZZllll\ events where
+one or two leptons fail the selection requirements and are classified as $J$.
+The background estimate is thus:
+\begin{equation}
+N_{4l}^{\rm fake} = (N^{obs}_{LLLJ} - N^{\ZZ}_{LLLJ}) \times \FF -
+(N^{obs}_{LLJJ} - N^{\ZZ}_{LLJJ})\times \FF^{2} 
+\end{equation}
+where $N^{\ZZ}_{LLLJ}$ and $N^{\ZZ}_{LLJJ}$ are the number of \ZZ\ events with
+one or two leptons being classified as $J$; these must be estimated from \mc.
 
 \subsection{Fake-Factor Measurement}
 \subsection{Control Plots}
