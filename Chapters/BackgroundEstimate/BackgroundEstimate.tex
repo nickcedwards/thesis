@@ -334,10 +334,13 @@ given in~\tab{J-def}.
     \hline\hline
     Lepton & Selected Leptons $L$ & Lepton Like Jets $J$ \\
     \hline
-    Central Muon & \ptconetwentylt{0.15} \AND \etconetwentylt{0.3} \AND
-    $|\dzerosig|<3.5$ & (\ptconetwentygt{0.15} \OR \etconetwentygt{0.3} \AND
-    $|\dzerosig|<3.5$) \OR   (\ptconetwentylt{0.15} \OR \etconetwentylt{0.3} \AND
-    $|\dzerosig|>3.5$)  \\
+    %Central Muon & \ptconetwentylt{0.15} \AND \etconetwentylt{0.3} \AND
+    %$|\dzerosig|<3.5$ & (\ptconetwentygt{0.15} \OR \etconetwentygt{0.3} \AND
+    %$|\dzerosig|<3.5$) \OR   (\ptconetwentylt{0.15} \OR \etconetwentylt{0.3} \AND
+    %$|\dzerosig|>3.5$)  \\
+    Central Muon & Pass Isolation \AND Pass \dzero-significance & (Fail
+    Isolation \AND Pass \dzero-significance) \OR (Fail
+    Isolation \AND Pass \dzero-significance) \\
     \hline\hline
   \end{tabular}
   \caption[MC predicted number of events passing various levels of selection for
