@@ -324,8 +324,11 @@ discarded. Similarly, pre-electrons that fail {\it either} the isolation {\it or
 \loosePP\ significance requirement are classified as $J$; those that fail both are
 discarded. For the 7~\tev\ analysis where both calorimeter and track isolation
 requirements, a lepton may fail either of the track or caloriemter requirement
-to be considerd a $J$. For forward electrons, pre-leptons are classified as $J$
-is the faile the \tight\ ID requirement. A summary of the $J$ definitions is
+to be considerd a $J$. For forward electrons, for which no isolation
+requirements are applied, pre-leptons are classified as $J$
+if they fail the \tight\ ID requirement. For forward `standalone' muons which have
+no track, pre-leptons are classified as $J$ if they fail the isolation
+requirements. A summary of the $J$ definitions is
 given in~\tab{J-def}.
 
 \begin{table}[htbp]
@@ -338,9 +341,9 @@ given in~\tab{J-def}.
     %$|\dzerosig|<3.5$ & (\ptconetwentygt{0.15} \OR \etconetwentygt{0.3} \AND
     %$|\dzerosig|<3.5$) \OR   (\ptconetwentylt{0.15} \OR \etconetwentylt{0.3} \AND
     %$|\dzerosig|>3.5$)  \\
-    Central Muon & Pass Isolation \AND Pass \dzero-significance & (Fail
-    Isolation \AND Pass \dzero-significance) \OR (Fail
-    Isolation \AND Pass \dzero-significance) \\
+    Muon & Pass Isolation \AND\ Pass \dzero-significance & (Fail
+    Isolation \AND\ Pass \dzero-significance) \OR\ (Fail
+    Isolation \AND\ Pass \dzero-significance) \\
     \hline\hline
   \end{tabular}
   \caption[MC predicted number of events passing various levels of selection for
