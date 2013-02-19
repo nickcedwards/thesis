@@ -236,7 +236,7 @@ two new definitions are introduced: \intro{selected leptons}, denoted $L$, that
 pass all of the lepton selection requirements; and \intro{lepton-like-jets} $J$, which
 pass most of the selection requirements, but fail a few selected requirements.
 The background is estimated by extrapolating from control regions containing
-two or three \sellep\ s and one one or two \lljet (s) using the
+two or three \sellep s and one one or two \lljet (s) using the
 \intro{\ffactor}\ \FF, defined as the ratio of the probability for a background lepton to be
 classified as a \sellep\ to the probability for it to be classified as a \lljet.
 In a sample containing only \bglep s, the \frate\ and \ffactor\ are given by: 
@@ -311,6 +311,34 @@ N_{4l}^{\rm fake} = (N^{obs}_{LLLJ} - N^{\ZZ}_{LLLJ}) \times \FF -
 where $N^{\ZZ}_{LLLJ}$ and $N^{\ZZ}_{LLJJ}$ are the number of \ZZ\ events with
 one or two leptons being classified as $J$; these must be estimated from \mc.
 
+\subsection{Lepton-Like-Jet Definitions}
+
+%The nominal requirements for \lljet s are given below.
+\intro{Pre-leptons} are defined as reconstructed lepton objects that pass all of
+the selection requirements, apart from the isolation and \dzero\ significance
+requirements (for muons) or the isolation and \loosePP\ identification
+requirements (for electrons).
+
 \subsection{Fake-Factor Measurement}
+
+In order to measure the \fakefactor\ a sample of background leptons must be
+identified, with a similar composition in terms of the different sources of
+background leptons as the signal sample. This is done by selection of a sample
+of evnents containing and \ossf\ \dilep\ pair passing all of the lepton
+selection requirements, with mass \sstooos\ in order to be consistent with a \Z\
+boson. It is then required that the event contain at least one additional
+pre-lepton. The sample will be dominated by \Zjets, \WZ\ and and \ZZ\
+events. The additional pre-leptons in \Zjets events are all background
+electrons; in \WZ\ (\ZZ) events there will typically be one (two) additional
+true leptons. The \WZ\ component is supressed by rejecting events with large missing transverse
+energy (requiring \Etmiss$<$25~\gev). The \ZZ\ component and any remaining \WZ\
+is subtracted using \mc. The pre-leptons are then identified as either $L$ or
+$J$ (or neither), and the \fakefactor\ is obtained by dividing the distributions
+of the \lljet\ by the distributions of the \sellep. In this way, \fakefactor s
+paramaterised in \pT\ and in \eta\ are obtained.
+
+The observed \fakefactor s for electrons are shown in~\fig{ff-el} for the
+7~\tev\ analysis and in~\fig{ff-mu} for the 8~\tev\ analysis.
+
 \subsection{Control Plots}
 \subsection{Results}
