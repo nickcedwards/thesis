@@ -397,7 +397,18 @@ is subtracted using \mc. The \Z-tag sample selection is summarised~\tab{Ztag-def
 The pre-leptons are then identified as either $L$ or
 $J$ (or neither), and the \fakefactor\ is obtained by dividing the distributions
 of the \lljet\ by the distributions of the \sellep. In this way, \fakefactor s
-paramaterised in \pT\ and in $\eta$ are obtained.
+paramaterised in \pT\ and in $\eta$ are obtained. For a given bin of \pT\ or $\eta$, the \ffactor\ is given by:
+\begin{equation}
+\FF = \frac{N^{\rm data}_{L} - N^{{\rm MC} WZ,ZZ}_{L}}
+{N^{\rm data}_{J} - N^{{\rm MC} WZ,ZZ}_{J}}
+\end{equation}
+
+The fake-factor for a given \pT\ and $\eta$ is applied as:
+\begin{equation}
+\FF(\pt\eta) = \frec{FF(\pt)\times\FF(\eta)}{<\FF>}
+\end{equation}
+where $<\FF>$ is the average \ffactor.
+
 
 The observed distributions of \pT\ and $\eta$ for the \sellep\ and \lljet s for
 electrons are shown in~\fig{ljdist-el-seven} for the
