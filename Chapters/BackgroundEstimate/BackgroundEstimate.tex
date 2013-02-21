@@ -709,5 +709,28 @@ s, used as the numerator in~\eqn{factorised-ff}, are given in~\tab{average-ff}.
 %\label{fig:ff-mu-seven} 
 %\end{figure}
 
-\subsection{Results}
 \subsection{Statistical and Systematic Uncertainties}
+
+The statistical error from the \ffactor\ measurement is propagated to the
+background estimate by repeating the calculation with the \ffactor\ up and down
+by the one-sigma statistical uncertainty. The variation of the predicted
+background is then added in quadrature with the statistical uncertainty due to
+limited numbers of observed $LLLJ$ and $LLJJ$ events. In cases where no $LLLJ$
+or $LLJJ$ events are observed, the central value is taken as zero, and the
+uncertainty is set to correspond to a 68\% confidence level upper limit on the
+number of observed events of 1.29. This is scaled by the mean \ffactor\ for that
+channel.
+
+Systematic uncertainties are estimated by varying the criteria used to define
+the \lljet s as follows:
+\begin{itemize}
+\item Increasing the inverted isolation requirement to $>$20\%, $>$30\%, and
+$>$40\%. The requirements on calorimeter and track based isolation are varied
+simultaneously.
+\item Increasing the inverted \dzero-significance requirement to
+$>4.0,>4.5,>5.0$.
+\item Requiring that the $J$ fail {\it either} the isolation {\it or} the
+identification (\dzero-significance) requirements, but not both.
+\end{itemize}
+
+\subsection{Results}
