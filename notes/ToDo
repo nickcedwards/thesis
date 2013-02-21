@@ -13,13 +13,9 @@ Thesis ToDo
 					
 	- Exotics review - leave for now :s
 
-- ObjSel:	{5 days}
+- ObjSel:	{1 day}
 	- Dilepton plots: Remake with hfor		WAIT TO RUN
 	
-	- Trigger efficiencies: 
-		- Check 2011 numbers (stat seems far too high). Add assymetric systematics
-		- Get 2012 numbers (running)					Take Josh's numbers :)
-		
 	- Finish systematics bit
 
 	- Make Z mass vs Z mass plot - 			DONE -> Add to thesis
@@ -30,14 +26,15 @@ Thesis ToDo
 	- 8 TeV Z+X plots - 					RERUN MC GRID JOBS WITH E SCALES
 
 	- Add VVV and Vt samples						JOBS RUNNING
-	- Check Higgs contamination (in background?)	SAMPLE DOWNLOADING
+	- Check Higgs contamination (in background?)	DONE
 	
 - Background estimation: 
 	- Do					{4 days}
-	- Write 				{2 days}
+	- Write 				{0 days}
 	
 - Cross Section and kinematic plots: 
-	- 8 TeV bits			{1 days}
+	- Rerun 7 TeV cx with updates, finish writing {1 day}
+	- 8 TeV bits			{0 days}
 		- ZZ* plots
 		- Z mass plots with mZ>7
 		- dR vs ptZ plot? 
@@ -47,8 +44,10 @@ Thesis ToDo
 	- Run TGC limits code	{2 days}
 	- Play with unfolding code {1 day}
 	- Grid paramt stuff		{1 day}
+	
+- SCT 						{2 days}
 
-- Detector REDRAFT:			{1 day}
+- Detector REDRAFT:			{0 days}
 	- sqrt(12) resolution issue - is from definition of std-deviation:
 	- = sqrt(E((x-mu)^2)) = sqrt [ Int_{-L/2}^{L/2}x^{2}P(x)dx ]
 	   with P(x) = 1/L
@@ -56,7 +55,7 @@ Thesis ToDo
 	   = sqrt[ L^{3} (1/24 - - 1/24)] = L/sqrt(12)
 	- Describe Luminosity measurent
 
-- Reconstruction REDRAFT: {1 day}
+- Reconstruction REDRAFT: {0 days}
 	- Plot of d0Sig in GSF/STD in data?
 	- Find out properly about HT hits in TRT and add to description
 	- Own ID eff plots?
@@ -69,8 +68,8 @@ Thesis ToDo
 - Soak time				{5 days}
 - Global redraft		{5 days}
 
-- TOTAL: 37 days
-- Available: 39.5 weekdays, 10 weekend days (MAX, ideally 5)
+- TOTAL: 33 days
+- Available: 27 weekdays, 4 weekend days (MAX, ideally 5)
 	
 
 
