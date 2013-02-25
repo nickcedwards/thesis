@@ -649,8 +649,8 @@ experimental efefcts $A(y,x)$ such that:
 \end{equation}
 In practice, one tends not measure continuos distribution but makes measurements
 in discretised bins, i.e. histograms. $x$ and $y$ can thus be rewritten as
-vectors {\bf x} and {\bf y}, where each element represents one bin. The response
-function then becomes a response matrix {\bf A}, and one can
+vectors \unfx\ and \unfy, where each element represents one bin. The response
+function then becomes a response matrix \unfA, and one can
 rewrite~\eqn{unfold-conv} as:
 \begin{equation}
 \mathbf{Ax} = \mathbf{y}
@@ -659,4 +659,39 @@ rewrite~\eqn{unfold-conv} as:
 
 An iterative Bayesian unfolding algorithm is used~\cite{2010arXiv1010.0632D}, 
 using the implementation provided by the {\sc
-RooUnfold}~\cite{2011arXiv1105.1160A} package. The algorithm 
+RooUnfold}~\cite{2011arXiv1105.1160A} package. The algorithm treats the response
+matrix \unfA\ as a description of the probability of observed data given the
+true distribution. \unfA\ is determined from \mc\ simulation. The
+algorithm takes an initial prior for the simulated distribution of \unfx\ from
+\mc\ and iterates taking the posterior distribution from one iteration as a
+prior for the next. The choice of initial prior will tend to bias the unfolded
+distribution, but this bias decreses steeply with the number of iterations. The
+statistical uncertainty tends to increase with the number of iterations, as
+fluctuations can be amplified by positive feedback inherant in the algorithm;
+the number of iterations must thus be chosen to balance the bias due to the
+choice of prior and amplification of statistical uncertainties. It is found that
+the difference in result between three and four iterations is much smaller than
+the statistical uncertainty. The results for three iterations are thus taken as
+the nominal result, and the difference between three and four iterations is
+taken as an additional systematic. 
+
+Statistical uncertainties are assesed by
+pseudo-experiments, in each experiment fluctuating the observed \unfy\ by a
+Poisson distribution and re-running the full unfolding procedure; the RMS of 200
+pseud-experiments is taken as the statistical uncertainty. Systematic
+uncertainties due to experimental uncertainties are handled in a similar manner,
+re-running the unfolding procedure multiple times, varying the repsonse matrix
+\unfA\ according to the different sources of systematic uncertainty. An
+additional systematic arises from the choice of prior. This is estimated by
+using the distribution predicted by \sherpa\ as a prior instead of the nominal
+\powhegbox. 
+
+Distributions of three variables sensitive to new phenomena are selected for
+unfolding: \ptZ, and \deltaPhiLL for the leading \Z\ boson and \mZZ. Bin
+boundaries are chosen to maximise sensitivity to nTGCs, and are in all cases
+larger than the detector resolution. The unfolded distributions are shown
+in~\fig{unfolded-distributions}; the \sm\ prediction is consistent with the
+measurement in each case. The uncertainty on the unfolded distributions is dominated by the
+statistical uncertainty, which is approximately 30\% in most bins. The
+systematic uncertainty is no more than 5\% in each bins, and is dominated by the
+uncertainty arising due to the choice of prior.
