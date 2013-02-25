@@ -663,7 +663,7 @@ An iterative Bayesian unfolding algorithm is used~\cite{2010arXiv1010.0632D},
 using the implementation provided by the {\sc
 RooUnfold}~\cite{2011arXiv1105.1160A} package. The algorithm treats the response
 matrix \unfA\ as a description of the probability of observing some particular data given the
-true distribution. \unfA\ is determined from \mc\ simulation. The
+true distribution. The
 algorithm takes an initial prior for the simulated distribution of \unfx\ from
 \mc\ and iterates taking the posterior distribution from one iteration as a
 prior for the next. The choice of initial prior will tend to bias the unfolded
@@ -680,9 +680,11 @@ taken as an additional systematic.
 Statistical uncertainties are assessed by
 pseudo-experiments, in each experiment fluctuating the observed \unfy\ by a
 Poisson distribution and re-running the full unfolding procedure; the RMS of 200
-pseud-experiments is taken as the statistical uncertainty. Systematic
-uncertainties due to experimental uncertainties are handled in a similar manner,
-re-running the unfolding procedure multiple times, varying the repsonse matrix
+pseud-experiments is taken as the statistical uncertainty. 
+In practice, the response matrix \unfA\ is estimated from \mc\ simulation and
+will thus have associated systematic uncertainties due to experimental
+uncertainties. These are handled in a similar manner to the statistical
+uncertainties, re-running the unfolding procedure multiple times and varying the
 \unfA\ according to the different sources of systematic uncertainty. An
 additional systematic arises from the choice of prior. This is estimated by
 using the distribution predicted by \sherpa\ as a prior instead of the nominal
