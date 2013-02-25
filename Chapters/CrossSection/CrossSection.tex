@@ -346,36 +346,36 @@ data are consistent with these predictions.
     \end{center}
 \end{figure}
 
-% 8 TeV, ZZ*, ZZ_pt / ZZ_m
-\begin{figure}[htbp]
-\begin{center}
-    \subfigure[]{
-    \includegraphics[width=0.47\textwidth]{placeholder}
-    }
-    \subfigure[]{
-    \includegraphics[width=0.47\textwidth]{placeholder}
-    }
-    \subfigure[]{
-    \includegraphics[width=0.47\textwidth]{placeholder}
-    }
-    \subfigure[]{
-    \includegraphics[width=0.47\textwidth]{placeholder}
-    }
-    \caption[Kinematic distributions for events passing the \ZZs\ selection in
-    the 8~\tev\ data.]
-    {Kinematic distributions for events passing the \ZZs\ selection in
-    the 8~\tev\ data: (a) transverse momentum $\pT^{\ZZ}$ and (b) invariant mass $m^{\ZZ}$ of the 
-    four-lepton system, (c) transverse momentum of the leading
-    \dilep\ pair $\pt^{Z1}$, and (d) transverse momentum of the subleading
-    \dilep\ pair $\pt^{Z2}$. The points represent the observed data and the 
-    histograms show the prediction from simulation, where the background
-    is normalized to the data-driven (dd) estimate as described in
-    ~\chap{BackgroundEstimate}. The shaded band 
-    shows the combined statistical and systematic uncertainty on the prediction. 
-    }
-\end{center}
-    \label{fig:zzdists-ZZs-eight}
-\end{figure}
+%% 8 TeV, ZZ*, ZZ_pt / ZZ_m
+%\begin{figure}[htbp]
+%\begin{center}
+%    \subfigure[]{
+%    \includegraphics[width=0.47\textwidth]{placeholder}
+%    }
+%    \subfigure[]{
+%    \includegraphics[width=0.47\textwidth]{placeholder}
+%    }
+%    \subfigure[]{
+%    \includegraphics[width=0.47\textwidth]{placeholder}
+%    }
+%    \subfigure[]{
+%    \includegraphics[width=0.47\textwidth]{placeholder}
+%    }
+%    \caption[Kinematic distributions for events passing the \ZZs\ selection in
+%    the 8~\tev\ data.]
+%    {Kinematic distributions for events passing the \ZZs\ selection in
+%    the 8~\tev\ data: (a) transverse momentum $\pT^{\ZZ}$ and (b) invariant mass $m^{\ZZ}$ of the 
+%    four-lepton system, (c) transverse momentum of the leading
+%    \dilep\ pair $\pt^{Z1}$, and (d) transverse momentum of the subleading
+%    \dilep\ pair $\pt^{Z2}$. The points represent the observed data and the 
+%    histograms show the prediction from simulation, where the background
+%    is normalized to the data-driven (dd) estimate as described in
+%    ~\chap{BackgroundEstimate}. The shaded band 
+%    shows the combined statistical and systematic uncertainty on the prediction. 
+%    }
+%\end{center}
+%    \label{fig:zzdists-ZZs-eight}
+%\end{figure}
 
 \section{\CX\ Measurement}
 
@@ -627,3 +627,26 @@ on agreement with theory and comparison 7~\tev\ and 8~\tev}.
 \end{table}
 
 
+\section{Unfolded Kinematic Distributions}
+
+The observed kinematic distributions shown in Figures~\ref{fig:zzdists-ZZ-seven}
+to~\ref{fig:zzdists-ZZ-eight} are a convolution of the underlying `true'
+distribution of the parameter of interest and distortion and smearing due to
+detector effects. Whilst for the expected \ZZ\ signal distribution shown in the
+Figures this detector distortion is simulated alowing a comparison of the
+theoretical prediction and the observed data, it is desirable to correct the
+observed distributions for these effects in order to allow model independant
+comparisons between theory and observation. The correction procedure is referred
+to as \intro{unfolding}. Formally, consider some parameter of interest $x$
+distributed according to $f(x)$. Due to experimental and statistical
+uncertainties, one does not measure $x$ but a different variable $y$ distributed
+according to $g(y)$. The measured variable $y$ is related to $x$ by a
+convolution of the true distribution $f(x)$ with some response function to account for the
+experimental efefcts $A(y,x)$ such that:
+\begin{equation}
+\int A(y,x)f(x){\rm d}x = g(y)
+\end{equation}
+
+The iterative Bayesian technique described in~\cite{2010arXiv1010.0632D} is
+used, using the implementation provided by
+\textt{RooUnfold}~\cite{2011arXiv1105.1160A}.
