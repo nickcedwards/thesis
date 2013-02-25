@@ -633,9 +633,9 @@ The observed kinematic distributions shown in Figures~\ref{fig:zzdists-ZZ-seven}
 to~\ref{fig:zzdists-ZZ-eight} are a convolution of the underlying `true'
 distribution of the parameter of interest and a distortion and smearing due to
 detector effects. Whilst for the expected \ZZ\ signal distribution shown in
-these figures this detector distortion is included in the \mc\ simulation, alowing a comparison of the
+these figures this detector distortion is included in the \mc\ simulation, allowing a comparison of the
 theoretical prediction and the observed data, it is desirable to correct the
-observed distributions for detector effects in order to allow model independant
+observed distributions for detector effects in order to allow model independent
 comparisons between theory and observation. The correction procedure is referred
 to as \intro{unfolding}. 
 
@@ -644,12 +644,12 @@ distributed according to a \probDF\ $f(x)$. Due to experimental effects, one
 does not measure $x$ but a different variable $y$, distributed
 according to a \probDF\ $g(y)$. The measured variable $y$ is related to $x$ by a
 convolution of the true distribution $f(x)$ with some response function to account for the
-experimental efefcts $A(y,x)$, by the relation:
+experimental effects $A(y,x)$, by the relation:
 \begin{equation}
 \int A(y,x)f(x){\rm d}x = g(y)
 \label{eqn:unfold-conv}
 \end{equation}
-In practice, one tends not measure continuos distribution but makes measurements
+In practice, one tends not measure continuous distribution but makes measurements
 in discretised bins, i.e. histograms. $x$ and $y$ can thus be rewritten as
 vectors \unfx\ and \unfy, where each element represents one bin. The response
 function then becomes a response matrix \unfA, and one can
@@ -667,9 +667,9 @@ true distribution. \unfA\ is determined from \mc\ simulation. The
 algorithm takes an initial prior for the simulated distribution of \unfx\ from
 \mc\ and iterates taking the posterior distribution from one iteration as a
 prior for the next. The choice of initial prior will tend to bias the unfolded
-distribution, but this bias decreses steeply with the number of iterations. The
+distribution, but this bias decreases steeply with the number of iterations. The
 statistical uncertainty tends to increase with the number of iterations, as
-fluctuations can be amplified by positive feedback inherant in the algorithm;
+fluctuations can be amplified by positive feedback inherent in the algorithm;
 the number of iterations must thus be chosen to balance the bias due to the
 choice of prior and amplification of statistical uncertainties. It is found that
 the difference in result between three and four iterations is much smaller than
@@ -677,7 +677,7 @@ the statistical uncertainty. The results for three iterations are thus taken as
 the nominal result, and the difference between three and four iterations is
 taken as an additional systematic. 
 
-Statistical uncertainties are assesed by
+Statistical uncertainties are assessed by
 pseudo-experiments, in each experiment fluctuating the observed \unfy\ by a
 Poisson distribution and re-running the full unfolding procedure; the RMS of 200
 pseud-experiments is taken as the statistical uncertainty. Systematic
