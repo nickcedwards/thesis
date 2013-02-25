@@ -39,10 +39,13 @@ Thesis ToDo
 		- Z mass plots with mZ>7
 		- dR vs ptZ plot? 
 
+- Unfolding 
+		- Write <1 day>
+		- Play with unfolding code {1 day}
+
 - TGC limits and unfolding:
-	- Skelaton write		{3 days}
+	- Skelaton write		{2 days}
 	- Run TGC limits code	{2 days}
-	- Play with unfolding code {1 day}
 	- Grid paramt stuff		{1 day}
 	
 - SCT 						{2 days}
