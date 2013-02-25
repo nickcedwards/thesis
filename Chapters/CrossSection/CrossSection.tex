@@ -645,8 +645,18 @@ convolution of the true distribution $f(x)$ with some response function to accou
 experimental efefcts $A(y,x)$ such that:
 \begin{equation}
 \int A(y,x)f(x){\rm d}x = g(y)
+\label{eqn:unfold-conv}
+\end{equation}
+In practice, one tends not measure continuos distribution but makes measurements
+in discretised bins, i.e. histograms. $x$ and $y$ can thus be rewritten as
+vectors {\bf x} and {\bf y}, where each element represents one bin. The response
+function then becomes a response matrix {\bf A}, and one can
+rewrite~\eqn{unfold-conv} as:
+\begin{equation}
+\mathbf{Ax} = \mathbf{y}
+\label{eqn:unfold-conv-matrix}
 \end{equation}
 
-An iterative Bayesian unfolding technique is used~\cite{2010arXiv1010.0632D}, 
+An iterative Bayesian unfolding algorithm is used~\cite{2010arXiv1010.0632D}, 
 using the implementation provided by the {\sc
-RooUnfold}~\cite{2011arXiv1105.1160A} package.
+RooUnfold}~\cite{2011arXiv1105.1160A} package. The algorithm 
