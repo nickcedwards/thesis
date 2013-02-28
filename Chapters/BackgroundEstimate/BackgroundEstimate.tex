@@ -763,3 +763,27 @@ The number of observed events passing the OS-SS selection, the
 estimated \ZZ\ contamination and the resulting background estimate are shown
 in~\tab{bg-est-ss}. The results are in good agreement with the background
 estimate from the \ffactor\ method.
+
+\begin{table}
+\centering
+\small
+  \begin{tabular}{lcccc}
+    \hline\hline
+     Process & Generator 7~\tev\ & Generator 8~\tev \\
+     \hline
+     \Zjets & \alpgen+\jimmy           & \alpgen+\jimmy \\
+     \ttbar & \mcatnlo+\jimmy           & \mcatnlo+\jimmy \\
+     \singletop & \acermc+\jimmy           & \acermc+\pythia \\
+     \WZ        & \mcatnlo+\jimmy & \powhegbox+\pythia \\
+     \WW        & \mcatnlo+\jimmy, \ggtwoWW & \powhegbox+\pythia, \ggtwoWW \\
+     $ZZZ/WWZ$  & Not Used      & \madgraph+\pythia \\
+     \ttbar+$V$     & Not Used  & \madgraph+\pythia \\
+    \hline\hline
+  \end{tabular}
+
+      \caption[Background estimate cross check using same-sign events.]
+      {Background estimate cross check using same-sign events.}
+\label{table:bg-est-ss}
+\end{table}
+
+
