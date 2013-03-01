@@ -42,8 +42,8 @@ are summarised in~\tab{objsel-el} are described in more detail below.
       ID Selection                & \loosePP & \it{Same}       \\
       $\eta$                & \modetaclusterlt{2.47} & \it{Same} \\
       $E_T$                 & $E_T > 7$ GeV & \it{Same} \\
-      \zzero                & $\zzero < 2$ mm & $|\zzero\sin(\theta)| < 0.5$ mm \\
-      \dzerosig             & $\dzerosig < 6 $ & \it{Same} \\
+      \zzero                & $|\zzero| < 2$ mm & $|\zzero\sin(\theta)| < 0.5$ mm \\
+      \dzerosig             & $|\dzerosig| < 6 $ & \it{Same} \\
       Track isolation       & \ptconetwentylt{0.15} & \it{Same}   \\
       Calorimeter isolation & \etconetwentylt{0.3}          & \it{Not Applied} \\
       Overlap removal       & \multicolumn{1}{p{6cm}}{a) Remove $e$ if $\Delta R < 0.1$ from $\mu$} & \it{Same} \\
@@ -65,12 +65,12 @@ are summarised in~\tab{objsel-el} are described in more detail below.
 
 \subsection{Central Electron Selection}
 
-Central electrons, with \modetaclusterlt{2.47}, are normally reconstructed using the
-`standard' electron algorithm as described in~\sec{reco-el-reco}.  For 2011
+Central electrons, with \modetaclusterlt{2.47}, are reconstructed using the
+`standard' electron algorithm as described in~\sec{reco-el-reco}.  For the 7~\tev\
 data, the algorithm used was slightly different to the `standard' ATLAS electron
 reconstruction as tracks were refitted using a Gaussian-sum filter (GSF) to
-account to account for the effect of bremsstrahlung in the inner detector. In
-2012 data this became the default reconstruction algorithm. Central electrons
+account to account for the effect of bremsstrahlung in the inner detector. For
+the 8~\tev\ data, this became the default reconstruction algorithm. Central electrons
 are required to pass the \loosePP\ identification requirements.
 %Electrons in the calorimeter ``crack" region $1.37 < |\eta_{cluster}| < 1.52$
 %are included, although the efficiency and energy resolution is expected
@@ -85,35 +85,37 @@ are used for the $\eta$ requirement and for overlap removal. Using the energy
 and direction defined in this way, the electron candidates are required to have
 \etgt{7}, where \et\ is defined as $E\sin(\theta)=E/\cosh(\eta)$. 
 
-A small number of the front-end boards of the LAr calorimeter were
-inactive in 2011 and 2012; the exact number varied with time as some were
-repaired whilst other developed faults. Additionally, a number of individual
+A small number of the Front-End Boards (FEBs) of the LAr calorimeter were
+inactive for the 7~\tev\ data taking in 2011; the exact number varied with time as some were
+repaired whilst other developed faults. Additionally, for both 7 and 8~\tev\ data taking, a number of individual
 cells were masked in the readout (i.e. had their energy set to zero) due to
 consistently producing high noise or failing to give a readout. There were also
 regions where the High-Voltage supply to the LAr was faulty. Electrons are
 rejected if they fall into a region of $\eta, \phi$ space consistent with the
-presence of a dead front-end board in the first or second sampling layer, the
+presence of a dead FEB in the first or second sampling layer, the
 presence of a dead HV region affecting all three samplings, or the presence of a
 masked cell in the core of the cluster.
 
 To ensure that the candidates come from the primary vertex (defined as the
-vertex that has the highest $\sum{\pt^2}$ of associated tracks), the
+vertex that has the highest $\sum{\pt^2}$ of associated tracks), requirements
+are applied to the the
 longitudinal impact parameter \zzero\ of the electron track with respect to the
-primary vertex must be less than 2 mm for data collected in 2011. For 2012 data,
+primary vertex. For 7~\tev\ data, the requirement is $|\zzero\|<2$ mm must be
+less than 2 mm; for 8~\tev\ data,
 the requirement is \zzerosintheta $<$ 0.5 mm. The \intro{unbiased} impact
 parameter is used; obtained by refitting the vertex without the track in
 question, then calculating the impact parameter with respect to this refitted
 vertex, thus removing the pull of the track from the vertex fit.  The transverse
 impact parameter \dzero\ must have a significance (\dzero\ divided by the error
-on its measurement, \dzerosig) less than 6. This helps reduce backgrounds,
+on its measurement, \dzerosig) of magnitude less than 6. This helps reduce backgrounds,
 particularly from decays of pions and kaons in jets to electrons, since these
 decays will occur further from the interaction point giving larger impact
 parameters.
 
-Isolation requirements are applied to reduce the backgrounds from jets being
-misidentified as electrons, or from electrons from decays in jets, collectively
-referred to as \intro{background electrons}. Such background electrons will
-typically have many tracks surrounding their track in the tracker, and be
+Isolation requirements are applied to reduce the backgrounds from jets 
+misidentified as electrons, or from electrons from decays in jets. The tracks of
+such objects will
+typically be surrounded by many other tracks, and they will be
 surrounded by large energy deposits in the calorimeter from other particles in
 the jet. \intro{Track Isolation} requirements are imposed, requiring that the
 sum of the \pt\ of tracks surrounding the electron's track in a cone of
@@ -124,7 +126,7 @@ electron and have at least 9 silicon hits, thus ensuring good track quality and
 purity. The impact parameter requirement means that this variable is insensitive
 to pileup as most tracks from other (pileup) vertices are excluded.
 
-Additionally, for the 2011 data, a calorimeter isolation requirement is imposed.
+Additionally, for the 7~\tev\ data, a calorimeter isolation requirement is imposed.
 This is defined as the sum of calorimeter cell energies in a cone of
 \deltaRlt{0.2} around the barycentre of the electron cluster, excluding a 5x7
 grid of cells in the centre of the cone (which are assumed to be due to the
@@ -132,18 +134,18 @@ electron). Cells from both the EM and hadronic calorimeters are included. The
 requirement is that the sum of such energies be less than 30\% of electron \et,
 i.e. \etconetwentylt{0.3}.  This variable is particularly sensitive to pileup,
 as pileup events tend to deposit additional energy isotropically throughout the
-detector, thus increasing the energy in the isolation cone. A correction
-parameterised by the number of vertices reconstructed in the event is applied to
+detector, thus increasing the energy in the isolation cone. A correction,
+parameterised by the number of vertices reconstructed in the event, is applied to
 correct the isolation variable for extra energy due to pileup.  Additional
 corrections are applied to correct for leakage of the electron's energy out of
 the core cells of the cone, which tends to increase with \pt. Calorimeter
-isolation requirements were not applied in 2012.
+isolation requirements were not applied to the 8~\tev\ data.
 
-Electrons closer than \deltaRlt{0.1} to a muon which passes the muon selection
+Electrons closer than \deltaRlt{0.1} to a muon which passes all of the muon selection
 requirements (see~\sec{objsel-mu}) are rejected. If two selected electrons
 overlap within \deltaRlt{0.1}, the lower-\et\ electron is removed, although in
 the case of a central electron overlapping with a forward electron, which could
-occur near the edge of the tracker, the central electron would take precedence.
+occur near the edge of the tracker, the central electron takes precedence.
 
 \subsection{Forward Electron Selection}
 
@@ -151,7 +153,7 @@ Electrons reconstructed using the forward electron reconstruction algorithm are
 used to to extend the pseudo-rapidity coverage beyond the limit of the tracker,
 \modetalt{2.5}. Only electrons falling in the EMEC region are used, with
 pseudo-rapidity \modetaclusterbetween{2.5}{3.16}.  Since the lack of tracking makes it
-harder to reject hadronic and photonic fakes, these electrons are required to
+harder to reject hadronic and photon fakes, these electrons are required to
 pass tighter identification requirements: ``Forward Tight''. Since forward
 electrons lack a track measurement, it is impossible to determine their charge,
 and of course impossible to apply track isolation and track parameter cuts.
@@ -169,10 +171,10 @@ Forward electrons are not used in the 8~\tev\ analysis.
 
 To motivate the isolation, \dzerosig\ and \zzero\ requirements described
 above, \fig{objsel-el} shows the distribution of these variables for additional
-electrons in events with an \ossf\ \dilepton\ pair with \sstooos\ in 7~\tev\ data. 
+electrons in events with an \ossf\ \dilepton\ pair in the 7~\tev\ data. 
 The leptons forming the \dilepton\ pair are required to pass all of
-the selection requirements described above, and one must match to the triggering
-object and have \ptgt{25}. Any additional electrons in the event are required to pass
+the selection requirements described above, one must match to the triggering
+object and have \ptgt{25}, and they must have invariant mass satisfying \sstooos. Any additional electrons in the event are required to pass
 the kinematic (\pt, $\eta$) requirements and the \loosePP\ identification
 requirements; the distributions of the isolation, \dzerosig\ and \zzero\
 variables for these additional electrons are shown in the plots. 
@@ -298,7 +300,7 @@ requirements; only these additional electrons are included in the plots.}
                                                                 If $n_{hits}+n_{outliers}>5$ 
                                                                 require $n_{outliers}/(n_{hits}+n_{outliers})<0.9$} \\
       \zzero                & $|\zzero| < 2$ mm             & $|\zzero\sin(\theta)| < 0.5$ mm \\
-      \dzerosig             & $\dzerosig < 3.5 $            & $\dzerosig < 3$ \\
+      \dzerosig             & $|\dzerosig| < 3.5 $            & $|\dzerosig| < 3$ \\
       Track isolation       & \ptconetwentylt{0.15}         & \same   \\
       Calorimeter isolation & \etconetwentylt{0.3}          & \it{Not Applied} \\
       \hline
@@ -317,7 +319,7 @@ requirements; only these additional electrons are included in the plots.}
        - SCT Hits           & $\geq 4$                      & $\geq 3$\\
        - Silicon `Holes'    & $<3$                          & \same \\
       \zzero                & $|\zzero| < 2$ mm             & $|\zzero\sin(\theta)| < 0.5$ mm \\
-      \dzerosig             & $\dzerosig < 3.5 $            & $\dzerosig < 3$ \\
+      \dzerosig             & $|\dzerosig| < 3.5 $          & $|\dzerosig| < 3$ \\
       \hline
       \multicolumn{2}{l}{\bf Calorimeter Tagged Muons} & \\
       Type                  & Calorimeter Tagged            & \same \\
@@ -369,14 +371,14 @@ muons are used in this analysis: `central' muons with \modetalt{2.5} and
 `forward' muons with \modetabetween{2.5}{2.7}, both reconstructed with the
 \staco\ algorithm, and calorimeter tagged muons with \modetalt{0.1},
 reconstructed without using the muon spectrometer. As for electrons, additional
-selection requirements are imposed to select muons likely to have originated from
+selection requirements are applied to select muons likely to have originated from
 \Z\ boson decays and to reject backgrounds. The muon selection requirements are
 summarised in~\tab{objsel-mu} are described in more detail below. 
 
 \subsection{Central Muon Selection}
 
-Central muons must be either Combined (with a full MS and ID track) or Segment
-Tagged (with a full ID track but only an MS track segment), and have $\pt>7$ GeV
+Central muons may be either \combined\ (with a full MS and ID track) or
+\segmentTagged\ (with a full ID track but only an MS track segment), and have $\pt>7$ GeV
 and \modetalt{2.47}.
 
 As for electrons, track and calorimeter isolation requirements are imposed to
@@ -388,19 +390,19 @@ is \ptconetwentylt{0.15}.  The calorimeter isolation variable is defined in a
 similar way as for electrons, however the size of the `core' deposit of energy
 attributed to the muon is smaller than in the case of electron isolation, and
 varies by calorimeter component depending on the expected muon energy deposition
-pattern (e.g. a single cell in the EM pre-sampler and 3x3 grid of cells in the second
+pattern (e.g. a single cell in the EM pre-sampler, but a 3x3 grid of cells in the second
 layer of the EM calorimeter). The calorimeter isolation requirement is
-\etconetwentylt{0.3}, and as for electrons is only applied to the 2011 data.
+\etconetwentylt{0.3}, and as for electrons is only applied to the 7~\tev\ data.
 
 To ensure that the candidates come from the primary vertex, the magnitude of the
 longitudinal impact parameter with respect to the primary vertex, $|z_0|$ must
-be less than 2 mm for data taken in 2011. For data taken in 2012, the
-requirement is $|z_0\sin(\theta)|<0.5$ mm. The transverse impact parameter
-significance, \dzerosig is required to be less than 3.5(3) in the 7(8)~\tev\
-analysis. The selection for muons is tighter than for electrons since because
-muons do not emit \brem\ to the same extent as electrons the track fit is
-improved, and so the resolution of the impact parameter is improved, so tighter
-requirements can be made whilst maintaining high signal efficiency.
+be less than 2 mm for the 7~\tev\ data. For the 8~\tev\ data, the requirement is
+$|z_0\sin(\theta)|<0.5$ mm. The magnitude of the transverse impact parameter
+significance, $|\dzerosig|$ is required to be less than 3.5(3) in the 7(8)~\tev\
+analysis. The selection for muons is tighter than for electrons, since because
+muons do not emit \brem\ to the same extent as electrons, the track fit and thus
+the resolution of the impact parameter is improved, so tighter requirements can
+be made whilst maintaining high signal efficiency.
 
 The inner detector tracks associated with central muons must have a minimum
 number of hits in each silicon sub-detector to ensure good track quality. For
