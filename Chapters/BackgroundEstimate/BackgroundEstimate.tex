@@ -856,4 +856,33 @@ estimate from the \ffactor\ method.
 \label{table:bg-est-ss}
 \end{table}
 
+\section{Background Shape}
+
+Due to the lack of statistics in the background \mc\ samples it is not possible
+to obtain a background shape using the full event selection. In the 7~\tev\
+data, there are also not enough statistics in the data control regions to obtain
+a background shape. For the 7~\tev\ analysis, the background shape is therefore
+taken from \mc\ with a loosened selection. For the background shape, events are
+required to have an opposite-sign pair of leptons passing all of the selection
+requirements. The second pair is not required to be same-signed, and the lepton
+isolation and \dzero\ significance requirements are not applied.  Apart from
+this, the full event selection, including mass cuts, is applied.  Applying this
+selection, sufficient statistics are obtained from \mc\ to give reasonable
+shapes in distributions of interest (e.g. \Z\ boson mass and \pt, four-lepton
+mass, four-lepton \pt).
+
+To account for the different efficiencies in the loosened selection criteria in
+events with a ``loose'' electron pair and a ``loose'' muon pair, events of each
+type are scaled by the ratio of the number of events which pass the nominal
+selection to the number of events which pass the loosened selection.  
+The ``loose'' electron pair efficiency was measured to be 0.051
+while the ``loose'' muon pair efficiency  was measured to be 0.012.  This
+scaling is used to account for any difference in shape between events with the
+a ``loose'' electron pair and a ``loose'' muon pair.  The distributions thus
+obtained are then normaised to the data-driven
+background estimates shown in~\tab{bg-est-final}. 
+%The statistical error on the full
+%data-driven estimate was propagated to the per bin estimates and combined with
+%the statistical error on the histogram while the systematic error per bin was
+%solely propagated from the data-driven estimate.  
 
