@@ -406,8 +406,8 @@ be made whilst maintaining high signal efficiency.
 
 The inner detector tracks associated with central muons must have a minimum
 number of hits in each silicon sub-detector to ensure good track quality. For
-2011 data the requirements are: at least 1 hit in the B-layer, $2$ in all Pixel
-layers, $6$ in the SCT, and less than 3 holes (no hit in a layer crossed by the
+7~\tev\ data the requirements are: at least 1 hit in the b-layer, $2$ hits in all Pixel
+layers, $6$ hits in the SCT, and less than 3 holes (no hit in a layer crossed by the
 track) in all silicon layers. For all silicon hit conditions, dead sensors count
 as hits observed, not as holes.  Finally, a pseudo-rapidity dependent condition
 on TRT hits and outliers is applied to ensure that the TRT extension of the
@@ -416,15 +416,15 @@ associated as outliers when the extension is not successful): for $|\eta| <
 1.9$, require $\mathrm{hits}+\mathrm{outliers} > 6$ and $\mathrm{outliers} < 0.9
 \times (\mathrm{outliers}+\mathrm{hits})$; for $|\eta| > 1.9$, if
 $\mathrm{hits}+\mathrm{outliers} > 6$, require $\mathrm{outliers} < 0.9 \times
-(\mathrm{outliers}+\mathrm{hits})$. For data taken in 2012, the
-requirements are slightly loosened in order to recover efficiency losses in 2012
-data; this was not found to increase the misidentification rate significantly;
+(\mathrm{outliers}+\mathrm{hits})$. For 8~\tev\ data, the
+requirements are slightly loosened in order to recover efficiency losses arising
+from higher pileup in 2012; this was not found to increase the misidentification rate significantly;
 see~\tab{objsel-mu} for details of the changes.
 
 \subsection{Forward Muon Selection}
 
 Muons in the region \modetabetween{2.5}{2.7} are required to have a full muon
-spectrometer track with hits in each station of the spectrometer and have
+spectrometer track with hits in each station of the spectrometer and must have
 \ptgt{10}. Although the
 inner detector only extends to \modetaeq{2.5}, the complicated nature of the
 magnetic field makes it possible for some muons up to \modetalt{2.6} to be
@@ -437,7 +437,7 @@ parameter estimation, but are otherwise treated as Stand Alone.
 Since not all forward muons
 have tracks, a track isolation requirement is not applied; instead a tighter calorimeter isolation
 requirement is applied to forward muons: \etconetwentylt{0.15}. This is applied
-to both 2011 and 2012 data.
+to both 7~\tev\ and 8~\tev\ data.
 
 For forward muons with an ID track, a set of ID track quality
 cuts are applied to the number of hits in the silicon detectors, similar to the
