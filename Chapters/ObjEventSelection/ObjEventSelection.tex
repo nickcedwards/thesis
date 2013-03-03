@@ -662,6 +662,30 @@ the measurement of the trigger efficiencies in data.
 
 \section{Dilepton Control Plots}
 
+To demonstrate reconstruction perfromance and the performance of modelling
+in the \mc\ compared to the data, a high statistics sample of inclusive \Z\
+decays is used. \Zee\ and \Zmm\ events are selected by requiring events have at
+least two electrons or muons passing all of the lepton selection requirements
+described above. The events must fire either the single electron or the single
+muon trigger, and have at least one lepton matched to the triggering object as
+described above. Two of the selected leptons must form an \ossf\ pair, with
+invariant mass \sstooos. In the events where there is more than one pair
+satisfying this requirement, the pair with invariant mass closest to the \Z\
+mass is chosen. ~\fig{dilep-mass-pt-seven} shows the \dilep\ invariant mass and
+the \dilep\ transverse momentum for the 7~\tev\ data;~\fig{dilep-mass-pt-eight}
+shows the same distributions for the 8~\tev\ data.
+~\figs{dilep-lepkin-seven}{dilep-lepkin-eight}
+show the lepton \pt, \eta\ and \phi\ for the 7 and 8~\tev\ data, respectively.
+Good agreement is seen
+between the data and \mc. A slight excess in the data at low invariant mass and
+low lepton \pt\ is attributed to QCD dijet events, which are not simulated
+in the \mc.
+% Lots more ttbar in 2012 than 2011?? Differences in selection:
+% - Loose++ is looser: loosen cuts on Reta and Rhad
+% - No calo isolation. 
+% COULD be that only ran on leptonic WZ samples for 8 TeV - check
+% also ggZZ for 8TeV.
+
 \begin{figure}[h]
 \centering
 	\subfigure[]{
@@ -676,16 +700,16 @@ the measurement of the trigger efficiencies in data.
 	\subfigure[]{
             \includegraphics[width=0.47\textwidth]{Dilepton7TeV/AllMu_Z_pt}
         }
-    \caption[Dilepton invariant mass and transverse momentum in the 8~\tev\
+    \caption[Dilepton invariant mass and transverse momentum in the 7~\tev\
     data. ]
     {Figures (a) and (b) show distributions of the \dilepton\ invariant mass for \dielectron\ and 
-     \dimuon\ pairs, respectively, in events in the 8~\tev\ data containing a pair of
+     \dimuon\ pairs, respectively, in events in the 7~\tev\ data containing a pair of
     \ossf\ leptons passing all of the lepton selection criteria described
     in Sections~\ref{sec:objsel-el} and~\ref{sec:objsel-mu}. Figures (c) and (d) show the \dilepton\ transverse momentum for
     events passing the same criteria, with the additional requirement that the
     \dilepton\ pair have \sstooos. 
     }
-\label{fig:objsel-mu}
+\label{fig:dilep-mass-pt-seven}
 \end{figure}
 
 \begin{figure}[h]
@@ -711,7 +735,7 @@ the measurement of the trigger efficiencies in data.
     events passing the same criteria, with the additional requirement that the
     \dilepton\ pair have \sstooos. 
     }
-\label{fig:objsel-mu}
+\label{fig:dilep-lepkin-seven}
 \end{figure}
 
 \begin{figure}[h]
