@@ -1355,8 +1355,8 @@ events with $\mZZ>2$~\tev\ and to events with $\pt(Z1)>900$~\gev.
 
 \section{Systematic Uncertainties on \CZZ}
 
-In this section systematic uncertainties associated with the reconstruction
-acceptance \CZZ\ are discussed. %The uncertainties associated with reconstruction
+In this section, the systematic uncertainties associated with the reconstruction
+acceptance \CZZ\ are discussed and estimated. %The uncertainties associated with reconstruction
 %and identification are discussed in Sections~\ref{sec:objSel-syst-el}
 %and~\ref{sec:objSel-syst-mu}, event level
 
@@ -1380,7 +1380,7 @@ theoretical uncertainties associated with the \mc\ simulation used to estimate
      tag electron and differences between the results from different decays, as
      well as due to the limited statistics in the data and \mc\ samples. These
      uncertainties are propagated to \CZZ\ by varying the scale-factor applied
-     to the electrons up and down by its uncertainty; this is carried out
+     to the electrons up and down by the estimated 1-sigma uncertainty; this is carried out
      separately for the reconstruction and identification efficiency, assuming
      the uncertainties to be uncorrelated.
 
@@ -1388,16 +1388,19 @@ theoretical uncertainties associated with the \mc\ simulation used to estimate
     % Pre-sampler energy scale important to correct upstream energy loss. energy
     % scale calibration only gives one scale for calo measurement - the
     % presampler may have a different scale to the other layers
-    Uncertainties arise on the calibration of the electron energy scale, for
-    example from the different method used to measure the energy scale, the
-    choice of \mc\ generator used, the uncertainty on the pre-sampler energy 
-    scale, uncertainty on the amount of dead material, and differences between
-    results from \Zee\ and from \JPsiee\ at low \et, as well as statistical
+    Uncertainties arise on the calibration of the electron energy scale due to: 
+    the different method used to measure the energy scale; the
+    choice of \mc\ generator used; the uncertainty on the pre-sampler energy 
+    scale; uncertainty on the amount of dead material; differences between
+    results from \Zee\ and from \JPsiee\ at low \et; and from statistical
     uncertainties on the measurements. Whilst the energy scale calibration is
     applied to data, the systematic is estimated by varying the energy scale in
     the \mc\ up and down by the uncertainty. For the 7~\tev\ analysis, all
+    energy scale
     uncertainties are considered at once by summing in quadrature the
-    uncertainties on the scale parameter $\alpha$, whilst for 8~\tev\ each source of
+    uncertainties on the scale parameter $\alpha$ then propagating the
+    uncertainty to the uncertainty on \CZZ\ by varying $\alpha$ up and down by
+    the combined uncertainty; for the 8~\tev\ analysis each source of
     uncertainty listed above is considered separately, then the resulting
     changes in \CZZ\ are summed in quadrature.
 
@@ -1405,17 +1408,21 @@ theoretical uncertainties associated with the \mc\ simulation used to estimate
     energy resolution in data, mainly from uncertainty on the sampling term (as the
     constant term is extracted assuming that the sampling term is correctly
     reproduced by the simulation), uncertainty on the background subtraction and
-    from statistics. This is propagated to \CZZ\ by varying the width of the 
-    smearing applied to the \mc\ up and down.
+    from statistics. The uncertainty is propagated to \CZZ\ by varying the
+    amount of energy smearing applied to the \mc\ up and down.
 
     \item {\bf  Isolation/\zzero/\dzero\ Efficiency:} The efficiency of the additional
     electron selection cuts (isolation, \zzero, \dzerosig) is estimated from
-    data using a tag and probe technique on \Zee\ decays. The efficiency is
-    consistent with that estimated by \mc\ within the uncertainties of the 
+    data using a tag and probe technique on \Zee\ decays. For the 7~\tev\
+    analysis, the efficiency observed in the data is consistent with that estimated by \mc\ within the uncertainties of the 
     efficiency measurement. No correction is made to the central value of the
-    \mc, but the uncertainties on this efficiency, arising from uncertainties on
+    \mc, but the uncertainties on the measurement of the efficiency in data, arising from uncertainties on
     the background subtraction and biases in the methodology as well as limited
-    statistics, are propagated to the uncertainty on \CZZ.
+    statistics, are propagated to the uncertainty on \CZZ. For the 8~\tev\
+    analysis, scale-factors are applied to correct the efficiency of the \mc\ to
+    the efficiencies observed in the data, and the uncertainty on the
+    scale-factor is taken as a systematic. The scale-factors applied at 8~\tev,
+    and their uncertainty, are shown in~\fig{iso-ip-sf-eight}.
      
     \item {\bf Impact Parameter Resolution:} The impact parameter
     resolution is observed to be slightly wider in data than in \mc. Whilst no
@@ -1426,6 +1433,23 @@ theoretical uncertainties associated with the \mc\ simulation used to estimate
     both electrons and muons simultaneously.
 
 \end{itemize}
+
+\begin{figure}[h]
+\centering
+	\subfigure[]{
+            \includegraphics[width=0.7\textwidth]{MuonElectronIsoIPSF_130217}
+        }
+    \caption[Effect of the \deltaRlt{0.2} requirement on sensitivity to boosted
+    \fourlep\ systems.]{The minimum \deltaR\ between any two leptons at
+    generator level in a \fourlep\
+    \mc\ sample as a function of (a) mass of the
+    \fourlep\ system and (b) transverse momentum of the leading \Z. A \ZZllll\
+    sample generated with aTGCs is used, with $\ffourg=0.4$ and no form-factor
+    applied, in order to give statistics at high centre
+    of mass energies. The
+    horizontal red line shows the \deltaRlt{0.2} cut. }
+\label{fig:iso-ip-sf-eight} 
+\end{figure}
 
 \subsubsection{Muon Systematic Uncertainties}
 
