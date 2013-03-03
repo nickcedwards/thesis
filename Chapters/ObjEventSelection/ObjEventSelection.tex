@@ -986,36 +986,33 @@ requirements. This is described by the \intro{reconstruction acceptance factor,
 \begin{equation}
 C_{ZZ}= \epsilon_{trig} \times \epsilon_{event} \times \epsilon_{lep} \times \alpha_{reco}
 \end{equation}
-
 where $\epsilon_{trig}$ is the trigger efficiency, $\epsilon_{event}$ is 
 the efficiency of the event level cuts, and
 $\epsilon_{lep} =\epsilon_{lep1}\epsilon_{lep2}\epsilon_{lep3}\epsilon_{lep4}$ is the product of the 
 individual reconstruction and selection efficiencies for the four leptons. 
-$\alpha_{reco}$ is the reconstruction to 
-fiducial phase space correction which corrects for small differences between the
+$\alpha_{reco}$ corrects for small differences between the
 regions of phase space covered by detector acceptance and the definition of the
-fiducial phase space; it also accounts for effects of detector resolution. 
+fiducial phase space; it also accounts for the effects of detector resolution and
+contamination from $\ZZ\ra\tau\tau\ell\ell$ decays.
 
 In practice, \CZZ\ is estimated from \mc\ by dividing the number of events in a
 \ZZllll\ sample which pass the selection requirements by the number of those events
-which were generated inside the fiducial phase space. This is shown in the
-following equation:
+which were generated inside the fiducial phase space:
 
 \begin{equation}
 C_{ZZ}= \frac{ N^{\rm MC\ Pass\ All\ Cuts}_{{\rm Reconstructed}\ ZZ} \times
 SF }{ N^{{\rm MC\ Fiducial\ Volume}}_{{\rm Generated}\ ZZ} }
 \end{equation}
-
 where {\it SF} is the event level scale factor applied to the \mc\ to correct
 lepton selection efficiencies and trigger efficiencies to those observed in
-data. The number in the denominator includes contributions from
+data. The number in the numerator includes contributions from
 $\ZZ\ra\tau\tau\ell\ell$ decays (and to a smaller extent
 $\ZZ\ra\tau\tau\tau\tau$), where the taus decay leptonically. The numerator also
 includes a contribution from events generated outside the fiducial volume but
 which are reconstructed as within, for example an event with a generated lepton
-with a \pt\ just lower than the lepton \pt\ threshold which is reconstructed
-with an energy just above the threshold. Since the numerator is not a subset of
-the denominator due to these two contributions, \CZZ\ is not a true efficiency. 
+with \pt\ just lower than the lepton \pt\ threshold which is reconstructed
+with \pt\ just above the threshold. Since the numerator is thus not a subset of
+the denominator due to these two contaminations, \CZZ\ is not a true efficiency. 
 
 \CZZ\ is calculated separately for each of the three final states (\eeee, \mmmm\
 and \eemm), and separately for the \ZZ\ and \ZZs\ selection and for the 7 \tev\
