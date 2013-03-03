@@ -437,26 +437,27 @@ parameter estimation, but are otherwise treated as Stand Alone.
 Since not all forward muons
 have tracks, a track isolation requirement is not applied; instead a tighter calorimeter isolation
 requirement is applied to forward muons: \etconetwentylt{0.15}. This is applied
-to both 7~\tev\ and 8~\tev\ data.
+to both the 7~\tev\ and the 8~\tev\ data.
 
-For forward muons with an ID track, a set of ID track quality
+For forward muons with an ID track, a set of quality
 cuts are applied to the number of hits in the silicon detectors, similar to the
-cuts for central muons but slightly looser. For data taken in 2011
-the requirements are: at least 1 hit in the B-layer, $2$ in all Pixel layers,
-$4$ in the SCT, and less than 3 holes (no hit in a layer crossed by the track)
-in all silicon layers. No cut is applied to the number of TRT hits. As for
+cuts for central muons but slightly looser. For 7~\tev\ data,
+the requirements are: at least 1 hit in the b-layer, $2$ in all Pixel layers,
+$4$ in the SCT, and less than 3 holes 
+in all silicon layers. No cut is applied to the number of TRT hits, as forward
+muon tracks are generall outside of the acceptance of the TRT. As for
 central muons, the requirements were relaxed slightly for 2012 data.
-Additionally, forward muons with an ID track are required to satisfy the same
+Forward muons with an ID track are required to satisfy the same
 \zzero\ and \dzerosig\ requirements as central muons.
 
 \subsection{Calorimeter Tagged Muon Selection}
 
 Calorimeter tagged muons are used to recover efficiency at \modetalt{0.1} where
-there is a gap in the muon-spectrometer. They must have \ptgt{20}. The reason
-for this higher \pt\ requirement is the higher level of fakes from jets and
+there is a gap in the muon-spectrometer. Due to the higher level of fakes from jets and
 electrons at low \pt, and the difficulty of measuring the identification
-efficiency for $\pt<20\gev$. They are required to pass either the cut or
-likelihood based calorimeter tagged muon identification requirements described
+efficiency at low \pt, the \pt\ requirement for calorimeter tagged muons is
+\ptgt{20}. They are required to pass either the cut or
+the likelihood based calorimeter tagged muon identification requirements described
 in~\sec{reco-mu-reco}, and are not selected if they overlap with a selected
 central muon within \deltaRlt{0.1}. Calorimeter tagged muons must satisfy the
 same track and calorimeter isolation, ID track quality, \zzero\ and \dzerosig\
@@ -488,12 +489,14 @@ object and have \ptgt{25}. Any additional muons in the event are required to pas
 the kinematic (\pt,$\eta$) selection requirements, and the distributions of the isolation, \dzerosig\ and \zzero\
 variables for these additional muons are shown in the plots. 
 
-As for electrons, in the \WZ\ and \ZZ\ processes the additional muons entering
-the plot are mainly prompt isolated leptons from \W\ or \Z\ decays. In the \Zll,
+As for electrons, in the \WZ\ and \ZZ\ processes the additional muons 
+are mainly prompt isolated leptons from \W\ or \Z\ decays. In the \Zll,
 \ttbar\ and \WW\ processes, the additional muons mainly arise from muons from
 hadronic decays in jets or `punch-through' of hadrons to the muon spectrometer.
 These `background' muons tend to be less isolated, and have broader \dzerosig\
-and \zzero\ distributions.
+and \zzero\ distributions. Whilst the \mc\ models the shape of the distribution
+fairly well, the number of additional muons observed in date is much higher than
+predicted by the simulation.
 
 \begin{figure}[h]
 \centering
@@ -514,8 +517,9 @@ and \zzero\ distributions.
     \sstooos\ in 7~\tev\ data.]
     {Distributions of (a) relative calorimeter isolation,
     (b) relative track isolation, (c) impact parameter significance \dzerosig\ and
-    (d) longitudinal impact parameter \zzero\ for additional muons  in 7~\tev\ data
-    in events containing an \ossf\ \dilepton\ pair with invariant mass \sstooos\.
+    (d) longitudinal impact parameter \zzero\ for additional muons
+    in events containing an \ossf\ \dilepton\ pair with invariant mass \sstooos\
+    in the 7~\tev\ data.
     The leptons forming the \dilepton\ pair are required to pass all of the
     selection requirements described above, and one must match to the triggering
     object with \ptgt{25}. Any additional muons, other than those forming the
@@ -534,7 +538,7 @@ and~\ref{sec:reco-mu-triggers}. For the \eemm\ final state, the event may be sel
 the electron or the muon trigger. The triggers used in the
 different data taking periods and the
 associated integrated luminosities are shown in~\tab{objSel-trigger-el} for the electron
-trigger and~\tab{objSel-trigger-mu} for the muon trigger.
+triggers and~\tab{objSel-trigger-mu} for the muon triggers.
 
 \begin{table}[htbp]
 \begin{center}
@@ -543,13 +547,13 @@ trigger and~\tab{objSel-trigger-mu} for the muon trigger.
 \hline \hline
 Period & Trigger & \pt\ Threshold (GeV) & Int. Luminosity (\ifb) \\
 \hline
-{ \bf 2011 } & & & \\
+{ \bf 2011 (7~\tev\ data) } & & & \\
 B - I & \texttt{e20\_medium} & 20 &  1.65 \\
 J - K & \texttt{e22\_medium} & 22 & 0.91 \\
 L - M & \texttt{e22vh\_medium1} & 22 & 2.76 \\ \hline
 %L - M & \texttt{e22vh\_medium1} & 22 & 2.76 & Variable L1 thresholds; hadronic leakage requirement \\ \hline
 \hline
-{ \bf 2012 } & & & \\
+{ \bf 2012 (8~\tev\ data) } & & & \\
 A - M & \multicolumn{1}{p{4cm}}{\centering \texttt{e24vhi\_medium1} $||$ \texttt{e60\_medium1}} & 24 & \LumiTotalReadyTwentyTwelve \\
 \hline\hline
 \end{tabular}
@@ -579,20 +583,23 @@ A - M & \multicolumn{1}{p{4cm}}{\centering \texttt{mu24i\_tight} $||$ \texttt{mu
 \label{table:objSel-trigger-mu}
 \end{table}
 
-At least one selected lepton in triggered events must match to the
+At least one of the selected leptons in triggered events must match to the
 object that caused the trigger to fire. Such leptons are referred to as 
-\intro{trigger matched} leptons. To reduce uncertainties associated with the
+\intro{trigger-matched} leptons. To reduce uncertainties associated with the
 trigger efficiency measurement, to be considered trigger matched,
 a lepton must have a \pt\ such that it is on the efficiency plateau of the
 trigger, and must also satisfy the same identification requirements as
-used in the trigger. Trigger matched electrons in both 2011 and 2012 data
+used in the trigger. Trigger-matched electrons in both the 7~\tev\ and the
+8~\tev data
 are required to have \ptgt{25}, cluster \modetalt{2.47} and to pass the \mediumPP\
 requirements. Trigger matched muons are required to be combined muons, have
-\modetalt{2.4} and have $\pt > 20 (25)$ \gev\ in 2011 (2012) data.
+\modetalt{2.4} and have $\pt > 20 (25)$ \gev\ in the 7(8)~\tev\ data.
+
+\subsection{Trigger Efficiencies}
 
 The efficiency for a single lepton to fire the trigger is measured in data using
-\Zll\ events. Events are triggered on by a `tag' lepton, then the efficiency for
-the second `probe' lepton to fire the trigger is measured. By comparing the
+\Zll\ events. Events are triggered on by a `tag' lepton; the efficiency for
+the second `probe' lepton to fire the trigger is then measured. By comparing the
 efficiencies in data and in \mc\ simulation, scale-factors are derived to
 correct the single lepton trigger efficiencies in the simulation to those
 observed in data.  This is translated to an event-level trigger efficiency
@@ -611,9 +618,10 @@ the corresponding efficiency simulated in the MC.
 %The systematic uncertainty associated with the scale factors for
 %muon triggers is $0.2\%$ and for electron triggers is $\sim1\%$. 
 
-Event-level trigger efficiencies for \ZZ\ events passing the full event selection
-described below, derived from simulation after applying the scale-factors
-described above, are listed in~\tab{triggerMCeff}.
+Event-level trigger efficiencies for \ZZ\ events passing the full event
+selection described in the next section are listed in~\tab{triggerMCeff}. They
+are derived from simulation after applying the trigger efficiency scale-factors
+described above.
 
 \begin{table}[htbp]
 \begin{center}
@@ -639,16 +647,15 @@ Channel & \multicolumn{3}{c}{Trigger Efficiency [\%]} \\
 \end{tabular}
 \defaultArrayStretch
 \end{center}
-\caption[Trigger efficiencies for \ZZ\ events after all selection requirments
-excluding requirement and the requirement for a reconstructed lepton to match to
+\caption[Trigger efficiencies for \ZZ\ events passing the full event selection 
+excluding the trigger requirement and the requirement for a reconstructed lepton to match to
 the triggering object.]
-{Trigger efficiencies for \ZZ\ events after all selection requirments
-excluding requirement and the requirement for a reconstructed lepton to match to
-the triggering object
-The trigger efficiencies are estimated using \ZZ\ \mc, applying scale-factors to
+{Trigger efficiencies for \ZZ\ events passing the full event selection 
+excluding the trigger requirement and the requirement for a reconstructed lepton to match to
+the triggering object. The trigger efficiencies are estimated using \ZZ\ \mc, applying scale-factors to
 correct the single lepton trigger-efficiency to that observed in data. The first
-error is due to limited \mc\ statistics, and the second is due uncertainties on
-the measurement of the single lepton trigger efficiencies in data.
+error is due to \mc\ statistics, and the second is due uncertainties on
+the measurement of the trigger efficiencies in data.
 }
 \label{table:triggerMCeff}
 \end{table}
