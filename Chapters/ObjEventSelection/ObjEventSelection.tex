@@ -606,7 +606,7 @@ observed in data.  This is translated to an event-level trigger efficiency
 scale-factor using the following formula:
 
 \begin{equation}
-\label{eq:triggerEffSF}
+\label{eqn:triggerEffSF}
   SF =  { \frac{ {1 - \prod_{n=1}^{N_l} (1 - \epsilon_{Data,l_n})}} {1 - \prod_{n=1}^{N_l} (1 - \epsilon_{MC,l_n})} }
 \end{equation}
 where $N_l$ is the number of leptons passing the trigger-matching kinematic and
@@ -1412,7 +1412,7 @@ theoretical uncertainties associated with the \mc\ simulation used to estimate
     amount of energy smearing applied to the \mc\ up and down.
 
     \item {\bf  Isolation/\zzero/\dzero\ Efficiency:} The efficiency of the additional
-    electron selection cuts (isolation, \zzero, \dzerosig) is estimated from
+    electron selection requirements (isolation, \zzero, \dzerosig) is estimated from
     data using a tag and probe technique on \Zee\ decays. For the 7~\tev\
     analysis, the efficiency observed in the data is consistent with that estimated by \mc\ within the uncertainties of the 
     efficiency measurement. No correction is made to the central value of the
@@ -1459,9 +1459,12 @@ Efficiency-correction scale-factors for the
      Similarly to the electrons, uncertainties arise from the measurement of the
      muon reconstruction efficiency in data.
 
-    \item {\bf Energy Scale:} Uncertainties on the muon energy scale are
+    \item {\bf Energy Scale:} For the 7~\tev\ analysis, uncertainties on the muon energy scale are
     conservatively estimated by taking the difference between the values of \CZZ\
-    obtained with and without the energy scale correction applied.
+    obtained with and without the energy scale correction applied. For the
+    8~\tev\ analysis, the systematic is estimated by varying the energy scale
+    correction applied to the \mc\ up and down by the 1-sigma uncertainty on the
+    correction.
 
     \item {\bf Energy Resolution:} The energy resolution is measured separately
     for the muon inner detector and muon spectrometer track. Uncertainties are
@@ -1471,12 +1474,20 @@ Efficiency-correction scale-factors for the
     \item {\bf Isolation/\zzero/\dzero\ Efficiency:} Similarly to the electron case,
     the efficiency of the additional muon selection cuts (isolation, \zzero,
     \dzerosig) is estimated from data using a tag and probe technique on \Zmm\
-    decays, and as for electrons the data and \mc\ are found to be in good
-    agreement, so no correction is made to the central value of the \mc\ and
-    uncertainties on the efficiency are propagated to the uncertainty on \CZZ.
+    decays. As for electrons, the 7~\tev\ data and \mc\ are found to be in 
+    agreement with the uncertainty of the scale-factor measurement, so no correction is made to the central value of the \mc\ and
+    uncertainties on the efficiency are propagated to the uncertainty on \CZZ. For the 8~\tev\
+    analysis, scale-factors are applied to correct the efficiency of the \mc\, and the uncertainty on the
+    scale-factor is taken as a systematic. The scale-factors applied at 8~\tev,
+    and their uncertainty, are shown in~\fig{iso-ip-sf-eight}.
+
 \end{itemize}
 
 \subsubsection{Trigger Systematic Uncertainty}
+
+Uncertainties arise on the measurement of the single-lepton efficiency in data.
+These are propagated to \CZZ\ by varying the single-lepton trigger efficiencies
+in~\eqn{triggerEffSF} up and down by their 1-sigma uncertainties.
 
 \subsubsection{Theoretical Systematic Uncertainty}
 
