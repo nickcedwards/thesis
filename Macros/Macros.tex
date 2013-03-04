@@ -2,8 +2,8 @@
 
 
 
-\newcommand{\ndiv}[2]{\FPdiv\p{#1}{#2}\FPupn\p{\p{} 2 round}\ensuremath{\FPprint\p}}
-\newcommand{\nmult}[2]{\FPmul\p{#1}{#2}\FPupn\p{\p{} 2 round}\ensuremath{\FPprint\p}}
+\newcommand{\ndiv}[3][2]{\FPdiv\p{#2}{#3}\FPupn\p{\p{} #1 round}\ensuremath{\FPprint\p}}
+\newcommand{\nmult}[3][2]{\FPmul\p{#2}{#3}\FPupn\p{\p{} #1 round}\ensuremath{\FPprint\p}}
 
 \newcommand{\fig}[1]{Figure~\ref{fig:#1}}
 \newcommand{\figs}[2]{Figures~\ref{fig:#1} and~\ref{fig:#2}}
