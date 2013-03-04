@@ -1491,10 +1491,13 @@ in~\eqn{triggerEffSF} up and down by their 1-sigma uncertainties.
 
 \subsubsection{Theoretical Systematic Uncertainty}
 
-Theoretical uncertainties arise to the \CZZ\ calculation due to different
-kinematic distributions obtained from different from \mc\ programs, which arise
-for example from the parton shower model, the choice of PDF set and the choice
-of scale. These are evaluated by comparing three \qqZZ\ \mc\ samples, generated
+Theoretical uncertainties to the \CZZ\ estimation arise due to the choice of
+factorisation and renormalisation scale, the choice of PDF set, and differences
+arising due to different kinematic distributions obtained from different from \mc\
+generators, due to, for example, different parton shower models and different
+models for QED radiation.
+
+These are evaluated by comparing three \qqZZ\ \mc\ samples, generated
 using different generators, PDF sets and scales. For the 7~\tev\ analysis, a
 comparison is made between the default \powhegbox\ generated using the CT10 PDF
 set and scale \mZZ (or 1/2 \mZZ??), \pythia, generated using the MRST modified LO PDF set and scale
@@ -1511,6 +1514,12 @@ the \CZZ\ from \powhegbox\ and \ggtwoZZ, weighted by the relative contributions
 of the $qq$ and $gg$ processes to the fiducial \cx; this final number is the one
 used in the \cx\ calculation. The largest difference between \powhegbox\ and
 either \pythia\ or \sherpa\ is taken as the systematic uncertainty.
+
+The effect of the scale and PDF set are assessed by
+reweighting the \powhegbox\ sample to a scale of $\frac{1}{4}$\mZZ\ and to a
+scale of \mZZ, from its default scale of $\frac{1}{2}$\mZZ, and by reweighting
+to the MSTW08 PDF set. This is done of the 8~\tev\ analysis; the resulting
+systematics 
 
 \begin{table}[htbp]
     \centering
@@ -1529,10 +1538,10 @@ either \pythia\ or \sherpa\ is taken as the systematic uncertainty.
                     & \ZZSevenTeVCzzZZPowhegBoxEEMM\ $\pm$ \ZZSevenTeVCzzZZStatPowhegBoxEEMM 
                     & \ZZSevenTeVCzzZZPowhegBoxLLLL\ $\pm$ \ZZSevenTeVCzzZZStatPowhegBoxLLLL \\
 
-        \sherpa\    & \ZZSevenTeVCzzZZStatSherpaEEEE\ $\pm$ \ZZSevenTeVCzzZZStatSherpaEEEE 
-                    & \ZZSevenTeVCzzZZStatSherpaMMMM\ $\pm$ \ZZSevenTeVCzzZZStatSherpaMMMM
-                    & \ZZSevenTeVCzzZZStatSherpaEEMM\ $\pm$ \ZZSevenTeVCzzZZStatSherpaEEMM 
-                    & \ZZSevenTeVCzzZZStatSherpaLLLL\ $\pm$ \ZZSevenTeVCzzZZStatSherpaLLLL \\
+        \sherpa\    & \ZZSevenTeVCzzZZSherpaEEEE\ $\pm$ \ZZSevenTeVCzzZZStatSherpaEEEE 
+                    & \ZZSevenTeVCzzZZSherpaMMMM\ $\pm$ \ZZSevenTeVCzzZZStatSherpaMMMM
+                    & \ZZSevenTeVCzzZZSherpaEEMM\ $\pm$ \ZZSevenTeVCzzZZStatSherpaEEMM 
+                    & \ZZSevenTeVCzzZZSherpaLLLL\ $\pm$ \ZZSevenTeVCzzZZStatSherpaLLLL \\
 
         \pythia     & \ZZSevenTeVCzzZZPythiaEEEE\ $\pm$ \ZZSevenTeVCzzZZStatPythiaEEEE 
                     & \ZZSevenTeVCzzZZPythiaMMMM\ $\pm$ \ZZSevenTeVCzzZZStatPythiaMMMM
@@ -1568,10 +1577,10 @@ either \pythia\ or \sherpa\ is taken as the systematic uncertainty.
                     & \ZZSevenTeVCzzZZsPowhegBoxEEMM\ $\pm$ \ZZSevenTeVCzzZZsStatPowhegBoxEEMM 
                     & \ZZSevenTeVCzzZZsPowhegBoxLLLL\ $\pm$ \ZZSevenTeVCzzZZsStatPowhegBoxLLLL \\
 
-        \sherpa\    & \ZZSevenTeVCzzZZsStatSherpaEEEE\ $\pm$ \ZZSevenTeVCzzZZsStatSherpaEEEE 
-                    & \ZZSevenTeVCzzZZsStatSherpaMMMM\ $\pm$ \ZZSevenTeVCzzZZsStatSherpaMMMM
-                    & \ZZSevenTeVCzzZZsStatSherpaEEMM\ $\pm$ \ZZSevenTeVCzzZZsStatSherpaEEMM 
-                    & \ZZSevenTeVCzzZZsStatSherpaLLLL\ $\pm$ \ZZSevenTeVCzzZZsStatSherpaLLLL \\
+        \sherpa\    & \ZZSevenTeVCzzZZsSherpaEEEE\ $\pm$ \ZZSevenTeVCzzZZsStatSherpaEEEE 
+                    & \ZZSevenTeVCzzZZsSherpaMMMM\ $\pm$ \ZZSevenTeVCzzZZsStatSherpaMMMM
+                    & \ZZSevenTeVCzzZZsSherpaEEMM\ $\pm$ \ZZSevenTeVCzzZZsStatSherpaEEMM 
+                    & \ZZSevenTeVCzzZZsSherpaLLLL\ $\pm$ \ZZSevenTeVCzzZZsStatSherpaLLLL \\
 
         \pythia     & \ZZSevenTeVCzzZZsPythiaEEEE\ $\pm$ \ZZSevenTeVCzzZZsStatPythiaEEEE 
                     & \ZZSevenTeVCzzZZsPythiaMMMM\ $\pm$ \ZZSevenTeVCzzZZsStatPythiaMMMM
