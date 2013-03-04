@@ -8,4 +8,4 @@ all :
 	pdflatex ${NAME}.tex
 	pdflatex ${NAME}.tex
 clean :
-	rm -f *.pdf *.aux *.log *.out *.toc *.bbl *.1 *.mp
+	rm -f ${NAME}.pdf *.aux *.log *.out *.toc *.bbl *.1 *.mp
