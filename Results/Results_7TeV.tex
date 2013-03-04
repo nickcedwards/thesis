@@ -425,15 +425,15 @@
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % CZZ SevenTeV
 % Corrected to 7 TeV, 20/1/2013, src=ZZ 7TeV Paper Suport
+% Multiplied by 2.7 %
 %% ZZ
-\def\czzFudge{1.027}
-%\def\ZZSevenTeVCzzZZEEEE                    {\nmult[3]{0.428}{\czzFudge}}
-\FPupn\ZZSevenTeVCzzZZEEEE                    {0.428 \czzFudge * 2 round}
-\def\ZZSevenTeVCzzZZMMMM                    {\nmult[3]{0.687}{\czzFudge}}
+\def\ZZSevenTeVCzzZZEEEE                    {0.439}
+\def\ZZSevenTeVCzzZZMMMM                    {0.705}
 \def\ZZSevenTeVCzzZZEEMM                    {0.546}
-%\def\ZZSevenTeVCzzZZLLLL {\averageCzz{1}{2}{3}}
-\def\ZZSevenTeVCzzZZLLLL
-{\averageCzz{\ZZSevenTeVCzzZZEEEE{}}{2}{\ZZSevenTeVCzzZZEEMM{}}}
+\def\ZZSevenTeVCzzZZLLLL                    {0.559}
+%\def\ZZSevenTeVCzzZZEEEE                    {0.428}
+%\def\ZZSevenTeVCzzZZMMMM                    {0.687}
+%\def\ZZSevenTeVCzzZZEEMM                    {0.546}
 %\def\ZZSevenTeVCzzZZLLLL                    {0.552}
 
 \def\ZZSevenTeVCzzZZStatEEEE                {0.005}
@@ -447,10 +447,14 @@
 \def\ZZSevenTeVCzzSystZZLLLL{x.xx}
 
 % CZZ PowhegBox Only
-\def\ZZSevenTeVCzzZZPowhegBoxEEEE{0.426}
-\def\ZZSevenTeVCzzZZPowhegBoxMMMM{0.682}
+%\def\ZZSevenTeVCzzZZPowhegBoxEEEE{0.426}
+%\def\ZZSevenTeVCzzZZPowhegBoxMMMM{0.682}
+%\def\ZZSevenTeVCzzZZPowhegBoxEEMM{0.543}
+%\def\ZZSevenTeVCzzZZPowhegBoxLLLL{0.549}
+\def\ZZSevenTeVCzzZZPowhegBoxEEEE{0.437}
+\def\ZZSevenTeVCzzZZPowhegBoxMMMM{0.700}
 \def\ZZSevenTeVCzzZZPowhegBoxEEMM{0.543}
-\def\ZZSevenTeVCzzZZPowhegBoxLLLL{0.549}
+\def\ZZSevenTeVCzzZZPowhegBoxLLLL{0.556}
 
 \def\ZZSevenTeVCzzZZStatPowhegBoxEEEE{0.005}
 \def\ZZSevenTeVCzzZZStatPowhegBoxMMMM{0.004}
@@ -458,10 +462,14 @@
 \def\ZZSevenTeVCzzZZStatPowhegBoxLLLL{0.002}
 
 % CZZ for gg2ZZ
-\def\ZZSevenTeVCzzZZggtwoZZEEEE{0.466}
-\def\ZZSevenTeVCzzZZggtwoZZMMMM{0.765}
+%\def\ZZSevenTeVCzzZZggtwoZZEEEE{0.466}
+%\def\ZZSevenTeVCzzZZggtwoZZMMMM{0.765}
+%\def\ZZSevenTeVCzzZZggtwoZZEEMM{0.596}
+%\def\ZZSevenTeVCzzZZggtwoZZLLLL{0.606}
+\def\ZZSevenTeVCzzZZggtwoZZEEEE{0.478}
+\def\ZZSevenTeVCzzZZggtwoZZMMMM{0.785}
 \def\ZZSevenTeVCzzZZggtwoZZEEMM{0.596}
-\def\ZZSevenTeVCzzZZggtwoZZLLLL{0.606}
+\def\ZZSevenTeVCzzZZggtwoZZLLLL{0.614}
 
 \def\ZZSevenTeVCzzZZStatggtwoZZEEEE{0.002}
 \def\ZZSevenTeVCzzZZStatggtwoZZMMMM{0.002}
@@ -469,10 +477,14 @@
 \def\ZZSevenTeVCzzZZStatggtwoZZLLLL{0.001}
 
 % CZZ for Sherpa
-\def\ZZSevenTeVCzzZZSherpaEEEE{0.437}
-\def\ZZSevenTeVCzzZZSherpaMMMM{0.689}
+%\def\ZZSevenTeVCzzZZSherpaEEEE{0.437}
+%\def\ZZSevenTeVCzzZZSherpaMMMM{0.689}
+%\def\ZZSevenTeVCzzZZSherpaEEMM{0.550}
+%\def\ZZSevenTeVCzzZZSherpaLLLL{0.557}
+\def\ZZSevenTeVCzzZZSherpaEEEE{0.449}
+\def\ZZSevenTeVCzzZZSherpaMMMM{0.707}
 \def\ZZSevenTeVCzzZZSherpaEEMM{0.550}
-\def\ZZSevenTeVCzzZZSherpaLLLL{0.557}
+\def\ZZSevenTeVCzzZZSherpaLLLL{0.564}
 
 \def\ZZSevenTeVCzzZZStatSherpaEEEE{0.004}
 \def\ZZSevenTeVCzzZZStatSherpaMMMM{0.004}
@@ -480,10 +492,14 @@
 \def\ZZSevenTeVCzzZZStatSherpaLLLL{0.002}
 
 % CZZ for Pythia
-\def\ZZSevenTeVCzzZZPythiaEEEE{0.425}
-\def\ZZSevenTeVCzzZZPythiaMMMM{0.695}
+%\def\ZZSevenTeVCzzZZPythiaEEEE{0.425}
+%\def\ZZSevenTeVCzzZZPythiaMMMM{0.695}
+%\def\ZZSevenTeVCzzZZPythiaEEMM{0.549}
+%\def\ZZSevenTeVCzzZZPythiaLLLL{0.555}
+\def\ZZSevenTeVCzzZZPythiaEEEE{0.436}
+\def\ZZSevenTeVCzzZZPythiaMMMM{0.713}
 \def\ZZSevenTeVCzzZZPythiaEEMM{0.549}
-\def\ZZSevenTeVCzzZZPythiaLLLL{0.555}
+\def\ZZSevenTeVCzzZZPythiaLLLL{0.562}
 
 \def\ZZSevenTeVCzzZZStatPythiaEEEE{0.004}
 \def\ZZSevenTeVCzzZZStatPythiaMMMM{0.004}
