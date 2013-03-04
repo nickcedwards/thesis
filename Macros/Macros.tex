@@ -4,7 +4,7 @@
 
 \newcommand{\ndiv}[3][2]{\FPdiv\p{#2}{#3}\FPupn\p{\p{} #1 round}\ensuremath{\FPprint\p}}
 \newcommand{\nmult}[3][2]{\FPmul\p{#2}{#3}\FPupn\p{\p{} #1 round}\ensuremath{\FPprint\p}}
-\newcommand{\averageCzz}[3]{#1 #2 #3}
+\newcommand{\averageCzz}[3]{\FPadd\p{#1}{#2}\FPupn\p{\p{} 3 round}\ensuremath{\FPprint\p}}
 %\newcommand{\averageCzz}[3]{\FPadd\p{#1}{#2}\FPmul\q{2}{#3}\FPadd\r\p\q\FPdiv\s\r{}{4}\FPupn\s{\s{} 3 round}\ensuremath{\FPprint\s}}
 
 \newcommand{\fig}[1]{Figure~\ref{fig:#1}}
