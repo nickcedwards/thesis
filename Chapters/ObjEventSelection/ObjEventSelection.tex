@@ -1505,11 +1505,10 @@ set to the arithmetic mean of the squared transverse masses of the two outgoing
 particles ($(m^{2}_{T}(Z1)+m^{2}_{T}(Z2)/2$), and
 \sherpa, generated using CTEQ6L1 PDF set and scale set to
 ($(m^{2}_{}(Z1)+p^{2}_{T}(Z1)+m^{2}_{}(Z2)p^{2}_{T}(Z2)/2$), and with a different
-model for QED radiation.
-
+model for QED radiation as described in~\sec{gen-comparisons}.
 Table~\ref{table:objSel-syst-genComp-seven} compares the \CZZ\ for the \qqZZ\
 process obtained from \powhegbox, \sherpa\ and \pythia, as well as the for the
-\CZZ\ process obtained from \ggtwoZZ. Also shown combination of
+\ggZZ\ process obtained from \ggtwoZZ. Also shown is the combination of
 the \CZZ\ from \powhegbox\ and \ggtwoZZ, weighted by the relative contributions
 of the $qq$ and $gg$ processes to the fiducial \cx; this final number is the one
 used in the \cx\ calculation. The largest difference between \powhegbox\ and
@@ -1517,9 +1516,11 @@ either \pythia\ or \sherpa\ is taken as the systematic uncertainty.
 
 The effect of the scale and PDF set are assessed by
 reweighting the \powhegbox\ sample to a scale of $\frac{1}{4}$\mZZ\ and to a
-scale of \mZZ, from its default scale of $\frac{1}{2}$\mZZ, and by reweighting
-to the MSTW08 PDF set. This is done of the 8~\tev\ analysis; the resulting
-systematics 
+scale of \mZZ from its default scale of $\frac{1}{2}$\mZZ, and by reweighting
+to the MSTW08 PDF set. This is done for the 8~\tev\ analysis; the resulting
+variations on \CZZ\ are small, and are much smaller than the systematic from comparing
+different generators, so for the 7~\tev\ analysis the systematic from generator
+comparisons is taken to cover differences arising from PDF set and scale choice.
 
 \begin{table}[htbp]
     \centering
@@ -1714,12 +1715,12 @@ systematics
 
 \subsection{Systematic Uncertainty Estimates}
 
-The effect of each of the systematic uncertainties on \CZZ\ is estimated using
+The effect of each of the systematic uncertainties described above on \CZZ\ is estimated using
 the \powhegbox\ and \ggZZ\ \mc. The resulting shifts in the value of \CZZ\ in
 percent are shown in~\tab{objSel-syst-seven} for the 7~\tev\ analysis and
 in~\tab{objSel-syst-eight} for the 8~\tev\ analysis, as well as the total
-uncertainty obtained by summing the shift from each source in quadrature. The
-dominant sources of uncertainty are the electron and muon reconstruction,
+uncertainty obtained by summing each source in quadrature. The
+dominant sources of systematic uncertainty are the electron and muon reconstruction,
 identification and isolation/z0/d0Sig efficiencies. The
 uncertainty in the \eeee\ final state is over twice as large as for the \mmmm\
 final state, due to the larger reconstruction and identification uncertainties
@@ -1812,7 +1813,7 @@ for electrons.
    in percent, by \ZZ\ final state, for the 7~\tev\ analysis. The top table
    gives uncertainties to the \ZZ\ selection, the bottom to the \ZZs\ selection.
    The fourth column gives the weighted average
-   of the three final states; the total uncertainty is also give, which is the
+   of the three final states. The total uncertainty is also given, which is the
    sum in quadrature of the individual uncertainties.} 
    \label{table:objSel-syst-seven}
 \end{table}
@@ -1858,51 +1859,52 @@ for electrons.
       {\bf Total \CZZ\ Uncertainty}         & \ZZEightTeVSystematicZZCzzTotalEEEE         & \ZZEightTeVSystematicZZCzzTotalMMMM 
                                             & \ZZEightTeVSystematicZZCzzTotalEEMM         & \ZZEightTeVSystematicZZCzzTotalLLLL \\
       \hline\hline
-      \\
-      \hline\hline
-      \ZZs\ Selection, 8~\tev\               & \eeee           & \mmmm                  & \eemm                    & \llll                      \\
-      \hline
-      \multicolumn{4}{l}{\bf Reconstruction Uncertainties (\%)} \\
-      $e$ energy scale                      & \ZZEightTeVSystematicZZsEScaleEEEE           & \ZZEightTeVSystematicZZsEScaleMMMM    
-                                            & \ZZEightTeVSystematicZZsEScaleEEMM           & \ZZEightTeVSystematicZZsEScaleLLLL    \\
-      $e$ energy resolution                 & \ZZEightTeVSystematicZZsESmearEEEE           & \ZZEightTeVSystematicZZsESmearMMMM    
-                                            & \ZZEightTeVSystematicZZsESmearEEMM           & \ZZEightTeVSystematicZZsESmearLLLL    \\
-      $e$ reconstruction efficiency         & \ZZEightTeVSystematicZZsERecoEEEE            & \ZZEightTeVSystematicZZsERecoMMMM     
-                                            & \ZZEightTeVSystematicZZsERecoEEMM            & \ZZEightTeVSystematicZZsERecoLLLL     \\
-      $e$ identification efficiency         & \ZZEightTeVSystematicZZsEIdEEEE              & \ZZEightTeVSystematicZZsEIdMMMM       
-                                            & \ZZEightTeVSystematicZZsEIdEEMM              & \ZZEightTeVSystematicZZsEIdLLLL       \\
-      $e$ isolation/z0/d0Sig efficiency     & \ZZEightTeVSystematicZZsEIsoEEEE             & \ZZEightTeVSystematicZZsEIsoMMMM      
-                                            & \ZZEightTeVSystematicZZsEIsoEEMM             & \ZZEightTeVSystematicZZsEIsoLLLL      \\
-      $\mu$ momentum scale                  & \ZZEightTeVSystematicZZsMuScaleEEEE          & \ZZEightTeVSystematicZZsMuScaleMMMM   
-                                            & \ZZEightTeVSystematicZZsMuScaleEEMM          & \ZZEightTeVSystematicZZsMuScaleLLLL   \\
-      $\mu$ momentum resolution             & \ZZEightTeVSystematicZZsMuSmearEEEE          & \ZZEightTeVSystematicZZsMuSmearMMMM   
-                                            & \ZZEightTeVSystematicZZsMuSmearEEMM          & \ZZEightTeVSystematicZZsMuSmearLLLL \\
-      $\mu$ reconstruction efficiency       & \ZZEightTeVSystematicZZsMuRecoEEEE           & \ZZEightTeVSystematicZZsMuRecoMMMM    
-                                            & \ZZEightTeVSystematicZZsMuRecoEEMM           & \ZZEightTeVSystematicZZsMuRecoLLLL    \\
-      $\mu$ isolation/z0/d0Sig efficiency   & \ZZEightTeVSystematicZZsMuIsoEEEE            & \ZZEightTeVSystematicZZsMuIsoMMMM     
-                                            & \ZZEightTeVSystematicZZsMuIsoEEMM            & \ZZEightTeVSystematicZZsMuIsoLLLL     \\
-      Trigger                               & \ZZEightTeVSystematicZZsOverallTriggerEEEE   & \ZZEightTeVSystematicZZsOverallTriggerMMMM  
-                                            & \ZZEightTeVSystematicZZsOverallTriggerEEMM   & \ZZEightTeVSystematicZZsOverallTriggerLLLL  \\
-      \hline
-      Total Reconstruction                  & \ZZEightTeVSystematicZZsRecoTotalEEEE        & \ZZEightTeVSystematicZZsRecoTotalMMMM 
-                                            & \ZZEightTeVSystematicZZsRecoTotalEEMM        & \ZZEightTeVSystematicZZsRecoTotalLLLL \\
-      \hline
-      \multicolumn{4}{l}{\bf Theoretical Uncertainties (\%)} \\
-      MC Generator Difference               & \ZZEightTeVSystematicZZsGeneratorEEEE        & \ZZEightTeVSystematicZZsGeneratorMMMM 
-                                            & \ZZEightTeVSystematicZZsGeneratorEEMM        & \ZZEightTeVSystematicZZsGeneratorLLLL \\
-      \hline
-      {\bf Total \CZZ\ Uncertainty}         & \ZZEightTeVSystematicZZsCzzTotalEEEE         & \ZZEightTeVSystematicZZsCzzTotalMMMM 
-                                            & \ZZEightTeVSystematicZZsCzzTotalEEMM         & \ZZEightTeVSystematicZZsCzzTotalLLLL \\
-      \hline\hline
+      %\\
+      %\hline\hline
+      %\ZZs\ Selection, 8~\tev\               & \eeee           & \mmmm                  & \eemm                    & \llll                      \\
+      %\hline
+      %\multicolumn{4}{l}{\bf Reconstruction Uncertainties (\%)} \\
+      %$e$ energy scale                      & \ZZEightTeVSystematicZZsEScaleEEEE           & \ZZEightTeVSystematicZZsEScaleMMMM    
+      %                                      & \ZZEightTeVSystematicZZsEScaleEEMM           & \ZZEightTeVSystematicZZsEScaleLLLL    \\
+      %$e$ energy resolution                 & \ZZEightTeVSystematicZZsESmearEEEE           & \ZZEightTeVSystematicZZsESmearMMMM    
+      %                                      & \ZZEightTeVSystematicZZsESmearEEMM           & \ZZEightTeVSystematicZZsESmearLLLL    \\
+      %$e$ reconstruction efficiency         & \ZZEightTeVSystematicZZsERecoEEEE            & \ZZEightTeVSystematicZZsERecoMMMM     
+      %                                      & \ZZEightTeVSystematicZZsERecoEEMM            & \ZZEightTeVSystematicZZsERecoLLLL     \\
+      %$e$ identification efficiency         & \ZZEightTeVSystematicZZsEIdEEEE              & \ZZEightTeVSystematicZZsEIdMMMM       
+      %                                      & \ZZEightTeVSystematicZZsEIdEEMM              & \ZZEightTeVSystematicZZsEIdLLLL       \\
+      %$e$ isolation/z0/d0Sig efficiency     & \ZZEightTeVSystematicZZsEIsoEEEE             & \ZZEightTeVSystematicZZsEIsoMMMM      
+      %                                      & \ZZEightTeVSystematicZZsEIsoEEMM             & \ZZEightTeVSystematicZZsEIsoLLLL      \\
+      %$\mu$ momentum scale                  & \ZZEightTeVSystematicZZsMuScaleEEEE          & \ZZEightTeVSystematicZZsMuScaleMMMM   
+      %                                      & \ZZEightTeVSystematicZZsMuScaleEEMM          & \ZZEightTeVSystematicZZsMuScaleLLLL   \\
+      %$\mu$ momentum resolution             & \ZZEightTeVSystematicZZsMuSmearEEEE          & \ZZEightTeVSystematicZZsMuSmearMMMM   
+      %                                      & \ZZEightTeVSystematicZZsMuSmearEEMM          & \ZZEightTeVSystematicZZsMuSmearLLLL \\
+      %$\mu$ reconstruction efficiency       & \ZZEightTeVSystematicZZsMuRecoEEEE           & \ZZEightTeVSystematicZZsMuRecoMMMM    
+      %                                      & \ZZEightTeVSystematicZZsMuRecoEEMM           & \ZZEightTeVSystematicZZsMuRecoLLLL    \\
+      %$\mu$ isolation/z0/d0Sig efficiency   & \ZZEightTeVSystematicZZsMuIsoEEEE            & \ZZEightTeVSystematicZZsMuIsoMMMM     
+      %                                      & \ZZEightTeVSystematicZZsMuIsoEEMM            & \ZZEightTeVSystematicZZsMuIsoLLLL     \\
+      %Trigger                               & \ZZEightTeVSystematicZZsOverallTriggerEEEE   & \ZZEightTeVSystematicZZsOverallTriggerMMMM  
+      %                                      & \ZZEightTeVSystematicZZsOverallTriggerEEMM   & \ZZEightTeVSystematicZZsOverallTriggerLLLL  \\
+      %\hline
+      %Total Reconstruction                  & \ZZEightTeVSystematicZZsRecoTotalEEEE        & \ZZEightTeVSystematicZZsRecoTotalMMMM 
+      %                                      & \ZZEightTeVSystematicZZsRecoTotalEEMM        & \ZZEightTeVSystematicZZsRecoTotalLLLL \\
+      %\hline
+      %\multicolumn{4}{l}{\bf Theoretical Uncertainties (\%)} \\
+      %MC Generator Difference               & \ZZEightTeVSystematicZZsGeneratorEEEE        & \ZZEightTeVSystematicZZsGeneratorMMMM 
+      %                                      & \ZZEightTeVSystematicZZsGeneratorEEMM        & \ZZEightTeVSystematicZZsGeneratorLLLL \\
+      %\hline
+      %{\bf Total \CZZ\ Uncertainty}         & \ZZEightTeVSystematicZZsCzzTotalEEEE         & \ZZEightTeVSystematicZZsCzzTotalMMMM 
+      %                                      & \ZZEightTeVSystematicZZsCzzTotalEEMM         & \ZZEightTeVSystematicZZsCzzTotalLLLL \\
+      %\hline\hline
 
    \end{tabular}
    \caption[Systematic uncertainties to the reconstruction acceptance \CZZ\ for
    the 8~\tev\ analysis.]
    {Summary of systematic uncertainties to the reconstruction acceptance \CZZ\
-   in percent, by \ZZ\ final state, for the 8~\tev\ analysis. The top table
-   gives uncertainties to the \ZZ\ selection, the bottom to the \ZZs\ selection.
+   in percent, by \ZZ\ final state, for the 8~\tev\ analysis. 
+   %The top table
+   %gives uncertainties to the \ZZ\ selection, the bottom to the \ZZs\ selection.
    The fourth column gives the weighted average
-   of the three final states; the total uncertainty is also give, which is the
+   of the three final states. The total uncertainty is also given, which is the
    sum in quadrature of the individual uncertainties.} 
    \label{table:objSel-syst-eight}
 \end{table}
