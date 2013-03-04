@@ -426,10 +426,12 @@
 % CZZ SevenTeV
 % Corrected to 7 TeV, 20/1/2013, src=ZZ 7TeV Paper Suport
 %% ZZ
-\def\ZZSevenTeVCzzZZEEEE                    {\nmult[3]{0.428}{1.027}}
-\def\ZZSevenTeVCzzZZMMMM                    {0.687}
+\def\czzFudge{1.027}
+\def\ZZSevenTeVCzzZZEEEE                    {\nmult[3]{0.428}{\czzFudge}}
+\def\ZZSevenTeVCzzZZMMMM                    {\nmult[3]{0.687}{\czzFudge}}
 \def\ZZSevenTeVCzzZZEEMM                    {0.546}
-\def\ZZSevenTeVCzzZZLLLL                    {0.552}
+\def\ZZSevenTeVCzzZZLLL {\averageCzz{\ZZSevenTeVCzzZZEEEE}{\ZZSevenTeVCzzZZMMMM}{\ZZSevenTeVCzzZZEEMM}}
+%\def\ZZSevenTeVCzzZZLLLL                    {0.552}
 
 \def\ZZSevenTeVCzzZZStatEEEE                {0.005}
 \def\ZZSevenTeVCzzZZStatMMMM                {0.004}
