@@ -1124,9 +1124,35 @@ the denominator due to these two contaminations, \CZZ\ is not a true efficiency.
 
 \CZZ\ is calculated separately for each of the three final states (\eeee, \mmmm\
 and \eemm), and separately for the \ZZ\ and \ZZs\ selection and for the 7 \tev\
-and 8 \tev\ analysis. Values for \CZZ\ are given
+and 8 \tev\ analysis. In calculating the number of generated events falling inside the fiducial volume
+it is necessary to assign the four leptons into pairs in order to apply the mass
+cuts. There is no ambiguity in doing this in the \eemm\ channel as one simply
+pairs the two electrons and the two muons. In the \eeee\ and \mmmm\ channels
+there is an ambiguity, the same as when dealing with events observed in data or
+reconstructed MC. One could use the generator documentation to determine which
+leptons came from which \Z, but this is discouraged as it makes use of internal
+details of the generator's calculation, which have no physical meaning and may
+vary from generator to generator. Instead,
+the same algorithm as is used in the data and the reconstructed MC is applied; that is,
+picking the pairing that minimises the sum of the distances of the pairs from
+the PDG \Z\ boson mass. It is found from applying this procedure to the \eemm\
+sample, ignoring lepton-flavour, that the number of events falling in the
+fiducial volume is over-estimated by the algorithm, by $2.84\pm0.03\%$
+for the 7~\tev\ analysis with the \ZZ\ selection, by $7.16\pm0.08\%$ for the
+7~\tev\ analysis with the \ZZs\ selection and by $2.66\pm0.01\%$ for the
+8~\teve\ analysis.
+This leads to the  $C_{\ZZ}$ factors in the
+\eeee\ and \mmmm\ channels being {\it too low} by the corresponding percentage. 
+The \eeee\ and \mmmm\
+reconstruction factors are therefore increased by the corresponding percentage
+to compensate. The statistical uncertainties on these percetages are taken as an
+additional uncertainty on \CZZ. 
+
+Values for \CZZ\ are given
 in~\tabs{objSel-czz-seven}{objSel-czz-eight}, as well as the estimated
-contribution from tau decays and events generated outside the fiducial volume.
+contribution from tau decays and from events generated outside the fiducial
+volume (including the contribution from mis-pairing described in the previous
+paragraph).
 Also given is the true selection efficiency, defined analogously to \CZZ, but
 with only events generated in the fiducial phase space included in the numerator
 such that the numerator is a subset of the denominator.
