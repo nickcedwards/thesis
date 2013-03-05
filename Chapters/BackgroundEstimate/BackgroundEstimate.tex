@@ -306,7 +306,7 @@ The number of events observed with three $L$ and one $J$, deonted $N_{LLLJ}$, is
 the true composition by:
 \begin{align}
 N_{LLLJ} &= N_{TTTB} \times (1-f)\, +\, N_{TTBB} \times 2f(1-f) \notag \\
-         &+ N_{TBBB} \times 3f^{2}(1-f)\, +\,  N_{TBBB} \times 4f^{3}(1-f) 
+         &+ N_{TBBB} \times 3f^{2}(1-f)\, +\,  N_{BBBB} \times 4f^{3}(1-f) 
 \end{align}
 where the numerical factors arise due to combinatorics. Similary, the number of
 events with two $L$ and two $J$, denoted $N_{LLJJ}$, is related to the
@@ -344,19 +344,20 @@ one or two leptons being classified as $J$; these must be estimated from \mc.
 \subsection{Lepton-Like-Jet Definitions}
 
 %The nominal requirements for \lljet s are given below.
-\intro{Pre-leptons} are defined as reconstructed lepton objects that pass all of
-the selection requirements, apart from the isolation and \dzero\ significance
+A \intro{pre-lepton} is defined as a reconstructed lepton object that passes all of
+the selection requirements, apart from the isolation and \dzero-significance
 requirements (for muons) or the isolation and \loosePP\ identification
-requirements (for electrons). Pre-Muons that pass both requirements are
-classified as $L$. Those that fail {\it either} the isolation {\it or} the
-\dzero\ significance requirement are classified as $J$; those that fail both are
+requirements (for electrons). The pre-leptons may than be classified as either \lljet s or \sellep s.
+Pre-Muons that fail {\it either} the isolation {\it or} the
+\dzero-significance requirement are classified as $J$. Those that pass both requirements are
+classified as $L$; those that fail both are
 discarded. Similarly, pre-electrons that fail {\it either} the isolation {\it or} the
 \loosePP\ significance requirement are classified as $J$; those that fail both are
 discarded. For the 7~\tev\ analysis where both calorimeter and track isolation
-requirements, a lepton may fail either of the track or caloriemter requirement
+requirements are used, a lepton may fail either the track or caloriemter requirement
 to be considerd a $J$. For forward electrons, for which no isolation
 requirements are applied, pre-leptons are classified as $J$
-if they fail the \tight\ ID requirement. For forward `standalone' muons which have
+if they fail the \tight\ ID requirement. For forward \standAlone\ muons which have
 no track, pre-leptons are classified as $J$ if they fail the isolation
 requirements. A summary of the $J$ definitions is
 given in~\tab{J-def}.
