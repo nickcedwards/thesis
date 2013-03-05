@@ -1,56 +1,47 @@
 Thesis ToDo
 ------------
 
+Analysis issues:
+	- Fudge factors 7 TeV
+	- Scale for 7 TeV			{1 day}
+
+- Theory:
+	- Apply Aidan's comments
+	- QCD theory section 		{1 day}	
+	
 - ZZ Pheno: 
-	- Generator level plots
-			
-		- minDR(l,l) after lepFid, ZZ cuts (need to add ZZ*)						[ have at 7 TeV, ZZ]
-		
-		- m_Z1, m_Z2 - 7 TeV only
-			- nm1 lepFid, sorted by pT (show what we're selecting)								not in	
-			
-		- 7 TeV vs 8 TeV - normalise to cx?!?!?	
+	- Apply Aidan's comments
+	- Say more about generator plots
 					
-	- Exotics review - leave for now :s
+- ObjSel:						{1 day}
 
-- ObjSel:	{1 day}
-	- Dilepton plots: Remake with hfor		WAIT TO RUN
+	- Later:
+		- Plots of forward mu combined
+		- Higgs and MPI contamination
+		- Dilepton plots: WZ samples?
+		- Czz compare 7 8
+		- Define MC sample
+
+- Analysis overview 
 	
-	- Finish systematics bit
-
-	- Make Z mass vs Z mass plot - 			DONE -> Add to thesis
-	- 8 TeV systematics - 					DONE -> Add to thesis
-	- 8 TeV C_ZZ details, 					DONE -> Add to thesis
-		- mention comparisons with 2012
-	- 8 TeV dilepton plots - 				RERUN MC GRID JOBS WITH E SCALES
-	- 8 TeV Z+X plots - 					RERUN MC GRID JOBS WITH E SCALES
-
-	- Add VVV and Vt samples						JOBS RUNNING
-	- Check Higgs contamination (in background?)	DONE
+- Background estimation 		{1 day+}
 	
-- Background estimation: 
-	- Do					{4 days}
-	- Write 				{0 days}
+	- Get ZZZ ZWW cx for 7 TeV
+	- Run on 7 TeV ttbarV
+	- Run on ZZZ WWW 
 	
-- Cross Section and kinematic plots: 
-	- Rerun 7 TeV cx with updates, finish writing {1 day}
-	- 8 TeV bits			{0 days}
-		- ZZ* plots
-		- Z mass plots with mZ>7
-		- dR vs ptZ plot? 
+- Cross Section and kinematic plots 
+	- Rerun 7 TeV cx with updates, finish writing/redraft {1 day}
 
-- Unfolding 
-		- Write <1 day>
-		- Play with unfolding code {1 day}
 
-- TGC limits and unfolding:
-	- Skelaton write		{2 days}
-	- Run TGC limits code	{2 days}
-	- Grid paramt stuff		{1 day}
+- TGC limits and unfolding: 							{7 days??}
+	- Skelaton write	
+	- Run TGC limits code
+	- Grid paramt stuff	
 	
 - SCT 						{2 days}
 
-- Detector REDRAFT:			{0 days}
+- Detector REDRAFT:			{1 day}
 	- sqrt(12) resolution issue - is from definition of std-deviation:
 	- = sqrt(E((x-mu)^2)) = sqrt [ Int_{-L/2}^{L/2}x^{2}P(x)dx ]
 	   with P(x) = 1/L
@@ -63,17 +54,14 @@ Thesis ToDo
 	- Find out properly about HT hits in TRT and add to description
 	- Own ID eff plots?
 	
-- Exotics (?!)			{7 days}
-
 - Theory redraft {1 day}
 - Pheno redraft {1 day}
 
-- Soak time				{5 days}
-- Global redraft		{5 days}
+- Soak time				{2 days}
+- Global redraft		{3 days}
 
-- TOTAL: 33 days
-- Available: 27 weekdays, 4 weekend days (MAX, ideally 5)
-	
+- TOTAL: 20 days
+- Available: 22.5 days MAX, including 2 flat out weekends	
 
 
 - General:
