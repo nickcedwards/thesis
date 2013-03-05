@@ -393,15 +393,15 @@ given in~\tab{J-def}.
 
 \subsection{Fake-Factor Measurement}
 
-In order to measure the \fakefactor\ a sample of background leptons must be
+In order to measure the \fakefactor, a sample of \bglepton s must be
 identified, with a similar composition in terms of the different sources of
-background leptons as the signal sample. This is done using a \intro{\Z-tag} sample, selecting 
+\bglepton s as the signal sample. This is done using a \intro{\Z-tag} sample, selecting 
 events containing an \ossf\ \dilep\ pair passing all of the lepton
-selection requirements with mass \sstooos\ in order to be consistent with a \Z\
+selection requirements. The pair must have invariant mass $|m_{\ell^{+}\ell^{-}}|<20$~\gev, in order to be consistent with a \Z\
 boson. It is then required that the event contain at least one additional
 pre-lepton. The sample will be dominated by \ZX, \WZ\ and and \ZZ\
-events. The additional pre-leptons in \ZX events are all background
-electrons; in \WZ\ (\ZZ) events there will typically be one (two) additional
+events. The additional pre-leptons in \ZX\ events are all background
+electrons; in \WZ\ and \ZZ\ events there will typically be one or two additional
 true leptons. The \WZ\ component is supressed by rejecting events with large missing transverse
 energy (requiring \Etmiss$<$25~\gev). The \ZZ\ component and any remaining \WZ\
 is subtracted using \mc. The \Z-tag sample selection is summarised~\tab{Ztag-def}
@@ -416,7 +416,7 @@ is subtracted using \mc. The \Z-tag sample selection is summarised~\tab{Ztag-def
     Trigger & Single electron and muon triggers as described in~\sec{triggers}.\\
     Leptons & An \ossf\ pair of selected leptons.\\
             & $\geq 1$ trigger matched. \\
-    \Z-tag & \sstooos \\
+    \Z-tag & $|m_{\ell^{+}\ell^{-}}|<20$~\gev \\
     \Etmiss & \Etmiss$<$25~\gev \\
     \hline\hline
   \end{tabular}
@@ -426,7 +426,7 @@ is subtracted using \mc. The \Z-tag sample selection is summarised~\tab{Ztag-def
 \end{table}
 
 The pre-leptons are then identified as either $L$ or
-$J$ (or neither), and the \fakefactor\ is obtained by dividing the distributions
+$J$ (or neither), and the \fakefactor s is obtained by dividing the distributions
 of the \lljet\ by the distributions of the \sellep. In this way, \fakefactor s
 paramaterised in \pT\ and in $\eta$ are obtained. For a given bin of \pT\ or $\eta$, the \ffactor\ is given by:
 \begin{equation}
@@ -439,15 +439,15 @@ The fake-factor for a given \pT\ and $\eta$ is applied as:
 \FF(\pt,\eta) = \frac{FF(\pt)\times\FF(\eta)}{<\FF>}
 \label{eqn:factorised-ff}
 \end{equation}
-where $<\FF>$ is the average \ffactor.
+where $<\FF>$ is the unparameterised (average) \ffactor.
 
-The observed distributions of \pT\ and $\eta$ for the \sellep\ and \lljet s for
+The resulting distributions of \pT\ and $\eta$ for the \sellep\ and \lljet s for
 electrons are shown in~\fig{ljdist-el-seven} for the
 7~\tev\ analysis and in~\fig{ljdist-el-eight} for the 8~\tev\ analysis.
 ~\figs{ljdist-mu-seven}{ljdist-mu-eight} show the equivalent distributions for
 muons.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 	\subfigure[Selected Central Electrons]{
             \includegraphics[width=0.47\textwidth]{ffDists7TeV/CentralEl_pt_L_lin}
@@ -477,7 +477,7 @@ muons.
 \label{fig:ljdist-el-seven} 
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 	\subfigure[Selected Central Electrons]{
             \includegraphics[width=0.47\textwidth]{ffDists8TeV/CentralEl_pt_L_lin}
@@ -499,7 +499,7 @@ muons.
 \label{fig:ljdist-el-eight} 
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \vspace{-8mm}
 	\subfigure[Selected Central Muons]{
@@ -536,7 +536,7 @@ muons.
 \label{fig:ljdist-mu-seven} 
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \vspace{-8mm}
 	\subfigure[Selected Central Muons]{
@@ -574,16 +574,16 @@ muons.
 \end{figure}
 
 
-The observed \fakefactor s for electrons are shown in~\fig{ff-el-seven} for the
+The resulting \fakefactor s for electrons are shown in~\fig{ff-el-seven} for the
 7~\tev\ analysis and in~\fig{ff-el-eight} for the 8~\tev\ analysis; the \fakefactor s
 for muons are shown in~\fig{ff-mu-seven} for the
 7~\tev\ analysis and in~\fig{ff-mu-eight} for the 8~\tev\ analysis. The
 \ffactor\ estimated from \mc\ (blue triangles) is in reasonable agreement with
 the \ffactor\ measured in data (black points). For the calculation of the
-background, no use is made of the \ffactor\ estimated from \mc. The average \FF
+background, no use is made of the \ffactor\ estimated from \mc. The unparameterised \FF
 s, used as the numerator in~\eqn{factorised-ff}, are given in~\tab{average-ff}.
 
-\begin{table}[htbp]
+\begin{table}[h!]
   \centering
   \small
   \begin{tabular}{lcc} 
@@ -597,11 +597,11 @@ s, used as the numerator in~\eqn{factorised-ff}, are given in~\tab{average-ff}.
     Calorimeter-Tagged Muon     & \measStat{0.123}{\errSym{0.024}} & \measStat{0.098}{\errSym{0.007}} \\
     \hline\hline
   \end{tabular}
-  \caption{Average \ffactor s for different lepton types.}
+  \caption{Unparameterised (average) \ffactor s for different lepton types.}
   \label{table:average-ff}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 	\subfigure[Central Electrons]{
             \includegraphics[width=0.47\textwidth]{FakeFactors7TeV/FF_CentralEl_pt_J_lin}
@@ -621,7 +621,7 @@ s, used as the numerator in~\eqn{factorised-ff}, are given in~\tab{average-ff}.
 \label{fig:ff-el-seven} 
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \vspace{-8mm}
 	\subfigure[Central Muons]{
@@ -645,7 +645,7 @@ s, used as the numerator in~\eqn{factorised-ff}, are given in~\tab{average-ff}.
 \label{fig:ff-mu-seven} 
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 	\subfigure[Central Electrons]{
             \includegraphics[width=0.47\textwidth]{FakeFactors8TeV/FF_CentralEl_pt_J_lin}
@@ -663,7 +663,7 @@ s, used as the numerator in~\eqn{factorised-ff}, are given in~\tab{average-ff}.
 \label{fig:ff-el-eight} 
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \vspace{-8mm}
 	\subfigure[Central Muons]{
