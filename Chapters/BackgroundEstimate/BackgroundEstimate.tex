@@ -261,11 +261,12 @@ requirements. Of course, given a selected lepton in data it is impossible to
 know whether it is a true lepton or a background lepton (if it were, background
 rejection would be trivial). Instead, in order to measure the background 
 two new definitions are introduced: \intro{\sellep s}, denoted $L$, that
-pass all of the lepton selection requirements; and \intro{lepton-like-jets} $J$, which
+pass all of the lepton selection requirements; and \intro{lepton-like-jets},
+denoted $J$, which
 pass most of the selection requirements, but fail a few selected requirements.
 The background is estimated by extrapolating from control regions containing
 two or three \sellep s and one one or two \lljet (s) using the
-\intro{\ffactor}\ \FF, defined as the ratio of the probability for a background lepton to be
+\intro{\ffactor}, \FF, defined as the ratio of the probability for a background lepton to be
 classified as a \sellep\ to the probability for it to be classified as a \lljet.
 In a sample containing only \bglep s, the \frate\ and \ffactor\ are given by: 
 
@@ -301,13 +302,14 @@ respectively. \FF\ and \f\ are thus related by:
 %N_{LLJJ} = N_{TTBB} \times (1-f)^{2}
 %\end{equation}
 
-The number of events observed with three $L$ and one $J$ ($N_{LLLJ}$) is related to
-the number of events with true composition as
+The number of events observed with three $L$ and one $J$, deonted $N_{LLLJ}$, is related to
+the true composition by:
 \begin{align}
-N_{LLLJ} &= N_{TTTB} \times (1-f)\, +\, N_{TTBB} \times 2f(1-f) \\
+N_{LLLJ} &= N_{TTTB} \times (1-f)\, +\, N_{TTBB} \times 2f(1-f) \notag \\
          &+ N_{TBBB} \times 3f^{2}(1-f)\, +\,  N_{TBBB} \times 4f^{3}(1-f) 
 \end{align}
-where the numerical factors arise due to combinatorics. Similary, the number of events with two $L$ and two $J$ ($N_{LLJJ}$) is related to the
+where the numerical factors arise due to combinatorics. Similary, the number of
+events with two $L$ and two $J$, denoted $N_{LLJJ}$, is related to the
 true compostion by:
 \begin{equation}
 N_{LLJJ} = N_{TTBB} \times (1-f)^{2} + N_{TBBB} \times 3 f(1-f)^{2}  + N_{BBBB}
@@ -322,10 +324,10 @@ The background to the four-lepton selection given in~\eqn{bg-4l-true} can
 be rewritten in terms of the number of events in the $LLLJ$ and $LLJJ$ control
 regions as:
 \begin{align}
-N_{4l}^{\rm fake} &= N_{LLLJ} \times \FF - N_{LLJJ} \times \FF^{2} \\
- &= N_{TTTB} \times (1-\f) \FF + N_{TTBB} \times 2\f (1 - \f) \FF \\
- &\quad - N_{TTBB} \times (1-\f)^{2} \FF^{2} \\
- &=  N_{TTTB} \times \f + N_{TTBB} \times 2 f^{2} - N_{TTBB} \times \f^{2} \\
+N_{4l}^{\rm fake} &= N_{LLLJ} \times \FF - N_{LLJJ} \times \FF^{2} \notag \\
+ &= N_{TTTB} \times (1-\f) \FF + N_{TTBB} \times 2\f (1 - \f) \FF \notag \\
+ &\quad - N_{TTBB} \times (1-\f)^{2} \FF^{2} \notag \\
+ &=  N_{TTTB} \times \f + N_{TTBB} \times 2 f^{2} - N_{TTBB} \times \f^{2} \notag \\
  &= N_{TTTB} \times \f + N_{TTBB} \times f^{2} 
 \end{align}
 where use has been made of~\eqn{bg-f-FF-relations}. In reality, observed
