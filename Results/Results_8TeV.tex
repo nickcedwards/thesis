@@ -498,126 +498,29 @@
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % Background Estimate
 % Updated: Advait, 28/6/2012
-%
-% As with the totals, the uncertainties will sometimes be
-% assymetric, sometimes symmetric, so format here
-% NLLLJ * FF
-% Since these are sometimes symmetric and sometimes assymetric, format here
-% (including math env)
-\def\ZZEightTeVDDBgEstNLLLJEEEE{8}
-\def\ZZEightTeVDDBgEstNLLLJxFFEEEE{1.02}
-\def\ZZEightTeVDDBgEstNLLLJxFFEEEEStat{\ensuremath{\pm 0.39}}
-\def\ZZEightTeVDDBgEstNLLLJxFFEEEESyst{\ensuremath{\pm 0.28}}
+\def\ZZEigtTeVDDBgEstZZEEEE{\ensuremath{0.33 ^{+0.63}_{-0.54}\;\pm0.06}}
+\def\ZZEigtTeVDDBgEstZZMMMM{\ensuremath{<0.71}}
+\def\ZZEigtTeVDDBgEstZZEEMM{\ensuremath{0.53 ^{+1.16}_{-0.77} \;\pm0.25}}
+\def\ZZEigtTeVDDBgEstZZLLLL{\ensuremath{0.15 ^{+1.26}_{-1.08}\;\pm0.35}}
 
-\def\ZZEightTeVDDBgEstNLLLJEEMM{7}
-\def\ZZEightTeVDDBgEstNLLLJxFFEEMM{1.79}
-\def\ZZEightTeVDDBgEstNLLLJxFFEEMMStat{\ensuremath{\pm 0.90}}
-\def\ZZEightTeVDDBgEstNLLLJxFFEEMMSyst{\ensuremath{\pm 0.96}}
 
-\def\ZZEightTeVDDBgEstNLLLJMMMM{1}
-\def\ZZEightTeVDDBgEstNLLLJxFFMMMM{0.62}
-\def\ZZEightTeVDDBgEstNLLLJxFFMMMMStat{\ensuremath{\pm 0.62}}
-\def\ZZEightTeVDDBgEstNLLLJxFFMMMMSyst{\ensuremath{\pm 0.44}}
 
-\def\ZZEightTeVDDBgEstNLLLJLLLL{16}
-\def\ZZEightTeVDDBgEstNLLLJxFFLLLL{3.43}
-\def\ZZEightTeVDDBgEstNLLLJxFFLLLLStat{\ensuremath{\pm 1.16}}
-\def\ZZEightTeVDDBgEstNLLLJxFFLLLLSyst{\ensuremath{\pm 1.68}}
+\def\ZZEigtTeVMCBgEstRedZZEEEE{{4.0}{\errSym{2.7}}}
+\def\ZZEigtTeVMCBgEstRedZZMMMM{\ensuremath{<0.6}}
+\def\ZZEigtTeVMCBgEstRedZZEEMM{{1.5}{\errSym{0.8}}}
+\def\ZZEigtTeVMCBgEstRedZZEEEE{{5.5}{\errSym{2.8}}}
 
-% NLLJJ * FF
-% Since these are sometimes symmetric and sometimes assymetric, format here
-% (including math env)
-\def\ZZEightTeVDDBgEstNLLJJEEEE{12}
-\def\ZZEightTeVDDBgEstNLLJJxFFEEEE{0.14}
-\def\ZZEightTeVDDBgEstNLLJJxFFEEEEStat{\ensuremath{\pm 0.04}}
-\def\ZZEightTeVDDBgEstNLLJJxFFEEEESyst{\ensuremath{\pm 0.06}}
+\def\ZZEigtTeVMCBgEstIredZZEEEE{{0.4}{\errSym{0.1}}}
+\def\ZZEigtTeVMCBgEstIredZZMMMM{{0.5}{\errSym{0.1}}}
+\def\ZZEigtTeVMCBgEstIredZZEEMM{{0.7}{\errSym{0.1}}}
+\def\ZZEigtTeVMCBgEstIredZZLLLL{{1.6}{\errSym{0.1}}}
 
-\def\ZZEightTeVDDBgEstNLLJJEEMM{8}
-\def\ZZEightTeVDDBgEstNLLJJxFFEEMM{0.15}
-\def\ZZEightTeVDDBgEstNLLJJxFFEEMMStat{\ensuremath{\pm 0.07}}
-\def\ZZEightTeVDDBgEstNLLJJxFFEEMMSyst{\ensuremath{\pm 0.10}}
 
-\def\ZZEightTeVDDBgEstNLLJJMMMM{0}
-\def\ZZEightTeVDDBgEstNLLJJxFFMMMM{0}
-\def\ZZEightTeVDDBgEstNLLJJxFFMMMMStat{}
-\def\ZZEightTeVDDBgEstNLLJJxFFMMMMSyst{}
+\def\ZZEigtTeVTotalBgEstZZEEEE{{}{\errSym{}}}
+\def\ZZEigtTeVTotalBgEstZZMMMM{{}{\errSym{}}}
+\def\ZZEigtTeVTotalBgEstZZEEMM{{}{\errSym{}}}
+\def\ZZEigtTeVTotalBgEstZZLLLL{{}{\errSym{}}}
 
-\def\ZZEightTeVDDBgEstNLLJJLLLL{20}
-\def\ZZEightTeVDDBgEstNLLJJxFFLLLL{0.29}
-\def\ZZEightTeVDDBgEstNLLJJxFFLLLLStat{\ensuremath{\pm 0.08}}
-\def\ZZEightTeVDDBgEstNLLJJxFFLLLLSyst{\ensuremath{\pm 0.16}}
-
-% ZZEightTeV correction
-% Since these are sometimes symmetric and sometimes assymetric, format here
-% (including math env)
-\def\ZZEightTeVDDBgEstZZEightTeVCorrectionEEEE{0.32}
-\def\ZZEightTeVDDBgEstZZEightTeVCorrectionStatEEEE{\ensuremath{\pm 0.02}}
-\def\ZZEightTeVDDBgEstZZEightTeVCorrectionSystEEEE{\ensuremath{\pm 0.07}}
-
-\def\ZZEightTeVDDBgEstZZEightTeVCorrectionEEMM{1.01}
-\def\ZZEightTeVDDBgEstZZEightTeVCorrectionStatEEMM{\ensuremath{\pm 0.07}}
-\def\ZZEightTeVDDBgEstZZEightTeVCorrectionSystEEMM{\ensuremath{\pm 0.57}}
-
-\def\ZZEightTeVDDBgEstZZEightTeVCorrectionMMMM{0.53}
-\def\ZZEightTeVDDBgEstZZEightTeVCorrectionStatMMMM{\ensuremath{\pm 0.07}}
-\def\ZZEightTeVDDBgEstZZEightTeVCorrectionSystMMMM{\ensuremath{\pm 0.40}}
-
-\def\ZZEightTeVDDBgEstZZEightTeVCorrectionLLLL{1.86}
-\def\ZZEightTeVDDBgEstZZEightTeVCorrectionStatLLLL{\ensuremath{\pm 0.10}}
-\def\ZZEightTeVDDBgEstZZEightTeVCorrectionSystLLLL{\ensuremath{\pm 1.05}}
-
-% Final Estimate 
-% Since these are sometimes symmetric and sometimes assymetric, format here
-% (including math env)
-\def\ZZEightTeVDDBgEstCentralEEEE{0.56}
-\def\ZZEightTeVDDBgEstStatEEEE{\ensuremath{\pm 0.39}}
-\def\ZZEightTeVDDBgEstSystEEEE{\ensuremath{\pm 0.15}}
-
-\def\ZZEightTeVDDBgEstCentralEEMM{0.62}
-\def\ZZEightTeVDDBgEstStatEEMM{\ensuremath{^{+0.91}_{-0.62}}}
-\def\ZZEightTeVDDBgEstSystEEMM{\ensuremath{\pm 0.30}}
-
-\def\ZZEightTeVDDBgEstCentralMMMM{0.08}
-\def\ZZEightTeVDDBgEstStatMMMM{\ensuremath{^{+0.63}_{-0.08}}}
-\def\ZZEightTeVDDBgEstSystMMMM{\ensuremath{\pm 0.06}}
-
-\def\ZZEightTeVDDBgEstCentralLLLL{1.27}
-\def\ZZEightTeVDDBgEstStatLLLL{\ensuremath{\pm 1.17}}
-\def\ZZEightTeVDDBgEstSystLLLL{\ensuremath{\pm 0.51}}
-
-% One Dp
-\def\ZZEightTeVDDBgEstCentralEEEEOneDp{0.6}
-\def\ZZEightTeVDDBgEstStatEEEEOneDp{\ensuremath{\pm 0.4}}
-\def\ZZEightTeVDDBgEstSystEEEEOneDp{\ensuremath{\pm 0.2}}
-
-\def\ZZEightTeVDDBgEstCentralEEMMOneDp{0.6}
-\def\ZZEightTeVDDBgEstStatEEMMOneDp{\ensuremath{^{+0.9}_{-0.6}}}
-\def\ZZEightTeVDDBgEstSystEEMMOneDp{\ensuremath{\pm 0.3}}
-
-\def\ZZEightTeVDDBgEstCentralMMMMOneDp{0.1}
-\def\ZZEightTeVDDBgEstStatMMMMOneDp{\ensuremath{^{+0.6}_{-0.1}}}
-\def\ZZEightTeVDDBgEstSystMMMMOneDp{\ensuremath{\pm 0.1}}
-
-\def\ZZEightTeVDDBgEstCentralLLLLOneDp{1.3}
-\def\ZZEightTeVDDBgEstStatLLLLOneDp{\ensuremath{\pm 1.2}}
-\def\ZZEightTeVDDBgEstSystLLLLOneDp{\ensuremath{\pm 0.5}}
-
-% MC Crosscheck
-\def\ZZEightTeVMCBgEstCentralEEEE{x.xx}
-\def\ZZEightTeVMCBgEstStatEEEE{\ensuremath{\pm x.xx}}
-\def\ZZEightTeVMCBgEstSystEEEE{\ensuremath{^{+x.x}_{-x.x}}}
-
-\def\ZZEightTeVMCBgEstCentralMMMM{x.xx}
-\def\ZZEightTeVMCBgEstStatMMMM{\ensuremath{^{+x.xx}_{-x.xx}}}
-\def\ZZEightTeVMCBgEstSystMMMM{\ensuremath{^{+x.x}_{-x.x}}}
-
-\def\ZZEightTeVMCBgEstCentralEEMM{x.xx}
-\def\ZZEightTeVMCBgEstStatEEMM{\ensuremath{\pm x.xx}}
-\def\ZZEightTeVMCBgEstSystEEMM{\ensuremath{^{+x.x}_{-x.x}}}
-
-\def\ZZEightTeVMCBgEstCentralLLLL{x.xx}
-\def\ZZEightTeVMCBgEstStatLLLL{\ensuremath{\pm x.xx}}
-\def\ZZEightTeVMCBgEstSystLLLL{\ensuremath{^{+x.x}_{-x.x}}}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
