@@ -109,16 +109,35 @@ remaining 88 cool modules on the Pixel detector.
 \section{Methodology}
 The temperatures recorded by the module thermistors are read out by the ATLAS
 \textit{PVSS} SCADA system. Twice a day the temperatures are written to an
-Oracle database for offline analysis. In addition, whenever a module temperature changes above a deadband of 0.4$^\circ$C the new value is written to the database.
-It is necessary to first find periods of stable running where the cooling system is turned on and the system in a stable state. Stable periods are found by requiring that the number of cooling loops turned on is constant and greater than zero. Stable periods are required to be at least 6 hours long, to veto periods where the detector is being turned on and off. Stable periods longer than 24 hours are broken down into 24 hour blocks.
+Oracle database for offline analysis. In addition, whenever a module temperature
+changes above a deadband of 0.4$^\circ$C the new value is written to the
+database.  It is necessary to first find periods of stable running where the
+cooling system is turned on and the system in a stable state. Stable periods are
+found by requiring that the number of cooling loops turned on is constant and
+greater than zero. Stable periods are required to be at least 6 hours long, to
+veto periods where the detector is being turned on and off. Stable periods
+longer than 24 hours are broken down into 24 hour blocks.
 
-For each module, a number of monitoring variables are calculated; these are described below. The distributions of these variables are plotted for each of the barrel layers and endcap disks. Modules which fall in the far outlying regions of the distributions are identified as `problem' modules. A list of problem modules is maintained, and these modules are monitored. The plots are produced automatically on a daily basis by scripts running on one of the SCT monitoring computers. The plots are made available as part of the `SCT Calibration Monitoring' website at \url{https://pc-sct-www01.cern.ch/CalibMonitor/} (ATLAS login required).
+For each module, a number of monitoring variables are calculated; these are
+described below. The distributions of these variables are plotted for each of
+the barrel layers and endcap disks. Modules which fall in the far outlying
+regions of the distributions are identified as `problem' modules. A list of
+problem modules is maintained, and these modules are monitored. The plots are
+produced automatically on a daily basis by scripts running on one of the SCT
+monitoring computers. The plots are made available as part of the `SCT
+Calibration Monitoring' website at
+\url{https://pc-sct-www01.cern.ch/CalibMonitor/} (ATLAS login required).
 
 \section{Monitoring Variables}
 
 \subsection{Front-Back temperature difference - \deltat }
 
-SCT barrel modules have two thermistors, one mounted on either side of the module. The difference in temperature between the front and back of the module should be very small and any large temperature difference would indicate defective thermal coupling between the two sides. This would suggest that the front and the back of the module had lost mechanical integrity and were coming apart from one another. The monitoring variable \deltat is defined as
+SCT barrel modules have two thermistors, one mounted on either side of the
+module. The difference in temperature between the front and back of the module
+should be very small and any large temperature difference would indicate
+defective thermal coupling between the two sides. This would suggest that the
+front and the back of the module had lost mechanical integrity and were coming
+apart from one another. The monitoring variable \deltat is defined as
 
 \begin{equation}
  \Delta T = T_{\mathrm{front}} - T_{\mathrm{back}}
@@ -130,7 +149,9 @@ where $T_{\mathrm{front}}$ and $T_{\mathrm{back}}$ are the temperatures recorded
 \centering
 \centering
 \includegraphics[width=\textwidth]{{20120922.0120-20120923.0120_delta_t_AllBarrels}.pdf}
-\caption{\deltat distribution for all SCT barrels averaged over the period 01:20 22/9/2012 to 01:20 23/9/2012. The distribution is fit to a Gaussian; the mean and width of the Gaussian is indicated on the plot.}
+\caption{\deltat distribution for all SCT barrels averaged over the period 01:20
+22/9/2012 to 01:20 23/9/2012. The distribution is fit to a Gaussian; the mean
+and width of the Gaussian is indicated on the plot.}
 \label{fig:dt_dist}
 \end{figure}
 
@@ -148,7 +169,10 @@ where $T_{\mathrm{front}}$ and $T_{\mathrm{back}}$ are the temperatures recorded
 	\subfigure[]{
 		\includegraphics[width=0.47\textwidth]{{20120922.0120-20120923.0120_delta_t_Barrel6}.pdf}
 	}
-	\caption{\deltat distributions for the SCT Barrel 3 (a), Barrel 4 (b), Barrel 5 (c) and Barrel 6 (d) for 01:20 22/9/2012 to 01:20 23/9/2012. The distributions are fit to a Gaussian; the mean and width of the Gaussian is indicated on the plot.}
+  \caption{\deltat distributions for the SCT Barrel 3 (a), Barrel 4 (b), Barrel
+  5 (c) and Barrel 6 (d) for 01:20 22/9/2012 to 01:20 23/9/2012. The
+  distributions are fit to a Gaussian; the mean and width of the Gaussian is
+  indicated on the plot.}
 	\label{fig:dt_dist_barrels}
 \end{figure}
 
@@ -159,7 +183,9 @@ all barrels together as well as for each barrel separately. Example plots for
 01:20 22/9/2012 to 01:20 23/9/2012 are shown in Figure~\ref{fig:dt_dist} (all
 barrels) and  in Figure~\ref{fig:dt_dist_barrels} (separately for each barrel).
 The distributions are fitted with a Gaussian and the mean and width of the
-Gaussian are obtained. These are listed in Table~\ref{table:dt_thresh} for each of the barrel layers, averaged over 5 months of data between 20/1/2010 and 20/6/2010.  
+Gaussian are obtained. These are listed in Table~\ref{table:dt_thresh} for each
+of the barrel layers, averaged over 5 months of data between 20/1/2010 and
+20/6/2010.  
 
 In order to identify modules with a high value of \deltat, a threshold of 5
 times the width of the Gaussian is set, separately for each barrel. Modules with
@@ -172,9 +198,22 @@ identifying high \deltat modules is highest for this barrel. The width of the
 distribution for Barrel 6 is the second widest, however the distribution is
 observed to have large non Gaussian tails. Subsequently, the percentage of
 modules falling outside of the Gaussian is far higher than for other barrels and
-so a higher proportion of the modules on Barrel 6 are identified as problematic than on other barrels. This is explained by the fact that for Barrels 3, 4 and 5 only modules with $|\Delta \mathrm{T}| < 2^\circ$C measured on production were accepted, whereas for Barrel 6 this was relaxed to $|\Delta \mathrm{T}| < 4^\circ$C~\cite{Viehhauser:2006ix}. 
+so a higher proportion of the modules on Barrel 6 are identified as problematic
+than on other barrels. This is explained by the fact that for Barrels 3, 4 and 5
+only modules with $|\Delta \mathrm{T}| < 2^\circ$C measured on production were
+accepted, whereas for Barrel 6 this was relaxed to $|\Delta \mathrm{T}| <
+4^\circ$C~\cite{Viehhauser:2006ix}. 
 
-The mean value of the \deltat distributions tend to be negative, implying that on average the back side of the modules (the side facing into the carbon fibre barrel) tend to be warmer than the front. This effect was also observed in tests carried out on the modules reception at CERN in 2006~\cite{Viehhauser:2006ix}, and in tests carried out in 2008~\cite{Shaw:1229428}. Investigations suggested that this bias is a property of the module itself, rather than an effect due to the module's environment. A possible explanation is that the bend in the hybrid is on the back of the module, and this may have caused difficulties in manufacturing an  effective glue joint, increasing thermal impedance and causing a weaker thermal coupling between the cooling pipe and the back of the module.
+The mean value of the \deltat distributions tend to be negative, implying that
+on average the back side of the modules (the side facing into the carbon fibre
+barrel) tend to be warmer than the front. This effect was also observed in tests
+carried out on the modules reception at CERN in 2006~\cite{Viehhauser:2006ix},
+and in tests carried out in 2008~\cite{Shaw:1229428}. Investigations suggested
+that this bias is a property of the module itself, rather than an effect due to
+the module's environment. A possible explanation is that the bend in the hybrid
+is on the back of the module, and this may have caused difficulties in
+manufacturing an  effective glue joint, increasing thermal impedance and causing
+a weaker thermal coupling between the cooling pipe and the back of the module.
 
 \begin{table}
 \centering
@@ -206,13 +245,24 @@ Barrel 5 & 7 & 1.2 \\
 Barrel 6 & 17 & 2.5 \\
 \hline\hline
 \end{tabular}
-\caption{Number and percentage of modules with $|$ \deltat$|$ greater than the threshold for identifying problem modules at least 5 times during the period 20/1/2010 - 19/6/2010 for each barrel.}
+\caption{Number and percentage of modules with $|$ \deltat$|$ greater than the
+threshold for identifying problem modules at least 5 times during the period
+20/1/2010 - 19/6/2010 for each barrel.}
 \label{table:dt_num}
 \end{table}
 
 \subsection{Module temperature variation - \tdiff }
 
-Modules with a bad thermal coupling to the cooling pipe can be identified by looking for modules with a temperature significantly different to other modules on the same cooling structure. The monitoring variable \tdiff is defined as $T_{\mathrm{diff}}  = \bar T_{\mathrm{struct}} - T_{\mathrm{module}}$ where $\bar T_{\mathrm{struct}} = \Sigma^N_1 T_{\mathrm{i}}/N $ is the average temperature of modules on the cooling structure. For the SCT barrels a cooling structure is defined as a stave (consisting of two loops) and for endcaps a cooling loop. Any module warmer than its neighbours gives a negative value of $T_{\mathrm{diff}}$ whilst modules cooler than their neighbours give a positive value.
+Modules with a bad thermal coupling to the cooling pipe can be identified by
+looking for modules with a temperature significantly different to other modules
+on the same cooling structure. The monitoring variable \tdiff is defined as
+$T_{\mathrm{diff}}  = \bar T_{\mathrm{struct}} - T_{\mathrm{module}}$ where
+$\bar T_{\mathrm{struct}} = \Sigma^N_1 T_{\mathrm{i}}/N $ is the average
+temperature of modules on the cooling structure. For the SCT barrels a cooling
+structure is defined as a stave (consisting of two loops) and for endcaps a
+cooling loop. Any module warmer than its neighbours gives a negative value of
+$T_{\mathrm{diff}}$ whilst modules cooler than their neighbours give a positive
+value.
 
 \begin{figure}
 	\centering
@@ -229,7 +279,12 @@ Modules with a bad thermal coupling to the cooling pipe can be identified by loo
 	\label{fig:tdiff_dist}
 \end{figure}
 
-Figure~\ref{fig:tdiff_dist} shows the distributions of \tdiff for the barrel and for each of the endcaps for 01:20 22/9/2012 to 01:20 23/9/2012. As expected the mean of the distribution is consistent with zero. Endcap C shows a large tail to low \tdiff, indicating there are a large number of modules warmer than other modules on their cooling loop. Examination of the distributions for each disk suggest that this effect is observed on disks 1-5, but not on disks 6-9. 
+Figure~\ref{fig:tdiff_dist} shows the distributions of \tdiff for the barrel and
+for each of the endcaps for 01:20 22/9/2012 to 01:20 23/9/2012. As expected the
+  mean of the distribution is consistent with zero. Endcap C shows a large tail
+  to low \tdiff, indicating there are a large number of modules warmer than
+  other modules on their cooling loop. Examination of the distributions for each
+  disk suggest that this effect is observed on disks 1-5, but not on disks 6-9. 
 
 \begin{table}[h]
  \centering
@@ -266,14 +321,23 @@ EndcapC Disk8 & 1.29 & 6.47 & 13.39 \\
 EndcapC Disk9 & 1.72 & 8.58 & 9.38 \\
 \hline\hline
 \end{tabular}
-\caption{The rms width of a Gaussian fit to the \tdiff distribution for each stable period between 20/1/2010 and 20/6/2010. The threshold used for identifying high \tdiff modules is set as 5 times this value; this is also shown in the second column. The third column shows the $\chi^2$ goodness of fit parameter.}
+\caption{The rms width of a Gaussian fit to the \tdiff distribution for each
+stable period between 20/1/2010 and 20/6/2010. The threshold used for
+identifying high \tdiff modules is set as 5 times this value; this is also shown
+in the second column. The third column shows the $\chi^2$ goodness of fit
+parameter.}
 \label{table:tdiff_thresh}
 \end{table}
 
 As with the \deltat monitoring variable, five times the average width of the
 Gaussian fit is used as a threshold for identifying problem modules. The
 threshold is set separately for each SCT barrel layer and endcap disk. The
-thresholds are given in Table~\ref{table:tdiff_thresh}. The endcaps tend to have much wider distributions than the barrels, indicating that the module temperature is less uniform on endcap cooling loops. This is consistent with the findings of the 2008 study. The number and percentage of modules with $|$ \tdiff$|$ greater than threshold at least 5 times during the period 20/1/2010 - 19/6/2010 is shown in Table~\ref{table:tdiff_num}.
+thresholds are given in Table~\ref{table:tdiff_thresh}. The endcaps tend to have
+much wider distributions than the barrels, indicating that the module
+temperature is less uniform on endcap cooling loops. This is consistent with the
+findings of the 2008 study. The number and percentage of modules with $|$
+\tdiff$|$ greater than threshold at least 5 times during the period 20/1/2010 -
+19/6/2010 is shown in Table~\ref{table:tdiff_num}.
 
 \begin{table}
  \centering
@@ -289,16 +353,26 @@ Endcap A & 4 & 0.4 \\
 Endcap C & 9 & 0.9 \\
 \hline\hline
  \end{tabular}
-\caption{Number and percentage of modules with $|$ \tdiff$|$ greater than the threshold for identifying problem modules at least 5 times during the period 20/1/2010 - 19/6/2010 for each barrel and for each of the endcaps.}
+\caption{Number and percentage of modules with $|$ \tdiff$|$ greater than the
+threshold for identifying problem modules at least 5 times during the period
+20/1/2010 - 19/6/2010 for each barrel and for each of the endcaps.}
 \label{table:tdiff_num}
 \end{table}
 
 The majority of the modules above threshold had negative values of \tdiff,
-indicating that they are warmer than their neighbours. This is generally caused by the modules not being in complete contact with their cooling block. A small number of modules had very large positive values of \tdiff, indicating that they are cooler than their neighbours. This indicates a lower power dissipation through the module which is either due to the module being disabled and thus not receiving the high voltage current, or due to incorrect chip settings.
+indicating that they are warmer than their neighbours. This is generally caused
+by the modules not being in complete contact with their cooling block. A small
+number of modules had very large positive values of \tdiff, indicating that they
+are cooler than their neighbours. This indicates a lower power dissipation
+through the module which is either due to the module being disabled and thus not
+receiving the high voltage current, or due to incorrect chip settings.
 
 \section{Time Evolution of monitoring variables}
 
-In order to track problematic modules, plots are produced each month showing the problem modules and on which days they were problematic. An example of such a plot is shown in Figure~\ref{fig:pm_april}. These plots are available on the Calibration Monitoring website.
+In order to track problematic modules, plots are produced each month showing the
+problem modules and on which days they were problematic. An example of such a
+plot is shown in Figure~\ref{fig:pm_april}. These plots are available on the
+Calibration Monitoring website.
 
 \subsection{Number of Problem modules}
 
@@ -343,7 +417,13 @@ modules above the problem threshold is found to increase at a rate of
 
 \section{Behaviour of problematic modules}
 
-For each of the problematic modules the value of the problematic monitoring variable has been plotted as a function of time for the first six months of 2010 in order to determine whether the problem is getting worse. For most of the problematic modules the magnitude of the monitoring variable does not increase over the period, aside from small fluctuations.  However, one module has been identified with a high \deltat of increasing magnitude, and four modules with a \tdiff of increasing magnitude. A further two show odd behavior. 
+For each of the problematic modules the value of the problematic monitoring
+variable has been plotted as a function of time for the first six months of 2010
+in order to determine whether the problem is getting worse. For most of the
+problematic modules the magnitude of the monitoring variable does not increase
+over the period, aside from small fluctuations.  However, one module has been
+identified with a high \deltat of increasing magnitude, and four modules with a
+\tdiff of increasing magnitude. A further two show odd behavior. 
 
 \begin{figure}[h]
  	\centering
@@ -353,13 +433,40 @@ For each of the problematic modules the value of the problematic monitoring vari
 	\subfigure[]{
 		\includegraphics[width=0.47\textwidth]{pm_ev_dt_126-C6}
 	}
-	\caption{The temperature difference between the front and back of the module (\deltat) for barrel module Q3/B6/L126/I/P29/A5 (left) and barrel module Q3/B6/L126/O/P30/C6 (right) as a function of time between 20/1/2010 to 18/7/2010}
+  \caption{The temperature difference between the front and back of the module
+  (\deltat) for barrel module Q3/B6/L126/I/P29/A5 (left) and barrel module
+  Q3/B6/L126/O/P30/C6 (right) as a function of time between 20/1/2010 to
+  18/7/2010}
 	\label{fig:pm_ev_dt}
 \end{figure}
 
-The plot on the left of~\ref{fig:pm_ev_dt} shows the only module with a \deltat of increasing magnitude. The temperature difference between the front and back of the module has increased by about 1.5$^\circ$C in six months, with back of the module warmer than the front. This suggests that the two sides of the module are slowly separating. The plot on the right of~\ref{fig:pm_ev_dt} shows a  module for which \deltat jumps between 0\dc  and 3-4\dc every 1 or 2 months. This suggests an intermittent failure in the integrity of the module, but is very unexpected behaviour and requires further investigation. No other problems with this module have been recorded.
+The plot on the left of~\ref{fig:pm_ev_dt} shows the only module with a \deltat
+of increasing magnitude. The temperature difference between the front and back
+of the module has increased by about 1.5$^\circ$C in six months, with back of
+the module warmer than the front. This suggests that the two sides of the module
+are slowly separating. The plot on the right of~\ref{fig:pm_ev_dt} shows a
+module for which \deltat jumps between 0\dc  and 3-4\dc every 1 or 2 months.
+This suggests an intermittent failure in the integrity of the module, but is
+very unexpected behaviour and requires further investigation. No other problems
+with this module have been recorded.
 
-Three modules were observed to have a \tdiff becoming more negative with time, indicating that they are becoming warmer relative to their neighbours by about 1\dc  over six months. This suggests a failure in coupling to the cooling pipe that is getting worse with time. One of these modules is shown on the left of Figure~\ref{fig:pm_ev_tdiff}.  The right hand plot of Figure~\ref{fig:pm_ev_tdiff} shows a module with \tdiff becoming more positive over time, and also showing sharp jumps in the variable. An increasing positive \tdiff means the module is cooler than its neighbours, and becoming even more cooler. This would suggest that the module is running at a lower power, although it is unclear why this would cause the \tdiff to increase over time, nor explain the sudden jumps. Generally modules running at lower power are detected with the DAQ (Data Acquisition) software, but no problem has been reported for this module. A further seven modules with a \tdiff which jumps between 0\dc and around +7 \dc have been observed.  All seven of these modules have other known problems; either the modules do not receive the high voltage, or there is a problem with the module communication. These modules are out of configuration, and data sent from these modules is not used for physics.
+Three modules were observed to have a \tdiff becoming more negative with time,
+indicating that they are becoming warmer relative to their neighbours by about
+1\dc  over six months. This suggests a failure in coupling to the cooling pipe
+that is getting worse with time. One of these modules is shown on the left of
+Figure~\ref{fig:pm_ev_tdiff}.  The right hand plot of
+Figure~\ref{fig:pm_ev_tdiff} shows a module with \tdiff becoming more positive
+over time, and also showing sharp jumps in the variable. An increasing positive
+\tdiff means the module is cooler than its neighbours, and becoming even more
+cooler. This would suggest that the module is running at a lower power, although
+it is unclear why this would cause the \tdiff to increase over time, nor explain
+the sudden jumps. Generally modules running at lower power are detected with the
+DAQ (Data Acquisition) software, but no problem has been reported for this
+module. A further seven modules with a \tdiff which jumps between 0\dc and
+around +7 \dc have been observed.  All seven of these modules have other known
+problems; either the modules do not receive the high voltage, or there is a
+problem with the module communication. These modules are out of configuration,
+and data sent from these modules is not used for physics.
 
 \begin{figure}[h]
  	\centering
@@ -376,7 +483,13 @@ Three modules were observed to have a \tdiff becoming more negative with time, i
 \section{Long Term Trends in Monitoring Variables}
 
 To evaluate the long term performance of the SCT cooling, plots of the mean and
-width of the distributions of the monitoring variables are produced.~\fig{
+width of the distributions of the monitoring variables are
+produced. \fig{sigma-evo-deltat} shows the width and mean of the \deltat\
+distributions as a function of time. For the widths, each point on the graph corresponds to the
+width of the Gaussian fit to the \deltat\ distribution (such the distribution shown
+in~\fig{dt_dist}) for one stable period;
+similarly for the means, each point corresponds to the mean of the Gaussian fit
+for one stable period.
 
 \begin{figure}[h]
  	\centering
@@ -388,7 +501,7 @@ width of the distributions of the monitoring variables are produced.~\fig{
 	}
   \caption{The (a) width and (b) mean of the module \deltat\ distribution for SCT
   barrel modules as a function of time.}
-	\label{fig:sigma_evo_deltat}
+	\label{fig:sigma-evo-deltat}
 \end{figure}
 
 \begin{figure}[h]
@@ -410,7 +523,7 @@ width of the distributions of the monitoring variables are produced.~\fig{
   respectively. Figures (c) and (d) show the width of the module temperature
   distribution as a function of time, again for the barrels and endcaps
   respectively.}
-	\label{fig:sigma_evo_tdiff}
+	\label{fig:sigma-evo-tdiff}
 \end{figure}
 
 \begin{figure}[h]
@@ -423,9 +536,8 @@ width of the distributions of the monitoring variables are produced.~\fig{
   }
   \caption{The width of the \tdiff\ distribution as a function of time for (a)
   the barrels and (b) the endcaps.}
-	\label{fig:sigma_evo_tavg}
+	\label{fig:sigma-evo-tavg}
 \end{figure}
 
 \section{Conclusions}
-
 
