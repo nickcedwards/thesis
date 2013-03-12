@@ -6,25 +6,24 @@
 
 \section{Introduction}
 
-In order to mitigate the effects of radiation
-damage, it is necessary to maintain the SCT modules at a temperature of
-approximately
-$-7^{\circ}$C. The SCT and Pixel
-sub-detectors use a common evaporative cooling system to keep their silicon
-modules at the required temperatures. In order to monitor the
+In order to mitigate the effects of radiation damage, it is necessary to
+maintain the SCT modules at a temperature of approximately $-7^{\circ}$C. The
+SCT and Pixel sub-detectors use a common evaporative cooling system to keep
+their silicon modules at the required temperatures. Monitoring of the module
+temperature is important to ensure that the cooling system is functioning as
+designed and that the modules are still coupled to the cooling structures.  This
+chapter describes tools developed to monitor variables associated with the
+temperatures of SCT modules, and presents results for twenty-two months of
+operation between January 2010 and October 2012.
+
+In order to monitor the
 performance of the cooling of SCT modules, the temperature of
 each module is monitored by a thermistor mounted on the front side of the
 detector (the side furthest from the interaction point); barrel modules have
-an additional thermistor mounted on the back side of the module. Monitoring of
-the module temperature is important to ensure that the cooling system is
-functioning as designed and that the modules are still coupled to the cooling
-structures. The temperature difference between the front and the back of barrel
+an additional thermistor mounted on the back side of the module.  The temperature difference between the front and the back of barrel
 modules can be used to identify modules losing mechanical integrity, and the
 difference between a module's temperature and the average temperature of its
 neighbours can identify modules decoupling from the cooling structure. 
-This chapter describes tools developed to monitor variables associated with the temperatures of
-SCT modules, and presents results for twenty-two months of operation between
-January 2010 and October 2012.
 
 %An overview These are described in this section, along with results for
 %twenty-two months of operation between January 2010 and October 2012. 
@@ -156,6 +155,8 @@ which 44 cool modules on the SCT barrels, 72 cool modules on the SCT endcaps and
 the remaining 88 cool modules on the Pixel detector.
 
 \section{Methodology}
+The temperature of the SCT modules are monitored by thermistors mounted on the
+hybrid.
 The temperatures recorded by the module thermistors are read out by the ATLAS
 \textit{PVSS} SCADA system. Twice a day the temperatures are written to an
 Oracle database for offline analysis. In addition, whenever a module temperature
