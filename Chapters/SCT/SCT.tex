@@ -16,15 +16,6 @@ chapter describes tools developed to monitor variables associated with the
 temperatures of SCT modules, and presents results for twenty-two months of
 operation between January 2010 and October 2012.
 
-In order to monitor the
-performance of the cooling of SCT modules, the temperature of
-each module is monitored by a thermistor mounted on the front side of the
-detector (the side furthest from the interaction point); barrel modules have
-an additional thermistor mounted on the back side of the module.  The temperature difference between the front and the back of barrel
-modules can be used to identify modules losing mechanical integrity, and the
-difference between a module's temperature and the average temperature of its
-neighbours can identify modules decoupling from the cooling structure. 
-
 %An overview These are described in this section, along with results for
 %twenty-two months of operation between January 2010 and October 2012. 
 
@@ -155,8 +146,11 @@ which 44 cool modules on the SCT barrels, 72 cool modules on the SCT endcaps and
 the remaining 88 cool modules on the Pixel detector.
 
 \section{Methodology}
-The temperature of the SCT modules are monitored by thermistors mounted on the
-hybrid.
+
+The temperatures of SCT modules are monitored by thermistors mounted on the
+module hybrids on the front side of the
+module (the side furthest from the interaction point). Barrel modules have
+an additional thermistor mounted on the back side of the module.  
 The temperatures recorded by the module thermistors are read out by the ATLAS
 \textit{PVSS} SCADA system. Twice a day the temperatures are written to an
 Oracle database for offline analysis. In addition, whenever a module temperature
