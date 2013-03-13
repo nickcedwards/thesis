@@ -167,20 +167,23 @@ The temperatures recorded by the module thermistors are read out by the ATLAS
 \textit{PVSS} SCADA system. Twice a day the temperatures are written to an
 Oracle database for offline analysis. In addition, whenever a module temperature
 changes above a deadband of 0.4$^\circ$C the new value is written to the
-database.  It is necessary to first find periods of stable running where the
-cooling system is turned on and the system in a stable state. Stable periods are
+database.  
+
+It is important to monitor the module temperatures only during periods of stable running, as
+the temperatures will vary as the detector is cooled down or warmed up, or when
+calibration work is in progress. Stable periods are
 found by requiring that the number of cooling loops turned on is constant and
 greater than zero. Stable periods are required to be at least 6 hours long, to
-veto periods where the detector is being turned on and off. Stable periods
+veto periods where the detector is being turned on and off, and stable periods
 longer than 24 hours are broken down into 24 hour blocks.
 
 For each module, a number of monitoring variables are calculated; these are
 described below. The distributions of these variables are plotted for each of
-the barrel layers and endcap disks. Modules which fall in the far outlying
+the barrel layers and endcap disks. Modules which fall in the tails 
 regions of the distributions are identified as `problem' modules. A list of
-problem modules is maintained, and these modules are monitored. The plots are
+problem modules is maintained, and these modules are monitored. The monitoring plots are
 produced automatically on a daily basis by scripts running on one of the SCT
-monitoring computers. The plots are made available as part of the `SCT
+monitoring computers and are made available as part of the `SCT
 Calibration Monitoring' website at
 \url{https://pc-sct-www01.cern.ch/CalibMonitor/} (ATLAS login required).
 
