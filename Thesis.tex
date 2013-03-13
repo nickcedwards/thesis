@@ -47,6 +47,13 @@
 \lhead{\leftmark}
 % \pagestyle{headings}
 
+\pagestyle{title}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+\chead{\includegraphics[height=4cm]{UniversityLogoNoText}}
+\lhead{}
+
 \usepackage{amsmath}
 
 \includeonly{Chapters/SCT/SCT}
@@ -65,6 +72,12 @@
 \input{Macros/Macros.tex}
 \input{Macros/SCT.tex}
 \input{Results/Results.tex}
+
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{}
+\fancyhead[R]{
+\includegraphics[width=4cm]{company-logo.pdf}
+}
 
 
 \titlepic{\includegraphics[height=4cm]{UniversityLogoNoText}}
