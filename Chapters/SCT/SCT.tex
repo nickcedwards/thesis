@@ -189,19 +189,18 @@ Calibration Monitoring' website at
 
 \section{Monitoring Variables}
 
-\subsection{Front-Back temperature difference - \deltat }
+\subsection{Front-Back Temperature Difference - \deltat }
 
-SCT barrel modules have two thermistors, one mounted on either side of the
-module. The difference in temperature between the front and back of the module
+The difference in temperature between the front and the back of a module
 should be very small and any large temperature difference would indicate
 defective thermal coupling between the two sides. This would suggest that the
 front and the back of the module had lost mechanical integrity and were coming
-apart from one another. The monitoring variable \deltat\ is defined as
+apart from one another. It is therefore useful to monitor modules \deltat, the
+front-back temperature difference, defined as:
 
 \begin{equation}
  \Delta T = T_{\mathrm{front}} - T_{\mathrm{back}}
 \end{equation}
-
 where $T_{\mathrm{front}}$ and $T_{\mathrm{back}}$ are the temperatures recorded at the front and the back of the module respectively. 
 
 \begin{figure}[h]
@@ -248,20 +247,18 @@ of the barrel layers, averaged over 5 months of data between 20/1/2010 and
 
 In order to identify modules with a high value of \deltat, a threshold of 5
 times the width of the Gaussian is set, separately for each barrel. Modules with
-a value of \deltat\ greater than the threshold are identified as `problem
+a value of \deltat\ greater than this threshold are identified as `problem
 modules'. Table~\ref{table:dt_num} gives the number and percentage of modules
 with front-back temperature difference greater than the threshold at least five
 times during the period 20/1/2010 - 19/6/2010 for each barrel layer. The width
 of the distribution is greatest for Barrel 3, and so the thresholds for
 identifying high \deltat\ modules is highest for this barrel. The width of the
 distribution for Barrel 6 is the second widest, however the distribution is
-observed to have large non Gaussian tails. Subsequently, the percentage of
-modules falling outside of the Gaussian is far higher than for other barrels and
-so a higher proportion of the modules on Barrel 6 are identified as problematic
-than on other barrels. This is explained by the fact that for Barrels 3, 4 and 5
-only modules with $|\Delta \mathrm{T}| < 2^\circ$C measured on production were
-accepted, whereas for Barrel 6 this was relaxed to $|\Delta \mathrm{T}| <
-4^\circ$C~\cite{Viehhauser:2006ix}. 
+observed to have large non Gaussian tails, leading to a larger fraction of
+problematic modules on Barrel 6 than other modules. This is attributed to the
+fact that for Barrels 3, 4 and 5 only modules with $|\Delta \mathrm{T}| <
+2^\circ$C measured on production were accepted, whereas for Barrel 6 this was
+relaxed to $|\Delta \mathrm{T}| < 4^\circ$C~\cite{Viehhauser:2006ix}. 
 
 The mean value of the \deltat\ distributions tend to be negative, implying that
 on average the back side of the modules (the side facing into the carbon fibre
@@ -269,10 +266,11 @@ barrel) tend to be warmer than the front. This effect was also observed in tests
 carried out on the modules reception at CERN in 2006~\cite{Viehhauser:2006ix},
 and in tests carried out in 2008~\cite{Shaw:1229428}. Investigations suggested
 that this bias is a property of the module itself, rather than an effect due to
-the module's environment. A possible explanation is that the bend in the hybrid
-is on the back of the module, and this may have caused difficulties in
-manufacturing an  effective glue joint, increasing thermal impedance and causing
-a weaker thermal coupling between the cooling pipe and the back of the module.
+the module's environment. A possible explanation is the way that the hybrid was
+glued to the substrate, whereby the top wing of the hybrid was first glued to the front of the
+module, then the bend made, then the bottom wing glued. It is possible that
+following the bend the quality of the glue joint decreased, increasing thermal
+impedance between the back of the of the hybrid and the base-board.
 
 \begin{table}
 \centering
