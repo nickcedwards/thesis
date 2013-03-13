@@ -309,13 +309,21 @@ threshold for identifying problem modules at least 5 times during the period
 \label{table:dt_num}
 \end{table}
 
-\subsection{Difference in Temperature to Local Average - \tdiff\ }
+\subsection{Difference In Temperature To Local Average - \tdiff\ }
 
 Modules with a bad thermal coupling to the cooling pipe can be identified by
 looking for modules with a temperature significantly different to other modules
-on the same cooling structure. The monitoring variable \tdiff\ is defined as
-$T_{\mathrm{diff}}  = \bar T_{\mathrm{struct}} - T_{\mathrm{module}}$ where
-$\bar T_{\mathrm{struct}} = \Sigma^N_1 T_{\mathrm{i}}/N $ is the average
+on the same cooling structure. The monitoring variable \tdiff\ is defined as:
+
+\begin{equation}
+$T_{\mathrm{diff}}  = \bar T_{\mathrm{struct}} - T_{\mathrm{module}}$ 
+\bar T_{\mathrm{struct}} = \Sigma^N_1 T_{\mathrm{i}}/N 
+\end{equation}
+where
+\begin{equation}
+\bar T_{\mathrm{struct}} = \Sigma^N_1 T_{\mathrm{i}}/N 
+\end{equation}
+ is the average
 temperature of modules on the cooling structure. For the SCT barrels a cooling
 structure is defined as a stave (consisting of two loops) and for endcaps a
 cooling loop. Any module warmer than its neighbours gives a negative value of
@@ -522,7 +530,7 @@ it is unclear why this would cause the \tdiff\ to increase over time, nor explai
 the sudden jumps. Generally modules running at lower power are detected with the
 DAQ (Data Acquisition) software, but no problem has been reported for this
 module. A further seven modules with a \tdiff\ which jumps between 0\dc\ and
-around +7 \dc\ have been observed.  All seven of these modules have other known
+around +7\dc\ have been observed.  All seven of these modules have other known
 problems; either the modules do not receive the high voltage, or there is a
 problem with the module communication. These modules are out of configuration,
 and data sent from these modules is not used for physics.
