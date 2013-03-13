@@ -1,5 +1,93 @@
-\documentclass[a4paper,12pt]{report}
+\documentclass[a4paper,12pt,titlepic]{report}
+%\DeclareMathSizes{12}{11}{8}{7}  
+
+\usepackage[tt]{titlepic}  % insert university logo
+
+\usepackage{import}
+\usepackage[pdftex]{graphicx}
+ \DeclareGraphicsRule{*}{mps}{*}{} 
+ \DeclareGraphicsExtensions{.pdf,.eps,.png,.jpg}
+%\usepackage{array}
+%\usepackage{bigstrut}
+%\usepackage{multirow}
+%\usepackage{subfigure}
+%\usepackage{booktabs} %provides \toprule
+%\usepackage[update,prepend]{epstopdf}
+%\usepackage[section]{placeins}
+%\usepackage[bookmarks=true,colorlinks=true,pdftex]{hyperref}
+%\usepackage[square,comma,sort&compress,numbers]{natbib}
+%\usepackage{units}
+%\usepackage{notoccite}
+%\usepackage{fp}
+%\usepackage{excludeonly}
+%\usepackage{caption}
+%\usepackage{subcaption}
+%\usepackage{a4wide}
+%\usepackage{fullpage}
+
+\usepackage{feynmp}
+\unitlength=1mm
+
+% Allows to specify margins etc, but sets to a more sensible value by default
+\usepackage[textheight=650pt, top=3.8cm]{geometry}
+
+% Linespacing
+\usepackage{setspace}
+%\singlespacing
+\onehalfspacing
+%\doublespacing
+%\setstretch{1.1}
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+\rhead{\thepage}
+\lhead{\leftmark}
+% \pagestyle{headings}
+
+\usepackage{amsmath}
+
+\includeonly{Chapters/SCT/SCT}
+%\includeonly{Chapters/TheoryZZProduction/TheoryZZProduction,Chapters/Theory/Theory}
+%\includeonly{Chapters/Theory/Theory}
+%\includeonly{Reconstruction,Chapters/Detector/Detector}
+%\includeonly{Chapters/ObjEventSelection/ObjEventSelection}
+%\includeonly{Chapters/CrossSection/CrossSection}
+%\includeonly{Chapters/BackgroundEstimate/BackgroundEstimate,Chapters/ObjEventSelection/ObjEventSelection}
+%\includeonly{Chapters/BackgroundEstimate/BackgroundEstimate}
+%\excludeonly{Chapters/CrossSection/CrossSection}
+
+\newcommand\defaultArrayStretch{\renewcommand\arraystretch{1.07}}
+\defaultArrayStretch
+
+\input{Macros/Macros.tex}
+\input{Macros/SCT.tex}
+\input{Results/Results.tex}
+
+\titlepic{\includegraphics[height=4cm]{UniversityLogoNoText}}
+\title{\rule{14cm}{1mm} \\ Study of the Dynamics of Soft Interactions with Two-Particle Angular Correlations at ATLAS \\ \rule{14cm}{1mm}}
+\vspace{-50mm}
+\author{Cristina Oropeza Barrera \\ \bigskip \\ \large School of Physics \& Astronomy \\ \large College of Science \& Engineering \\ \bigskip \\ Submitted in fulfilment of the requirements \\ for the degree of Doctor of Philosophy \\ at the University of Glasgow}
+\vspace{-10mm}
+\date{December 2011 \\ \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \textcopyright\ C. Oropeza Barrera 2011} 
+
+
+%\title{Blah}
+%\titlepic{\includegraphics[height=3cm]{UniversityLogoNoText}}
+%\vspace{-10mm}
+%\title{\rule{14cm}{1mm} \\ Measurement of the ZZ production cross section and
+%limits on anomalous neutral triple gauge couplings with the ATLAS detector \rule{14cm}{1mm} \\ }
+%\date{April 2013}
+%\author{Nicholas Charles Edwards \\ \bigskip \\ \large School of Physics \& Astronomy \\ \large College of Science \& Engineering \\ \bigskip \\ Submitted in fulfilment of the requirements \\ for the degree of Doctor of Philosophy \\ at the University of Glasgow}
 
 \begin{document}
+\maketitle
+
+
 \end{document}
+
+
 
