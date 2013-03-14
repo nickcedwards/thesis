@@ -40,13 +40,14 @@ Analysis issues:
 - ZZ Pheno: 
 	- Apply Aidan's comments
 	- Say more about generator plots
+	- Define MC sample
+
 					
 - ObjSel:						{1 day}
 
 	- Plots of forward mu combined
 	- Higgs and MPI contamination
 	- Dilepton plots: WZ samples. Plots with caloIso. Have Medium pt20 plots ready
-	- Define MC sample
 	- 4-lepton selection efficiencies
 
 - Analysis overview 
@@ -67,6 +68,8 @@ Analysis issues:
 	- Grid paramt stuff	
 	
 - SCT 						{2 days}
+	- Read more on radiation damage
+	- Module temperature distributions
 
 - Detector REDRAFT:			{1 day}
 	- sqrt(12) resolution issue - is from definition of std-deviation:
