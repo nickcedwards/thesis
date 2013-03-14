@@ -29,9 +29,7 @@ Week 0 targets:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Analysis issues:
-	- Fudge factors 7 TeV
-	- Why so many more muon fakes in data?
-	- Scale for 7 TeV			{1 day}
+	- Why so many more muon fakes in data?			{0.5 day}
 
 - Theory:
 	- Apply Aidan's comments
@@ -44,11 +42,9 @@ Analysis issues:
 
 					
 - ObjSel:						{1 day}
-
-	- Plots of forward mu combined
-	- Higgs and MPI contamination
+	- Apply Aidan's comments.
+	- MPI contamination
 	- Dilepton plots: WZ samples. Plots with caloIso. Have Medium pt20 plots ready
-	- 4-lepton selection efficiencies
 
 - Analysis overview 
 	
