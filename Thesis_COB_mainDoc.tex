@@ -1,0 +1,124 @@
+\documentclass[12pt,a4paper,oneside]{book}
+%\usepackage[colorlinks=true,linkcolor=blue]{hyperref}  % add hyperref style for electronic copy only
+\usepackage[font=singlespacing]{caption}  % single-spacing in captions
+\usepackage{wrapfig}
+\usepackage[bottom]{footmisc} % make sure footnotes are at the bottom of the page
+\usepackage{rotating}
+\usepackage{rotfloat}
+\usepackage{multirow}  % multiple rows in tables
+\usepackage{lineno} % include line numbers (only for drafts)
+% 26.11.2011: Removed line numbers --> \linenumbers
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{setspace}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage[tc]{titlepic}  % insert university logo
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{overpic}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[RO,RE]{\thepage}
+\fancyhead[LO,LE]{\thechapter}
+\graphicspath{{Figures/}}
+\usepackage{fullpage}
+\addtolength{\textwidth}{-0.8in}
+\addtolength{\textheight}{-0.2 in}
+\addtolength{\oddsidemargin}{0.6in}
+\addtolength{\evensidemargin}{0.6in}
+\headsep=0.3in
+\setlength{\skip\footins}{0.5in}
+
+\makeatletter
+\setlength{\@fptop}{5pt}
+\makeatother
+
+\newcommand{\newt}{{\sc newt}}
+\newcommand{\athena}{{\sc athena}}
+\newcommand{\gaudi}{{\sc gaudi}}
+\newcommand{\pythia}{{\sc pythia}}
+\newcommand{\herwig}{{\sc herwig}}
+\newcommand{\phojet}{{\sc phojet}}
+\newcommand{\pT}{\ensuremath{p_\mathrm{T}}}
+\newcommand{\pTmin}{\ensuremath{p_\mathrm{Tmin}}}
+\newcommand{\pTzero}{\ensuremath{p_\mathrm{T0}}}
+\newcommand{\pTref}{\ensuremath{p_\mathrm{T0ref}}}
+
+\titlepic{\includegraphics[height=4cm]{Escudo_UoG}}
+\title{\rule{14cm}{1mm} \\ Study of the Dynamics of Soft Interactions with Two-Particle Angular Correlations at ATLAS \\ \rule{14cm}{1mm}}
+\vspace{-50mm}
+\author{Cristina Oropeza Barrera \\ \bigskip \\ \large School of Physics \& Astronomy \\ \large College of Science \& Engineering \\ \bigskip \\ Submitted in fulfilment of the requirements \\ for the degree of Doctor of Philosophy \\ at the University of Glasgow}
+\vspace{-10mm}
+\date{December 2011 \\ \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \textcopyright\ C. Oropeza Barrera 2011} 
+
+\begin{document}
+\pagenumbering{arabic}
+\maketitle
+
+\begin{doublespace}
+
+	%\pagenumbering{roman}
+	
+	\include{Abstract}
+	
+	\include{Declaration}
+	
+	\include{Acknowledgements}
+	
+	\tableofcontents
+	 
+	\addcontentsline{toc}{chapter}{List of Figures}
+	\listoffigures
+	
+	\addcontentsline{toc}{chapter}{List of Tables}
+	\listoftables
+	\clearpage
+
+	\pagestyle{fancy}
+	\fancyhead[LO,LE]{\nouppercase{\rightmark}}
+	
+	%\pagenumbering{arabic}
+	
+	\include{Preface}
+	
+	\part{Theoretical Background} 
+
+	\include{SoftQCD}
+
+	\include{Correlations}
+	
+	\part{Experiment Overview}
+
+	\include{Detector}
+
+	\include{Reconstruction}
+	
+	\include{Depletion}
+
+	\part{Analysis}
+	
+	\include{Selection}
+
+	\include{Method}
+
+	\include{Uncertainties}
+
+	\include{Results}
+
+	%\part{Conclusions}
+
+	\include{Conclusions}
+
+	% Appendices:
+	\include{Appendices}
+
+	\clearpage
+	\bibliographystyle{atlasnote}
+	\bibliography{Bibliography}
+	\clearpage
+	
+\end{doublespace}
+
+\end{document}
