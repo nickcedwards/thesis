@@ -275,7 +275,7 @@ requirements; only these additional electrons are included in the plots.}
       \hline
       \bf{Central Muons} & \\
       Algorithm             & \staco                        & \same \\
-      Type                  & Combined or Segment Tagged    & \same \\
+      Type                  & \combined\ or Segment Tagged    & \same \\
       $\eta$                & $|\eta|<2.5$                  & \same \\
       $p_T$                 & $p_T > 7$ GeV                 & \same \\
       ID Track Quality      & & \\
@@ -306,13 +306,13 @@ requirements; only these additional electrons are included in the plots.}
       \hline
       \bf{Forward Muons} & \\
       Algorithm             & \staco                        & \same \\
-      Type                  & Combined or Stand-Alone       & \same \\
+      Type                  & \combined\ or Stand-Alone       & \same \\
       $\eta$                & \modetabetween{2.5}{2.7}      & \same \\
       $p_T$                 & $p_T > 10$ GeV                & \same \\
       Calorimeter isolation & \etconetwentylt{0.15}         & \same \\
       % This is a cut that is automatically satisfied by combined
       %MS Track Quality      & Hits in all 3 stations       & \same \\
-       \multicolumn{3}{c}{\it \underline{Additional requirements for Combined Muons}} \\
+       \multicolumn{3}{c}{\it \underline{Additional requirements for \combined\ Muons}} \\
       ID Track Quality      &                               &  \\
        - B Layer Hits       & $\geq 1$                      & \same \\
        - Pixel Hits         & $\geq 2$                      & $\geq 1$\\
@@ -428,12 +428,24 @@ spectrometer track with hits in each station of the spectrometer and must have
 \ptgt{10}. Although the
 inner detector only extends to \modetaeq{2.5}, the complicated nature of the
 magnetic field makes it possible for some muons up to \modetalt{2.6} to be
-combined with an ID track, forming `Combined' muons; those that do not have an
+combined with an ID track, forming \combined\ muons; those that do not have an
 ID track are termed Stand Alone.~\fig{fwdmu-frac-combined} shows the freaction
-of forward muons which are combined as a function of $\eta$. In data reconstructed in 2012 muons without a
+of forward muons which are \combined\ as a function of $\eta$. In data reconstructed in 2012 muons without a
 full ID track may be combined with pixel detector `tracklets' up to
 \modetalt{2.65}. Such `Silicon Associated' muons benefit from improved vertex
 parameter estimation, but are otherwise treated as Stand Alone. 
+
+\begin{figure}[h]
+\centering
+	\subfigure[]{
+            \includegraphics[width=0.47\textwidth]{ObjSel/h_4l_MuEtCone20_log}
+        }
+\caption[Fraction of forward muons which are \combined\ muons as a function of
+$\eta$]{Fraction of forward
+muons which are have an ID track and are \combined\ muons as a function of
+$\eta$. The fractions are estimated from \mc\ simulation.}
+\label{fig:objsel-mu}
+\end{figure}
 
 Since not all forward muons
 have tracks, a track isolation requirement is not applied; instead a tighter calorimeter isolation
@@ -593,7 +605,7 @@ trigger, and must also satisfy the same identification requirements as
 used in the trigger. Trigger-matched electrons in both the 7~\tev\ and the
 8~\tev data
 are required to have \ptgt{25}, cluster \modetalt{2.47} and to pass the \mediumPP\
-requirements. Trigger matched muons are required to be combined muons, have
+requirements. Trigger matched muons are required to be \combined\ muons, have
 \modetalt{2.4} and have $\pt > 20 (25)$ \gev\ in the 7(8)~\tev\ data.
 
 \subsection{Trigger Efficiencies}
