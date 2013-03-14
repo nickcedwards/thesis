@@ -147,6 +147,26 @@ overlap within \deltaRlt{0.1}, the lower-\et\ electron is removed, although in
 the case of a central electron overlapping with a forward electron, which could
 occur near the edge of the tracker, the central electron takes precedence.
 
+\begin{table}[htbp]
+\centering
+\begin{tabular}{l|c|c|c|c}
+\hline\hline
+Cut & 7 TeV &  & 8 TeV &  \\
+\hline
+                          All &  $100.0 \pm 0.0$\% &         $ \pm $\% &  $100.0 \pm 0.0$\% &         $ \pm $\% \\
+               Object Quality &   $99.2 \pm 0.0$\% &  $99.2 \pm 0.0$\% &   $99.7 \pm 0.0$\% &  $99.7 \pm 0.0$\% \\
+                $E_{T}>7$ GeV &   $98.7 \pm 0.0$\% &  $99.5 \pm 0.0$\% &   $99.4 \pm 0.0$\% &  $99.7 \pm 0.0$\% \\
+                      Overlap &   $98.6 \pm 0.0$\% &  $99.9 \pm 0.0$\% &   $99.3 \pm 0.0$\% &  $99.8 \pm 0.0$\% \\
+                      Loose++ &   $91.7 \pm 0.1$\% &  $93.0 \pm 0.1$\% &   $94.5 \pm 0.1$\% &  $95.2 \pm 0.1$\% \\
+                $|z0| < 2$ mm &   $91.4 \pm 0.1$\% &  $99.7 \pm 0.0$\% &   $94.2 \pm 0.1$\% &  $99.7 \pm 0.0$\% \\
+$|d_{0}/\sigma(d_{0})| < 3.5$ &   $90.8 \pm 0.1$\% &  $99.3 \pm 0.0$\% &   $93.3 \pm 0.1$\% &  $99.1 \pm 0.0$\% \\
+              Track Isolation &   $90.4 \pm 0.1$\% &  $99.6 \pm 0.0$\% &   $92.2 \pm 0.1$\% &  $98.8 \pm 0.0$\% \\
+         Calorimter Isolation &   $90.1 \pm 0.1$\% &  $99.6 \pm 0.0$\% &    $0.0 \pm 0.0$\% &         $ \pm $\% \\
+\hline\hline
+\end{tabular}
+\caption{Central Electrons}
+\end{table}
+
 \subsection{Forward Electron Selection}
 
 Electrons reconstructed using the forward electron reconstruction algorithm are
@@ -166,6 +186,22 @@ Forward electrons are not used in the 8~\tev\ analysis.
 %of the calorimeter transverse energy in a cone of $\Delta R = 0.3$ around the
 %electron, removing the electron energy, must be less than 10\% of the electron
 %energy.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{l|c|c}
+\hline\hline
+Cut & 7 TeV &  \\
+\hline
+                 All &  $100.0 \pm 0.0$\% &          $ \pm $\% \\
+      Object Quality &   $99.9 \pm 0.0$\% &   $99.9 \pm 0.0$\% \\
+      $E_{T}>20$ GeV &   $80.0 \pm 0.5$\% &   $80.1 \pm 0.5$\% \\
+        Overlap Hits &   $80.0 \pm 0.5$\% &  $100.0 \pm 0.0$\% \\
+               Tight &   $46.8 \pm 0.7$\% &   $58.5 \pm 0.7$\% \\
+\hline\hline
+\caption{Forwards Electrons}
+\end{tabular}
+\end{table}
 
 \subsection{Electron distributions}
 
@@ -421,6 +457,23 @@ requirements are slightly loosened in order to recover efficiency losses arising
 from higher pileup in 2012; this was not found to increase the misidentification rate significantly;
 see~\tab{objsel-mu} for details of the changes.
 
+
+\begin{tabular}{l|c|c|c|c}
+\hline\hline
+Cut & 7 TeV &  & 8 TeV &  \\
+\hline
+                          All &  $100.0 \pm 0.0$\% &          $ \pm $\% &  $100.0 \pm 0.0$\% &         $ \pm $\% \\
+                $p_{T}>7$ GeV &   $99.9 \pm 0.0$\% &   $99.9 \pm 0.0$\% &   $99.9 \pm 0.0$\% &  $99.9 \pm 0.0$\% \\
+                   Track Hits &   $98.6 \pm 0.0$\% &   $98.8 \pm 0.0$\% &   $99.2 \pm 0.0$\% &  $99.2 \pm 0.0$\% \\
+                $|z0| < 2$ mm &   $98.6 \pm 0.0$\% &  $100.0 \pm 0.0$\% &   $99.1 \pm 0.0$\% &  $99.9 \pm 0.0$\% \\
+$|d_{0}/\sigma(d_{0})| < 3.5$ &   $98.3 \pm 0.0$\% &   $99.7 \pm 0.0$\% &   $98.5 \pm 0.0$\% &  $99.4 \pm 0.0$\% \\
+              Track Isolation &   $97.6 \pm 0.1$\% &   $99.3 \pm 0.0$\% &   $97.3 \pm 0.0$\% &  $98.8 \pm 0.0$\% \\
+         Calorimter Isolation &   $97.0 \pm 0.1$\% &   $99.5 \pm 0.0$\% &    $0.0 \pm 0.0$\% &         $ \pm $\% \\
+\hline\hline
+\caption{Central Muons}
+\end{tabular}
+\end{table}
+
 \subsection{Forward Muon Selection}
 
 Muons in the region \modetabetween{2.5}{2.7} are required to have a full muon
@@ -464,6 +517,25 @@ central muons, the requirements were relaxed slightly for 2012 data.
 Forward muons with an ID track are required to satisfy the same
 \zzero\ and \dzerosig\ requirements as central muons.
 
+\begin{table}[htbp]
+\centering
+\begin{tabular}{l|c|c|c|c}
+\hline\hline
+Cut & 7 TeV &  & 8 TeV &  \\
+\hline
+                          All &  $100.0 \pm 0.0$\% &          $ \pm $\% &  $100.0 \pm 0.0$\% &         $ \pm $\% \\
+                $p_{T}>7$ GeV &   $93.1 \pm 0.6$\% &   $93.1 \pm 0.6$\% &   $94.5 \pm 0.5$\% &  $94.5 \pm 0.5$\% \\
+                      Quality &   $92.7 \pm 0.7$\% &   $99.6 \pm 0.2$\% &   $94.0 \pm 0.5$\% &  $99.4 \pm 0.2$\% \\
+                   Track Hits &   $87.6 \pm 0.9$\% &   $94.5 \pm 0.6$\% &   $89.6 \pm 0.6$\% &  $95.4 \pm 0.4$\% \\
+                $|z0| < 2$ mm &   $87.6 \pm 0.9$\% &  $100.0 \pm 0.0$\% &   $89.1 \pm 0.6$\% &  $99.4 \pm 0.1$\% \\
+$|d_{0}/\sigma(d_{0})| < 3.5$ &   $86.8 \pm 0.9$\% &   $99.1 \pm 0.3$\% &   $88.2 \pm 0.6$\% &  $98.9 \pm 0.2$\% \\
+              Track Isolation &   $86.1 \pm 0.9$\% &   $99.2 \pm 0.2$\% &   $87.1 \pm 0.7$\% &  $98.8 \pm 0.2$\% \\
+         Calorimter Isolation &   $85.6 \pm 0.9$\% &   $99.5 \pm 0.2$\% &    $0.0 \pm 0.0$\% &         $ \pm $\% \\
+\hline\hline
+\caption{Forward Muons}
+\end{tabular}
+\end{table}
+
 \subsection{Calorimeter Tagged Muon Selection}
 
 Calorimeter tagged muons are used to recover efficiency at \modetalt{0.1} where
@@ -476,6 +548,23 @@ in~\sec{reco-mu-reco}, and are not selected if they overlap with a selected
 central muon within \deltaRlt{0.1}. Calorimeter tagged muons must satisfy the
 same track and calorimeter isolation, ID track quality, \zzero\ and \dzerosig\
 requirements as central muons.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{l|c|c|c|c}
+\hline\hline
+Cut & 7 TeV &  & 8 TeV &  \\
+\hline
+                          All &  $100.0 \pm 0.0$\% &         $ \pm $\% &  $100.0 \pm 0.0$\% &         $ \pm $\% \\
+               $p_{T}>10$ GeV &   $97.1 \pm 0.7$\% &  $97.1 \pm 0.7$\% &   $97.6 \pm 0.5$\% &  $97.6 \pm 0.5$\% \\
+                   Track Hits &   $91.8 \pm 1.1$\% &  $94.6 \pm 1.0$\% &   $94.1 \pm 0.8$\% &  $96.4 \pm 0.6$\% \\
+                $|z0| < 2$ mm &   $91.8 \pm 1.1$\% &  $99.9 \pm 0.1$\% &   $93.8 \pm 0.8$\% &  $99.7 \pm 0.2$\% \\
+$|d_{0}/\sigma(d_{0})| < 3.5$ &   $91.4 \pm 1.1$\% &  $99.6 \pm 0.2$\% &   $92.8 \pm 0.9$\% &  $98.9 \pm 0.5$\% \\
+         Calorimter Isolation &   $90.0 \pm 1.2$\% &  $98.5 \pm 0.5$\% &   $90.9 \pm 1.0$\% &  $98.0 \pm 0.5$\% \\
+\hline\hline
+\end{tabular}
+\caption{Forward Muons}
+\end{table}
 
 %\begin{figure}[h]
 %\centering
