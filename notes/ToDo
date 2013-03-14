@@ -1,13 +1,41 @@
 Thesis ToDo
 ------------
 
+Week 5 Targets:
+	- SCT chapter first draft -> Sav
+	- Finalise and redraft ObjSel and Bg Estimate
+	- First draft of CrossSection extraction
+	- TGC yield coefficients and first limits
+
+Week 4 Targets:
+	- Theory Redraft.
+	- Pheno Redraft.
+	- TGC limits showable
+
+Week 3 targets:
+	- First draft of TGC section.
+	- Dectector and Reco redraft.
+
+Week 2 targets:
+	- Global first draft
+	- Initial flat hunt
+
+Week 1 targets:
+	- Final draft
+
+Week 0 targets:
+	- Holiday
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Analysis issues:
 	- Fudge factors 7 TeV
+	- Why so many more muon fakes in data?
 	- Scale for 7 TeV			{1 day}
 
 - Theory:
 	- Apply Aidan's comments
-	- QCD theory section 		{1 day}	
+	- QCD theory section 		{2 days}	
 	
 - ZZ Pheno: 
 	- Apply Aidan's comments
@@ -15,11 +43,11 @@ Analysis issues:
 					
 - ObjSel:						{1 day}
 
-	- Later:
-		- Plots of forward mu combined
-		- Higgs and MPI contamination
-		- Dilepton plots: WZ samples?
-		- Define MC sample
+	- Plots of forward mu combined
+	- Higgs and MPI contamination
+	- Dilepton plots: WZ samples. Plots with caloIso. Have Medium pt20 plots ready
+	- Define MC sample
+	- 4-lepton selection efficiencies
 
 - Analysis overview 
 	
@@ -48,13 +76,10 @@ Analysis issues:
 	   = sqrt[ L^{3} (1/24 - - 1/24)] = L/sqrt(12)
 	- Describe Luminosity measurent
 
-- Reconstruction REDRAFT: {0 days}
+- Reconstruction REDRAFT: {1 days}
 	- Plot of d0Sig in GSF/STD in data?
 	- Find out properly about HT hits in TRT and add to description
 	- Own ID eff plots?
-	
-- Theory redraft {1 day}
-- Pheno redraft {1 day}
 
 - Soak time				{2 days}
 - Global redraft		{3 days}
