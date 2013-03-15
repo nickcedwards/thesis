@@ -103,16 +103,16 @@ from~\cite{1748-0221-3-08-S08003}}
 
 SCT modules consist of two layers of silicon sensors, bonded together at a small
 stereo angle as described in~\sec{Detector-SCT}.~\fig{module-diagram} shows a
-diagram of the layout of barrel and endcap modules. Barrel modules are constructed
-by gluing the sensors either side of a graphite base-board
-which provides the module's mechanical structure. The read-out chips are located on a
-polyimide hybrid wrapped around the outside of the module. The HV is applied
-to the sensors via the base board. Endcap modules are constructed in a similar
+diagram of the layout of barrel and endcap modules. Barrel modules are
+constructed by gluing the sensors either side of a graphite base-board which
+provides the module's mechanical structure. The read-out chips are located on a
+polyimide hybrid wrapped around the outside of the module. The HV is applied to
+the sensors via the base board. Endcap modules are constructed in a similar
 fashion, gluing the sensors either side of a base-board spine, with the hybrid
-located at one end of the module.  
-Heat from the sensors and the read-out electronics on the hybrid is conducted by
-the base-board to the cooling pipe, which is connected at one edge of the module
-via a layer of thermal grease and an aluminium cooling block.
+located at one end of the module. Heat from the sensors and from the read-out
+electronics on the hybrid is conducted by the base-board to the cooling pipe,
+which is connected at one edge of the module via a layer of thermal grease and
+an aluminium cooling block.
 
 \subsection{The Inner Detector Cooling System}
 \label{sec:SCT-CoolingDesc}
@@ -182,7 +182,7 @@ module hybrids on the front side of the
 module (the side furthest from the interaction point). Barrel modules have
 an additional thermistor mounted on the back side of the module.  
 The temperatures recorded by the module thermistors are read out by the ATLAS
-\textit{PVSS} SCADA system. Twice a day the temperatures are written to an
+\textit{PVSS} SCADA system. Every 12 hours  the temperatures are written to an
 Oracle database for offline analysis. In addition, whenever a module temperature
 changes above a deadband of 0.4$^\circ$C the new value is written to the
 database.  
