@@ -7,19 +7,17 @@
 \section{Introduction}
 
 In order to mitigate the effects of radiation damage and to prevent damage
-caused by excessive heat, it is important to keep
-the SCT modules cool, maintaining the silicon sensors at temperatures of approximately $-7^{\circ}$C. The
-SCT and Pixel sub-detectors use a common evaporative cooling system to remove
-heat from their modules
-Monitoring of the module
-temperature is important to ensure that the cooling system is functioning as
-designed, and that the modules remain coupled to the cooling structures.
-Additionally, monitoring of the temperature difference between the front and the
-back of barrel modules provides a check of the mechanical integrity of the
-modules. This
-chapter describes tools developed to monitor variables associated with the
-temperatures of SCT modules, and presents results for thirty-two months of
-operation between January 2010 and October 2012.
+caused by excessive heat, it is important to keep the SCT modules cool,
+maintaining the silicon sensors at temperatures of approximately $-7^{\circ}$C.
+The SCT and Pixel sub-detectors use a common evaporative cooling system to
+remove heat from their modules. Monitoring of the module temperature is
+important to ensure that the cooling system is functioning as designed, and that
+the modules remain coupled to the cooling structures.  Additionally, monitoring
+of the temperature difference between the front and the back of barrel modules
+provides a check of the mechanical integrity of the modules. This chapter
+describes tools developed to monitor variables associated with the temperatures
+of SCT modules, and presents results for thirty-two months of operation between
+January 2010 and October 2012.
 
 %An overview These are described in this section, along with results for
 %twenty-two months of operation between January 2010 and October 2012. 
@@ -32,49 +30,48 @@ operation between January 2010 and October 2012.
 %Section~\ref{sec:Detector-SCT}. 
 
 \subsection{Effects of Radiation Damage on Semiconductor detectors}
-Given the LHC design luminosity of $10^{34}$ cm$^{-2}$s$^{-1}$, the
-inner layers of the 
-SCT are expected to receive a radiation dose of up to
-$2\times10^{14}\;\rm{n_{eq}/cm}^2$~\cite{Ahmad200798} over the course of its design
-lifetime of 10 years.
-Exposure to such high radiation doses causes damage to the silicon detectors. 
 
-The primary method
-of radiation damage is interactions with irradiating particles displacing nuclei from
-their lattice position, damaging the structure of the material. Displaced nuclei
-can form stable defects in the material, which change the
-effective doping. Exposure to radiation will cause an n-type
-semi-conductor to become more p-type, and will eventually change the
-material from n-type to p-type, in an effect known as \intro{type-inversion}.
-The change in effective doping has two
-effects: a loss of mobility of drifting electrons and ions due to recombination, and an increase in
-the leakage current across the junction. This leads to lower charge collection
-efficiency and increased noise. Charge
-collection efficiency can be maintained by increasing the displacement voltage
-applied to the junction, though for sufficiently high radiation doses it
+Given the LHC design luminosity of $10^{34}$ cm$^{-2}$s$^{-1}$, the inner layers
+of the SCT are expected to receive a radiation dose of up to
+$2\times10^{14}\;\rm{n_{eq}/cm}^2$~\cite{Ahmad200798} over the course of its
+design lifetime of 10 years.  Exposure to such high radiation doses causes
+damage to the silicon detectors. 
+
+The primary method of radiation damage is interactions with irradiating
+particles displacing nuclei from their lattice position, damaging the structure
+of the material. Displaced nuclei can form stable defects in the material, which
+change the effective doping. Exposure to radiation will cause an n-type
+semi-conductor to become more p-type, and will eventually change the material
+from n-type to p-type, in an effect known as \intro{type-inversion}.  The change
+in effective doping has two effects: a loss of mobility of drifting electrons
+and ions due to recombination, and an increase in the leakage current across the
+p-n junction. This leads to lower charge collection efficiency and increased noise.
+Charge collection efficiency can be maintained by increasing the displacement
+voltage applied to the junction, though for sufficiently high radiation doses it
 becomes impossible to fully deplete the sensors. It is therefore essential to
 reduce the effects of radiation damage as much as possible.
  
-%The effects of exposure to radiation have both
-%an immediate and a prolonged effect. Immediate effects include the removal of
-%donor nuclei from the lattices, and creation of acceptor like defects. Due to the
-%complicated kinetics of these defects after the radiation, after type inversion
-%has occurred an annealing effect
-%occurs which initially reduces the number of acceptor-like defects, on a timescale of
-%approximately two days, but on a longer term a `reverse annealing' occurs,
-%increasing the number of acceptors. The rate of the reverse annealing effect is dependant on the temperate of the
+%The effects of exposure to radiation have both an immediate and a prolonged
+%effect. Immediate effects include the removal of donor nuclei from the
+%lattices, and creation of acceptor like defects. Due to the complicated
+%kinetics of these defects after the radiation, after type inversion has
+%occurred an annealing effect occurs which initially reduces the number of
+%acceptor-like defects, on a timescale of approximately two days, but on a
+%longer term a `reverse annealing' occurs, increasing the number of acceptors.
+%The rate of the reverse annealing effect is dependant on the temperate of the
 %silicon. It is found that for temperatures of approximately -7$^{\circ}$C the
-%reverse-annealing effect is effectively frozen out~\cite{Lindstrom2001308}. Since the reverse annealing
-%occurs even after radiation, it is important to run the detector cooling at all
-%times, not just when particle collisions are occurring.
+%reverse-annealing effect is effectively frozen out~\cite{Lindstrom2001308}.
+%Since the reverse annealing occurs even after radiation, it is important to run
+%the detector cooling at all times, not just when particle collisions are
+%occurring.
 
 It is found that for temperatures of approximately -7\dc\ the effects of
 radiation damage are greatly reduced~\cite{Lindstrom2001308}, so it is important
 to maintain the silicon at these low temperatures. After type-inversion occurs,
 a process known as reverse-annealing occurs, whereby the radiation damage
-continues to occur even after exposure to the radiation has ceased. After type-inversion,
-it will therefore be necessary to run the detector cooling even when there are no beams in
-the LHC.
+continues to occur even after exposure to the radiation has ceased. After
+type-inversion, it will therefore be necessary to run the detector cooling even
+when there are no beams in the LHC.
 
 The leakage current is induced by thermal creation of electron-hole pairs from
 shallow donors arising from defects in the material, and increases the signal to
