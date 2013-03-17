@@ -62,6 +62,7 @@ for analysis in dd_bg_est.keys():
                 ired_stat = 0.1
 
             print ""
+            print "\ZZ%sTeVTotalBgEst%s%s{\ZZ%sTeVTotalBgEstCentral%s%s\;\ZZ%sTeVTotalBgEstSyst%s%s\;\ZZ%sTeVTotalBgEstStat%s%s}" % (analysis, selection, channel, analysis, selection, channel, analysis, selection, channel, analysis, selection, channel)
             print "\ZZ%sTeVTotalBgEst%s%s{%.1f}" % (analysis, selection, channel, round(central,1))
             print "\ZZ%sTeVTotalBgEstStat%s%s{\errAsym{%.1f}{%.1f}}" % (analysis, selection, channel, round(stat_up,1), round(stat_down,1))
             print "\ZZ%sTeVTotalBgEstSyst%s%s{\errSym{%.1f}}" % (analysis, selection, channel, round(syst,1))
