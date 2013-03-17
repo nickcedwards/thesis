@@ -24,17 +24,35 @@ dd_bg_est = {
 ired_bg_est = {
         "Seven" : {
             "ZZ" : {
-                "EEEE" : [ 0.09, 0.02, ],
-                "MMMM" : [ 0.14, 0.02, ]
-                "EEMM" : [ 0.20, 0.03 ],
-                "LLLL" : [ 0.43, 0.04],
+                "EEEE" : [ 0.09, 0.02, 0.077],
+                "MMMM" : [ 0.14, 0.02, 0.030]
+                "EEMM" : [ 0.20, 0.03, 0.042],
+                "LLLL" : [ 0.43, 0.04, 0.039],
                 },
             "ZZs" :  {
-                [  0.25, 0.03 ],
-                [  0.34, 0.04 ],
-                [  0.58, 0.05 ], 
-                [  1.17, 0.07 ]
+                [  0.25, 0.03, 0.083],
+                [  0.34, 0.04, 0.031],
+                [  0.58, 0.05, 0.043], 
+                [  1.17, 0.07, 0.040]
                 }
             }
         }
+
+for analysis in dd_bg_est.keys():
+
+    for selection in dd_bg_est[analysis].keys():
+
+        for channel in dd_bg_est[analysis][selection].keys():
+
+            dd_est = dd_bg_est[analysis][selection][channel]
+            ired_est = ired_bg_est[analysis][selection][channel]
+
+            central = dd_est[0] + ired_est[0]
+            stat_up = AddInQuad.AddInQuad([dd_est[1], ired_est[1]])
+            stat_up = AddInQuad.AddInQuad([dd_est[2], ired_est[1]])
+            syst = AddInQuad.AddInQuad([dd_est[3], ired_est[0] * ired_est[2]])
+
+            print "ZZ%sTeVTotalBgEst%s%s{%.1f}" % (analysis, selection, channel, round(central,1))
+            print "ZZ%sTeVTotalBgEstStat%s%s{\errAsym{%.1f}{%.1f}}" % (analysis, selection, channel, round(central,1))
+            print "ZZ%sTeVTotalBgEstSyst%s%s{\errSym{%.1f}}" % (analysis, selection, channel, round(central,1))
 
