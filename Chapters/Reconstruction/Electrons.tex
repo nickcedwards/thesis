@@ -377,14 +377,24 @@ respectively.}
 \label{fig:el-energy-calib-const}
 \end{figure}
 
-The electron energy resolution is also measured in data. ~\fig{el-energy-calib-2011} shows the observed di-electron 
-mass distribution for all $\eta$ bins for data taken in 2011 after applying the
-energy calibration described above. The distribution
-is fitted to a Breit-Wigner to model the \Z\ lineshape convolved with a
-Crystal-Ball function to model the detector resolution and effects of FSR. The
-parameters of the Breit-Wigner are fixed to those of the \Z\ boson. The
-resolution observed in data is slightly worse than the simulated resolution; a
-Gaussian smearing is applied to electron energies in the simulation to reproduce the resolution observed in the data.
+The electron energy resolution is also measured in data. The fractional energy
+resolution is parameterised as: 
+\begin{equation}
+\frac{\sigma E}{E} =
+\frac{a}{\sqrt{E}} \oplus \frac{b}{E} \oplus{c} 
+\end{equation}
+where $a$ is the
+sampling term, $b$ is the noise term and $c$ is the constant term. Due to
+limited statistics, only the constant term is measured in data, and the
+description of the sampling and noise terms is taken from simulation.
+~\fig{el-energy-calib-2011} shows the observed di-electron mass distribution for
+all $\eta$ bins for data taken in 2011 after applying the energy calibration
+described above. The distribution is fitted to a Breit-Wigner to model the \Z\
+lineshape convolved with a Crystal-Ball function to model the detector
+resolution and effects of FSR. The parameters of the Breit-Wigner are fixed to
+those of the \Z\ boson. The resolution observed in data is slightly worse than
+the simulated resolution; a Gaussian smearing is applied to electron energies in
+the simulation to reproduce the resolution observed in the data.
 
 \begin{figure}[h]
 \centering
