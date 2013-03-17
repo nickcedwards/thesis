@@ -49,10 +49,10 @@ for analysis in dd_bg_est.keys():
 
             central = dd_est[0] + ired_est[0]
             stat_up = AddInQuad.AddInQuad([dd_est[1], ired_est[1]])
-            stat_up = AddInQuad.AddInQuad([dd_est[2], ired_est[1]])
+            stat_down = AddInQuad.AddInQuad([dd_est[2], ired_est[1]])
             syst = AddInQuad.AddInQuad([dd_est[3], ired_est[0] * ired_est[2]])
 
             print "ZZ%sTeVTotalBgEst%s%s{%.1f}" % (analysis, selection, channel, round(central,1))
-            print "ZZ%sTeVTotalBgEstStat%s%s{\errAsym{%.1f}{%.1f}}" % (analysis, selection, channel, round(central,1))
-            print "ZZ%sTeVTotalBgEstSyst%s%s{\errSym{%.1f}}" % (analysis, selection, channel, round(central,1))
+            print "ZZ%sTeVTotalBgEstStat%s%s{\errAsym{%.1f}{%.1f}}" % (analysis, selection, channel, round(stat_up,1), round(stat_down,1))
+            print "ZZ%sTeVTotalBgEstSyst%s%s{\errSym{%.1f}}" % (analysis, selection, channel, round(syst,1))
 
