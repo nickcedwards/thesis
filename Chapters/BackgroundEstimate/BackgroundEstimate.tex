@@ -9,7 +9,8 @@ in the final state. Almost all of the sources of background include one or more
 lepton is defined as either a fake-lepton reconstructed due to jets or
 photons mis-identified as a lepton, or a real lepton from decays within jets or
 from photon conversions.
-The dominant background contribution is expected to arise from the production of a \Z\ in
+The dominant background contribution is expected to arise from the production of
+a \Z\ boson in
 association with jets and or photons (collectively termed \ZX). Other
 contributions arise from top-quark production (\ttbar\ and \singletop) and from
 other diboson processes \WW\ and \WZ\ produced in association with jets or
@@ -27,22 +28,22 @@ small fraction of the overall background.
 \mcsim\ can be used to estimate the size of the background, however this relies
 on accurate modelling of particle production within jets. Accurate modelling is
 important so that the rate of
-lepton production from hadronic decays within jets is modelled correctly, and so
-that the shower shapes of jets in the calorimeters are well modelled, in order
-that the rate at which jets fake the electron identificaton is well
+lepton production from hadronic decays within jets is represented correctly, and so
+that the shower shapes of jets in the calorimeters are well described, in order
+for the rate at which jets fake the electron identification is well
 predicted. In
 order for leptons or fakes to pass the analysis selection requirements they must
 also pass the
 isolation requirement; background leptons will therefore tend to be in the
 tails
 of the jet distribution where the energy density due to other particles in the jet
-is lower. The \mc\ is not expected to
+is lower. The \mcsim\ is not expected to
 perform well in this area, as it relies heavily on the model used for
 hadronisation and on details of the parton shower. A data-driven method is
 therefore used to estimate the background from events with one or two background
 leptons. This method estimates the expected combined background from \ZX,
-\Zgamma\, \WW, \WZ, \ttbar\ and \singletop. \mc\ is used to estimate the
-irreducible background, and as a cross check to the data-driven estimate.
+\Zgamma, \WW, \WZ, \ttbar, and \singletop. \mcsim\ is used to estimate the
+irreducible backgrounds, and as a cross check to the data-driven estimate.
 
 \mc\ based background estimates are
 described in~\sec{mcbg}, and the data-driven estimate is described in~\sec{ddbg}.
@@ -84,14 +85,15 @@ normalised to the \cx\ predictions of the generator used to produce them.
 \end{table}
 
 The \mc\ estimated background for the 7~\tev\ analysis is shown
-in~\tab{mc-bg-seven}, separately for each source of background and for each final-state. The
+in~\tab{mc-bg-seven}, separately for each source of background and for each final state. The
 background estimates are all statistically limited, with typically only one or
 two events passing all of the selections for each source of background. In the \eeee\ final-state, the
-background is seen to mainly arise from \ZX, with a smaller contribution from
+background is seen to arise mainly from \ZX, with a smaller contribution from
 \WZ\ and \WW. The background to the \ZZs\ selection is significantly larger than
 the background to the \ZZ\ selection, as the tighter mass cut applied in the
-\ZZ\ selection rejects backgrounds where the second \Z\ candidate is formed from
-background leptons. The background to the \mmmm\ final-state is estimated to be much smaller, with the only contribution in the \mc\ arising
+\ZZ\ selection rejects backgrounds where the second \Z\ boson candidate is formed from
+background leptons. The background to the \mmmm\ final-state is estimated to be
+much smaller, with the only contribution in the \mcsim\ arising
 from \WZ\ events. For the 7~\tev\ analysis, no \mc\
 samples were available to model the \trilep\ background. In order to estimate
 the size of the background from these processes, the 8~\tev\ samples are used, applying the 7~\tev\
@@ -252,7 +254,7 @@ background is~\ZZEightTeVMCBgEstIredZZLLLL.
 
 \subsection{Methodology}
 
-The reducible background sources fail into two categories:
+The reducible background sources fall into two categories:
 
 \begin{itemize}
 \item Backgrounds with two prompt isolated leptons and two `background' leptons. Such
@@ -323,7 +325,7 @@ the true composition by:
 N_{LLLJ} &= N_{TTTB} \times (1-f)\, +\, N_{TTBB} \times 2f(1-f) \notag \\
          &+ N_{TBBB} \times 3f^{2}(1-f)\, +\,  N_{BBBB} \times 4f^{3}(1-f) 
 \end{align}
-where the numerical factors arise due to combinatorics. Similary, the number of
+where the numerical factors arise due to combinatorics. Similarly, the number of
 events with two $L$ and two $J$, denoted $N_{LLJJ}$, is related to the
 true compostion by:
 \begin{equation}
@@ -414,7 +416,7 @@ identified, with a similar composition in terms of the different sources of
 events containing an \ossf\ \dilep\ pair passing all of the lepton
 selection requirements. The pair must have invariant mass $|m_{\ell^{+}\ell^{-}}|<20$~\gev, in order to be consistent with a \Z\
 boson. It is then required that the event contain at least one additional
-pre-lepton. The sample will be dominated by \ZX, \WZ\ and and \ZZ\
+pre-lepton. The sample will be dominated by \ZX, \WZ\ and \ZZ\
 events. The additional pre-leptons in \ZX\ events are all background
 electrons; in \WZ\ and \ZZ\ events there will typically be one or two additional
 true leptons. The \WZ\ component is supressed by rejecting events with large missing transverse
@@ -441,9 +443,9 @@ is subtracted using \mc. The \Z-tag sample selection is summarised~\tab{Ztag-def
 \end{table}
 
 The pre-leptons are then identified as either $L$ or
-$J$ (or neither), and the \fakefactor s is obtained by dividing the distributions
+$J$ (or neither), and the \fakefactor s are obtained by dividing the distributions
 of the \lljet\ by the distributions of the \sellep. In this way, \fakefactor s
-paramaterised in \pT\ and in $\eta$ are obtained. For a given bin of \pT\ or $\eta$, the \ffactor\ is given by:
+parameterised in \pT\ and in $\eta$ are obtained. For a given bin of \pT\ or $\eta$, the \ffactor\ is given by:
 \begin{equation}
 \FF = \frac{N^{\rm data}_{L} - N^{{\rm MC}\; WZ,ZZ}_{L}}
 {N^{\rm data}_{J} - N^{{\rm MC}\; WZ,ZZ}_{J}}
@@ -750,7 +752,7 @@ s, used as the numerator in~\eqn{factorised-ff}, are given in~\tab{average-ff}.
 
 The statistical error from the \ffactor\ measurement is propagated to the
 background estimate by repeating the calculation with the \ffactor\ shifted up and down
-by the one-sigma statistical uncertainty. The variation of the predicted
+by their one-sigma statistical uncertainties. The variation of the predicted
 background is then added in quadrature with the statistical uncertainty due to
 limited numbers of observed $LLLJ$ and $LLJJ$ events. 
 %In cases where no $LLLJ$
@@ -1075,8 +1077,8 @@ estimate from the \ffactor\ method.
     \ZZEightTeVDDBgEstZZMMMM & \ZZEightTeVDDBgEstZZEEMM & \ZZEightTeVDDBgEstZZLLLL \\
     \hline\hline
   \end{tabular}
-      \caption[Background estimate cross check using same-sign events.]
-      {Background estimate cross check using same-sign events.}
+      \caption[Background estimate cross check to the 8~\tev\ \ZZ\ analysis using same-sign events.]
+      {Background estimate cross check to the 8~\tev\ \ZZ\ analysis using same-sign events.}
 \label{table:bg-est-ss}
 \end{table}
 
