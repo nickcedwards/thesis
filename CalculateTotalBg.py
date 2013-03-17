@@ -68,7 +68,7 @@ for analysis in dd_bg_est.keys():
             print "\def\ZZ%sTeVTotalBgEstSyst%s%s{\errSym{%.1f}}" % (analysis, selection, channel, round(syst,1))
 
             print ""
-            print "\def\ZZ%sTeVMCBgEstIred%s%s{\ZZ%sTeVBgEstIredCentral%s%s\;\ZZ%sTeVBgEstIredStat%s%s\;\ZZ%sTeVBgEstIredSyst%s%s}" % (analysis, selection, channel, analysis, selection, channel, analysis, selection, channel, analysis, selection, channel)
+            print "\def\ZZ%sTeVMCBgEstIred%s%s{\ZZ%sTeVMCBgEstIredCentral%s%s\;\ZZ%sTeVMCBgEstIredStat%s%s\;\ZZ%sTeVMCBgEstIredSyst%s%s}" % (analysis, selection, channel, analysis, selection, channel, analysis, selection, channel, analysis, selection, channel)
             print "\def\ZZ%sTeVMCBgEstIredCentral%s%s{%.1f}" % (analysis, selection, channel, round(ired_central,1))
             print "\def\ZZ%sTeVMCBgEstIredSyst%s%s{\errSym{%.1f}}" % (analysis, selection, channel, round(ired_stat,1))
             print "\def\ZZ%sTeVMCBgEstIredStat%s%s{\errSym{%.1f}}" % (analysis, selection, channel, round(ired_stat,1))
