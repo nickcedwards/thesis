@@ -56,6 +56,11 @@ for analysis in dd_bg_est.keys():
             ired_stat = ired_est[1]
             ired_syst = ired_est[0] *  ired_est[2]
 
+            if ired_syst < 0.1:
+                ired_syst = 0.1
+            if ired_stat < 0.1:
+                ired_stat = 0.1
+
             print "ZZ%sTeVTotalBgEst%s%s{%.1f}" % (analysis, selection, channel, round(central,1))
             print "ZZ%sTeVTotalBgEstStat%s%s{\errAsym{%.1f}{%.1f}}" % (analysis, selection, channel, round(stat_up,1), round(stat_down,1))
             print "ZZ%sTeVTotalBgEstSyst%s%s{\errSym{%.1f}}" % (analysis, selection, channel, round(syst,1))
