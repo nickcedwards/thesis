@@ -51,7 +51,7 @@ for analysis in dd_bg_est.keys():
             if dd_est[0] > 0:
                 dd_est_central = dd_est_central
 
-            central = dd_est[0] + ired_est[0]
+            central = dd_est_central + ired_est[0]
             stat_up = AddInQuad.AddInQuad([dd_est[1], ired_est[1]])
             stat_down = AddInQuad.AddInQuad([dd_est[2], ired_est[1]])
             syst = AddInQuad.AddInQuad([dd_est[3], ired_est[0] * ired_est[2]])
