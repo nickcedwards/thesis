@@ -68,8 +68,8 @@ for analysis in dd_bg_est.keys():
             print "\ZZ%sTeVTotalBgEstSyst%s%s{\errSym{%.1f}}" % (analysis, selection, channel, round(syst,1))
 
             print ""
-            print "\ZZ%sTeVBgEstIred%s%s{\ZZ%sTeVBgEstIredCentral%s%s\;\ZZ%sTeVBgEstIredStat%s%s\;\ZZ%sTeVBgEstIredSyst%s%s}" % (analysis, selection, channel, analysis, selection, channel, analysis, selection, channel, analysis, selection, channel)
-            print "\ZZ%sTeVBgEstIredCentral%s%s{%.1f}" % (analysis, selection, channel, round(ired_central,1))
-            print "\ZZ%sTeVBgEstIredSyst%s%s{\errSym{%.1f}}" % (analysis, selection, channel, round(ired_stat,1))
-            print "\ZZ%sTeVBgEstIredStat%s%s{\errSym{%.1f}}" % (analysis, selection, channel, round(ired_stat,1))
+            print "\ZZ%sTeVMCBgEstIred%s%s{\ZZ%sTeVBgEstIredCentral%s%s\;\ZZ%sTeVBgEstIredStat%s%s\;\ZZ%sTeVBgEstIredSyst%s%s}" % (analysis, selection, channel, analysis, selection, channel, analysis, selection, channel, analysis, selection, channel)
+            print "\ZZ%sTeVMCBgEstIredCentral%s%s{%.1f}" % (analysis, selection, channel, round(ired_central,1))
+            print "\ZZ%sTeVMCBgEstIredSyst%s%s{\errSym{%.1f}}" % (analysis, selection, channel, round(ired_stat,1))
+            print "\ZZ%sTeVMCBgEstIredStat%s%s{\errSym{%.1f}}" % (analysis, selection, channel, round(ired_stat,1))
 
