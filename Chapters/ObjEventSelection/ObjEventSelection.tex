@@ -1291,11 +1291,11 @@ SF }{ N^{{\rm MC\ Fiducial\ Volume}}_{{\rm Generated}\ ZZ} }
 \end{equation}
 where {\it SF} is the event level scale factor applied to the \mc\ to correct
 lepton selection efficiencies and trigger efficiencies to those observed in
-data. The number in the numerator includes contributions from
+data. The numerator includes contributions from
 $\ZZ\ra\tau\tau\ell\ell$ decays (and to a smaller extent
 $\ZZ\ra\tau\tau\tau\tau$), where the taus decay leptonically. The numerator also
 includes a contribution from events generated outside the fiducial volume but
-which are reconstructed as within, for example an event with a generated lepton
+which are reconstructed within; for example an event with a generated lepton
 with \pt\ just lower than the lepton \pt\ threshold which is reconstructed
 with \pt\ just above the threshold. Since the numerator is thus not a subset of
 the denominator due to these two contaminations, \CZZ\ is not a true efficiency. 
@@ -1441,7 +1441,7 @@ electron identification efficiency drops off significantly below
     \rightarrow \tau+X$ and events outside the fiducial region) to the number
     of generated events in the fiducial region.  The second row shows the
     percentage contamination from $\rightarrow \tau+X$ events, and the third
-    the percentage contamination from events falling outside of the fiducial
+    the percentage contamination from events falling outside the fiducial
     region at generator level, but passing the selection due to the energy,
     momentum or track direction being mis-reconstructed, or due to mis-pairing.  The final row shows
     the ``true'' reconstruction efficiency, with the contribution from $\ZZ
@@ -1538,7 +1538,7 @@ electron identification efficiency drops off significantly below
     \rightarrow \tau+X$ and events outside the fiducial region) to the number
     of generated events in the fiducial region.  The second row shows the
     percentage contamination from $\rightarrow \tau+X$ events, and the third
-    the percentage contamination from events falling outside of the fiducial
+    the percentage contamination from events falling outside the fiducial
     region at generator level, but passing the selection due to the energy,
     momentum or track direction being mis-reconstructed, or due to mis-pairing.  The final row shows
     the ``true'' reconstruction efficiency, with the contribution from $\ZZ
@@ -1552,7 +1552,7 @@ electron identification efficiency drops off significantly below
 The reconstruction acceptances given
 in~\tabs{objSel-czz-seven}{objSel-czz-eight} are not directly comparable, due to
 the different fiducial volume definitions used in the 7~\tev\ analysis and the
-8~\tev\ analysis. In order to compare the acceptance between the two analysis,
+8~\tev\ analysis. In order to compare the acceptance between the two analyses,
 the \CZZ\ are re-calculated using a common fiducial volume, defined identically
 to the 7~\tev\ fiducial volume, but with the lepton pseudo-rapidity requirements
 set to \modetalt{2.5}. Only central electrons and muons are included. The
@@ -1560,7 +1560,7 @@ resulting \CZZ\ are shown in~\tab{objSel-czz-compare}. The acceptance in the
 8~\tev\ analysis is significantly greater compared to
 the 7~\tev\ analysis, particularly in channels involving electrons. This can be attributed
 in part to the improvements in the electron reconstruction algorithms in 2012,
-but also to the loosing of the \loosePP\ identification requirements in 2012, as
+but also to the relaxing of the \loosePP\ identification requirements in 2012, as
 well as to the removal of the calorimeter isolation requirement in the 8~\tev\
 analysis.
 
@@ -1597,7 +1597,7 @@ The percentage of tau events passing the selection requirements is approximately
 contamination in the \ZZs\ selection can be accounted for by the fact that
 \dielectron\ or \dimuon\ pairs from decays of a di-tau pair with an invariant mass
 near the \Z\ mass will have a lower invariant mass due to the energy carried
-away by the neutrinos. There is therefore a higher chance of them passing the
+away by the neutrinos. There is therefore a higher chance of their passing the
 looser mass cut applied in the \ZZs\ selection than passing the \sstooos\ mass
 cut applied in the \ZZ\ selection. The contamination from events outside the
 fiducial phase space is similar in the \ZZ\ and \ZZs\ selections, at a level of
@@ -1627,9 +1627,11 @@ acceptance \CZZ\ are discussed and estimated. %The uncertainties associated with
 
 Uncertainties arise due to the determination of
 electron and muon reconstruction and identification efficiencies, the electron
-and muon energy scales and resolutions, the trigger efficiency, as well as
+and muon energy scales and resolutions, and the trigger efficiency, as well as
 theoretical uncertainties associated with the \mc\ simulation used to estimate
-\CZZ. Each of these is discussed in more detail below.
+\CZZ. Each of these sources of uncertainty is discussed in more detail below,
+and the estimated size of the uncertainty given
+in~\sec{systematic-estimate-tables}.
 
 \subsubsection{Electron Systematic Uncertainties}
 
@@ -1670,7 +1672,7 @@ theoretical uncertainties associated with the \mc\ simulation used to estimate
     \item {\bf Energy Resolution:} Uncertainties arise on the measurement of the
     energy resolution in data, mainly from uncertainty on the sampling term (as the
     constant term is extracted assuming that the sampling term is correctly
-    reproduced by the simulation), uncertainty on the background subtraction and
+    reproduced by the simulation, as discussed in~\sec{el-energy-calibration}), uncertainty on the background subtraction and
     from statistics. The uncertainty is propagated to \CZZ\ by varying the
     amount of energy smearing applied to the \mc\ up and down.
 
@@ -1977,6 +1979,7 @@ comparisons is taken to cover differences arising from PDF set and scale choice.
 \end{table}
 
 \subsection{Systematic Uncertainty Estimates}
+\label{sec:systematic-estimate-tables}
 
 The effect of each of the systematic uncertainties described above on \CZZ\ is estimated using
 the \powhegbox\ and \ggZZ\ \mc. The resulting shifts in the value of \CZZ\ in
