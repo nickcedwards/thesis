@@ -238,7 +238,7 @@ above, \fig{objsel-el} shows the distribution of these variables for additional
 electron candidates in events with an \ossf\ \dilepton\ pair in the 7~\tev\ data. 
 The leptons forming the \dilepton\ pair are required to pass all of
 the selection requirements described above, one must match to the triggering
-object and have \ptgt{25}, and they must have invariant mass satisfying \sstooos. Any additional electrons in the event are required to pass
+object within \deltaRlt{0.1} and have \ptgt{25}, and they must have invariant mass satisfying \sstooos. Any additional electrons in the event are required to pass
 the kinematic (\pt, $\eta$) requirements and the \loosePP\ identification
 requirements; the distributions of the isolation, \dzerosig\ and \zzero\
 variables for these additional electrons are shown in the plots. 
@@ -275,7 +275,7 @@ and (d) longitudinal impact parameter \zzero\ for additional electron candidates
 containing an \ossf\ \dilepton\ pair with
 invariant mass \sstooos\ in 7~\tev\ data. The leptons forming the \dilepton\ pair are required to pass all of
 the selection requirements described above, and one must match to the triggering
-object and have \ptgt{25}. Additional electron candidates other than those forming the
+object within \deltaRlt{0.1} and have \ptgt{25}. Additional electron candidates other than those forming the
 \dilepton\ pair are required to pass
 the kinematic selection requirements and the \loosePP\ identification
 requirements; only these additional candidates are included in the plots.}
@@ -661,7 +661,7 @@ above, \fig{objsel-mu} shows the distribution of these variables in 7~\tev\ data
 muon candidates in events with an \ossf\ \dilepton\ pair with invariant mass \sstooos.
 Similarly to the electron distributions, the leptons forming the \dilepton\ pair are required to pass all of
 the selection requirements described above, and one must match to the triggering
-object and have \ptgt{25}. Any additional muon candidates in the event are required to pass
+object within \deltaRlt{0.1} and have \ptgt{25}. Any additional muon candidates in the event are required to pass
 the kinematic (\pt,$\eta$) selection requirements, and the distributions of the isolation, \dzerosig\ and \zzero\
 variables for these additional candidates are shown in the plots. 
 
@@ -698,7 +698,7 @@ predicted by the simulation.
     in the 7~\tev\ data.
     The leptons forming the \dilepton\ pair are required to pass all of the
     selection requirements described above, and one must match to the triggering
-    object with \ptgt{25}. Any additional muon candidates, other than those forming the
+    object within \deltaRlt{0.1} and have \ptgt{25}. Any additional muon candidates, other than those forming the
     \dilepton\ pair, are required to pass the kinematic selection requirements; only
     these additional candidates are included in the plots.}
 \label{fig:objsel-mu}
@@ -760,7 +760,7 @@ A - M & \multicolumn{1}{p{4cm}}{\centering \texttt{mu24i\_tight} $||$ \texttt{mu
 \end{table}
 
 At least one of the selected leptons in triggered events must match to the
-object that caused the trigger to fire. Such leptons are referred to as 
+object that caused the trigger to fire with \deltaRlt{0.1}\footnote{where \deltaRdef}. Such leptons are referred to as 
 \intro{trigger-matched} leptons. To reduce uncertainties associated with the
 trigger efficiency measurement, to be considered trigger matched,
 a lepton must have a \pt\ such that it is on the efficiency plateau of the
@@ -1677,7 +1677,7 @@ in~\sec{systematic-estimate-tables}.
     uncertainty is propagated to \CZZ\ by varying the amount of energy smearing
     applied to the \mc\ up and down.
 
-    \item {\bf  Isolation/\zzero/\dzero-Significance Efficiency:} The efficiency of the additional
+    \item {\bf  Isolation/\zzero/\dzero Efficiency:} The efficiency of the additional
     electron selection requirements (isolation, \zzero, \dzerosig) is estimated from
     data using a tag and probe technique on \Zee\ decays. For the 7~\tev\
     analysis, the efficiency observed in the data is consistent with that estimated by \mc\ within the uncertainties of the 
@@ -1763,26 +1763,26 @@ arising due to different kinematic distributions obtained from different from \m
 generators, due to, for example, different parton shower models and different
 models for QED radiation.
 
-The systematic due to the \mc\ generator is evaluated by comparing three \qqZZ\ \mc\ samples, generated
-using different generators, PDF sets and scales. A
-comparison is made between the default \powhegbox\ generated using the CT10 PDF
-set and scale \mZZ, \pythia, generated using the MRST modified LO PDF set and scale
-set to the arithmetic mean of the squared transverse masses of the two outgoing
-particles ($(m^{2}_{T}(Z1)+m^{2}_{T}(Z2)/2$), and
-\sherpa, generated using CTEQ6L1 PDF set and scale set to
-($(m^{2}_{}(Z1)+p^{2}_{T}(Z1)+m^{2}_{}(Z2)p^{2}_{T}(Z2)/2$), and with a different
-model for QED radiation as described in~\sec{gen-comparisons}.
+The systematic uncertainty due to the \mc\ generator is evaluated by comparing
+three \qqZZ\ \mc\ samples produced using different generators, PDF sets and
+scales. A comparison is made between the default \powhegbox\ generated using the
+CT10 PDF set and scale \mZZ, \pythia, generated using the MRST modified LO PDF
+set and scale set to the arithmetic mean of the squared transverse masses of the
+two outgoing particles ($(m^{2}_{T}(Z1)+m^{2}_{T}(Z2)/2$), and \sherpa,
+generated using CTEQ6L1 PDF set and scale set to
+($(m^{2}_{}(Z1)+p^{2}_{T}(Z1)+m^{2}_{}(Z2)p^{2}_{T}(Z2)/2$), and with a
+different model for QED radiation as described in~\sec{gen-comparisons}.
 Table~\ref{table:objSel-syst-genComp-seven} compares the \CZZ\ for the \qqZZ\
 process obtained from \powhegbox, \sherpa\ and \pythia, as well as the for the
-\ggZZ\ process obtained from \ggtwoZZ. Also shown is the combination of
-the \CZZ\ from \powhegbox\ and \ggtwoZZ, weighted by the relative contributions
-of the $qq$ and $gg$ processes to the fiducial \cx; this final number is the one
+\ggZZ\ process obtained from \ggtwoZZ. Also shown is the combination of the
+\CZZ\ from \powhegbox\ and \ggtwoZZ, weighted by the relative contributions of
+the $qq$ and $gg$ processes to the fiducial \cx; this final number is the one
 used in the \cx\ calculation. The largest difference between \powhegbox\ and
 either \pythia\ or \sherpa\ is taken as the systematic uncertainty.
 
 The effect of the scale and PDF set are assessed by
 reweighting the \powhegbox\ sample to a scale of $\frac{1}{4}$\mZZ\ and to a
-scale of \mZZ from its default scale of $\frac{1}{2}$\mZZ, and by reweighting
+scale of \mZZ\ from its default scale of $\frac{1}{2}$\mZZ, and by reweighting
 to the MSTW08 PDF set. This is done for the 8~\tev\ analysis; the resulting
 variations on \CZZ\ are small, and are much smaller than the systematic from comparing
 different generators, so for the 7~\tev\ analysis the systematic from generator
@@ -2031,7 +2031,7 @@ for electrons.
       MC Generator Difference               & \ZZSevenTeVSystematicZZGeneratorEEEE        & \ZZSevenTeVSystematicZZGeneratorMMMM 
                                             & \ZZSevenTeVSystematicZZGeneratorEEMM        & \ZZSevenTeVSystematicZZGeneratorLLLL \\
       \hline
-      {\bf Total \CZZ\ Uncertainty}         & \ZZSevenTeVSystematicZZCzzTotalEEEE         & \ZZSevenTeVSystematicZZCzzTotalMMMM 
+      {\bf Total \CZZ\ Uncertainty (\%)}         & \ZZSevenTeVSystematicZZCzzTotalEEEE         & \ZZSevenTeVSystematicZZCzzTotalMMMM 
                                             & \ZZSevenTeVSystematicZZCzzTotalEEMM         & \ZZSevenTeVSystematicZZCzzTotalLLLL \\
       \hline\hline
       \\
@@ -2069,7 +2069,7 @@ for electrons.
       MC Generator Difference               & \ZZSevenTeVSystematicZZsGeneratorEEEE        & \ZZSevenTeVSystematicZZsGeneratorMMMM 
                                             & \ZZSevenTeVSystematicZZsGeneratorEEMM        & \ZZSevenTeVSystematicZZsGeneratorLLLL \\
       \hline
-      {\bf Total \CZZ\ Uncertainty}         & \ZZSevenTeVSystematicZZsCzzTotalEEEE         & \ZZSevenTeVSystematicZZsCzzTotalMMMM 
+      {\bf Total \CZZ\ Uncertainty (\%)}         & \ZZSevenTeVSystematicZZsCzzTotalEEEE         & \ZZSevenTeVSystematicZZsCzzTotalMMMM 
                                             & \ZZSevenTeVSystematicZZsCzzTotalEEMM         & \ZZSevenTeVSystematicZZsCzzTotalLLLL \\
       \hline\hline
 
@@ -2078,7 +2078,7 @@ for electrons.
    the 7~\tev\ analysis.]
    {Summary of systematic uncertainties to the reconstruction acceptance \CZZ\
    in percent, by \ZZ\ final state, for the 7~\tev\ analysis. The top table
-   gives uncertainties to the \ZZ\ selection, the bottom to the \ZZs\ selection.
+   gives uncertainties on the \ZZ\ selection, the bottom on the \ZZs\ selection.
    The fourth column gives the weighted average
    of the three final states. The total uncertainty is also given, which is the
    sum in quadrature of the individual uncertainties.} 
@@ -2123,7 +2123,7 @@ for electrons.
       MC Generator Difference               & \ZZEightTeVSystematicZZGeneratorEEEE        & \ZZEightTeVSystematicZZGeneratorMMMM 
                                             & \ZZEightTeVSystematicZZGeneratorEEMM        & \ZZEightTeVSystematicZZGeneratorLLLL \\
       \hline
-      {\bf Total \CZZ\ Uncertainty}         & \ZZEightTeVSystematicZZCzzTotalEEEE         & \ZZEightTeVSystematicZZCzzTotalMMMM 
+      {\bf Total \CZZ\ Uncertainty (\%)}         & \ZZEightTeVSystematicZZCzzTotalEEEE         & \ZZEightTeVSystematicZZCzzTotalMMMM 
                                             & \ZZEightTeVSystematicZZCzzTotalEEMM         & \ZZEightTeVSystematicZZCzzTotalLLLL \\
       \hline\hline
       %\\
