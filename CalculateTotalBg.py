@@ -49,7 +49,7 @@ for analysis in dd_bg_est.keys():
 
             dd_est_central = 0
             if dd_est[0] > 0:
-                dd_est_central = dd_est_central
+                dd_est_central = dd_est[0]
 
             central = dd_est_central + ired_est[0]
             stat_up = AddInQuad.AddInQuad([dd_est[1], ired_est[1]])
