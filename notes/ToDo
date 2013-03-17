@@ -42,9 +42,8 @@ Analysis issues:
 
 					
 - ObjSel:						{1 day}
-	- Apply Aidan's comments.
-	- MPI contamination
 	- Dilepton plots: WZ samples. Plots with caloIso. Have Medium pt20 plots ready
+	- Check triggerMatch deltaR. Update Trigger Sec, EvSel, Z+X plots
 
 - Analysis overview 
 	
