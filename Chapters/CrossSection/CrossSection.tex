@@ -658,17 +658,18 @@ comparisons between theory and observation and to allow comparison between
 different experiments. The correction procedure is referred
 to as \intro{unfolding}. 
 
-Formally, one can consider some parameter of interest $x$
+Formally, one can consider some parameter of interest $x$,
 distributed according to a probability distribution function (\probDF) $f(x)$. Due to experimental effects, one
 does not measure $x$ but a different variable $y$, distributed
-according to a \probDF\ $g(y)$. The measured variable $y$ is related to $x$ by a
+according to a different \probDF\ $g(y)$. The measured variable $y$ is related to $x$ by a
 convolution of the true distribution $f(x)$ with some response function to account for the
-experimental effects $A(y,x)$, by the relation:
+experimental effects $A(y,x)$:
 \begin{equation}
 \int A(y,x)f(x){\rm d}x = g(y)
 \label{eqn:unfold-conv}
 \end{equation}
-In practice, one tends not measure continuous distributions but instead make measurements
+
+In practice, one tends to not measure continuous distributions but instead make measurements
 in discretised bins. $x$ and $y$ can thus be rewritten as
 vectors \unfx\ and \unfy, where each element represents one bin. The response
 function then becomes a response matrix \unfA, and one can
