@@ -417,7 +417,7 @@ final-state, as defined in~\sec{objSel-CZZ}.
 
 The \cx\ is estimated using a maximum profile likelihood technique, by
 maximising the \intro{profile likelihood function, \L} with respect to the \cx.
-\L\ is the product of the Poisson probability function ($P$) for observing $N$ events given a
+\L\ is the product of the Poisson probability ($P$) for observing $N$ events given a
 \cx\ $\sigma$, reconstruction acceptance \CZZ\ and background $b$; and Gaussian
 distributions (G) to describe nuisance parameters due to uncertainties on \CZZ\
 and on $b$:
@@ -428,7 +428,7 @@ and on $b$:
    b^\prime; N)\times G(\CZZ^\prime; C_{ZZ}, \Delta_{C_{ZZ}}) \times G(b^\prime; b, \Delta_{b})
 \end{equation}
 
-The Poisson probability function to observe $N$ events given an expected
+The Poisson probability to observe $N$ events given an expected
 number of signal events $s$ and expected background $b$ is:
 
 \begin{equation}
@@ -524,8 +524,8 @@ fiducial phase-space to the total phase space and by correcting for the \ZZllll\
 branching fraction. The total \cx\ is defined with both \Z\ bosons with mass
 \sstooosZ. In order to extrapolate from the fiducial to the total-phase
 space the \intro{fiducial acceptance factor}, \AZZ\ must be estimated. \AZZ\ is
-the is fraction of \ZZ\ events with both \Z\ bosons in the mass range which fall into the fiducial phase-space, and is
-estimated from \mc\ as:
+the is fraction of \ZZ\ events with both \Z\ bosons in the \sstooosZ\ mass range which fall into the fiducial phase-space, and is
+estimated from \mcsim\ as:
 
 \begin{equation}
 \AZZ = \frac{ N^{\rm MC\ Fiducial\ Volume}_{{\rm Generated}\ ZZ} }{ N^{{\rm MC\
@@ -542,9 +542,9 @@ the factorisation and renormalisation scales and modelling of the parton shower
 and ISR. \AZZ\ is determined using the \powhegbox\ and \ggtwoZZ\ generators. The
 PDF errors are estimated using the 52 CT10 error sets and by taking the
 difference with MSTW2008, and the scale errors are estimated by varying the scales
-up and down by a factor of two. The systematic due to modelling of parton shower
+up and down by a factor of two. The systematic due to the modelling of the parton shower
 and ISR is estimated by comparing the value for \AZZ\ obtained from a
-\powhegbox\ sample showered with \herwig\ compared to to t he nominal sample
+\powhegbox\ sample showered with \herwig\ compared to to the nominal sample
 which is showered with \pythia. Additionally, the difference with the \AZZ\
 obtained from MCFM, which does not model the parton shower, is taken as an
 additional systematic. The contributions of these different sources of
@@ -563,8 +563,8 @@ shown in~\tab{azz}.
     \hline
      PDF  & \ZZSevenTeVAZZPDFUncPercentage\ & \ZZEightTeVAZZPDFUncPercentage \\
      Scale  & \ZZSevenTeVAZZScaleUncPercentage\ & \ZZEightTeVAZZScaleUncPercentage \\
-     Parton Shower  & \ZZSevenTeVAZZISRUncPercentage\ & \ZZEightTeVAZZISRUncPercentage \\
-     Generator Modelling  & \ZZSevenTeVAZZGenUncPercentage\ & \ZZEightTeVAZZGenUncPercentage \\
+     Parton Shower / ISR Model  & \ZZSevenTeVAZZISRUncPercentage\ & \ZZEightTeVAZZISRUncPercentage \\
+     Generator Difference  & \ZZSevenTeVAZZGenUncPercentage\ & \ZZEightTeVAZZGenUncPercentage \\
      \hline
      Total  & \ZZSevenTeVAZZTotalUncPercentage\ & \ZZEightTeVAZZTotalUncPercentage \\
     \hline\hline
