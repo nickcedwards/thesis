@@ -24,17 +24,64 @@
 \newcommand{\ZZEightTeVDDBgEstMMMMOneDp}{\ZZEightTeVDDBgEstCentralMMMMOneDp\ZZEightTeVDDBgEstStatMMMMOneDp\ZZEightTeVDDBgEstSystMMMMOneDp}
 
 
-\newcommand{\ZZEightTeVTotalCrossSection}{\ZZEightTeVTotalCrossSectionGamma}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Total Cross Section 
+\newcommand{\ZZEightTeVTotalCrossSection}{\ZZEightTeVTotalCrossSectionGaussian}
 
-\newcommand{\ZZEightTeVTotalCrossSectionGamma}{\ensuremath{\ZZEightTeVTotalCrossSectionGammaCentral^{+\ZZEightTeVTotalCrossSectionGammaStatUp}_{-\ZZEightTeVTotalCrossSectionGammaStatDown}\textrm{(stat.)}^{+\ZZEightTeVTotalCrossSectionGammaSystUp}_{-\ZZEightTeVTotalCrossSectionGammaSystDown}\textrm{(syst.)}\pm\ZZEightTeVTotalCrossSectionGammaLumiUnc\textrm{(lumi.) pb}}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Total Cross Gaussian 
+\newcommand {\ZZEightTeVTotalCrossSectionGaussian}{\measStatSystLumi
+            {\ZZEightTeVTotalCrossSectionGaussianCentral}{\errAsym
+            {\ZZEightTeVTotalCrossSectionGaussianStatUp}
+            {\ZZEightTeVTotalCrossSectionGaussianStatDown}}{\errAsym
+            {\ZZEightTeVTotalCrossSectionGaussianSystUp}
+            {\ZZEightTeVTotalCrossSectionGaussianSystDown}}{\errAsym
+            {\ZZEightTeVTotalCrossSectionGaussianLumiUp}
+            {\ZZEightTeVTotalCrossSectionGaussianLumiDown}}~fb}
 
-\newcommand{\ZZEightTeVTotalCrossSectionGaussian}{\ensuremath{\ZZEightTeVTotalCrossSectionGaussianCentral^{+\ZZEightTeVTotalCrossSectionGaussianStatUp}_{-\ZZEightTeVTotalCrossSectionGaussianStatDown}\textrm{(stat.)}^{+\ZZEightTeVTotalCrossSectionGaussianSystUp}_{-\ZZEightTeVTotalCrossSectionGaussianSystDown}\textrm{(syst.)}\pm\ZZEightTeVTotalCrossSectionGaussianLumiUnc\textrm{(lumi.) pb}}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Fiducial cross section ZZ
+\newcommand{\ZZEightTeVFiducialCrossSectionZZLLLL}{\ZZEightTeVFiducialCrossSectionZZLLLLGaussian}
+\newcommand{\ZZEightTeVFiducialCrossSectionZZEEEE}{\ZZEightTeVFiducialCrossSectionZZEEEEGaussian}
+\newcommand{\ZZEightTeVFiducialCrossSectionZZMMMM}{\ZZEightTeVFiducialCrossSectionZZMMMMGaussian}
+\newcommand{\ZZEightTeVFiducialCrossSectionZZEEMM}{\ZZEightTeVFiducialCrossSectionZZEEMMGaussian}
 
-\newcommand{\ZZEightTeVFiducialCrossSection}{\ZZEightTeVFiducialCrossSectionGamma}
+\newcommand {\ZZEightTeVFiducialCrossSectionZZLLLLGaussian}{\measStatSystLumi
+            {\ZZEightTeVFiducialCrossSectionZZLLLLGaussianCentral}{\errAsym
+            {\ZZEightTeVFiducialCrossSectionZZLLLLGaussianStatUp}
+            {\ZZEightTeVFiducialCrossSectionZZLLLLGaussianStatDown}}{\errAsym
+            {\ZZEightTeVFiducialCrossSectionZZLLLLGaussianSystUp}
+            {\ZZEightTeVFiducialCrossSectionZZLLLLGaussianSystDown}}{\errAsym
+            {\ZZEightTeVFiducialCrossSectionZZLLLLGaussianLumiUp}
+            {\ZZEightTeVFiducialCrossSectionZZLLLLGaussianLumiDown}}~fb}
 
-\newcommand{\ZZEightTeVFiducialCrossSectionGamma}{\ensuremath{\ZZEightTeVFiducialCrossSectionGammaCentral^{+\ZZEightTeVFiducialCrossSectionGammaStatUp}_{-\ZZEightTeVFiducialCrossSectionGammaStatDown}\textrm{(stat.)}^{+\ZZEightTeVFiducialCrossSectionGammaSystUp}_{-\ZZEightTeVFiducialCrossSectionGammaSystDown}\textrm{(syst.)}\pm\ZZEightTeVFiducialCrossSectionGammaLumiUnc\textrm{(lumi.) fb}}}
+\newcommand {\ZZEightTeVFiducialCrossSectionZZEEEEGaussian}{\measStatSystLumi
+            {\ZZEightTeVFiducialCrossSectionZZEEEEGaussianCentral}{\errAsym
+            {\ZZEightTeVFiducialCrossSectionZZEEEEGaussianStatUp}
+            {\ZZEightTeVFiducialCrossSectionZZEEEEGaussianStatDown}}{\errAsym
+            {\ZZEightTeVFiducialCrossSectionZZEEEEGaussianSystUp}
+            {\ZZEightTeVFiducialCrossSectionZZEEEEGaussianSystDown}}{\errAsym
+            {\ZZEightTeVFiducialCrossSectionZZEEEEGaussianLumiUp}
+            {\ZZEightTeVFiducialCrossSectionZZEEEEGaussianLumiDown}
+            }~fb}
 
-\newcommand{\ZZEightTeVFiducialCrossSectionGaussian}{\ensuremath{\ZZEightTeVFiducialCrossSectionGaussianCentral^{+\ZZEightTeVFiducialCrossSectionGaussianStatUp}_{-\ZZEightTeVFiducialCrossSectionGaussianStatDown}\textrm{(stat.)}^{+\ZZEightTeVFiducialCrossSectionGaussianSystUp}_{-\ZZEightTeVFiducialCrossSectionGaussianSystDown}\textrm{(syst.)}\pm\ZZEightTeVFiducialCrossSectionGaussianLumiUnc\textrm{(lumi.) fb}}}
+\newcommand {\ZZEightTeVFiducialCrossSectionZZMMMMGaussian}{\measStatSystLumi
+            {\ZZEightTeVFiducialCrossSectionZZMMMMGaussianCentral}{\errAsym
+            {\ZZEightTeVFiducialCrossSectionZZMMMMGaussianStatUp}
+            {\ZZEightTeVFiducialCrossSectionZZMMMMGaussianStatDown}}{\errAsym
+            {\ZZEightTeVFiducialCrossSectionZZMMMMGaussianSystUp}
+            {\ZZEightTeVFiducialCrossSectionZZMMMMGaussianSystDown}}{\errAsym
+            {\ZZEightTeVFiducialCrossSectionZZMMMMGaussianLumiUp}
+            {\ZZEightTeVFiducialCrossSectionZZMMMMGaussianLumiDown}}~fb}
+
+\newcommand {\ZZEightTeVFiducialCrossSectionZZEEMMGaussian}{\measStatSystLumi
+            {\ZZEightTeVFiducialCrossSectionZZEEMMGaussianCentral}{\errAsym
+            {\ZZEightTeVFiducialCrossSectionZZEEMMGaussianStatUp}
+            {\ZZEightTeVFiducialCrossSectionZZEEMMGaussianStatDown}}{\errAsym
+            {\ZZEightTeVFiducialCrossSectionZZEEMMGaussianSystUp}
+            {\ZZEightTeVFiducialCrossSectionZZEEMMGaussianSystDown}}{\errAsym
+            {\ZZEightTeVFiducialCrossSectionZZEEMMGaussianLumiUp}
+            {\ZZEightTeVFiducialCrossSectionZZEEMMGaussianLumiDown}}~fb}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % Theory Fiducial cross section ZZ
