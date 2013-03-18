@@ -39,8 +39,12 @@
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % Total Cross Gamma 
-\newcommand{\ZZSevenTeVTotalCrossSectionGamma}{\ensuremath{\ZZSevenTeVTotalCrossSectionGammaCentral^{+\ZZSevenTeVTotalCrossSectionGammaStatUp}_{-\ZZSevenTeVTotalCrossSectionGammaStatDown}\textrm{(stat.)}^{+\ZZSevenTeVTotalCrossSectionGammaSystUp}_{-\ZZSevenTeVTotalCrossSectionGammaSystDown}\textrm{(syst.)}\pm\ZZSevenTeVTotalCrossSectionGammaLumiUnc\textrm{(lumi.) pb}}}
-\newcommand{\ZZSevenTeVTotalCrossSectionGammaOneDp}{\ensuremath{\ZZSevenTeVTotalCrossSectionGammaCentralOneDp^{+\ZZSevenTeVTotalCrossSectionGammaStatUpOneDp}_{-\ZZSevenTeVTotalCrossSectionGammaStatDownOneDp}\textrm{(stat.)}^{+\ZZSevenTeVTotalCrossSectionGammaSystUpOneDp}_{-\ZZSevenTeVTotalCrossSectionGammaSystDownOneDp}\textrm{(syst.)}\pm\ZZSevenTeVTotalCrossSectionGammaLumiUncOneDp\textrm{(lumi.) pb}}}
+\newcommand{\ZZSevenTeVTotalCrossSectionGamma}{\ensuremath
+      \measStatSystLumi{{\ZZSevenTeVTotalCrossSectionGammaCentral}
+      {\errAsym{\ZZSevenTeVTotalCrossSectionGammaStatUp}{\ZZSevenTeVTotalCrossSectionGammaStatDown}}
+      {\errAsym{\ZZSevenTeVTotalCrossSectionGammaSystUp}{\ZZSevenTeVTotalCrossSectionGammaSystDown}}
+      {\errAsym{\ZZSevenTeVTotalCrossSectionGammaSystUp}{\ZZSevenTeVTotalCrossSectionGammaSystDown}}
+      {\errAsym{\ZZSevenTeVTotalCrossSectionGammaLumiUp}{\ZZSevenTeVTotalCrossSectionGammaLumiDown}}}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % Total Cross Gaussian 
