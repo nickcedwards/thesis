@@ -1,4 +1,5 @@
 git add Chapters/*/Figures/*
 git add notes/*
+git add Results/*
 git commit -a -m "Periodic Update"
 git push origin master
