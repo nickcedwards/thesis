@@ -199,9 +199,9 @@
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % Theory Total cross section ZZ
 \newcommand{\ZZSevenTeVTheoryTotalCrossSection}{
-    \TheoryCxSevenTotalOnShellPb
-    \errAsym{\TheoryCxSevenTotalOnShellTheoryErrAbsPbUp}
-            {\TheoryCxSevenTotalOnShellTheoryErrAbsPbDown}~pb}
+    \ndiv[\TheoryCxPrec]\TheoryCxSevenTotalOnShellPb{1}
+    \errAsym{\ndiv[\TheoryCxPrec]{\TheoryCxSevenTotalOnShellTheoryErrAbsPbUp}{1}}
+            {\ndiv[\TheoryCxPrec]{\TheoryCxSevenTotalOnShellTheoryErrAbsPbDown}{1}}~pb}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
