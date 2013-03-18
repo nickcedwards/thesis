@@ -1,13 +1,8 @@
 Thesis ToDo
 ------------
 
-Week 5 Targets:
-	- SCT chapter first draft -> Sav
-	- Finalise and redraft ObjSel and Bg Estimate
-	- First draft of CrossSection extraction
-	- TGC yield coefficients and first limits
-
 Week 4 Targets:
+	- First draft of CrossSection extraction
 	- Theory Redraft.
 	- Pheno Redraft.
 	- TGC limits showable
@@ -39,12 +34,10 @@ Analysis issues:
 	- Apply Aidan's comments
 	- Say more about generator plots
 	- Define MC sample
-
-					
+	
 - ObjSel:						{1 day}
 	- Dilepton plots: WZ samples. Plots with caloIso. Have Medium pt20 plots ready
-	- Check triggerMatch deltaR. Update Trigger Sec, EvSel, Z+X plots
-
+	
 - Analysis overview 
 	
 - Background estimation 		{1 day+}
@@ -52,6 +45,7 @@ Analysis issues:
 	- Get ZZZ ZWW cx for 7 TeV
 	- Run on 7 TeV ttbarV
 	- Run on ZZZ WWW 
+	- Calculate 4l background setting -ve backgrounds to zero before sum
 	
 - Cross Section and kinematic plots 
 	- Rerun 7 TeV cx with updates, finish writing/redraft {1 day}
