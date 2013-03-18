@@ -682,11 +682,18 @@ rewritten as:
 \end{equation}
 
 An iterative Bayesian algorithm~\cite{2010arXiv1010.0632D} is used to perform
-the unfoldinf, 
+the unfolding, 
 using the implementation provided by the {\sc
 RooUnfold}~\cite{2011arXiv1105.1160A} package. The algorithm treats the response
 matrix \unfA\ as a description of the probability of observing some particular data given the
-true distribution. It takes as an initial prior for \unfx\ the simulated distribution from
+true distribution. From Bayes's theorem, the probability of there being
+\unfxi\ events in bin $i$ of the true distribution, given an observation of
+\unfyj\ events in bin $j$ is given by:
+\begin{equation}
+P(\unfxi|\unfyj,I) = \frac{P(\unfyi|\unfxj,I)\cdotP(\unfxi|I)}{\Sigma_{k}P(\unfyk|\unfxj,I)\cdotP(\unfxk|I)}
+\begin{end}
+
+It takes as an initial prior for \unfx\ the simulated distribution from
 \mc\ and iterates, taking the posterior distribution from one iteration as a
 prior for the next. The choice of initial prior will tend to bias the unfolded
 distribution, but this bias decreases steeply with the number of iterations. The
@@ -694,7 +701,7 @@ statistical uncertainty tends to increase with the number of iterations, as
 fluctuations can be amplified by positive feedback inherent in the algorithm;
 the number of iterations must thus be chosen to balance the bias due to the
 choice of prior and amplification of statistical uncertainties. It is found that
-the difference in result between three and four iterations is much smaller than
+the difference in the results between three and four iterations is much smaller than
 the statistical uncertainty. The results for three iterations are thus taken as
 the nominal result, and the difference between three and four iterations is
 taken as an additional systematic. 
@@ -713,8 +720,9 @@ using the distribution predicted by \sherpa\ as a prior instead of the nominal
 \powhegbox. 
 
 Distributions of three variables sensitive to new phenomena are selected for
-unfolding: the transverse momentum \ptZ\ and \deltaPhiLL\ between the decay leptons
-of the leading \Z\ boson, and the four-lepton invariant mass \mZZ. Bin
+unfolding: the transverse momentum \ptZ\ of the leading \Z\ boson candidate, the
+angle \deltaPhiLL\ between the decay leptons
+of the leading \Z\ boson candidate, and the four-lepton invariant mass \mZZ. Bin
 boundaries are chosen to maximise sensitivity to nTGCs, and are in all cases
 larger than the detector resolution. The unfolded distributions are presented in
 terms of a differential fiducial \cx, and are shown
