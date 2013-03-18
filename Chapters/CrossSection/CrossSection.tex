@@ -686,12 +686,21 @@ the unfolding,
 using the implementation provided by the {\sc
 RooUnfold}~\cite{2011arXiv1105.1160A} package. The algorithm treats the response
 matrix \unfA\ as a description of the probability of observing some particular data given the
-true distribution. From Bayes's theorem, the probability of there being
-\unfxi\ events in bin $i$ of the true distribution, given an observation of
+true distribution. From Bayes's theorem, the probability of there being 
+\unfxi\ events in bin $i$ of the true distribution, as a result an observation of
 \unfyj\ events in bin $j$ is given by:
 \begin{equation}
 P(\unfxi|\unfyj,I) = \frac{P(\unfyi|\unfxj,I)\cdotP(\unfxi|I)}{\Sigma_{k}P(\unfyk|\unfxj,I)\cdotP(\unfxk|I)}
 \end{equation}
+where $I$ represents the state of information under which the analysis is
+performed, and $P(\unfxi|I)$ is the prior for \unfxi. $P(\unfyi|\unfxj,I)$ can
+be associated as the $i,j$ th element of the unfolding matrix \unfA. Summing
+over all of the bins of the observed distribution, the number of counts in
+\unfxi\ is thus given by:
+\begin{equation}
+\unfxi = \frac{1}{\epsilon_{i}} \Sigma^{n}_{j=1} \frac{A_{ji} \cdot P(\unfxi|I)}{\Sigma_k A_{jk} \cdotP(\unfxk|I)}
+\end{equation}
+where $\epsilon_{i}=\Sigma^{n}_{j} A_{j}$ accounts for the efficiency.
 
 It takes as an initial prior for \unfx\ the simulated distribution from
 \mc\ and iterates, taking the posterior distribution from one iteration as a
