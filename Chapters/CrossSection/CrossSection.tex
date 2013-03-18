@@ -704,8 +704,9 @@ P(\unfxi|I)}{\sum_k A_{jk} \cdot P(\unfxk|I)} \cdot \unfyj
 \end{equation}
 where $\sum_{i}=\Sigma^{n}_{j} A_{j}$ accounts for the efficiency.
 
-It takes as an initial prior for \unfx\ the simulated distribution from
-\mc\ and iterates, taking the posterior distribution from one iteration as a
+The initial prior for \unfx\ is taken from the simulated distribution from
+\mc, and the unfolding matrix \unfA\ is also estimated using \mcsim. The
+procedure is iterated, taking the posterior distribution for \unfx\ from one iteration as a
 prior for the next. The choice of initial prior will tend to bias the unfolded
 distribution, but this bias decreases steeply with the number of iterations. The
 statistical uncertainty tends to increase with the number of iterations, as
