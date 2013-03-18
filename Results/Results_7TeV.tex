@@ -157,17 +157,18 @@
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % Theory Fiducial cross section ZZ*
+\def\TheoryCxPrec{1}
 \newcommand{\ZZSevenTeVTheoryFiducialCrossSectionZZsLLLL}{
-           {\nmult{\TheoryCxSevenOffShellFidSevenTeV}{2} 
+           {\nmult{\TheoryCxSevenOffShellFidSevenTeV}{\TheoryCxPrec} 
            \errAsym
-           {\nmult{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsUp}{2}}
-           {\nmult{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsDown}{2}}~fb}}
+           {\nmult{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsUp}{\TheoryCxPrec}}
+           {\nmult{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsDown}{\TheoryCxPrec}}~fb}}
 
 \newcommand{\ZZSevenTeVTheoryFiducialCrossSectionZZsEEEE}{
-           {\ndiv{\TheoryCxSevenOffShellFidSevenTeV}{2} 
+           {\ndiv{\TheoryCxSevenOffShellFidSevenTeV}{\TheoryCxPrec} 
            \errAsym
-           {\ndiv{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsUp}{2}}
-           {\ndiv{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsDown}{2}}~fb}}
+           {\ndiv{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsUp}{\TheoryCxPrec}}
+           {\ndiv{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsDown}{\TheoryCxPrec}}~fb}}
 
 %\newcommand{\ZZSevenTeVTheoryFiducialCrossSectionZZMMMM}{
            %{\ZZSevenTeVTheoryFiducialCrossSectionZZMMMMCentral\errAsym
@@ -175,10 +176,10 @@
            %{\ZZSevenTeVTheoryFiducialCrossSectionZZMMMMErrDown}~fb}}
 
 \newcommand{\ZZSevenTeVTheoryFiducialCrossSectionZZsMMMM}{
-           {\ndiv{\TheoryCxSevenOffShellFidSevenTeV}{2} 
+           {\ndiv{\TheoryCxSevenOffShellFidSevenTeV}{\TheoryCxPrec} 
            \errAsym
-           {\ndiv{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsUp}{2}}
-           {\ndiv{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsDown}{2}}~fb}}
+           {\ndiv{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsUp}{\TheoryCxPrec}}
+           {\ndiv{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsDown}{\TheoryCxPrec}}~fb}}
 
 \newcommand{\ZZSevenTeVTheoryFiducialCrossSectionZZsEEMM}{
            {\TheoryCxSevenOffShellFidSevenTeV\ 
