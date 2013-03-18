@@ -669,21 +669,24 @@ experimental effects $A(y,x)$:
 \label{eqn:unfold-conv}
 \end{equation}
 
-In practice, one tends to not measure continuous distributions but instead make measurements
+In practice, continuous distributions are generally not measured, but instead
+measurements are made
 in discretised bins. $x$ and $y$ can thus be rewritten as
-vectors \unfx\ and \unfy, where each element represents one bin. The response
-function then becomes a response matrix \unfA, and one can
-rewrite~\eqn{unfold-conv} as:
+vectors \unfx\ and \unfy, where each element represents the number of events in
+a given bin. The response
+function then becomes a response matrix \unfA, ~\eqn{unfold-conv} can be
+rewritten as:
 \begin{equation}
 \mathbf{Ax} = \mathbf{y}
 \label{eqn:unfold-conv-matrix}
 \end{equation}
 
-An iterative Bayesian unfolding algorithm is used~\cite{2010arXiv1010.0632D}, 
+An iterative Bayesian algorithm~\cite{2010arXiv1010.0632D} is used to perform
+the unfoldinf, 
 using the implementation provided by the {\sc
 RooUnfold}~\cite{2011arXiv1105.1160A} package. The algorithm treats the response
 matrix \unfA\ as a description of the probability of observing some particular data given the
-true distribution. It takes an initial prior for \unfx\ the simulated distribution from
+true distribution. It takes as an initial prior for \unfx\ the simulated distribution from
 \mc\ and iterates, taking the posterior distribution from one iteration as a
 prior for the next. The choice of initial prior will tend to bias the unfolded
 distribution, but this bias decreases steeply with the number of iterations. The
