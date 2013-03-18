@@ -690,7 +690,7 @@ true distribution. From Bayes's theorem, the probability of there being
 \unfxi\ events in bin $i$ of the true distribution arising due to
 \unfyj\ events in bin $j$ is given by:
 \begin{equation}
-P(\unfxi|\unfyj,I) = \frac{P(\unfyi|\unfxj,I)\cdot P(\unfxi|I)}{\Sigma_{k}P(\unfyk|\unfxj,I)\cdot P(\unfxk|I)}
+P(\unfxi|\unfyj,I) = \frac{P(\unfyi|\unfxj,I)\cdot P(\unfxi|I)}{\sum_{k}P(\unfyk|\unfxj,I)\cdot P(\unfxk|I)}
 \end{equation}
 where $I$ represents the state of information under which the analysis is
 performed, and $P(\unfxi|I)$ is the prior for \unfxi. $P(\unfyi|\unfxj,I)$ can
@@ -701,7 +701,7 @@ this `sharing' for all the bins of the observed distribution and taking into
 account the efficiency. The estimate for the number of counts in bin $i$ of the
 true distribution \unfxi\ is thus given by:
 \begin{equation}
-\unfxi = \frac{1}{\epsilon_{i}} \Sigma^{n}_{j=1} \frac{A_{ji} \cdot P(\unfxi|I)}{\Sigma_k A_{jk} \cdot P(\unfxk|I)}
+\unfxi = \frac{1}{\epsilon_{i}} \sum^{n}_{j=1} \frac{A_{ji} \cdot P(\unfxi|I)}{\sum_k A_{jk} \cdot P(\unfxk|I)}
 \end{equation}
 where $\epsilon_{i}=\Sigma^{n}_{j} A_{j}$ accounts for the efficiency.
 
