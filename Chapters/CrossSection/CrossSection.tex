@@ -690,7 +690,7 @@ true distribution. From Bayes's theorem, the probability of there being
 \unfxi\ events in bin $i$ of the true distribution, as a result an observation of
 \unfyj\ events in bin $j$ is given by:
 \begin{equation}
-P(\unfxi|\unfyj,I) = \frac{P(\unfyi|\unfxj,I)\cdotP(\unfxi|I)}{\Sigma_{k}P(\unfyk|\unfxj,I)\cdotP(\unfxk|I)}
+P(\unfxi|\unfyj,I) = \frac{P(\unfyi|\unfxj,I)\cdot P(\unfxi|I)}{\Sigma_{k}P(\unfyk|\unfxj,I)\cdot P(\unfxk|I)}
 \end{equation}
 where $I$ represents the state of information under which the analysis is
 performed, and $P(\unfxi|I)$ is the prior for \unfxi. $P(\unfyi|\unfxj,I)$ can
@@ -698,7 +698,7 @@ be associated as the $i,j$ th element of the unfolding matrix \unfA. Summing
 over all of the bins of the observed distribution, the number of counts in
 \unfxi\ is thus given by:
 \begin{equation}
-\unfxi = \frac{1}{\epsilon_{i}} \Sigma^{n}_{j=1} \frac{A_{ji} \cdot P(\unfxi|I)}{\Sigma_k A_{jk} \cdotP(\unfxk|I)}
+\unfxi = \frac{1}{\epsilon_{i}} \Sigma^{n}_{j=1} \frac{A_{ji} \cdot P(\unfxi|I)}{\Sigma_k A_{jk} \cdot P(\unfxk|I)}
 \end{equation}
 where $\epsilon_{i}=\Sigma^{n}_{j} A_{j}$ accounts for the efficiency.
 
