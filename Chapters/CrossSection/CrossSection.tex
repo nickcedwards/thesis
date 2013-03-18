@@ -121,9 +121,9 @@ events are seen to cluster in the regions where both masses are near \mZ, in
 agreement with the \mc\ prediction for the signal (shown as pink boxes, with the
 size of the box proportional to the number of expected events).
 
-\fig{zzdists-dr-ptz-seven} shows the correlation between the transverse
-momentum of the \leppair s and the opening-angle between the leptons
-forming the pair. It is observed that for higher transverse momentum dilepton
+\fig{zzdists-dr-ptz-seven} shows the correlation between the transverse momentum
+of the \leppair s and the opening-angle between the leptons forming the pair in
+the 7~\tev\ data. It is observed that for higher transverse momentum \dilep\
 pairs the opening-angle tends to be smaller, in good agreement with the \mc\
 predictions. 
 
@@ -135,9 +135,8 @@ system, the transverse momentum of the leading \dilep\ pair $\pt^{Z1}$, and the
 transverse momentum of the subleading \dilep\ pair $\pt^{Z2}$, for events
 passing the \ZZ\ selection for the 7~\tev\ analysis; \fig{zzdists-ZZ-eight}
 shows equivalent figure for the 8~\tev\ analysis.
-\figs{zzdists-ZZ-seven}{zzdists-ZZ-eight} show the corresponding
-distributions for the \ZZs\ selection for the 7~\tev\ and 8~\tev\ analyses
-respectively. In each case the prediction from \mc\ for
+\fig{zzdists-ZZs-seven} shows the corresponding
+distributions for the \ZZs\ selection for the 7~\tev\ analysis. In each case the prediction from \mc\ for
 the \ZZ\ signal is shown as a pink histogram and the prediction for the
 background, taken from \mc\ normalised to the data-driven background estimate,
 is shown as a light blue histogram. The shapes of the distributions observed in
@@ -243,6 +242,29 @@ data are consistent with these predictions.
 \end{center}
 \end{figure}
 
+% 8 TeV, Z1_m, Z2_m, m_Z>8GeV
+\begin{figure}[htbp]
+    \begin{center}
+     \subfigure[]{
+     \includegraphics[width=0.47\textwidth]{placeholder}
+     }
+     \subfigure[]{
+     \includegraphics[width=0.47\textwidth]{placeholder}
+     }
+    \caption[Invariant masses of the (a) leading and (b) subleading \leppair\
+    in candidate \ZZ\ events in the 8~\tev\ data.]
+    {Invariant masses of the (a) leading and (b) subleading \leppair\
+    in candidate \ZZ\ events in the 8~\tev\ data. Both \leppair s are required to have
+    $m_{\ell\ell}>8$~\gev.  The points represent the observed data and the
+    histograms show the prediction from simulation, where the background is
+    normalized to the data-driven estimate as described in~\chap{BackgroundEstimate}. 
+    The shaded band shows the combined statistical and
+    systematic uncertainty on the prediction. 
+}
+    \label{fig:zzdists-Zmass-eight}
+\end{center}
+\end{figure}
+
 % 7 TeV, ZZ, ZZ_pt / ZZ_m
 \begin{figure}[htbp]
     \begin{center}
@@ -272,60 +294,6 @@ data are consistent with these predictions.
     }
     \label{fig:zzdists-ZZ-seven}
     \end{center}
-\end{figure}
-
-% 7 TeV, ZZ*, ZZ_pt / ZZ_m
-\begin{figure}[htbp]
-\begin{center}
-    \subfigure[]{
-    \includegraphics[width=0.47\textwidth]{7TeV/h_4l_ZZs_ZZ_pt}
-    }
-    \subfigure[]{
-    \includegraphics[width=0.47\textwidth]{7TeV/h_4l_ZZs_ZZ_m}
-    }
-    \subfigure[]{
-    \includegraphics[width=0.47\textwidth]{7TeV/h_4l_ZZs_Z1_pt}
-    }
-    \subfigure[]{
-    \includegraphics[width=0.47\textwidth]{7TeV/h_4l_ZZs_Z2_pt}
-    }
-    \caption[Kinematic distributions for events passing the \ZZs\ selection in
-    the 7~\tev\ data.]
-    {Kinematic distributions for events passing the \ZZs\ selection in
-    the 7~\tev\ data: (a) transverse momentum $\pT^{\ZZ}$ and (b) invariant mass $m^{\ZZ}$ of the 
-    four-lepton system, (c) transverse momentum of the leading
-    \dilep\ pair $\pt^{Z1}$, and (d) transverse momentum of the subleading
-    \dilep\ pair $\pt^{Z2}$. The points represent the observed data and the 
-    histograms show the prediction from simulation, where the background
-    is normalized to the data-driven (dd) estimate as described in
-    ~\chap{BackgroundEstimate}. The shaded band 
-    shows the combined statistical and systematic uncertainty on the prediction. 
-    }
-\end{center}
-    \label{fig:zzdists-ZZs-seven}
-\end{figure}
-
-% 8 TeV, Z1_m, Z2_m, m_Z>8GeV
-\begin{figure}[htbp]
-    \begin{center}
-     \subfigure[]{
-     \includegraphics[width=0.47\textwidth]{placeholder}
-     }
-     \subfigure[]{
-     \includegraphics[width=0.47\textwidth]{placeholder}
-     }
-    \caption[Invariant masses of the (a) leading and (b) subleading \leppair\
-    in candidate \ZZ\ events in the 8~\tev\ data.]
-    {Invariant masses of the (a) leading and (b) subleading \leppair\
-    in candidate \ZZ\ events in the 8~\tev\ data. Both \leppair s are required to have
-    $m_{\ell\ell}>8$~\gev.  The points represent the observed data and the
-    histograms show the prediction from simulation, where the background is
-    normalized to the data-driven estimate as described in~\chap{BackgroundEstimate}. 
-    The shaded band shows the combined statistical and
-    systematic uncertainty on the prediction. 
-}
-    \label{fig:zzdists-Zmass-eight}
-\end{center}
 \end{figure}
 
 % 8 TeV, ZZ, ZZ_pt / ZZ_m
@@ -358,6 +326,37 @@ data are consistent with these predictions.
     \label{fig:zzdists-ZZ-eight}
     \end{center}
 \end{figure}
+% 7 TeV, ZZ*, ZZ_pt / ZZ_m
+\begin{figure}[htbp]
+\begin{center}
+    \subfigure[]{
+    \includegraphics[width=0.47\textwidth]{7TeV/h_4l_ZZs_ZZ_pt}
+    }
+    \subfigure[]{
+    \includegraphics[width=0.47\textwidth]{7TeV/h_4l_ZZs_ZZ_m}
+    }
+    \subfigure[]{
+    \includegraphics[width=0.47\textwidth]{7TeV/h_4l_ZZs_Z1_pt}
+    }
+    \subfigure[]{
+    \includegraphics[width=0.47\textwidth]{7TeV/h_4l_ZZs_Z2_pt}
+    }
+    \caption[Kinematic distributions for events passing the \ZZs\ selection in
+    the 7~\tev\ data.]
+    {Kinematic distributions for events passing the \ZZs\ selection in
+    the 7~\tev\ data: (a) transverse momentum $\pT^{\ZZ}$ and (b) invariant mass $m^{\ZZ}$ of the 
+    four-lepton system, (c) transverse momentum of the leading
+    \dilep\ pair $\pt^{Z1}$, and (d) transverse momentum of the subleading
+    \dilep\ pair $\pt^{Z2}$. The points represent the observed data and the 
+    histograms show the prediction from simulation, where the background
+    is normalized to the data-driven (dd) estimate as described in
+    ~\chap{BackgroundEstimate}. The shaded band 
+    shows the combined statistical and systematic uncertainty on the prediction. 
+    }
+\end{center}
+    \label{fig:zzdists-ZZs-seven}
+\end{figure}
+
 
 %% 8 TeV, ZZ*, ZZ_pt / ZZ_m
 %\begin{figure}[htbp]
