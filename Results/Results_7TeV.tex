@@ -126,17 +126,18 @@
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % Theory Fiducial cross section ZZ
+\def\TheoryCxPrec{1}
 \newcommand{\ZZSevenTeVTheoryFiducialCrossSectionZZLLLL}{
-           {\nmult{\TheoryCxSevenOnShellFidSevenTeV}{2} 
+           {\nmult{\TheoryCxSevenOnShellFidSevenTeV}{\TheoryCxPrec} 
            \errAsym
-           {\nmult{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsUp}{2}}
-           {\nmult{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsDown}{2}}~fb}}
+           {\nmult{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsUp}{\TheoryCxPrec}}
+           {\nmult{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsDown}{\TheoryCxPrec}}~fb}}
 
 \newcommand{\ZZSevenTeVTheoryFiducialCrossSectionZZEEEE}{
-           {\ndiv{\TheoryCxSevenOnShellFidSevenTeV}{2} 
+           {\ndiv{\TheoryCxSevenOnShellFidSevenTeV}{\TheoryCxPrec} 
            \errAsym
-           {\ndiv{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsUp}{2}}
-           {\ndiv{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsDown}{2}}~fb}}
+           {\ndiv{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsUp}{\TheoryCxPrec}}
+           {\ndiv{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsDown}{\TheoryCxPrec}}~fb}}
 
 %\newcommand{\ZZSevenTeVTheoryFiducialCrossSectionZZMMMM}{
            %{\ZZSevenTeVTheoryFiducialCrossSectionZZMMMMCentral\errAsym
@@ -144,10 +145,10 @@
            %{\ZZSevenTeVTheoryFiducialCrossSectionZZMMMMErrDown}~fb}}
 
 \newcommand{\ZZSevenTeVTheoryFiducialCrossSectionZZMMMM}{
-           {\ndiv{\TheoryCxSevenOnShellFidSevenTeV}{2} 
+           {\ndiv{\TheoryCxSevenOnShellFidSevenTeV}{\TheoryCxPrec} 
            \errAsym
-           {\ndiv{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsUp}{2}}
-           {\ndiv{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsDown}{2}}~fb}}
+           {\ndiv{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsUp}{\TheoryCxPrec}}
+           {\ndiv{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsDown}{\TheoryCxPrec}}~fb}}
 
 \newcommand{\ZZSevenTeVTheoryFiducialCrossSectionZZEEMM}{
            {\TheoryCxSevenOnShellFidSevenTeV\ 
@@ -157,7 +158,6 @@
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % Theory Fiducial cross section ZZ*
-\def\TheoryCxPrec{1}
 \newcommand{\ZZSevenTeVTheoryFiducialCrossSectionZZsLLLL}{
            {\nmult{\TheoryCxSevenOffShellFidSevenTeV}{\TheoryCxPrec} 
            \errAsym
