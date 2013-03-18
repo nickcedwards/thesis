@@ -694,9 +694,12 @@ P(\unfxi|\unfyj,I) = \frac{P(\unfyi|\unfxj,I)\cdot P(\unfxi|I)}{\Sigma_{k}P(\unf
 \end{equation}
 where $I$ represents the state of information under which the analysis is
 performed, and $P(\unfxi|I)$ is the prior for \unfxi. $P(\unfyi|\unfxj,I)$ can
-be associated as the $i,j$ th element of the unfolding matrix \unfA. Summing
-over all of the bins of the observed distribution, the number of counts in
-\unfxi\ is thus given by:
+be associated as the $i,j$ th element of the unfolding matrix \unfA. This
+probability can be used to `share' the observed events between the bins of the
+true distribution. The estimate of the true spectrum is occurred by repeating
+this `sharing' for all the bins of the observed distribution and taking into
+account the efficiency. The estimate for the number of counts in bin $i$ of the
+true distribution \unfxi\ is thus given by:
 \begin{equation}
 \unfxi = \frac{1}{\epsilon_{i}} \Sigma^{n}_{j=1} \frac{A_{ji} \cdot P(\unfxi|I)}{\Sigma_k A_{jk} \cdot P(\unfxk|I)}
 \end{equation}
