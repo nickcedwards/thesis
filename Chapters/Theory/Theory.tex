@@ -470,7 +470,23 @@ properties consistent with the Higgs.
 \subsection{Quantum Chromodynamics}
 
 Quantum Chromodynamics is the theory of strong interactions, and is a
-non-abelian gauge theory with group \suthree.
+non-abelian gauge theory with group \suthree. The charge associated with
+\suthree\ is the \intro{colour charge}, so named because there are three colour
+charges, referred to as red, blue and green. The theory is constructed
+in a similar way to the electroweak theory, maintaining gauge invariance under
+local transformations of the group by replacing the derivate in the Dirac equation
+with a covariant derivative, necessitating the introduction of boson fields.
+Since there are eight generators of \suthree, an octet of gauge fields is
+introduced, which are the gluons $G_{\mu}^{1..8}$. The Lagrangian for QCD is
+given by:
+\begin{equation}
+\Lagr_{QCD} = -\frac{1}{4}G^{a}_{\mu\nu}G_{a}^{\mu'nu} +
+\bar{q}_{a}(i\gammamuD_{\mu})_{ab}q_{b}
+\end{equation}
+where the covarient derivative is defined as
+\begin{equation}
+\Dmu  =  \partial_{\mu} + ig_{s}\bf{T}^{a} G^{a}_{\mu}
+\end{equation}
 
 \section{Interactions in proton-proton collisions}
 \label{sec:Theory-ppInteractions}
