@@ -1,17 +1,17 @@
 Chapter Signoffs
+-----------------
 
-			Draft0	Analysis/Physics-Issues		Aidans com?		Spelling	Final Readthrough
-Theory		Yes		QCD Sec						No				No			No
-TheoryZZ	Yes		Gen Plots discussion		No				No			No
-					8 TeV Fid cx
-Detector	Yes		Luminosity desc				OK				No			No
-Reco		Yes		d0 in GSF/Std (data)		OK
+			Draft0	Issues/ToDo				Aidans com?		Spelling	Final Readthrough
+Theory		Yes		QCD Sec						Yes				Yes			No
+TheoryZZ	Yes		Gen Plots discussion		Yes				Yes			No
+Detector	Yes		Luminosity desc				Yes				No			No
+Reco		Yes		d0 in GSF/Std (data)		Yes				No			No
 					TRT HT hits
 SCT			Yes
 ObjSel		Yes		WZ in dilep plots			Yes				Yes			No
 					Why more muon fake in data
-Bg Est		Yes		7 TeV Irreducible			No				No			No
-Results		No		Calculate Cx
+Bg Est		Yes		7 TeV Irreducible			Yes				No			No
+Results		No		Update Yield Uncertianties	No				No			No
 TGC			No
 
 Intro		No
@@ -21,3 +21,13 @@ Acknow		No
 
 TOC			
 Bib
+
+
+Analysis Consistency Signoffs
+-----------------------------
+
++ Total Theory Cross Sections Consistent to Note:		YES
++ A_ZZ + A_ZZ unc consistent to notes					YES
++ Czz Systematics consistent to notes					YES
++ Yield Systematics consistent to notes
+	

@@ -1,0 +1,224 @@
+\newcommand{\TheoryCxSevenTotalZeroWidthWithStat}{6182.30 \errSym{4.22}}
+\newcommand{\TheoryCxSevenTotalZeroWidth}{6182.30}
+\newcommand{\TheoryCxSevenTotalZeroWidthCTerrPerc}{\errAsym{1.3}{1.2}}
+\newcommand{\TheoryCxSevenTotalZeroWidthMSTWPerc}{\errSym{2.1}}
+\newcommand{\TheoryCxSevenTotalZeroWidthPDFerrPerc}{\errAsym{2.5}{2.4}}
+\newcommand{\TheoryCxSevenTotalZeroWidthScaleErrPerc}{\errAsym{3.8}{2.7}}
+\newcommand{\TheoryCxSevenTotalZeroWidthTheoryErrAbs}{\errAsym{\TheoryCxSevenTotalZeroWidthTheoryErrAbsUp}{\TheoryCxSevenTotalZeroWidthTheoryErrAbsDown}}
+\newcommand{\TheoryCxSevenTotalZeroWidthTheoryErrAbsUp}{280.83}
+\newcommand{\TheoryCxSevenTotalZeroWidthTheoryErrAbsDown}{221.00}
+
+\newcommand{\TheoryCxSevenTotalZeroWidthWithStatPb}{6.18 \errSym{0.00}}
+\newcommand{\TheoryCxSevenTotalZeroWidthPb}{6.18}
+\newcommand{\TheoryCxSevenTotalZeroWidthTheoryErrAbsPb}{\errAsym{\TheoryCxSevenTotalZeroWidthTheoryErrAbsPbUp}{\TheoryCxSevenTotalZeroWidthTheoryErrAbsPbDown}}
+\newcommand{\TheoryCxSevenTotalZeroWidthTheoryErrAbsPbUp}{0.28}
+\newcommand{\TheoryCxSevenTotalZeroWidthTheoryErrAbsPbDown}{0.22}
+
+\newcommand{\TheoryCxEightTotalZeroWidthWithStat}{7607.68 \errSym{5.20}}
+\newcommand{\TheoryCxEightTotalZeroWidth}{7607.68}
+\newcommand{\TheoryCxEightTotalZeroWidthCTerrPerc}{\errAsym{1.2}{1.1}}
+\newcommand{\TheoryCxEightTotalZeroWidthMSTWPerc}{\errSym{1.9}}
+\newcommand{\TheoryCxEightTotalZeroWidthPDFerrPerc}{\errAsym{2.3}{2.2}}
+\newcommand{\TheoryCxEightTotalZeroWidthScaleErrPerc}{\errAsym{3.6}{2.5}}
+\newcommand{\TheoryCxEightTotalZeroWidthTheoryErrAbs}{\errAsym{\TheoryCxEightTotalZeroWidthTheoryErrAbsUp}{\TheoryCxEightTotalZeroWidthTheoryErrAbsDown}}
+\newcommand{\TheoryCxEightTotalZeroWidthTheoryErrAbsUp}{321.49}
+\newcommand{\TheoryCxEightTotalZeroWidthTheoryErrAbsDown}{251.40}
+
+\newcommand{\TheoryCxEightTotalZeroWidthWithStatPb}{7.61 \errSym{0.01}}
+\newcommand{\TheoryCxEightTotalZeroWidthPb}{7.61}
+\newcommand{\TheoryCxEightTotalZeroWidthTheoryErrAbsPb}{\errAsym{\TheoryCxEightTotalZeroWidthTheoryErrAbsPbUp}{\TheoryCxEightTotalZeroWidthTheoryErrAbsPbDown}}
+\newcommand{\TheoryCxEightTotalZeroWidthTheoryErrAbsPbUp}{0.32}
+\newcommand{\TheoryCxEightTotalZeroWidthTheoryErrAbsPbDown}{0.25}
+
+\newcommand{\TheoryCxSevenZeroWidthWithStat}{13.99 \errSym{0.01}}
+\newcommand{\TheoryCxSevenZeroWidth}{13.99}
+\newcommand{\TheoryCxSevenZeroWidthCTerrPerc}{\errAsym{1.3}{1.2}}
+\newcommand{\TheoryCxSevenZeroWidthMSTWPerc}{\errSym{2.1}}
+\newcommand{\TheoryCxSevenZeroWidthPDFerrPerc}{\errAsym{2.5}{2.4}}
+\newcommand{\TheoryCxSevenZeroWidthScaleErrPerc}{\errAsym{3.7}{2.7}}
+\newcommand{\TheoryCxSevenZeroWidthTheoryErrAbs}{\errAsym{\TheoryCxSevenZeroWidthTheoryErrAbsUp}{\TheoryCxSevenZeroWidthTheoryErrAbsDown}}
+\newcommand{\TheoryCxSevenZeroWidthTheoryErrAbsUp}{0.63}
+\newcommand{\TheoryCxSevenZeroWidthTheoryErrAbsDown}{0.51}
+
+\newcommand{\TheoryCxSevenZeroWidthWithStatPb}{0.01 \errSym{0.00}}
+\newcommand{\TheoryCxSevenZeroWidthPb}{0.01}
+\newcommand{\TheoryCxSevenZeroWidthTheoryErrAbsPb}{\errAsym{\TheoryCxSevenZeroWidthTheoryErrAbsPbUp}{\TheoryCxSevenZeroWidthTheoryErrAbsPbDown}}
+\newcommand{\TheoryCxSevenZeroWidthTheoryErrAbsPbUp}{0.00}
+\newcommand{\TheoryCxSevenZeroWidthTheoryErrAbsPbDown}{0.00}
+
+\newcommand{\TheoryCxEightZeroWidthWithStat}{17.21 \errSym{0.01}}
+\newcommand{\TheoryCxEightZeroWidth}{17.21}
+\newcommand{\TheoryCxEightZeroWidthCTerrPerc}{\errAsym{1.2}{1.1}}
+\newcommand{\TheoryCxEightZeroWidthMSTWPerc}{\errSym{1.9}}
+\newcommand{\TheoryCxEightZeroWidthPDFerrPerc}{\errAsym{2.3}{2.2}}
+\newcommand{\TheoryCxEightZeroWidthScaleErrPerc}{\errAsym{3.8}{2.5}}
+\newcommand{\TheoryCxEightZeroWidthTheoryErrAbs}{\errAsym{\TheoryCxEightZeroWidthTheoryErrAbsUp}{\TheoryCxEightZeroWidthTheoryErrAbsDown}}
+\newcommand{\TheoryCxEightZeroWidthTheoryErrAbsUp}{0.76}
+\newcommand{\TheoryCxEightZeroWidthTheoryErrAbsDown}{0.57}
+
+\newcommand{\TheoryCxEightZeroWidthWithStatPb}{0.02 \errSym{0.00}}
+\newcommand{\TheoryCxEightZeroWidthPb}{0.02}
+\newcommand{\TheoryCxEightZeroWidthTheoryErrAbsPb}{\errAsym{\TheoryCxEightZeroWidthTheoryErrAbsPbUp}{\TheoryCxEightZeroWidthTheoryErrAbsPbDown}}
+\newcommand{\TheoryCxEightZeroWidthTheoryErrAbsPbUp}{0.00}
+\newcommand{\TheoryCxEightZeroWidthTheoryErrAbsPbDown}{0.00}
+
+\newcommand{\TheoryCxSevenOnShellWithStat}{13.33 \errSym{0.01}}
+\newcommand{\TheoryCxSevenOnShell}{13.33}
+\newcommand{\TheoryCxSevenOnShellCTerrPerc}{\errAsym{1.3}{1.2}}
+\newcommand{\TheoryCxSevenOnShellMSTWPerc}{\errSym{2.2}}
+\newcommand{\TheoryCxSevenOnShellPDFerrPerc}{\errAsym{2.6}{2.5}}
+\newcommand{\TheoryCxSevenOnShellScaleErrPerc}{\errAsym{3.7}{2.6}}
+\newcommand{\TheoryCxSevenOnShellTheoryErrAbs}{\errAsym{\TheoryCxSevenOnShellTheoryErrAbsUp}{\TheoryCxSevenOnShellTheoryErrAbsDown}}
+\newcommand{\TheoryCxSevenOnShellTheoryErrAbsUp}{0.60}
+\newcommand{\TheoryCxSevenOnShellTheoryErrAbsDown}{0.48}
+
+\newcommand{\TheoryCxSevenOnShellWithStatPb}{0.01 \errSym{0.00}}
+\newcommand{\TheoryCxSevenOnShellPb}{0.01}
+\newcommand{\TheoryCxSevenOnShellTheoryErrAbsPb}{\errAsym{\TheoryCxSevenOnShellTheoryErrAbsPbUp}{\TheoryCxSevenOnShellTheoryErrAbsPbDown}}
+\newcommand{\TheoryCxSevenOnShellTheoryErrAbsPbUp}{0.00}
+\newcommand{\TheoryCxSevenOnShellTheoryErrAbsPbDown}{0.00}
+
+\newcommand{\TheoryCxEightOnShellWithStat}{16.39 \errSym{0.01}}
+\newcommand{\TheoryCxEightOnShell}{16.39}
+\newcommand{\TheoryCxEightOnShellCTerrPerc}{\errAsym{1.2}{1.0}}
+\newcommand{\TheoryCxEightOnShellMSTWPerc}{\errSym{2.0}}
+\newcommand{\TheoryCxEightOnShellPDFerrPerc}{\errAsym{2.3}{2.2}}
+\newcommand{\TheoryCxEightOnShellScaleErrPerc}{\errAsym{3.5}{2.5}}
+\newcommand{\TheoryCxEightOnShellTheoryErrAbs}{\errAsym{\TheoryCxEightOnShellTheoryErrAbsUp}{\TheoryCxEightOnShellTheoryErrAbsDown}}
+\newcommand{\TheoryCxEightOnShellTheoryErrAbsUp}{0.68}
+\newcommand{\TheoryCxEightOnShellTheoryErrAbsDown}{0.55}
+
+\newcommand{\TheoryCxEightOnShellWithStatPb}{0.02 \errSym{0.00}}
+\newcommand{\TheoryCxEightOnShellPb}{0.02}
+\newcommand{\TheoryCxEightOnShellTheoryErrAbsPb}{\errAsym{\TheoryCxEightOnShellTheoryErrAbsPbUp}{\TheoryCxEightOnShellTheoryErrAbsPbDown}}
+\newcommand{\TheoryCxEightOnShellTheoryErrAbsPbUp}{0.00}
+\newcommand{\TheoryCxEightOnShellTheoryErrAbsPbDown}{0.00}
+
+\newcommand{\TheoryCxSevenTotalOnShellWithStat}{5891.30 \errSym{4.65}}
+\newcommand{\TheoryCxSevenTotalOnShell}{5891.30}
+\newcommand{\TheoryCxSevenTotalOnShellCTerrPerc}{\errAsym{1.3}{1.2}}
+\newcommand{\TheoryCxSevenTotalOnShellMSTWPerc}{\errSym{2.1}}
+\newcommand{\TheoryCxSevenTotalOnShellPDFerrPerc}{\errAsym{2.5}{2.4}}
+\newcommand{\TheoryCxSevenTotalOnShellScaleErrPerc}{\errAsym{3.6}{2.8}}
+\newcommand{\TheoryCxSevenTotalOnShellTheoryErrAbs}{\errAsym{\TheoryCxSevenTotalOnShellTheoryErrAbsUp}{\TheoryCxSevenTotalOnShellTheoryErrAbsDown}}
+\newcommand{\TheoryCxSevenTotalOnShellTheoryErrAbsUp}{259.43}
+\newcommand{\TheoryCxSevenTotalOnShellTheoryErrAbsDown}{215.90}
+
+\newcommand{\TheoryCxSevenTotalOnShellWithStatPb}{5.89 \errSym{0.00}}
+\newcommand{\TheoryCxSevenTotalOnShellPb}{5.89}
+\newcommand{\TheoryCxSevenTotalOnShellTheoryErrAbsPb}{\errAsym{\TheoryCxSevenTotalOnShellTheoryErrAbsPbUp}{\TheoryCxSevenTotalOnShellTheoryErrAbsPbDown}}
+\newcommand{\TheoryCxSevenTotalOnShellTheoryErrAbsPbUp}{0.26}
+\newcommand{\TheoryCxSevenTotalOnShellTheoryErrAbsPbDown}{0.22}
+
+\newcommand{\TheoryCxEightTotalOnShellWithStat}{7239.05 \errSym{5.42}}
+\newcommand{\TheoryCxEightTotalOnShell}{7239.05}
+\newcommand{\TheoryCxEightTotalOnShellCTerrPerc}{\errAsym{1.2}{1.1}}
+\newcommand{\TheoryCxEightTotalOnShellMSTWPerc}{\errSym{1.9}}
+\newcommand{\TheoryCxEightTotalOnShellPDFerrPerc}{\errAsym{2.3}{2.2}}
+\newcommand{\TheoryCxEightTotalOnShellScaleErrPerc}{\errAsym{3.6}{2.5}}
+\newcommand{\TheoryCxEightTotalOnShellTheoryErrAbs}{\errAsym{\TheoryCxEightTotalOnShellTheoryErrAbsUp}{\TheoryCxEightTotalOnShellTheoryErrAbsDown}}
+\newcommand{\TheoryCxEightTotalOnShellTheoryErrAbsUp}{306.46}
+\newcommand{\TheoryCxEightTotalOnShellTheoryErrAbsDown}{241.30}
+
+\newcommand{\TheoryCxEightTotalOnShellWithStatPb}{7.24 \errSym{0.01}}
+\newcommand{\TheoryCxEightTotalOnShellPb}{7.24}
+\newcommand{\TheoryCxEightTotalOnShellTheoryErrAbsPb}{\errAsym{\TheoryCxEightTotalOnShellTheoryErrAbsPbUp}{\TheoryCxEightTotalOnShellTheoryErrAbsPbDown}}
+\newcommand{\TheoryCxEightTotalOnShellTheoryErrAbsPbUp}{0.31}
+\newcommand{\TheoryCxEightTotalOnShellTheoryErrAbsPbDown}{0.24}
+
+\newcommand{\TheoryCxSevenOnShellFidSevenTeVWithStat}{10.59 \errSym{0.01}}
+\newcommand{\TheoryCxSevenOnShellFidSevenTeV}{10.59}
+\newcommand{\TheoryCxSevenOnShellFidSevenTeVCTerrPerc}{\errAsym{1.4}{1.2}}
+\newcommand{\TheoryCxSevenOnShellFidSevenTeVMSTWPerc}{\errSym{2.8}}
+\newcommand{\TheoryCxSevenOnShellFidSevenTeVPDFerrPerc}{\errAsym{3.1}{3.1}}
+\newcommand{\TheoryCxSevenOnShellFidSevenTeVScaleErrPerc}{\errAsym{3.7}{2.5}}
+\newcommand{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbs}{\errAsym{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsUp}{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsDown}}
+\newcommand{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsUp}{0.51}
+\newcommand{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsDown}{0.42}
+
+\newcommand{\TheoryCxSevenOnShellFidSevenTeVWithStatPb}{0.01 \errSym{0.00}}
+\newcommand{\TheoryCxSevenOnShellFidSevenTeVPb}{0.01}
+\newcommand{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsPb}{\errAsym{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsPbUp}{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsPbDown}}
+\newcommand{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsPbUp}{0.00}
+\newcommand{\TheoryCxSevenOnShellFidSevenTeVTheoryErrAbsPbDown}{0.00}
+
+\newcommand{\TheoryCxEightOnShellFidSevenTeVWithStat}{12.75 \errSym{0.02}}
+\newcommand{\TheoryCxEightOnShellFidSevenTeV}{12.75}
+\newcommand{\TheoryCxEightOnShellFidSevenTeVCTerrPerc}{\errAsym{1.3}{1.1}}
+\newcommand{\TheoryCxEightOnShellFidSevenTeVMSTWPerc}{\errSym{2.0}}
+\newcommand{\TheoryCxEightOnShellFidSevenTeVPDFerrPerc}{\errAsym{2.4}{2.3}}
+\newcommand{\TheoryCxEightOnShellFidSevenTeVScaleErrPerc}{\errAsym{3.2}{1.2}}
+\newcommand{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbs}{\errAsym{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsUp}{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsDown}}
+\newcommand{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsUp}{0.51}
+\newcommand{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsDown}{0.33}
+
+\newcommand{\TheoryCxEightOnShellFidSevenTeVWithStatPb}{0.01 \errSym{0.00}}
+\newcommand{\TheoryCxEightOnShellFidSevenTeVPb}{0.01}
+\newcommand{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsPb}{\errAsym{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsPbUp}{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsPbDown}}
+\newcommand{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsPbUp}{0.00}
+\newcommand{\TheoryCxEightOnShellFidSevenTeVTheoryErrAbsPbDown}{0.00}
+
+\newcommand{\TheoryCxSevenOffShellWithStat}{16.76 \errSym{0.03}}
+\newcommand{\TheoryCxSevenOffShell}{16.76}
+\newcommand{\TheoryCxSevenOffShellCTerrPerc}{\errAsym{1.3}{1.1}}
+\newcommand{\TheoryCxSevenOffShellMSTWPerc}{\errSym{2.2}}
+\newcommand{\TheoryCxSevenOffShellPDFerrPerc}{\errAsym{2.5}{2.5}}
+\newcommand{\TheoryCxSevenOffShellScaleErrPerc}{\errAsym{3.2}{2.2}}
+\newcommand{\TheoryCxSevenOffShellTheoryErrAbs}{\errAsym{\TheoryCxSevenOffShellTheoryErrAbsUp}{\TheoryCxSevenOffShellTheoryErrAbsDown}}
+\newcommand{\TheoryCxSevenOffShellTheoryErrAbsUp}{0.69}
+\newcommand{\TheoryCxSevenOffShellTheoryErrAbsDown}{0.55}
+
+\newcommand{\TheoryCxSevenOffShellWithStatPb}{0.02 \errSym{0.00}}
+\newcommand{\TheoryCxSevenOffShellPb}{0.02}
+\newcommand{\TheoryCxSevenOffShellTheoryErrAbsPb}{\errAsym{\TheoryCxSevenOffShellTheoryErrAbsPbUp}{\TheoryCxSevenOffShellTheoryErrAbsPbDown}}
+\newcommand{\TheoryCxSevenOffShellTheoryErrAbsPbUp}{0.00}
+\newcommand{\TheoryCxSevenOffShellTheoryErrAbsPbDown}{0.00}
+
+\newcommand{\TheoryCxEightOffShellWithStat}{20.46 \errSym{0.03}}
+\newcommand{\TheoryCxEightOffShell}{20.46}
+\newcommand{\TheoryCxEightOffShellCTerrPerc}{\errAsym{1.2}{1.0}}
+\newcommand{\TheoryCxEightOffShellMSTWPerc}{\errSym{1.9}}
+\newcommand{\TheoryCxEightOffShellPDFerrPerc}{\errAsym{2.3}{2.2}}
+\newcommand{\TheoryCxEightOffShellScaleErrPerc}{\errAsym{4.3}{2.1}}
+\newcommand{\TheoryCxEightOffShellTheoryErrAbs}{\errAsym{\TheoryCxEightOffShellTheoryErrAbsUp}{\TheoryCxEightOffShellTheoryErrAbsDown}}
+\newcommand{\TheoryCxEightOffShellTheoryErrAbsUp}{1.00}
+\newcommand{\TheoryCxEightOffShellTheoryErrAbsDown}{0.62}
+
+\newcommand{\TheoryCxEightOffShellWithStatPb}{0.02 \errSym{0.00}}
+\newcommand{\TheoryCxEightOffShellPb}{0.02}
+\newcommand{\TheoryCxEightOffShellTheoryErrAbsPb}{\errAsym{\TheoryCxEightOffShellTheoryErrAbsPbUp}{\TheoryCxEightOffShellTheoryErrAbsPbDown}}
+\newcommand{\TheoryCxEightOffShellTheoryErrAbsPbUp}{0.00}
+\newcommand{\TheoryCxEightOffShellTheoryErrAbsPbDown}{0.00}
+
+\newcommand{\TheoryCxSevenOffShellFidSevenTeVWithStat}{12.57 \errSym{0.02}}
+\newcommand{\TheoryCxSevenOffShellFidSevenTeV}{12.57}
+\newcommand{\TheoryCxSevenOffShellFidSevenTeVCTerrPerc}{\errAsym{1.4}{1.2}}
+\newcommand{\TheoryCxSevenOffShellFidSevenTeVMSTWPerc}{\errSym{2.9}}
+\newcommand{\TheoryCxSevenOffShellFidSevenTeVPDFerrPerc}{\errAsym{3.2}{3.1}}
+\newcommand{\TheoryCxSevenOffShellFidSevenTeVScaleErrPerc}{\errAsym{4.8}{1.9}}
+\newcommand{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbs}{\errAsym{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsUp}{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsDown}}
+\newcommand{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsUp}{0.73}
+\newcommand{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsDown}{0.46}
+
+\newcommand{\TheoryCxSevenOffShellFidSevenTeVWithStatPb}{0.01 \errSym{0.00}}
+\newcommand{\TheoryCxSevenOffShellFidSevenTeVPb}{0.01}
+\newcommand{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsPb}{\errAsym{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsPbUp}{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsPbDown}}
+\newcommand{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsPbUp}{0.00}
+\newcommand{\TheoryCxSevenOffShellFidSevenTeVTheoryErrAbsPbDown}{0.00}
+
+\newcommand{\TheoryCxEightOffShellFidSevenTeVWithStat}{15.11 \errSym{0.03}}
+\newcommand{\TheoryCxEightOffShellFidSevenTeV}{15.11}
+\newcommand{\TheoryCxEightOffShellFidSevenTeVCTerrPerc}{\errAsym{1.3}{1.1}}
+\newcommand{\TheoryCxEightOffShellFidSevenTeVMSTWPerc}{\errSym{1.8}}
+\newcommand{\TheoryCxEightOffShellFidSevenTeVPDFerrPerc}{\errAsym{2.2}{2.1}}
+\newcommand{\TheoryCxEightOffShellFidSevenTeVScaleErrPerc}{\errAsym{3.2}{2.6}}
+\newcommand{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbs}{\errAsym{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsUp}{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsDown}}
+\newcommand{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsUp}{0.58}
+\newcommand{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsDown}{0.50}
+
+\newcommand{\TheoryCxEightOffShellFidSevenTeVWithStatPb}{0.02 \errSym{0.00}}
+\newcommand{\TheoryCxEightOffShellFidSevenTeVPb}{0.02}
+\newcommand{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsPb}{\errAsym{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsPbUp}{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsPbDown}}
+\newcommand{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsPbUp}{0.00}
+\newcommand{\TheoryCxEightOffShellFidSevenTeVTheoryErrAbsPbDown}{0.00}
+
