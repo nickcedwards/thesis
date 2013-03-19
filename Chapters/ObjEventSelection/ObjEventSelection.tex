@@ -1618,10 +1618,10 @@ at 7~\tev, the contribution is found to be \measStat{1.7}{\errSym{0.03}} events,
 corresponding to a contribution of less than 3\%. No correction is made to the
 observed events to account for this contribution.
 
-\section{Systematic Uncertainties on \CZZ}
+\section{Systematic Uncertainties}
 
 In this section, the systematic uncertainties associated with the reconstruction
-acceptance \CZZ\ are discussed and estimated. %The uncertainties associated with reconstruction
+acceptance \CZZ\ and the expected signal are discussed and estimated. %The uncertainties associated with reconstruction
 %and identification are discussed in Sections~\ref{sec:objSel-syst-el}
 %and~\ref{sec:objSel-syst-mu}, event level
 
@@ -1981,7 +1981,7 @@ comparisons is taken to cover differences arising from PDF set and scale choice.
     \label{table:objSel-syst-genComp-eight}
 \end{table}
 
-\subsection{Systematic Uncertainty Estimates}
+\subsection{Estimates of Systematic Uncertainties to \CZZ}
 \label{sec:systematic-estimate-tables}
 
 The effect of each of the systematic uncertainties described above on \CZZ\ is estimated using
@@ -2178,14 +2178,16 @@ for electrons.
    \label{table:objSel-syst-eight}
 \end{table}
 
-\subsection{Systematic Uncertainties on Expected Yields}
+\subsection{Estimates of Systematic Uncertainties on Expected Signal}
 
-The systematic uncertainty on the expected yield is slightly larger than the
+The systematic uncertainty on the expected signal yield is slightly larger than the
 systematic uncertainty on the reconstruction acceptance as theoretical
 uncertainties affecting the fiducial \cx\ will tend to cancel out between the
 numerator and denominator of \CZZ, but not when considering the absolute number
 of expected events. \tab{objSel-syst-yield} gives the systematic uncertainties on
-the expected yields.
+the expected yields. The reconstruction uncertainties are identical to the
+reconstruction uncertainties to \CZZ, so contribution of each individual source
+is not shown in this table.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % Systematics 8 TeV
@@ -2197,7 +2199,7 @@ the expected yields.
       \ZZ\ Selection, 7~\tev\               & \eeee           & \mmmm                  & \eemm                    & \llll                      \\
       \hline
       %\multicolumn{4}{l}{\bf Reconstruction Uncertainties (\%)} \\
-      Reconstruction Uncertianties          & \ZZSevenTeVSystematicZZRecoTotalEEEE        & \ZZSevenTeVSystematicZZRecoTotalMMMM 
+      Reconstruction Uncertainties          & \ZZSevenTeVSystematicZZRecoTotalEEEE        & \ZZSevenTeVSystematicZZRecoTotalMMMM 
                                             & \ZZSevenTeVSystematicZZRecoTotalEEMM        & \ZZSevenTeVSystematicZZRecoTotalLLLL \\
       MC Generator Difference               & \ZZSevenTeVSystematicZZGeneratorEEEE        & \ZZSevenTeVSystematicZZGeneratorMMMM 
                                             & \ZZSevenTeVSystematicZZGeneratorEEMM        & \ZZSevenTeVSystematicZZGeneratorLLLL \\
@@ -2214,7 +2216,7 @@ the expected yields.
       \ZZs\ Selection, 7~\tev\              & \eeee           & \mmmm                  & \eemm                    & \llll                      \\
       \hline
       %\multicolumn{4}{l}{\bf Reconstruction Uncertainties (\%)} \\
-      Reconstruction Uncertianties          & \ZZSevenTeVSystematicZZsRecoTotalEEEE        & \ZZSevenTeVSystematicZZsRecoTotalMMMM 
+      Reconstruction Uncertainties          & \ZZSevenTeVSystematicZZsRecoTotalEEEE        & \ZZSevenTeVSystematicZZsRecoTotalMMMM 
                                             & \ZZSevenTeVSystematicZZsRecoTotalEEMM        & \ZZSevenTeVSystematicZZsRecoTotalLLLL \\
       MC Generator Difference               & \ZZSevenTeVSystematicZZsGeneratorEEEE        & \ZZSevenTeVSystematicZZsGeneratorMMMM 
                                             & \ZZSevenTeVSystematicZZsGeneratorEEMM        & \ZZSevenTeVSystematicZZsGeneratorLLLL \\
@@ -2231,7 +2233,7 @@ the expected yields.
       \ZZ\ Selection, 8~\tev\               & \eeee           & \mmmm                  & \eemm                    & \llll                      \\
       \hline
       %\multicolumn{4}{l}{\bf Reconstruction Uncertainties (\%)} \\
-      Reconstruction Uncertianties          & \ZZEightTeVSystematicZZRecoTotalEEEE        & \ZZEightTeVSystematicZZRecoTotalMMMM 
+      Reconstruction Uncertainties          & \ZZEightTeVSystematicZZRecoTotalEEEE        & \ZZEightTeVSystematicZZRecoTotalMMMM 
                                             & \ZZEightTeVSystematicZZRecoTotalEEMM        & \ZZEightTeVSystematicZZRecoTotalLLLL \\
       MC Generator Difference               & \ZZEightTeVSystematicZZGeneratorEEEE        & \ZZEightTeVSystematicZZGeneratorMMMM 
                                             & \ZZEightTeVSystematicZZGeneratorEEMM        & \ZZEightTeVSystematicZZGeneratorLLLL \\
@@ -2245,13 +2247,14 @@ the expected yields.
       \hline\hline
 
    \end{tabular}
-   \caption[Systematic uncertainties to the number of expected events .]
-   {Summary of systematic uncertainties to the reconstruction acceptance \CZZ\
-   in percent, by \ZZ\ final state, for the 8~\tev\ analysis. 
+   \caption[Systematic uncertainties to expected signal yield.]
+   {Summary of systematic uncertainties to the expected signal yield 
+   in percent, by \ZZ\ final state,. 
    %The top table
    %gives uncertainties to the \ZZ\ selection, the bottom to the \ZZs\ selection.
    The fourth column gives the weighted average
    of the three final states. The total uncertainty is also given, which is the
-   sum in quadrature of the individual uncertainties.} 
+   sum in quadrature of the individual uncertainties. For a breakdown of the
+   reconstruction uncertainties, see~\tabs{objSel-syst-seven}{objSel-syst-eight}} 
    \label{table:objSel-syst-yield}
 \end{table}
