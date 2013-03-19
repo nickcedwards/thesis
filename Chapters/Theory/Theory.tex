@@ -487,7 +487,7 @@ as:
 \begin{equation}
 \Dmu  =  \partial_{\mu} + ig_{s}{\bf T}^{a} G^{a}_{\mu}
 \end{equation}
-$G^{a}_{\mu\nu}$ is the colour field strength tensor:
+where ${\bf T}^{a}$ are the generators of \suthree\ and $G^{a}_{\mu\nu}$ is the colour field strength tensor:
 \begin{equation}
  G^{a}_{\mu\nu} =
 \partial_{\mu} G^{a}_{\nu} - \partial_{\nu} G^{a}_{\mu} - g_{s} f^{abc} G^{b}_{\mu}
@@ -496,7 +496,28 @@ G^{c}_{\nu}
 \end{equation}
 The $f^{abc}$ are the structure functions of the \suthree\ group. As in the case
 of $W$ bosons in the weak interaction, the last term in~\eqn{colour-field-strength} gives rise to triple and quartic interactions
-between the gluons. $g_{s}$ is the strong coupling.
+between the gluons. $g_{s}$ is the strong coupling constant, usually expressed
+as \alphaS, given by:
+\begin{equation}
+\alphaS = \frac{g_{s}}{4\pi}
+\end{equation}
+
+Since the gluons are massless, QCD contains UV
+divergences which lead to infinite results in \cx\ calculations. Since 
+this is clearly unphysical, a renormalisation procedure is used to cancel the
+divergences, for example by introducing a gluon mass or setting a UV cutoff
+scale to regularise the divergence. The divergences are then absorbed by a
+redefinition of the `bare' parameters of the theory to the physically observable
+parameters. Renormalised parameters such as \alphaS\ are dependent on the  \intro{renormalisation scale} \uR, the
+scale at which this subtraction is done. A result of this procedure is that
+\alphaS\ become dependant on the momentum squared of the external particles
+coming into a vertex, $Q^{2}$:
+\begin{equation}
+\alphaS(Q^{2}) = \alphaS(\uR^{2}) - \alphaS(\uR^{2}) \Beta_{0} \ln(Q^2{}/\uR^{2})
+\end{equation}
+
+
+
 
 \section{Interactions in proton-proton collisions}
 \label{sec:Theory-ppInteractions}
@@ -569,15 +590,8 @@ where the sum $i,j$ is over parton flavour,
 $\hat{\sigma}_{i,j\ra X}$ is the partonic \cx\ for partons $i$ and $j$ of
 scattering to give $X$, and  $f_{i}(x_{1}, \uF)$ are the \partDF s. \uF\ is the
 factorisation scale, the scale at which the \partDF\ is evaluated, setting the boundary between hard, perturbative QCD and
-soft, non-perturbative QCD. \uR\ is a second necessary scale, the
-\intro{renormalisation scale}. Since gluons are massless, QCD contains UV
-divergences which lead to infinite results in \cx\ calculations. Since 
-this is clearly unphysical, a renormalisation procedure is used to cancel the
-divergences, for example by introducing a gluon mass or setting a UV cutoff
-scale to regularise the divergence. The divergences are then absorbed by a
-redefinition of the `bare' parameters of the theory to the physically observable
-parameters. Renormalised parameters such as \alphaS\ are dependent on \uR, the
-scale at which this subtraction is done.
+soft, non-perturbative QCD and \uR\ is the
+renormalisation scale. 
 
 When performing calculations to all orders of perturbation theory, the results
 do not depend on the choice of the scales \uR\ and \uF; however since in LO and NLO
