@@ -535,8 +535,8 @@ f_{j}(x_{2}, \uF) \\
 \end{split}
 \end{equation}
 where the sum $i,j$ is over parton flavour, 
-$\hat{\sigma}_{i,j\ra X}$ is the partonic \cx\ for partons of
-scattering to give $X$ and  $f_{i}(x_{1}, \uF)$ are the \partDF s. \uF\ is the
+$\hat{\sigma}_{i,j\ra X}$ is the partonic \cx\ for partons $i$ and $j$ of
+scattering to give $X$, and  $f_{i}(x_{1}, \uF)$ are the \partDF s. \uF\ is the
 factorisation scale, the scale at which the \partDF\ is evaluated, setting the boundary between hard, perturbative QCD and
 soft, non-perturbative QCD. \uR\ is a second necessary scale, the
 \intro{renormalisation scale}. Since gluons are massless, QCD contains UV
@@ -545,7 +545,7 @@ this is clearly unphysical, a renormalisation procedure is used to cancel the
 divergences, for example by introducing a gluon mass or setting a UV cutoff
 scale to regularise the divergence. The divergences are then absorbed by a
 redefinition of the `bare' parameters of the theory to the physically observable
-parameters. Renormalised parameters such as \alphaS\ are dependant on \uR, the
+parameters. Renormalised parameters such as \alphaS\ are dependent on \uR, the
 scale at which this subtraction is done.
 
 When performing calculations to all orders of perturbation theory, the results
@@ -553,9 +553,9 @@ do not depend on the choice of the scales \uR\ and \uF; however since in LO and 
 calculations the expansion is truncated after the
 first few terms,  the results will heavily depend on
 the choice of scale. Calculations performed at NLO are expected to
-be less dependant on the choice of scale than LO calculations, however
+be less dependent on the choice of scale than LO calculations, however
 theoretical uncertainties must nevertheless be assigned to account for the dependence on the
-(somewhat arbitrary) choice of scale. Typically this is done by setting the
+(somewhat arbitrary) choice of scale. Typically, this is done by setting the
 scales to an energy similar to the characteristic energy scale $Q$ of the interaction, then
 varying up and down by a factor of two to estimate systematics.
 
@@ -576,7 +576,7 @@ elements and generate events. Generating events suitable for the purposes
 outlined in the last paragraph typically consists of four steps:
 calculation of the matrix element for the hard scattering, adding additional and
 final state radiation using a parton shower,
-simulating the hadronisation and finally embedding in the underlying event. An
+simulating the hadronisation, and finally embedding in the underlying event. An
 outline of these steps is given below. For more details see e.g.
 ~\cite{Sjostrand:2006su,Campbell:2006wx}.
 
@@ -617,7 +617,7 @@ shower, hadronisation, and the ME-PS matching.
 \subsection{\mc\ Generators}
 \label{sec:Theory-MC-gen}
 
-A wide range of \mc\ integrators and event generators are available to simulate
+A wide range of \mc\ integrators and event generators is available to simulate
 processes of interest at the LHC. The
 following generators are used in this thesis. For each generator, an outline of
 how it is used and its general properties is given.
@@ -634,7 +634,7 @@ how it is used and its general properties is given.
     \item \powhegbox~\cite{Alioli:2010xd} is a general framework for implementing
     NLO calculations. It uses the \powheg\ method to match the NLO matrix
     elements to the parton shower. \powhegbox\ must be interfaced to an external
-    program for the implementation of the parton shower - in this thesis
+    program for the implementation of the parton shower; for this thesis,
     \powhegbox\ is interfaced to \pythia for showering. Specific details of the
     implementation of the \ZZ\ process in \powhegbox\ is given
     in~\cite{Melia:2011tj}; the \ggZZ\ process is not included. 
