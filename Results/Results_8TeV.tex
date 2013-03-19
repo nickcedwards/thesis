@@ -193,6 +193,7 @@
 \def\ZZEightTeVNExpZZMMMM{90.23}
 \def\ZZEightTeVNExpZZEEMM{142.71}
 \def\ZZEightTeVNExpZZLLLL{292.47}
+
 \def\ZZEightTeVNExpStatZZEEEE{0.46}
 \def\ZZEightTeVNExpStatZZMMMM{0.59}
 \def\ZZEightTeVNExpStatZZEEMM{1.04}
@@ -202,6 +203,11 @@
 \def\ZZEightTeVNExpSystZZMMMM{\nmultperc[2]{\ZZEightTeVNExpZZEEEE}{\ZZEightTeVSystematicZZYieldTotalMMMM}}
 \def\ZZEightTeVNExpSystZZEEMM{\nmultperc[2]{\ZZEightTeVNExpZZEEEE}{\ZZEightTeVSystematicZZYieldTotalEEMM}}
 \def\ZZEightTeVNExpSystZZLLLL{\nmultperc[2]{\ZZEightTeVNExpZZEEEE}{\ZZEightTeVSystematicZZYieldTotalLLLL}}
+
+\def\ZZEightTeVNExpZZEEEEOneDp{59.5}
+\def\ZZEightTeVNExpZZMMMMOneDp{90.2}
+\def\ZZEightTeVNExpZZEEMMOneDp{142.7}
+\def\ZZEightTeVNExpZZLLLLOneDp{292.5}
 
 \def\ZZEightTeVNExpStatZZEEEEOneDp{0.5}
 \def\ZZEightTeVNExpStatZZMMMMOneDp{0.6}
@@ -213,11 +219,7 @@
 \def\ZZEightTeVNExpSystZZEEMMOneDp{\nmultperc[1]{\ZZEightTeVNExpZZEEEE}{\ZZEightTeVSystematicZZYieldTotalEEMM}}
 \def\ZZEightTeVNExpSystZZLLLLOneDp{\nmultperc[1]{\ZZEightTeVNExpZZEEEE}{\ZZEightTeVSystematicZZYieldTotalLLLL}}
 
-\def\ZZEightTeVNExpZZEEEEOneDp{59.5}
-\def\ZZEightTeVNExpZZMMMMOneDp{90.2}
-\def\ZZEightTeVNExpZZEEMMOneDp{142.7}
-\def\ZZEightTeVNExpZZLLLLOneDp{292.5}
-\def\ZZEightTeVNExpTotalUncZZEEEEOneDp{4.0}
+\def\ZZEightTeVNExpTotalUncZZEEEEOneDp{\addStatSyst[1]{\ZZEightTeVNExpStatZZEEEEOneDp}{\ZZEightTeVNExpSystZZEEEEOneDp}}
 \def\ZZEightTeVNExpTotalUncZZMMMMOneDp{2.7}
 \def\ZZEightTeVNExpTotalUncZZEEMMOneDp{5.6}
 \def\ZZEightTeVNExpTotalUncZZLLLLOneDp{10.6}
