@@ -706,14 +706,15 @@ RooUnfold}~\cite{2011arXiv1105.1160A} package. The algorithm treats the response
 matrix \unfA\ as a description of the probability of observing some particular data given the
 true distribution. From Bayes's theorem, the probability of there being 
 \unfxi\ events in bin $i$ of the true distribution arising due to
-\unfyj\ events in bin $j$ is given by:
+an observation of \unfyj\ events in bin $j$ is given by:
 \begin{equation}
 P(\unfxi|\unfyj,I) = \frac{P(\unfyj|\unfxi,I)\cdot P(\unfxi|I)}{\sum_{k}P(\unfyk|\unfxk,I)\cdot P(\unfxk|I)}
 \end{equation}
 where $I$ represents the state of information under which the analysis is
 performed, and $P(\unfxi|I)$ is the prior for \unfxi. $P(\unfyi|\unfxj,I)$ is
-given by element $ij$ of the unfolding matrix \unfA. $P(\unfxi|\unfyj,I)$ can be used to `share' the observed events between the bins of the
-true distribution. The estimate of the true spectrum is obtained by 
+given by element $A_{ij}$ of the unfolding matrix \unfA. $P(\unfxi|\unfyj,I)$
+can be used to `share' the events observed in a single bin of \unfy\ between the bins of the
+true distribution. An estimate of the true spectrum is obtained by 
 `sharing' all of the bins of the observed distribution following this formula, taking into
 account the efficiency. The estimate for \unfxi\ is thus given by:
 \begin{equation}
@@ -722,11 +723,13 @@ P(\unfxi|I)}{\sum_{k} A_{jk} \cdot P(\unfxk|I)} \cdot \unfyj
 \end{equation}
 where $\epsilon_{i}=\sum^{n}_{j} A_{j}$ accounts for the efficiency.
 
-The initial prior for \unfx\ is taken from the simulated distribution from
+The initial set of priors $P(\unfxi|I)$ is taken from the simulated distribution from
 \mc, and the unfolding matrix \unfA\ is also estimated using \mcsim. The
+unfolding
 procedure is iterated, taking the posterior distribution for \unfx\ from one iteration as a
 prior for the next. The choice of initial prior will tend to bias the unfolded
-distribution, but this bias decreases steeply with the number of iterations. The
+distribution, but this bias decreases steeply with the number of iterations.
+Conversely, the
 statistical uncertainty tends to increase with the number of iterations, as
 fluctuations can be amplified by positive feedback inherent in the algorithm;
 the number of iterations must thus be chosen to balance the bias due to the
@@ -734,7 +737,7 @@ choice of prior and amplification of statistical uncertainties. It is found that
 the difference in the results between three and four iterations is much smaller than
 the statistical uncertainty. The results for three iterations are thus taken as
 the nominal result, and the difference between three and four iterations is
-taken as an additional systematic. 
+taken as a systematic uncertainty. 
 
 Statistical uncertainties due to the number of observed events are assessed by
 pseudo-experiments, in each experiment fluctuating the observed \unfy\ by a
@@ -750,16 +753,17 @@ using the distribution predicted by \sherpa\ as a prior instead of the nominal
 
 Distributions of three variables sensitive to new phenomena are selected for
 unfolding: the transverse momentum \ptZ\ of the leading \Z\ boson candidate, the
-angle \deltaPhiLL\ between the decay leptons
-of the leading \Z\ boson candidate, and the four-lepton invariant mass \mZZ. Bin
-boundaries are chosen to maximise sensitivity to nTGCs, and are in all cases
-larger than the detector resolution. The unfolded distributions are presented in
-terms of a differential fiducial \cx, and are shown
-in~\fig{unfolded-distributions} (unfolded distributions are only provided for
-the 7~\tev\ analysis). The \sm\ prediction is consistent with the
-measurement in each case. The uncertainty on the unfolded distributions is dominated by the
-statistical uncertainty, which is approximately 30\% in most bins. The
-systematic uncertainty is no more than 5\% in each bin, and is dominated by the
+angle \deltaPhiLL\ between the decay leptons of the leading \Z\ boson candidate,
+and the four-lepton invariant mass \mZZ. Bin boundaries are chosen to maximise
+sensitivity to nTGCs, and are in all cases larger than the detector resolution.
+The unfolded distributions are presented in terms of a differential fiducial
+\cx. This removes the effect of systematics that only affect the normalisation
+and not the shape of the distribution. Unfolded distributions are only provided
+for the 7~\tev\ analysis; they are shown in~\fig{unfolded-distributions}.  The
+\sm\ prediction is consistent with the measurement in each case. The
+uncertainty on the unfolded distributions is dominated by the statistical
+uncertainty, which is approximately 30\% in most bins. The systematic
+uncertainty is no more than 5\% in each bin, and is dominated by the
 uncertainty arising due to the choice of prior.
 
 \begin{figure}[htbp]
