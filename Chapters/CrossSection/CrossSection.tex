@@ -120,6 +120,7 @@ Exp. Bg. &
 \end{table}
 
 \section{Kinematic Distributions}
+\label{sec:results-kindists}
 
 \figs{zzdists-Zmass2D-seven}{zzdists-Zmass2D-eight} show the mass of the
 subleading \leppair\ versus the mass of the leading \leppair\ for the 7~\tev\
@@ -660,10 +661,10 @@ the \sm\ prediction.
 
 
 \section{Unfolded Kinematic Distributions}
+\label{sec:results-unfolded}
 
-The observed kinematic distributions shown in Figures~\ref{fig:zzdists-ZZ-seven}
-to~\ref{fig:zzdists-ZZ-eight} are a convolution of the underlying `true'
-distribution of the parameter of interest and a distortion and smearing due to
+The observed kinematic distributions shown in~\sec{results-kindists} are a convolution of the underlying `true'
+distribution of the parameter of interest and distortion and smearing due to
 detector effects. Although 
 %for the expected \ZZ\ signal distribution shown in
 %these figures 
@@ -679,10 +680,10 @@ Formally, one can consider some parameter of interest $x$,
 distributed according to a probability distribution function (\probDF) $f(x)$. Due to experimental effects, one
 does not measure $x$ but a different variable $y$, distributed
 according to a different \probDF\ $g(y)$. The measured variable $y$ is related to $x$ by a
-convolution of the true distribution $f(x)$ with some response function to account for the
-experimental effects $A(y,x)$:
+convolution of the true distribution $f(x)$ with a response functio $A(y,x)$n to account for the
+experimental effects:
 \begin{equation}
-\int A(y,x)f(x){\rm d}x = g(y)
+g(y) = \int A(y,x)f(x){\rm d}x 
 \label{eqn:unfold-conv}
 \end{equation}
 
