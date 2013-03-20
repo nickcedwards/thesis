@@ -2,8 +2,7 @@ Thesis ToDo
 ------------
 
 Week 4 Targets:
-	- First draft of CrossSection extraction
-	- Theory Redraft.
+	- First draft of CrossSection extraction.
 	- Pheno Redraft.
 	- TGC limits showable
 
@@ -27,29 +26,20 @@ Analysis issues:
 	- Why so many more muon fakes in data?			{0.5 day}
 
 - Theory:
-	- Apply Aidan's comments
-	- QCD theory section 		{2 days}	
+	- Final readthrough
 	
 - ZZ Pheno: 
-	- Apply Aidan's comments
 	- Say more about generator plots
 	- Define MC sample
 	
-- ObjSel:						{1 day}
+- ObjSel:					
 	- Dilepton plots: WZ samples. Plots with caloIso. Have Medium pt20 plots ready
-	
-- Analysis overview 
-	
-- Background estimation 		{1 day+}
-	
-	- Get ZZZ ZWW cx for 7 TeV
-	- Run on 7 TeV ttbarV
-	- Run on ZZZ WWW 
-	- Calculate 4l background setting -ve backgrounds to zero before sum
-	
+		
+- Background estimation 
+	- Final readthrough
+	   
 - Cross Section and kinematic plots 
-	- Rerun 7 TeV cx with updates, finish writing/redraft {1 day}
-
+	- Yield systematics
 
 - TGC limits and unfolding: 							{7 days??}
 	- Skelaton write	
@@ -57,8 +47,7 @@ Analysis issues:
 	- Grid paramt stuff	
 	
 - SCT 						{2 days}
-	- Read more on radiation damage
-	- Module temperature distributions
+	- Wait
 
 - Detector REDRAFT:			{1 day}
 	- sqrt(12) resolution issue - is from definition of std-deviation:

@@ -2,7 +2,7 @@ Chapter Signoffs
 -----------------
 
 			Draft0	Issues/ToDo				Aidans com?		Spelling	Final Readthrough
-Theory		Yes		QCD Sec						Yes				Yes			No
+Theory		Yes		OK							Yes				Yes			No
 TheoryZZ	Yes		Gen Plots discussion		Yes				Yes			No
 Detector	Yes		Luminosity desc				Yes				No			No
 Reco		Yes		d0 in GSF/Std (data)		Yes				No			No
@@ -10,7 +10,7 @@ Reco		Yes		d0 in GSF/Std (data)		Yes				No			No
 SCT			Yes
 ObjSel		Yes		WZ in dilep plots			Yes				Yes			No
 					Why more muon fake in data
-Bg Est		Yes		7 TeV Irreducible			Yes				No			No
+Bg Est		Yes		OK							Yes				No			No
 Results		No		Update Yield Uncertianties	No				No			No
 TGC			No
 
