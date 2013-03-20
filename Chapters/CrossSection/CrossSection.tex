@@ -406,9 +406,9 @@ data are consistent with the predictions.
 
 As discussed in~\sec{TheoryZZProduction-CxDef}, the \cx\ is first measured in a fiducial phase-space
 corresponding to the experimental selections (the \intro{fiducial \cx}), in
-order to reduce systematic uncertainties associated with the extrapolation. The
+order to reduce systematic uncertainties associated with extrapolation. The
 fiducial \cx\ is then extrapolated to the total \ZZ\ \cx, correcting for the
-acceptance of the fiducial phase-space and the \ZZllll\ branching fraction.  The definition of the
+acceptance of the fiducial phase-space and the \ZZlllplp\ branching fraction.  The definition of the
 fiducial phase-space was given in~\sec{TheoryZZProduction-CxDef}, and is slightly different for the
 7~\tev\ and 8~\tev\ analyses due to the differing experimental selections.
 
@@ -419,17 +419,18 @@ For a given \ZZllll\ final state the fiducial cross section is defined as:
 \begin{equation}\label{eq:xsecfid_fourl}
 \sigmaFidZZlllplp = \frac{\NObslllplp - \NBglllplp}{\mathcal{L} \times \CZZ^{\lllplp}}
 \end{equation}
-where \NObs\ and \NBg\ are the number of observed events and the expected number
-of background events, respectively, $\mathcal{L}$ is the integrated luminosity
-of the data samples and
+where \NObslllplp\ is  the number of observed event and \NBglllplp\ is the expected number
+of background events. $\mathcal{L}$ is the integrated luminosity
+of the data sample and
 $\CZZ^{\lllplp}$ is the reconstruction acceptance factor for the \lllplp\
 final-state, as defined in~\sec{objSel-CZZ}.
 
-The \cx\ is estimated using a maximum profile likelihood technique, by
-maximising the \intro{profile likelihood function, \L} with respect to the \cx.
-\L\ is the product of the Poisson probability ($P$) for observing $N$ events given a
-\cx\ $\sigma$, reconstruction acceptance \CZZ\ and background $b$; and Gaussian
-distributions (G) to describe nuisance parameters due to uncertainties on \CZZ\
+The \cx\ is estimated using a maximum profile-likelihood technique, by
+maximising the \intro{profile-likelihood function, \L} with respect to the \cx\
+$\sigma$.
+\L\ is the product of the Poisson probability $P$ for observing $N$ events given a
+\cx\ $\sigma$, reconstruction acceptance \CZZ\ and background $b$; and of Gaussian
+distributions $G$ to describe nuisance parameters due to uncertainties on \CZZ\
 and on $b$:
 
 \begin{equation}
@@ -447,10 +448,10 @@ P(\sigma, C_{ZZ}, b; N) =
      \left(s+b\right)^{N}}
      {N!},
 \end{equation}
-where $s=s(\sigmaFid, \CZZ)$ is given by:
+where $s$ is given by:
 
 \begin{equation}
-   s(\sigmaFid, \CZZ) = \sigmaFid\times\mathcal{L}\times\CZZ \\
+   s(\sigmaFid, \CZZ, \mathcal{L}) = \sigmaFid\times\mathcal{L}\times\CZZ \\
 \end{equation}
 
 In practice, for computational convenience $-\ln(L)$ is minimised rather
@@ -470,9 +471,10 @@ final-state), this simpler approach is justified.
 \subsubsection{Fiducial \CX\ Results}
 
 Fiducial \cx\ results are presented in~\tab{meas-fid-cx}, together with the
-prediction from theory. For the 7~\tev\ analysis, the measured fiducial \cx\ is
-slightly higher than predicted by the theory, but consistent within the errors.
-For the 8~\tev\ analysis. The measured \cx s are in good agreement with the
+theoretical predictions. For the 7~\tev\ analysis, the measured fiducial \cx\ s
+are
+slightly higher than predicted by the theory, but are consistent within the errors.
+For the 8~\tev\ analysis, the measured \cx s are in good agreement with the
 theory.
 
 %% Observed Fiducial Cross Sections, 7 TeV
@@ -525,11 +527,11 @@ theory.
 \subsection{Total \CX}
 
 The total cross-section is obtained by extrapolating the fiducial \cx\ from the
-fiducial phase-space to the total phase space and by correcting for the \ZZllll\
+fiducial \phasespace\ to the total \phasespace\ space and by correcting for the \ZZllll\
 branching fraction. The total \cx\ is defined with both \Z\ bosons with mass
-\sstooosZ. In order to extrapolate from the fiducial to the total-phase
-space the \intro{fiducial acceptance factor}, \AZZ\ must be estimated. \AZZ\ is
-the is fraction of \ZZ\ events with both \Z\ bosons in the \sstooosZ\ mass range which fall into the fiducial phase-space, and is
+\sstooosZ. In order to extrapolate from the fiducial to the total \phasespace\ the \intro{fiducial acceptance factor}, \AZZ\ must be estimated. \AZZ\ is
+the is fraction of \ZZ\ events with both \Z\ bosons in the \sstooosZ\ mass range
+which fall into the fiducial \phasespace, and is
 estimated from \mcsim\ as:
 
 \begin{equation}
