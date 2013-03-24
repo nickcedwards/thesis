@@ -166,17 +166,19 @@ $\vec\beta = \{\beta_1, \beta_2, \ldots, \beta_{2m}\}$, where:
 \end{eqnarray}
 The likelihood function is then given as:
 \begin{equation}
-L(\vec{x}, \vec{\beta}) = \prod_{i=1}^{m}P(N_\mathrm{data}^i,\mu^i(\vec{x},\vec\beta))
+L(\vec{\fiV}, \vec{\beta}) =
+\prod_{i=1}^{m}P(N_\mathrm{data}^i,\mu^i(\vec{\fiV},\vec\beta))
 \times
 \frac{1}{(2\pi)^m}e^{-\frac{1}{2}\left(\vec\beta\cdot C^{-1}\cdot\vec\beta\right)},
 \label{likelihood}
 \end{equation}
-where
+where $\vec{\fiV}]\{\ffourg, \ffourZ, \ffiveg, \ffiveZ \}$ are the \TGC\
+parameters and $\mu^{i}$ is the expected number of events in bin $i$:
 \begin{equation}
-\mu^i(\vec{x},\vec{\beta})
-= N_\mathrm{sig}^i(\vec{x})(1 + \beta_i) + N_\mathrm{bkg}^i(1 + \beta_{i+m}).
+\mu^i(\vec{\alpha},\vec{\beta})
+= N_\mathrm{sig}^i(\vec{\alpha})(1 + \beta_i) + N_\mathrm{bkg}^i(1 + \beta_{i+m}).
 \end{equation}
-and
+with:
 \begin{equation}
 N_{\rm sig} = (Y_\mathrm{\rm SM} + Y_{f_i^V}\cdot f_i^V + Y_{f_i^Vf_i^V}\cdot (f_i^V)^2)\cdot\mathcal{L}\cdot{C_{ZZ}}.
 \end{equation}
