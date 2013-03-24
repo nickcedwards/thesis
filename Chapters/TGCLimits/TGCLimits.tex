@@ -148,20 +148,21 @@ are shown in Appendix~\ref{appendix:tgc-coeff}.
 
 \subsection{Limit Setting}
 
-95\% confidence level (CL) intervals for the \TGC s are determined using a maximum profile likelihood method 
-on the number of observed events in each bin of the differential distributions,
-with systematic uncertainties introduced as nuisance parameters. The three \lllplp\ 
-final states 
-are each merged prior to the maximum profile likelihood maximisation. The likelihood
-function is similar to that used in the cross section calculation: a product of the Poisson probability distribution ($P$), 
-with Gaussian terms ($G$) representing each of the nuisance parameters, and $m
-$ is the number of bins. Since we have nuisance parameters for both signal and background, 
+95\% confidence level (CL) intervals for the \TGC s are determined using a
+maximum profile likelihood method on the number of observed events in each bin
+of the differential distributions, with systematic uncertainties introduced as
+nuisance parameters. The three \lllplp\ final states are each merged prior to
+the maximum profile likelihood maximisation. The likelihood function is similar
+to that used in the cross section calculation, but parametrised in terms of the
+number of events in each bin $m$ instead of the \cx.  Nuisance parameters are
+again represented as with Gaussian terms ($G$); since there are nuisance
+parameters for both signal and background, 
 $\vec\beta = \{\beta_1, \beta_2, \ldots, \beta_{2m}\}$ are nuisance parameters which express the fractional uncertainty as:
 \begin{eqnarray}
 \text{true }N_\mathrm{sig}^i &=& N_\mathrm{sig}^i \cdot (1 + \beta_i) \label{nuis1}\\
 \text{true }N_\mathrm{bkg}^i &=& N_\mathrm{bkg}^i \cdot (1 + \beta_{i+m}) \label{nuis2}
 \end{eqnarray}
-The full liklihood function is given as:
+The likelihood function is then given as:
 \begin{equation}
 L(\vec{x}, \vec{\beta}) = \prod_{i=1}^{m}P(N_\mathrm{data}^i,\mu^i(\vec{x},\vec\beta))
 \times
