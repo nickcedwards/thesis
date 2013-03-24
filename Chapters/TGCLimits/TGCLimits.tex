@@ -130,13 +130,55 @@ In order to extract limits on the \TGC s, the number of expected events as a
 function of the \TGC\ couplings must be predicted. This is parameterised by
 yield coefficients \Yij, which may be obtained from the \Fij\ as:
 \begin{equation}
-\Yij = \left( \sum_{\rm events} \frac{F_{ij}}{F_{00}} \right) \cdot{N_{\rm expected}}.
+\Yij = \left( \sum_{\rm events} \frac{F_{ij}}{F_{00} } \right) \cdot{N_{\rm expected}}.
 \end{equation}
 where $N_{\rm expected}$ is the \sm\ number of expected events obtained from the
 nominal signal sample and the sum is over events passing the full event
-selection.
+selection. Event level lepton efficiency, energy scale, and resolution corrections
+are taken into account when calculating the yield coefficients. A different set of yield
+coefficients is needed for each bin of the differential distribution used to set
+the limits, and different yield coefficients are needed for each choice of
+form-factor. 
+
+\tab{yield-coeff-seven} shows the yield coefficients for the 7~\tev\ analysis for the
+unbinned case with a \formfactor\ of $\Lambda=3~\tev, n=3$ and for the case of
+no \formfactor.\tab{yield-coeff-eight} shows the coefficients for the 8~\tev\
+analysis. The yield coefficients for each bin of the differential distributions
+are shown in Appendix~\ref{appendix:tgc-coeff}.
 
 \subsection{Limit Setting}
+
+95\% confidence level (CL) intervals for the \TGC s are determined using a maximum profile likelihood method 
+on the number of observed events in each bin of the differential distributions,
+with systematic uncertainties introduced as nuisance parameters. The three \lllplp\ 
+final states 
+are each merged prior to the maximum profile likelihood maximisation. The likelihood
+function is similar to that used in the cross section calculation: a product of the Poisson probability distribution ($P$), 
+with Gaussian terms ($G$) representing each of the nuisance parameters, and $m
+$ is the number of bins. Since we have nuisance parameters for both signal and background, 
+$\vec\beta = \{\beta_1, \beta_2, \ldots, \beta_{2m}\}$ are nuisance parameters which express the fractional uncertainty as:
+\begin{eqnarray}
+\text{true }N_\mathrm{sig}^i &=& N_\mathrm{sig}^i \cdot (1 + \beta_i) \label{nuis1}\\
+\text{true }N_\mathrm{bkg}^i &=& N_\mathrm{bkg}^i \cdot (1 + \beta_{i+m}) \label{nuis2}
+\end{eqnarray}
+The full liklihood function is given as:
+\begin{equation}
+L(\vec{x}, \vec{\beta}) = \prod_{i=1}^{m}P(N_\mathrm{data}^i,\mu^i(\vec{x},\vec\beta))
+\times
+\frac{1}{(2\pi)^m}e^{-\frac{1}{2}\left(\vec\beta\cdot C^{-1}\cdot\vec\beta\right)},
+\label{likelihood}
+\end{equation}
+where
+\begin{equation}
+\mu^i(\vec{x},\vec{\beta})
+= N_\mathrm{sig}^i(\vec{x})(1 + \beta_i) + N_\mathrm{bkg}^i(1 + \beta_{i+m}).
+\end{equation}
+and
+\begin{equation}
+N_{\rm sig} = (Y_\mathrm{\rm SM} + Y_{f_i^V}\cdot f_i^V + Y_{f_i^Vf_i^V}\cdot (f_i^V)^2)\cdot\mathcal{L}\cdot{C_{ZZ}}.
+\end{equation}
+%The resulting one dimensional profile log-likelihood curves for each coupling are shown in figure~\ref{TGC:fig:validate}. 
+
 
 \section{Bin Optimisation}
 
