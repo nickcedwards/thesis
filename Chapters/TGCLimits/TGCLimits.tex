@@ -148,10 +148,12 @@ are shown in Appendix~\ref{appendix:tgc-coeff}.
 
 \subsection{Limit Setting}
 
-The 95\% confidence level (CL) intervals for the \TGC s are determined using a
-maximum profile-likelihood method on the number of observed events in each bin
-of the differential distributions, with systematic uncertainties introduced as
-nuisance parameters. The three \lllplp\ final states are each merged prior to
+The 95\% confidence level (CL) intervals for the \TGC\ parameters are determined
+using a frequentist maximum profile-likelihood based method~\cite{Cowan:2010js}.
+%on the number of observed events in each bin
+%of the differential distributions, with systematic uncertainties introduced as
+%nuisance parameters. 
+The three \lllplp\ final states are each merged prior to
 the maximum profile likelihood maximisation. The likelihood function is similar
 to that used in the cross section calculation, but parametrised in terms of the
 number of events in each bin instead of the \cx.  Nuisance parameters are
@@ -175,14 +177,14 @@ L(\vec{\fiV}, \vec{\beta}) =
 where $\vec{\fiV}=\{\ffourg, \ffourZ, \ffiveg, \ffiveZ \}$ are the \TGC\
 parameters and $\mu^{i}$ is the expected number of events in bin $i$:
 \begin{equation}
-\mu^i(\vec{\alpha},\vec{\beta})
-= N_\mathrm{sig}^i(\vec{\alpha})(1 + \beta_i) + N_\mathrm{bkg}^i(1 + \beta_{i+m}).
+\mu^i(\vec{\fiV},\vec{\beta})
+= N_\mathrm{sig}^i(\vec{\fiV})(1 + \beta_i) + N_\mathrm{bkg}^i(1 + \beta_{i+m}).
 \end{equation}
 with:
 \begin{equation}
 N_{\rm sig} = (Y_\mathrm{\rm SM} + Y_{f_i^V}\cdot f_i^V + Y_{f_i^Vf_i^V}\cdot (f_i^V)^2)\cdot\mathcal{L}\cdot{C_{ZZ}}.
 \end{equation}
-%The resulting one dimensional profile log-likelihood curves for each coupling are shown in figure~\ref{TGC:fig:validate}. 
+
 
 
 \section{Bin Optimisation}
