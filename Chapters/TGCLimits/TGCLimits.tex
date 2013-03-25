@@ -108,7 +108,10 @@ samples do not model \TGC s; instead the samples are generated using \sherpa,
 which does. For the 7~\tev\ analysis, four samples are used, with couplings
  $\{f_{4}^{\gamma}=0.1\}$, $\{f_{5}^{\gamma}=-0.1\}$,
 $\{f_{4}^{\gamma}=0.1$ \& $f_{5}^{\gamma}=0.1\}$, and 
-$\{f_{4}^{Z}=0.1$ \& $f_5^{Z}=0.1\}$. For the 8~\tev\ analysis, three sample are used. The 7~\tev\ samples are
+$\{f_{4}^{Z}=0.1$ \& $f_5^{Z}=0.1\}$. For the 8~\tev\ analysis, three sample are
+used, with couplings $\ffourgamma=0.1\}\}$,
+$\{\ffourgamma=0.1 \& \ffiveZ=0.1\}$, and 
+$\{ \ffourgamma = \ffourZ = \ffivegamma = \ffiveZ \}$. The 7~\tev\ samples are
 generated with a \formfactor of $\Lambda=2\tev,n=3$; the 8~\tev\ samples are
 generated without a \formfactor. The reweighting procedure can of course be used to
 reweight samples generated with one \formfactor (or no \formfactor) to another
@@ -117,11 +120,36 @@ reweight samples generated with one \formfactor (or no \formfactor) to another
 \subsection{Validation of Reweighting Procedure}
 
 To demonstrate the performance of the reweighting procedure, the \sherpa\
-samples gnerated with \TGC s are reweighted to the \sm\ (i.e. no \TGC s), and
+samples generated with \TGC s are reweighted to the \sm\ (i.e. no \TGC s), and
 compared to a sample generated with only \sm\ couplings. \fig{} shows the
 resulting distributions of the \pt\ of the leading \Z\ boson, and the ratios of
 the reweighted samples to the \sm\ distribution; the reweighted samples are seen
 to agree well with the \sm\ sample.
+
+\begin{figure}[htbp]
+\begin{center}
+\subfigure[]{\includegraphics[width=0.9\textwidth]{SigmaZZatNLO}}
+\caption{
+\small
+Comparison of experimental measurements and theoretical predictions of the total
+\ZZ\ production \cx\ as a function of centre-of-mass energy $\sqrt{s}$. Shown
+are experimental measurements from CDF~\cite{CDF:2011ab} and
+D0~\cite{Abazov:2012cj} in $p\bar{p}$ collisions at the Tevatron at $\sqrt{s} =
+1.96$~TeV, and experimental measurements from ATLAS~\cite{ATLAS:2012kg} and
+CMS~\cite{CMS:2012rg,CMS:2013oev} in $pp$ collisions at the LHC at $\sqrt{s} =
+7$~TeV and $\sqrt{s} = 8$~TeV. The blue dashed line shows the theoretical
+prediction for the \ZZ\ production cross section in $p\bar{p}$ collisions,
+calculated at NLO in QCD using MCFM with PDF set CT10. The solid red line shows
+the theoretical prediction for the \ZZ\ production cross section in $pp$
+collisions, calculated in the same way.  The theoretical curves are calculated
+using the natural width of the $Z$ boson in the mass range 66 to 116 GeV.
+ %At $\sqrt{s}=8$ TeV, the theoretical prediction using the zero-width
+ %approximation is 5\% higher than the prediction using the natural width,
+ %restricted to the mass range 66 to 116 GeV.
+ }
+\label{fig:sqrts-plot}
+\end{center}
+\end{figure}
 
 \subsection{Yield Coefficients}
 
