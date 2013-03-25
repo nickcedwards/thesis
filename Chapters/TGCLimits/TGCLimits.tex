@@ -5,6 +5,8 @@
 \section{Limit Setting Procedure}
 
 \subsection{Matrix Element Reweighting}
+\label{sec:TGC-reweighting}
+
 As described in~\sec{TheoryZZ-TGCs}, anomalous neutral triple gauge couplings affecting \ZZ\
 production are described by four parameters, \ffourg, \ffourZ, \ffiveg\ and
 \ffiveZ.
@@ -130,24 +132,21 @@ to agree well with the directly generated sample.
 
 \begin{figure}[htbp]
 \begin{center}
-\subfigure[]{\includegraphics[width=0.9\textwidth]{SigmaZZatNLO}}
+\subfigure[\BR]{\includegraphics[width=0.47\textwidth]{ReweightValidation/04_BR/ZZ_Z1_pt_sm}}
+\subfigure[\BHO]{\includegraphics[width=0.47\textwidth]{ReweightValidation/04_BHO_noFF/ZZ_Z1_pt_sm}}
+\subfigure[\BR]{\includegraphics[width=0.47\textwidth]{ReweightValidation/04_BR/ZZ_Z1_pt_nTGC0}}
+\subfigure[\BHO]{\includegraphics[width=0.47\textwidth]{ReweightValidation/04_BHO_noFF/ZZ_Z1_pt_nTGC0}}
 \caption{
 \small
-Comparison of experimental measurements and theoretical predictions of the total
-\ZZ\ production \cx\ as a function of centre-of-mass energy $\sqrt{s}$. Shown
-are experimental measurements from CDF~\cite{CDF:2011ab} and
-D0~\cite{Abazov:2012cj} in $p\bar{p}$ collisions at the Tevatron at $\sqrt{s} =
-1.96$~TeV, and experimental measurements from ATLAS~\cite{ATLAS:2012kg} and
-CMS~\cite{CMS:2012rg,CMS:2013oev} in $pp$ collisions at the LHC at $\sqrt{s} =
-7$~TeV and $\sqrt{s} = 8$~TeV. The blue dashed line shows the theoretical
-prediction for the \ZZ\ production cross section in $p\bar{p}$ collisions,
-calculated at NLO in QCD using MCFM with PDF set CT10. The solid red line shows
-the theoretical prediction for the \ZZ\ production cross section in $pp$
-collisions, calculated in the same way.  The theoretical curves are calculated
-using the natural width of the $Z$ boson in the mass range 66 to 116 GeV.
- %At $\sqrt{s}=8$ TeV, the theoretical prediction using the zero-width
- %approximation is 5\% higher than the prediction using the natural width,
- %restricted to the mass range 66 to 116 GeV.
+Validation of the TGC reweighting procedure for the 8~\tev\ samples. Figures (a) and (b) show the \pt\
+distribution of the leading \leppair, comparing the three \TGC\ samples (TGC0,
+TGC1, TGC2) generated with different couplings reweighted to the \sm\
+expectation using the procedure described in~\sec{TGC-reweighting} to the sample
+generated assuming only \sm\ couplings (SM). In Figure (a) the matrix elements
+of the \BR\ \mc\ generator are used, and in Figure (b) the matrix elements of
+the \BHO\ generator are used. Figures (c) and (d) show the  \pt\
+distribution of the leading \leppair, reweighted to the \TGC\ point
+$\ffourgamma=0.1\}\}$ (TGC0).
  }
 \label{fig:sqrts-plot}
 \end{center}
