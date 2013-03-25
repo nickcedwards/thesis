@@ -91,7 +91,7 @@ matrix $\hat{A}$ is 15$\times$15 and \dsigmavec\ and $\vec{F}$ are
 15-dimensional vectors.
 
 The \TGC\ matrix elements are obtained from the next-to-leading order \mc\
-generator BHO~\cite{bho}. Matrix elements from the leading-order Baur-Rainwater
+generator \BHO~\cite{bho}. Matrix elements from the leading-order \BR\
 generator~\cite{Baur:1994au} are also used as a cross-check. The matrix
 elements are introduced into the  framework described in~\cite{Bella:2008wc},
 which enables a calculation of the amplitude given the four-vectors and PDG
@@ -109,9 +109,9 @@ which does. For the 7~\tev\ analysis, four samples are used, with couplings
  $\{f_{4}^{\gamma}=0.1\}$, $\{f_{5}^{\gamma}=-0.1\}$,
 $\{f_{4}^{\gamma}=0.1$ \& $f_{5}^{\gamma}=0.1\}$, and 
 $\{f_{4}^{Z}=0.1$ \& $f_5^{Z}=0.1\}$. For the 8~\tev\ analysis, three sample are
-used, with couplings $\ffourgamma=0.1\}\}$,
-$\{\ffourgamma=0.1 \& \ffiveZ=0.1\}$, and 
-$\{ \ffourgamma = \ffourZ = \ffivegamma = \ffiveZ \}$. The 7~\tev\ samples are
+used, with couplings $\ffourgamma=0.1\}\}$ (denoted TGC0),
+$\{\ffourgamma=0.1 \& \ffiveZ=0.1\}$ (denoted TGC1), and 
+$\{ \ffourgamma = \ffourZ = \ffivegamma = \ffiveZ \}$ (denoted TGC2). The 7~\tev\ samples are
 generated with a \formfactor of $\Lambda=2\tev,n=3$; the 8~\tev\ samples are
 generated without a \formfactor. The reweighting procedure can of course be used to
 reweight samples generated with one \formfactor (or no \formfactor) to another
@@ -119,12 +119,14 @@ reweight samples generated with one \formfactor (or no \formfactor) to another
 
 \subsection{Validation of Reweighting Procedure}
 
-To demonstrate the performance of the reweighting procedure, the \sherpa\
+To demonstrate the performance of the reweighting procedure, the 8~\tev\ \sherpa\
 samples generated with \TGC s are reweighted to the \sm\ (i.e. no \TGC s), and
-compared to a sample generated with only \sm\ couplings. \fig{} shows the
+compared to a sample generated with only \sm\ couplings, and the TGC1 and TGC2
+samples were reweighted to the TGC0 sample. \fig{} shows the
 resulting distributions of the \pt\ of the leading \Z\ boson, and the ratios of
-the reweighted samples to the \sm\ distribution; the reweighted samples are seen
-to agree well with the \sm\ sample.
+the reweighted samples to the \sm/TGC0 distribution for reweighting carried out
+using the \BHO\ and \BR\ matrix elements. For both the generators, the reweighted samples are seen
+to agree well with the directly generated sample.
 
 \begin{figure}[htbp]
 \begin{center}
