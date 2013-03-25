@@ -166,13 +166,21 @@ selection. Event level lepton efficiency, energy scale, and resolution correctio
 are taken into account when calculating the yield coefficients. A different set of yield
 coefficients is needed for each bin of the differential distribution used to set
 the limits, and different yield coefficients are needed for each choice of
-form-factor. 
+form-factor. The expected yield for a specific set of TGC couplings is given by
+
+\begin{eqnarray}\label{eqn:dsigma}
+N_{exp} (\ffourg, \ffourZ, \ffiveg, \ffiveZ) & = & Y_{00} + f_4^\gamma Y_{01} + f_4^Z Y_{02} + f_5^\gamma Y_{03} + f_5^Z Y_{04}  \nonumber \\
+&+& \left(f_4^\gamma\right)^2Y_{11} + f_4^\gamma f_4^Z Y_{12} +  f_4^\gamma f_5^\gamma Y_{13} + f_4^\gamma f_5^Z Y_{14}  \nonumber \\
+&+& \left(f_4^Z\right)^2Y_{22} + f_4^Zf_5^\gamma Y_{23} + f_4^Zf_5^Z Y_{24}  \nonumber \\
+&+& \left(f_5^\gamma\right)^2Y_{33} + f_5^\gamma f_5^Z Y_{34} \nonumber \\
+&+& \left(f_5^Z\right)^2Y_{44}
+\end{eqnarray}
 
 \tab{yield-coeff-seven} shows the yield coefficients for the 7~\tev\ analysis for the
 unbinned case with a \formfactor\ of $\Lambda=3~\tev, n=3$ and for the case of
 no \formfactor.\tab{yield-coeff-eight} shows the coefficients for the 8~\tev\
 analysis. The yield coefficients for each bin of the differential distributions
-are shown in Appendix~\ref{appendix:tgc-coeff}.
+are shown in Appendix~\ref{appendix:tgc-coeff}. T
 
 \subsection{Limit Setting}
 
