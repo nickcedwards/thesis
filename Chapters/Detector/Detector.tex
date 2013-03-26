@@ -715,19 +715,20 @@ to any physics analysis, for example to enable the measurement of a \cx\ or to
 allow the correct normalisation of simulated backgrounds. The instantaneous
 luminosity can be expressed as:
 \begin{equation}
-\mathcal{L} = \frac{ \mu n_{b} f_{r} }{ \sigma_{inelastic} }
+\mathcal{L} = \frac{ \mu n_{\mathrm b} f_{\mathrm r} }{ \sigmaInel }
 \label{eqn:lumi-meas-1}
 \end{equation}
-where $\mu$ is the number of interactions per bunch crossing, $n_{b}$ is the
-number of colliding bunch pairs and $\sigma{inelastic} $ is the inelastic \cx. The
+where $\mu$ is the number of interactions per bunch crossing, $n_{\mathrm b}$ is the
+number of colliding bunch pairs, $f_{\mathrm r}$ is the bunch crossing frequency, and
+\sigmaInel\ is the inelastic \cx. The
 instantaneous luminosity is measured during data taking by measuring the
 observed interaction rate per bunch crossing $\mu_{vis}$. \eqn{lumi-meas-1} can
 be rewritten in term of this quantity:
 \begin{equation}
-\mathcal{L} = \frac{ \muVis n_{b} f_{r} }{ \sigmaVis }
+\mathcal{L} = \frac{ \muVis n_{\mathrm b} f_{\mathrm r} }{ \sigmaVis }
 \label{eqn:lumi-meas-2}
 \end{equation}
-where $\sigmaVis =\epsilon \sigma_{inelastic}$ is the total inelastic \cx\
+where $\sigmaVis =\epsilon \sigmaInel$ is the total inelastic \cx\
 multiplied by the efficiency of the method used to measure \muVis. The
 parameters $\mu_{b}$ and $f_{r}$ are known machine parameters, and so a
 measurement of \muVis\ gives a measurement of the relative luminosity; this
