@@ -708,6 +708,49 @@ data (described in~\chap{Reconstruction}). To simulate the effect of pileup,
 minimum bias events generated with the \pythia generator are overlaid with the
 hard event.
 
+\section{Luminosity Measurement}
+
+An accurate measurement of the delivered luminosity is an essential ingredient
+to any physics analysis, for example to enable the measurement of a \cx\ or to
+allow the correct normalisation of simulated backgrounds. The instantaneous
+luminosity can be expressed as:
+\begin{equation}
+\mathcal{L} = \frac{ \mu n_{b} f_{r} }{ \sigma{inelastic} }
+\label{eqn:lumi-meas-1}
+\end{equation}
+where $\mu$ is the number of interactions per bunch crossing, $n_{b}$ is the
+number of colliding bunch pairs and $\sigma{inelastic} $ is the inelastic \cx. The
+instantaneous luminosity is measured during data taking by measuring the
+observed interaction rate per bunch crossing $\mu_{vis}$. \eqn{lumi-meas-1} can
+be rewritten in term of this quantity:
+\begin{equation}
+\mathcal{L} = \frac{ \mu_{vis} n_{b} f_{r} }{ \sigma{vis} }
+\label{eqn:lumi-meas-2}
+\end{equation}
+where $\sigm_{vis}=\epsilon \sigma_{inelastic}$ is the total inelastic \cx\
+multiplied by the efficiency of the method used to measure $\mu_{vis}$. The
+parameters $\mu_{b}$ and $f_{r}$ are known machine parameters, and so a
+measurement of $\mu_{vis}$ gives a measurement of the relative luminosity; this
+must be calibrated by measuring $\sigma_{vis}$ in order to give an absolute
+luminosity measurement.
+
+The calibration of \sigmaVis\ is done using dedicated \intro{van Der Meer (vdM)
+scans}, where the absolute luminosity is measured directly from machine
+parameters. The delivered luminosity can be written ad
+\begin{equation}
+\mathcal{L} = \frac{ n_{b} f_{r} n_{1} n_{2}}{ 2 \pi \Espilon_{x} \Epsilon{y} }
+\label{eqn:lumi-meas-3}
+\end{equation}
+where $n_{1},n_{2}$ are the bunch charges in each beam, and
+$\Epsilon_{x},\Epsilon_{y}$ are the vertical and horizontal width of the beam. In
+a vdM scan, the beams are separated in steps of known distance, and the change
+in event rates measured, giving a direct measurement of
+$\Epsilon_{x},\Epsilon_{y}$. The bunch charge product is measured by XX. By
+combining these measurements a direct measurement of the luminosity is made. By
+comparing the peak luminosity (when the beam separation is at a minimum) with
+the peak interaction rate, and using Equations~\ref{eqn:lumi-meas-2}
+and~\ref{eqn:lumi-meas-3} a measurement of $\sigma_{vis}$ is obtained.
+
 \section{Data Samples}
 
 The measurements described in this thesis use data collected in 2011 and 2012,
