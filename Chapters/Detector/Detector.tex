@@ -727,12 +727,28 @@ be rewritten in term of this quantity:
 \mathcal{L} = \frac{ \mu_{vis} n_{b} f_{r} }{ \sigma{vis} }
 \label{eqn:lumi-meas-2}
 \end{equation}
-where $\sigm_{vis}=\epsilon \sigma_{inelastic}$ is the total inelastic \cx\
+where $\sigmaVis =\epsilon \sigma_{inelastic}$ is the total inelastic \cx\
 multiplied by the efficiency of the method used to measure $\mu_{vis}$. The
 parameters $\mu_{b}$ and $f_{r}$ are known machine parameters, and so a
 measurement of $\mu_{vis}$ gives a measurement of the relative luminosity; this
 must be calibrated by measuring $\sigma_{vis}$ in order to give an absolute
 luminosity measurement.
+
+Two primary detectors are used for the measurement of \muVis: LUCID and the BCM.
+LUCID is specifically designed for measuring the luminosity for ATLAS, and is a
+Cerenkov detector consisting of sixteen aluminium tubes filled with
+$C_{4}F_{10}$ gas surrounding the beampipe each side of the interaction point
+at a distance of 17 m. The Cerenkov photons are reflected down the tubes to
+photomultipliers (PMTs); if one of the tube's PMTs records a signal over
+threshold the tube records a `hit' for that event. LUCID receives signals
+directly from the LHC clock allowing it to record event rates separately for
+each bunch crossing, and is separate from the main ATLAS DAQ enabling luminosity
+measurement even when the detector is not in data-taking mode. The BCM~\cite{1748-0221-3-02-P02004} (Beam
+Conditions Monitor) primary function is to measure beam-induced backgrounds and
+issue a beam-abort request in case of dangerous levels of background that would
+be damaging to ATLAS. It consists of four diamond sensors located on each side
+of the interaction point at a distance of 1.8 m; diamond sensors are chosen for
+their radiation hardness and fast readout.
 
 The calibration of \sigmaVis\ is done using dedicated \intro{van Der Meer (vdM)
 scans}, where the absolute luminosity is measured directly from machine
@@ -755,6 +771,14 @@ comparing the peak luminosity (when the beam separation is at a minimum) with
 the peak interaction rate, and using Equations~\ref{eqn:lumi-meas-2}
 and~\ref{eqn:lumi-meas-3} a measurement of $\sigma_{vis}$ is obtained, enabling
 absolute normalisation of the luminosity.
+
+The luminosity measurement is cross-checked using an independent measurement of
+the luminosity using information from the ATLAS calorimeters. The PMT current
+from the tile calorimeter and the total ionisation current in the liquid argon
+of the FCal are related to the mean number of particles interaction in the
+calorimeter, and so are sensitive to the luminosity. The stability of the
+luminosity measurement over longer periods is cross-checked using the number of
+\Z\ bosons observed in a given period of running. 
 
 \section{Data Samples}
 
