@@ -167,6 +167,16 @@
 %\let\theta={\ensuremath{\theta}}
 \newcommand{\R}{\ensuremath{R}}
 
+% See http://tex.stackexchange.com/questions/13914/toc-numbering-problem
+\newcommand\immediateaddcontentsline[3]{%
+        \begingroup
+        \let\origwrite\write
+        \def\write{\immediate\origwrite}%
+        \addcontentsline{#1}{#2}{#3}%
+        \endgroup
+}
+
+
 % Quoting qauntities with errors
 \newcommand{\errSym}[1]{\ensuremath{\pm} #1}
 \newcommand{\errAsym}[2]{\ensuremath{^{+#1}_{-#2}}}
