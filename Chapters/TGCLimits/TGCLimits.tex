@@ -368,28 +368,30 @@ $\vec{f}$ and $\vec{\beta}$ that maximise the numerator. The distribution of
 \teststat\ in the assumption of \TGC\ couplings at the test value of $\vec{f}$
 is obtained by generating 10,000 pseudo experiments. In each
 pseudo experiment, the nuisance parameters $\vec{\beta}$ are Gaussian
-fluctuated around the mean value of $\vec{\betahathat}$ and the number of events
-$N_{PE}$ are drawn randomly from a Poisson distribution with a mean corresponding to the
+fluctuated around the mean value of $\vec{\betahathat}$ and the `observed' number of events
+is drawn randomly from a Poisson distribution with a mean corresponding to the
 values of $\vec{f}$ and $\vec{\beta}$. The $p$-value at the test value of the
 couplings is calculated as the fraction of pseudo-experiments which have a test
 statistic smaller than the observed value of the test statistic $\teststat_{obs}$.
-This procedure is repeated scanning values of $\vec{f}$, and the 95 \%
-confidence interval is define by all values of $\vec{f}$ for which
-$p(\vec{f})\geq 5\%$. Limits are set for one \TGC\ parameter at a time, holding
-the other parameter at their \sm\ values of zero. The expected sensitivity is
-also obtained using pseudo-experiments. In each
-experiment, $N^{i}_{sig}$ and $N^{i}_{bg}$ are given by the \sm\ expectations but
-allowed to fluctuate within their uncertainties.
+This procedure is repeated scanning possible values of $\vec{f}$. The 95\%
+confidence interval is defined by all values of $\vec{f}$ for which
+$p(\vec{f})\geq 5\%$. 
+
+Limits are set for one parameter at a time, holding the other parameters at
+their \sm\ values of zero. The expected sensitivity is also obtained using
+pseudo-experiments. In each pseudo-experiment, $N^{i}_{sig}$ and $N^{i}_{bg}$
+are given by the \sm\ expectations but allowed to fluctuate within their
+uncertainties.
 
 \section{Bin Optimisation}
 
 For the 7~\tev\ analysis, limits were set using the total number of observed
 events, and by using the number of events observed in bins of the leading \Z\
-boson \pt\ and in bins of the mass of the four-lepton system. It was found that
-binning in the leading \Z\ boson \pt\ yielded the most sensitive limits. It was
-determined that the most sensitive limits were obtained using 4 bins with
-boundaries 0-60, 60-100, 100-200 and $>$ 200~\GeV. A combined fit with \ZZllvv\
-decays is also carried out, using three bins of the leptonically decaying \Z\
+boson candidate \pt\ and in bins of the mass of the four-lepton system. It was found that
+binning in the leading \Z\ boson \pt\ yielded the most sensitive limits, and
+that the most stringent expected limits were obtained using four bins of \pt\ with boundaries 0-60,
+60-100, 100-200 and $>$ 200~\GeV. A combined fit with the results of a \ZZllvv\
+analysis was also carried out, using three bins of the leptonically decaying \Z\
 candidate in \ZZllvv\ events.
 
 For the 8~\tev\ analysis, a bin optimisation procedure was carried out, varying
