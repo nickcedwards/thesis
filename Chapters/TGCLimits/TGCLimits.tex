@@ -339,13 +339,13 @@ $\vec\beta = \{\beta_1, \beta_2, \ldots, \beta_{2m}\}$, where:
 The likelihood function is then given as:
 \begin{equation}
 L(\vec{f}, \vec{\beta}) =
-\prod_{i=1}^{m}P(N_\mathrm{data}^i,\mu^i(\vec{f},\vec\beta))
+\prod_{i=1}^{m}P(N_\mathrm{obs}^i,\mu^i(\vec{f},\vec\beta))
 \times
 \frac{1}{(2\pi)^m}e^{-\frac{1}{2}\left(\vec\beta\cdot C^{-1}\cdot\vec\beta\right)},
 \label{likelihood}
 \end{equation}
 where $\vec{f}=\{\ffourg, \ffourZ, \ffiveg, \ffiveZ \}$ are the \TGC\
-parameters and $\mu^{i}$ is the expected number of events in bin $i$:
+parameters, $C$ is the covariance matrix, and $\mu^{i}$ is the expected number of events in bin $i$:
 \begin{equation}
 \mu^i(\vec{f},\vec{\beta})
 = N_\mathrm{sig}^i(\vec{f})(1 + \beta_i) + N_\mathrm{bkg}^i(1 + \beta_{i+m}).
