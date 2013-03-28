@@ -30,13 +30,14 @@ Analysis issues:
 	- Define MC sample
 	
 - ObjSel:					
-	- Dilepton plots: WZ samples. Plots with caloIso. Have Medium pt20 plots ready
+	- Muon Fake rates
+	- Final readthrough
 		
 - Background estimation 
 	- Final readthrough
 	   
 - Cross Section and kinematic plots 
-	- Yield systematics
+	- Final readthrough
 
 - TGC limits and unfolding: 							{7 days??}
 	- Skelaton write	
@@ -46,13 +47,8 @@ Analysis issues:
 - SCT 						{2 days}
 	- Wait
 
-- Detector REDRAFT:			{1 day}
-	- sqrt(12) resolution issue - is from definition of std-deviation:
-	- = sqrt(E((x-mu)^2)) = sqrt [ Int_{-L/2}^{L/2}x^{2}P(x)dx ]
-	   with P(x) = 1/L
-	   = sqrt[ x^{3}/3 |_{-L/2}^{L/2} ]
-	   = sqrt[ L^{3} (1/24 - - 1/24)] = L/sqrt(12)
-	- Describe Luminosity measurent
+- Detector REDRAFT:			{0 day}
+	- Final readthrough
 
 - Reconstruction REDRAFT: {1 days}
 	- Plot of d0Sig in GSF/STD in data?

@@ -4,14 +4,13 @@ Chapter Signoffs
 			Draft0	Issues/ToDo				Aidans com?		Spelling	Final Readthrough
 Theory		Yes		OK							Yes				Yes			No
 TheoryZZ	Yes		Gen Plots discussion		Yes				Yes			No
-Detector	Yes		Luminosity desc				Yes				No			No
-Reco		Yes		d0 in GSF/Std (data)		Yes				No			No
+Detector	Yes		OK							Yes				Yes			No
+Reco		Yes		d0 in GSF/Std (data)		Yes				Yes			No
 					TRT HT hits
-SCT			Yes
-ObjSel		Yes		WZ in dilep plots			Yes				Yes			No
-					Why more muon fake in data
-Bg Est		Yes		OK							Yes				No			No
-Results		No		Update Yield Uncertianties	No				No			No
+SCT			Yes		WaitSaverio					Yes				Yes			No
+ObjSel		Yes		Why more muon fake in data	Yes				Yes			No
+Bg Est		Yes		OK							Yes				Yes			No
+Results		Yes		OK							Yes				Yes			No
 TGC			No
 
 Intro		No
