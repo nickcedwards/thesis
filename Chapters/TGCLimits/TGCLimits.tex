@@ -378,15 +378,46 @@ Caption
 \subfigure[] {
 \includegraphics[width=0.47\textwidth]{NicePlots/h_2l2n_ZZ_Z1_pt_withTGC_Lambda3TeV}
 }
-\caption{\label{fig:pt_tgc} $Z$-boson transverse momentum distributions.
-The left hand plot is for the \zzllll\ channel, and shows
- the leading \Z\ $p_T$. The right hand plot shows the $Z\ra\ll$ \Z\ $p_T$ distribution for the \zzllvv\ channel.
+\caption[\Z-boson transverse momentum distributions with the binning used for
+TGC limit setting.]
+{\Z-boson transverse momentum distributions with the binning used for
+TGC limit setting.
+Figure (a) shows the  leading \Z\ $p_T$ for the \ZZllll\ channel and (b) shows
+the $Z\ra\ll$ \Z\ $p_T$ distribution for the \zzllvv\ channel, both in the
+7~\tev\ data. Figure (c) shows the leading \Z\ $p_T$ for the \ZZllll\ channel
+for the 8~\tev\ data.
 The observed distributions are shown as filled circles,
-the SM expected signal and background are shown as filled histograms, and the predicted distributions for four different nTGC samples with form factor
- scales of $\Lambda=3$ TeV and nTGC coupling values
- set near the edge of the exclusion set in the 1 fb$^{-1}$ analysis~\cite{ATLAS_ZZ4l:1fb2011} are shown as dashed lines.
-}
+the SM expected signal and background are shown as filled histograms, and the
+predicted distributions for four different \TGC\ samples with form factor
+ scales of $\Lambda=3$ TeV are shown as dashed lines.
+re shown as dashed lines. The \TGC\ coupling values in Figures (a) and (b) are 
+ set near the edge of the exclusion set in the 1 fb$^{-1}$
+ analysis~\cite{ATLAS_ZZ4l:1fb2011}; the \TGC\ coupling values in Figure (c) are
+ set near the limits obtained from the 7~\tev\ analysis.}
+\label{fig:tgc-nicePlot}
+\end{figure}
 
+% Observed 7 TeV limits
+\begin{table}
+\centering
+  \begin{tabular}{lcccc}  
+    \hline    \hline
+     $\Lambda$  & $f_{4}^{\gamma}$ & $f_{4}^{Z}$ & $f_{5}^{\gamma}$ & $f_{5}^{Z}$\\\hline  
+     %$2$ \TeV  & $[-0.030, 0.031]$  & $[-0.025, 0.026]$ & $[-0.032,0.030]$ & $[-0.027, 0.025]$ \\  
+     $3$ \TeV  & $[-0.021, 0.022]$  & $[-0.018, 0.019]$ & $[-0.023,0.022]$ & $[-0.020, 0.018]$ \\  
+     $\infty$  & $[-0.015, 0.015]$  & $[-0.012, 0.012]$ & $[-0.015,0.014]$ & $[-0.013, 0.012]$ \\  
+    \hline    \hline
+  \end{tabular}
+
+  \caption{\label{ta:TGCLimits}
+           One dimensional 95\%\ confidence intervals for anomalous neutral gauge boson couplings, where 
+           the limit for each coupling assumes the other couplings
+           fixed at zero, their SM value.  
+           Limits are presented for form factor scales of $\Lambda = 3$ \TeV\ and $\Lambda = \infty$ and include 
+           both statistical and systematic uncertainties; the statistical uncertainties are dominant.
+          }
+
+\end{table}
 
 Expected limits for 1 bin, many bins, BR/BHO, different FF
 
@@ -446,3 +477,30 @@ Parameter & Expected Limit                & Observed Limit \\
 \hline\hline
 \end{tabular}
 \end{table}
+
+\begin{figure}[htbp]
+\begin{center}
+\subfigure[]{
+\includegraphics[width=0.43\textwidth]{figures/tgc2d_f4g_f4z}
+}
+\subfigure[]{
+\includegraphics[width=0.43\textwidth]{figures/tgc2d_f4g_f5g}
+}
+\subfigure[]{
+\includegraphics[width=0.43\textwidth]{figures/tgc2d_f4g_f5z}
+}
+\subfigure[]{
+\includegraphics[width=0.43\textwidth]{figures/tgc2d_f4z_f5g}
+}
+\subfigure[]{
+\includegraphics[width=0.43\textwidth]{figures/tgc2d_f4z_f5z}
+}
+\subfigure[]{
+\includegraphics[width=0.43\textwidth]{figures/tgc2d_f5g_f5z}
+}
+\caption{\label{fig:tgc_limits}
+         Two dimensional triple gauge coupling limits for form factor scale $\Lambda=\infty$. The one dimensional triple gauge coupling limits are 
+         shown as a projection along the axis.  
+}
+\end{center}
+\end{figure}
