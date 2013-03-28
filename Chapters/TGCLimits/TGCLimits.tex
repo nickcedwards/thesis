@@ -168,7 +168,6 @@ are taken into account when calculating the yield coefficients. A different set 
 coefficients is needed for each bin of the differential distribution used to set
 the limits and for each choice of
 form-factor. The expected yield as a function of the TGC couplings is given by
-
 \begin{eqnarray}\label{eqn:Nexp_TGC}
 N_{exp} (\ffourg, \ffourZ, \ffiveg, \ffiveZ) & = & Y_{00} + f_4^\gamma Y_{01} + f_4^Z Y_{02} + f_5^\gamma Y_{03} + f_5^Z Y_{04}  \nonumber \\
 &+& \left(f_4^\gamma\right)^2Y_{11} + f_4^\gamma f_4^Z Y_{12} +  f_4^\gamma f_5^\gamma Y_{13} + f_4^\gamma f_5^Z Y_{14}  \nonumber \\
@@ -182,24 +181,6 @@ unbinned case with a \formfactor\ of $\Lambda=3~\tev, n=3$ and for the case of
 no \formfactor.\tab{yield-coeff-eight} shows the coefficients for the 8~\tev\
 analysis. The yield coefficients for each bin of the differential distributions
 are shown in Appendix~\ref{appendix:tgc-coeff}. T
-
-\begin{figure}[htbp]
-\begin{center}
-\subfigure[\ffourg]{\includegraphics[width=0.47\textwidth]{YieldCoeffs/YieldCoeff_f_4gamma}}
-\subfigure[\ffourZ]{\includegraphics[width=0.47\textwidth]{YieldCoeffs/YieldCoeff_f_4Z}}
-\subfigure[\ffiveg]{\includegraphics[width=0.47\textwidth]{YieldCoeffs/YieldCoeff_f_5gamma}}
-\subfigure[\ffiveZ]{\includegraphics[width=0.47\textwidth]{YieldCoeffs/YieldCoeff_f_5Z}}
-\caption{
-\small
-Expected total event yield for the 8~\tev\ analysis as a function of the \TGC\ parameters: (a) \ffourg, (b) \ffourZ,
-(c) \ffiveg\ and (d) \ffiveZ. In each case, the other parameters are set to
-zero. The solid blue shows the yields with a \formfactor\ of $n=3,
-\Lambda=3~\tev$; the dashed red curve shows the yields with no \formfactor.
- }
-\label{fig:TGC-yield-curves}
-\end{center}
-\end{figure}
-
 
 \begin{table}[htbp]
 \small
@@ -222,7 +203,7 @@ zero. The solid blue shows the yields with a \formfactor\ of $n=3,
                 &     192851.2 $\pm$ 1492.7 \\
 \hline\hline
 \end{tabular}
-\caption{04BRnoFF}
+\caption{Yield coefficients for the 8~\tev\ analysis with \formfactor $n=3, \Lambda=3~\tev$.}
 \end{table}
 
 \begin{table}[htbp]
@@ -246,8 +227,27 @@ zero. The solid blue shows the yields with a \formfactor\ of $n=3,
                 &       68920.8 $\pm$ 623.2 \\
 \hline\hline
 \end{tabular}
-\caption{04BRn3L3}
+\caption{Yield coefficients for the 8~\tev\ analysis with no \formfactor.}
 \end{table}
+
+
+\begin{figure}[htbp]
+\begin{center}
+\subfigure[\ffourg]{\includegraphics[width=0.47\textwidth]{YieldCoeffs/YieldCoeff_f_4gamma}}
+\subfigure[\ffourZ]{\includegraphics[width=0.47\textwidth]{YieldCoeffs/YieldCoeff_f_4Z}}
+\subfigure[\ffiveg]{\includegraphics[width=0.47\textwidth]{YieldCoeffs/YieldCoeff_f_5gamma}}
+\subfigure[\ffiveZ]{\includegraphics[width=0.47\textwidth]{YieldCoeffs/YieldCoeff_f_5Z}}
+\caption{
+\small
+Expected total event yield for the 8~\tev\ analysis as a function of the \TGC\ parameters: (a) \ffourg, (b) \ffourZ,
+(c) \ffiveg\ and (d) \ffiveZ. In each case, the other parameters are set to
+zero. The solid blue shows the yields with a \formfactor\ of $n=3,
+\Lambda=3~\tev$; the dashed red curve shows the yields with no \formfactor.
+ }
+\label{fig:TGC-yield-curves}
+\end{center}
+\end{figure}
+
 
 \subsection{Limit Setting}
 
