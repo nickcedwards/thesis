@@ -336,7 +336,14 @@ $\vec\beta = \{\beta_1, \beta_2, \ldots, \beta_{2m}\}$, where:
 \text{true }N_\mathrm{sig}^i &=& N_\mathrm{sig}^i \cdot (1 + \beta_i) \label{nuis1}\\
 \text{true }N_\mathrm{bkg}^i &=& N_\mathrm{bkg}^i \cdot (1 + \beta_{i+m}) \label{nuis2}
 \end{eqnarray}
-The likelihood function is then given as:
+The systematics associated with the theoretical calculation of the fiducial \cx\ in each bin
+(due to PDF and scale uncertainties) are assumed to be 100\% correlated between
+bins, as are systematic uncertainties on the data-driven background estimate.
+Bin by bin correlations of systematics on the expected yield due to
+reconstruction uncertainties are propagated for each source of uncertainty via the
+covariance matrix. 
+
+The likelihood function is:
 \begin{equation}
 L(\vec{f}, \vec{\beta}) =
 \prod_{i=1}^{m}P(N_\mathrm{obs}^i,\mu^i(\vec{f},\vec\beta))
