@@ -14,8 +14,7 @@ using the \BR\ generator to determine the yield coefficients are compared with
 the expected limits obtained using \BHO\ to determine to coefficients.
 Similarly, the expected limits obtained using a samples samples generated at
 different TGC points are compared (e.g. the TGC0 sample is compared to the TGC1
-sample). Full details of the comparison are given
-in~\app{AppendixTGC-Robustness}; the changes in expected limits are much smaller
+sample). The resulting expected limits are given in; the changes in expected limits are much smaller
 than the statistical uncertainties on the limit.
 
  \begin{landscape}
@@ -28,29 +27,40 @@ than the statistical uncertainties on the limit.
 No. Bins  & Generator & Sample & \ffourg\ & \ffourZ\ & \ffiveg\ & \ffiveg \\
 \hline
 \multicolumn{5}{l}{\underline{\bf $n=3, \Lambda=3~\tev$} } \\
-  1 &   BR &  nTGC0 &  [-0.0321 , 0.0320 ] $\pm$ 0.0048 &  [-0.0270 , 0.0271 ] $\pm$ 0.0040 &  [-0.0328 , 0.0326 ] $\pm$ 0.0048 &  [-0.0276 , 0.0277 ] $\pm$ 0.0041 \\
-  1 &  BHO &  nTGC0 &  [-0.0321 , 0.0320 ] $\pm$ 0.0048 &  [-0.0271 , 0.0271 ] $\pm$ 0.0040 &  [-0.0327 , 0.0327 ] $\pm$ 0.0048 &  [-0.0276 , 0.0276 ] $\pm$ 0.0041 \\
-  1 &   BR &  nTGC1 &  [-0.0323 , 0.0323 ] $\pm$ 0.0048 &  [-0.0272 , 0.0272 ] $\pm$ 0.0040 &  [-0.0329 , 0.0331 ] $\pm$ 0.0049 &  [-0.0274 , 0.0282 ] $\pm$ 0.0041 \\
-  1 &   BR &  nTGC2 &  [-0.0320 , 0.0321 ] $\pm$ 0.0047 &  [-0.0269 , 0.0271 ] $\pm$ 0.0040 &  [-0.0327 , 0.0327 ] $\pm$ 0.0048 &  [-0.0272 , 0.0278 ] $\pm$ 0.0041 \\
-  2 &   BR &  nTGC0 &  [-0.0100 , 0.0100 ] $\pm$ 0.0026 &  [-0.0086 , 0.0085 ] $\pm$ 0.0023 &  [-0.0101 , 0.0101 ] $\pm$ 0.0027 &  [-0.0086 , 0.0086 ] $\pm$ 0.0023 \\
-  2 &  BHO &  nTGC0 &  [-0.0101 , 0.0100 ] $\pm$ 0.0027 &  [-0.0086 , 0.0086 ] $\pm$ 0.0023 &  [-0.0101 , 0.0101 ] $\pm$ 0.0027 &  [-0.0087 , 0.0087 ] $\pm$ 0.0023 \\
-  2 &   BR &  nTGC1 &  [-0.0103 , 0.0102 ] $\pm$ 0.0027 &  [-0.0088 , 0.0088 ] $\pm$ 0.0023 &  [-0.0104 , 0.0103 ] $\pm$ 0.0027 &  [-0.0088 , 0.0088 ] $\pm$ 0.0024 \\
-  2 &   BR &  nTGC2 &  [-0.0103 , 0.0102 ] $\pm$ 0.0027 &  [-0.0088 , 0.0087 ] $\pm$ 0.0023 &  [-0.0104 , 0.0103 ] $\pm$ 0.0027 &  [-0.0088 , 0.0088 ] $\pm$ 0.0023 \\
-\hline\hline
+  1 &   BR &  TGC0 &  [-0.0321 , 0.0320 ] $\pm$ 0.0048 &  [-0.0270 , 0.0271 ] $\pm$ 0.0040 &  [-0.0328 , 0.0326 ] $\pm$ 0.0048 &  [-0.0276 , 0.0277 ] $\pm$ 0.0041 \\
+  1 &  BHO &  TGC0 &  [-0.0321 , 0.0320 ] $\pm$ 0.0048 &  [-0.0271 , 0.0271 ] $\pm$ 0.0040 &  [-0.0327 , 0.0327 ] $\pm$ 0.0048 &  [-0.0276 , 0.0276 ] $\pm$ 0.0041 \\
+  1 &   BR &  TGC1 &  [-0.0323 , 0.0323 ] $\pm$ 0.0048 &  [-0.0272 , 0.0272 ] $\pm$ 0.0040 &  [-0.0329 , 0.0331 ] $\pm$ 0.0049 &  [-0.0274 , 0.0282 ] $\pm$ 0.0041 \\
+  1 &   BR &  TGC2 &  [-0.0320 , 0.0321 ] $\pm$ 0.0047 &  [-0.0269 , 0.0271 ] $\pm$ 0.0040 &  [-0.0327 , 0.0327 ] $\pm$ 0.0048 &  [-0.0272 , 0.0278 ] $\pm$ 0.0041 \\
+  2 &   BR &  TGC0 &  [-0.0100 , 0.0100 ] $\pm$ 0.0026 &  [-0.0086 , 0.0085 ] $\pm$ 0.0023 &  [-0.0101 , 0.0101 ] $\pm$ 0.0027 &  [-0.0086 , 0.0086 ] $\pm$ 0.0023 \\
+  2 &  BHO &  TGC0 &  [-0.0101 , 0.0100 ] $\pm$ 0.0027 &  [-0.0086 , 0.0086 ] $\pm$ 0.0023 &  [-0.0101 , 0.0101 ] $\pm$ 0.0027 &  [-0.0087 , 0.0087 ] $\pm$ 0.0023 \\
+  2 &   BR &  TGC1 &  [-0.0103 , 0.0102 ] $\pm$ 0.0027 &  [-0.0088 , 0.0088 ] $\pm$ 0.0023 &  [-0.0104 , 0.0103 ] $\pm$ 0.0027 &  [-0.0088 , 0.0088 ] $\pm$ 0.0024 \\
+  2 &   BR &  TGC2 &  [-0.0103 , 0.0102 ] $\pm$ 0.0027 &  [-0.0088 , 0.0087 ] $\pm$ 0.0023 &  [-0.0104 , 0.0103 ] $\pm$ 0.0027 &  [-0.0088 , 0.0088 ] $\pm$ 0.0023 \\
 \hline
 \multicolumn{5}{l}{\underline{ No Form Factor} } \\
-  1 &   BR &  nTGC0 &  [-0.0189 , 0.0189 ] $\pm$ 0.0028 &  [-0.0163 , 0.0164 ] $\pm$ 0.0024 &  [-0.0192 , 0.0191 ] $\pm$ 0.0028 &  [-0.0165 , 0.0165 ] $\pm$ 0.0025 \\
-  1 &  BHO &  nTGC0 &  [-0.0190 , 0.0189 ] $\pm$ 0.0028 &  [-0.0163 , 0.0163 ] $\pm$ 0.0024 &  [-0.0192 , 0.0192 ] $\pm$ 0.0028 &  [-0.0165 , 0.0165 ] $\pm$ 0.0025 \\
-  1 &   BR &  nTGC1 &  [-0.0190 , 0.0190 ] $\pm$ 0.0028 &  [-0.0164 , 0.0164 ] $\pm$ 0.0024 &  [-0.0192 , 0.0193 ] $\pm$ 0.0029 &  [-0.0164 , 0.0167 ] $\pm$ 0.0025 \\
-  1 &   BR &  nTGC2 &  [-0.0190 , 0.0190 ] $\pm$ 0.0028 &  [-0.0162 , 0.0164 ] $\pm$ 0.0024 &  [-0.0192 , 0.0192 ] $\pm$ 0.0028 &  [-0.0164 , 0.0166 ] $\pm$ 0.0024 \\
-  2 &  BHO &  nTGC0 &  [-0.0055 , 0.0054 ] $\pm$ 0.0014 &  [-0.0047 , 0.0047 ] $\pm$ 0.0013 &  [-0.0055 , 0.0055 ] $\pm$ 0.0014 &  [-0.0048 , 0.0048 ] $\pm$ 0.0013 \\
-  2 &   BR &  nTGC0 &  [-0.0054 , 0.0054 ] $\pm$ 0.0014 &  [-0.0047 , 0.0047 ] $\pm$ 0.0012 &  [-0.0055 , 0.0054 ] $\pm$ 0.0014 &  [-0.0047 , 0.0047 ] $\pm$ 0.0013 \\
-  2 &   BR &  nTGC1 &  [-0.0055 , 0.0055 ] $\pm$ 0.0015 &  [-0.0048 , 0.0048 ] $\pm$ 0.0013 &  [-0.0056 , 0.0055 ] $\pm$ 0.0015 &  [-0.0048 , 0.0048 ] $\pm$ 0.0013 \\
-  2 &   BR &  nTGC2 &  [-0.0056 , 0.0055 ] $\pm$ 0.0015 &  [-0.0048 , 0.0048 ] $\pm$ 0.0013 &  [-0.0056 , 0.0056 ] $\pm$ 0.0015 &  [-0.0048 , 0.0048 ] $\pm$ 0.0013 \\
-
-\hline
+  1 &   BR &  TGC0 &  [-0.0189 , 0.0189 ] $\pm$ 0.0028 &  [-0.0163 , 0.0164 ] $\pm$ 0.0024 &  [-0.0192 , 0.0191 ] $\pm$ 0.0028 &  [-0.0165 , 0.0165 ] $\pm$ 0.0025 \\
+  1 &  BHO &  TGC0 &  [-0.0190 , 0.0189 ] $\pm$ 0.0028 &  [-0.0163 , 0.0163 ] $\pm$ 0.0024 &  [-0.0192 , 0.0192 ] $\pm$ 0.0028 &  [-0.0165 , 0.0165 ] $\pm$ 0.0025 \\
+  1 &   BR &  TGC1 &  [-0.0190 , 0.0190 ] $\pm$ 0.0028 &  [-0.0164 , 0.0164 ] $\pm$ 0.0024 &  [-0.0192 , 0.0193 ] $\pm$ 0.0029 &  [-0.0164 , 0.0167 ] $\pm$ 0.0025 \\
+  1 &   BR &  TGC2 &  [-0.0190 , 0.0190 ] $\pm$ 0.0028 &  [-0.0162 , 0.0164 ] $\pm$ 0.0024 &  [-0.0192 , 0.0192 ] $\pm$ 0.0028 &  [-0.0164 , 0.0166 ] $\pm$ 0.0024 \\
+  2 &  BHO &  TGC0 &  [-0.0055 , 0.0054 ] $\pm$ 0.0014 &  [-0.0047 , 0.0047 ] $\pm$ 0.0013 &  [-0.0055 , 0.0055 ] $\pm$ 0.0014 &  [-0.0048 , 0.0048 ] $\pm$ 0.0013 \\
+  2 &   BR &  TGC0 &  [-0.0054 , 0.0054 ] $\pm$ 0.0014 &  [-0.0047 , 0.0047 ] $\pm$ 0.0012 &  [-0.0055 , 0.0054 ] $\pm$ 0.0014 &  [-0.0047 , 0.0047 ] $\pm$ 0.0013 \\
+  2 &   BR &  TGC1 &  [-0.0055 , 0.0055 ] $\pm$ 0.0015 &  [-0.0048 , 0.0048 ] $\pm$ 0.0013 &  [-0.0056 , 0.0055 ] $\pm$ 0.0015 &  [-0.0048 , 0.0048 ] $\pm$ 0.0013 \\
+  2 &   BR &  TGC2 &  [-0.0056 , 0.0055 ] $\pm$ 0.0015 &  [-0.0048 , 0.0048 ] $\pm$ 0.0013 &  [-0.0056 , 0.0056 ] $\pm$ 0.0015 &  [-0.0048 , 0.0048 ] $\pm$ 0.0013 \\
 \hline\hline
 \end{tabular}
+           \caption{
+           Expected 95\% confidence intervals for anomalous neutral
+           gauge boson couplings (\TGC s) using the 8~\tev\ data, where 
+           the limit for each coupling assumes the other couplings
+           fixed at their SM value of zero. 
+           Limits are given for \formfactor\ scales of $\Lambda = 3$ \TeV\
+           and $\Lambda = \infty$, the latter corresponding to not applying a \formfactor. 
+           The limits obtained using yield coefficients derived using the \BR\ (BR) and
+           \BHO\ (BHO) generators are occured, as are limits obtained using
+           samples generated at different TGC points
+           %They include 
+           %both statistical and systematic uncertainties; the statistical uncertainties are dominant.
+           }
+           \label{table:TGC-obs-exp-limits-seven}
 \end{table}
  \end{landscape}
 
