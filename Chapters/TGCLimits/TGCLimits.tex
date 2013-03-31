@@ -360,14 +360,14 @@ zero. The solid blue shows the yields with a \formfactor\ of $n=3,
 %on the number of observed events in each bin
 %of the differential distributions, with systematic uncertainties introduced as
 %nuisance parameters. 
-95\% confidence level (CL) intervals for the \TGC\ parameters are determined
+The 95\% confidence level (CL) intervals for the \TGC\ parameters are determined
 using a frequentist maximum profile-likelihood based method~\cite{Cowan:2010js},
 combining the three \lllplp\ final states prior to
 the profile-likelihood maximisation. The likelihood function is similar
 to that used in the \cx\ calculation, but parametrised in terms of the
 number of events in each bin instead of the \cx. Systematic uncertainties are
 again introduced as nuisance parameters 
-represented as Gaussian terms ($G$); since there are nuisance
+represented as Gaussian terms ($G$). Since there are nuisance
 parameters for both signal and background, the set of nuisance parameters giving
 the fractional uncertainty on the signal and background expectation for a
 distribution of $m$ bins is expressed as:
@@ -376,12 +376,12 @@ $\vec\beta = \{\beta_1, \beta_2, \ldots, \beta_{2m}\}$, where:
 \text{true }N_\mathrm{sig}^i &=& N_\mathrm{sig}^i \cdot (1 + \beta_i) \label{nuis1}\\
 \text{true }N_\mathrm{bkg}^i &=& N_\mathrm{bkg}^i \cdot (1 + \beta_{i+m}) \label{nuis2}
 \end{eqnarray}
-The systematics associated with the theoretical calculation of the fiducial \cx\ in each bin
-(due to PDF and scale uncertainties) are assumed to be 100\% correlated between
-bins, as are systematic uncertainties on the data-driven background estimate.
-Bin by bin correlations of systematics on the expected yield due to
-reconstruction uncertainties are propagated for each source of uncertainty via the
-covariance matrix. 
+%The systematics associated with the theoretical calculation of the fiducial \cx\ in each bin
+%(due to PDF and scale uncertainties) are assumed to be 100\% correlated between
+%bins, as are systematic uncertainties on the data-driven background estimate.
+%Bin by bin correlations of systematics on the expected yield due to
+%reconstruction uncertainties are propagated for each source of uncertainty via the
+%covariance matrix. 
 
 The likelihood function is:
 \begin{equation}
@@ -399,9 +399,12 @@ parameters, $C$ is the covariance matrix, and $\mu^{i}$ is the expected number o
 \end{equation}
 with:
 \begin{equation}
-N_{\rm sig}(\vec{f}) = \left( Y_\mathrm{\rm SM} + \sum_{i,V} (Y_{f_i^V}\cdot
-f_i^V + Y_{f_i^Vf_i^V}\cdot (f_i^V)^2 ) \right) \cdot\mathcal{L}\cdot{C_{ZZ}}.
+N_{\rm sig}(\vec{f}) =  Y_\mathrm{\rm SM} + \sum_{i,V} (Y_{f_i^V}\cdot
+f_i^V + Y_{f_i^Vf_i^V}\cdot (f_i^V)^2 ) 
+%\right) \cdot\mathcal{L}\cdot{C_{ZZ}}.
 \end{equation}
+since the \Yij\ already take into account the reconstruction acceptance and are
+normalised to the integrated luminosity.
 
 A test statistic \teststat\ is constructed as the ratio of the \maxprofilellh\
 at a specific test value of the \TGC\ parameters $\vec{f}$ to the full \maxprofilellh:
