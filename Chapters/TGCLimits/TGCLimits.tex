@@ -26,6 +26,13 @@ in~\sec{TGC-ExpObsLimits}.
 \section{Limit Setting Procedure}
 \label{sec:TGC-methodology}
 
+In order to set limits it is necessary to paramterise the expected yield in
+terms of the strength of the \TGC\ couplings. One method for doing this would be
+to generate a grid of \mc\ samples at different coupling points. This however is
+computationally very intensive. Instead, a matrix element reweighting procedure
+is used to reweight a sample generated with one set of couplings to another.
+This is described in~\sec{TGC-reweighting}.
+
 \subsection{Matrix Element Reweighting}
 \label{sec:TGC-reweighting}
 
@@ -142,6 +149,7 @@ reweight samples generated with one \formfactor\ (or no \formfactor) to another
 \formfactor.
 
 \subsection{Validation of Reweighting Procedure}
+\sec{sec:TGC-ReweightingValidation}
 
 To demonstrate the performance of the reweighting procedure, the 8~\tev\ \sherpa\
 samples generated with \TGC s are reweighted to the \sm, and
@@ -176,6 +184,7 @@ showing the TGC0, TGC1 and TGC2 samples (red, blue and green lines) reweighted t
 \end{figure}
 
 \subsection{Yield Coefficients}
+\sec{sec:TGC-YieldCoefficients}
 
 In order to extract limits on the \TGC s, an estimate of the number of expected events as a
 function of the \TGC\ couplings must be obtained. The expect yield is parameterised by
@@ -338,6 +347,7 @@ zero. The solid blue shows the yields with a \formfactor\ of $n=3,
 
 
 \subsection{Limit Setting}
+\sec{sec:TGC-LimitSetting}
 
 %on the number of observed events in each bin
 %of the differential distributions, with systematic uncertainties introduced as
