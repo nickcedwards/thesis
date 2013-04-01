@@ -25,9 +25,16 @@
 %\usepackage{fullpage}
 \usepackage{pdflscape}
 
-\usepackage{titlesec}  
+%\usepackage{titlesec}  
 %\titlespacing{\chapter}{0pt}{0pt}{0pt}
 %\titlespacing*{\chapter*}{0pt}{0pt}{0pt}
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@makechapterhead}{50\p@}{0pt}{}{}
+\patchcmd{\@makeschapterhead}{50\p@}{0pt}{}{}
+\makeatother
+
 
 \usepackage{feynmp}
 \unitlength=1mm
