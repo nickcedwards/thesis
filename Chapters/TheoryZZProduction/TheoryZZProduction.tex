@@ -1081,17 +1081,24 @@ inclusive distributions not making requirements on the \pt\ of additional parton
 emissions; most of the \ZZ\ distributions of interest fall into this category,
 with the exception of distributions such as the \pt\ of the \ZZ\ system.
 Additionally, the dependence on the choice of \fact\ and \renorm\ scales is
-expected to be smaller for a NLO calculation. In addition, the \ggZZ\ generator
+expected to be smaller for a NLO calculation. \mcatnlo\ is also a leading NLO
+generator, but is not chosen since it does not simulate the width of the \Z\
+bosons. \herwigPP\ would be another choice of NLO generator, but is seen to give similar kinematic distributions to
+\powhegbox.
+
+In addition, the \ggZZ\ generator
 is used to model \ggZZllll. When estimating efficiencies and expected
 distributions, the samples generated using \powhegbox\ and \ggZZ\ are combined,
 normalised according to the \cx\ for the two processes; this is referred to as
 \powhegbox+\ggZZ.
 
-\sherpa\ is used as an alternative \mc\ generator to cross check efficiency estimates from
-\powhegbox. \sherpa\ is chosen because although it is only a LO generator, it simulates real additional parton
-emissions in the matrix-element, and so should give improved modelling of
-kinematic distributions. \sherpa\ is also used in~\chap{TGCLimits} to estimate
-the event yield in the presence of anomalous triple gauge couplings. 
+\sherpa\ is used as an alternative \mc\ generator to cross check efficiency
+estimates from \powhegbox. \sherpa\ is chosen because although it is only a LO
+generator, it simulates real additional parton emissions in the matrix-element,
+and so should give improved modelling of kinematic distributions; it also uses a
+different model for QED radiation from that used in the \powhegbox\ samples, as
+described above. \sherpa\ is also used in~\chap{TGCLimits} to estimate the event
+yield in the presence of anomalous triple gauge couplings. 
 
 \section{Anomalous Triple Gauge Couplings}
 \label{sec:TheoryZZ-TGCs}
