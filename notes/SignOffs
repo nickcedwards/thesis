@@ -11,15 +11,15 @@ SCT			Yes		WaitSaverio					Yes				Yes			No
 ObjSel		Yes		Why more muon fake in data	Yes				Yes			No
 Bg Est		Yes		OK							Yes				Yes			No
 Results		Yes		OK							Yes				Yes			No
-TGC			No
+TGC			Yes
 
-Intro		No
-Concls		No
-Abstract	No
+Intro		Yes
+Concls		Yes
+Abstract	Yes
 Acknow		No
 
-TOC			
-Bib
+TOC			Final Check Needed
+Bib			Final Check Needed
 
 
 Analysis Consistency Signoffs
