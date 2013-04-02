@@ -1768,17 +1768,30 @@ arising due to different kinematic distributions obtained from different from \m
 generators, due to, for example, different parton shower models and different
 models for QED radiation.
 
+The effect of the scale and PDF set are assessed by
+reweighting the \powhegbox\ sample to a scale of $\frac{1}{4}$\mZZ\ and to a
+scale of \mZZ\ from its default scale of $\frac{1}{2}$\mZZ, and by reweighting
+to the MSTW08 PDF set. The reweighting is done by asigning an weight to each
+event, which is the fractional difference in fiducial \cx\ predicted by MCFM at
+the two-scales or \partDF\ sets, binned in terms of the \pt\ of the leading \Z\ boson.
+This is done for the 8~\tev\ analysis; the resulting
+variations on \CZZ\ are small, and are much smaller than the systematic from comparing
+different generators, so for the 7~\tev\ analysis the systematic from generator
+comparisons is taken to cover differences arising from PDF set and scale choice.
+
 The systematic uncertainty due to the \mc\ generator is evaluated by comparing
-different \qqZZ\ \mc\ samples produced using different generators, PDF sets and
-scales. A comparison is made between the default \powhegbox\ generated using the
-CT10 PDF set and scale \mZZ, 
+different \qqZZ\ \mc\ samples produced using different generators.
+%, PDF sets and
+%scales. A comparison is made between the default \powhegbox\ generated using the
+%CT10 PDF set and scale \mZZ, 
 %\pythia, generated using the MRST modified LO PDF
 %set and scale set to the arithmetic mean of the squared transverse masses of the
 %two outgoing particles ($(m^{2}_{T}(Z1)+m^{2}_{T}(Z2)/2$), 
-and \sherpa,
-generated using CTEQ6L1 PDF set and scale set to
-\nicefrac{1}{2}$(m^{2}_{}(Z1)+p^{2}_{T}(Z1)+m^{2}_{}(Z2)p^{2}_{T}(Z2))^{1/2}$, and with a
-different model for QED radiation as described in~\sec{gen-comparisons}.
+A comparison is made between the default \powhegbox\ and \sherpa,
+%generated using CTEQ6L1 PDF set and scale set to
+%\nicefrac{1}{2}$(m^{2}_{}(Z1)+p^{2}_{T}(Z1)+m^{2}_{}(Z2)p^{2}_{T}(Z2))^{\frac{1}{2}$, and with a
+which uses a different model for the parton shower, and a different model for
+QED radiation, as described in~\sec{gen-comparisons}.
 Table~\ref{table:objSel-syst-genComp-seven} compares the \CZZ\ for the \qqZZ\
 process obtained from \powhegbox and \sherpa\, as well as from the
 LO generator \pythia.  Also shown is the \CZZ\ for the
@@ -1788,14 +1801,6 @@ the $qq$ and $gg$ processes to the fiducial \cx; this final number is the one
 used in the \cx\ calculation. The largest difference between \powhegbox\ and
 either \sherpa\ is taken as the systematic uncertainty; the number from \pythia\
 is not considered, although is seen to be in good agreement with \powhegbox.
-
-The effect of the scale and PDF set are assessed by
-reweighting the \powhegbox\ sample to a scale of $\frac{1}{4}$\mZZ\ and to a
-scale of \mZZ\ from its default scale of $\frac{1}{2}$\mZZ, and by reweighting
-to the MSTW08 PDF set. This is done for the 8~\tev\ analysis; the resulting
-variations on \CZZ\ are small, and are much smaller than the systematic from comparing
-different generators, so for the 7~\tev\ analysis the systematic from generator
-comparisons is taken to cover differences arising from PDF set and scale choice.
 
 \begin{table}[htbp]
     \centering
