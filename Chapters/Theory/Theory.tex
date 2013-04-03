@@ -570,7 +570,7 @@ component, which can
 not and must be modelled with phenomenological models and parametrised functions
 fit to experimental data. Thus in the above model of proton-proton collisions
 the hard scattering \cx\ can be calculated exactly whilst the
-\partDF\ is used to describe the behaviour of the parton within the proton. The
+\partDF\ is used to describe the behaviour of the partons within the proton. The
 \cx\ for a scattering initiated by two protons with momenta $P_{1}$, $P_{2}$ can
 be written as:
 
@@ -583,24 +583,21 @@ f_{j}(x_{2}, \uF) \\
 \end{split}
 \end{equation}
 where the sum $i,j$ is over parton flavour, 
-$\hat{\sigma}_{i,j\ra X}$ is the partonic \cx\ for partons $i$ and $j$ of
+$\hat{\sigma}_{i,j\ra X}$ is the partonic \cx\ for partons $i$ and $j$ 
 scattering to give $X$, and  $f_{i}(x_{1}, \uF)$ are the \partDF s. \uF\ is the
 factorisation scale, the scale at which the \partDF\ is evaluated, setting the boundary between hard, perturbative QCD and
 soft, non-perturbative QCD and \uR\ is the
 renormalisation scale, discussed in~\sec{qcd}.
 
 When performing calculations to all orders of perturbation theory, the results
-do not depend on the choice of the scales \uR\ and \uF; however since in LO and NLO
-calculations the expansion is truncated after the
-first few terms,  the results will heavily depend on
-the choice of scale. Calculations performed at NLO are expected to
-be less dependent on the choice of scale than LO calculations, however
-theoretical uncertainties must nevertheless be assigned to account for the dependence on the
-(somewhat arbitrary) choice of scale. Typically, this is done by setting the
-scales to an energy similar to the characteristic energy scale $Q$ of the interaction, then
-varying up and down by a factor of two to estimate systematics.
+do not depend on the choice of the scales \uR\ and \uF; however since for most
+processes it is only possible to calculate the first few terms of the
+expansion, the results will heavily depend on
+the choice of scale. The dependence on the choice of scale is expected to
+decrease as the \cx\ calculation is performed to higher order.
 
 \section{Monte-Carlo Simulation}
+
 \label{sec:Theory-MC}
 
 Simulated events are a crucial ingredient to a particle physics
@@ -645,6 +642,15 @@ force between two coloured charges is modelled as an elastic string with
 rising tension as the particles separate. If the string is stretched too far
 it will snap, creating a new pair of colour charges. If a pair of opposite
 colour charges are found close to each other, they are combined into a hadron.
+
+When calculating \cx s and generating events, an important consideration is the
+choice of \fact\ and \renorm\ scales, \uR\ and \uF, defined in~\sec{Theory-ppInteractions}. Since at
+LO and NLO the \cx\ is strongly dependent on the choice of scale,
+theoretical uncertainties must be assigned to account for the dependence on the
+(somewhat arbitrary) choice of scale. Typically, this is done by setting the
+scales to an energy similar to the characteristic energy scale $Q$ of the interaction, then
+varying up and down by a factor of two to estimate systematics.
+
 
 Modern \mc\ integrators can calculate exact matrix elements with additional
 partons from FSR in the matrix element. Whilst this increases the accuracy of
