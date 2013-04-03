@@ -656,10 +656,11 @@ Modern \mc\ integrators can calculate exact matrix elements with additional
 partons from FSR in the matrix element. Whilst this increases the accuracy of
 the \cx\ and kinematic distributions, it becomes necessary to `match' the
 ME calculation to the PS to ensure no double counting, since otherwise a
-$2\ra3$ event could either come from a $2\ra3$ matrix-element event or a $2\ra2$
+$2\ra3$ event could either come from a $2\ra3$ matrix element event or a $2\ra2$
 matrix element event with an additional parton coming from a splitting in the
-parton shower. Different generators use different models for the parton
-shower, hadronisation, and the ME-PS matching.
+parton shower. One method of doing this is by vetoing any splitting in the PS above a
+certain threshold. Different generators use different models for the parton
+shower, hadronisation, and for ME-PS matching.
 
 \subsection{\mc\ Generators}
 \label{sec:Theory-MC-gen}
@@ -683,8 +684,8 @@ how it is used and its general properties is given.
     elements to the parton shower. \powhegbox\ must be interfaced to an external
     program for the implementation of the parton shower; for this thesis,
     \powhegbox\ is interfaced to \pythia for showering. Specific details of the
-    implementation of the \ZZ\ process in \powhegbox\ is given
-    in~\cite{Melia:2011tj}; the \ggZZ\ process is not included. 
+    implementation of the \ZZ\ process in \powhegbox\ are given
+    in~\cite{Melia:2011tj}. The \ggZZ\ process is not included. 
     Samples generated using \powhegbox\ are used as the main signal samples for
     the \qqZZ\ process, used to optimise the selection, estimate selection
     acceptances and systematics and compare observed distributions with theory.
@@ -715,8 +716,7 @@ how it is used and its general properties is given.
     The Fortran77 based
     \pythia6~\cite{pythia} is used at 7 \tev\, whilst the C++ based
     \pythia8~\cite{Sjostrand:2007gs} is used at 8 \tev. \pythia is used to
-    provide showering for many of the other generators described here, and is
-    also used as a cross-check to the main signal samples.
+    provide showering for many of the other generators described here.
 
     \item \herwig~\cite{Herwig} is another general purpose LO generator, generating events in a
     similar way to \pythia, but using an angular-ordered parton shower.
@@ -737,7 +737,9 @@ how it is used and its general properties is given.
     zero-width approximation where the lineshape of the \Z\ boson is not
     included. For this reason \mcatnlo\ is not used for signal simulation,
     though the generator level predictions of \mcatnlo\ are compared to other
-    generators in the~\chap{TheoryZZProduction}.
+    generators in the~\chap{TheoryZZProduction}. It is used to model the \ttbar,
+    \WZ\ and \WW\ backgrounds, for which is provides implementations including
+    the width of the boson.
 
     \item \alpgen~\cite{alpgen} is a LO generator for simulating multi-parton
     processes in hadron interactions. It can simulate $W$ and \Z\ production
