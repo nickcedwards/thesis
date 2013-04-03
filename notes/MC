@@ -1,6 +1,7 @@
 Useful links
 http://arxiv.org/pdf/hep-ph/0403045 - Les Houches guide to generators
 
+http://www-theory.lbl.gov/~alioli/Phd_unimib_032874.pdf - thesis on SMC and matching
 Shower matching:
 
 - Traditional approach: reweight QCD emissions produced by the shower with respective exact ME. Limited to cases ehere parton shower expression exceeds matrix element
@@ -10,7 +11,7 @@ Shower matching:
  - basically subtract off the parton shower contribution for m->m+1 from the m+1 bit of the matrix element before doing phase space integral and add to the m bit, so that we're allowing the PS to calculate this bit.
  
  - POWHEG - uses the ratio of the actual real radiation matrix element and the original leading-order one to generate the hardest emission. In its current formulation, this approach can be understood as a hybrid of the traditional parton-shower reweighting and the MC@NLO
- generate hardest emission first then run shower with a pT veto, and also truncated shower from first emission.
+ Generate hardest emission first then run shower with a pT veto, and also truncated shower from first emission.
 http://xxx.lanl.gov/pdf/hep-ph/0409146v1.pdf
 
 
