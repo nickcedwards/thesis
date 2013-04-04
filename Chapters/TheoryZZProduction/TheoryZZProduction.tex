@@ -1102,21 +1102,21 @@ NLO generator, but is not chosen since it does not simulate the width of
 the \Z\ bosons; \herwigPP\ would be another choice of NLO generator, but is seen
 to give similar kinematic distributions to \powhegbox.
 
-In addition, the \ggtwoZZ\ generator
-is used to model the \ggZZllll\ process. When estimating efficiencies and expected
-distributions, the samples generated using \powhegbox\ and \ggtwoZZ\ are combined,
-normalised according to the \cx\ of the two processes; this is referred to as
-\powhegbox+\ggtwoZZ. Both samples are generated using \partDF\ set
-CT10~\cite{CT10}. In \powhegbox\ the \fact\ and \renorm\ scales are set to the
-mass of the four-lepton system; in \ggtwoZZ\ they are set to \mZ. Both
-samples are normalised to the \cx\ predicted by MCFM using the CT10 \partDF\ set
-and scale set to half the mass of the four-lepton system, as given in the tables
-above. For the 8~\tev\ analysis, an event-by-event reweighting is applied to the
-\powhegbox\ sample to reweight to a scale of $\frac{1}{2}\mZZ$. This is done by assigning an weight to each
-event which is the fractional difference in fiducial \cx\ predicted by MCFM at
-the two-scales. The changes in results after applying this reweighting compared to
-just normalising to a \cx\ calculated using a scale of $\frac{1}{2}\mZZ$ are
-negligible.
+In addition, the \ggtwoZZ\ generator is used to model the \ggZZllll\ process.
+When estimating efficiencies and expected distributions, the samples generated
+using \powhegbox\ and \ggtwoZZ\ are combined, normalised according to the \cx\
+of the two processes; this is referred to as \powhegbox+\ggtwoZZ. Both samples
+are generated using \partDF\ set CT10~\cite{CT10}. In \powhegbox\ the \fact\ and
+\renorm\ scales are set to the mass of the four-lepton system; in \ggtwoZZ\ they
+are set to \mZ. Both samples are normalised to the \cx\ predicted by MCFM using
+the CT10 \partDF\ set and scale set to half the mass of the four-lepton system,
+as given in the tables above. For the 8~\tev\ analysis, an event-by-event
+reweighting is applied to the \powhegbox\ sample to reweight to a scale of
+$\frac{1}{2}\mZZ$. This is done by assigning an weight to each event which is
+the fractional difference in fiducial \cx\ predicted by MCFM at the two-scales,
+binned in terms of the leading \Z\ boson. The changes in results after applying
+this reweighting compared to just normalising to a \cx\ calculated using a scale
+of $\frac{1}{2}\mZZ$ are negligible.
 
 \sherpa\ is used as an alternative \mc\ generator to \crosscheck\ efficiency
 estimates from \powhegbox. \sherpa\ is chosen because although it is only a LO
