@@ -638,9 +638,9 @@ The system consists of Monitored Drift Tubes (MDT) and Cathode Strip Chambers
 cover \modetalt{2.7} and consist of three layers. 
 %The mechanical isolation of
 %the sensor wire in each tube from it's neighbours give a reliable system design.
-In the innermost layer, for \modetabetween{2.0}{2.7} the MDT are replaced by the
+In the innermost layer, for \modetabetween{2.0}{2.7} the MDT are replaced by 
 CSC due to the higher rates and higher backgrounds in this region. The CSC are 
-multiwire proportional chamber, and so give a higher granularity than the MDT
+multiwire proportional chambers, and so give a higher granularity than the MDT,
 and are better able to cope with high rates and fluxes.
 
 Resistive Plate Chambers (RPC) and Thin Gap Chambers (TGC) provide triggering
@@ -675,12 +675,12 @@ decision to be made and thus more complicated algorithms to be run, as well as
 tightening the selection requirements to further reduce the rate. At L2 the full
 readout from the RoIs identified at L1 is available. L2 uses dedicated
 algorithms to return a decision based on the RoI information within 100 ms. The
-EF has access to the full event readout, though typically only information
+EF has access to the full event readout, although typically only information
 inside or just outside the RoI is used. The EF algorithms are based on the
 offline object reconstruction algorithms, and may take up to 1~s to make
 a decision.
 
-The trigger is organised into `chains' with a L1 trigger seeding a chain of
+The trigger is organised into `chains' with an L1 trigger seeding a chain of
 algorithms in the HLT. Each chain is responsible for selecting a specific
 trigger signature. The `trigger menu' is the collection of chains used to select
 data during a run. It typically consists of about 200 primary chains for selecting data
@@ -692,7 +692,7 @@ resources for reconstruction and storage. The offline computing processing power
 limits the EF trigger rate to about 400 Hz. The trigger menu had to evolve
 throughout 2011 and 2012 to meet challenges posed by the constant increase in
 instantaneous luminosity, and the increase of pileup to almost double the design
-value. The measurements described in this analysis use single electron and muon
+value. The measurements described in this thesis use single electron and muon
 triggers. These triggers account for the largest slice of the trigger bandwidth,
 with rates of approximately 50 Hz each. They are described in more detail
 in Sections~\ref{sec:reco-el-triggers} and \ref{sec:reco-mu-triggers}.
@@ -710,7 +710,7 @@ from~\cite{Petersen:1491585}.}
 \section{Detector Simulation}
 
 Simulation of the detector response to various physics processes is a vital
-ingredient to physics analysis. It is important for understanding and
+ingredient to making a physics measurement. It is important for understanding and
 calibrating the detector response to different signatures, for estimation of
 acceptances and efficiencies, and also to be able to compare experimental
 results with theoretical models. A custom detector simulator, which uses the
@@ -724,7 +724,7 @@ The simulator then propagates the particles through the ATLAS detector, using
 The response of the detector components to the particles produced is also
 simulated, and simulated output signals are produced in the same format as the
 real detector output. These are then reconstructed in the same way as for real
-data (described in~\chap{Reconstruction}). To simulate the effect of pileup,
+data (as described in~\chap{Reconstruction}). To simulate the effect of pileup,
 minimum bias events generated with the \pythia generator are overlaid with the
 hard event.
 
@@ -742,7 +742,7 @@ where $\mu$ is the number of interactions per bunch crossing, $n_{\mathrm b}$ is
 number of colliding bunch pairs, $f_{\mathrm r}$ is the bunch crossing frequency, and
 \sigmaInel\ is the inelastic \cx. The
 instantaneous luminosity is measured during data taking by measuring the
-observed interaction rate per bunch crossing $\mu_{vis}$~\cite{ATLAS-CONF-2011-116,Aad:2011dr}. \eqn{lumi-meas-1} can
+observed interaction rate per bunch crossing \muVis~\cite{ATLAS-CONF-2011-116,Aad:2011dr}. \eqn{lumi-meas-1} can
 be rewritten in term of this quantity:
 \begin{equation}
 \mathcal{L} = \frac{ \muVis n_{\mathrm b} f_{\mathrm r} }{ \sigmaVis }
