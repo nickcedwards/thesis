@@ -6,38 +6,54 @@ longitudinal and transverse impact parameters, which can be used to distinguish
 %signal leptons from fakes, 
 leptons from conversions or from secondary decays in jets.
 
-In the ATLAS reconstruction process, vertex-finding occurs after reconstruction of
+In the ATLAS reconstruction process vertex-finding occurs after reconstruction of
 \id\ tracks, as described in \sec{reco-tracking}. The
 vertex-finding algorithm must associate tracks with primary vertices, and obtain
-a best fit for the vertex position and its uncertainty. Two approaches are
-used in ATLAS for associating tracks with vertices~\cite{1742-6596-119-3-032033}. 
+a best fit for the vertex position and its uncertainty. 
+%Two approaches are used in ATLAS for associating tracks with vertices. 
 
-In `finding-after-fitting',
-tracks are preselected by requiring that they are consistent with the collision
-region. The tracks are ordered by their longitudinal impact parameter, and a
-sliding window algorithm is used to identify clusters of tracks. A fit is 
-carried out to obtain the vertex position. Outlier tracks are then removed if
-they have a \chisquared\ with a probability of being consistent with the vertex
-of less than 8\%. The vertex is then refitted, and the process iterates until
-there are no outliers left, or the cluster becomes too small. In this procedure
-the maximum number of vertices produced is determined at the clustering stage, and
-once discarded, outlier tracks are not used again. This can be sub-optimal in
-busy environments if the initial seeding does not correctly identify clusters.
+%In `finding-after-fitting',
+%tracks are preselected by requiring that they are consistent with the collision
+%region. The tracks are ordered by their longitudinal impact parameter, and a
+%sliding window algorithm is used to identify clusters of tracks. A fit is 
+%carried out to obtain the vertex position. Outlier tracks are then removed if
+%they have a \chisquared\ with a probability of being consistent with the vertex
+%of less than 8\%. The vertex is then refitted, and the process iterates until
+%there are no outliers left, or the cluster becomes too small. In this procedure
+%the maximum number of vertices produced is determined at the clustering stage, and
+%once discarded, outlier tracks are not used again. This can be sub-optimal in
+%busy environments if the initial seeding does not correctly identify clusters.
+%
+%An alternative approach, with better handling of outliers, is
+%`finding-through-fitting'~\cite{1742-6596-119-3-032033}. This is the default approach in ATLAS. Tracks are
+%again preselected by consistency with the interaction region, but in this case a
+%single seed vertex is formed out of all the preselected tracks. This is fitted, and
+%tracks identified as outliers in the fit are used to create a second vertex
+%seed. A simultaneous fit is then carried out of the two vertices, and again
+%outlier tracks are used to create a new primary vertex. The procedure is
+%iterated until none of the remaining outliers fits with any vertex with a
+%\chisquared\ probability of more than 1\%.
 
-An alternative approach, with better handling of outliers, is
-`finding-through-fitting'. This is the default approach in ATLAS. Tracks are
-again preselected by consistency with the interaction region, but in this case a
-single seed vertex is formed out of all the preselected tracks. This is fitted, and
-tracks identified as outliers in the fit are used to create a second vertex
-seed. A simultaneous fit is then carried out of the two vertices, and again
-outlier tracks are used to create a new primary vertex. The procedure is
-iterated until none of the remaining outliers fits with any vertex with a
-\chisquared\ probability of more than 1\%.
+%An `Adaptive Vertex Finding'~\cite{0954-3899-34-12-N01} algorithm is used in
+%both cases for the vertex position fitting. 
+%This uses a Kalman filter to minimise the least squares distances of the tracks from
+%the vertex position. After a preliminary fit, tracks are assigned a
+%weight depending on their compatibility with the vertex, with outlier tracks
+%being down-weighted so as to have less of a pull on the vertex position. The
+%process is iterated until convergence.
 
-An `Adaptive Vertex Finding'~\cite{0954-3899-34-12-N01} algorithm is used in
-both cases for the vertex position fitting. 
-This uses a Kalman filter to minimise the least squares distances of the tracks from
-the vertex position. After a preliminary fit, tracks are assigned a
-weight depending on their compatibility with the vertex, with outlier tracks
-being down-weighted so as to have less of a pull on the vertex position. The
-process is iterated until convergence.
+The default ATLAS approach to vertex finding is called
+`finding-through-fitting'~\cite{1742-6596-119-3-032033}. Tracks are preselected
+by consistency with the interaction region, and a single seed vertex is formed
+out of all the preselected tracks. This is fitted using an `Adaptive Vertex
+Finding'~\cite{0954-3899-34-12-N01} algorithm, which uses a Kalman filter to
+minimise the least squares distances of the tracks from the vertex position.
+After a preliminary fit, tracks are assigned a weight depending on their
+compatibility with the vertex, with outlier tracks being down-weighted so as to
+have less of a pull on the vertex position. The process is iterated until
+convergence.  Following the fit, tracks identified as outliers are used to
+create a second vertex seed. A simultaneous fit is then carried out of the two
+vertices, and again outlier tracks are used to create a new primary vertex. The
+procedure is iterated until none of the remaining outliers fits with any vertex
+with a \chisquared\ probability of more than 1\%.
+
