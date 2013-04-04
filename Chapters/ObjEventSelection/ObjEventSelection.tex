@@ -2,7 +2,8 @@
 \chapter{Object and Event Selection}
 \label{chap:ObjEventSelection}
 
-In this chapter the electron, muon, and event-level selection requirements are described. 
+In this chapter the electron, muon, and event-level selection requirements used
+to select \ZZ\ events are described. 
 The requirements are
 slightly different for the analysis of 7~\tev\ data (collected in 2011) and for
 the analysis of 8~\tev\ data (collected in 2012),
@@ -53,7 +54,7 @@ are summarised in~\tab{objsel-el} and are described in more detail below.
       Algorithm             & Forward & \it{Not Used} \\
       Quality               & Good Data Quality &  \\
       ID Selection                & Tight & \\
-      $\eta$                & \modetaclusterbetween{2.5}{3.16}{2.47} &  \\
+      $\eta$                & \modetaclusterbetween{2.5}{3.16} &  \\
       $E_T$                 & $E_T > 20$ GeV & \\
       Overlap removal       & \multicolumn{1}{p{6cm}}{Remove if overlaps with central electron or any muon in \deltaRlt{0.1}} & \\
 
@@ -118,7 +119,7 @@ typically be surrounded by many other tracks, and they will be
 surrounded by large energy deposits in the calorimeter from other particles in
 the jet. \intro{Track Isolation} requirements are imposed, requiring that the
 sum of the \pt\ of tracks surrounding the electron's track in a cone of
-\deltaRlt{0.2} be less than 15\% of the electron's \pt, i.e.
+\deltaRlt{0.2}\footnote{where \deltaRdef} be less than 15\% of the electron's \pt, i.e.
 \ptconetwentylt{0.15}. Tracks included in the calculation are required to have
 \ptgt{0.4}, have impact parameters consistent with the same vertex as the
 electron and have at least 9 silicon hits, thus ensuring good track quality and
@@ -760,7 +761,7 @@ A - M & \multicolumn{1}{p{4cm}}{\centering \texttt{mu24i\_tight} $||$ \texttt{mu
 \end{table}
 
 At least one of the selected leptons in triggered events must match to the
-object that caused the trigger to fire with \deltaRlt{0.1}\footnote{where \deltaRdef}. Such leptons are referred to as 
+object that caused the trigger to fire with \deltaRlt{0.1}. Such leptons are referred to as 
 \intro{trigger-matched} leptons. To reduce uncertainties associated with the
 trigger efficiency measurement, to be considered trigger matched,
 a lepton must have a \pt\ such that it is on the efficiency plateau of the
