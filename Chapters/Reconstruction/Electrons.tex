@@ -278,7 +278,7 @@ For low \et\ electrons (\etlt{20}) the improvement is up to 6\%.
 
 \subsubsection{Electron Reconstruction Efficiencies}
 
-~\fig{el-reco-eff} shows the electron reconstruction efficiency in 2011 and 2012
+\fig{el-reco-eff} shows the electron reconstruction efficiency in 2011 and 2012
 as a function of the pseudo-rapidity and the transverse energy of the electron cluster.
 The reconstruction efficiency in 2011 drops by approximately 4\% between central
 and forward pseudo-rapidities. In 2012 the overall reconstruction efficiency
@@ -339,7 +339,7 @@ L_{ij} \left( \frac{m_{k}}{1+\frac{\alpha_{i} + \alpha_{j}}{2}} \right)
 where $i,j$ label the $\eta$ regions of the two electrons from the \Zee\ decay,
 $m_{k}$ is the measured di-electron mass (after applying the test-beam and \mc\
 calibrations) in event $k$ and $L_{ij}(m)$ is a probability density function
-describing the likelihood of observing a \Zee\ decay with mass $m$. The pdf is
+describing the likelihood of observing a \Zee\ decay with mass $m$. The \probDF\ is
 taken from \mcsim. The resulting calibration parameters $\alpha_{i}$, measured
 in 2010 data, are shown in~\fig{el-energy-calib-const-2010}.
 Figures~\ref{fig:el-energy-calib-time-2011}
@@ -403,10 +403,11 @@ the description of the sampling and noise terms is taken from simulation.
 all $\eta$ bins for data taken in 2011 after applying the energy calibration
 described above. The distribution is fitted to a Breit-Wigner to model the \Z\
 lineshape convolved with a Crystal-Ball function to model the detector
-resolution and effects of FSR. The parameters of the Breit-Wigner are fixed to
-those of the \Z\ boson. The constant term is extracted by comparing the width of
-the Crystal-Ball in the data and the Crystal-Ball in the simulation. Since the
-resolution observed in data is slightly worse than the simulated resolution a
+resolution and effects of FSR. 
+%The parameters of the Breit-Wigner are fixed to those of the \Z\ boson. 
+The constant term is extracted by comparing the width of
+the Crystal-Ball functions in the data and in the simulation. Since the
+resolution observed in data is slightly worse than the simulated resolution, a
 Gaussian smearing is applied to electron energies in the simulation to reproduce
 the resolution observed in the data.
 
@@ -429,26 +430,29 @@ Crystal-Ball function in order to determine the resolution. Figure from~\cite{El
 The electron candidates reconstructed as described in the previous section will
 contain a high contamination from jets faking electrons, non-isolated electrons
 from decays in jets, and electrons from photon conversions. In order to identify
-prompt electrons, a cut-based identification is used. Cuts are made on variables relating to the
-shape of the electromagnetic shower in the calorimeter, the quality of the \id\ track, the
-track-calorimeter matching and particle identification information from the
-TRT. The cuts were optimised using a multivariate analysis program (TMVA), in 10 bins
-of cluster $\eta$ and 11 bins of cluster \et\ from 5 \gev\ to $>80$ \gev.
-Three reference sets of cuts are used, denoted \loose, \medium\ and \tight,
-designed to give progressively greater background rejection, at the cost of
-signal efficiency. The expected jet rejections (from simulation) of the three points are 500, 5000
-and 50000 respectively~\cite{ATL-PHYS-PUB-2011-006}.
+prompt electrons, a cut-based identification is used. Cuts are made on variables
+relating to the shape of the electromagnetic shower in the calorimeter, the
+quality of the \id\ track, the track-calorimeter matching and particle
+identification information from the TRT. The cuts were optimised using a
+multivariate analysis program (TMVA), in 10 bins of cluster $\eta$ and 11 bins
+of cluster \et\ from 5 \gev\ to $>80$ \gev.  Three reference sets of cuts are
+used, denoted \loosePP, \mediumPP\ and \tightPP, designed to give progressively
+greater background rejection, at the cost of signal efficiency. The expected jet
+rejections (from simulation) of the three points are 500, 5000 and 50000
+respectively~\cite{ATL-PHYS-PUB-2011-006}. In 2012, the identification
+selections were re-optimised with respect to the 2011 selections to prevent
+drops in efficiency of up to 20\% in events with high pileup . 
 
-In order to maintain manageable trigger rates with increased instantaneous
-luminosity, the original \loose, \medium\ and \tight\ were re-optimised in order
-to increase background rejection. The new working points are denoted \loosePP,
-\mediumPP\ and \tightPP. In 2012, the identification was further re-optimised to
-prevent drops in efficiency in events with high pileup of up to 20\%. 
+%In order to maintain manageable trigger rates with increased instantaneous
+%luminosity, the original \loose, \medium\ and \tight\ were re-optimised in order
+%to increase background rejection. The new working points are denoted \loosePP,
+%\mediumPP\ and \tightPP. In 2012, the identification was further re-optimised to
+%prevent drops in efficiency in events with high pileup of up to 20\%. 
 
 The variables cut on at the different working points are described below.
 Simulated distributions for these variables in the 2012 reconstruction for
 prompt electrons from \Z\ boson decays and from hadrons reconstructed as
-electrons are shown in Figures~\ref{fig:el-id-showershapes-central}
+electrons are shown in Figures~\ref{fig:el-id-showershapes-central-1}
 and~\ref{fig:el-id-showershapes-central-2}. Typical values of the cuts in 2012
 for the bin with \modetabetween{0.1}{0.6} and 20 \gev $< \pt <$ 30 \gev\ are
 also indicated on the plots; these are the cuts made in the \loosePP\ selection
@@ -529,7 +533,7 @@ cluster matching. The variables cut on are as follows:
     shown. The blue lines indicate typical values of the cuts, which are
     optimised in 50 bins of \pt\ and $\eta$. See the text for a description of
     the variables.}
-    \label{fig:el-id-showershapes-2}
+    \label{fig:el-id-showershapes-central-2}
 \end{figure}
 
 \begin{itemize}
