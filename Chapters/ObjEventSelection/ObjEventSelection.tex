@@ -1242,7 +1242,7 @@ which the analysis is sensitive.
 ~\fig{objSel-deltaRcutoff} shows the minimum \deltaR\ between any two leptons at
 generator level in \fourlep\ events as a function of the mass of the \fourlep\
 system and as a function of the transverse momentum of the leading \Z. A
-\ZZllll\ \mc\ sample generated with aTGCs is used, with the anomalous coupling
+\ZZllll\ \mc\ sample generated with \TGC s is used, with the anomalous coupling
 \ffourg\ set to 0.1 and no form-factor applied, in order to give statistics at
 high centre of mass energies. The plots show that the \deltaRlt{0.2} cut limits
 sensitivity to events where the four-lepton system has invariant mass
@@ -1277,7 +1277,9 @@ expected to adversely affect the sensitivity of the \TGC\ limits.
 In order to extrapolate from the number of observed events to a \cx\ or similar
 measurement, it is necessary to know the acceptance of the selection
 requirements. This is described by the \intro{reconstruction acceptance factor,
-\CZZ}. Formally, this is defined as:
+\CZZ}, which is used to extrapolate from the number of obsevred events to the
+true number of events in the fiducial \phasespace. The definition of the fiducial
+\phasespace\ was given in~\sec{}. Formally, this is defined as:
 
 \begin{equation}
 C_{ZZ}= \epsilon_{trig} \times \epsilon_{event} \times \epsilon_{lep} \times \alpha_{reco}
