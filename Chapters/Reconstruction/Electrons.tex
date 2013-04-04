@@ -39,15 +39,15 @@ the electron.
 \label{sec:reco-el-reco}
 
 Electrons are reconstructed in the central region (\modetalt{2.5}) by searching
-for EM calorimeter clusters and matching them to Inner Detector
+for EM calorimeter clusters and matching them to \id\
 tracks~\cite{ATL-PHYS-PUB-2011-006,Aad:2011mk}; this is
 referred to as the \intro{standard} electron algorithm and is described below.
-In the forward regions (\modetabetween{2.5}{4.9}) there is no Inner Detector
+In the forward regions (\modetabetween{2.5}{4.9}) there is no \id\
 tracking, and electrons are reconstructed solely from calorimeter clusters; this
 is also described below. The standard algorithm drops in efficiency at very
 low \pt\
 (a few \gev), but an alternative \intro{soft-e} algorithm can be used to recover
-efficiency. This uses Inner Detector tracks as seeds, which it extrapolates into
+efficiency. This uses \id\ tracks as seeds, which it extrapolates into
 the EM calorimeter and attempts to build clusters. It is not used in
 this thesis so is not described in detail here.
 
@@ -68,7 +68,7 @@ of the cluster is taken to be the energy weighted $\eta$, $\phi$ barycentre of
 cells in a window around the centre of the cluster. If two seeds are closer than
 \deltaetadeltaphi{0.050}{0.050}, then only the one with higher \et\ is kept.
 
-Electron candidates are then formed by matching Inner Detector tracks to the
+Electron candidates are then formed by matching \id\ tracks to the
 seed clusters. If there is a reasonable agreement ($\Delta \eta <0.2$ and
 $\Delta \phi <0.1$) between a track's co-ordinates (measured at the origin of the
 track) and a cluster seed, the track is extrapolated from its last measurement point to
@@ -79,7 +79,7 @@ the track if it falls on the side towards which the track bends, or $\Delta
 \phi < 0.05$ if it is on the opposite side. This asymmetry in the $\phi$
 requirement is to
 account for the fact that the electrons undergo heavy energy losses from
-bremsstrahlung, due to the large amount of material in the Inner Detector, which
+bremsstrahlung, due to the large amount of material in the \id, which
 will tend to increase their bending,
 particularly at high $\eta$. If a seed cluster matches to at least one track,
 an electron candidate is formed. Seed clusters with no track matches are
@@ -132,20 +132,20 @@ By default the ATLAS track fitting assumes a pion hypothesis for the modelling
 of material effects, as described in~\sec{tracking-std}. This does not account well for energy losses via
 bremsstrahlung. Due to their small mass, these losses are most substantial for
 electrons, and can have significant effects on their trajectories through the magnetic
-field. The amount of material in the Inner Detector in terms of radiation lengths
+field. The amount of material in the \id\ in terms of radiation lengths
 $X_{0}$ is shown in~\fig{id-material}. It is highly non uniform with high
 concentrations of material at high $\eta$ and at certain radii.
 This leads to large variations of the reconstruction efficiency as a function of
 $\eta$, and degradations in estimates of the track parameters. To this end the
 default ATLAS reconstruction was progressively improved in 2011 and 2012 to
-better account for energy losses due to \brem\ in the Inner Detector.
+better account for energy losses due to \brem\ in the \id.
 
 \begin{figure}[h]
 \centering
             \includegraphics[width=0.8\textwidth]{id_material}
-\caption[Distribution of the Inner Detector material for each sub-detector as a
+\caption[Distribution of the \id\ material for each sub-detector as a
 function of the pseudorapidity.]{
-Distribution of the Inner Detector material for each sub-detector as a
+Distribution of the \id\ material for each sub-detector as a
 function of the pseudorapidity. The material of the Pixel and SCT detectors
 includes passive material arising from electronics, cabling, cooling and
 mechanical support. Figure from~\cite{ATLAS-CONF-2012-047}.}
@@ -417,7 +417,7 @@ The electron candidates reconstructed as described in the previous section will
 contain a high contamination from jets faking electrons, non-isolated electrons
 from decays in jets, and electrons from photon conversions. In order to identify
 prompt electrons, a cut-based identification is used. Cuts are made on variables relating to the
-shape of the electromagnetic shower in the calorimeter, the quality of the Inner Detector track, the
+shape of the electromagnetic shower in the calorimeter, the quality of the \id\ track, the
 track-calorimeter matching and particle identification information from the
 TRT. The cuts were optimised using a multivariate analysis program (TMVA), in 10 bins
 of cluster $\eta$ and 11 bins of cluster \et\ from 5 \gev\ to $>80$ \gev.
@@ -628,7 +628,7 @@ All \mediumPP\ cuts are required to be passed, and in addition:
 
 \subsubsection{Forward Electron Identification}
 
-Since in the forward region there is no tracking from the Inner Detector,
+Since in the forward region there is no tracking from the \id,
 identification in the forward region must rely on calorimeter shower-shape
 variables alone. A good discrimination between electrons and hadrons may be made
 due to the fine transverse and longitudinal segmentation of the calorimeter, but
