@@ -33,12 +33,12 @@ muon trigger was 15 \GeV; in 2012 it was 20 \GeV.
 
 The muon HLT uses similar algorithms to the online muon reconstruction described
 below. At L2, each L1 muon candidate is refined by including precision hit data
-from the MDTs and CSCs in a RoI defined by the L1 candidate. MS tracks are
+from the MDT and CSC in a RoI defined by the L1 candidate. MS tracks are
 built by opening narrow roads around the L1 trigger chamber hits and associating
 hits from other chambers with the track. A rough \pt\ measurement is obtained
 using a lookup table. The MS tracks are then combined with ID tracks,
-reconstructed using the same fast L2 ID tracking as the electron L2 trigger
-(see~\sec{reco-el-triggers}). The muon EF uses the full offline algorithms,
+reconstructed using the same fast L2 ID tracking as the electron L2 trigger.
+The muon EF uses the full offline algorithms,
 running in RoIs determined by the L2 trigger. There are two reconstruction
 strategies used at EF level: \intro{outside-in} (starting from the reconstructed
 MS tracks, extrapolating to the beamline and attempting to combine with an ID
@@ -50,7 +50,7 @@ the inside-out algorithm run. In 2011 the HLT threshold used for the primary
 single muon trigger was 18 \GeV; in 2012 it was raised to 24 \GeV. The muon
 trigger is not sensitive to pile-up, but modifications were required in 2012 in
 order to keep the rate at an acceptable level in the higher luminosity
-conditions. To achieve this a track based isolation cut was applied at EF level,
+conditions. To achieve this an ID track based isolation cut was applied at EF level,
 requiring that the sum of the \pt\ of tracks in a cone of \deltaRlt{0.2} around
 the muon track be less than 12\% of the muon's \pt. Only tracks with \ptgt{1}
 enter the calculation, and to reduce pileup dependency, must have $|\Delta
@@ -66,29 +66,29 @@ muons:
 
 \begin{itemize}
 
-    \item {\bf Combined:} combination of an MS track with an ID track. In
+    \item {\bf \combined:} combination of an MS track with an ID track. In
     general limited by the acceptance of the ID, \modetalt{2.5}, but due to the complicated
-    nature of the magnetic field it is possible to get combined muons beyond
+    nature of the magnetic field it is possible to form \combined\ muons beyond
     this.
 
-    \item {\bf Segment Tagged:} combination of an ID track with an MS track
+    \item {\bf \segmentTagged:} combination of an ID track with an MS track
     segment. An MS track segment is a straight line track segment reconstructed
     in a single MS station where the segment did not form a full MS track. The
     track parameters of the reconstructed muon are taken solely from the ID
     track.
 
-    \item {\bf Stand Alone:} muon track reconstruction based solely on 
+    \item {\bf \standAlone:} muon track reconstruction based solely on 
     MS measurements. Possible over the full acceptance of the MS,
     \modetalt{2.7}.
 
-    \item {\bf Calorimeter Tagged:} ID tracks are tagged as originating from
+    \item {\bf \calorimeterTagged:} ID tracks are tagged as originating from
     muons by matching them to calorimeter deposits consistent with a minimum ionising
     muon. No MS information is used.
 
 
 \end{itemize}
 
-Since combined muons have a fully reconstructed track in both the ID and the MS
+Since \combined\ muons have a fully reconstructed track in both the ID and the MS
 they are the preferred muon type and will have the best track parameter
 resolution. The ID provides the best momentum measurement at low to intermediate
 momenta, whereas the MS provides the better measurement at higher \pt\ (roughly
@@ -166,7 +166,7 @@ Furthermore as \pt\ decreases, the energy lost by the muons inside the
 calorimeters becomes comparable to their energy, especially in the barrel
 region. The \mutag\ algorithm is used to recover efficiency at low \pt\ by
 starting from ID tracks, extrapolating them to the inner station of the MS and
-attempting to match them with MS track segments not yet associated to combined
+attempting to match them with MS track segments not yet associated to \combined\
 tracks.
 
 \subsubsection{Calorimeter Tagged Muons}
@@ -191,7 +191,7 @@ gap in the muon-spectrometer.
 \subsubsection{Reconstruction efficiencies}
 
 ~\fig{mu-reco-eff} shows the observed reconstruction efficiency for muons
-reconstructed as either Combined or Segment Tagged in the 2011 data, measured
+reconstructed as either \combined\ or \segmentTagged\ in the 2011 data, measured
 using a tag and probe technique on \Z\ boson decays~\cite{ATLAS-CONF-2011-063},
 as well as the efficiency predicted by the \mcsim. The
 efficiency is seen to drop significantly for \modetalt{0.1} for reasons
@@ -214,7 +214,7 @@ the \mc\ to reproduce the efficiency observed in data.
     pseudorapidity and the transverse momentum of the muon.]{Muon
     reconstruction efficiency in 2011 as a function of (a) the pseudorapidity and
     (b) the transverse momentum of the muon for muons reconstructed as either
-    Combined or Segment Tagged using the \staco\ algorithm. The solid black points
+    \combined\ or \segmentTagged\ using the \staco\ algorithm. The solid black points
     show the efficiency observed in data, and the open red circles show the
     efficiency predicted by \mcsim. In figure (a) the efficiencies
     for calorimeter tagged muons are also shown for \modetalt{0.1} (solid blue
@@ -282,7 +282,7 @@ to the combined momentum.
 %and ID components, weighted by the MS and ID determined from these measurements. 
 
 ~\fig{mu-resolution-dimu} shows the observed di-muon mass resolution. For
-combined muons, the resolution is of order 2-3 \gev\ across the full
+\combined\ muons, the resolution is of order 2-3 \gev\ across the full
 pseudo-rapidity range. Also shown in~\fig{mu-resolution-dimu} is the simulated
 di-muon resolution before and after correcting the resolution to that observed
 in the data as described in the last paragraph.
@@ -300,7 +300,7 @@ in the data as described in the last paragraph.
         }
     \caption[Di-muon mass resolutions for muon tracks in different detector
     subsystems.]{Di-muon mass resolutions for (a) muon tracks measured in the muon
-    spectrometer, (b) muon tracks measured in the \id, and (c) combined
+    spectrometer, (b) muon tracks measured in the \id, and (c) \combined\
     muon tracks. The solid points show the measured values in selected \Zmm\ events
     in data collected in 2012. The blue points show the resolution in simulated
     \Zmm\ decays, and the red diamonds show the simulated resolution after applying
