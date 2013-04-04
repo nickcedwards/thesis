@@ -225,19 +225,18 @@ momentum above 1 \gev. In order to avoid degrading non-electron tracks, this
 allowance is made only in regions of interest in a cone of \deltaRlt{0.3} around
 EM calorimeter clusters. 
 
-The global \chisquared\
-fitter was also improved to allow for electron hypothesis tracks by refitting
-tracks with a low \chisquared\ with an energy loss term for the most significant \brem\
-loss.
-%Tracks rejected due to low \chisquared\ at the ambiguity resolution stage in a RoI are
-%refitted using a modified `electron hypothesis' global \chisquared\ fitter. This
-%attempts to find the layer with the most significant \brem\ energy loss, then
-%reruns the fit with only an energy loss term for the most significant \brem\
-%loss. The advantage of this over the standard \chisquared\ fit, which allows
-%includes an energy loss term for each layer, is that in the latter approach the
-%electron momentum tends to be overestimated as all of the energy loss terms tend
-%to take the average energy loss value, rather than correctly identifying one layer with large
-%energy loss. 
+The global \chisquared\ fitter was also improved to allow for electron
+hypothesis tracks by refitting tracks with a low \chisquared\ with an energy
+loss term for the most significant \brem\ energy loss.
+%Tracks rejected due to low \chisquared\ at the ambiguity resolution stage in a
+%RoI are refitted using a modified `electron hypothesis' global \chisquared\
+%fitter. This attempts to find the layer with the most significant \brem\ energy
+%loss, then reruns the fit with only an energy loss term for the most
+%significant \brem\ loss. The advantage of this over the standard \chisquared\
+%fit, which allows includes an energy loss term for each layer, is that in the
+%latter approach the electron momentum tends to be overestimated as all of the
+%energy loss terms tend to take the average energy loss value, rather than
+%correctly identifying one layer with large energy loss. 
 The modified \chisquared\ fitter gives a significant improvement in the track
 parameter resolution, giving an improvement almost as great as using the more
 sophisticated GSF algorithm, but running in approximately one tenth of the time.
@@ -245,24 +244,30 @@ sophisticated GSF algorithm, but running in approximately one tenth of the time.
 At this stage, there will still be a number of tracks which had large energy
 losses from \brem\ and were consequentially badly fitted. A refit using the GSF
 fitter described above is thus carried out for all tracks loosely matched to an
-EM calorimeter cluster. Two forms of are matching are carried out: the first
-(\deltaR) between the
-track parameters extrapolated to the second layer of the calorimeter and the
-barycentre of the calorimeter cluster, and the second (\deltaR$^{\rm{rescaled}}$) where the track momentum is
-scaled to the cluster energy before extrapolating the track to the calorimeter.
-Loose cuts are made on \deltaR\ and \deltaR$^{\rm{rescaled}}$, with the cuts on
-\deltaR$^{\rm{rescaled}}$ being slightly tighter.
-Tracks which match under either of the two scenarios are refitted; the latter
-category aims to select tracks with low momentum that have suffered large
-\brem\ and would otherwise be missed. The final matching of the refitted tracks
-to the clusters and selection of the best match is also improved; again both the
-original \deltaR\ and the \deltaR$^{\rm{rescaled}}$ after scaling the track
-momentum to the cluster
-energy are computed. Tracks with Pixel detector hits are preferred. If there are
-more than two tracks with Pixel hits matching a cluster then the one with the smaller
-\deltaR$^{\rm{rescaled}}$ is preferred, providing they are well enough
-separated in \deltaR$^{\rm{rescaled}}$; otherwise the one with smaller \deltaR\
-is chosen.
+EM calorimeter cluster. This two-step procedure is carried out so that only
+tracks which have a chance of forming an electron candidate are fitted with the
+time-consuming GSF fitter.
+%Two forms of are matching are carried out: the first
+%(\deltaR) between the
+%track parameters extrapolated to the second layer of the calorimeter and the
+%barycentre of the calorimeter cluster, and the second (\deltaR$^{\rm{rescaled}}$) where the track momentum is
+%scaled to the cluster energy before extrapolating the track to the calorimeter.
+%Loose cuts are made on \deltaR\ and \deltaR$^{\rm{rescaled}}$, with the cuts on
+%\deltaR$^{\rm{rescaled}}$ being slightly tighter.
+%Tracks which match under either of the two scenarios are refitted; the latter
+%category aims to select tracks with low momentum that have suffered large
+%\brem\ and would otherwise be missed. 
+The final matching of the refitted tracks
+to the clusters, and selection of the best match, is also improved by scaling the
+track momentum to the cluster energy before calculating the \deltaR.
+%; again both the
+%original \deltaR\ and the \deltaR$^{\rm{rescaled}}$ after scaling the track
+%momentum to the cluster
+%energy are computed. Tracks with Pixel detector hits are preferred. If there are
+%more than two tracks with Pixel hits matching a cluster then the one with the smaller
+%\deltaR$^{\rm{rescaled}}$ is preferred, providing they are well enough
+%separated in \deltaR$^{\rm{rescaled}}$; otherwise the one with smaller \deltaR\
+%is chosen.
 
 Overall, these improvements increase the electron reconstruction efficiency by
 $\sim2\%$ in the calorimeter barrel and $\sim5\%$ in the calorimeter endcaps.
