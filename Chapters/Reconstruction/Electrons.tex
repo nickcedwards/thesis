@@ -6,21 +6,20 @@ system as described in~\sec{detector-trigger}. They are triggered on at L1 by
 requiring that two adjacent towers of calorimeter cells of size
 \deltaetadeltaphi{0.1}{0.1} have an energy above a certain threshold. The towers
 are used to identify a RoI for use at L2. At L2 fast calorimeter clustering and
-ID tracking
-algorithms are used. The calorimeter clustering at L2 uses a similar algorithm to 
-the offline reconstruction as described in~\sec{reco-el-reco}, except that the
-highest \et\ cell in the middle calorimeter layer of the RoI is used as a seed,
-rather than using a sliding window algorithm. Basic shower-shape cuts on
-the width of the shower in $\eta$ and the ratio of energy deposits in the
-different calorimeter layers are
-used to reject backgrounds. The EF uses the offline reconstruction and
-identification algorithms described in~\sec{reco-el-reco}
-and~\sec{reco-el-id}, although slightly looser cuts are applied to remain fully
-efficient offline. 
+ID tracking algorithms are used. 
+%The calorimeter clustering at L2 uses a similar algorithm to the offline
+%reconstruction as described in~\sec{reco-el-reco}, except that the highest \et\
+%cell in the middle calorimeter layer of the RoI is used as a seed, rather than
+%using a sliding window algorithm. 
+Basic shower-shape cuts on the width of the shower in $\eta$ and the ratio of
+energy deposits in the different calorimeter layers are used to reject
+backgrounds. The EF uses the offline reconstruction and identification
+algorithms described in~\sec{reco-el-reco} and~\sec{reco-el-id}, although
+slightly looser cuts are applied to remain fully efficient offline. 
 %It uses some information from just outside the RoI.
 
 The bandwidth dedicated to electron and photon triggers is approximately 30\% of the
-total EF bandwidth. As instantaneous luminosity increased throughout 2011 and
+total EF bandwidth. As the instantaneous luminosity increased throughout 2011 and
 2012 it was necessary to regularly tighten the triggers to keep the bandwidth at
 an acceptable level~\cite{Monticelli:1450947}. At the start of 2011 the primary single electron trigger
 had a threshold at EF level of 20 \gev. When the instantaneous luminosity exceeded
@@ -39,17 +38,18 @@ the electron.
 \label{sec:reco-el-reco}
 
 Electrons are reconstructed in the central region (\modetalt{2.5}) by searching
-for EM calorimeter clusters and matching them to \id\
-tracks~\cite{ATL-PHYS-PUB-2011-006,Aad:2011mk}; this is
-referred to as the \intro{standard} electron algorithm and is described below.
-In the forward regions (\modetabetween{2.5}{4.9}) there is no \id\
-tracking, and electrons are reconstructed solely from calorimeter clusters; this
-is also described below. The standard algorithm drops in efficiency at very
-low \pt\
-(a few \gev), but an alternative \intro{soft-e} algorithm can be used to recover
-efficiency. This uses \id\ tracks as seeds, which it extrapolates into
-the EM calorimeter and attempts to build clusters. It is not used in
-this thesis so is not described in detail here.
+for clusters of energy deposits in the EM calorimeter (referred to henceforth
+simply as `clusters') and matching them to \id\
+tracks~\cite{ATL-PHYS-PUB-2011-006,Aad:2011mk}; this is referred to as the
+\intro{standard} electron algorithm and is described below.  In the forward
+regions (\modetabetween{2.5}{4.9}) there is no \id\ tracking, and electrons
+are reconstructed solely from calorimeter clusters; this is also described
+below. 
+%The standard algorithm drops in efficiency at very low \pt\ (a few
+%\gev), but an alternative \intro{soft-e} algorithm can be used to recover
+%efficiency. This uses \id\ tracks as seeds, which it extrapolates into the EM
+%calorimeter and attempts to build clusters. It is not used in this thesis so
+%is not described in detail here.
 
 \subsubsection{Standard Electron Reconstruction}
 
@@ -79,7 +79,7 @@ the track if it falls on the side towards which the track bends, or $\Delta
 \phi < 0.05$ if it is on the opposite side. This asymmetry in the $\phi$
 requirement is to
 account for the fact that the electrons undergo heavy energy losses from
-bremsstrahlung, due to the large amount of material in the \id, which
+bremsstrahlung due to the large amount of material in the \id, which
 will tend to increase their bending,
 particularly at high $\eta$. If a seed cluster matches to at least one track,
 an electron candidate is formed. Seed clusters with no track matches are
@@ -97,7 +97,7 @@ into other calorimeter cells and the estimated longitudinal leakage behind the
 EM calorimeter. The four terms are parameterised as a function of the measured
 cluster energy in the pre-sampler (where it exists) and the measured energy in each of the three
 calorimeter layers, based on detailed simulations of energy depositions in the
-calorimeters and the dead material. At this stage, additional calibrations are
+calorimeters and the dead material. Additional calibrations are
 applied to the electron energy based on measurements of \Zee\ and
 \JPsiee~\cite{Aad:2011mk}. The energy of the electron is taken as the cluster
 energy, and the direction as the track $\eta$ and $\phi$, providing the track
@@ -129,7 +129,7 @@ belonging to the cluster.
 \subsubsection{Improvements to electron reconstruction in 2011 and 2012}
 
 By default the ATLAS track fitting assumes a pion hypothesis for the modelling
-of material effects, as described in~\sec{tracking-std}. This does not account well for energy losses via
+of material effects. This does not account well for energy losses via
 bremsstrahlung. Due to their small mass, these losses are most substantial for
 electrons, and can have significant effects on their trajectories through the magnetic
 field. The amount of material in the \id\ in terms of radiation lengths
