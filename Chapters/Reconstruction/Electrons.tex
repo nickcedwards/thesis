@@ -178,7 +178,7 @@ resolution of the track parameters.
 For 2011 data taking, `brem-refitting' was applied to
 reconstructed electron candidates~\cite{ATLAS-CONF-2012-047}. For technical reasons, it was not possible to
 include the \brem\ recovery from the beginning of electron reconstruction.
-Instead, electrons were reconstructed using the standard pion hypothesis
+Instead, electrons were reconstructed using the standard pion-hypothesis
 tracking and track cluster matching as described above. The tracks of these candidates were then refitted
 using the GSF algorithm, 
 %All tracks with \ptgtMeV{400} and \modetalt{2.5} assigned to
@@ -258,8 +258,9 @@ time-consuming GSF fitter.
 %category aims to select tracks with low momentum that have suffered large
 %\brem\ and would otherwise be missed. 
 The final matching of the refitted tracks
-to the clusters, and selection of the best match, is also improved by scaling the
-track momentum to the cluster energy before calculating the \deltaR.
+to the clusters and the selection of the best match is also improved by scaling the
+track momentum to the cluster energy before calculating the \deltaR\ between the
+track and the cluster.
 %; again both the
 %original \deltaR\ and the \deltaR$^{\rm{rescaled}}$ after scaling the track
 %momentum to the cluster
