@@ -73,11 +73,11 @@ muons:
 
     \item {\bf \segmentTagged:} combination of an ID track with an MS track
     segment. An MS track segment is a straight line track segment reconstructed
-    in a single MS station where the segment did not form a full MS track. The
+    in a single MS station (as defined in~\sec{Detector-MS}) where the segment did not form a full MS track. The
     track parameters of the reconstructed muon are taken solely from the ID
     track.
 
-    \item {\bf \standAlone:} muon track reconstruction based solely on 
+    \item {\bf \standAlone:} a muon track reconstruction based solely on 
     MS measurements. Possible over the full acceptance of the MS,
     \modetalt{2.7}.
 
@@ -117,8 +117,8 @@ algorithm. First, the muon trigger chambers are used to identify Regions of
 Activity (RoA). The RoA are areas of size \deltaetadeltaphi{0.4}{0.4} where
 there is at least one RPC or TGC hit in both co-ordinates. Local straight track
 segments are then reconstructed within the RoA by attempting to combine each MDT
-hit in a multilayer (each station consists of two layers of MDT sandwiched
-between RPC chambers) with each MDT hit in the other multilayer of the same or
+hit in a multilayer\footnote{each station consists of two \intro{multilayers} of MDT sandwiched
+between RPC chambers} with each MDT hit in the other multilayer of the same or
 adjacent station. This gives four possible track segments. Each of these segments
 is extrapolated to the rest of the MDT tubes in the station and matched with hits. 
 The segment candidates are required to point loosely towards the
@@ -126,8 +126,9 @@ interaction point, and cuts are applied on the \chisquared\ of the track
 segment, with penalties for missing hits. 
 
 Track candidates are then formed by combining at least two segments from
-different stations to form track candidates. The tracks are seeded from track
-segments that have at least one second-coordinate hit. A first rough estimate of
+different stations to form track candidates, as follows. The tracks are seeded from track
+segments that have at least one hit from a trigger-chamber to provide a
+measurement in the non-bending plane. A first rough estimate of
 the momentum is deduced from the position and direction of the segment. Each of
 these segments is then extrapolated to the other stations, and matches in
 position and direction are found. Since the track momentum is not well known at
@@ -154,7 +155,7 @@ reconstructed muons is made based on the \chisquared\ quality of this final fit.
 Selected muon tracks are then extrapolated back to the interaction point,
 correcting for energy loss and multiple scattering in the calorimeters and the
 material of the ID~\footnote{The typical energy loss in the calorimeter is $\sim
-3$ \GeV.}. MS tracks are then combined with ID tracks by selecting tracks to be
+3$ \GeV.}. MS tracks are combined with ID tracks by selecting tracks to be
 paired on the basis of a match \chisquared, defined from the difference between
 the two sets of track parameters weighted by their combined covariance matrix.
 The track parameters are combined, weighting the relative contributions
@@ -168,7 +169,7 @@ calorimeters becomes comparable to their energy, especially in the barrel
 region. The \mutag\ algorithm is used to recover efficiency at low \pt\ by
 starting from ID tracks, extrapolating them to the inner station of the MS and
 attempting to match them with MS track segments not yet associated to \combined\
-tracks.
+tracks, yielding \segmentTagged\ muons.
 
 \subsubsection{\caloTagged\ Muons}
 
@@ -197,7 +198,7 @@ using a tag and probe technique on \Z\ boson decays~\cite{ATLAS-CONF-2011-063},
 as well as the efficiency predicted by the \mcsim. The
 efficiency is seen to drop significantly for \modetalt{0.1} for reasons
 explained above. The efficiency for calorimeter tagged muons is also shown, and
-it is seen that this effectively recovers the loss in efficiency at
+it is seen that they effectively recover the loss in efficiency at
 \modetalt{0.1}. The muon reconstruction efficiency is seen to be almost constant
 as a function of \pt. In both \pt\ and $\eta$ good agreement is seen between the
 \mcsim\ and the data, but as with the electrons, scale-factors are applied to
@@ -260,23 +261,25 @@ iterative fitting procedure is then carried out to obtain the single muon
 resolution parameters: a series of simulated di-muon mass distributions are
 produced for various momentum resolution values and then matched to the one
 observed in data.  A smearing is applied to the simulated muon momentum in order
-to reproduce the resolution obtained in data. The smeared MS resolution is
-defined as
+to reproduce the resolution obtained in data. 
 
-\begin{equation}
-p'_{T}(MS) = p_{T}(MS) (1+\Delta(MS))
-\end{equation}
-
-where 
-
-\begin{equation}
-\Delta(MS) = f(0,1) \cdot \Delta p_{1}^{MS} +  f(0,1) \cdot \Delta p_{2}^{MS} p_{T}
-\end{equation}
-and the $ \Delta p_{i}^{MS} $ are the difference in the resolution parameters $
-p_{i}^{MS} $ between data and \mcsim\ and $f(0,1)$ is a normally distributed
-random number with mean 0 and width 1. The ID resolution in simulation is
-smeared in a similar way, and the changes to the ID and MS momentum are propagated
-to the combined momentum.
+%The smeared MS resolution is
+%defined as
+%
+%\begin{equation}
+%p'_{T}(MS) = p_{T}(MS) (1+\Delta(MS))
+%\end{equation}
+%
+%where 
+%
+%\begin{equation}
+%\Delta(MS) = f(0,1) \cdot \Delta p_{1}^{MS} +  f(0,1) \cdot \Delta p_{2}^{MS} p_{T}
+%\end{equation}
+%and the $ \Delta p_{i}^{MS} $ are the difference in the resolution parameters $
+%p_{i}^{MS} $ between data and \mcsim\ and $f(0,1)$ is a normally distributed
+%random number with mean 0 and width 1. The ID resolution in simulation is
+%smeared in a similar way, and the changes to the ID and MS momentum are propagated
+%to the combined momentum.
 
 
 %The combined muon momentum resolution is then a linear combinations of the MS
