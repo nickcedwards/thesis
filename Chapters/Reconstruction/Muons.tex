@@ -88,18 +88,19 @@ muons:
 
 \end{itemize}
 
-Since \combined\ muons have a fully reconstructed track in both the ID and the MS
-they are the preferred muon type and will have the best track parameter
+Since \combined\ muons have a fully reconstructed track in both the ID and the
+MS, they are the preferred muon type and will have the best track parameter
 resolution. The ID provides the best momentum measurement at low to intermediate
 momenta, whereas the MS provides the better measurement at higher \pt\ (roughly
 for \ptgt{100}). Combination with an ID track improves the momentum resolution
-over the range $4 < p_{T} < 100$ \GeV. Segment tag muons are useful to recover
+over the range $4 < p_{T} < 100$ \GeV. \segmentTagged\ muons are useful to recover
 efficiency at low \pt\ where muons may only reach the inner layer of the muon
-chamber and in regions of limited detector acceptance. Stand alone muons are
-useful to extend coverage beyond the coverage of the ID. Calorimeter tagged
-muons suffer large fake rates from jets and electrons, but can be used to recover
-acceptance at \modetalt{0.1} where there are gaps in the muon chambers to
-provide space for services to the ID, the solenoid magnet and the calorimeters.
+chamber and in regions of limited detector acceptance. \standAlone\ muons are
+useful to extend coverage beyond the coverage of the ID. \caloTagged\
+muons suffer large fake rates from jets and electrons, but can be used to
+recover acceptance at \modetalt{0.1} where there are gaps in the muon chambers
+to provide space for services to the ID, the solenoid magnet and the
+calorimeters.
 
 There are two parallel muon reconstruction chains in use in ATLAS,
 \staco\cite{1742-6596-219-3-032052} and
@@ -169,7 +170,7 @@ starting from ID tracks, extrapolating them to the inner station of the MS and
 attempting to match them with MS track segments not yet associated to \combined\
 tracks.
 
-\subsubsection{Calorimeter Tagged Muons}
+\subsubsection{\caloTagged\ Muons}
 
 It is also possible to reconstruct muons independently of the MS by using the
 calorimeter to tag inner-detector tracks originating from muons.  A muon with
