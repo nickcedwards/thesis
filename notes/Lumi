@@ -1,0 +1,44 @@
+Luminosity Measurement
+-----------------------
+
+2011 Note: https://cds.cern.ch/record/1376384/files/ATLAS-CONF-2011-116.pdf
+2010 Paper: http://arxiv.org/abs/1101.2185
+
+Main method: van der Meer (vdM) scans - absolute calibration for other methods. Strategy is to compare the measurements of several detectors, in order to control systematics. Diff detectors have different acceptances and response to pileup and beam induced backgrounds.
+
+L = <mu>*n_b * fr / sigma_{inel}. 
+So can determine L from any measurement of <mu>/sigma
+
+Main techniques:
+
+- Event counting. Determine fraction of bunch crossings during which some sort of event happens (e.g. induces at least one hit in the tracker, or Z counting).
+- Hit counting: count the number of hits e.g. electronics channels of clusters above a threshold, pre bunch crossing.
+- Particle counting: determine the distribiton of the number of particles per bunch crossing - e.g. by inferring from tracks or total ionisation current in LAr.
+
+Currently Atlas only uses event counting.
+Have L = <mu_vis>*n_b * fr / sigma_{vis}. where u_vis = eff*<mu> and sigma_vis*<mu>.
+To calibrate need sigma_vis - not measured at 7 TeV yet and significant theory errors.
+Could use W/Z counting to normalise, but would mean can't compare Z rates to theory anymore (but can use W/Z counting to monitor stability).
+Instead calibrate absolute Lumi from accelerator parameters. L = n_b * f_r * n1 * n1 / (2*pi*Sigma_x*Sigma_y)
+
+where the Sigma are the horiz and vert withd of the beam. Measure using VdM scans.
+Record obsrved event rate while scanning the beams accross each other in vert and horiz direction. Get two bell shaped curves, with maximum rate at zero sep, and can extract the width from this.
+Can  use this to get Lumi at zero sep, and then get sigma_{vis}. Not dependant on knowing sigma_{inel} or efficiency of event counting.
+
+Online, determine lumi once per second from counting rates from detectors. Convert raw event count to a visible average no collisions per crossing, then use sigma_{vis} measured in VdM scans to convert to an absolute lumi.
+
+Beam current measurement
+--------------------------
+DC current transformer - essentially a fluxgate magnetometer.  small, magnetically susceptible core wrapped by two coils of wire. An alternating electrical current is passed through one coil, driving the core through an alternating cycle of magnetic saturation; i.e., magnetised, unmagnetised, inversely magnetised, unmagnetised, magnetised, and so forth. This constantly changing field induces an electrical current in the second coil, and this output current is measured by a detector. In a magnetically neutral background, the input and output currents will match. However, when the core is exposed to a background field, it will be more easily saturated in alignment with that field and less easily saturated in opposition to it. Hence the alternating magnetic field, and the induced output current, will be out of step with the input current.
+High accuracy but cannot resolve individual bunch crossings.
+
+AC-coupled fast transformers (fast BCTs) Bergoz type transformer. Basically a transformer with the beam in the way so that fields induced in teh field affect the current induced in the treansformer.
+
+BCM
+----
+Diamond detector. BAsically create e-h pairs in diamond, pulled apart by field.
+http://www.ifh.de/~akg/phys/tapper.pdf
+Diamond is radiation hard, and has fast readout
+http://iopscience.iop.org/1748-0221/3/02/P02004/pdf/1748-0221_3_02_P02004.pdf
+ionisation charge 36 electron–hole pairs per micrometer 
+dirft of electrons induces current puls on electrodes ( theyd on't actually have to reach the contacts)

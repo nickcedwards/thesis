@@ -6,3 +6,18 @@ Detector
 - Quantify performance aims
 - Approximations in luminosity figure
 - Wavelength shifting fibres
+- Read Lumi stuff in detail!
+
+	- sqrt(12) resolution issue - is from definition of std-deviation:
+	- = sqrt(E((x-mu)^2)) = sqrt [ Int_{-L/2}^{L/2}x^{2}P(x)dx ]
+	   with P(x) = 1/L
+	   = sqrt[ x^{3}/3 |_{-L/2}^{L/2} ]
+	   = sqrt[ L^{3} (1/24 - - 1/24)] = L/sqrt(12)
+	   
+	   
+- Read Aftberburner stuff:
+http://arxiv.org/pdf/0803.3307v1.pdf
+
+Theory
+------
+Why bose statistics forbid ZZV with all particles on shell's
