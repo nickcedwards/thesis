@@ -24,11 +24,19 @@ Designed to cover momentum range 3 GeV - 3 TeV
 
 Stringent alignment requirements - met by precision mechanical assembly techniques and optical alignment systems.
 
+Gaseous since need to cover large area with high resolution
+MS magnets are air core, so little effect from multiple scattering. Resolution instead limited by position resolution of measurement.
+The deviation from a straight line, or sagitta, of muons with pT=1TeV is 0.5 mm over at least 5m in the muon system.
+The design goal of the muon system is to measure such muons to within 10% accuracy. To achieve this, the sagitta resolution must be 0.05 mm.
+
 Monitored Drift Tubes (MDT)
 ----------------------------
 Three layers covering |eta|<2.7
 In innermost layer, replaced by CSC for 2.0<|eta|<2.7 to manage high rates and backgrounds in this region
 Mechanical isolation of each sensor wire from neighbours guarantees robust and reliable.
+Tubes run *along* phi direction, ie tangental to circle around beam. Thus get good resolution in R and Z (or R and eta)
+Each chamber can measure one position (R) coordinate to within 40 μmand one angle to within (theta) 3 × 10−4 radians.
+The size and long dead-time of the MDTs limit the muon hit rate they can handleto about 150 Hz cm−2.
 
 Cathode Strip Chamber (CSC)
 ---------------------------

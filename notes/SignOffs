@@ -3,25 +3,23 @@ Chapter Signoffs
 
 			Draft0	Issues/ToDo				Aidans com?		Spelling	Final Readthrough
 Theory		Yes		OK							Yes				Yes			1
-TheoryZZ	Yes		mZ plots					Yes				Yes			1
-					tails in llll/(ll)(ll)
+TheoryZZ	Yes		tails in llll/(ll)(ll)		Yes				Yes			1
 Detector	Yes		OK							Yes				Yes			1
-Reco		Yes									Yes				Yes			No
-SCT			Yes		WaitSaverio					Yes				Yes			No
-ObjSel		Yes		Why more muon fake in data	Yes				Yes			No
-Bg Est		Yes		OK							Yes				Yes			No
-Results		Yes		OK							Yes				Yes			No
-TGC			Yes
-
+Reco		Yes		OK							Yes				Yes			1
+SCT			Yes		WaitSaverio					Yes				Yes			1
+ObjSel		Yes		Why more muon fake in data	Yes				Yes			1
+Bg Est		Yes		OK							Yes				Yes			1
+Results		Yes		OK							Yes				Yes			1
+TGC			Yes		BR/BHO - are they different ME?							1
 Intro		Yes													Yes			1
 Concls		Yes
 Abstract	Yes													Yes			1
 Decleration	Yes													Yes			1
 Conributions Yes												Yes			1
-Acknow		No
+Acknow		 No
 
 TOC																			1	
-Bib																			Up to 19
+Bib																			1
 
 
 Analysis Consistency Signoffs
@@ -30,7 +28,7 @@ Analysis Consistency Signoffs
 + Total Theory Cross Sections Consistent to Note:		YES
 + A_ZZ + A_ZZ unc consistent to notes					YES
 + Czz Systematics consistent to notes					YES
-+ Yield Systematics consistent to notes
-+ Cx consistent everywhere
-+ gg frac consistent to notes
-	
++ Yield Systematics consistent to notes					YES, but not paper
++ Cx consistent everywhere								YES
++ gg frac consistent to notes							YES
++ N_sig = cx * C_ZZ * Lumi								YES
