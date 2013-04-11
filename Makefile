@@ -1,5 +1,8 @@
 NAME=Thesis
-all : 
+
+all : ${NAME}.pdf
+
+%.pdf : %.tex
 	pdflatex ${NAME}.tex
 	./makeFeynDiagrams.sh
 	pdflatex ${NAME}.tex
@@ -7,8 +10,8 @@ all :
 	pdflatex ${NAME}.tex
 	pdflatex ${NAME}.tex
 	pdflatex ${NAME}.tex
-backup:
-	NAME=Backup
-	all
+
+backup: backup.pdf
+
 clean :
 	rm -f ${NAME}.pdf *.aux *.log *.out *.toc *.bbl *.1 *.mp
