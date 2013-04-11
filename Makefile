@@ -3,13 +3,13 @@ NAME=Thesis
 all : ${NAME}.pdf
 
 %.pdf : %.tex
-	pdflatex ${NAME}.tex
+	pdflatex $<.tex
 	./makeFeynDiagrams.sh
-	pdflatex ${NAME}.tex
-	bibtex ${NAME}
-	pdflatex ${NAME}.tex
-	pdflatex ${NAME}.tex
-	pdflatex ${NAME}.tex
+	pdflatex $<.tex
+	bibtex $<
+	pdflatex $<.tex
+	pdflatex $<.tex
+	pdflatex $<.tex
 
 backup: backup.pdf
 
