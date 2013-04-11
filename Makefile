@@ -7,7 +7,7 @@ all : ${NAME}.pdf
 	pdflatex $<
 	./makeFeynDiagrams.sh
 	pdflatex $<
-	bibtex $(<:.tex=.o)
+	bibtex $(<:.tex=)
 	#@echo $(SHELL echo $<|sed 's/\.tex//g')
 	pdflatex $<
 	pdflatex $<
