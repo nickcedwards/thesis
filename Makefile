@@ -7,5 +7,8 @@ all :
 	pdflatex ${NAME}.tex
 	pdflatex ${NAME}.tex
 	pdflatex ${NAME}.tex
+backup:
+	NAME=Backup
+	all
 clean :
 	rm -f ${NAME}.pdf *.aux *.log *.out *.toc *.bbl *.1 *.mp
