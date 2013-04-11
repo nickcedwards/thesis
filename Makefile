@@ -1,19 +1,17 @@
-SHELL := /bin/bash
 NAME=Thesis
 
-all : ${NAME}.pdf
-
-%.pdf : %.tex
-	pdflatex $<
+all : 
+	pdflatex ${NAME}.tex
 	./makeFeynDiagrams.sh
-	pdflatex $<
-	bibtex $(<:.tex=)
-	#@echo $(SHELL echo $<|sed 's/\.tex//g')
-	pdflatex $<
-	pdflatex $<
-	pdflatex $<
+	pdflatex ${NAME}.tex
+	bibtex ${NAME}
+	pdflatex ${NAME}.tex
+	pdflatex ${NAME}.tex
+	pdflatex ${NAME}.tex
 
-Backup: Backup.pdf
+backup:
+	pdflatex Backup.tex
+	pdflatex Backup.tex
 
 clean :
 	rm -f ${NAME}.pdf *.aux *.log *.out *.toc *.bbl *.1 *.mp
