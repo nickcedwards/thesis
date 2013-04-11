@@ -5,7 +5,7 @@ all : ${NAME}.pdf
 %.pdf : %.tex
 	pdflatex $<
 	./makeFeynDiagrams.sh
-	pdflatex $<.tex
+	pdflatex $<
 	bibtex $<
 	pdflatex $<
 	pdflatex $<
