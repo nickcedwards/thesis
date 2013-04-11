@@ -4,14 +4,14 @@ NAME=Thesis
 all : ${NAME}.pdf
 
 %.pdf : %.tex
-	#pdflatex $<
-	#./makeFeynDiagrams.sh
-	#pdflatex $<
-	@echo $(<:.tex=.o)
+	pdflatex $<
+	./makeFeynDiagrams.sh
+	pdflatex $<
+	bibtex $(<:.tex=.o)
 	#@echo $(SHELL echo $<|sed 's/\.tex//g')
-	#pdflatex $<
-	#pdflatex $<
-	#pdflatex $<
+	pdflatex $<
+	pdflatex $<
+	pdflatex $<
 
 Backup: Backup.pdf
 
