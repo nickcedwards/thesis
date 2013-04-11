@@ -4,10 +4,10 @@ NAME=Thesis
 all : ${NAME}.pdf
 
 %.pdf : %.tex
-	pdflatex $<
-	./makeFeynDiagrams.sh
-	pdflatex $<
-	@echo $(SHELL echo $<)
+	#pdflatex $<
+	#./makeFeynDiagrams.sh
+	#pdflatex $<
+	@echo $(<:.c=.o)
 	#@echo $(SHELL echo $<|sed 's/\.tex//g')
 	#pdflatex $<
 	#pdflatex $<
