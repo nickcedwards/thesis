@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 NAME=Thesis
 
 all : ${NAME}.pdf
