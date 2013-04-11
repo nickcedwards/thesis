@@ -8,9 +8,9 @@ all : ${NAME}.pdf
 	./makeFeynDiagrams.sh
 	pdflatex $<
 	echo $(SHELL echo $<|sed 's/\.tex$//g')
-	pdflatex $<
-	pdflatex $<
-	pdflatex $<
+	#pdflatex $<
+	#pdflatex $<
+	#pdflatex $<
 
 Backup: Backup.pdf
 
