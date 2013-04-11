@@ -11,7 +11,7 @@ all : ${NAME}.pdf
 	pdflatex $<.tex
 	pdflatex $<.tex
 
-backup: backup.pdf
+Backup: Backup.pdf
 
 clean :
 	rm -f ${NAME}.pdf *.aux *.log *.out *.toc *.bbl *.1 *.mp
