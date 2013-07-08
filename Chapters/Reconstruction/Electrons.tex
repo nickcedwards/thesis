@@ -79,7 +79,7 @@ the track if it falls on the side towards which the track bends, or $\Delta
 \phi < 0.05$ if it is on the opposite side. This asymmetry in the $\phi$
 requirement is to
 account for the fact that the electrons undergo heavy energy losses from
-bremsstrahlung due to the large amount of material in the \id, which
+\brem\ due to the large amount of material in the \id, which
 will tend to increase their bending,
 particularly at high $\eta$. If a seed cluster matches to at least one track,
 an electron candidate is formed. Seed clusters with no track matches are
@@ -123,14 +123,14 @@ An electron candidate is constructed if the cluster has \etgt{5} and only a
 small hadronic energy component. The energy
 of the electron is taken as the sum of the energy of all cells belonging to the cluster,
 corrected for energy loss before the calorimeter and lateral and for longitudinal
-leakages. The direction of the forward electron is taken as the barycentre of the cells
-belonging to the cluster.
+leakages. The direction of the forward electron is defined by the barycentre of the cells
+belonging to the cluster, assuming that the electron originated from the origin.
 
 \subsubsection{Improvements to electron reconstruction in 2011 and 2012}
 
 By default the ATLAS track fitting assumes a pion hypothesis for the modelling
 of material effects. This does not account well for energy losses via
-bremsstrahlung. Due to their small mass, these losses are most substantial for
+\brem. Due to their small mass, these losses are most substantial for
 electrons, and can have significant effects on their trajectories through the magnetic
 field. The amount of material in the \id\ in terms of radiation lengths
 $X_{0}$ is shown in~\fig{id-material}. It is highly non uniform with high
@@ -280,6 +280,9 @@ For low \et\ electrons (\etlt{20}) the improvement is up to 6\%.
 
 \fig{el-reco-eff} shows the electron reconstruction efficiency in 2011 and 2012
 as a function of the pseudo-rapidity and the transverse energy of the electron cluster.
+These are measured in the data with a tag-and-probe technique using \Zee, \Wev\ and
+\JPsiee\ decays~\cite{Aad:2011mk}; the efficiencies predicted by \mc\ are also
+shown.
 The reconstruction efficiency in 2011 drops by approximately 4\% between central
 and forward pseudo-rapidities. In 2012 the overall reconstruction efficiency
 improves by approximately 2\% at central pseudo-rapidity, and the drop-off in
@@ -290,6 +293,11 @@ efficiency observed in data and the efficiency predicted by simulation.
 Scale-factors, parameterised as a function of $\eta$ and \et, are applied to
 the \mc\ to correct the reconstruction efficiency to that observed in
 data.
+
+The charge mis-identification rate is also measured using a tag-and-probe
+technique, and is found to be about 0.5\% in the barrel and up to 8\% at the
+limit of the Inner Detector tracker. The rates are observed to be well simulated
+in the \mc~\cite{Aad:2011mk}.
 
 \begin{figure}[h]
 \centering
@@ -394,7 +402,7 @@ respectively.}
 The electron energy resolution is also measured in data. The fractional energy
 resolution is parameterised as: 
 \begin{equation}
-\frac{\sigma E}{E} = \frac{a}{\sqrt{E}} \oplus \frac{b}{E} \oplus{c} 
+\frac{\sigma (E)}{E} = \frac{a}{\sqrt{E}} \oplus \frac{b}{E} \oplus{c} 
 \end{equation}
 where $a$ is the sampling term, $b$ is the noise term and $c$ is the constant
 term. Due to limited statistics, only the constant term is measured in data, and
@@ -554,9 +562,9 @@ cluster matching. The variables cut on are as follows:
         \times 7$ cells centered at the electron cluster position.
         \item \wetatwo, the lateral width of the shower in the second layer of the EM
         calorimeter.
-        \item \Eratio, the ratio of the energy difference between with the largest and second
-        largest energy deposit in the first layer of the EM calorimeter over the
-        sum of their energies, .
+        \item \Eratio, the ratio of the energy difference between the largest and second
+        largest energy deposit in the first layer of the EM calorimeter to the
+        sum of their energies.
         \item \wstot, the total width of the shower in the first layer of the EM
         calorimeter.
     \end{itemize}
@@ -719,7 +727,7 @@ All of the \loose\ cuts are required to be passed, and in addition cuts are made
 on the following variables:
 
 \begin{itemize}
-    \item {\bf Fraction Fraction of cluster energy in the most energetic cell,
+    \item {\bf Fraction of cluster energy in the most energetic cell,
     $f_{\rm max}$.}
     \item {\bf Normalised lateral moment, $\frac{w_{2}}{w_{2} + w_{\rm max}}$} where
     $w_{2}$ is the second moment of $r_{i}$ setting $r_{i} = 0$ for the two most
@@ -759,7 +767,9 @@ from
 \label{fig:el-id-eff-npv}
 \end{figure}
 
-\fig{el-id-eff-npv} shows the electron identification efficiency in 2011 and 2012
+\fig{el-id-eff-npv} shows the electron identification efficiency in 2011 and
+2012, measured in a similar fashion to the reconstruction efficiency described
+above,
 as a function of the number of reconstructed primary vertices in the event.
 Using the 2011 identification requirements, the efficiency can drop by over 5\%
 in events with 18 reconstructed primary vertices with respect to the efficiency

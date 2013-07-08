@@ -57,7 +57,7 @@ In ideal world F lnear and uniform accross all layers
 In real world non-linear, and depends on particle type and energy
 Different response to electronic and hadronic components (e/h != 1)
 Very hard to model!!
-	~25% of energy in shower is invisible - mainly neutrons
+	~25% of energy in shower is invisible - mainly neutrons, also change in binding energy as result of fission
 	1% escaped energy (neutrinos)
 	25% visible non-EM energy (dE/dx) (e.g. hadronic stuff which does ionise)
 	EM energy ~50%

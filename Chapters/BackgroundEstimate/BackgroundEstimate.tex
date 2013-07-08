@@ -56,7 +56,8 @@ in~\tab{mcbg-generators}. In a few cases different generators were used for the
 8~\tev\ analysis with respect to the 7~\tev\ analysis, owing to developments in
 the available \mc\ generators. \ZX\ samples generated with \alpgen\ are
 normalised to the inclusive NNLO \cx\ prediction of the FEWZ
-program~\cite{Gavin:2010az}. The \ttbar\ samples are normalised to the
+program~\cite{Gavin:2010az}; these include the contribution from a \Z\ boson produced
+in association with a hard photon. The \ttbar\ samples are normalised to the
 approximate NNLO calculation of HATHOR~\cite{Aliev:2010zk}. Other samples are
 normalised to the \cx\ predictions of the generator used to produce them.
 %The majority of the generators calculate the \cx\
@@ -284,7 +285,7 @@ pass all of the lepton selection requirements; and \intro{lepton-like-jets},
 denoted $J$, which
 pass most of the selection requirements, but fail a few selected requirements.
 The background is estimated by extrapolating from control regions containing
-two or three \sellep s and one one or two \lljet (s) using the
+two or three \sellep s and one or two \lljet (s) using the
 \intro{\ffactor}, \FF, defined as the ratio of the probability for a background lepton to be
 classified as a \sellep\ to the probability for it to be classified as a \lljet.
 In a sample containing only \bglep s, the \frate\ and \ffactor\ are given by: 
@@ -343,11 +344,12 @@ The background to the four-lepton selection given in~\eqn{bg-4l-true} can
 be rewritten in terms of the number of events in the $LLLJ$ and $LLJJ$ control
 regions as:
 \begin{align}
-N_{4l}^{\rm fake} &= N_{LLLJ} \times \FF - N_{LLJJ} \times \FF^{2} \notag \\
+\label{eqn:bg-master}
+N_{4l}^{\rm fake} &= N_{TTTB} \times \f + N_{TTBB} \times f^{2}  \\
+ &=  N_{TTTB} \times \f + N_{TTBB} \times 2 f^{2} - N_{TTBB} \times \f^{2} \notag \\
  &= N_{TTTB} \times (1-\f) \FF + N_{TTBB} \times 2\f (1 - \f) \FF \notag \\
  &\quad - N_{TTBB} \times (1-\f)^{2} \FF^{2} \notag \\
- &=  N_{TTTB} \times \f + N_{TTBB} \times 2 f^{2} - N_{TTBB} \times \f^{2} \notag \\
- &= N_{TTTB} \times \f + N_{TTBB} \times f^{2} 
+ &= N_{LLLJ} \times \FF - N_{LLJJ} \times \FF^{2} \notag 
 \end{align}
 where use has been made of~\eqn{bg-f-FF-relations}. In reality, observed
 $LLJJ$ and $LLLJ$ events will include some contribution from \ZZllll\ events where
@@ -416,7 +418,8 @@ In order to measure the \fakefactor, a sample of \bglepton s must be
 identified, with a similar composition in terms of the different sources of
 \bglepton s as the signal sample. This is done using a \intro{\Z-tag} sample, selecting 
 events containing an \ossf\ \dilep\ pair passing all of the lepton
-selection requirements. The pair must have invariant mass $|m_{\ell^{+}\ell^{-}}|<20$~\gev, in order to be consistent with a \Z\
+selection requirements. The pair must have invariant mass $|m_{\ell^{+}\ell^{-}}
+- m_{\Z}|<20$~\gev, in order to be consistent with a \Z\
 boson. It is then required that the event contain at least one additional
 pre-lepton. The sample will be dominated by \ZX, \WZ\ and \ZZ\
 events. The additional pre-leptons in \ZX\ events are all background
@@ -435,7 +438,7 @@ is subtracted using \mc. The \Z-tag sample selection is summarised~\tab{Ztag-def
     Trigger & Single electron and muon triggers as described in~\sec{triggers}.\\
     Leptons & An \ossf\ pair of selected leptons.\\
             & $\geq 1$ trigger matched. \\
-    \Z-tag & $|m_{\ell^{+}\ell^{-}}|<20$~\gev \\
+    \Z-tag & $|m_{\ell^{+}\ell^{-}} - m_{\Z}|<20$~\gev \\
     \Etmiss & \Etmiss$<$25~\gev \\
     \hline\hline
   \end{tabular}
@@ -446,7 +449,7 @@ is subtracted using \mc. The \Z-tag sample selection is summarised~\tab{Ztag-def
 
 The pre-leptons are then identified as either $L$ or
 $J$ (or neither), and the \fakefactor s are obtained by dividing the distributions
-of the \lljet\ by the distributions of the \sellep. In this way, \fakefactor s
+of the \sellep s by the distributions of the \lljet s. In this way, \fakefactor s
 parameterised in \pT\ and in $\eta$ are obtained. For a given bin of \pT\ or $\eta$, the \ffactor\ is given by:
 \begin{equation}
 \FF = \frac{N^{\rm data}_{L} - N^{{\rm MC}\; WZ,ZZ}_{L}}
@@ -534,7 +537,7 @@ muons.
             \includegraphics[width=0.47\textwidth]{ffDists7TeV/ForwardMu_pt_J_lin}
         }
 	\subfigure[Selected Calorimeter-Tagged Muons]{
-            \includegraphics[width=0.47\textwidth]{ffDists7TeV/CaloMu_pt_J_lin}
+            \includegraphics[width=0.47\textwidth]{ffDists7TeV/CaloMu_pt_L_lin}
         }
 	\subfigure[Calorimeter-Tagged Muon-Like-Jets]{
             \includegraphics[width=0.47\textwidth]{ffDists7TeV/CaloMu_pt_J_lin}
@@ -571,7 +574,7 @@ muons.
             \includegraphics[width=0.47\textwidth]{ffDists8TeV/ForwardMu_pt_J_lin}
         }
 	\subfigure[Selected Calorimeter-Tagged Muons]{
-            \includegraphics[width=0.47\textwidth]{ffDists8TeV/CaloMu_pt_J_lin}
+            \includegraphics[width=0.47\textwidth]{ffDists8TeV/CaloMu_pt_L_lin}
         }
 	\subfigure[Calorimeter-Tagged Muon-Like-Jets]{
             \includegraphics[width=0.47\textwidth]{ffDists8TeV/CaloMu_pt_J_lin}
@@ -601,6 +604,16 @@ for muons are shown in~\fig{ff-mu-seven} for the
 the \ffactor\ measured in data (black points). For the calculation of the
 background, no use is made of the \ffactor\ estimated from \mcsim. The unparameterised \FF
 s, used as the numerator in~\eqn{factorised-ff}, are given in~\tab{average-ff}.
+
+The large \FF\ values for central and forward muons arise due to the fact that
+objects reaching the muon spectrometer are already very similar to signal muons.
+The assumption in~\eqn{bg-master} that terms proportional to $f^{3}$ and $f^{4}$
+are small and may be ignored is nevertheless still justified, due to the low
+number of $N_{LJJJ}$ and $N_{JJJJ}$ events composed of muon-like jets. In the
+8~\tev\ data, just one $N_{JJJJ}$ event and no $N_{LJJJ}$ events were observed
+in the \mmmm\ final state. Scaling the one $N_{JJJJ}$ event by the average
+fake-factor for central muons gives an additional background contribution of
+$0.02$ events; this is neglected.
 
 \begin{table}[h!]
   \centering
@@ -1048,7 +1061,7 @@ is systematic.}
 An additional \crosscheck\ of the background estimate is performed by estimating
 the background using a data sample composed of events passing the full event
 selection, but with one opposite-signed \dilep\ pair and one same-signed \dilep\
-pair (termed OS-SS). The majority of the irreducible backgrounds due to \Zgamma,
+pair (termed OS-SS). The majority of the reducible backgrounds due to \Zgamma,
 \Z+light-jets, \ttbar, \WW\ and \WZ\ events will contribute to the OS-SS
 selection at the same rate as to the signal selection with two oppositely-signed
 pairs (SS-SS). The exception to this is \Zbb, where leptons from heavy flavour
@@ -1091,7 +1104,7 @@ data, there are also not enough statistics in the data control regions to obtain
 a background shape. For the 7~\tev\ analysis, the background shape is therefore
 taken from \mc\ with a loosened selection. For the background shape, events are
 required to have an opposite-sign pair of leptons passing all of the selection
-requirements. The second pair is not required to be same-signed, and the lepton
+requirements. The second pair is not required to be opposite-signed, and the lepton
 isolation and \dzero-significance requirements are not applied.  Apart from
 this, the full event selection, including mass cuts, is applied.  Applying this
 selection, sufficient statistics are obtained from \mc\ to give reasonable

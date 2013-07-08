@@ -167,7 +167,7 @@ and weak forces into a single theory which later became known as the
 \intro{electroweak} theory. The theory is a gauge theory, guided by requiring that the theory be
 invariant under \intro{local gauge transformations}, that is that the Lagrangian
 be invariant under a set of continuous transformations whose parameters have a space-time dependence. 
-Requiring invariance under a local gauge transformation leads the to the emergence of
+Requiring invariance under a local gauge transformation leads to the emergence of
 vector \intro{gauge fields} with associated \intro{gauge bosons}. Interactions
 between the fermions and the gauge bosons give rise to the forces.
 
@@ -397,8 +397,9 @@ electromagnetic neutral current.
 The gauge bosons and fermions in the \ew\ Lagrangian given
 in~\eqn{ew-lagrangian} are massless. This is clearly a problem as the fermions
 are observed to be massive, and more worryingly the $W$ and \Z\ bosons are
-observed to be extremely massive. Unfortunately, it is not possible to formulate a locally gauge invariant theory with massive
-gauge bosons, and it is not possible to include explicit mass terms for the
+observed to be extremely massive. Unfortunately, explicit mass terms for the
+gauge bosons may not be added to the theory without violating local gauge
+invariance, and it is not possible to include explicit mass terms for the
 fermions as this mixes the left- and right-handed components, which have been
 assigned to different \sutwo\ multiplets. 
 
@@ -422,7 +423,7 @@ longer invariant under gauge transformations.
 The gauge bosons acquire mass by interactions with the field, and it is found
 that:
 \begin{equation}
-M_{W} = \frac{1}{2}gv, \ M_{Z} = \frac{gv}{\cos{\thetaW}}
+M_{W} = \frac{1}{2}gv, \ M_{Z} = \frac{gv}{2 \cos{\thetaW}}
 \end{equation}
 where $v = \mu / \sqrt{\lambda}$ is the vacuum expectation value. 
 
@@ -435,7 +436,7 @@ fermion and are not fixed by the theory, requiring experimental determination.
 
 The introduction of the Higgs field predicts the existence of one further
 fundamental particle, a massive scalar boson known as the \intro{Higgs Boson}
-with mass $m_{H} = \sqrt{2}\mu$. Again, the mass is not predicted by the theory. 
+with mass $m_{H} = \sqrt{2}|\mu|$. Again, the mass is not predicted by the theory. 
 There has
 been much experimental activity in the search for the Higgs boson, and for many
 years it proved elusive. Recently,
@@ -534,7 +535,7 @@ An illustration of a proton-proton collision at a hadron collider is shown in
 protons themselves that interact but their quark and gluon constituents. The interaction between two \intro{incoming} partons (quarks or gluons) from the two initial
 protons is known as the \intro{hard scatter}, which will lead to two or more
 hard outgoing particles. The incoming and any coloured outgoing particles will
-emit further further QCD radiation known as \intro{initial state radiation (ISR)} 
+emit further QCD radiation known as \intro{initial state radiation (ISR)} 
 and \intro{final state radiation (FSR)} in the form of gluons, which in turn can
 split into further partons. Once the outgoing quarks and gluons become far enough from
 one other, the coupling between them becomes strong and they form into colour neutral
@@ -738,7 +739,7 @@ how it is used and its general properties is given.
     included. For this reason \mcatnlo\ is not used for signal simulation,
     though the generator level predictions of \mcatnlo\ are compared to other
     generators in the~\chap{TheoryZZProduction}. \mcatnlo\ is used to model the \ttbar,
-    \WZ\ and \WW\ backgrounds, for which is provides implementations including
+    \WZ\ and \WW\ backgrounds, for which it provides implementations including
     the widths of the bosons.
 
     \item \alpgen~\cite{alpgen} is a LO generator for simulating multi-parton

@@ -9,7 +9,7 @@ tracks, as well as reconstruct the track parameters. As well as interacting with
 the active elements of the detector, particles will also interact with the dead
 material in the \id, leading to multiple scatterings, ionisation
 energy loss and, especially for electrons, radiation energy loss from
-bremsstrahlung. A detailed description of the ATLAS tracking is given
+\brem. A detailed description of the ATLAS tracking is given
 in~\cite{1742-6596-119-3-032014}.
 
 A particle's trajectory can be described by five parameters, $\bf{x_{i}}$. In
@@ -24,7 +24,7 @@ track in the global frame.
 \subsection{Inside-Out Tracking} \label{sec:tracking-std}
 
 In ATLAS, the main tracking algorithm is known as `inside-out' tracking, as it
-begin in the inner layers of the detector and work outwards. The first step is
+begins in the inner layers of the detector and works outwards. The first step is
 the formation of space-points from the measurements in the silicon detectors. In
 the Pixel detector a space-point corresponds simply to a hit in the detector. In
 the SCT space-points are required to have hits in both sides of the module in
@@ -40,7 +40,7 @@ track parameters and covariances taking into account the measurements found on
 the next layer (filtering), as well as refining the estimates for the track
 parameters on the previous layers based on the new measurement. The Kalman
 filter takes into account linear distortions to the track from multiple
-scattering and from ionisation energy loss. Energy loss through brehmsstrahlung
+scattering and from ionisation energy loss. Energy loss through \brem\ 
 is, however, highly non-gaussian, and is not modelled well in this approach.
 Roughly 10\% of seeds will lead to track candidates.
 
@@ -68,7 +68,7 @@ kept only if it improves the quality of the fit.
 The inside-out tracking procedure will fail to find tracks from photon
 conversions or decays of long lived particles in the \id, as these
 particles will not produce hits in the inner layers of the detector and so will 
-not produce seeds. Additionally, inside out-tracking will sometimes
+not produce seeds. Additionally, inside-out tracking will sometimes
 fail due to ambiguous hits shadowing the track seed in the densely populated
 inner layers of the silicon detectors. Further, high energy loss at the outer
 radii of the SCT may cause the track to change direction in the bending plane
@@ -76,8 +76,9 @@ and the extension search to go in the wrong direction.
 
 A complementary tracking procedure called `outside-in' tracking attempts to
 solve these problems by starting from the TRT and working inwards. It begins by
-searching for track segments in the TRT using hits not associated with a silicon
+searching for track segments in the TRT using hits not already associated with a silicon
 track extension, using a Hough transform to identify
-tracks~\cite{Baines:683897}. These track segments are then fitted using a Kalman
-filter to take into account the drift-time measurements. These are then extended
-back into the SCT and Pixel detectors.
+tracks~\cite{Baines:683897}. These track segments are fitted using a Kalman
+filter to take into account the drift-time measurements. They are then extended
+back into the SCT and Pixel detectors, where hits not already associated to
+tracks are associated to them.

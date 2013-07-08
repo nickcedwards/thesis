@@ -84,7 +84,7 @@ F_{11}}{F_{00}}
 \end{eqnarray}
 The \Fij\ coefficients are completely specified by the kinematics of the
 incoming and outgoing particles, and so must be evaluated on an event by event
-basis. They are independent of the values of the anomalous coupling parameters
+basis, and the weight for each event must be calculated separately. The \Fij\ are independent of the values of the anomalous coupling parameters
 assumed in the generation of the sample, although they do depend on the choice of
 \formfactor. 
 
@@ -130,7 +130,7 @@ are independent. When considering all four couplings at the same time, the
 matrix $\hat{A}$ is 15$\times$15 and \dsigmavec\ and $\vec{F}$ are
 15-dimensional vectors.
 
-The \TGC\ matrix elements are obtained from the \BR\ code~\cite{Baur:2000ae};
+The differential \TGC\ matrix elements are obtained from the \BR\ code~\cite{Baur:2000ae};
 matrix elements from the \BHO~\cite{bho} code are also used as a \crosscheck.
 %The \TGC\ matrix elements are obtained from the next-to-leading order \mc\
 %generator \BHO~\cite{bho}. Matrix elements from the leading-order \BR\
@@ -200,8 +200,8 @@ non-reweighted TGC0 sample (black line).
 
 In order to extract limits on the \TGC s, an estimate of the number of expected
 events passing the selection requirements as a function of the \TGC\ parameters
-must be obtained. The expect yield is parameterised by yield coefficients \Yij,
-which are be obtained from the \Fij\ as:
+must be obtained. The expected yield is parameterised by yield coefficients \Yij,
+which are obtained from the \Fij\ as:
 \begin{equation}
 %Y_{00} = N_{\rm expected}^{\rm SM} \; 
 \Yij = \sum_{\rm events} \left( \frac{F_{ij}}{ {\rm d}\sigma_{\rm sample} } \right) 
@@ -408,14 +408,17 @@ parameters, $C$ is the covariance matrix, and $\mu^{i}$ is the expected number o
 \mu^i(\vec{f},\vec{\beta})
 = N_\mathrm{sig}^i(\vec{f})(1 + \beta_i) + N_\mathrm{bkg}^i(1 + \beta_{i+m}).
 \end{equation}
-with:
-\begin{equation}
-N_{\rm sig}(\vec{f}) =  Y_\mathrm{\rm SM} + \sum_{i,V} (Y_{f_i^V}\cdot
-f_i^V + Y_{f_i^Vf_i^V}\cdot (f_i^V)^2 ) 
+%with:
+%\begin{equation}
+%N^{i}_{\rm sig}(\vec{f}) =  Y^{i}_\mathrm{\rm SM} + \sum_{j,k,V,V'} (Y_{f_j^V}\cdot
+%f_j^V + Y_{f_j^Vf_i^V}\cdot (f_j^V)^2 ) 
 %\right) \cdot\mathcal{L}\cdot{C_{ZZ}}.
-\end{equation}
-where the \Yij\ already take into account the reconstruction acceptance and are
-normalised to the integrated luminosity.
+%\end{equation}
+where $N_\mathrm{sig}^i(\vec{f})$ is the expected signal yield in bin $i$ as a
+function of the \TGC\ parameters, as given by~\eqn{Nexp_TGC}, but where a
+separate set of yield coefficients \Yij\ must be used for each bin $i$.
+%where the \Yij\ already take into account the reconstruction acceptance and are
+%normalised to the integrated luminosity.
 
 A test statistic \teststat\ is constructed as the ratio of the \maxprofilellh\
 at a specific test value of the \TGC\ parameters $\vec{f}$ to the full \maxprofilellh:
@@ -439,14 +442,34 @@ confidence interval is defined by all values of $\vec{f}$ for which
 $p(\vec{f})\geq 5\%$. In practice, the interval is determined by starting from the best
 fit value and working outwards in small steps of the parameters until the
 p-value falls below 5\%.
+
 Limits are set for one parameter at a time, holding the
 other parameters at their \sm\ values of zero (termed \intro{one-dimensional
 limits}), and also by varying two parameters simultaneously (\intro{two-dimensional
-limits}). The two-dimensional limits are extracted by first finding the best-fit value
-the two-dimensional \TGC\ parameter space, then finding one-dimensional limits along a radial line
-moving out from the best-fit value. This is repeated for 50 evenly spaced radial
+limits}). 
+Since the sensitivity is contained in a single bin, there is effectively only a
+single observable, the number of observed events in the most
+sensitive bin $N_{obs}$, which is a function of the \TGC\ parameters. There
+is therefore no sensitivity to the individual parameters but only to their
+combination. In this therefore not possible to set a traditional `one-dimensional
+limit' on a single parameter without assuming values for the others, but only to
+set a limit assuming some
+value for all of the other
+parameters. For the `one-dimensional' limits it is assumed that the other
+parameters are zero; this corresponds to the `two-dimensional' limit along the line where
+the other parameter is zero.
+The two-dimensional limits are extracted by first finding the best-fit point in
+the two-dimensional \TGC\ parameter space, then working outwards along a radial line
+from the best-fit point and including in the exclusion region all points with a
+p-value $p\geq5\%$. This is repeated for 50 evenly spaced radial
 lines; the 95\% confidence contour is then the ellipse connecting the set of
 points which correspond to the 95\% limits on the radial spokes.
+
+%The two-dimensional limits are extracted by first finding the best-fit value
+%the two-dimensional \TGC\ parameter space, then finding one-dimensional limits along a radial line
+%moving out from the best-fit value. This is repeated for 50 evenly spaced radial
+%lines; the 95\% confidence contour is then the ellipse connecting the set of
+%points which correspond to the 95\% limits on the radial spokes.
 
 The expected sensitivity is obtained using pseudo-experiments. In each
 pseudo-experiment, $N^{i}_{sig}$ and $N^{i}_{bg}$ are given by the \sm\

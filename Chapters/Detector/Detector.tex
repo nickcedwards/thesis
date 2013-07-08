@@ -34,7 +34,7 @@ keep the beams focussed. The magnets must be cooled to 2K to retain their superc
 properties; this is achieved with a helium-based cooling system. 
 
 Protons are injected into the LHC from the SPS (Super Proton Synchrotron) in
-bunches, at a centre of mass energy of 450 \GeV. They are then accelerated to the desired
+bunches, at an energy of 450~\GeV. They are then accelerated to the desired
 collision energy by means of superconducting Radio Frequency (RF) cavities. Once the
 particles are accelerated to full energy, the RF cavities are used to keep the
 particles in their bunches. The bunches are brought to collision at four points
@@ -59,7 +59,7 @@ $\mathcal{L}$ and the collision \cx\ $\sigma$, related by:
 The total \cx\ for
 proton-proton collisions at the LHC has been measured to be
 \measStatSyst{98.3}{\errSym{0.2}}{\errSym{2.8}}~mb\footnote{$1 \rm{b} = 10^{-28}
-m^{2}$} at a centre of mass energy of 7 \tev~\cite{0295-5075-96-2-21002}, thus
+m^{2}$} at a centre of mass energy of 7~\tev~\cite{0295-5075-96-2-21002}, thus
 at the LHC design luminosity of $1 \times 10^{34}~\rm{cm}^{-2}\rm{s}^{-1}$
 collisions occur at a rate of approximately 100 MHz. 
 
@@ -71,7 +71,7 @@ possible. The instantaneous luminosity is given by:
 %(neglecting relativistic effects for clarity):
 
 \begin{equation}
-\mathcal{L} = \frac{N_{\rm{b}}^{2}n_{\rm{b}}f_{\rm{rev}}\gamma_{\rm{r}}}{4\pi
+\mathcal{L} = \frac{N_{\rm{b}}^{2}n_{\rm{b}}f_{\rm{rev}} F \gamma_{\rm{r}}}{4\pi
 \epsilon_{n}\beta^{*}}
 \end{equation}
 
@@ -83,13 +83,13 @@ where:
     \item $f_{\rm{rev}}$ is the revolution frequency, 
     \item $F$ is a geometric function to account for the crossing angle between the beams (since
 they are generally not collided head on), 
+    \item $\gamma_{r}$ is the relativistic Lorentz factor $(1 -
+    v^2/c^2)^{-\frac{1}{2}}$.
     \item $\epsilon_{n}$ is the beam emittance,
 a measure of how uniform the momentum of particles in the beam is or how small
 the beam can be `squeezed',
     \item $\beta^{*}$ is a measure of how narrow the beam is at the interaction
     point, or how `squeezed' it is,
-    \item $\gamma_{r}$ is the relativistic Lorentz factor $(1 -
-    v^2/c^2)^{-\frac{1}{2}}$.
 \end{itemize}
     
 The geometrical \cx\ of the beam at
@@ -338,7 +338,7 @@ concentric cylindrical layers surrounding the beam pipe, referred to as
 barrels. A plan view of a quarter of the \id\ is shown
 in~\fig{id-plan}. The Pixel and SCT detectors provide coverage for $|\eta|<2.5$,
 with the TRT enhancing pattern recognition and track momentum resolution for
-$|\eta|<2.0$
+$|\eta|<2.0$.
 
 \begin{figure}[h]
 \centering
@@ -372,9 +372,8 @@ there are approximately $80.4\times 10^{6}$ readout channels.
 
 Particles with \modetalt{2.0} will traverse three layers of the detector; in most case
 producing three space-points. The intrinsic accuracy of the position
-measurement is 10 \micro m in $(\rm{R}-\phi)$ and 155 \micro m in \z\ in the
-barrel layers and 10 \micro m in $(\rm{R}-\phi)$ and 155 \micro m in $\phi$ in
-the endcaps.
+measurement is 10 \micro m in $(\rm{R}-\phi)$ and 115 \micro m in \z\ (\R) in the
+barrel (endcaps).
 
 \subsubsection{Semiconductor Tracker (SCT)}
 
@@ -435,8 +434,9 @@ resolution of the detector is 17~\micro m in ($\rm{R}-\phi$) and 580~\micro m in
 
 The Transition Radiation Tracker is a straw drift tube tracker, with additional
 particle identification capabilities from transition radiation. It consists of
-modules formed from bundles of 4 mm diameter straws, filled with
-$\rm{XeCO_{2}O_{2}}$ gas. A tungsten wire 
+modules formed from bundles of 4 mm diameter straws, filled with a
+gas mixture consisting of 70\% $\rm{Xe}$, 27\% $\rm{CO_{2}}$
+and 3\% $\rm{O_{2}}$. A tungsten wire 
 %of 30 \micro m diameter 
 runs down the centre of the tube to collect charge. In the barrel the straws run
 parallel with the beam axis and 
@@ -489,7 +489,7 @@ Different absorbers are required depending on whether the particle interacts
 via the electromagnetic or the strong force, and the properties of the showers that develop
 are different. The ATLAS calorimeters are divided into two distinct subsystems,
 the \emag\ calorimeter and the hadronic calorimeter. An electromagnetic
-shower consists of electrons and photons, and is normally fully contained in the
+shower consists of electrons, positrons and photons, and is normally fully contained in the
 calorimeter; thus it can be fully detected. Hadronic showers involve many more
 particles types, including neutrons, muons, and neutrinos which escape detection, and tend
 to be longer and wider, often spilling out of the calorimeter. The full energy
@@ -541,10 +541,10 @@ divided into three layers, with different cell granularity. The first layer is
 divided into cells of \deltaetadeltaphi{0.0031}{0.098}. The fine granularity in
 $\eta$ of this layer is used to determine the pseudo-rapidity of the particle,
 and for measurements of the shower shape, an important input to particle
-identification. The second layer has cell size \deltaetadeltaphi{0.0245}{0.025}
+identification. The second layer has cell size \deltaetadeltaphi{0.025}{0.0245}
 and contains the largest energy fraction of the shower, measuring approximately
 16 radiation lengths. The third layer, with cell size
-\deltaetadeltaphi{0.0245}{0.05}, collects the tail of the shower. The first
+\deltaetadeltaphi{0.05}{0.0245}, collects the tail of the shower. The first
 wheel of the LAr calorimeter is also segmented into three layers with the same
 granularity as the barrel. The second wheel has a coarser granularity that
 varies as a function of pseudorapidity. A liquid argon pre-sampler exists for
@@ -584,7 +584,7 @@ The scintillators are connected at each end to readout photomultiplier tubes by
 wavelength-shifting fibres. The fibres are grouped together to form readout
 cells, giving projective towers in $\eta$. There are three layers of cells, with
 a granularity of \deltaetadeltaphi{0.1}{0.1} in the first two layers, and
-\deltaetadeltaphi{0.1}{0.2} in the third.
+\deltaetadeltaphi{0.2}{0.1} in the third.
 
 The HEC consists of two wheels per endcap, HEC1 and HEC2, located directly
 behind the EMEC and sharing the same cryostat. Each wheel has two layers of
@@ -642,7 +642,7 @@ muon trigger has a time resolution of between 1.5 ns and 4 ns.
 Precision measurements in the bending ($R-z$) plane are obtained from Monitored
 Drift Tubes (MDT) and Cathode Strip Chambers (CSC). The MDT cover \modetalt{2.7}
 and consists of three layers, referred to as \intro{stations}. Each station
-consists of two \intro{mulitlayers} formed of three of four layers of tubes,
+consists of two \intro{mulitlayers} formed of three or four layers of tubes,
 sandwiched between layers of RPC or TGC.
 %The mechanical isolation of the sensor wire in each tube from it's neighbours
 %give a reliable system design.
@@ -662,7 +662,7 @@ An overview of the ATLAS trigger system is shown in~\fig{trigger_overview}.
 
 The
 first level, L1, uses fast custom electronics to identify the presence of signals from a hard scattering such as
-high \pt\ electrons, muons or jets, or a large amount or missing transverse
+high \pt\ electrons, muons or jets, or a large amount of missing transverse
 energy. The L1 trigger has a maximum latency of 2.5 \micro s, and must reduce
 the rate to approximately 60 kHz (the design L1 rate was 75 kHz, however
 significant detector dead-time has been observed above 65 kHz). To meet this
@@ -720,7 +720,7 @@ results with theoretical models. A custom detector simulator, which uses the
 \geant~\cite{Agostinelli2003250} toolkit, is used to simulate interactions
 between particles and matter in the ATLAS detector. It takes as input the output
 of Monte-Carlo generators as described in~\sec{Theory-MC} in HepMC format, with all
-particles with a lifetime less than $c \tau > 10$ mm decayed by the generator.
+particles with a lifetime less than $c \tau = 10$ mm decayed by the generator.
 The simulator then propagates the particles through the ATLAS detector, using
 \geant\ to simulate their interaction with the material of the detector. 
 

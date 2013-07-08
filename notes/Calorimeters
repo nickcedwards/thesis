@@ -82,5 +82,7 @@ FCAL
 - 10 int length deep. Three modules in each EC - 1 EM (FCal1) and 2 hadronic (FCal2/3)
 - To optimise the resolution and the heat removal copper was chosen as the absorber for FCal1, while mainly tungsten was used in FCal2 and FCal3 to provide containment and minimise the lateral spread of hadronic showers. 
 - Sheilding plug of copper alloy behind FCAl3 to reduce bg to muon EC system.
-- FCal1 made of copper plates stacked behind each other. 12,260 holes carry electrodes - co-ax copper rod and tube separated by a plastic fibre and a small LAr filled gap.
+- FCal1 made of copper plates stacked behind each other. 12,260 holes carry electrodes - co-ax copper rod and tube separated by a plastic fibre and a small LAr filled gap. 
+	- Copper optimises resolution (why??) and heat removal
 - FCal2 and FCal3 consist of two copper plates 2.35cm thick, which similar tubes to FCal1. Space between endplates and tubes filled with tungsten slugs.
+	- FCAL 2/3 tungsten used to limit lateral shower spread and provide containement 

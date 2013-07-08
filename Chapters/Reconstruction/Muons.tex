@@ -33,7 +33,8 @@ muon trigger was 15 \GeV; in 2012 it was 20 \GeV.
 
 The muon HLT uses similar algorithms to the online muon reconstruction described
 below. At L2, each L1 muon candidate is refined by including precision hit data
-from the MDT and CSC in a RoI defined by the L1 candidate. MS tracks are
+from the MDT and CSC in a RoI defined by the L1 candidate. Muon spectrometer
+(MS) tracks are
 built by opening narrow roads around the L1 trigger chamber hits and associating
 hits from other chambers with the track. A rough \pt\ measurement is obtained
 using a lookup table. The MS tracks are then combined with ID tracks,
@@ -190,7 +191,7 @@ selection are used, and muon candidates passing either are accepted. Calorimeter
 tagged muons are used to recover efficiency at \modetalt{0.1} where there is a
 gap in the muon-spectrometer.
 
-\subsubsection{Reconstruction efficiencies}
+\subsubsection{Reconstruction Efficiencies}
 
 ~\fig{mu-reco-eff} shows the observed reconstruction efficiency for muons
 reconstructed as either \combined\ or \segmentTagged\ in the 2011 data, measured
@@ -202,7 +203,8 @@ it is seen that they effectively recover the loss in efficiency at
 \modetalt{0.1}. The muon reconstruction efficiency is seen to be almost constant
 as a function of \pt. In both \pt\ and $\eta$ good agreement is seen between the
 \mcsim\ and the data, but as with the electrons, scale-factors are applied to
-the \mc\ to reproduce the efficiency observed in data.
+the \mc\ to reproduce the efficiency observed in data. 
+The muon charge mis-identification rate is found to be negligible.
 
 \begin{figure}[h]
 \centering
@@ -256,11 +258,14 @@ of the reconstructed di-muon invariant mass peak at the \Z\ pole is fitted to a
 convolution of a Breit-Wigner modelling the natural width of the \Z\ boson, and
 a Gaussian modelling the muon momentum measurement resolution. The distributions
 measured in the ID and the MS are fitted independently to obtain separate
-measurements of the di-muon mass resolution in the two sub-detectors.  An
+measurements of the di-muon mass resolution in the two sub-detectors. An
 iterative fitting procedure is then carried out to obtain the single muon
-resolution parameters: a series of simulated di-muon mass distributions are
+resolution parameters $p_{2}^{ID}$, $p_{1}^{MS}$ and $p_{2}^{MS}$. A series of simulated di-muon mass distributions are
 produced for various momentum resolution values and then matched to the one
-observed in data.  A smearing is applied to the simulated muon momentum in order
+observed in data. The difference between the independent momentum measurements
+in the ID and MS is included in the fit.  The ID multiple scattering term $p_{2}^{ID}$ is determined
+separately using the reconstructed $K_{s}^{0}$ mass and the observed \JPsi
+width. A smearing is applied to the simulated muon momentum in order
 to reproduce the resolution obtained in data. 
 
 %The smeared MS resolution is

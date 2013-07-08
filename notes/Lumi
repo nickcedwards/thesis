@@ -12,7 +12,7 @@ So can determine L from any measurement of <mu>/sigma
 Main techniques:
 
 - Event counting. Determine fraction of bunch crossings during which some sort of event happens (e.g. induces at least one hit in the tracker, or Z counting).
-- Hit counting: count the number of hits e.g. electronics channels of clusters above a threshold, pre bunch crossing.
+- Hit counting: count the number of hits e.g. electronics channels of clusters above a threshold, per bunch crossing.
 - Particle counting: determine the distribiton of the number of particles per bunch crossing - e.g. by inferring from tracks or total ionisation current in LAr.
 
 Currently Atlas only uses event counting.

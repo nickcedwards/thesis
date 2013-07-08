@@ -273,9 +273,9 @@ The \ZZsllll\ fiducial \cx , allowing one \Z\ to be off-shell ($ZZ^*$), is defin
 \item All leptons satisfying the same kinematics requirements as above:
 $\pT^{\ell} > 7\GeV$,
 $|\eta^{\ell}| < 3.16$,
-and $\mathrm{min}(|\Delta R(\ell,\ell)|) > 0.2$.
+and $\mathrm{min}(\Delta R(\ell,\ell)) > 0.2$.
 \end{itemize}
-In this case the tighter mass cut is applied to the dilepton pair furthest from the \Z\
+In this case the tighter mass cut is applied to the dilepton pair closest to the \Z\
 boson mass.
 
 \subsubsection{8 \tev\ Fiducial \CX\ Definitions}
@@ -422,7 +422,7 @@ $66<m_{12}<116$~GeV,   $66<m_{34}<116$~GeV & \TheoryCxSevenOnShellWithStat & \Th
 \TheoryCxSevenOnShellScaleErrPerc  \\
 
 \hline
-$66<m_{12}<116$~GeV,  $66<m_{34}<116$~GeV, \\ $\pT(\ell)>7$~GeV,  $|\eta(\ell)|<3.16$, $\dR<0.2$ & \TheoryCxSevenOnShellFidSevenTeVWithStat & 
+$66<m_{12}<116$~GeV,  $66<m_{34}<116$~GeV, \\ $\pT(\ell)>7$~GeV,  $|\eta(\ell)|<3.16$, $\dR>0.2$ & \TheoryCxSevenOnShellFidSevenTeVWithStat & 
 \TheoryCxSevenOnShellFidSevenTeVPDFerrPerc &
 \TheoryCxSevenOnShellFidSevenTeVScaleErrPerc 
 \\
@@ -431,7 +431,7 @@ $66<m_{12}<116$~GeV, $m_{34}>20$~GeV    & \TheoryCxSevenOffShellWithStat & \Theo
 \TheoryCxSevenOffShellScaleErrPerc  
 \\
 \hline
-$66<m_{12}<116$~GeV, $m_{34}>20$~GeV, \\ $\pT(\ell)>7$~GeV, $|\eta(\ell)|<3.16$, $\dR<0.2$      &  \TheoryCxSevenOffShellFidSevenTeVWithStat & 
+$66<m_{12}<116$~GeV, $m_{34}>20$~GeV, \\ $\pT(\ell)>7$~GeV, $|\eta(\ell)|<3.16$, $\dR>0.2$      &  \TheoryCxSevenOffShellFidSevenTeVWithStat & 
 \TheoryCxSevenOffShellFidSevenTeVPDFerrPerc &
 \TheoryCxSevenOffShellFidSevenTeVScaleErrPerc 
 %\bigstrut
@@ -454,7 +454,7 @@ $66<m_{12}<116$~GeV,   $66<m_{34}<116$~GeV & \TheoryCxEightOnShellWithStat &
 
 \hline
 $66<m_{12}<116$~GeV,  $66<m_{34}<116$~GeV, \\ $\pT(\ell)>7$~GeV,
-$|\eta(\ell)|<2.7$, $\dR<0.2$ & \TheoryCxEightOnShellFidEightTeVWithStat & 
+$|\eta(\ell)|<2.7$, $\dR>0.2$ & \TheoryCxEightOnShellFidEightTeVWithStat & 
 \TheoryCxEightOnShellFidEightTeVPDFerrPerc &
 \TheoryCxEightOnShellFidEightTeVScaleErrPerc 
 \\
@@ -591,7 +591,9 @@ $|\eta(\ell)|<2.7$, $\dR<0.2$      & \TheoryGGPercEightOnShellFidEightTeV \\
 Figures~\ref{fig:gen-comp-7-8-ZZ} and ~\ref{fig:gen-comp-7-8-ZZs} show comparisons of kinematic distributions in \ZZllll\
 decays at 7 \tev\ and 8 \tev, simulated using the \powhegbox\cite{Melia:2011tj} generator
 to model the quark-antiquark annihilation process and the \ggtwoZZ\cite{gg2ZZ} generator to
-model the gluon-gluon fusion process. 
+model the gluon-gluon fusion process, where the samples from the two generators
+are combined according to the percentages given
+in~\tab{theory-gg-frac}.
 %In both cases the CT10~\cite{CT10}
 %\partDF\ set is used, and the factorisation and renormalisation scales are set
 %to $\mu_{R} = \mu_{F} = \mZZ$. 
@@ -959,7 +961,7 @@ singly-resonant $\Z\ra\llll$ decays; these events are all rejected by the
     \Z\ bosons
     are required to have \sstooos. Figure (a)
     shows the invariant mass distribution for the di-electron pair whilst Figure 
-    (b) shows the invariant distribution for the di-muon pair.
+    (b) shows the invariant mass distribution for the di-muon pair.
     } 
     
     \label{fig:gen-comp-mZ} 
@@ -985,7 +987,7 @@ singly-resonant $\Z\ra\llll$ decays; these events are all rejected by the
     second approach, is also shown for comparison. All distributions are
     normalised to unit area, and both \Z\ bosons are required to have \sstooos. Figure (a)
     shows the invariant mass distribution for the di-electron pair whilst Figure 
-    (b) shows the invariant distribution for the di-muon pair.
+    (b) shows the invariant mass distribution for the di-muon pair.
 }
     \label{fig:gen-comp-SherpaQED}
 \end{figure}
@@ -1074,7 +1076,7 @@ treatment leaves the mass of each dilepton pair and of the four-lepton system in
 treatment leaves only the mass of the four-lepton system invariant. \photos\ uses the
 $(\ell\ell)(\ell'\ell')$ approach, whilst the \sherpa\ samples used in
 ~\fig{gen-comp-mZ}
-use the $(llll)$ approach. 
+use the $(\ell\ell\ell\ell)$ approach. 
 
 ~\fig{gen-comp-SherpaQED} shows the difference 
 between the \Z\
@@ -1178,7 +1180,7 @@ fixed \shat\ it is trivial to convert between coupling parameters derived with
 different choices of $\Lambda$ and $n$ and at different values of \shat. 
 Unfortunately at hadron colliders limits arise
 from integration of a range of \shat, so it is not possible to compare
-limits derived at different $\Lambda$ $n$ or for different ranges of \shat. 
+limits derived at different $\Lambda$, $n$ or for different ranges of \shat. 
 Limits are therefore often also derived
 without a \formfactor\ (or equivalently, taking $\Lambda = \infty$) to allow
 comparison between the results of different experiments.
@@ -1303,11 +1305,11 @@ all-hadronic channel, which suffered from high backgrounds from $e^+e^-
 network method was used to distinguish the signal events from the background. A
 log-likelihood fit of the neural network output and the observed mass spectra in
 the other channels was used to combine the channels, and gave a \cx\ of
-$\sigma_{ZZ} = 0.30^{+0.22 +0.07}_{-0.16 -0.03}$, in very good agreement with
+$\sigma_{ZZ} = 0.30\;^{+0.22}_{-0.16}\;^{+0.07}_{-0.03}~\pb$, in very good agreement with
 the \sm\ prediction. 
 
 Measurements of the \ZZ\ production \cx\ in $e^+e^-$ collisions were later
-been made by all four LEP experiments at centre of mass energies between 183
+made by all four LEP experiments at centre of mass energies between 183
 \gev\ and 209
 \gev~\cite{Abbiendi:2003va,Abdallah:2003dv,Acciarri:1999ug,Schael:1166743}.
 These have been combined at each centre of mass energy using a \chisquared\
@@ -1388,7 +1390,7 @@ pairs. No events were observed passing this selection.
 Limits were set by comparing observed number of events with the yields predicted in
 samples simulated with different values of the anomalous couplings.
  %this is used to form a likelihood for that point. 
- The resulting 95\% confidence limits obtained bu varying one
+ The resulting 95\% confidence limits obtained by varying one
 parameter at a time and holding the rest at zero are shown
 in~\tab{prev-tgc-limits}. Two-dimensional limits were also
 set.

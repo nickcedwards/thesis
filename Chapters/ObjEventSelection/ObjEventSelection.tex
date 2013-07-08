@@ -539,7 +539,7 @@ parameter estimation, but are otherwise treated as \standAlone.
         }
 \caption[Fraction of forward muons which are \combined\ muons as a function of
 $\eta$]{Fraction of forward
-muons which are have an ID track and are \combined\ muons, as a function of
+muons which have an ID track and are \combined\ muons, as a function of
 $\eta$. The fractions are estimated from \mc\ simulation; the error bars show
 statistical uncertainties.}
 \label{fig:fwdmu-frac-combined}
@@ -710,28 +710,71 @@ predicted by the simulation.
 \label{sec:triggers}
 
 Candidate \ZZ\ events are triggered on using the lowest threshold un-prescaled single-electron or
-single-muon triggers, as descried in Section~\ref{sec:reco-el-triggers}
+single-muon triggers, as described in Section~\ref{sec:reco-el-triggers}
 and~\ref{sec:reco-mu-triggers}. For the \eemm\ final state, the event may be selected using either
 the electron or the muon trigger. The triggers used in the
 different data taking periods and the
 associated integrated luminosities are shown in~\tab{objSel-trigger-el} for the electron
 triggers and~\tab{objSel-trigger-mu} for the muon triggers.
 
+%\begin{table}[htbp]
+%\begin{center}
+%%\small
+%\begin{tabular}{lccc p{5cm}}
+%\hline \hline
+%Period & Trigger & \pt\ Threshold (GeV) & Int. Luminosity (\ifb) \\
+%\hline
+%\multicolumn{3}{l}{ \bf 2011 (7~\tev\ data) } \\
+%B - I & \texttt{e20\_medium} & 20 &  1.65 \\
+%J - K & \texttt{e22\_medium} & 22 & 0.91 \\
+%L - M & \texttt{e22vh\_medium1} & 22 & 2.76 \\ \hline
+%%L - M & \texttt{e22vh\_medium1} & 22 & 2.76 & Variable L1 thresholds; hadronic leakage requirement \\ \hline
+%\hline
+%\multicolumn{3}{l}{ \bf 2012 (8~\tev\ data) } \\
+%A - M & \multicolumn{1}{p{4cm}}{\centering \texttt{e24vhi\_medium1} $||$ \texttt{e60\_medium1}} & 24 & \LumiTotalReadyTwentyTwelve \\
+%\hline\hline
+%\end{tabular}
+%\end{center}
+%\caption{Electron triggers used in the different data taking periods.}
+%\label{table:objSel-trigger-el}
+%\end{table}
+%
+%\begin{table}[htbp]
+%\begin{center}
+%%\small
+%\begin{tabular}{lccc p{5cm}}
+%\hline \hline
+%Period & Trigger & \pt\ Threshold (GeV) & Int. Luminosity (\ifb) \\
+%\hline
+%\multicolumn{3}{l}{ \bf 2011 (7~\tev\ data) } \\
+%B - I & \texttt{mu18\_MG} & 18 &  1.65 \\
+%J - M & \texttt{mu18\_MG\_medium} & 18 & 3.67 \\
+%%L - M & \texttt{e22vh\_medium1} & 22 & 2.76 & Variable L1 thresholds; hadronic leakage requirement \\ \hline
+%\hline
+%\multicolumn{3}{l}{ \bf 2012 (8~\tev\ data) } \\
+%A - M & \multicolumn{1}{p{4cm}}{\centering \texttt{mu24i\_tight} $||$ \texttt{mu36\_tight}} & 24 & \LumiTotalReadyTwentyTwelve \\
+%\hline\hline
+%\end{tabular}
+%\end{center}
+%\caption{Muon triggers used in the different data taking periods.}
+%\label{table:objSel-trigger-mu}
+%\end{table}
+
 \begin{table}[htbp]
 \begin{center}
 %\small
 \begin{tabular}{lccc p{5cm}}
 \hline \hline
-Period & Trigger & \pt\ Threshold (GeV) & Int. Luminosity (\ifb) \\
+Period & \Et\ Threshold (GeV) & Isolation Requirement & Int. Luminosity (\ifb) \\
 \hline
 \multicolumn{3}{l}{ \bf 2011 (7~\tev\ data) } \\
-B - I & \texttt{e20\_medium} & 20 &  1.65 \\
-J - K & \texttt{e22\_medium} & 22 & 0.91 \\
-L - M & \texttt{e22vh\_medium1} & 22 & 2.76 \\ \hline
-%L - M & \texttt{e22vh\_medium1} & 22 & 2.76 & Variable L1 thresholds; hadronic leakage requirement \\ \hline
+B - I & 20 &  None & 1.65 \\
+J - K & 22 &  None & 0.91 \\
+L - M & 22 &  None & 2.76 \\ 
+%L - M & \texttt{e22vh\_medium1} & 22 & 2.76 & Variable L1 thresholds; hadronic leakage requirement \\ 
 \hline
 \multicolumn{3}{l}{ \bf 2012 (8~\tev\ data) } \\
-A - M & \multicolumn{1}{p{4cm}}{\centering \texttt{e24vhi\_medium1} $||$ \texttt{e60\_medium1}} & 24 & \LumiTotalReadyTwentyTwelve \\
+A - M & 24 &  \ptconetwentylt{0.10}  & \LumiTotalReadyTwentyTwelve \\
 \hline\hline
 \end{tabular}
 \end{center}
@@ -744,15 +787,15 @@ A - M & \multicolumn{1}{p{4cm}}{\centering \texttt{e24vhi\_medium1} $||$ \texttt
 %\small
 \begin{tabular}{lccc p{5cm}}
 \hline \hline
-Period & Trigger & \pt\ Threshold (GeV) & Int. Luminosity (\ifb) \\
+Period & \pt\ Threshold (GeV) & Isolation Requirement & Int. Luminosity (\ifb) \\
 \hline
 \multicolumn{3}{l}{ \bf 2011 (7~\tev\ data) } \\
-B - I & \texttt{mu18\_MG} & 18 &  1.65 \\
-J - M & \texttt{mu18\_MG\_medium} & 18 & 3.67 \\
+B - I & 18 &  None & 1.65 \\
+J - M & 18 & None & 3.67 \\
 %L - M & \texttt{e22vh\_medium1} & 22 & 2.76 & Variable L1 thresholds; hadronic leakage requirement \\ \hline
 \hline
 \multicolumn{3}{l}{ \bf 2012 (8~\tev\ data) } \\
-A - M & \multicolumn{1}{p{4cm}}{\centering \texttt{mu24i\_tight} $||$ \texttt{mu36\_tight}} & 24 & \LumiTotalReadyTwentyTwelve \\
+A - M & 24 & \ptconetwentylt{0.12} & \LumiTotalReadyTwentyTwelve \\
 \hline\hline
 \end{tabular}
 \end{center}
@@ -1332,7 +1375,8 @@ the same algorithm as is used in the data and the reconstructed MC is applied; t
 picking the pairing that minimises the sum of the distances of the pairs from
 the PDG \Z\ boson mass. It is found from applying this procedure to the \eemm\
 sample, ignoring lepton-flavour, that the number of events falling in the
-fiducial volume is over-estimated by the algorithm, by $2.84\pm0.03\%$
+fiducial volume is over-estimated by the algorithm with respect to the number
+obtained by choosing the correct pair based on lepton-flavour, by $2.84\pm0.03\%$
 for the 7~\tev\ analysis with the \ZZ\ selection, by $7.16\pm0.08\%$ for the
 7~\tev\ analysis with the \ZZs\ selection and by $2.66\pm0.01\%$ for the
 8~\tev\ analysis.
@@ -1370,7 +1414,11 @@ in final states with electrons; as much as
 6\% in the \eeee\ final state at 7~\tev. This is attributed to the higher
 proportion of leptons at low \pt\ in the \ZZs\ selection, and the fact that the
 electron identification efficiency drops off significantly below
-20~\gev\ (see~\fig{el-id-eff-et}).
+20~\gev\ (see~\fig{el-id-eff-et}). The contamination from events outside the
+fiducial volume is smaller for the \eemm\ final state as there is no
+contribution from events generated outside the fiducial volume incorrectly passing the
+\dilep\ mass cuts as a result of mis-pairing, since there is no mis-pairing in
+in \eemm\ decays.
 
 %The reconstruction efficiency is seen to 
 
@@ -1656,10 +1704,10 @@ in~\sec{systematic-estimate-tables}.
 \subsubsection{Electron Systematic Uncertainties}
 
 \begin{itemize}
-     \item {\bf Reconstruction Efficiency, Identification Efficiency:}
+     \item {\bf Reconstruction and Identification Efficiency:}
      Uncertainties arise from the measurement of the electron reconstruction and
      identification efficiencies. The efficiencies are measured using a `Tag and
-     Probe' technique using decays of \W\, \Z\ and \JPsi. Uncertainties arise
+     Probe' technique using decays of \W, \Z\ and \JPsi. Uncertainties arise
      due to the method used to subtract the background, possible biases of the
      methodology, the definition of the
      tag electron and differences between the results from different decays, as
@@ -1777,7 +1825,7 @@ in~\eqn{triggerEffSF} up and down by their 1-sigma uncertainties.
 
 \subsubsection{Theoretical Systematic Uncertainty}
 
-Theoretical uncertainties to the \CZZ\ estimation arise due to the choice of
+Theoretical uncertainties on \CZZ\ arise due to the choice of
 factorisation and renormalisation scale, the choice of PDF set, and from differences
 arising due to different kinematic distributions obtained from different from \mc\
 generators, due to, for example, different parton shower models and different
@@ -2008,7 +2056,7 @@ is not considered, although is seen to be in good agreement with \powhegbox.
     \label{table:objSel-syst-genComp-eight}
 \end{table}
 
-\subsection{Estimates of Systematic Uncertainties to \CZZ}
+\subsection{Estimates of Systematic Uncertainties on \CZZ}
 \label{sec:systematic-estimate-tables}
 
 The effect of each of the systematic uncertainties described above on \CZZ\ is estimated using
@@ -2103,9 +2151,9 @@ for electrons.
       \hline\hline
 
    \end{tabular}
-   \caption[Systematic uncertainties to the reconstruction acceptance \CZZ\ for
+   \caption[Systematic uncertainties on the reconstruction acceptance \CZZ\ for
    the 7~\tev\ analysis.]
-   {Summary of systematic uncertainties to the reconstruction acceptance \CZZ\
+   {Summary of systematic uncertainties on the reconstruction acceptance \CZZ\
    in percent, by \ZZ\ final state, for the 7~\tev\ analysis. The top table
    gives uncertainties on the \ZZ\ selection, the bottom on the \ZZs\ selection.
    The fourth column gives the weighted average
@@ -2193,9 +2241,9 @@ for electrons.
       %\hline\hline
 
    \end{tabular}
-   \caption[Systematic uncertainties to the reconstruction acceptance \CZZ\ for
+   \caption[Systematic uncertainties on the reconstruction acceptance \CZZ\ for
    the 8~\tev\ analysis.]
-   {Summary of systematic uncertainties to the reconstruction acceptance \CZZ\
+   {Summary of systematic uncertainties on the reconstruction acceptance \CZZ\
    in percent, by \ZZ\ final state, for the 8~\tev\ analysis. 
    %The top table
    %gives uncertainties to the \ZZ\ selection, the bottom to the \ZZs\ selection.
@@ -2213,7 +2261,7 @@ uncertainties affecting the fiducial \cx\ will tend to cancel out between the
 numerator and denominator of \CZZ, but not when considering the absolute number
 of expected events. \tab{objSel-syst-yield} gives the systematic uncertainties on
 the expected yields. The reconstruction uncertainties are identical to the
-reconstruction uncertainties to \CZZ, so contribution of each individual source
+reconstruction uncertainties on \CZZ, so the contribution of each individual source
 is not shown in this table.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -2274,8 +2322,8 @@ is not shown in this table.
       \hline\hline
 
    \end{tabular}
-   \caption[Systematic uncertainties to expected signal yield.]
-   {Summary of systematic uncertainties to the expected signal yield 
+   \caption[Systematic uncertainties on the expected signal yield.]
+   {Summary of systematic uncertainties on the expected signal yield 
    in percent, by \ZZ\ final state,. 
    %The top table
    %gives uncertainties to the \ZZ\ selection, the bottom to the \ZZs\ selection.

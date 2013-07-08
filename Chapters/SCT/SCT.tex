@@ -183,8 +183,8 @@ module hybrids on the front side of the
 module (the side furthest from the interaction point). Barrel modules have
 an additional thermistor mounted on the back side of the module.  
 The temperatures recorded by the module thermistors are read out by the ATLAS
-\textit{PVSS} SCADA system. Every 12 hours the temperatures are written to an
-Oracle database for offline analysis. In addition, whenever a module temperature
+detector control system, \textit{PVSS}~\cite{1748-0221-3-05-P05006}. A data point is written to the Oracle database
+every 12 hours for offline analysis. In addition, whenever a module temperature
 changes above a deadband of 0.4\dc, the new value is written to the
 database.  
 
@@ -591,7 +591,8 @@ modules, which would not be identified by the procedure of identifying
 
 \fig{sigma-evo-deltat} shows the width and mean of the \deltat\
 distributions as a function of time. For the widths, each point on the graph corresponds to the
-width of the Gaussian fit to the \deltat\ distribution for one stable period (such the distribution shown
+width of the Gaussian fit to the \deltat\ distribution for one stable period
+(such as the distribution shown
 in~\fig{dt_dist_barrels});
 similarly for the means, each point corresponds to the mean of the Gaussian fit
 for one stable period. The mean and width of the distributions are seen to be
@@ -656,7 +657,7 @@ modules along a cooling pipe.
   respectively. Figures (c) and (d) show the width of the module temperature
   distribution as a function of time, again for the barrels and endcaps
   respectively.}
-	\label{fig:sigma-evo-tdiff}
+	\label{fig:sigma-evo-tavg}
 \end{figure}
 
 \begin{figure}[h]
@@ -670,7 +671,7 @@ modules along a cooling pipe.
   \caption[The width of the \tdiff\ distribution as a function of time.]
   {The width of the \tdiff\ distribution as a function of time for (a)
   the barrels and (b) the endcaps.}
-	\label{fig:sigma-evo-tavg}
+	\label{fig:sigma-evo-tdiff}
 \end{figure}
 
 \section{Conclusions}
