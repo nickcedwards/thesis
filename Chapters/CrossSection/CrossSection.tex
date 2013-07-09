@@ -435,13 +435,17 @@ maximising the \intro{profile-likelihood function, \L} with respect to the \cx\
 $\sigma$.
 \L\ is the product of the Poisson probability $P$ for observing $N$ events given a
 \cx\ $\sigma$, reconstruction acceptance \CZZ\ and background $b$; and of Gaussian
-distributions $G$ to describe nuisance parameters due to uncertainties on \CZZ\
-and on $b$:
+distributions $G$ to describe nuisance parameters due to uncertainties on \CZZ,
+$b$ and $\mathcal{L}$:
 
 \begin{equation}
-\small
+\begin{split}
+%\small
    \L(\sigma, \CZZ', b'; \Delta_{b}, \Delta_{C_{ZZ}}, N) = P(\sigma, \CZZ^\prime,
-   b^\prime; N)\times G(\CZZ^\prime; C_{ZZ}, \Delta_{C_{ZZ}}) \times G(b^\prime; b, \Delta_{b})
+   b^\prime; N)\times G(\CZZ^\prime; C_{ZZ}, \Delta_{C_{ZZ}}) \\
+   \times G(b^\prime; b, \Delta_{b})
+\times G(\mathcal{L}^\prime; \mathcal{L}, \Delta_{\mathcal{L}})
+\end{split}
 \end{equation}
 
 The Poisson probability to observe $N$ events given an expected
@@ -718,7 +722,7 @@ is referred to as \intro{unfolding}.
 
 Formally, one can consider some parameter of interest $x$,
 distributed according to a probability distribution function (\probDF) $f(x)$. Due to experimental effects, one
-does not measure $x$ but a different variable $y$, distributed
+does not measure $x$ but a different (but related) variable $y$, distributed
 according to a different \probDF\ $g(y)$. The measured variable $y$ is related to $x$ by a
 convolution of the true distribution $f(x)$ with a response function $A(y,x)$ to account for the
 experimental effects:
@@ -744,7 +748,7 @@ the unfolding,
 using the implementation provided by the {\sc
 RooUnfold}~\cite{2011arXiv1105.1160A} package. The algorithm treats the response
 matrix \unfA\ as a description of the probability of observing some particular data given the
-true distribution. From Bayes's theorem, the probability of there being 
+true distribution. From Bayes's theorem, the probability of there being in truth 
 \unfxi\ events in bin $i$ of the true distribution arising due to
 an observation of \unfyj\ events in bin $j$ is given by:
 \begin{equation}

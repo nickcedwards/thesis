@@ -258,7 +258,7 @@ The main performance goals are given in~\tab{perf-goals}.
 \hline\hline
 Detector Component & Design Resolution & \multicolumn{2}{| c }{$\eta$
 coverage} \\
-& & Measurement & Trigger \\
+& & Measurement & Level 1 Trigger \\
 \hline
 Tracking & $\sigma_{\pt}/\pt = 0.05\% \, \pt \oplus 1\%$ & $\pm\,2.5$ & None \\
 EM Calorimetry & $\sigma_{E}/E = 10\%/\sqrt{E} \oplus 0.7\%$ & $\pm\,3.2$ &
@@ -305,7 +305,7 @@ described by their azimuthal angle $\phi$ and their pseudorapidity $\eta$. The
 azimuthal angle describes the angle in the \x-\y\ plane, with $\phi=0$ along the
 \x\ axis, increasing clockwise around the beam-pipe.  The pseudorapidity $\eta$
 is defined in terms of the polar angle $\theta$ (the angle in the $x-z$ plane)
-as $\eta = - \ln\tan(\theta/2)$, and is an approximation to rapidity in the high
+as $\eta = - \ln[\tan(\theta/2)]$, and is an approximation to rapidity in the high
 energy limit.  The radial co-ordinate \R\ measures the radial distance from the
 interaction point. 
 
@@ -479,7 +479,7 @@ The purpose of the calorimeter is to measure the energy and
 position of particles. A particle entering the calorimeter produces a
 `shower' of secondary particles; the energy of this shower is then measured.
 ATLAS uses sampling calorimeters, in which different materials sandwiched
-together in layers, are used to initiate the shower development (absorption) and
+together in layers are used to initiate the shower development (absorption) and
 to measure the energy of its constituents. This
 allows for a more compact design and hence better shower containment. Position
 measurement is obtained by segmenting the calorimeter in the \z\ and $\phi$
@@ -491,7 +491,7 @@ are different. The ATLAS calorimeters are divided into two distinct subsystems,
 the \emag\ calorimeter and the hadronic calorimeter. An electromagnetic
 shower consists of electrons, positrons and photons, and is normally fully contained in the
 calorimeter; thus it can be fully detected. Hadronic showers involve many more
-particles types, including neutrons, muons, and neutrinos which escape detection, and tend
+particle types, including neutrons, muons, and neutrinos which escape detection, and tend
 to be longer and wider, often spilling out of the calorimeter. The full energy
 of the shower is thus not fully detected, and so a calibration of the energy
 response is required. It is important for the calorimeter to provide good
@@ -527,7 +527,7 @@ drift to copper electrodes in the presence of an electric field.
 
 The LAr consists of two half barrels extending to \modetalt{1.475} (with
 a 4~mm gap at \z\ = 0), and two coaxial wheels on each side (named the
-\intro{EMEC}, the first covering
+\intro{EMEC}), the first covering
 \modetabetween{1.375}{2.5} and the second covering \modetabetween{2.5}{3.2}.
 Additional material needed to instrument and cool the detector creates a `crack'
 region at \modetabetween{1.375}{1.52}, where the energy resolution is
@@ -612,17 +612,18 @@ density to provide containment and minimise the lateral spread of hadronic
 showers. An additional copper alloy shielding plate is placed behind FCAL3 to
 reduce background to the muon endcap system.
 
-\subsection{Muon Spectrometer (MS)}
+\subsection{Muon Spectrometer}
 \label{sec:Detector-MS}
 
-The muon spectrometer sits outside the calorimeter system, and is designed to
-provide precision muon momentum measurements over a momentum range of 3~GeV to
-3~TeV, as well as providing triggering on bunch crossings containing
+The muon spectrometer (MS) sits outside of the calorimeter system, and is designed to
+provide precision muon momentum measurements over a momentum range of 3~\gev\ to
+3~\tev\, as well as to provide triggering on bunch crossings containing
 muons. An overview of the MS is given in~\fig{muon-cutaway}. The system sits
 inside a giant air coil toroidal magnet system, producing a magnetic field
 orthogonal to the muon momentum to provide deflection of the
 muons for momentum measurement. The use of an air coil reduces multiple
-scattering which degrades the momentum resolution.
+scattering which degrades the momentum resolution, and allows a greater tracking
+volume within cost constraints.
 
 \begin{figure}[h]
 \centering
@@ -634,27 +635,27 @@ from~\cite{1748-0221-3-08-S08003}.}
 \label{fig:muon-cutaway}
 \end{figure}
 
-Resistive Plate Chambers (RPC) and Thin Gap Chambers (TGC) provide triggering
-for \modetalt{2.4} and a measurement in the $x-y$ plane for \modetalt{2.7}. The
-RPC covers \modetalt{1.05}, with the TGC covering \modetabetween{1.05}{2.7}. The
+Resistive Plate Chambers (RPCs) and Thin Gap Chambers (TGCs) provide triggering
+for \modetalt{2.4} and a measurement in the $x-y$ $(\phi$) plane for \modetalt{2.7}. The
+RPCs cover \modetalt{1.05} and the TGCs cover \modetabetween{1.05}{2.7}. The
 muon trigger has a time resolution of between 1.5 ns and 4 ns.
 
 Precision measurements in the bending ($R-z$) plane are obtained from Monitored
-Drift Tubes (MDT) and Cathode Strip Chambers (CSC). The MDT cover \modetalt{2.7}
-and consists of three layers, referred to as \intro{stations}. Each station
+Drift Tubes (MDTs) and Cathode Strip Chambers (CSCs). The MDTs cover \modetalt{2.7}
+and consist of three layers, referred to as \intro{stations}. Each station
 consists of two \intro{mulitlayers} formed of three or four layers of tubes,
-sandwiched between layers of RPC or TGC.
+sandwiched between layers of RPCs or TGCs.
 %The mechanical isolation of the sensor wire in each tube from it's neighbours
 %give a reliable system design.
-In the innermost layer, for \modetabetween{2.0}{2.7} the MDT are replaced by CSC
-due to the higher rates and higher backgrounds in this region. The CSC are
-multiwire proportional chambers, and so give a higher granularity than the MDT,
+In the innermost layer, for \modetabetween{2.0}{2.7} the MDTs are replaced by
+CSCs due to the higher rates and higher backgrounds in this region. The CSCs are
+multiwire proportional chambers, and so give a higher granularity than the MDTs,
 and are better able to cope with high rates and fluxes. 
 
 \section{Trigger}
 \label{sec:detector-trigger}
 
-ATLAS uses a three-level trigger system to identify when to read out the
+ATLAS uses a three-level trigger system to decide when to read out the
 detector and to reduce the event rate to a manageable level by identifying
 interesting events. The collision rate of approximately 20 MHz has to be reduced
 to a rate of between 200 and 1000 Hz for offline reconstruction, storage and analysis.
@@ -753,7 +754,7 @@ be rewritten in term of this quantity:
 \end{equation}
 where $\sigmaVis =\epsilon \sigmaInel$ is the total inelastic \cx\
 multiplied by the efficiency of the method used to measure \muVis. The
-parameters $\mu_{\mathrm{b}}$ and $f_{\mathrm{r}}$ are known machine parameters, and so a
+parameters $n_{\mathrm{b}}$ and $f_{\mathrm{r}}$ are known machine parameters, and so a
 measurement of \muVis\ gives a measurement of the relative luminosity; this
 must be calibrated by measuring \sigmaVis\ in order to give an absolute
 luminosity measurement.
@@ -782,7 +783,8 @@ The calibration of \sigmaVis\ is done using dedicated \intro{van Der Meer (vdM)
 scans}, where the absolute luminosity is measured directly from machine
 parameters. The delivered luminosity can be written as:
 \begin{equation}
-\mathcal{L} = \frac{ n_{\mathrm{b}} f_{r} n_{1} n_{2}}{ 2 \pi \Sigma_{x} \Sigma_{y} }
+\mathcal{L} = \frac{ n_{\mathrm{b}} f_{r} n_{1} n_{2}}{ 2 \pi \Sigma_{x}
+\Sigma_{y} } \cdot F
 \label{eqn:lumi-meas-3}
 \end{equation}
 where $n_{1},n_{2}$ are the bunch charges in each beam, and
@@ -804,7 +806,7 @@ absolute normalisation of the luminosity.
 The luminosity measurement is \crosscheck ed using an independent measurement of
 the luminosity using information from the ATLAS calorimeters. The PMT current
 from the tile calorimeter and the total ionisation current in the liquid argon
-of the FCal are related to the mean number of particles interaction in the
+of the FCal are related to the mean number of particles interacting in the
 calorimeter, and so are sensitive to the luminosity. 
 %The stability of the
 %luminosity measurement over longer periods is cross-checked using the number of

@@ -6,18 +6,18 @@ The four-lepton final state is expected to be very clean with little
 background, since few other \sm\ interactions produce four high-\pt\ isolated leptons
 in the final state. Almost all of the sources of background include one or more
 \intro{background leptons}, where a background
-lepton is defined as either a fake-lepton reconstructed due to jets or
+lepton is defined as either a fake-lepton arising due to jets or
 photons mis-identified as a lepton, or a real lepton from decays within jets or
 from photon conversions.
 The dominant background contribution is expected to arise from the production of
 a \Z\ boson in
 association with jets and or photons (collectively termed \ZX). Other
 contributions arise from top-quark production (\ttbar\ and \singletop) and from
-other diboson processes \WW\ and \WZ\ produced in association with jets or
+the other diboson processes \WW\ and \WZ, where the bosons are produced in association with jets or
 photons.
 %\ttbar$\ra\W\W bb$, $\Wt\ra\W\W b$, $\Zt\ra\W\Z b$, \WW\ and \WZ.
 
-An additional background arises from $ZZZ$ and $WZZ$ production,
+An additional background arises from triboson $ZZZ$ and $WZZ$ production,
 and from \ttbar+$V$ where $V=\W,\Z$. In these backgrounds there are four leptons
 from \W\ or \Z\ boson decays, so they will tend to be isolated and have small
 impact parameters, making these irreducible sources of background.
@@ -33,7 +33,7 @@ that the shower shapes of jets in the calorimeters are well described, in order
 for the rate at which jets fake the electron identification is well
 predicted. In
 order for leptons or fakes to pass the analysis selection requirements they must
-also pass the
+the
 isolation requirement; background leptons will therefore tend to be in the
 tails
 of the jet distribution where the energy density due to other particles in the jet
@@ -54,7 +54,7 @@ described in~\sec{mcbg}, and the data-driven estimate is described in~\sec{ddbg}
 The \mc\ generators used to model the different sources of background are listed
 in~\tab{mcbg-generators}. In a few cases different generators were used for the
 8~\tev\ analysis with respect to the 7~\tev\ analysis, owing to developments in
-the available \mc\ generators. \ZX\ samples generated with \alpgen\ are
+the available \mc\ generators. The \ZX\ samples generated with \alpgen\ are
 normalised to the inclusive NNLO \cx\ prediction of the FEWZ
 program~\cite{Gavin:2010az}; these include the contribution from a \Z\ boson produced
 in association with a hard photon. The \ttbar\ samples are normalised to the
@@ -110,7 +110,7 @@ and~\ZZSevenTeVMCBgEstIredZZsLLLLNoSyst\ for the \ZZs\ selection.
 %systematic uncertainties on these background estimates are not evaluated.
 The \mc\ estimated backgrounds to the 8~\tev\ analysis are shown
 in~\tab{mc-bg-eight}. For the 8~\tev\ analysis, the estimated background
-due to fakes is~\ZZEightTeVMCBgEstRedZZLLLL\ and the estimated irreducible
+from reducible sources is~\ZZEightTeVMCBgEstRedZZLLLL\ and the estimated irreducible
 background is~\ZZEightTeVMCBgEstIredZZLLLLNoSyst. 
 
 %%% 4e
@@ -279,7 +279,7 @@ N_{4l}^{\rm fake} = N_{TTTB} \times f + N_{TTBB} \times f^{2}
 where $f$ is the \frate, the fraction of background leptons that pass the full lepton selection
 requirements. Of course, given a selected lepton in data it is impossible to
 know whether it is a true lepton or a background lepton (if it were, background
-rejection would be trivial). Instead, in order to measure the background 
+rejection would be trivial). Instead, in order to estimate the background 
 two new definitions are introduced: \intro{\sellep s}, denoted $L$, that
 pass all of the lepton selection requirements; and \intro{lepton-like-jets},
 denoted $J$, which
@@ -369,7 +369,7 @@ A \intro{pre-lepton} is defined as a reconstructed lepton object that passes all
 the selection requirements, apart from the isolation and \dzero-significance
 requirements (for muons) or the isolation and \loosePP\ identification
 requirements (for electrons). The pre-leptons may than be classified as either \lljet s or \sellep s.
-Pre-Muons that fail {\it either} the isolation {\it or} the
+Pre-muons that fail {\it either} the isolation {\it or} the
 \dzero-significance requirement are classified as $J$. Those that pass both requirements are
 classified as $L$; those that fail both are
 discarded. Similarly, pre-electrons that fail {\it either} the isolation {\it or} the
@@ -423,7 +423,7 @@ selection requirements. The pair must have invariant mass $|m_{\ell^{+}\ell^{-}}
 boson. It is then required that the event contain at least one additional
 pre-lepton. The sample will be dominated by \ZX, \WZ\ and \ZZ\
 events. The additional pre-leptons in \ZX\ events are all background
-electrons; in \WZ\ and \ZZ\ events there will typically be one or two additional
+electrons; in \WZ\ and \ZZ\ events there will be one or two additional
 true leptons. The \WZ\ component is suppressed by rejecting events with large missing transverse
 energy (requiring \Etmiss$<$25~\gev). The \ZZ\ component and any remaining \WZ\
 is subtracted using \mc. The \Z-tag sample selection is summarised~\tab{Ztag-def}
@@ -854,7 +854,7 @@ to be rather stable under the systematic variations, within the large statistica
 uncertainties.
 
 In the \mmmm\ channel the number of observed $LLLJ$ and $LLJJ$ events is small,
-and so the final background estimate is zero due to \NLLJJ\ being larger than
+and so the final background estimate is negative due to \NLLJJ\ being larger than
 \NLLLJ. In this case, the final result is quoted as a truncated Gaussian, with
 mean at zero and sigma equal to the estimated uncertainty. This procedure gives a
 conservative upper limit for the background in that channel.
@@ -1045,9 +1045,9 @@ made to $J$ from the nominal definition given in~\tab{J-def}. }
 \hline\hline
  & 4e & 4mu & 2e2mu & 4l \\
 \hline
- \ZZ, 7~\tev\  &  0.33 $^{+0.63}_{-0.54}\;\pm0.06$  &  $<0.71\; [\errAsym{0.69}{0.00\errAsym{0.15}{0.00}}]$  &  0.53 $^{+1.16}_{-0.77}\;\pm0.25$ &   0.15 $^{+1.26}_{-1.08}\;\pm0.35$ \\
- \ZZs, 8~\tev\ &  3.45 $^{+1.61}_{-1.55}\;\pm0.19$  &  $<1.25\; [\errAsym{1.21}{0.00\errAsym{0.27}{0.00}}]$ &  8.15 $^{+2.88}_{-2.31}\;\pm0.55$ &  10.26 $^{+3.19}_{-2.81}\;\pm0.63$ \\
- \ZZ, 8~\tev\  &   9.26 $^{+1.79}_{-1.59}\;\pm0.32$ &  1.50 $^{+3.14}_{-2.30}\;\pm0.77$ &   6.64 $^{+4.54}_{-2.78}\;\pm2.51$ &    17.41 $^{+7.72}_{-4.04}\;\pm3.25$ \\
+ \ZZ, 7~\tev\  &  0.33 $^{+0.63}_{-0.54}\;\pm0.06$  &  $<0.71\; [\errAsym{0.69}{0.00}\;\errAsym{0.15}{0.00}]$  &  0.53 $^{+1.16}_{-0.77}\;\pm0.25$ &   0.15 $^{+1.26}_{-1.08}\;\pm0.35$ \\
+ \ZZs, 8~\tev\ &  3.45 $^{+1.61}_{-1.55}\;\pm0.19$  &  $<1.25\; [\errAsym{1.21}{0.00}\;\errAsym{0.27}{0.00}]$ &  8.15 $^{+2.88}_{-2.31}\;\pm0.55$ &  10.26 $^{+3.19}_{-2.81}\;\pm0.63$ \\
+ \ZZ, 8~\tev\  &   9.26 $^{+1.79}_{-1.59}\;\pm0.32$ &  1.50 $^{+3.14}_{-1.50}\;\pm0.77$ &   6.64 $^{+4.54}_{-2.78}\;\pm2.51$ &    17.41 $^{+7.72}_{-4.04}\;\pm3.25$ \\
 \hline\hline
 \end{tabular}
 \caption[Final data-driven fake background estimates.]
@@ -1061,7 +1061,7 @@ is systematic.}
 An additional \crosscheck\ of the background estimate is performed by estimating
 the background using a data sample composed of events passing the full event
 selection, but with one opposite-signed \dilep\ pair and one same-signed \dilep\
-pair (termed OS-SS). The majority of the reducible backgrounds due to \Zgamma,
+pair (termed OS-SS). The majority of the reducible backgrounds, those due to \Zgamma,
 \Z+light-jets, \ttbar, \WW\ and \WZ\ events will contribute to the OS-SS
 selection at the same rate as to the signal selection with two oppositely-signed
 pairs (SS-SS). The exception to this is \Zbb, where leptons from heavy flavour

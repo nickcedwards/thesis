@@ -84,7 +84,8 @@ F_{11}}{F_{00}}
 \end{eqnarray}
 The \Fij\ coefficients are completely specified by the kinematics of the
 incoming and outgoing particles, and so must be evaluated on an event by event
-basis, and the weight for each event must be calculated separately. The \Fij\ are independent of the values of the anomalous coupling parameters
+basis, and the weight for each event must be calculated separately; the
+reweighting is thus fully differential. The \Fij\ are independent of the values of the anomalous coupling parameters
 assumed in the generation of the sample, although they do depend on the choice of
 \formfactor. 
 
@@ -384,9 +385,9 @@ parameters for both signal and background, the set of nuisance parameters giving
 the fractional uncertainty on the signal and background expectation for a
 distribution of $m$ bins is expressed as $\vec\beta = \{\beta_1, \beta_2,
 \ldots, \beta_{2m}\}$, where: 
-\begin{eqnarray} \text{true }N_\mathrm{sig}^i &=&
-N_\mathrm{sig}^i \cdot (1 + \beta_i) \label{nuis1}\\ \text{true
-}N_\mathrm{bkg}^i &=& N_\mathrm{bkg}^i \cdot (1 + \beta_{i+m}) \label{nuis2}
+\begin{eqnarray} \text{}N_\mathrm{sig}^{i} &=&
+N_\mathrm{sig}^{i\text{,nom}} \cdot (1 + \beta_i) \label{nuis1}\\ 
+\text{}N_\mathrm{bkg}^i &=& N_\mathrm{bkg}^{i\text{,nom}} \cdot (1 + \beta_{i+m}) \label{nuis2}
 \end{eqnarray}
 %The systematics associated with the theoretical calculation of the fiducial
 %\cx\ in each bin (due to PDF and scale uncertainties) are assumed to be 100\%
@@ -516,7 +517,7 @@ A variety of choices of binning were tried, varying the number of bins from one
 to five, and varying the boundaries of the bins. It is observed that the
 expected limits are most sensitive to the choice of the lower boundary of the last bin, which
 is taken to be inclusive (i.e. including all events with \Z\ boson \pt\ greater
-than the lower bin boundary). The limits are observed not to be very sensitive
+than the lower bin boundary). The limits are not observed to be very sensitive
 to the number of bins, or to the boundaries of the bins other than the last.
 \fig{TGC-binOpt} shows the expected limit on \ffourg\ as a function of the lower
 boundary of the last bin. Limits obtained using different numbers of bins are
