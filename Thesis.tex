@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,titlepic]{report}
+\documentclass[a4paper,12pt,titlepic,twosided]{book}
 %\DeclareMathSizes{12}{11}{8}{7}  
 
 \usepackage{import}
@@ -12,7 +12,8 @@
 \usepackage{booktabs} %provides \toprule
 \usepackage[update,prepend]{epstopdf}
 \usepackage[section]{placeins}
-\usepackage[bookmarks=true,colorlinks=true,pdftex]{hyperref}
+\usepackage[bookmarks=true,colorlinks=false,pdftex]{hyperref}
+%\usepackage[bookmarks=true,colorlinks=true,pdftex]{hyperref}
 \usepackage[square,comma,sort&compress,numbers]{natbib}
 \usepackage{units}
 \usepackage{notoccite}
@@ -24,6 +25,7 @@
 %\usepackage{a4wide}
 %\usepackage{fullpage}
 \usepackage{pdflscape}
+\usepackage{emptypage}
 
 %\usepackage{titlesec}  
 %\titlespacing{\chapter}{0pt}{0pt}{0pt}
@@ -36,11 +38,16 @@
 \makeatother
 
 
+% Start chapters on odd pages only
+%\let\oldchapter\chapter
+%\def\chapter{\cleardoublepage\oldchapter}
+
 \usepackage{feynmp}
 \unitlength=1mm
 
 % Allows to specify margins etc, but sets to a more sensible value by default
-\usepackage[textheight=660pt, top=3.4cm, left=3.5cm, right=3cm ]{geometry}
+\usepackage[textheight=660pt, top=3.4cm, left=3.8cm, right=3cm ]{geometry}
+%\usepackage[textheight=660pt, top=3.4cm, left=3.5cm, right=3cm, headsep=1cm ]{geometry}
 
 % Linespacing
 \usepackage{setspace}
@@ -54,8 +61,11 @@
 \rfoot{}
 \cfoot{}
 \lfoot{}
-\rhead{\thepage}
-\lhead{\leftmark}
+%\rhead{\thepage}
+%\lhead{\leftmark}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{\rightmark}
 % \pagestyle{headings}
 
 \fancypagestyle{title}{
